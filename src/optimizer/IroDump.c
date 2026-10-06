@@ -1,0 +1,385 @@
+#define CERROR_FILE "unknown.c"
+#include "compiler/common.h"
+#include "compiler/IroDump.h"
+#include "compiler/enode.h"
+#include "compiler/objects.h"
+#include "compiler/scopes.h"
+#include "compiler/types.h"
+#include "compiler/BE_symbol.h"
+#include "compiler/CException.h"
+#include "compiler/CExpr.h"
+#include "compiler/CExpr2.h"
+#include "compiler/CFunc.h"
+#include "compiler/CInline.h"
+#include "compiler/CParser.h"
+#include "compiler/CPrec.h"
+#include "compiler/CPrep.h"
+#include "compiler/CTemplateFunc.h"
+#include "compiler/CTemplateTools.h"
+#include "compiler/CompilerTools.h"
+#include "compiler/DWARF.h"
+#include "compiler/IROUseDef.h"
+#include "compiler/InlineAsmPPC.h"
+#include "compiler/IroBitVect.h"
+#include "compiler/IroCSE.h"
+#include "compiler/IroJump.h"
+#include "compiler/IroLoop.h"
+#include "compiler/IroVars.h"
+#include "compiler/ObjGen_PPC_EABI.h"
+#include "compiler/PCode.h"
+#include "compiler/Switch.h"
+#include "driver/Files.h"
+#include <stdio.h>
+unsigned int IroDump_IsType1NodeType50(IROLinear *linear)
+{
+    if (linear->type == IROLinearOperand && linear->u.node->type == 50U)
+        return 1U;
+    return 0U;
+}
+
+SInt32 IroDump_IsPowerOfTwo(IROLinear *node, SInt32 *bit)
+{
+    SInt32 value;
+    SInt32 mask;
+    UInt32 index;
+    ENode *expr;
+
+    *bit = -1;
+    if (node->type == IROLinearOperand) {
+        if ((expr = node->u.node)->type == EINTCONST) {
+            if (expr->data.intval.hi != 0)
+                return 0;
+            value = expr->data.intval.lo;
+            mask = 1;
+            index = 0;
+            do {
+                if (mask == value) {
+                    *bit = index;
+                    return 1;
+                }
+                index++;
+                mask += mask;
+            } while (index < 31);
+        }
+    }
+    return 0;
+}
+
+int fn_0044d520(IROLinear *node)
+{
+    if (node->type == 1U &&
+        (node->u.node->type == EINTCONST || node->u.node->type == EASSBLK || node->u.node->type == EFLOATCONST))
+        return 1;
+    return 0;
+}
+
+Object *IroDump_GetObjRef(IROLinear *linear)
+{
+    if (linear->type == IROLinearOp1Arg && linear->nodetype == EINDIRECT &&
+        linear->u.monadic->type == IROLinearOperand && linear->u.monadic->u.node->type == EOBJREF)
+        return linear->u.monadic->u.node->data.objref;
+    return NULL;
+}
+
+void IroDump_Print(const char *message, ...)
+{
+    va_list arguments;
+    int argumentSize;
+
+    if (INT_005882b8 == 0)
+        return;
+
+    argumentSize = (va_list)(&message + 1) - (va_list)&message;
+    arguments = (va_list)&message + (argumentSize + 3) / 4 * 4;
+    vfprintf(iro_dump_output, message, arguments);
+}
+
+static inline void dump_separator(void)
+{
+    fprintf(iro_dump_output, "\n");
+}
+
+static inline void *dump_output_handle(void)
+{
+    return iro_dump_output;
+}
+
+void IroDump_DumpExpressions(void)
+{
+    IROExpr *entry;
+
+    if (INT_005882b8 == 0)
+        return;
+
+    fprintf(dump_output_handle(), "Expressions\n\n");
+    for (entry = expr_list; entry != NULL; entry = entry->next) {
+        fprintf(dump_output_handle(), "%4d: %d FN:%d CE:%d NS:%d ", entry->index, entry->linear->index,
+                entry->node->index, entry->mayTrap, entry->hasSideEffects);
+        IroDump_PrintBitSet("Depends: ", entry->depends);
+        dump_separator();
+    }
+    dump_separator();
+}
+
+void dump_flowgraph(void)
+{
+    SInt32 i;
+    SInt32 count;
+    IROLinear *p;
+    UInt16 *list;
+    SInt32 j;
+    SInt32 npred;
+    UInt16 *pred;
+    IRONode *node;
+
+    if (INT_005882b8 == 0)
+        return;
+    if (iro_dump_output == NULL)
+        return;
+
+    fprintf(iro_dump_output, "\nFlowgraph\n");
+    for (node = iro_flowgraph_head; node != NULL; node = node->nextnode) {
+        fprintf(iro_dump_output, "Flowgraph node %d  First=%d, Last=%d\n", node->index, node->first->index,
+                node->last->index);
+        fprintf(iro_dump_output, "Succ = ");
+        count = node->numsucc;
+        list = node->succ;
+        if (INT_005882b8) {
+            for (i = 0; i < count; i++)
+                fprintf(iro_dump_output, "%d ", list[i]);
+            fprintf(iro_dump_output, "\n");
+        }
+        fprintf(iro_dump_output, "Pred = ");
+        pred = node->pred;
+        npred = node->numpred;
+        if (INT_005882b8) {
+            for (j = 0; j < npred; j++)
+                fprintf(iro_dump_output, "%d ", pred[j]);
+            fprintf(iro_dump_output, "\n");
+        }
+        fprintf(iro_dump_output, "MustReach = %d\n", node->mustreach);
+        fprintf(iro_dump_output, "LoopDepth = %d\n", node->loopdepth);
+        IroDump_PrintBitSet("Dom: ", node->dom);
+        p = node->first;
+        if (p != NULL) {
+            for (;;) {
+                dump_linear_node(p);
+                if (p == node->last)
+                    break;
+                p = p->next;
+            }
+        }
+        fprintf(iro_dump_output, "\n\n");
+    }
+    fprintf(iro_dump_output, "\n");
+    fflush(iro_dump_output);
+}
+
+void IroDump_DumpFunction(char *value, int enabled)
+{
+    char *name;
+    if ((unsigned char)enabled != 0U) {
+        if (data_005875b8 != 0U) {
+            name = data_005875b8->name->name;
+        } else {
+            name = "Init-code";
+        }
+        IroDump_Print("Dumping function %s after %s \n", name, value);
+        IroDump_Print("--------------------------------------------------------------------------------\n");
+        dump_flowgraph();
+    }
+}
+
+static inline void printBitIndex(const char *format, int bitIndex)
+{
+    fprintf(iro_dump_output, (const char *)format, bitIndex);
+}
+
+static inline void printBitSetText(const void *text)
+{
+    fprintf(iro_dump_output, (const char *)text);
+}
+
+void IroDump_PrintBitSet(char *prefix, BitVector *bitset)
+{
+    Boolean inRange = 0;
+    Boolean firstRange = 1;
+    int bitIndex;
+    int rangeStart;
+
+    if (INT_005882b8 == 0)
+        return;
+
+    printBitSetText(prefix);
+    for (bitIndex = 0; bitIndex < bitset->size << 5; ++bitIndex) {
+        if (((bitIndex >> 5) < bitset->size) && ((1 << bitIndex & bitset->bits[bitIndex >> 5]) != 0)) {
+            if (!inRange) {
+                if (!firstRange) {
+                    struct _FILE *output = iro_dump_output;
+                    fputc(',', output);
+                }
+                firstRange = 0;
+                printBitIndex("%d", bitIndex);
+                inRange = 1;
+                rangeStart = bitIndex;
+            }
+        } else if (inRange) {
+            inRange = 0;
+            if (bitIndex != rangeStart + 1)
+                printBitIndex("-%d", bitIndex - 1);
+        }
+    }
+    if (inRange && bitIndex != rangeStart + 1)
+        printBitIndex("-%d", bitIndex - 1);
+    printBitSetText("\n");
+}
+
+void dump_linear_node(IROLinear *node)
+{
+    int index;
+    ENode *operand;
+    Type *type;
+    VarRecord *resolvedType;
+    char buffer[64];
+    ENode *integer;
+    CLabel *label;
+
+    if (INT_005882b8 == 0)
+        return;
+
+    fn_00403b40(iro_dump_output, "%4d: ", node->index);
+    switch (node->type) {
+        case IROLinearNop:
+            fn_00403b40(iro_dump_output, "Nop");
+            break;
+        case IROLinearOperand:
+            fn_00403b40(iro_dump_output, "Operand ");
+            operand = node->u.node;
+            if (INT_005882b8 != 0) {
+                switch (operand->type) {
+                    case '8':
+                        fn_00403b40(iro_dump_output, "%s", operand->data.objref->name->name);
+                        break;
+                    case '2':
+                        integer = operand;
+                        CExpr2_FormatCInt64Decimal(buffer, integer->data.intval);
+                        fn_00403b40(iro_dump_output, "%s", buffer);
+                        break;
+                    case '3':
+                        fn_00403b40(iro_dump_output, "%g", operand->data.floatval.data.value);
+                        break;
+                    case 'J':
+                        fn_00403b40(iro_dump_output, "%.8lX%.8lX%.8lX%.8lX", operand->data.vector128.longElements[0],
+                                    operand->data.vector128.longElements[1], operand->data.vector128.longElements[2],
+                                    operand->data.vector128.longElements[3]);
+                        break;
+                }
+            }
+            break;
+        case IROLinearOp1Arg:
+            fn_00403b40(iro_dump_output, "%s %d", PTR_s_EPOSTINC_0055268c[node->nodetype],
+                        ((IROLinear *)node->u.diadic.left)->index);
+            break;
+        case IROLinearOp2Arg:
+            fn_00403b40(iro_dump_output, "%s %d %d", PTR_s_EPOSTINC_0055268c[node->nodetype],
+                        ((IROLinear *)node->u.diadic.left)->index, node->u.diadic.right->index);
+            break;
+        case IROLinearGoto:
+            fn_00403b40(iro_dump_output, "Goto %s", ((CLabel *)node->u.label)->name->name);
+            break;
+        case IROLinearIf:
+            fn_00403b40(iro_dump_output, "If %d %s", node->u.diadic.right->index,
+                        ((CLabel *)node->u.label)->name->name);
+            break;
+        case IROLinearIfNot:
+            fn_00403b40(iro_dump_output, "IfNot %d %s", node->u.diadic.right->index,
+                        ((CLabel *)node->u.label)->name->name);
+            break;
+        case IROLinearReturn:
+            fn_00403b40(iro_dump_output, "Return ");
+            if (node->u.diadic.left != NULL) {
+                fn_00403b40(iro_dump_output, "%d", ((IROLinear *)node->u.diadic.left)->index);
+            }
+            break;
+        case IROLinearLabel:
+            fn_00403b40(iro_dump_output, "Label %s", ((CLabel *)node->u.label)->name->name);
+            break;
+        case IROLinearSwitch:
+            fn_00403b40(iro_dump_output, "Switch %d", node->u.diadic.right->index);
+            break;
+        case IROLinearFunccall:
+            fn_00403b40(iro_dump_output, "Funccall %d(", node->u.funccall.callee->index);
+            for (index = 0; index < node->u.funccall.argCount; ++index) {
+                fn_00403b40(iro_dump_output, "%d", node->u.funccall.args[index]->index);
+                if (index < node->u.funccall.argCount - 1) {
+                    fn_00403b40(iro_dump_output, ",");
+                }
+            }
+            fn_00403b40(iro_dump_output, ")");
+            break;
+        case IROLinearBeginCatch:
+            fn_00403b40(iro_dump_output, "BeginCatch %d", ((IROLinear *)node->u.diadic.left)->index);
+            break;
+        case IROLinearEndCatch:
+            fn_00403b40(iro_dump_output, "EndCatch %d", ((IROLinear *)node->u.diadic.left)->index);
+            break;
+        case IROLinearEndCatchDtor:
+            fn_00403b40(iro_dump_output, "EndCatchDtor %d", ((IROLinear *)node->u.diadic.left)->index);
+            break;
+        case IROLinearEnd:
+            fn_00403b40(iro_dump_output, "End");
+            break;
+    }
+    if ((node->flags & IROLF_Assigned) != 0) {
+        fn_00403b40(iro_dump_output, " <assigned>");
+    }
+    if ((node->flags & IROLF_Used) != 0) {
+        fn_00403b40(iro_dump_output, " <used>");
+    }
+    if ((node->flags & IROLF_Ind) != 0) {
+        fn_00403b40(iro_dump_output, " <ind>");
+    }
+    if ((node->flags & IROLF_Subs) != 0) {
+        fn_00403b40(iro_dump_output, " <subs>");
+    }
+    if ((node->flags & IROLF_LoopInvariant) != 0) {
+        fn_00403b40(iro_dump_output, " <loop invariant>");
+    }
+    if ((node->flags & IROLF_BeginLoop) != 0) {
+        fn_00403b40(iro_dump_output, " <begin loop>");
+    }
+    if ((node->flags & IROLF_EndLoop) != 0) {
+        fn_00403b40(iro_dump_output, " <end loop>");
+    }
+    if ((node->flags & IROLF_Ris) != 0) {
+        fn_00403b40(iro_dump_output, " <ris>");
+    }
+    if ((node->flags & IROLF_Immind) != 0) {
+        fn_00403b40(iro_dump_output, " <immind>");
+    }
+    if ((node->flags & IROLF_Reffed) != 0) {
+        fn_00403b40(iro_dump_output, " <reffed>");
+    }
+    if ((node->flags & IROLF_VecOp) != 0) {
+        fn_00403b40(iro_dump_output, " <vec op>");
+    }
+    if ((node->flags & IROLF_VecOpBase) != 0) {
+        fn_00403b40(iro_dump_output, " <vec op_base>");
+    }
+    if ((node->flags & IROLF_CounterLoop) != 0) {
+        fn_00403b40(iro_dump_output, " <counter loop>");
+    }
+    if ((type = (Type *)node->rtype) != NULL && CParser_IsVolatile(type, node->nodeflags & 3)) {
+        fn_00403b40(iro_dump_output, " <volatile>");
+    }
+    if (node->type == IROLinearOperand) {
+        ENode *constant;
+        if ((constant = node->u.node)->type == '8') {
+            resolvedType = fn_0044ba70(constant->data.objref, 0, 1);
+            if (resolvedType != NULL && (char)is_volatile_object(resolvedType->object)) {
+                fn_00403b40(iro_dump_output, " <volatile obj>");
+            }
+        }
+    }
+    fn_00403b40(iro_dump_output, "\n");
+}

@@ -1,0 +1,39 @@
+# One style for the project's own C and C++ (src/{driver,frontend,optimizer,backend}, include/): `uv run clang-format -i`.
+# Matching constraints: includes keep their order (macros such as CERROR_FILE come before the headers that read them),
+# comments are not reflowed, and no brace, parenthesis or semicolon is added or removed (the statement structure is what
+# the compiler sees).
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 120
+BreakBeforeBraces: Linux
+IndentCaseLabels: true
+PointerAlignment: Right
+DerivePointerAlignment: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+SortIncludes: Never
+IncludeBlocks: Preserve
+ReflowComments: false
+BreakStringLiterals: false
+InsertBraces: false
+RemoveBracesLLVM: false
+RemoveParentheses: Leave
+RemoveSemicolon: false
+MaxEmptyLinesToKeep: 1
+KeepEmptyLines:
+  AtStartOfBlock: false
+  AtStartOfFile: false
+AlignTrailingComments:
+  Kind: Always
+AlignConsecutiveMacros: None
+SpaceBeforeParens: ControlStatements
+IndentPPDirectives: None
+# (these stringify their condition into the assertion message: its spelling is the original's bytes)
+WhitespaceSensitiveMacros: [OS_ASSERT, OPTION_ASSERT]

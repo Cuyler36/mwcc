@@ -4058,9 +4058,9 @@ NameSpaceList *CPrep_ReportError(short token)
 void CPrep_GetTokenLocation(BufferedToken *token, PFile **file, SInt32 *position, short *column, SInt32 *line,
                             char *text, short *textpos, short *textcol, char *context, short *contextpos)
 {
+    SInt32 lineno;
     SInt32 j;
     SInt32 n;
-    SInt32 lineno;
     BufferedToken *tok;
     char *base, *cursor, *start;
     SInt32 offset;
@@ -4159,14 +4159,14 @@ void CPrep_GetTokenLocation(BufferedToken *token, PFile **file, SInt32 *position
         *textcol = CPrep_0043f860(text + *textpos);
     }
     if (offset > 16) {
-        end += -16;
+        cursor = end - 16;
         *contextpos = 16;
     } else {
-        end = base;
+        cursor = base;
         *contextpos = offset;
     }
-    for (n = 0; n < 31 && *end; n++)
-        context[n] = *end++;
+    for (n = 0; n < 31 && *cursor; n++)
+        context[n] = *cursor++;
     context[n] = 0;
     if (release)
         fn_0041b7f0(*(CWPluginPrivateContext **)cprep_cu, base);

@@ -1073,21 +1073,67 @@ static inline int bit_set(UInt32 *bits, int bit)
     return bits[bit >> 5] & (1 << (bit & 31));
 }
 
+/* After unrolling: each original block whose branch led back to the loop body is unlinked from the body (its label
+   operand is written through CLONE, the last branch cloned, as the original does). */
+static inline void unroll_retarget_branches(Loop *loop, PCodeBlock **orig, SInt32 n, PCodeInstruction *clone, PCodeBlock **all)
+{
+    PCodeInstruction *pc;
+    SInt32 i;
+    PCodeBlockLink *prev;
+    PCodeBlockLink *edge = NULL;
+    SInt32 j;
+    PCodeOperand *op;
+
+    for (i = 0; i < n; i++) {
+        for (pc = orig[i]->instructions; pc; pc = pc->next) {
+            if (pc->flags & fIsBranch) {
+                for (j = 0; j < pc->operand_count; j++) {
+                    if (pc->operandData.operands[j].kind == PCOp_LABEL) {
+                        op = &pc->operandData.operands[j];
+                        break;
+                    }
+                }
+                if (op && op->value.label->target.block == loop->body) {
+                    clone->operandData.operands[j].value.label = (PCodeLabel *)all[0]->labels;
+                    for (edge = orig[i]->successors, prev = NULL; edge; edge = edge->next) {
+                        if (edge->payload.block == loop->body) {
+                            if (prev)
+                                prev->next = edge->next;
+                            else
+                                orig[i]->successors = edge->next;
+                        } else
+                            prev = edge;
+                    }
+                    prev = NULL;
+                    for (edge = loop->body->predecessors; edge; edge = edge->next) {
+                        if (edge->payload.block == orig[i]) {
+                            if (prev)
+                                prev->next = edge->next;
+                            else
+                                loop->body->predecessors = edge->next;
+                        } else
+                            prev = edge;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* Unrolls a counting loop whose body is small enough: the body's blocks are copied FACTOR - 1 times (the largest factor
    up to the limit that divides the trip count), branches retargeted to the copies, and the trip count divided. */
 void unroll_loop_by_factor(Loop *loop)
 {
     int factor;
-    SInt32 n, made, i, j, k;
+    SInt32 n, made, i = 0, k;
     int total;
     int round;
     PCodeBlock *b, *last, *target;
+    PCodeInstruction *pc, *clone;
     PCodeBlock **copy, **orig, **all;
-    PCodeInstruction *pc, *clone, *pc2;
-    PCodeOperand *op2;
+    SInt32 j;
     PCodeLabel *pending;
     PCodeBlockLink *edge, *prev;
-    PCodeBlock *scan;
 
     pending = NULL;
     made = 0;
@@ -1100,21 +1146,21 @@ void unroll_loop_by_factor(Loop *loop)
     }
     if (factor == 1)
         return;
-    for (n = 0, scan = loop->preheader->successors->payload.block; scan != loop->body; scan = scan->next) {
+    for (n = 0, b = loop->preheader->successors->payload.block; b != loop->body; b = b->next) {
         n++;
-        if (!bit_set(loop->memberblocks, scan->index))
-            total += scan->instruction_count;
+        if (!bit_set(loop->memberblocks, b->index))
+            total += b->instruction_count;
     }
     if (loop->bodySize - total - 2 < total || total > 8)
         return;
-    orig = (PCodeBlock **)CompilerTools_AllocatePoolMemory(n * 4);
-    copy = (PCodeBlock **)CompilerTools_AllocatePoolMemory(n * 4);
-    all = (PCodeBlock **)CompilerTools_AllocatePoolMemory(total = n * 4 * factor);
-    memclrw(orig, n * 4);
-    memclrw(copy, n * 4);
-    memclrw(all, n * 4 * factor);
-    b = loop->preheader->next;
-    for (i = 0; i < n; i++) {
+    k = n * 4;
+    orig = (PCodeBlock **)CompilerTools_AllocatePoolMemory(k);
+    copy = (PCodeBlock **)CompilerTools_AllocatePoolMemory(k);
+    all = (PCodeBlock **)CompilerTools_AllocatePoolMemory(total = factor * k);
+    memclrw(orig, k);
+    memclrw(copy, k);
+    memclrw(all, total);
+    for (i = 0, b = loop->preheader->next; i < n; i++) {
         orig[i] = b;
         b = b->next;
     }
@@ -1165,19 +1211,16 @@ void unroll_loop_by_factor(Loop *loop)
         }
         if (!(pc = loop->body->instructions))
             CError_FATAL(692);
-        if (!(pc->opcode == PC_CMP || pc->opcode == PC_CMPL || pc->opcode == PC_CMPI || pc->opcode == PC_CMPLI))
+        if (pc->opcode != PC_CMP && pc->opcode != PC_CMPL && pc->opcode != PC_CMPI && pc->opcode != PC_CMPLI)
             CError_FATAL(694);
-        while (pc && !(pc->flags & fIsBranch)) {
+        for (pc = pc->next; pc && !(pc->flags & fIsBranch); pc = pc->next)
             PCode_AppendInstruction(copy[n - 1], PCode_CloneInstruction(pc));
-            pc = pc->next;
-        }
         for (i = 0; i < n; i++) {
             for (edge = orig[i]->successors; edge; edge = edge->next)
                 if (edge->payload.block == orig[i]->next)
                     break;
             if (!edge) {
-                prev = NULL;
-                for (edge = copy[i]->successors; edge; edge = edge->next) {
+                for (edge = copy[i]->successors, prev = NULL; edge; edge = edge->next) {
                     if (edge->payload.block == copy[i]->next) {
                         if (prev)
                             prev->next = edge->next;
@@ -1186,8 +1229,9 @@ void unroll_loop_by_factor(Loop *loop)
                     } else
                         prev = edge;
                 }
+                edge = copy[i]->next->predecessors;
                 prev = NULL;
-                for (edge = copy[i]->next->predecessors; edge; edge = edge->next) {
+                for (; edge; edge = edge->next) {
                     if (edge->payload.block == copy[i]) {
                         if (prev)
                             prev->next = edge->next;
@@ -1201,41 +1245,7 @@ void unroll_loop_by_factor(Loop *loop)
     }
     if (pending)
         PCode_ResolveLabel(loop->body, pending);
-    for (i = 0; i < n; i++) {
-        for (pc2 = orig[i]->instructions; pc2; pc2 = pc2->next) {
-            if (pc2->flags & fIsBranch) {
-                for (j = 0; j < pc2->operand_count; j++) {
-                    if (pc2->operandData.operands[j].kind == PCOp_LABEL) {
-                        op2 = &pc2->operandData.operands[j];
-                        break;
-                    }
-                }
-                if (op2 && op2->value.label->target.block == loop->body) {
-                    clone->operandData.operands[j].value.label = (PCodeLabel *)all[0]->labels;
-                    prev = NULL;
-                    for (edge = orig[i]->successors; edge; edge = edge->next) {
-                        if (edge->payload.block == loop->body) {
-                            if (prev)
-                                prev->next = edge->next;
-                            else
-                                orig[i]->successors = edge->next;
-                        } else
-                            prev = edge;
-                    }
-                    prev = NULL;
-                    for (edge = loop->body->predecessors; edge; edge = edge->next) {
-                        if (edge->payload.block == orig[i]) {
-                            if (prev)
-                                prev->next = edge->next;
-                            else
-                                loop->body->predecessors = edge->next;
-                        } else
-                            prev = edge;
-                    }
-                }
-            }
-        }
-    }
+    unroll_retarget_branches(loop, orig, n, clone, all);
     for (i = 0; i < made; i++)
         LoopOptimization_AddMissingSuccessorPredecessors(all[i]);
     loop->iterationCount /= factor;

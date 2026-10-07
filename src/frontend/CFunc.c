@@ -2217,19 +2217,16 @@ static inline void CFunc_CheckJump(Statement *stmt, Statement *dest)
     }
 }
 
-/* Whether leaving STMT for DEST ends the scope of an object that needs cleaning up. */
+/* Whether leaving STMT for DEST, whose scopes differ, ends the scope of an object that needs cleaning up. */
 static inline Boolean CFunc_NeedsCleanup(Statement *stmt, Statement *dest)
 {
-    CException *to, *from, *p;
+    CException *from, *p;
 
     from = stmt->dobjstack;
-    to = dest->dobjstack;
-    if (from == to)
-        return 0;
-    for (p = to; p; p = p->next)
+    for (p = dest->dobjstack; p; p = p->next)
         if (p == from)
             return 0;
-    for (from = stmt->dobjstack, to = dest->dobjstack; from && from != to; from = from->next)
+    for (from = stmt->dobjstack, p = dest->dobjstack; from && from != p; from = from->next)
         if (CExcept_ActionNeedsDestruction(from))
             return 1;
     return 0;
@@ -2328,7 +2325,8 @@ void CFunc_DestructorCleanup(Statement *first)
         }
         switch (next->type) {
             case ST_GOTO:
-                if (CFunc_NeedsCleanup(stmt, next->target.label->target.stmt))
+                if (stmt->dobjstack != next->target.label->target.stmt->dobjstack &&
+                    CFunc_NeedsCleanup(stmt, next->target.label->target.stmt))
                     CFunc_EmitCleanups(stmt, stmt->dobjstack,
                                        CFunc_CommonScope(stmt, next->target.label->target.stmt->dobjstack));
                 stmt = next;
@@ -2351,7 +2349,7 @@ void CFunc_DestructorCleanup(Statement *first)
                     case ST_ENDCATCH:
                     case ST_ENDCATCHDTOR:
                     case ST_ASM:
-                        if (CFunc_NeedsCleanup(stmt, next))
+                        if (stmt->dobjstack != next->dobjstack && CFunc_NeedsCleanup(stmt, next))
                             CFunc_EmitCleanups(stmt, stmt->dobjstack, CFunc_CommonScope(stmt, next->dobjstack));
                         break;
                     case ST_GOTO:
@@ -2376,7 +2374,8 @@ void CFunc_DestructorCleanup(Statement *first)
                         break;
                     case ST_IFGOTO:
                     case ST_IFNGOTO:
-                        if (CFunc_NeedsCleanup(next, next->target.label->target.stmt))
+                        if (next->dobjstack != next->target.label->target.stmt->dobjstack &&
+                            CFunc_NeedsCleanup(next, next->target.label->target.stmt))
                             stmt = insert_conditional_goto_cleanup(next);
                         else
                             stmt = next;

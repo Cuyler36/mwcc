@@ -4704,15 +4704,12 @@ static inline ENode *CExpr_ArithmeticError(void)
 /* An enum operand takes its underlying type; an operand that is not arithmetic is an error. */
 static inline void CExpr_ArithmeticOperand(ENode **expr)
 {
-    ENode *node;
-    Type *type;
-
-    switch ((SInt8)(type = (node = *expr)->rtype)->type) {
+    switch ((SInt8)(*expr)->rtype->type) {
         case TYPEINT:
         case TYPEFLOAT:
             break;
         case TYPEENUM:
-            node->rtype = TYPE_ENUM(type)->enumtype;
+            (*expr)->rtype = TYPE_ENUM((*expr)->rtype)->enumtype;
             break;
         default:
             *expr = CExpr_ArithmeticError();
@@ -4720,13 +4717,12 @@ static inline void CExpr_ArithmeticOperand(ENode **expr)
     }
 }
 
-static inline ENode *CExpr_IntegralOperand(ENode *expr)
+/* A non-int integral operand: an enum takes its underlying type; anything else is an error. */
+static inline ENode *CExpr_ForceIntegral(ENode *expr)
 {
-    if (expr->rtype->type != TYPEINT) {
-        if (expr->rtype->type != TYPEENUM)
-            return CExpr_ArithmeticError();
-        expr->rtype = TYPE_ENUM(expr->rtype)->enumtype;
-    }
+    if (expr->rtype->type != TYPEENUM)
+        return CExpr_ArithmeticError();
+    expr->rtype = TYPE_ENUM(expr->rtype)->enumtype;
     return expr;
 }
 
@@ -4734,25 +4730,24 @@ static inline ENode *CExpr_IntegralOperand(ENode *expr)
 static inline ENode *CExpr_IntegralPromotion(ENode *expr)
 {
     ENode *conv;
-    ENode *node;
 
-    if (TYPE_INTEGRAL((node = CExpr_IntegralOperand(expr))->rtype)->integral >= IT_INT)
-        return node;
-    {
-        if (node->type != EINTCONST) {
-            conv = (ENode *)CompilerTools_AllocatePool(26);
-            conv->type = ETYPCON;
-            conv->cost = node->cost;
-            if (!conv->cost)
-                conv->cost = 1;
-            conv->flags = node->flags & ENODE_FLAG_QUALS;
-            conv->rtype = node->rtype;
-            conv->data.monadic = node;
-            node = conv;
-        }
-        node->rtype = (Type *)&stsignedint;
+    if (expr->rtype->type != TYPEINT)
+        expr = CExpr_ForceIntegral(expr);
+    if (TYPE_INTEGRAL(expr->rtype)->integral >= IT_INT)
+        return expr;
+    if (expr->type != EINTCONST) {
+        conv = (ENode *)CompilerTools_AllocatePool(26);
+        conv->type = ETYPCON;
+        conv->cost = expr->cost;
+        if (!conv->cost)
+            conv->cost = 1;
+        conv->flags = expr->flags & ENODE_FLAG_QUALS;
+        conv->rtype = expr->rtype;
+        conv->data.monadic = expr;
+        expr = conv;
     }
-    return node;
+    expr->rtype = (Type *)&stsignedint;
+    return expr;
 }
 
 /* The usual arithmetic conversions of a binary operator's operands. */

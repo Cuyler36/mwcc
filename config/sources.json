@@ -478,8 +478,7 @@
     ],
     "include_dirs": [
       "src/backend"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/backend/Registers.c": {
     "compiler": "pro53",
@@ -1461,8 +1460,7 @@
     ],
     "include_dirs": [
       "src/frontend"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/frontend/CFunc.c": {
     "compiler": "pro53",
@@ -1477,8 +1475,7 @@
     ],
     "include_dirs": [
       "src/frontend"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/frontend/CInit.c": {
     "compiler": "pro53",
@@ -1615,8 +1612,7 @@
     ],
     "include_dirs": [
       "src/frontend"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/frontend/CPrepTokenizer.c": {
     "compiler": "pro53",
@@ -1692,8 +1688,7 @@
     ],
     "include_dirs": [
       "src/frontend"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/frontend/CTemplateClass.c": {
     "compiler": "pro53",
@@ -3047,8 +3042,7 @@
     ],
     "include_dirs": [
       "src/optimizer"
-    ],
-    "status": "NonMatching"
+    ]
   },
   "src/optimizer/StrengthReduction.c": {
     "compiler": "pro53",

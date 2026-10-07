@@ -2253,7 +2253,7 @@ NameSpaceObjectList *CScope_0049a000(ScopeRec *context, HashNameNode *name, Name
     return result;
 }
 
-static NameSpaceObjectList *CScope_FindMemberName(NameSpace *nspace, HashNameNode *name)
+static NameSpaceObjectList *CScope_FindMemberName(HashNameNode *name, NameSpace *nspace)
 {
     NameSpaceName *entry;
 
@@ -2278,25 +2278,45 @@ static BClassList *CScope_NewPath(TypeClass *tclass, BClassList *next)
     return path;
 }
 
+static void CScope_AmbigNameError(NameSpace *nspace1, NameSpace *nspace2, HashNameNode *name)
+{
+    if (name && nspace1 != nspace2)
+        CError_ReportError(ERR_AMBIGUOUS_ACCESS_NAME_FOUND, CError_GetQualifiedHashName(nspace1, name),
+                           CError_GetQualifiedHashName(nspace2, name));
+    else
+        CError_ReportError(ERR_AMBIGUOUS_ACCESS_CLASS_STRUCT_UNION_MEMBER);
+}
+
+/* CScope_AmbigNameError for found_class's namespace, which is also left in *NSPACE1 (a local of the caller). */
+static void CScope_AmbigFoundClassError(NameSpace **nspace1, NameSpace *nspace2, HashNameNode *name)
+{
+    *nspace1 = found_class->nspace;
+    if (name && *nspace1 != nspace2)
+        CError_ReportError(ERR_AMBIGUOUS_ACCESS_NAME_FOUND, CError_GetQualifiedHashName(*nspace1, name),
+                           CError_GetQualifiedHashName(nspace2, name));
+    else
+        CError_ReportError(ERR_AMBIGUOUS_ACCESS_CLASS_STRUCT_UNION_MEMBER);
+}
+
 /* The path to the class (TCLASS or one of its bases, OFFSET into the object) that declares the member searched for
    (class_member_name, looked up as data_00580dec says); an ambiguous match is reported. */
 BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass, SInt32 offset)
 {
+    Boolean fail;
+    NameSpace *nspace;
+    NameSpaceObjectList *list;
     ClassList *base;
-    Object *obj;
-    Type *type;
+    TypeClass *bestClass;
+    BClassList *bestBase, *n;
+    BClassList *candidate;
+    SInt32 thisoffset;
+    HashNameNode *name;
     NameSpace *left;
-    NameSpaceObjectList *list, *scan;
-    BClassList *path, *found, *node;
-    Object *oldobj;
-    TypeClass *saved;
-    TypeClass *oldtype;
-    Boolean flag;
-    void *value;
+    NameSpace *ns;
 
-    left = tclass->nspace;
-    scan = list = CScope_FindMemberName(left, class_member_name);
-    if (scan) {
+    ns = tclass->nspace;
+    name = class_member_name;
+    if ((list = CScope_FindMemberName(name, ns))) {
         if (found_class) {
             if (CClass_ClassDominates(found_class, tclass))
                 return NULL;
@@ -2305,22 +2325,11 @@ BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass,
         }
         switch (data_00580dec) {
             case 2:
-                flag = 0;
-                if ((value = get_object_list_nspace((ObjectList *)list, &flag)) != NULL) {
+                fail = 0;
+                if ((nspace = get_object_list_nspace((ObjectList *)list, &fail))) {
                     if (found_class) {
                         if (found_class != tclass) {
-                            {
-                                HashNameNode *name = class_member_name;
-                                NameSpace *right = tclass->nspace;
-
-                                left = found_class->nspace;
-                                if (name && left != right)
-                                    CError_ReportError(ERR_AMBIGUOUS_ACCESS_NAME_FOUND,
-                                                       CError_GetQualifiedHashName(left, name),
-                                                       CError_GetQualifiedHashName(right, name));
-                                else
-                                    CError_ReportError(ERR_AMBIGUOUS_ACCESS_CLASS_STRUCT_UNION_MEMBER);
-                            }
+                            CScope_AmbigFoundClassError(&left, tclass->nspace, class_member_name);
                             return NULL;
                         }
                         if (class_path_offset != offset)
@@ -2329,34 +2338,25 @@ BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass,
                     }
                     found_class = tclass;
                     class_path_offset = offset;
-                    result->nspace = value;
+                    result->nspace = nspace;
                     return CScope_NewPath(tclass, NULL);
                 }
-                if (flag)
+                if (fail)
                     return NULL;
                 break;
             case 0:
                 if (found_class) {
                     if (list->object->otype == OT_TYPETAG && result->objects->object->otype == OT_TYPETAG &&
-                        ((Type *)(value = (void *)((ObjType *)list->object)->type))->type == TYPECLASS &&
-                        (oldtype = (TypeClass *)((ObjType *)result->objects->object)->type)->type == TYPECLASS &&
-                        (((TypeClass *)value)->flags & CLASS_IS_TEMPL_INST) && (oldtype->flags & CLASS_IS_TEMPL_INST) &&
-                        ((TypeClassExt800 *)value)->classTemplate == ((TypeClassExt800 *)oldtype)->classTemplate) {
-                        data_00580de4 = ((TypeClassExt800 *)oldtype)->classTemplate;
+                        ((ObjType *)list->object)->type->type == TYPECLASS &&
+                        ((ObjType *)result->objects->object)->type->type == TYPECLASS &&
+                        (((TypeClass *)((ObjType *)list->object)->type)->flags & CLASS_IS_TEMPL_INST) &&
+                        (((TypeClass *)((ObjType *)result->objects->object)->type)->flags & CLASS_IS_TEMPL_INST) &&
+                        ((TypeClassExt800 *)((ObjType *)list->object)->type)->classTemplate ==
+                            ((TypeClassExt800 *)((ObjType *)result->objects->object)->type)->classTemplate) {
+                        data_00580de4 = ((TypeClassExt800 *)((ObjType *)result->objects->object)->type)->classTemplate;
                     } else {
                         if (found_class != tclass) {
-                            {
-                                HashNameNode *name = class_member_name;
-                                NameSpace *right = tclass->nspace;
-
-                                left = found_class->nspace;
-                                if (name && left != right)
-                                    CError_ReportError(ERR_AMBIGUOUS_ACCESS_NAME_FOUND,
-                                                       CError_GetQualifiedHashName(left, name),
-                                                       CError_GetQualifiedHashName(right, name));
-                                else
-                                    CError_ReportError(ERR_AMBIGUOUS_ACCESS_CLASS_STRUCT_UNION_MEMBER);
-                            }
+                            CScope_AmbigNameError(found_class->nspace, tclass->nspace, class_member_name);
                             return NULL;
                         }
                         if (class_path_offset != offset) {
@@ -2370,22 +2370,11 @@ BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass,
                 result->objects = list;
                 return CScope_NewPath(tclass, NULL);
             case 1:
-                for (; scan; scan = scan->next) {
-                    if (scan->object->otype == OT_TYPETAG) {
+                for (; list; list = list->next) {
+                    if (list->object->otype == OT_TYPETAG) {
                         if (found_class) {
                             if (found_class != tclass) {
-                                {
-                                    HashNameNode *name = class_member_name;
-                                    NameSpace *right = tclass->nspace;
-
-                                    left = found_class->nspace;
-                                    if (name && left != right)
-                                        CError_ReportError(ERR_AMBIGUOUS_ACCESS_NAME_FOUND,
-                                                           CError_GetQualifiedHashName(left, name),
-                                                           CError_GetQualifiedHashName(right, name));
-                                    else
-                                        CError_ReportError(ERR_AMBIGUOUS_ACCESS_CLASS_STRUCT_UNION_MEMBER);
-                                }
+                                CScope_AmbigNameError(found_class->nspace, tclass->nspace, class_member_name);
                                 return NULL;
                             }
                             if (class_path_offset != offset)
@@ -2394,7 +2383,7 @@ BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass,
                         }
                         found_class = tclass;
                         class_path_offset = offset;
-                        result->type.base = ((ObjType *)scan->object)->type;
+                        result->type.base = ((ObjType *)list->object)->type;
                         return CScope_NewPath(tclass, NULL);
                     }
                 }
@@ -2403,25 +2392,22 @@ BClassList *find_class_member_path(CScopeParseResult *result, TypeClass *tclass,
                 CError_FATAL(1182);
         }
     }
-    found = NULL;
-    for (base = tclass->bases; base; base = base->next) {
-        path = find_class_member_path(result, base->base,
-                                      base->is_virtual ? CClass_FindVBaseOffset(class_path_base, base->base)
-                                                       : offset + base->offset);
-        if (path) {
-            node = CompilerTools_AllocatePool(8);
-            node->next = path;
-            node->type = (Type *)tclass;
-            if (found && saved == found_class) {
-                if (CClass_IsMoreAccessiblePath(node, found))
-                    found = node;
+    for (base = tclass->bases, bestBase = NULL; base; base = base->next) {
+        thisoffset = base->is_virtual ? CClass_FindVBaseOffset(class_path_base, base->base) : offset + base->offset;
+        if ((candidate = find_class_member_path(result, base->base, thisoffset))) {
+            n = CompilerTools_AllocatePool(8);
+            n->next = candidate;
+            n->type = (Type *)tclass;
+            if (bestBase && bestClass == found_class) {
+                if (CClass_IsMoreAccessiblePath(n, bestBase))
+                    bestBase = n;
             } else {
-                saved = found_class;
-                found = node;
+                bestClass = found_class;
+                bestBase = n;
             }
         }
     }
-    return found;
+    return bestBase;
 }
 
 Boolean find_and_append_class_member_path(CScopeParseResult *scope, NameSpace *target, HashNameNode *mode, Boolean flag)

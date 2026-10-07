@@ -2328,19 +2328,42 @@ static void PCode_Remove(PCodeInstruction *instr)
     PCode_UnlinkInstruction(instr);
 }
 
-/* Whether an instruction from FIRST back to LAST (exclusive) uses (FLAG 1) or defines (2) ARG's register. */
-static int PCode_RegisterAccessed(PCodeInstruction *first, PCodeInstruction *last, PCodeOperand *arg, int flag)
+/* Whether an instruction between INSTR and DEF (both exclusive) uses ARG's register. */
+static int PCode_UsedBetween(PCodeInstruction *instr, PCodeInstruction *def, PCodeOperand *arg)
 {
+    PCodeInstruction *scan;
     PCodeOperand *op;
     UInt32 n;
 
-    for (; first != last; first = first->previous) {
-        for (op = first->operandData.operands, n = first->operand_count; n--; op++) {
-            if (op->kind == arg->kind && op->value.reg == arg->value.reg && (op->flags & flag))
+    for (scan = instr->previous; scan != def; scan = scan->previous) {
+        for (op = scan->operandData.operands, n = scan->operand_count; n--; op++) {
+            if (op->kind == arg->kind && op->value.reg == arg->value.reg && (op->flags & 1))
                 return 1;
         }
     }
     return 0;
+}
+
+/* Whether an instruction between INSTR and DEF (both exclusive) defines ARG's register. */
+static int PCode_DefinedBetween(PCodeInstruction *instr, PCodeInstruction *def, PCodeOperand *arg)
+{
+    PCodeInstruction *scan;
+    PCodeOperand *op;
+    UInt32 n;
+
+    for (scan = instr->previous; scan != def; scan = scan->previous) {
+        for (op = scan->operandData.operands, n = scan->operand_count; n--; op++) {
+            if (op->kind == arg->kind && op->value.reg == arg->value.reg && (op->flags & 2))
+                return 1;
+        }
+    }
+    return 0;
+}
+
+/* Whether a register written by INSTR is still live after it. */
+static int PCode_LiveAfter(PCodeInstruction *instr)
+{
+    return fn_004cbe40(instr->block, instr->next, 0, 0, 0, 0, 0);
 }
 
 /* An addi whose base register comes from another addi (or an li/la-style definition): the two offsets folded into
@@ -2348,7 +2371,6 @@ static int PCode_RegisterAccessed(PCodeInstruction *first, PCodeInstruction *las
 int fold_addi_or_mr_reaching_def(PCodeInstruction *pc, UInt32 mask)
 {
     PCodeInstruction *def;
-    PCodeInstruction *first;
     SInt32 offset, sum;
 
     def = CodeGen_ReachingDefTable_00581af8[pc->useStart + 1];
@@ -2357,17 +2379,19 @@ int fold_addi_or_mr_reaching_def(PCodeInstruction *pc, UInt32 mask)
               pc->operandData.operands[0].value.reg == pc->operandData.operands[1].value.reg)) {
             if (pc->operandData.operands[2].value.signed_value == 0 &&
                 def->operandData.operands[0].value.reg == def->operandData.operands[1].value.reg &&
-                !PCode_RegisterAccessed(pc->previous, def, &def->operandData.operands[0], 1) &&
+                !PCode_UsedBetween(pc, def, &def->operandData.operands[0]) &&
                 (!(mask & (1 << def->operandData.operands[0].value.reg)) ||
-                 fn_004cbe40(pc->block, pc->next, 0, 0, 0, 0, 0))) {
+                 PCode_LiveAfter(pc))) {
                 if (mask & (1 << def->operandData.operands[0].value.reg)) {
                     pc->opcode++;
                     pc->operandData.operands[1].flags |= 2;
+                    pc->operandData.operands[2] = def->operandData.operands[2];
+                } else {
+                    pc->operandData.operands[2] = def->operandData.operands[2];
                 }
-                pc->operandData.operands[2] = def->operandData.operands[2];
                 CodeGen_ReachingDefTable_00581af8[pc->useStart + 1] =
-                    CodeGen_ReachingDefTable_00581af8[def->useStart + 1],
-                                                                 PCode_UnlinkInstruction(def);
+                    CodeGen_ReachingDefTable_00581af8[def->useStart + 1];
+                PCode_UnlinkInstruction(def);
                 return 1;
             }
             offset = pc->operandData.operands[2].value.signed_value;
@@ -2383,25 +2407,26 @@ int fold_addi_or_mr_reaching_def(PCodeInstruction *pc, UInt32 mask)
                 else
                     return 0;
             }
-            sum += offset;
-            if (sum != (short)sum)
+            if (sum + offset != (short)(sum + offset))
                 return 0;
-            if (!(mask & (1 << def->operandData.operands[0].value.reg)) &&
-                !PCode_RegisterAccessed(first = pc->previous, def, &def->operandData.operands[0], 1) &&
-                !PCode_RegisterAccessed(first, def, &def->operandData.operands[1], 2)) {
-                pc->operandData.operands[1].value.reg = def->operandData.operands[1].value.reg;
-                CodeGen_ReachingDefTable_00581af8[pc->useStart + 1] =
-                    CodeGen_ReachingDefTable_00581af8[def->useStart + 1];
-                if (def->operandData.operands[2].kind == PCOp_MEMORY) {
-                    pc->operandData.operands[2] = def->operandData.operands[2];
-                    pc->operandData.operands[2].value.signed_value += offset;
-                } else
-                    pc->operandData.operands[2].value.signed_value = sum;
-                PCode_UnlinkInstruction(def);
-                return 1;
+            if (!(mask & (1 << def->operandData.operands[0].value.reg))) {
+                if (!PCode_UsedBetween(pc, def, &def->operandData.operands[0])) {
+                    if (!PCode_DefinedBetween(pc, def, &def->operandData.operands[1])) {
+                        pc->operandData.operands[1].value.reg = def->operandData.operands[1].value.reg;
+                        CodeGen_ReachingDefTable_00581af8[pc->useStart + 1] =
+                            CodeGen_ReachingDefTable_00581af8[def->useStart + 1];
+                        if (def->operandData.operands[2].kind == PCOp_MEMORY) {
+                            pc->operandData.operands[2] = def->operandData.operands[2];
+                            pc->operandData.operands[2].value.signed_value += offset;
+                        } else
+                            pc->operandData.operands[2].value.signed_value = sum + offset;
+                        PCode_UnlinkInstruction(def);
+                        return 1;
+                    }
+                }
             }
             if (pc->operandData.operands[1].value.reg != def->operandData.operands[1].value.reg &&
-                !PCode_RegisterAccessed(first, def, &def->operandData.operands[1], 2)) {
+                !PCode_DefinedBetween(pc, def, &def->operandData.operands[1])) {
                 if (def->operandData.operands[2].kind == PCOp_MEMORY &&
                     def->operandData.operands[2].object->datatype != DLOCAL)
                     return 0;
@@ -2412,13 +2437,13 @@ int fold_addi_or_mr_reaching_def(PCodeInstruction *pc, UInt32 mask)
                     pc->operandData.operands[2] = def->operandData.operands[2];
                     pc->operandData.operands[2].value.signed_value += offset;
                 } else
-                    pc->operandData.operands[2].value.signed_value = sum;
+                    pc->operandData.operands[2].value.signed_value = sum + offset;
                 return 1;
             }
         }
     } else if (def->opcode == PC_MR && def->operandData.operands[1].kind == PCOp_GPR &&
                def->operandData.operands[1].value.reg != 0) {
-        if (!PCode_RegisterAccessed(pc->previous, def, &def->operandData.operands[1], 2)) {
+        if (!PCode_DefinedBetween(pc, def, &def->operandData.operands[1])) {
             pc->operandData.operands[1].value.reg = def->operandData.operands[1].value.reg;
             CodeGen_ReachingDefTable_00581af8[pc->useStart + 1] = CodeGen_ReachingDefTable_00581af8[def->useStart + 1];
         }

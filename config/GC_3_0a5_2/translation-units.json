@@ -78241,7 +78241,19 @@
         "18 code generation nonmatches retain agent static review; no independent execution validation claimed.",
         "Ordinary Mac symbols establish names, not complete original TU membership.",
         "Legacy diagnostic/file wrappers remain in provisional baseline source."
-      ]
+      ],
+      "bounded_validation": {
+        "CTool_PtoCstr": {
+          "name": "CTool_PtoCstr",
+          "cases_per_body": 2048,
+          "original_bytes": 150,
+          "compiled_bytes": 286,
+          "all_pascal_lengths": true,
+          "result": "Every tested buffer, return pointer, callee-saved register and stack state agrees; bytes beyond terminator remain unchanged.",
+          "limitation": "Bounded observed-instruction interpreter, not original application execution or exhaustive equivalence."
+        }
+      },
+      "nonmatching_pascal_review": "Native and compiled buffers agree for all256 Pascal lengths with eight payload patterns each. Observed-instruction interpretation checks the complete512-byte buffer, return pointer, callee-saved registers and stack. Compiler-generated unroll guards and scheduling differ; still not byte-exact or exhaustively proven."
     },
     "src/GC_3_0a5_2/backend/Operands.c": {
       "source": "src/GC_3_0a5_2/backend/Operands.c",

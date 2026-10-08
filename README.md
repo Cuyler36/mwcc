@@ -23,6 +23,8 @@ CompilerTools has 57 native utility functions reconstructed, with 39 exact
 matches and independently verified data sections. The remaining 18 bodies have
 code generation differences and remain under review. Canonical utility names
 use the supplied symbols; complete original source membership is still unproven.
+Its nonmatching Pascal-string converter passes 2,048 bounded instruction checks
+per original and compiled body, covering every length from 0 through 255.
 
 Backend Operands has 36 bounded Windows functions reconstructed and 13 exact
 matches. Its private types preserve GC3's native operand layout and calling

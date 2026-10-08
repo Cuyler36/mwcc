@@ -1,4 +1,5 @@
 #define CERROR_FILE "Registers.c"
+#include "version.h"
 #include "compiler/common.h"
 #include "compiler/Registers.h"
 #include "compiler/enode.h"
@@ -233,6 +234,7 @@ UInt32 Registers_GetOperandRegMask(PCodeBlock *list)
     return mask;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 VarInfo *Registers_GetInfo(Object *object)
 {
     VarInfo *info;
@@ -261,6 +263,7 @@ VarInfo *Registers_GetInfo(Object *object)
             return NULL;
     }
 }
+#endif
 
 void Registers_CloseCoalesceWindow(void)
 {

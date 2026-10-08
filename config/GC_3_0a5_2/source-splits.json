@@ -110,5 +110,485 @@
   "CFunc_LogicalNotCInt64": {
     "name": "CInt64_Not",
     "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "fn_004287c0": {
+    "name": "GetBrowseTableInfoAndLock",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "CLBrowser_InitMemBuffer": {
+    "name": "Browser_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "free_lookup_entries": {
+    "name": "Destroy",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "CLBrowser_FreeMemBuffer": {
+    "name": "Browser_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "CLBrowser_LookupValue": {
+    "name": "Browser_SearchFile",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "CLBrowser_FindOrAddLookupEntry": {
+    "name": "Browser_SearchAndAddFile",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "calculate_lookup_entries_size": {
+    "name": "CalcDiskSpaceRequirements",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "write_lookup_entries": {
+    "name": "ConvertMemToDisk",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "build_browser_file_buffer": {
+    "name": "Browser_PackBrowseFile",
+    "source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+  },
+  "allocate_browser_cache_entry": {
+    "name": "makecacheentry",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "prepend_browser_cache_entry": {
+    "name": "insertcacheentry",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "unlink_browser_cache_entry": {
+    "name": "deletecacheentry",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "CLBrowser_InitCache": {
+    "name": "InitializeIncludeCache",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "CLBrowser_FreeCacheEntries": {
+    "name": "CleanupIncludeCache",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "CLBrowser_CacheFileText": {
+    "name": "CacheIncludeFile",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "CLBrowser_FindCacheEntryBuffer": {
+    "name": "CachedIncludeFile",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "CLBrowser_ReleaseBuffer": {
+    "name": "FreeIncludeFile",
+    "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c"
+  },
+  "fn_004286d0": {
+    "name": "WriteBrowseData",
+    "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
+  },
+  "CLWriteObjectFile_WriteObjectFile": {
+    "name": "WriteObjectFile",
+    "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
+  },
+  "copy_relocation_list": {
+    "name": "copy_relocation_list",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CInline_DispatchNextDeferredNode": {
+    "name": "CInline_DispatchNextDeferredNode",
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c"
+  },
+  "setup_exception_specification": {
+    "name": "setup_exception_specification",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "generate_temporary_object_destruction": {
+    "name": "generate_temporary_object_destruction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e1050": {
+    "name": "fn_004e1050",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "rewrite_expr_temporaries": {
+    "name": "rewrite_expr_temporaries",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "rewrite_funccall_temporaries": {
+    "name": "rewrite_funccall_temporaries",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "lower_newexception": {
+    "name": "lower_newexception",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_004e1940": {
+    "name": "CException_004e1940",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ScanTryBlock": {
+    "name": "CExcept_ScanTryBlock",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "append_namespace_names": {
+    "name": "append_namespace_names",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionCleanup": {
+    "name": "CExcept_ActionCleanup",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterMemberArray": {
+    "name": "CExcept_RegisterMemberArray",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionNeedsDestruction": {
+    "name": "CExcept_ActionNeedsDestruction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionCompare": {
+    "name": "CExcept_ActionCompare",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_004e35b0": {
+    "name": "CException_004e35b0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_Setup": {
+    "name": "CExcept_Setup",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CFunc_ParseFuncDef": {
+    "name": "CFunc_ParseFuncDef",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_ctor_initializers": {
+    "name": "parse_ctor_initializers",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_FuncGenSetup": {
+    "name": "CFunc_FuncGenSetup",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_SetupNewFuncArgs": {
+    "name": "CFunc_SetupNewFuncArgs",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "create_local_object_copy": {
+    "name": "create_local_object_copy",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_ParseScopedStatement": {
+    "name": "CFunc_ParseScopedStatement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_statement": {
+    "name": "parse_statement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "initialize_argument_object": {
+    "name": "initialize_argument_object",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_DestructorCleanup": {
+    "name": "CFunc_DestructorCleanup",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "insert_conditional_goto_cleanup": {
+    "name": "insert_conditional_goto_cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_0047b9a0": {
+    "name": "CFunc_0047b9a0",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "create_temp_object": {
+    "name": "create_temp_object",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CheckCLabels": {
+    "name": "CheckCLabels",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_InsertAfterStatement": {
+    "name": "CFunc_InsertAfterStatement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_AppendStatement": {
+    "name": "CFunc_AppendStatement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "newlabel": {
+    "name": "newlabel",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "findlabel": {
+    "name": "findlabel",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parameter_type_list": {
+    "name": "parameter_type_list",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "Registers_GetInfo": {
+    "name": "Registers_GetInfo",
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+  },
+  "restore_gprs": {
+    "name": "restore_gprs",
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c"
+  },
+  "StackFrameEABI_MergePrologueEpilogue": {
+    "name": "StackFrameEABI_MergePrologueEpilogue",
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c"
+  },
+  "CFunc_GenerateSingleExprFunc": {
+    "name": "CFunc_GenerateSingleExprFunc",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_GenerateDummyFunction": {
+    "name": "CFunc_GenerateDummyFunction",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "InitExpr_Register": {
+    "name": "InitExpr_Register",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "fn_00476e60": {
+    "name": "fn_00476e60",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_00476e70": {
+    "name": "CFunc_00476e70",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_Gen": {
+    "name": "CFunc_Gen",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "setup_function_arguments": {
+    "name": "setup_function_arguments",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "create_arg_object_list": {
+    "name": "create_arg_object_list",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "check_function_result_automatic_variable": {
+    "name": "check_function_result_automatic_variable",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "generate_conditional_jump": {
+    "name": "generate_conditional_jump",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_declarations": {
+    "name": "parse_declarations",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "declare_local_object": {
+    "name": "declare_local_object",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "register_destructor_object": {
+    "name": "register_destructor_object",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "append_or_defer_expression_statement": {
+    "name": "append_or_defer_expression_statement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "append_localstatic_init_expr": {
+    "name": "append_localstatic_init_expr",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_case_statement": {
+    "name": "parse_case_statement",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_CodeCleanup": {
+    "name": "CFunc_CodeCleanup",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_WarnUnused": {
+    "name": "CFunc_WarnUnused",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "sub_47bca0": {
+    "name": "sub_47bca0",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "rewrite_enode_list_nodes": {
+    "name": "rewrite_enode_list_nodes",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "isolate_diadic_right_cleanup": {
+    "name": "isolate_diadic_right_cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "rewrite_cond_with_cleannodes": {
+    "name": "rewrite_cond_with_cleannodes",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "fn_0047bff0": {
+    "name": "fn_0047bff0",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "sub_47c050": {
+    "name": "sub_47c050",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "append_cleannode_dtors": {
+    "name": "append_cleannode_dtors",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "create_temp_node2": {
+    "name": "create_temp_node2",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "create_temp_node": {
+    "name": "create_temp_node",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_ParseFakeArgList": {
+    "name": "CFunc_ParseFakeArgList",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_func_args": {
+    "name": "parse_func_args",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_DefaultArg": {
+    "name": "CFunc_DefaultArg",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "check_default_argument_reference": {
+    "name": "check_default_argument_reference",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "parse_old_style_parameter_names": {
+    "name": "parse_old_style_parameter_names",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "fn_0047ca70": {
+    "name": "fn_0047ca70",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CFunc_SetupLocalVarInfo": {
+    "name": "CFunc_SetupLocalVarInfo",
+    "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+  },
+  "CException_HashType": {
+    "name": "CException_HashType",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_AddPendingBuffer": {
+    "name": "CException_AddPendingBuffer",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_Terminate": {
+    "name": "CExcept_Terminate",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_ResetPrecompiledState": {
+    "name": "CException_ResetPrecompiledState",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ExceptionTansform": {
+    "name": "CExcept_ExceptionTansform",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e0ab0": {
+    "name": "fn_004e0ab0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e0b20": {
+    "name": "fn_004e0b20",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "update_statement_dobjstacks": {
+    "name": "update_statement_dobjstacks",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "insert_temporary_object_destruction": {
+    "name": "insert_temporary_object_destruction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_GetTempObject": {
+    "name": "CException_GetTempObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "create_catch_object_init": {
+    "name": "create_catch_object_init",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_004e1fb0": {
+    "name": "CException_004e1fb0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ScanThrowExpression": {
+    "name": "CExcept_ScanThrowExpression",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "create_call_with_arg_and_default_args": {
+    "name": "create_call_with_arg_and_default_args",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ScanExceptionSpecification": {
+    "name": "CExcept_ScanExceptionSpecification",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "create_type_stringconst": {
+    "name": "create_type_stringconst",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "emit_flagged_class_offsets": {
+    "name": "emit_flagged_class_offsets",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "add_class_and_bases": {
+    "name": "add_class_and_bases",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "mark_class_and_bases": {
+    "name": "mark_class_and_bases",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e2940": {
+    "name": "fn_004e2940",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterMember": {
+    "name": "CExcept_RegisterMember",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_AddStdTypeRecord": {
+    "name": "CException_AddStdTypeRecord",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e30c0": {
+    "name": "fn_004e30c0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_PushEntry": {
+    "name": "CException_PushEntry",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "insert_exception_action": {
+    "name": "insert_exception_action",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterDeleteObject": {
+    "name": "CExcept_RegisterDeleteObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_RegisterMemberArray": {
+    "name": "CException_RegisterMemberArray",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterDestructorObject": {
+    "name": "CExcept_RegisterDestructorObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CompareSpecifications": {
+    "name": "CExcept_CompareSpecifications",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
   }
 }

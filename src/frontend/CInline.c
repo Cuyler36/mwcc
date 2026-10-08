@@ -1,4 +1,5 @@
 #define CERROR_FILE "CInline.c"
+#include "version.h"
 #include "compiler/common.h"
 #include "compiler/CInline.h"
 #include "compiler/enode.h"
@@ -150,6 +151,7 @@ PendingFunction *generate_guarded_initializers(PendingFunction *pending)
     return pending;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CInline_DispatchNextDeferredNode(void)
 {
     CPrecNode *work;
@@ -195,6 +197,7 @@ Boolean CInline_DispatchNextDeferredNode(void)
     }
     return 0;
 }
+#endif
 static inline TypeClassExt800 *CInline_0050ebf0_inline1(Object *v1)
 {
     TypeClass *v5s;

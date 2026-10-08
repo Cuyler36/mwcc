@@ -17,6 +17,423 @@
   ],
   "units": [
     {
+      "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+      "original_filename": "RegisterInfo.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "FUN_005784c0",
+          "address": "0x005784c0",
+          "size": 1186,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0057851b",
+            "0x005785a1",
+            "0x0057869a",
+            "0x0057872a",
+            "0x005787a2",
+            "0x005787fa",
+            "0x0057884a",
+            "0x0057889a",
+            "0x005788ea",
+            "0x0057893a"
+          ]
+        },
+        {
+          "name": "FUN_005789b0",
+          "address": "0x005789b0",
+          "size": 101,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00578a0a"
+          ]
+        },
+        {
+          "name": "FUN_00578a20",
+          "address": "0x00578a20",
+          "size": 940,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00578a9a",
+            "0x00578b2c",
+            "0x00578d4c",
+            "0x00578d8a"
+          ]
+        },
+        {
+          "name": "FUN_00578dd0",
+          "address": "0x00578dd0",
+          "size": 1116,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00578e42",
+            "0x00578edf",
+            "0x00578f20",
+            "0x00579032",
+            "0x0057909a",
+            "0x005790da",
+            "0x0057911a",
+            "0x0057913c"
+          ]
+        },
+        {
+          "name": "FUN_005792c0",
+          "address": "0x005792c0",
+          "size": 55,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005792e8"
+          ]
+        },
+        {
+          "name": "Registers_GetInfo",
+          "address": "0x00579790",
+          "size": 156,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005797da",
+            "0x0057980a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+        },
+        {
+          "name": "FUN_00579830",
+          "address": "0x00579830",
+          "size": 568,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00579882",
+            "0x005798ab",
+            "0x0057993a",
+            "0x005799ad",
+            "0x00579a2a",
+            "0x00579a5c"
+          ]
+        },
+        {
+          "name": "FUN_00579a70",
+          "address": "0x00579a70",
+          "size": 563,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00579aca",
+            "0x00579b6d",
+            "0x00579b9f",
+            "0x00579c3a",
+            "0x00579c7b"
+          ]
+        },
+        {
+          "name": "FUN_0057a2e0",
+          "address": "0x0057a2e0",
+          "size": 1045,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0057a421",
+            "0x0057a51a",
+            "0x0057a5ba",
+            "0x0057a60a",
+            "0x0057a63c",
+            "0x0057a652",
+            "0x0057a68a"
+          ]
+        },
+        {
+          "name": "FUN_0057a830",
+          "address": "0x0057a830",
+          "size": 220,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0057a8a1",
+            "0x0057a8ea"
+          ]
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "ownership_prepared"
+    },
+    {
+      "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+      "original_filename": "StackFrame.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "FUN_005861b0",
+          "address": "0x005861b0",
+          "size": 2162,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00586262",
+            "0x00586415",
+            "0x0058679a",
+            "0x005867b0"
+          ]
+        },
+        {
+          "name": "FUN_00586a30",
+          "address": "0x00586a30",
+          "size": 185,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00586ad4"
+          ]
+        },
+        {
+          "name": "FUN_00586ce0",
+          "address": "0x00586ce0",
+          "size": 511,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00586d9e"
+          ]
+        },
+        {
+          "name": "FUN_00586ee0",
+          "address": "0x00586ee0",
+          "size": 409,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00586faf"
+          ]
+        },
+        {
+          "name": "FUN_00587080",
+          "address": "0x00587080",
+          "size": 76,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005870b1"
+          ]
+        },
+        {
+          "name": "FUN_00587140",
+          "address": "0x00587140",
+          "size": 230,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058721a"
+          ]
+        },
+        {
+          "name": "FUN_005872d0",
+          "address": "0x005872d0",
+          "size": 67,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058730a"
+          ]
+        },
+        {
+          "name": "FUN_00587340",
+          "address": "0x00587340",
+          "size": 51,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058736a"
+          ]
+        },
+        {
+          "name": "FUN_005873a0",
+          "address": "0x005873a0",
+          "size": 41,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005873c0"
+          ]
+        },
+        {
+          "name": "FUN_005878c0",
+          "address": "0x005878c0",
+          "size": 1105,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00587b81"
+          ]
+        },
+        {
+          "name": "FUN_00588120",
+          "address": "0x00588120",
+          "size": 574,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005881da"
+          ]
+        },
+        {
+          "name": "restore_gprs",
+          "address": "0x005888b0",
+          "size": 411,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00588913"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/StackFrame.c"
+        },
+        {
+          "name": "StackFrameEABI_MergePrologueEpilogue",
+          "address": "0x00588f70",
+          "size": 1674,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00589110",
+            "0x0058944c"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/StackFrame.c"
+        },
+        {
+          "name": "FUN_00589600",
+          "address": "0x00589600",
+          "size": 1943,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00589798",
+            "0x00589b5a",
+            "0x00589c4c"
+          ]
+        },
+        {
+          "name": "FUN_00589da0",
+          "address": "0x00589da0",
+          "size": 269,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00589e6d",
+            "0x00589ea1"
+          ]
+        },
+        {
+          "name": "FUN_00589eb0",
+          "address": "0x00589eb0",
+          "size": 1329,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00589efd",
+            "0x0058a27a",
+            "0x0058a3aa",
+            "0x0058a3c0"
+          ]
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "ownership_prepared"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/Arguments.c",
       "original_filename": "Arguments.c",
       "evidence": [
@@ -380,6 +797,193 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+      "original_filename": "CLBrowser.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "GetBrowseTableInfoAndLock",
+          "address": "0x0043d790",
+          "size": 74,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Browser_Initialize",
+          "address": "0x0043d7e0",
+          "size": 45,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Destroy",
+          "address": "0x0043d810",
+          "size": 74,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Browser_Terminate",
+          "address": "0x0043d860",
+          "size": 33,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Browser_SearchFile",
+          "address": "0x0043d890",
+          "size": 195,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043d90e",
+            "0x0043d926"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+        },
+        {
+          "name": "Browser_SearchAndAddFile",
+          "address": "0x0043d960",
+          "size": 191,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CalcDiskSpaceRequirements",
+          "address": "0x0043da20",
+          "size": 70,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ConvertMemToDisk",
+          "address": "0x0043da70",
+          "size": 128,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Browser_PackBrowseFile",
+          "address": "0x0043daf0",
+          "size": 518,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043dbf8",
+            "0x0043dc16"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLBrowser.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "GetBrowseTableInfoAndLock",
+          "mac_address": "0x0002522c",
+          "linkage_names": [
+            "GetBrowseTableInfoAndLock"
+          ]
+        },
+        {
+          "name": "Browser_Initialize",
+          "mac_address": "0x000252b8",
+          "linkage_names": [
+            "Browser_Initialize"
+          ]
+        },
+        {
+          "name": "Destroy",
+          "mac_address": "0x00025320",
+          "linkage_names": [
+            "Destroy"
+          ]
+        },
+        {
+          "name": "Browser_Terminate",
+          "mac_address": "0x00025394",
+          "linkage_names": [
+            "Browser_Terminate"
+          ]
+        },
+        {
+          "name": "Browser_SearchFile",
+          "mac_address": "0x000253dc",
+          "linkage_names": [
+            "Browser_SearchFile"
+          ]
+        },
+        {
+          "name": "Browser_SearchAndAddFile",
+          "mac_address": "0x000254ec",
+          "linkage_names": [
+            "Browser_SearchAndAddFile"
+          ]
+        },
+        {
+          "name": "CalcDiskSpaceRequirements",
+          "mac_address": "0x000255f4",
+          "linkage_names": [
+            "CalcDiskSpaceRequirements"
+          ]
+        },
+        {
+          "name": "ConvertMemToDisk",
+          "mac_address": "0x00025664",
+          "linkage_names": [
+            "ConvertMemToDisk"
+          ]
+        },
+        {
+          "name": "Browser_PackBrowseFile",
+          "mac_address": "0x00025704",
+          "linkage_names": [
+            "Browser_PackBrowseFile"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLFileOps.c",
       "original_filename": "CLFileOps.c",
       "evidence": [
@@ -570,6 +1174,222 @@
       "compiled": false,
       "membership_complete": false,
       "status": "unattempted"
+    },
+    {
+      "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+      "original_filename": "CLIncludeFileCache.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "makecacheentry",
+          "address": "0x0043dd00",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insertcacheentry",
+          "address": "0x0043dd40",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "deletecacheentry",
+          "address": "0x0043dd70",
+          "size": 41,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "InitializeIncludeCache",
+          "address": "0x0043dda0",
+          "size": 31,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CleanupIncludeCache",
+          "address": "0x0043ddc0",
+          "size": 86,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CacheIncludeFile",
+          "address": "0x0043de20",
+          "size": 470,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CachedIncludeFile",
+          "address": "0x0043e000",
+          "size": 96,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 CFG bounded by Ghidra entries; reviewed complete body",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FreeIncludeFile",
+          "address": "0x0043e060",
+          "size": 45,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "makecacheentry",
+          "mac_address": "0x00025924",
+          "linkage_names": [
+            "makecacheentry"
+          ]
+        },
+        {
+          "name": "insertcacheentry",
+          "mac_address": "0x00025974",
+          "linkage_names": [
+            "insertcacheentry"
+          ]
+        },
+        {
+          "name": "deletecacheentry",
+          "mac_address": "0x000259bc",
+          "linkage_names": [
+            "deletecacheentry"
+          ]
+        },
+        {
+          "name": "InitializeIncludeCache",
+          "mac_address": "0x00025a10",
+          "linkage_names": [
+            "InitializeIncludeCache"
+          ]
+        },
+        {
+          "name": "CleanupIncludeCache",
+          "mac_address": "0x00025a4c",
+          "linkage_names": [
+            "CleanupIncludeCache"
+          ]
+        },
+        {
+          "name": "CacheIncludeFile",
+          "mac_address": "0x00025ae0",
+          "linkage_names": [
+            "CacheIncludeFile"
+          ]
+        },
+        {
+          "name": "CachedIncludeFile",
+          "mac_address": "0x00025cc4",
+          "linkage_names": [
+            "CachedIncludeFile"
+          ]
+        },
+        {
+          "name": "FreeIncludeFile",
+          "mac_address": "0x00025d5c",
+          "linkage_names": [
+            "FreeIncludeFile"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_equivalent"
+    },
+    {
+      "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+      "original_filename": "CLWriteObjectFile.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "WriteObjectFile",
+          "address": "0x0043d590",
+          "size": 195,
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043d646"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
+        },
+        {
+          "name": "WriteBrowseData",
+          "address": "0x0043d660",
+          "size": 301,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "WriteObjectFile",
+          "mac_address": "0x00024ffc",
+          "linkage_names": [
+            "WriteObjectFile"
+          ]
+        },
+        {
+          "name": "WriteBrowseData",
+          "mac_address": "0x00025100",
+          "linkage_names": [
+            "WriteBrowseData"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_unresolved"
     },
     {
       "source": "src/GC_3_0a5_2/driver/CLibrary.c",
@@ -1262,9 +2082,21 @@
       "source": "src/GC_3_0a5_2/frontend/CException.cpp",
       "original_filename": "CException.cpp",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
+        {
+          "name": "copy_relocation_list",
+          "address": "0x00455850",
+          "size": 508,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
         {
           "name": "FUN_0049c9e0",
           "address": "0x0049c9e0",
@@ -1329,7 +2161,7 @@
           "call_addresses": [
             "0x0049d151"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "FUN_0049d210",
@@ -1386,7 +2218,7 @@
           "call_addresses": [
             "0x0049d75b"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "fn_004e1050",
@@ -1400,7 +2232,7 @@
           "call_addresses": [
             "0x0049d8f1"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "rewrite_expr_temporaries",
@@ -1414,7 +2246,7 @@
           "call_addresses": [
             "0x0049d9ff"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "rewrite_funccall_temporaries",
@@ -1428,7 +2260,7 @@
           "call_addresses": [
             "0x0049db2e"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "FUN_0049def0",
@@ -1457,7 +2289,7 @@
           "call_addresses": [
             "0x0049e4cb"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "CException_004e1940",
@@ -1471,7 +2303,18 @@
           "call_addresses": [
             "0x0049e598"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
+        },
+        {
+          "name": "CExcept_ScanTryBlock",
+          "address": "0x0049e640",
+          "size": 1204,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
         },
         {
           "name": "FUN_0049ec20",
@@ -1501,6 +2344,17 @@
           ]
         },
         {
+          "name": "append_namespace_names",
+          "address": "0x0049f7e0",
+          "size": 540,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "CExcept_ActionCleanup",
           "address": "0x0049fa00",
           "size": 800,
@@ -1514,7 +2368,18 @@
             "0x0049fcdd",
             "0x0049fcfa"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
+        },
+        {
+          "name": "CExcept_RegisterMemberArray",
+          "address": "0x0049fd20",
+          "size": 90,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
         },
         {
           "name": "FUN_0049fd80",
@@ -1559,7 +2424,7 @@
           "call_addresses": [
             "0x004a032c"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "CExcept_ActionCompare",
@@ -1573,7 +2438,7 @@
           "call_addresses": [
             "0x004a058d"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
         },
         {
           "name": "CException_004e35b0",
@@ -1587,70 +2452,25 @@
           "call_addresses": [
             "0x004a07be"
           ],
-          "compiled_source": "src/frontend/CException.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp"
+        },
+        {
+          "name": "CExcept_Setup",
+          "address": "0x004a0ac0",
+          "size": 25,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CException.cpp",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [
-        {
-          "address": "0x0049cfc0",
-          "name": "setup_exception_specification",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049d6c0",
-          "name": "generate_temporary_object_destruction",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049d7c0",
-          "name": "fn_004e1050",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049d920",
-          "name": "rewrite_expr_temporaries",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049da10",
-          "name": "rewrite_funccall_temporaries",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049e170",
-          "name": "lower_newexception",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049e4e0",
-          "name": "CException_004e1940",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x0049fa00",
-          "name": "CExcept_ActionCleanup",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x004a0300",
-          "name": "CExcept_ActionNeedsDestruction",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x004a0410",
-          "name": "CExcept_ActionCompare",
-          "compiled_source": "src/frontend/CException.c"
-        },
-        {
-          "address": "0x004a06f0",
-          "name": "CException_004e35b0",
-          "compiled_source": "src/frontend/CException.c"
-        }
-      ],
-      "compiled": false,
+      "ownership_conflicts": [],
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "ownership_prepared"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
@@ -2693,6 +3513,7 @@
       "source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
       "original_filename": "CFunc.cpp",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
@@ -2767,7 +3588,7 @@
           "call_addresses": [
             "0x0052532a"
           ],
-          "compiled_source": "src/frontend/CFunc.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
         },
         {
           "name": "FUN_00525660",
@@ -2796,6 +3617,28 @@
           ]
         },
         {
+          "name": "parse_ctor_initializers",
+          "address": "0x00526030",
+          "size": 786,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CFunc_FuncGenSetup",
+          "address": "0x00526590",
+          "size": 272,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "FUN_005268d0",
           "address": "0x005268d0",
           "size": 278,
@@ -2821,7 +3664,7 @@
             "0x00526bda",
             "0x00526bed"
           ],
-          "compiled_source": "src/frontend/CFunc.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
         },
         {
           "name": "create_local_object_copy",
@@ -2835,7 +3678,29 @@
           "call_addresses": [
             "0x00526f2c"
           ],
-          "compiled_source": "src/frontend/CFunc.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
+        },
+        {
+          "name": "CFunc_ParseScopedStatement",
+          "address": "0x005270a0",
+          "size": 409,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "parse_statement",
+          "address": "0x00527240",
+          "size": 6207,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
         },
         {
           "name": "FUN_00529910",
@@ -2876,7 +3741,7 @@
           "call_addresses": [
             "0x00529eda"
           ],
-          "compiled_source": "src/frontend/CFunc.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
         },
         {
           "name": "FUN_0052b590",
@@ -2974,7 +3839,7 @@
             "0x0052d5ba",
             "0x0052d68a"
           ],
-          "compiled_source": "src/frontend/CFunc.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
         },
         {
           "name": "FUN_0052d720",
@@ -3004,6 +3869,105 @@
           ]
         },
         {
+          "name": "insert_conditional_goto_cleanup",
+          "address": "0x0052daf0",
+          "size": 323,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CFunc_0047b9a0",
+          "address": "0x0052dc40",
+          "size": 755,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "create_temp_object",
+          "address": "0x0052dfb0",
+          "size": 134,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CheckCLabels",
+          "address": "0x0052e040",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CFunc_InsertAfterStatement",
+          "address": "0x0052e080",
+          "size": 77,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CFunc_AppendStatement",
+          "address": "0x0052e0d0",
+          "size": 91,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "newlabel",
+          "address": "0x0052e130",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "findlabel",
+          "address": "0x0052e160",
+          "size": 41,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "parameter_type_list",
+          "address": "0x0052e190",
+          "size": 429,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CFunc.cpp",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "FUN_0052ec70",
           "address": "0x0052ec70",
           "size": 461,
@@ -3018,36 +3982,10 @@
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [
-        {
-          "address": "0x00524d20",
-          "name": "CFunc_ParseFuncDef",
-          "compiled_source": "src/frontend/CFunc.c"
-        },
-        {
-          "address": "0x00526ae0",
-          "name": "CFunc_SetupNewFuncArgs",
-          "compiled_source": "src/frontend/CFunc.c"
-        },
-        {
-          "address": "0x00526d50",
-          "name": "create_local_object_copy",
-          "compiled_source": "src/frontend/CFunc.c"
-        },
-        {
-          "address": "0x00529e30",
-          "name": "initialize_argument_object",
-          "compiled_source": "src/frontend/CFunc.c"
-        },
-        {
-          "address": "0x0052d300",
-          "name": "CFunc_DestructorCleanup",
-          "compiled_source": "src/frontend/CFunc.c"
-        }
-      ],
-      "compiled": false,
+      "ownership_conflicts": [],
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "ownership_prepared"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CIRStream.c",
@@ -4077,6 +5015,7 @@
       "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
       "original_filename": "CMiddleLayer.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
@@ -4216,7 +5155,7 @@
           "call_addresses": [
             "0x0047b1ba"
           ],
-          "compiled_source": "src/frontend/CInline.c"
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c"
         },
         {
           "name": "CInline_ReferenceObject",
@@ -4439,16 +5378,10 @@
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [
-        {
-          "address": "0x0047b0c0",
-          "name": "CInline_DispatchNextDeferredNode",
-          "compiled_source": "src/frontend/CInline.c"
-        }
-      ],
-      "compiled": false,
+      "ownership_conflicts": [],
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "ownership_prepared"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
@@ -6421,193 +7354,6 @@
       "status": "unattempted"
     },
     {
-      "source": "src/GC_3_0a5_2/frontend/RegisterInfo.c",
-      "original_filename": "RegisterInfo.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_005784c0",
-          "address": "0x005784c0",
-          "size": 1186,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0057851b",
-            "0x005785a1",
-            "0x0057869a",
-            "0x0057872a",
-            "0x005787a2",
-            "0x005787fa",
-            "0x0057884a",
-            "0x0057889a",
-            "0x005788ea",
-            "0x0057893a"
-          ]
-        },
-        {
-          "name": "FUN_005789b0",
-          "address": "0x005789b0",
-          "size": 101,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00578a0a"
-          ]
-        },
-        {
-          "name": "FUN_00578a20",
-          "address": "0x00578a20",
-          "size": 940,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00578a9a",
-            "0x00578b2c",
-            "0x00578d4c",
-            "0x00578d8a"
-          ]
-        },
-        {
-          "name": "FUN_00578dd0",
-          "address": "0x00578dd0",
-          "size": 1116,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00578e42",
-            "0x00578edf",
-            "0x00578f20",
-            "0x00579032",
-            "0x0057909a",
-            "0x005790da",
-            "0x0057911a",
-            "0x0057913c"
-          ]
-        },
-        {
-          "name": "FUN_005792c0",
-          "address": "0x005792c0",
-          "size": 55,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005792e8"
-          ]
-        },
-        {
-          "name": "Registers_GetInfo",
-          "address": "0x00579790",
-          "size": 156,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005797da",
-            "0x0057980a"
-          ],
-          "compiled_source": "src/backend/Registers.c"
-        },
-        {
-          "name": "FUN_00579830",
-          "address": "0x00579830",
-          "size": 568,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00579882",
-            "0x005798ab",
-            "0x0057993a",
-            "0x005799ad",
-            "0x00579a2a",
-            "0x00579a5c"
-          ]
-        },
-        {
-          "name": "FUN_00579a70",
-          "address": "0x00579a70",
-          "size": 563,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00579aca",
-            "0x00579b6d",
-            "0x00579b9f",
-            "0x00579c3a",
-            "0x00579c7b"
-          ]
-        },
-        {
-          "name": "FUN_0057a2e0",
-          "address": "0x0057a2e0",
-          "size": 1045,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0057a421",
-            "0x0057a51a",
-            "0x0057a5ba",
-            "0x0057a60a",
-            "0x0057a63c",
-            "0x0057a652",
-            "0x0057a68a"
-          ]
-        },
-        {
-          "name": "FUN_0057a830",
-          "address": "0x0057a830",
-          "size": 220,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0057a8a1",
-            "0x0057a8ea"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [
-        {
-          "address": "0x00579790",
-          "name": "Registers_GetInfo",
-          "compiled_source": "src/backend/Registers.c"
-        }
-      ],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
       "source": "src/GC_3_0a5_2/frontend/SourceText.c",
       "original_filename": "SourceText.c",
       "evidence": [
@@ -6684,251 +7430,6 @@
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/GC_3_0a5_2/frontend/StackFrame.c",
-      "original_filename": "StackFrame.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_005861b0",
-          "address": "0x005861b0",
-          "size": 2162,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00586262",
-            "0x00586415",
-            "0x0058679a",
-            "0x005867b0"
-          ]
-        },
-        {
-          "name": "FUN_00586a30",
-          "address": "0x00586a30",
-          "size": 185,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00586ad4"
-          ]
-        },
-        {
-          "name": "FUN_00586ce0",
-          "address": "0x00586ce0",
-          "size": 511,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00586d9e"
-          ]
-        },
-        {
-          "name": "FUN_00586ee0",
-          "address": "0x00586ee0",
-          "size": 409,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00586faf"
-          ]
-        },
-        {
-          "name": "FUN_00587080",
-          "address": "0x00587080",
-          "size": 76,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005870b1"
-          ]
-        },
-        {
-          "name": "FUN_00587140",
-          "address": "0x00587140",
-          "size": 230,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058721a"
-          ]
-        },
-        {
-          "name": "FUN_005872d0",
-          "address": "0x005872d0",
-          "size": 67,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058730a"
-          ]
-        },
-        {
-          "name": "FUN_00587340",
-          "address": "0x00587340",
-          "size": 51,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058736a"
-          ]
-        },
-        {
-          "name": "FUN_005873a0",
-          "address": "0x005873a0",
-          "size": 41,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005873c0"
-          ]
-        },
-        {
-          "name": "FUN_005878c0",
-          "address": "0x005878c0",
-          "size": 1105,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00587b81"
-          ]
-        },
-        {
-          "name": "FUN_00588120",
-          "address": "0x00588120",
-          "size": 574,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005881da"
-          ]
-        },
-        {
-          "name": "restore_gprs",
-          "address": "0x005888b0",
-          "size": 411,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00588913"
-          ],
-          "compiled_source": "src/backend/StackFrameEABI.c"
-        },
-        {
-          "name": "StackFrameEABI_MergePrologueEpilogue",
-          "address": "0x00588f70",
-          "size": 1674,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00589110",
-            "0x0058944c"
-          ],
-          "compiled_source": "src/backend/StackFrameEABI.c"
-        },
-        {
-          "name": "FUN_00589600",
-          "address": "0x00589600",
-          "size": 1943,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00589798",
-            "0x00589b5a",
-            "0x00589c4c"
-          ]
-        },
-        {
-          "name": "FUN_00589da0",
-          "address": "0x00589da0",
-          "size": 269,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00589e6d",
-            "0x00589ea1"
-          ]
-        },
-        {
-          "name": "FUN_00589eb0",
-          "address": "0x00589eb0",
-          "size": 1329,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00589efd",
-            "0x0058a27a",
-            "0x0058a3aa",
-            "0x0058a3c0"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [
-        {
-          "address": "0x005888b0",
-          "name": "restore_gprs",
-          "compiled_source": "src/backend/StackFrameEABI.c"
-        },
-        {
-          "address": "0x00588f70",
-          "name": "StackFrameEABI_MergePrologueEpilogue",
-          "compiled_source": "src/backend/StackFrameEABI.c"
-        }
-      ],
       "compiled": false,
       "membership_complete": false,
       "status": "unattempted"
@@ -14159,204 +14660,6 @@
       "status": "unattempted"
     },
     {
-      "source": "src/driver/CLBrowser.c",
-      "original_filename": "CLBrowser.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "fn_004286d0",
-          "address": "0x0043d660",
-          "size": 301,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "fn_004287c0",
-          "address": "0x0043d790",
-          "size": 74,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLBrowser_InitMemBuffer",
-          "address": "0x0043d7e0",
-          "size": 45,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLBrowser_LookupValue",
-          "address": "0x0043d890",
-          "size": 195,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043d90e",
-            "0x0043d926"
-          ],
-          "compiled_source": "src/driver/CLBrowser.c"
-        },
-        {
-          "name": "CLBrowser_FindOrAddLookupEntry",
-          "address": "0x0043d960",
-          "size": 191,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "calculate_lookup_entries_size",
-          "address": "0x0043da20",
-          "size": 70,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "build_browser_file_buffer",
-          "address": "0x0043daf0",
-          "size": 518,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043dbf8",
-            "0x0043dc16"
-          ],
-          "compiled_source": "src/driver/CLBrowser.c"
-        },
-        {
-          "name": "prepend_browser_cache_entry",
-          "address": "0x0043dd40",
-          "size": 43,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "unlink_browser_cache_entry",
-          "address": "0x0043dd70",
-          "size": 41,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLBrowser_ReleaseBuffer",
-          "address": "0x0043e060",
-          "size": 45,
-          "compiled_source": "src/driver/CLBrowser.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "GetBrowseTableInfoAndLock",
-          "mac_address": "0x0002522c",
-          "linkage_names": [
-            "GetBrowseTableInfoAndLock"
-          ]
-        },
-        {
-          "name": "Browser_Initialize",
-          "mac_address": "0x000252b8",
-          "linkage_names": [
-            "Browser_Initialize"
-          ]
-        },
-        {
-          "name": "Destroy",
-          "mac_address": "0x00025320",
-          "linkage_names": [
-            "Destroy"
-          ]
-        },
-        {
-          "name": "Browser_Terminate",
-          "mac_address": "0x00025394",
-          "linkage_names": [
-            "Browser_Terminate"
-          ]
-        },
-        {
-          "name": "Browser_SearchFile",
-          "mac_address": "0x000253dc",
-          "linkage_names": [
-            "Browser_SearchFile"
-          ]
-        },
-        {
-          "name": "Browser_SearchAndAddFile",
-          "mac_address": "0x000254ec",
-          "linkage_names": [
-            "Browser_SearchAndAddFile"
-          ]
-        },
-        {
-          "name": "CalcDiskSpaceRequirements",
-          "mac_address": "0x000255f4",
-          "linkage_names": [
-            "CalcDiskSpaceRequirements"
-          ]
-        },
-        {
-          "name": "ConvertMemToDisk",
-          "mac_address": "0x00025664",
-          "linkage_names": [
-            "ConvertMemToDisk"
-          ]
-        },
-        {
-          "name": "Browser_PackBrowseFile",
-          "mac_address": "0x00025704",
-          "linkage_names": [
-            "Browser_PackBrowseFile"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
       "source": "src/driver/CLCompilerLinkerDropin_V10.cpp",
       "original_filename": "CLCompilerLinkerDropin_V10.cpp",
       "evidence": [
@@ -18646,51 +18949,6 @@
           "mac_address": "0x0000e198",
           "linkage_names": [
             "ExecuteLinker"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLWriteObjectFile.c",
-      "original_filename": "CLWriteObjectFile.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "CLWriteObjectFile_WriteObjectFile",
-          "address": "0x0043d590",
-          "size": 195,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043d646"
-          ],
-          "compiled_source": "src/driver/CLWriteObjectFile.c"
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "WriteObjectFile",
-          "mac_address": "0x00024ffc",
-          "linkage_names": [
-            "WriteObjectFile"
-          ]
-        },
-        {
-          "name": "WriteBrowseData",
-          "mac_address": "0x00025100",
-          "linkage_names": [
-            "WriteBrowseData"
           ]
         }
       ],
@@ -26350,75 +26608,6 @@
       "status": "unattempted"
     },
     {
-      "source": "src/frontend/CException.c",
-      "original_filename": "CException.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional"
-      ],
-      "windows_functions": [
-        {
-          "name": "copy_relocation_list",
-          "address": "0x00455850",
-          "size": 508,
-          "compiled_source": "src/frontend/CException.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExcept_ScanTryBlock",
-          "address": "0x0049e640",
-          "size": 1204,
-          "compiled_source": "src/frontend/CException.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_namespace_names",
-          "address": "0x0049f7e0",
-          "size": 540,
-          "compiled_source": "src/frontend/CException.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExcept_RegisterMemberArray",
-          "address": "0x0049fd20",
-          "size": 90,
-          "compiled_source": "src/frontend/CException.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExcept_Setup",
-          "address": "0x004a0ac0",
-          "size": 25,
-          "compiled_source": "src/frontend/CException.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
       "source": "src/frontend/CExpr.c",
       "original_filename": "CExpr.c",
       "evidence": [
@@ -27218,163 +27407,6 @@
             "0x005a8fb5",
             "0x005a9077"
           ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/frontend/CFunc.c",
-      "original_filename": "CFunc.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional"
-      ],
-      "windows_functions": [
-        {
-          "name": "parse_ctor_initializers",
-          "address": "0x00526030",
-          "size": 786,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CFunc_FuncGenSetup",
-          "address": "0x00526590",
-          "size": 272,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CFunc_ParseScopedStatement",
-          "address": "0x005270a0",
-          "size": 409,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "parse_statement",
-          "address": "0x00527240",
-          "size": 6207,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "insert_conditional_goto_cleanup",
-          "address": "0x0052daf0",
-          "size": 323,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CFunc_0047b9a0",
-          "address": "0x0052dc40",
-          "size": 755,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "create_temp_object",
-          "address": "0x0052dfb0",
-          "size": 134,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CheckCLabels",
-          "address": "0x0052e040",
-          "size": 53,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CFunc_InsertAfterStatement",
-          "address": "0x0052e080",
-          "size": 77,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CFunc_AppendStatement",
-          "address": "0x0052e0d0",
-          "size": 91,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "newlabel",
-          "address": "0x0052e130",
-          "size": 39,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "findlabel",
-          "address": "0x0052e160",
-          "size": 41,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "parameter_type_list",
-          "address": "0x0052e190",
-          "size": 429,
-          "compiled_source": "src/frontend/CFunc.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
         }
       ],
       "mac_functions": [],
@@ -36696,94 +36728,6 @@
       "baseline_same_filename": []
     },
     {
-      "source": "CLIncludeFileCache.c",
-      "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/CLIncludeFileCache.c",
-      "mac_address": "0x00025924",
-      "line": 19065,
-      "functions": [
-        {
-          "name": "makecacheentry",
-          "mac_address": "0x00025924",
-          "linkage_names": [
-            "makecacheentry"
-          ]
-        },
-        {
-          "name": "insertcacheentry",
-          "mac_address": "0x00025974",
-          "linkage_names": [
-            "insertcacheentry"
-          ]
-        },
-        {
-          "name": "deletecacheentry",
-          "mac_address": "0x000259bc",
-          "linkage_names": [
-            "deletecacheentry"
-          ]
-        },
-        {
-          "name": "InitializeIncludeCache",
-          "mac_address": "0x00025a10",
-          "linkage_names": [
-            "InitializeIncludeCache"
-          ]
-        },
-        {
-          "name": "CleanupIncludeCache",
-          "mac_address": "0x00025a4c",
-          "linkage_names": [
-            "CleanupIncludeCache"
-          ]
-        },
-        {
-          "name": "CacheIncludeFile",
-          "mac_address": "0x00025ae0",
-          "linkage_names": [
-            "CacheIncludeFile"
-          ]
-        },
-        {
-          "name": "CachedIncludeFile",
-          "mac_address": "0x00025cc4",
-          "linkage_names": [
-            "CachedIncludeFile"
-          ]
-        },
-        {
-          "name": "FreeIncludeFile",
-          "mac_address": "0x00025d5c",
-          "linkage_names": [
-            "FreeIncludeFile"
-          ]
-        }
-      ],
-      "data_symbols": [
-        {
-          "name": "availablecache",
-          "address": "0x00223198",
-          "kind": "LCSYM",
-          "line": 19246,
-          "descriptor": "availablecache:S(0,5)"
-        },
-        {
-          "name": "freelist",
-          "address": "0x0022319c",
-          "kind": "LCSYM",
-          "line": 19247,
-          "descriptor": "freelist:S(0,48)"
-        },
-        {
-          "name": "cachelist",
-          "address": "0x002231a0",
-          "kind": "LCSYM",
-          "line": 19248,
-          "descriptor": "cachelist:S(0,48)"
-        }
-      ],
-      "baseline_same_filename": []
-    },
-    {
       "source": "ErrMgr.c",
       "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/MacEmul/ErrMgr.c",
       "mac_address": "0x00026088",
@@ -39484,6 +39428,475 @@
       "completeness_limits": [
         "Mac CLPReport,CLPReport_V,CLPAlert,CLPProgress have no retained Windows bodies in the reviewed contiguous range; predecessor and successor belong to other source units."
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache.c": {
+      "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
+      "original_source": "CLIncludeFileCache.c",
+      "status": "attempted_equivalent",
+      "evidence": {
+        "symbols_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "symbol_lines": "19065-19247: explicit SO, CacheEntry type/field declarations, eight FUN records and three file-local state symbols",
+        "windows_program": "/mwcc/GC 3.0/mwcceppc.exe",
+        "windows_decompilation": "Read-only batch_decompile of all eight consecutive entries 0043dd00,0043dd40,0043dd70,0043dda0,0043ddc0,0043de20,0043e000,0043e060",
+        "assembly": "cache-target-assembly.txt; Capstone disassembly of original bytes with reachable CFG extents bounded by Ghidra entry points",
+        "matching": "cache_match.py resolves actual target addresses, writes comparison COFF objects, runs objdiff-cli diff for all eight functions and independently checks full resolved body byte equality"
+      },
+      "exact_functions": [
+        {
+          "name": "makecacheentry",
+          "address": "0x0043dd00",
+          "size": 49,
+          "objdiff_percent": 100
+        },
+        {
+          "name": "insertcacheentry",
+          "address": "0x0043dd40",
+          "size": 43,
+          "objdiff_percent": 100
+        },
+        {
+          "name": "deletecacheentry",
+          "address": "0x0043dd70",
+          "size": 41,
+          "objdiff_percent": 100
+        },
+        {
+          "name": "CachedIncludeFile",
+          "address": "0x0043e000",
+          "size": 96,
+          "objdiff_percent": 100
+        },
+        {
+          "name": "FreeIncludeFile",
+          "address": "0x0043e060",
+          "size": 45,
+          "objdiff_percent": 100
+        }
+      ],
+      "reviewed_equivalent_functions": [
+        {
+          "name": "InitializeIncludeCache",
+          "address": "0x0043dda0",
+          "target_size": 31,
+          "compiled_size": 31,
+          "objdiff_percent": 56,
+          "branches": "No branches or external calls.",
+          "memory_writes": "Sets freelist=0, cachelist=freelist, availablecache=0x800000. Target explicitly reloads freelist after writing zero; compiled output propagates the known zero into cachelist directly. Both write the same three global words in the same order.",
+          "difference": "Equivalent zero propagation; no required return value (original STABS FUN returns void). No volatile casts or assembly used to force a match.",
+          "review_status": "Equivalent under the original single-threaded cache initialization contract. Does not establish equivalence under asynchronous inspection between individual machine instructions."
+        },
+        {
+          "name": "CleanupIncludeCache",
+          "address": "0x0043ddc0",
+          "target_size": 86,
+          "compiled_size": 86,
+          "objdiff_percent": 98.48485,
+          "branches": "Walks active cache list, then freelist. Saves next pointer before each deallocation. Active entry text pointer is tested for NULL; null text skips both handle and allocation release.",
+          "external_calls": "For each non-null active text: OS_FreeHandle(text) then xfree(text). Then xfree(entry). For every freelist entry: xfree(entry). Finally InitializeIncludeCache(). Both xfree and OS_FreeHandle use their observed callee-cleaned calling conventions.",
+          "memory_writes": "No cache entry is read after its allocation is freed. State reset is delegated to InitializeIncludeCache. Same external call order and arguments as the target.",
+          "difference": "Register allocation in equivalent pointer loads and list traversal; target and compiled bodies have identical length and call/branch structure. Both preserve EBX and ESI."
+        },
+        {
+          "name": "CacheIncludeFile",
+          "address": "0x0043de20",
+          "target_size": 470,
+          "compiled_size": 462,
+          "objdiff_percent": 87.71223,
+          "external_calls": "Starts with OS_GetHandleSize(text,&size); both ignore its status. Releases an evicted text with OS_FreeHandle(text), xfree(text), then sets its pointer to NULL. Calls deletecacheentry before linking the victim into freelist. Calls makecacheentry for replacement, OS_GetMilliseconds for timestamp, then insertcacheentry.",
+          "pinned_case": "If precompiled is nonzero, searches for the first entry with nonzero precompiled, regardless of locked count. If present, releases its text, deletes it from cachelist, and prepends it to freelist. Does not increase availablecache for that victim. The inserted precompiled entry also does not decrease availablecache.",
+          "ordinary_case": "If precompiled is zero and size>0x800000, returns immediately without allocation or list mutation. Otherwise while size>availablecache, scans entries for locked==0 AND precompiled==0, selecting the unsigned-smallest when value. If no eligible entry exists, returns without inserting. Each selected victim's text is released, availablecache increases by victim.size, and the entry is recycled. Repeats until enough budget exists.",
+          "memory_writes": "New/reused entry gets locked=1, precompiled=zero-extended input byte, exactly 0x204 file-spec bytes copied to offset0x14, text pointer at0x10, size at0x218, timestamp at0x21c. insertcacheentry updates next/prev and list head. Only ordinary inserted entries subtract size from availablecache.",
+          "difference": "Equivalent branch arrangement and register allocation; compiled body is eight bytes shorter. No semantics-changing shortcuts were used to increase score. All ordinary/pinned, eligible/ineligible victim, exhausted-budget and empty-list branches were checked against the target assembly and decompilation."
+        }
+      ],
+      "data_ownership": {
+        "bss": [
+          {
+            "name": "availablecache",
+            "address": "0x006d95a8",
+            "size": 4,
+            "compiled_offset": 0
+          },
+          {
+            "name": "freelist",
+            "address": "0x006d95ac",
+            "size": 4,
+            "compiled_offset": 4
+          },
+          {
+            "name": "cachelist",
+            "address": "0x006d95b0",
+            "size": 4,
+            "compiled_offset": 8
+          }
+        ],
+        "data": [
+          {
+            "value": "include file cache",
+            "address": "0x00672070",
+            "size_with_null": 19,
+            "compiled_aligned_size": 20
+          }
+        ],
+        "rodata": "No additional emitted read-only data section.",
+        "layout": "CacheEntry is 0x220 bytes on Windows. Original field names are next, prev, locked, precompiled, text, spec, size, when. The Mac map describes its architecture-specific 348-byte variant; Windows field extents come independently from original instruction offsets. The spec is represented by a private 0x204-byte struct pending the broader OS interface port."
+      },
+      "compiler_experiments": [
+        {
+          "compiler": "cw94",
+          "flags": "-O4 -opt speed -inline auto",
+          "source": "first reconstructed version without auto_inline off",
+          "result": "4 exact; automatic helper inlining enlarged Cleanup, CacheInclude and CachedInclude bodies."
+        },
+        {
+          "compiler": "cw94",
+          "flags": "-O4 -opt speed -inline auto",
+          "source": "pragma auto_inline off with explicit inline eviction helpers",
+          "result": "5 exact; best whole-TU profile. Local cleanup variable and state linkage variants did not improve remaining matches."
+        },
+        {
+          "compiler": "cw94",
+          "flags": "-O4 -opt space -inline auto",
+          "source": "same source with no automatic helper inlining",
+          "result": "0 exact; all eight scores and body extents worsened."
+        },
+        {
+          "compiler": "pro53",
+          "flags": "-O4,p -sym off -Cpp_exceptions off",
+          "source": "same source",
+          "result": "Whole-TU mismatch; different branch alignment and body sizes. A preliminary initializer-only score was not used as proof of an alternate compiler, because the legacy object addressed local state through its section base and needs independent layout normalization."
+        }
+      ],
+      "limitations": [
+        "Five exact bodies cover 274 of 861 mapped code bytes. The TU is not a 100% match.",
+        "Three nonmatches are reviewed equivalent implementations, not execution-based proof over every possible machine state.",
+        "Final root integration must add all eight Windows functions, three BSS ranges, the owned allocation string and required callee bindings before its full-TU objdiff report reflects complete coverage.",
+        "Broader baseline imports still use the old OSSpec layout; this cache uses the observed Windows 3.0 extent locally. Matching this TU alone does not validate those callers."
+      ],
+      "membership_reviewed": true,
+      "code_bytes": 861,
+      "bss_bytes": 12,
+      "initialized_data_bytes": 20
+    },
+    "src/GC_3_0a5_2/driver/CLBrowser.c": {
+      "source": "src/GC_3_0a5_2/driver/CLBrowser.c",
+      "original_source": "CLBrowser.c",
+      "status": "attempted_equivalent",
+      "compiler": "CW94 -O4 -opt speed -inline auto -sym off -Cpp_exceptions off -str noreadonly; source pragma auto_inline off",
+      "evidence": {
+        "map_source_line": 18797,
+        "map_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "windows_decompilation": "browser-ghidra-decompilation.json (read-only batch of ten original functions)",
+        "comparison": "browser_match.py resolves external addresses, invokes objdiff-cli for each body and separately checks full byte equality",
+        "assembly_difference": "browser-pack-assembly-diff.txt; original versus resolved compiled instructions"
+      },
+      "exact_functions": [
+        {
+          "name": "GetBrowseTableInfoAndLock",
+          "address": "0x0043d790",
+          "size": 74
+        },
+        {
+          "name": "Browser_Initialize",
+          "address": "0x0043d7e0",
+          "size": 45
+        },
+        {
+          "name": "Destroy",
+          "address": "0x0043d810",
+          "size": 74
+        },
+        {
+          "name": "Browser_Terminate",
+          "address": "0x0043d860",
+          "size": 33
+        },
+        {
+          "name": "Browser_SearchFile",
+          "address": "0x0043d890",
+          "size": 195
+        },
+        {
+          "name": "Browser_SearchAndAddFile",
+          "address": "0x0043d960",
+          "size": 191
+        },
+        {
+          "name": "CalcDiskSpaceRequirements",
+          "address": "0x0043da20",
+          "size": 70
+        },
+        {
+          "name": "ConvertMemToDisk",
+          "address": "0x0043da70",
+          "size": 128
+        }
+      ],
+      "reviewed_equivalent": {
+        "name": "Browser_PackBrowseFile",
+        "address": "0x0043daf0",
+        "target_size": 518,
+        "compiled_size": 535,
+        "objdiff_percent": 94.32903,
+        "branches": "Null browsedata reports assertion at line0xfe; null browsetable reports at line0xff. Assertions may return and both implementations continue. Allocation error prints the exact diagnostic to stderr and exits(-23) without returning. Successful allocation continues serialization and returns1.",
+        "header": "40-byte header: magic DubL, version1, host-endianness byte derived from integer1, sixteen zero padding bytes, count truncated to16bits, browse_data_offset=40, browse_data_length=OS_GetHandleSize result, file_data_offset=(datasize+47)&~7, file_data_length=CalcDiskSpaceRequirements result.",
+        "handle_calls": "Calls OS_GetHandleSize on the OS handle instead of the obsolete Memory handle wrapper. Locks table via GetBrowseTableInfoAndLock to calculate serialized size, then unlocks it. Allocates totalSize=tableSize+tableOffset via OS_NewHandle and stores the resulting two-word handle to the output argument before checking its error status. Locks the output with MsDos_GetValidMemBufferPtr.",
+        "memory_writes": "Copies exactly40headerbytes to output. Locks browsedata, copies datasizebytes to output+40, zeroes bytes up to alignedtableOffset, then unlocks browsedata. Locks browsetable again, serializes entries with ConvertMemToDisk at output+tableOffset, zeroes any remaining allocated tail, unlocks browsetable and output. Sizes, padding expressions and output pointer positions agree with target instructions.",
+        "differences": "Register allocation, local spill/stack slot layout and expression scheduling. Source uses equivalent natural serialized-header field order and a separate temporary for the locked data pointer. No inline assembly, volatile casts or altered failure behavior were introduced to raise the score.",
+        "scope": "Reviewed equivalence for the observed OS-handle ABI and valid input sizes. This is not exhaustive execution-based validation over corrupted handles or arbitrary machine states."
+      },
+      "semantic_changes_from_baseline": [
+        "Destroy releases each allocated path with stdcall xfree rather than C library free.",
+        "Browser_SearchFile calls OS_EqualPath and accepts nonzero equality instead of using the old zero-return string comparator. Corrected assertion source lines.",
+        "Browser_SearchAndAddFile uses the actual stdcall xstrdup and exits on allocation failure after printing stderr diagnostic; baseline used longjmp.",
+        "Browser_PackBrowseFile uses OS handles consistently and actual fatal allocation behavior.",
+        "ConvertMemToDisk advances by the variable padded name length followed by its16bytefixedheader, matching original emitted expression order."
+      ],
+      "data_ownership": {
+        "bss_size": 0,
+        "rodata_size": 0,
+        "data_start": "0x00671fe8",
+        "data_aligned_size": 136,
+        "data_validation": "Compiled .data contributions, each padded to4bytes, concatenate byte-identically to original bytes00671fe8..0067206f.",
+        "items": [
+          {
+            "name": "browse_file_table_string",
+            "address": "0x00671fe8",
+            "value": "browse file table",
+            "size_with_null": 18,
+            "aligned_size": 20
+          },
+          {
+            "name": "data_0054d9c4",
+            "address": "0x00671ffc",
+            "value": "allocate",
+            "size_with_null": 9,
+            "aligned_size": 12
+          },
+          {
+            "address": "0x00672008",
+            "value": "CLBrowser.c",
+            "aligned_size": 12
+          },
+          {
+            "address": "0x00672014",
+            "value": "OS_IsFullPath(fullpath)",
+            "aligned_size": 24
+          },
+          {
+            "address": "0x0067202c",
+            "value": "browsetable!=NULL",
+            "aligned_size": 20
+          },
+          {
+            "address": "0x00672040",
+            "value": "\n*** Out of memory\n",
+            "aligned_size": 20
+          },
+          {
+            "address": "0x00672054",
+            "value": "DubL",
+            "aligned_size": 8
+          },
+          {
+            "address": "0x0067205c",
+            "value": "browsedata!=NULL",
+            "aligned_size": 20
+          }
+        ],
+        "naming": "Allocation diagnostic names are retained binding aliases because no original static names were recorded. Actual values and Windows addresses were read from the original image."
+      },
+      "attempts": [
+        "Ported observed target APIs/fatal paths/assertion lines and disabled automatic helper inlining: six original functions exact.",
+        "Corrected xstrdup callee cleanup and serialized record expression ordering: eight exact.",
+        "Packer pointer-evaluation order improved objdiff90.62% to92.32%; unsigned size and natural header field order improved it to94.33%, still NonMatching.",
+        "No alternate compiler was selected: eight full byte matches already strongly support CW94 speed for this TU."
+      ],
+      "limitations": [
+        "Eight of nine original functions exact; packer remains a reviewed equivalent nonmatch.",
+        "WriteBrowseData moved to CLWriteObjectFile.c after independent source/parameter evidence; its ABI issues remain there."
+      ],
+      "membership_reviewed": true,
+      "code_bytes": 1328,
+      "initialized_data_bytes": 131,
+      "original_data_span_with_alignment": 136
+    },
+    "src/GC_3_0a5_2/frontend/CFunc.cpp": {
+      "status": "ownership_prepared",
+      "membership_reviewed": false,
+      "compiler": "cw94",
+      "language_mode": "Provisional -lang c: native C++ fails imported void-pointer conversions.",
+      "validation": "Imported function instructions preserved after relocation normalization; filename diagnostics now use recovered .cpp filename.",
+      "unresolved": [
+        "Actual C++ source port and all function semantics remain to be attempted.",
+        "Inherited helper ownership remains provisional, including copy_relocation_list."
+      ]
+    },
+    "src/GC_3_0a5_2/frontend/CException.cpp": {
+      "status": "ownership_prepared",
+      "membership_reviewed": false,
+      "compiler": "cw94",
+      "language_mode": "Provisional -lang c: native C++ fails imported void-pointer conversions.",
+      "validation": "Imported function instructions preserved after relocation normalization; filename diagnostics now use recovered .cpp filename.",
+      "unresolved": [
+        "Actual C++ source port and all function semantics remain to be attempted.",
+        "Inherited helper ownership remains provisional, including copy_relocation_list."
+      ]
+    },
+    "src/GC_3_0a5_2/backend/StackFrame.c": {
+      "status": "ownership_prepared",
+      "membership_reviewed": false,
+      "unresolved": [
+        "Direct diagnostic source evidence confirmed; imported bodies differ materially and are not declared equivalent."
+      ],
+      "evidence": "ownership_review in this inventory"
+    },
+    "src/GC_3_0a5_2/backend/RegisterInfo.c": {
+      "status": "ownership_prepared",
+      "membership_reviewed": false,
+      "unresolved": [
+        "Direct diagnostic source evidence confirmed; imported bodies differ materially and are not declared equivalent."
+      ],
+      "evidence": "ownership_review in this inventory"
+    },
+    "src/GC_3_0a5_2/frontend/CMiddleLayer.c": {
+      "status": "ownership_prepared",
+      "membership_reviewed": false,
+      "unresolved": [
+        "Direct diagnostic source evidence confirmed; imported bodies differ materially and are not declared equivalent."
+      ],
+      "evidence": "ownership_review in this inventory"
+    },
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c": {
+      "status": "attempted_unresolved",
+      "membership_reviewed": true,
+      "known_original_functions": [
+        "WriteObjectFile",
+        "WriteBrowseData"
+      ],
+      "unresolved": [
+        "Imported object writer and browser writer require the GC3 record/file-spec ABI; not declared equivalent."
+      ],
+      "identity_evidence": "Explicit Mac STABS source membership, three parameter names and browse serialization/write semantics."
     }
+  },
+  "ownership_review": {
+    "status": "Ownership splits complete; matching/semantic ports remain",
+    "units": [
+      {
+        "source": "CMiddleLayer.c",
+        "source_path": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+        "functions": [
+          {
+            "alias": "CInline_DispatchNextDeferredNode",
+            "address": "0047b0c0",
+            "proof": "Direct target assertion CMiddleLayer.c:0x7bd",
+            "differences": [
+              "Target queue node kind is offset36, baseline differs",
+              "Target supports kind4; baseline only0..3",
+              "Target adds guards and frees dispatched nodes; baseline does not",
+              "Template and inline-generation call arguments and conditions differ"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "RegisterInfo.c",
+        "source_path": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+        "functions": [
+          {
+            "alias": "Registers_GetInfo",
+            "address": "00579790",
+            "proof": "Direct target assertions RegisterInfo.c:0x289,0x296",
+            "differences": [
+              "Target allocates/clears20 bytes; imported VarInfo is44bytes",
+              "Object data info target offset0x54 and local info0x40 need GC3 layout",
+              "Target assertion lines differ from imported body"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "StackFrame.c",
+        "source_path": "src/GC_3_0a5_2/backend/StackFrame.c",
+        "functions": [
+          {
+            "alias": "restore_gprs",
+            "address": "005888b0",
+            "proof": "Direct target assertion StackFrame.c:0x9b4",
+            "differences": [
+              "Target takes3 args versus imported4 args",
+              "Target helper-selection mask and exit-helper cases absent in imported body",
+              "Target special helper register accounting and offset cases differ"
+            ]
+          },
+          {
+            "alias": "StackFrameEABI_MergePrologueEpilogue",
+            "address": "00588f70",
+            "proof": "Direct target assertions StackFrame.c:0x74d,0x75b",
+            "differences": [
+              "Target epilogue generation control flow substantially redesigned",
+              "Target invokes3arg restore helper while import4arg helper",
+              "Register, live-state and helper-call ABI differences not ported"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "CLWriteObjectFile.c",
+        "source_path": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+        "functions": [
+          {
+            "canonical_name": "WriteObjectFile",
+            "old_alias": "CLWriteObjectFile_WriteObjectFile",
+            "status": "NonMatching baseline import",
+            "proof": "Explicit STABS source+FUN and target CLWriteObjectFile.c assertion path"
+          },
+          {
+            "canonical_name": "WriteBrowseData",
+            "old_alias": "fn_004286d0",
+            "address": "0043d660",
+            "status": "NonMatching imported body, GC3 DropinFileRecord ABI unresolved",
+            "proof": "Explicit CLWriteObjectFile.c STABS WriteBrowseData with parameters filedata/maccreator/mactype and locals browsehandle/outfss/cof; Windows3arg function obtains CWObjectFlags,changesbrowse extension,packsbrowsehandle,writesbrowseoutput",
+            "map_lines": {
+              "source": 18548,
+              "function": 18757,
+              "parameters": [
+                18759,
+                18760,
+                18761
+              ]
+            },
+            "differences": [
+              "Target DropinFileRecord selectedPlugin0x630, outputSpec0x423 size516, browsehandle0x64c differ from baseline layout",
+              "No functional equivalence claim"
+            ]
+          }
+        ]
+      }
+    ],
+    "canonical_name_limitations": "Mac ordinary nm candidate names Registers_GetVarInfo, restore_nonvolatile_GPRs, generate_epilogue lack sufficient Windows identity proof. Keep existing baseline aliases. Never infer source membership of ordinary nm records.",
+    "baseline_guarded_sources": [
+      "src/frontend/CInline.c",
+      "src/backend/Registers.c",
+      "src/backend/StackFrameEABI.c"
+    ],
+    "legacy_preservation": "Extractor asserted exact restoration of original source text after removing inserted VERSION guard and version.h include. No older function body changed. All3baselineTUscompiledwithVERSION0and3.",
+    "validation": {
+      "compiler": "CW94 -O4 -opt speed -inline auto -str noreadonly",
+      "new_gc3_units_compiled": [
+        "CMiddleLayer",
+        "RegisterInfo",
+        "StackFrame",
+        "CLWriteObjectFile",
+        "CLBrowser"
+      ],
+      "baseline_versions_compiled": [
+        0,
+        3
+      ],
+      "warnings": "Existing CInline CERROR_FILE macro redefinition and driver calling-convention placement warnings; no compilation errors."
+    },
+    "browser": "CLBrowser.c now9functions; WriteBrowseData wrapper moved to correct CLWriteObjectFile.c. Earlier browser-review.json wrapper unresolved ownership is superseded by this report."
   }
 }

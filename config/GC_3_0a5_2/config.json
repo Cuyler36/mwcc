@@ -42,7 +42,8 @@
     "src/backend/Switch.c",
     "src/backend/TOC.c",
     "src/driver/CLAccessPaths.c",
-    "src/driver/CLBrowser.c",
+    "src/GC_3_0a5_2/driver/CLBrowser.c",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
     "src/driver/CLCompilerLinkerDropin_V10.cpp",
     "src/driver/CLDependencies.c",
     "src/driver/CLDropinCallbacks_V10.cpp",
@@ -63,7 +64,7 @@
     "src/driver/CLStaticPlugins.c",
     "src/driver/CLTarg.c",
     "src/driver/CLToolExec.c",
-    "src/driver/CLWriteObjectFile.c",
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "src/driver/CWParserPluginsPrivate.c",
     "src/driver/CWPluginsPrivate.c",
     "src/driver/ClientGlue.c",
@@ -100,10 +101,10 @@
     "src/frontend/CClass.c",
     "src/frontend/CDecl.c",
     "src/frontend/CError.c",
-    "src/frontend/CException.c",
+    "src/GC_3_0a5_2/frontend/CException.cpp",
     "src/frontend/CExpr.c",
     "src/frontend/CExpr2.c",
-    "src/frontend/CFunc.c",
+    "src/GC_3_0a5_2/frontend/CFunc.cpp",
     "src/frontend/CInit.c",
     "src/frontend/CInline.c",
     "src/GC_3_0a5_2/frontend/CInt64.c",
@@ -210,7 +211,10 @@
     "src/runtime/stackall.c",
     "src/GC_3_0a5_2/driver/ParserErrors.c",
     "src/GC_3_0a5_2/driver/Arguments.c",
-    "src/GC_3_0a5_2/driver/Targets.c"
+    "src/GC_3_0a5_2/driver/Targets.c",
+    "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "src/GC_3_0a5_2/backend/StackFrame.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -1028,25 +1032,6 @@
         "src/driver"
       ]
     },
-    "src/driver/CLBrowser.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
     "src/driver/CLCompilerLinkerDropin_V10.cpp": {
       "compiler": "cw94",
       "flags": [
@@ -1413,25 +1398,6 @@
       ]
     },
     "src/driver/CLToolExec.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLWriteObjectFile.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -2118,25 +2084,6 @@
         "src/frontend"
       ]
     },
-    "src/frontend/CException.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/frontend"
-      ]
-    },
     "src/frontend/CExpr.c": {
       "compiler": "cw94",
       "flags": [
@@ -2157,25 +2104,6 @@
       ]
     },
     "src/frontend/CExpr2.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/frontend"
-      ]
-    },
-    "src/frontend/CFunc.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3149,6 +3077,163 @@
       "include_dirs": [
         "src/frontend"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLBrowser.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/GC_3_0a5_2/frontend/CFunc.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly",
+        "-lang",
+        "c"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/GC_3_0a5_2/frontend/CException.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly",
+        "-lang",
+        "c"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/GC_3_0a5_2/frontend/CMiddleLayer.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend",
+        "include"
+      ]
+    },
+    "src/GC_3_0a5_2/backend/RegisterInfo.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/GC_3_0a5_2/backend/StackFrame.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -3263,12 +3348,6 @@
     "src/driver/CLDependencies/find_or_create_access_path_entry",
     "src/driver/CLDependencies/initialize_four_words",
     "src/driver/CLDependencies/escape_spaces",
-    "src/driver/CLBrowser/fn_004287c0",
-    "src/driver/CLBrowser/CLBrowser_InitMemBuffer",
-    "src/driver/CLBrowser/calculate_lookup_entries_size",
-    "src/driver/CLBrowser/prepend_browser_cache_entry",
-    "src/driver/CLBrowser/unlink_browser_cache_entry",
-    "src/driver/CLBrowser/CLBrowser_ReleaseBuffer",
     "src/driver/Parameter/get_string_name_help_value",
     "src/driver/Parameter/compare_setstring_value",
     "src/driver/Parameter/invoke_float_parameter_callback",
@@ -3286,7 +3365,7 @@
     "src/driver/Help/fn_0042c0a0",
     "src/frontend/CPrep/CPrep_ResetBufferedTokenPosition",
     "src/frontend/CParser/CParser_NewFuncArg",
-    "src/frontend/CException/copy_relocation_list",
+    "src/GC_3_0a5_2/frontend/CException/copy_relocation_list",
     "src/frontend/CParser/CParser_PrintUniqueID",
     "src/frontend/CParser/CParser_IsPublicRuntimeObject",
     "src/frontend/CompilerTools/memclrw",
@@ -3300,8 +3379,8 @@
     "src/backend/ELF_Endian/ELF_Endian_SwapElf32Section",
     "src/backend/ELF_Endian/ELF_Endian_SwapElf32Header",
     "src/msl/time_g/time_g_clear_tm",
-    "src/frontend/CException/append_namespace_names",
-    "src/frontend/CException/CExcept_Setup",
+    "src/GC_3_0a5_2/frontend/CException/append_namespace_names",
+    "src/GC_3_0a5_2/frontend/CException/CExcept_Setup",
     "src/frontend/CPrep/is_zero_name_ref",
     "src/backend/ObjGen_PPC_EABI/ObjGen_PPC_EABI_IsSpecialSectionName",
     "src/frontend/CExpr2/CExpr2_FormatCInt64Decimal",
@@ -3342,7 +3421,7 @@
     "src/backend/BE_elf/BE_elf_SaveScope",
     "src/backend/InstrSelection/InstrSelection_EmitAddImmediate",
     "src/frontend/CDecl/CDecl_PrependFuncArg",
-    "src/frontend/CFunc/findlabel",
+    "src/GC_3_0a5_2/frontend/CFunc/findlabel",
     "src/frontend/CTemplateTools/CTemplateTools_IsTemplDepClassBase",
     "src/frontend/CClass/create_root_class_layout",
     "src/frontend/CClass/contains_base_layout",
@@ -3375,7 +3454,20 @@
     "src/GC_3_0a5_2/driver/ParserErrors/CLPReportWarning",
     "src/GC_3_0a5_2/driver/ParserErrors/CLPOSAlert",
     "src/GC_3_0a5_2/driver/ParserErrors/CLPStatus",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPFatalError"
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPFatalError",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache/makecacheentry",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache/insertcacheentry",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache/deletecacheentry",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache/CachedIncludeFile",
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache/FreeIncludeFile",
+    "src/GC_3_0a5_2/driver/CLBrowser/GetBrowseTableInfoAndLock",
+    "src/GC_3_0a5_2/driver/CLBrowser/Browser_Initialize",
+    "src/GC_3_0a5_2/driver/CLBrowser/Destroy",
+    "src/GC_3_0a5_2/driver/CLBrowser/Browser_Terminate",
+    "src/GC_3_0a5_2/driver/CLBrowser/Browser_SearchFile",
+    "src/GC_3_0a5_2/driver/CLBrowser/Browser_SearchAndAddFile",
+    "src/GC_3_0a5_2/driver/CLBrowser/CalcDiskSpaceRequirements",
+    "src/GC_3_0a5_2/driver/CLBrowser/ConvertMemToDisk"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3383,5 +3475,12 @@
     "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "src/GC_3_0a5_2/driver/ParserErrors.c"
   ],
-  "translation_units": "config/GC_3_0a5_2/translation-units.json"
+  "translation_units": "config/GC_3_0a5_2/translation-units.json",
+  "source_bindings": {
+    "src/GC_3_0a5_2/driver/CLIncludeFileCache.c": {
+      "_availablecache": "0x006d95a8",
+      "_freelist": "0x006d95ac",
+      "_cachelist": "0x006d95b0"
+    }
+  }
 }

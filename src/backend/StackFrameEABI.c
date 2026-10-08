@@ -1,4 +1,5 @@
 #define CERROR_FILE "StackFrameEABI.c"
+#include "version.h"
 #include "compiler/common.h"
 #include "compiler/StackFrameEABI.h"
 #include "compiler/enode.h"
@@ -699,6 +700,7 @@ void StackFrameEABI_EmitFrameAllocation(char allocateFrame, short scratchReg, in
     PCodeUtilities_EmitAddress(scratchReg, 1, data_00580fa8, 0);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void restore_gprs(PCodeBlock *func, Boolean a, Boolean b, SInt16 c)
 {
     SInt32 i;
@@ -750,6 +752,7 @@ void restore_gprs(PCodeBlock *func, Boolean a, Boolean b, SInt16 c)
         }
     }
 }
+#endif
 
 void save_gprs(PCodeBlock *func, Boolean a, Boolean b)
 {
@@ -1017,6 +1020,7 @@ static inline UInt8 StackFrameEABI_VRSAVEEnabled(void)
     return copts.altivecVrsave;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void StackFrameEABI_MergePrologueEpilogue(PCodeBlock *block, char emitReturn)
 {
     PCodeBlock *savedBlock;
@@ -1136,6 +1140,7 @@ void StackFrameEABI_MergePrologueEpilogue(PCodeBlock *block, char emitReturn)
     block->flags |= 2;
     gCurrentBlock = savedBlock;
 }
+#endif
 
 /* 0x5601e0 (file name) */
 

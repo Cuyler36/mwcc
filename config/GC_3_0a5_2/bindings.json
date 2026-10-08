@@ -1406,5 +1406,13 @@
   "_CInt64_Not": "0x004da3f0",
   "_cint64_min": "0x00699b86",
   "_CLIO_GetResourceString@12": "0x0042f480",
-  "_CLIO_ConvertPascalToCString@4": "0x0042f450"
+  "_CLIO_ConvertPascalToCString@4": "0x0042f450",
+  "_xmalloc@8": "0x00426300",
+  "_xfree@4": "0x00426490",
+  "_xstrdup@4": "0x00426460",
+  "_exit": "0x00402e70",
+  "_OS_GetMilliseconds": "0x00411c40",
+  "_OS_EqualSpec": "0x00411380",
+  "_WriteObjectFile": "0x0043d590",
+  "_WriteBrowseData": "0x0043d660"
 }

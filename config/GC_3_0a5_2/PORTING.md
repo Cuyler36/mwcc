@@ -44,6 +44,24 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
+The current inventory has 261 source views: 213 compiled files and 48
+original-only units. All twenty direct assertion ownership conflicts are now
+split physically. CFunc.cpp and CException.cpp retain provisional C language
+mode while imported pointer conversions are ported. CMiddleLayer.c,
+RegisterInfo.c, and StackFrame.c contain explicitly NonMatching imports with
+materially changed GC3 layouts/control flow. Their ledger entries do not claim
+equivalence. Older version bodies remain behind version guards.
+
+CLIncludeFileCache.c has all eight symbol-identified functions reviewed: five
+exact, three equivalent nonmatches after compiler/code-shape experiments.
+Its 20 initialized bytes and 12 BSS bytes match. CLBrowser.c has its nine
+functions reviewed: eight exact, one equivalent serializer nonmatch. Its 131
+literal payload bytes match; five alignment bytes in the 136-byte original
+span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
+by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
+imports still need the GC3 record ABI. Static cache bindings are scoped to the
+source file to avoid contaminating unrelated file-local names.
+
 ## ParserErrors.c: complete Windows unit
 
 All 11 retained Windows functions match under CW94 with space and intrinsic

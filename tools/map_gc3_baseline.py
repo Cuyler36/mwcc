@@ -219,6 +219,7 @@ def integrate():
             addresses[name] = next(iter(values))
             inferred[name] = evidence
     evidence_rows = []
+    scoped_bindings = json.loads((CONFIG / 'config.json').read_text()).get('source_bindings', {})
     comparison_dir = ROOT / "objdiff-imports"
     comparison_dir.mkdir(parents=True, exist_ok=True)
     for row in rows:
@@ -226,7 +227,9 @@ def integrate():
         symbol = row.get("symbol", "_"+row["name"])
         evidence = dict(name=row["name"], source=row["source"], address=row["address"], size=row["size"])
         try:
-            body, resolutions = resolve_function(*objects[row["source"]], symbol, address, addresses, pe, row["size"])
+            row_addresses = dict(addresses)
+            row_addresses.update({k: int(v, 0) for k, v in scoped_bindings.get(row['source'], {}).items()})
+            body, resolutions = resolve_function(*objects[row["source"]], symbol, address, row_addresses, pe, row["size"])
             evidence["bytes_exact"] = body == pe.read(address,row["size"])
             evidence["fixups_exact"] = {address+r['offset'] for r in resolutions if r['kind']==6} == {
                 f for f in fixups if address <= f < address+row["size"]}

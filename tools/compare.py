@@ -239,6 +239,10 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
     functions = json.loads(Path(f'config/{version}/functions.json').read_text())
     addresses.update({r['name'] if r['name'].startswith('?') else '_' + r['name']: int(r['address'], 0)
                       for r in functions})
+    addresses.update({r['name'] if r['name'].startswith('?') else '_' + r['name']: int(r['address'], 0)
+                      for r in functions if r.get('source') == source})
+    addresses.update({name: int(value, 0) for name, value in
+                      version_config(version).get('source_bindings', {}).get(source, {}).items()})
     references = defaultdict(set)
     fixups = set(base_relocations(pe))
     for row in rows:
@@ -637,8 +641,12 @@ def check(version, source=None):
             continue
         if row["source"] not in objects:
             objects[row["source"]] = read_object(Path(f"build/{version}/compiled/{row['source']}.obj"))
+        scoped_addresses = dict(addresses)
+        scoped_addresses.update({r['symbol']: r['address'] for r in rows if r.get('source') == row['source']})
+        scoped_addresses.update({name: int(value, 0) for name, value in
+                                 version_config(version).get('source_bindings', {}).get(row['source'], {}).items()})
         try:
-            body, resolutions = resolve_function(*objects[row["source"]], row["symbol"], row["address"], addresses, pe,
+            body, resolutions = resolve_function(*objects[row["source"]], row["symbol"], row["address"], scoped_addresses, pe,
                                                  row["size"])
         except ValueError:
             # Keep an inspectable instruction diff for imported NonMatching
@@ -658,7 +666,7 @@ def check(version, source=None):
                     isolated_sections = [isolated if s is sec else s for s in sections]
                     try:
                         resolved, _ = resolve_function(symbols, isolated_sections, row["symbol"],
-                                                       row["address"], addresses, pe, row["size"])
+                                                       row["address"], scoped_addresses, pe, row["size"])
                         partial[offset - begin:offset - begin + 4] = resolved[offset - begin:offset - begin + 4]
                     except ValueError:
                         pass

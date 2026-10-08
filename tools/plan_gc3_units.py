@@ -119,6 +119,8 @@ def generate(args):
             'Mac-only units are a separate checklist; they are not enabled Windows sources.'],
         units=sorted(units.values(), key=lambda u: u['source']), mac_only_units=mac_only,
         ambiguous_windows_functions=ambiguous, attempts=attempts)
+    if 'ownership_review' in previous:
+        result['ownership_review'] = previous['ownership_review']
     Path(args.output).write_text(json.dumps(result, indent=2) + '\n')
     print(f"{len(units)} units; {sum(not u['compiled'] for u in units.values())} target-only; "
           f"{sum(len(u['ownership_conflicts']) for u in units.values())} ownership conflicts")

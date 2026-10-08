@@ -2934,5 +2934,489 @@
   "fn_0063e350": {
     "name": "IRO_MarkPossibleCounterLoop",
     "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+  },
+  "fn_004c7430": {
+    "name": "lexer_validate",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7440": {
+    "name": "lexer_lex",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7560": {
+    "name": "lexer_string_handling",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7780": {
+    "name": "cat_strings",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7820": {
+    "name": "lexer_convert_to_token",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7960": {
+    "name": "lexer_peekahead",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c7ae0": {
+    "name": "parselit",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c83c0": {
+    "name": "parseescape",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8650": {
+    "name": "parsenumber",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c88e0": {
+    "name": "parseintsuffix",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8c80": {
+    "name": "parsefloatsuffix",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8da0": {
+    "name": "lexer_add_keywords",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8e40": {
+    "name": "lexer_matchendofline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8ea0": {
+    "name": "lexer_isendofline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8eb0": {
+    "name": "lexer_macro_expansion_unlock",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8ef0": {
+    "name": "lexer_macro_expansion_lock",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8f00": {
+    "name": "lexer_plextokenorfail",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8f40": {
+    "name": "lexer_plextokenorskip",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c8f90": {
+    "name": "lexer_readtokenorskip",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c9080": {
+    "name": "lexer_plex",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c9490": {
+    "name": "lexer_directive",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004c9ca0": {
+    "name": "lexer_preppragma",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ca0a0": {
+    "name": "lexer_prepundef",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ca160": {
+    "name": "lexer_prepdefine",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cb4c0": {
+    "name": "lexer_prepmessage",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cb7b0": {
+    "name": "lexer_prepinclude",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cb870": {
+    "name": "parse_include_name",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cbc00": {
+    "name": "lexer_prepline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cbe60": {
+    "name": "parsefilename",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cbef0": {
+    "name": "setup_line_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cc290": {
+    "name": "lexer_prependif",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cc410": {
+    "name": "lexer_prepelse",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cc650": {
+    "name": "lexer_prepelif",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cca60": {
+    "name": "ig_save_if",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ccbd0": {
+    "name": "scanner_getsourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ccc00": {
+    "name": "lexer_prepifndef",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cd150": {
+    "name": "lexer_prepifdef",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cd6d0": {
+    "name": "lexer_prepif",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cda80": {
+    "name": "pragma_dump_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cdbc0": {
+    "name": "dump_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cdec0": {
+    "name": "pragma_text_encoding",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ce250": {
+    "name": "pragma_message",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ce550": {
+    "name": "pragma_once",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ce730": {
+    "name": "prepifskip",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ceb30": {
+    "name": "negativeif",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004ceda0": {
+    "name": "popifstate",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cef20": {
+    "name": "parsecond",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cf080": {
+    "name": "parsebinary",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cf380": {
+    "name": "ppgetprec",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cf440": {
+    "name": "parseunary",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cfa80": {
+    "name": "ig_test",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004cfb50": {
+    "name": "igtdirective",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d03b0": {
+    "name": "ig_skipline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d0460": {
+    "name": "lexer_reparse_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d0650": {
+    "name": "lexer_simple_expand_string",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d0870": {
+    "name": "lexer_push_mstream",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d0970": {
+    "name": "lexer_expand_argument",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d0f20": {
+    "name": "lexer_expand_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d1840": {
+    "name": "expand_mstream",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d1b10": {
+    "name": "lexer_expand_special_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d20b0": {
+    "name": "lexer_macro_encode_text",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d2330": {
+    "name": "lexer_macro_encode_number",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d2400": {
+    "name": "lexer_macro_encode_string",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d24e0": {
+    "name": "lexer_macro_encode_escaped_string",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d25b0": {
+    "name": "stringizemlist",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d2730": {
+    "name": "pastemacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d2e00": {
+    "name": "lexer_preprocess_token",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d2e20": {
+    "name": "preprocesstoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3020": {
+    "name": "gathermacroargument",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3200": {
+    "name": "expandmacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3320": {
+    "name": "decodemacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d34a0": {
+    "name": "appendmacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3570": {
+    "name": "lexer_readmacrotokenorskip",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d35d0": {
+    "name": "lexer_readmacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d39c0": {
+    "name": "readmacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3d30": {
+    "name": "peekeol",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3e00": {
+    "name": "lexer_peekmacrotoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3f10": {
+    "name": "peekargparen",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d3fa0": {
+    "name": "peekparen",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4250": {
+    "name": "mlist_delete_after_thru",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d42d0": {
+    "name": "lexer_lookup_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4320": {
+    "name": "lexer_delete_special_macros",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4360": {
+    "name": "lexer_insert_special_macro",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4470": {
+    "name": "lexer_macro_redef_error",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4550": {
+    "name": "lexer_skipendofline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4750": {
+    "name": "lexer_unreadtoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d47b0": {
+    "name": "lexer_readtoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4850": {
+    "name": "lexer_get_file_stack_string",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4af0": {
+    "name": "lexer_pop",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4eb0": {
+    "name": "lexer_push_string",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d4fa0": {
+    "name": "lexer_push_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d50d0": {
+    "name": "lexer_push_include_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d53c0": {
+    "name": "lexer_push",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5620": {
+    "name": "lexer_getsourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5680": {
+    "name": "lexer_flattensourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5820": {
+    "name": "lexer_match_stacked_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5870": {
+    "name": "lexer_get_current_disk_filespec",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d58f0": {
+    "name": "lexer_get_current_line",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5920": {
+    "name": "lexer_get_current_filename",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5950": {
+    "name": "lexer_get_current_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5990": {
+    "name": "lexer_get_current_disk_file",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5a00": {
+    "name": "lexer_warning",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5a50": {
+    "name": "lexer_error",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5b50": {
+    "name": "lexer_info_at_sourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5b90": {
+    "name": "lexer_warning_at_sourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5bd0": {
+    "name": "lexer_error_at_sourceref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5cb0": {
+    "name": "lexer_message_v",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d5e80": {
+    "name": "lexer_setupref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6a60": {
+    "name": "lexer_temp_push",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6c00": {
+    "name": "lexer_get_silent",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6c20": {
+    "name": "lexer_get_depth",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6c40": {
+    "name": "lexer_get_lines",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6c50": {
+    "name": "lexer_clear_macros",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6c70": {
+    "name": "lexer_fixup_names",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6cb0": {
+    "name": "lexer_insert_special_macros",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6d30": {
+    "name": "lexer_reconfig",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6d40": {
+    "name": "lexer_cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6d80": {
+    "name": "lexer_setup",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6f10": {
+    "name": "lexer_unload",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d6f20": {
+    "name": "lexer_load",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_004d7010": {
+    "name": "lexer_scan_hexfloat",
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
   }
 }

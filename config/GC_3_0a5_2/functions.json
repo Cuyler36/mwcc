@@ -9796,15 +9796,1333 @@
     }
   },
   {
-    "name": "CPrep_ParseDirective",
-    "address": "0x004c9490",
-    "size": 2061,
-    "source": "src/frontend/CPrep.c",
-    "baseline_name": "CPrep_ParseDirective",
-    "baseline_address": "0x00437ed0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "lexer_validate",
+    "address": "0x4c7430",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_lex",
+    "address": "0x4c7440",
+    "size": 284,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_string_handling",
+    "address": "0x4c7560",
+    "size": 539,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "cat_strings",
+    "address": "0x4c7780",
+    "size": 145,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_convert_to_token",
+    "address": "0x4c7820",
+    "size": 314,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_peekahead",
+    "address": "0x4c7960",
+    "size": 376,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parselit",
+    "address": "0x4c7ae0",
+    "size": 2271,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parseescape",
+    "address": "0x4c83c0",
+    "size": 650,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parsenumber",
+    "address": "0x4c8650",
+    "size": 642,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parseintsuffix",
+    "address": "0x4c88e0",
+    "size": 928,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parsefloatsuffix",
+    "address": "0x4c8c80",
+    "size": 279,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_add_keywords",
+    "address": "0x4c8da0",
+    "size": 157,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_matchendofline",
+    "address": "0x4c8e40",
+    "size": 95,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_isendofline",
+    "address": "0x4c8ea0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_expansion_unlock",
+    "address": "0x4c8eb0",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_expansion_lock",
+    "address": "0x4c8ef0",
+    "size": 10,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_plextokenorfail",
+    "address": "0x4c8f00",
+    "size": 54,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_plextokenorskip",
+    "address": "0x4c8f40",
+    "size": 72,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_readtokenorskip",
+    "address": "0x4c8f90",
+    "size": 229,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_plex",
+    "address": "0x4c9080",
+    "size": 1027,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_directive",
+    "address": "0x4c9490",
+    "size": 2061,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_preppragma",
+    "address": "0x4c9ca0",
+    "size": 1018,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepundef",
+    "address": "0x4ca0a0",
+    "size": 186,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepdefine",
+    "address": "0x4ca160",
+    "size": 4955,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepmessage",
+    "address": "0x4cb4c0",
+    "size": 744,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepinclude",
+    "address": "0x4cb7b0",
+    "size": 186,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parse_include_name",
+    "address": "0x4cb870",
+    "size": 908,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepline",
+    "address": "0x4cbc00",
+    "size": 601,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parsefilename",
+    "address": "0x4cbe60",
+    "size": 135,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "setup_line_file",
+    "address": "0x4cbef0",
+    "size": 923,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prependif",
+    "address": "0x4cc290",
+    "size": 375,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepelse",
+    "address": "0x4cc410",
+    "size": 571,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepelif",
+    "address": "0x4cc650",
+    "size": 1029,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ig_save_if",
+    "address": "0x4cca60",
+    "size": 367,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_getsourceref",
+    "address": "0x4ccbd0",
+    "size": 47,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepifndef",
+    "address": "0x4ccc00",
+    "size": 1360,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepifdef",
+    "address": "0x4cd150",
+    "size": 1394,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_prepif",
+    "address": "0x4cd6d0",
+    "size": 944,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pragma_dump_macro",
+    "address": "0x4cda80",
+    "size": 319,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "dump_macro",
+    "address": "0x4cdbc0",
+    "size": 764,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pragma_text_encoding",
+    "address": "0x4cdec0",
+    "size": 901,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pragma_message",
+    "address": "0x4ce250",
+    "size": 763,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pragma_once",
+    "address": "0x4ce550",
+    "size": 473,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "prepifskip",
+    "address": "0x4ce730",
+    "size": 1011,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "negativeif",
+    "address": "0x4ceb30",
+    "size": 624,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "popifstate",
+    "address": "0x4ceda0",
+    "size": 376,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parsecond",
+    "address": "0x4cef20",
+    "size": 340,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parsebinary",
+    "address": "0x4cf080",
+    "size": 755,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ppgetprec",
+    "address": "0x4cf380",
+    "size": 179,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "parseunary",
+    "address": "0x4cf440",
+    "size": 1585,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ig_test",
+    "address": "0x4cfa80",
+    "size": 207,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "igtdirective",
+    "address": "0x4cfb50",
+    "size": 2134,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ig_skipline",
+    "address": "0x4d03b0",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_reparse_macro",
+    "address": "0x4d0460",
+    "size": 488,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_simple_expand_string",
+    "address": "0x4d0650",
+    "size": 539,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_push_mstream",
+    "address": "0x4d0870",
+    "size": 244,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_expand_argument",
+    "address": "0x4d0970",
+    "size": 1453,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_expand_macro",
+    "address": "0x4d0f20",
+    "size": 2321,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "expand_mstream",
+    "address": "0x4d1840",
+    "size": 717,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_expand_special_macro",
+    "address": "0x4d1b10",
+    "size": 1426,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_encode_text",
+    "address": "0x4d20b0",
+    "size": 637,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_encode_number",
+    "address": "0x4d2330",
+    "size": 206,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_encode_string",
+    "address": "0x4d2400",
+    "size": 216,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_encode_escaped_string",
+    "address": "0x4d24e0",
+    "size": 205,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "stringizemlist",
+    "address": "0x4d25b0",
+    "size": 383,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pastemacrotoken",
+    "address": "0x4d2730",
+    "size": 1740,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_preprocess_token",
+    "address": "0x4d2e00",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "preprocesstoken",
+    "address": "0x4d2e20",
+    "size": 508,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "gathermacroargument",
+    "address": "0x4d3020",
+    "size": 472,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "expandmacrotoken",
+    "address": "0x4d3200",
+    "size": 278,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "decodemacrotoken",
+    "address": "0x4d3320",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "appendmacrotoken",
+    "address": "0x4d34a0",
+    "size": 196,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_readmacrotokenorskip",
+    "address": "0x4d3570",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_readmacrotoken",
+    "address": "0x4d35d0",
+    "size": 1008,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "readmacrotoken",
+    "address": "0x4d39c0",
+    "size": 867,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "peekeol",
+    "address": "0x4d3d30",
+    "size": 196,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_peekmacrotoken",
+    "address": "0x4d3e00",
+    "size": 264,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "peekargparen",
+    "address": "0x4d3f10",
+    "size": 139,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "peekparen",
+    "address": "0x4d3fa0",
+    "size": 680,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "mlist_delete_after_thru",
+    "address": "0x4d4250",
+    "size": 114,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_lookup_macro",
+    "address": "0x4d42d0",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_delete_special_macros",
+    "address": "0x4d4320",
+    "size": 62,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_insert_special_macro",
+    "address": "0x4d4360",
+    "size": 260,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_macro_redef_error",
+    "address": "0x4d4470",
+    "size": 221,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_skipendofline",
+    "address": "0x4d4550",
+    "size": 499,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_unreadtoken",
+    "address": "0x4d4750",
+    "size": 96,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_readtoken",
+    "address": "0x4d47b0",
+    "size": 149,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_file_stack_string",
+    "address": "0x4d4850",
+    "size": 662,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_pop",
+    "address": "0x4d4af0",
+    "size": 952,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_push_string",
+    "address": "0x4d4eb0",
+    "size": 240,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_push_file",
+    "address": "0x4d4fa0",
+    "size": 290,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_push_include_file",
+    "address": "0x4d50d0",
+    "size": 749,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_push",
+    "address": "0x4d53c0",
+    "size": 603,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_getsourceref",
+    "address": "0x4d5620",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_flattensourceref",
+    "address": "0x4d5680",
+    "size": 407,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_match_stacked_file",
+    "address": "0x4d5820",
+    "size": 65,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_current_disk_filespec",
+    "address": "0x4d5870",
+    "size": 117,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_current_line",
+    "address": "0x4d58f0",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_current_filename",
+    "address": "0x4d5920",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_current_file",
+    "address": "0x4d5950",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_current_disk_file",
+    "address": "0x4d5990",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_warning",
+    "address": "0x4d5a00",
+    "size": 73,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_error",
+    "address": "0x4d5a50",
+    "size": 256,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_info_at_sourceref",
+    "address": "0x4d5b50",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_warning_at_sourceref",
+    "address": "0x4d5b90",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_error_at_sourceref",
+    "address": "0x4d5bd0",
+    "size": 224,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_message_v",
+    "address": "0x4d5cb0",
+    "size": 457,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_setupref",
+    "address": "0x4d5e80",
+    "size": 3037,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_temp_push",
+    "address": "0x4d6a60",
+    "size": 406,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_silent",
+    "address": "0x4d6c00",
+    "size": 26,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_depth",
+    "address": "0x4d6c20",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_get_lines",
+    "address": "0x4d6c40",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_clear_macros",
+    "address": "0x4d6c50",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_fixup_names",
+    "address": "0x4d6c70",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_insert_special_macros",
+    "address": "0x4d6cb0",
+    "size": 121,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_reconfig",
+    "address": "0x4d6d30",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_cleanup",
+    "address": "0x4d6d40",
+    "size": 62,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_setup",
+    "address": "0x4d6d80",
+    "size": 399,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_unload",
+    "address": "0x4d6f10",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_load",
+    "address": "0x4d6f20",
+    "size": 240,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "lexer_scan_hexfloat",
+    "address": "0x4d7010",
+    "size": 2166,
+    "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "identity_evidence": "User v10 CSV + native behavior, filename assertions where available",
+    "boundary_evidence": {
+      "method": "Native reachable CFG bounded by reviewed entries and whole-image call/filename seam audit",
       "unresolved_indirect_flow": false
     }
   },

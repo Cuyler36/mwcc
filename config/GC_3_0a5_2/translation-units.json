@@ -21199,28 +21199,74 @@
       "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
       "original_filename": "IroCounterLoop.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_0063e0f0",
+          "name": "IRO_SetCounterLoopFlags",
+          "address": "0x63dbd0",
+          "size": 730,
+          "compiled_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed reachable native CFG and whole-image scope audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IRO_TransformCounterLoop",
+          "address": "0x63deb0",
+          "size": 576,
+          "compiled_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed reachable native CFG and whole-image scope audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IRO_AdjustCounterLoopsForLoopDepth",
           "address": "0x0063e0f0",
           "size": 329,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed reachable native CFG and whole-image scope audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0063e1fa"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+        },
+        {
+          "name": "IsLoopCounterLoop",
+          "address": "0x63e240",
+          "size": 272,
+          "compiled_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed reachable native CFG and whole-image scope audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IRO_MarkPossibleCounterLoop",
+          "address": "0x63e350",
+          "size": 209,
+          "compiled_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed reachable native CFG and whole-image scope audit",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/optimizer/IroDependenceAnalysis.c",
@@ -160776,6 +160822,1271 @@
           }
         ],
         "conclusion": "Paired opcode/register/immediate/relocation/direct-CFG/indirect-switch sequence identical after padding removal and bijective stack-slot renaming."
+      }
+    },
+    "src/GC_3_0a5_2/optimizer/IroCounterLoop.c": {
+      "source_candidate": "build\\IroCounterLoop-native.c",
+      "intended_source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+      "source_filename_proof": "native assertion6bfaf9",
+      "sha256": "7f90608ae8b6de99e74e61e4d33e5d1b47c390054aa09cecef6d1d46f39ec35a",
+      "frozen": true,
+      "identified_native_functions": 5,
+      "native_code_bytes": 2116,
+      "strict_exact_functions": [
+        "IsLoopCounterLoop",
+        "IRO_MarkPossibleCounterLoop"
+      ],
+      "strict_exact_bytes": 481,
+      "selected_profile": "CW94 -O4 -opt speed -opt intrinsics -inline auto -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3",
+      "profiles": "build/IroCounterLoop-profiles.json",
+      "data": {
+        "complete": true,
+        "allocated_data_bytes": 460,
+        "bss_bytes": 0,
+        "all_bytes_fixups_exact": true,
+        "shared_pooled_literal": {
+          "address": "0x698a16",
+          "size": 12,
+          "name": "BitVector.h",
+          "exclusive_ownership": false
+        }
+      },
+      "membership_complete": false,
+      "all_identified_native_bodies_attempted": true,
+      "semantics": "build/IroCounterLoop-semantic-review.json",
+      "emulation": "build/IroCounterLoop-emulation-results.json",
+      "membership": "build/IroCounterLoop-full-image-audit.json",
+      "mac_checklist": "build/IroCounterLoop-Mac-checklist.json",
+      "alias_policy": "build/IroCounterLoop-alias-policy.json",
+      "encoding": {
+        "cp932": true,
+        "repository_checker": "tools/check_sjis.py absent; strict CP932 encoding passed"
+      },
+      "no_active_source_or_config_edits": true,
+      "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+      "source_sha256": "7f90608ae8b6de99e74e61e4d33e5d1b47c390054aa09cecef6d1d46f39ec35a",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 5,
+      "strict_exact_count": 2,
+      "data_complete": false,
+      "functions": [
+        {
+          "name": "IRO_SetCounterLoopFlags",
+          "address": "0x63dbd0",
+          "size": 730,
+          "compiled_size": 716,
+          "strict_exact": false,
+          "objdiff_percent": 88.977974
+        },
+        {
+          "name": "IRO_TransformCounterLoop",
+          "address": "0x63deb0",
+          "size": 576,
+          "compiled_size": 608,
+          "strict_exact": false,
+          "objdiff_percent": 80.68132
+        },
+        {
+          "name": "IRO_AdjustCounterLoopsForLoopDepth",
+          "address": "0x63e0f0",
+          "size": 329,
+          "compiled_size": 329,
+          "strict_exact": false,
+          "objdiff_percent": 91.871284
+        },
+        {
+          "name": "IsLoopCounterLoop",
+          "address": "0x63e240",
+          "size": 272,
+          "compiled_size": 272,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "IRO_MarkPossibleCounterLoop",
+          "address": "0x63e350",
+          "size": 209,
+          "compiled_size": 209,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        }
+      ],
+      "compiler_profiles": [
+        {
+          "profile": "cw94-speed",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 716,
+              "strict_exact": false,
+              "objdiff_percent": 88.977974
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 80.68132
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 91.871284
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 209,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ]
+        },
+        {
+          "profile": "cw94-size",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 667,
+              "strict_exact": false,
+              "objdiff_percent": 72.07929
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 564,
+              "strict_exact": false,
+              "objdiff_percent": 75.34066
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 279,
+              "strict_exact": false,
+              "objdiff_percent": 50.118813
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 239,
+              "strict_exact": false,
+              "objdiff_percent": 60.53061
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 200,
+              "strict_exact": false,
+              "objdiff_percent": 60.5
+            }
+          ]
+        },
+        {
+          "profile": "cw94-nointrinsics",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "nointrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 716,
+              "strict_exact": false,
+              "objdiff_percent": 88.977974
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 80.68132
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 91.871284
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "error": "unbound relocation: _memset"
+            }
+          ]
+        },
+        {
+          "profile": "cw94-inlineoff",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "off",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "error": "unbound local function: _hasbit"
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 80.68132
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 91.871284
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 209,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ]
+        },
+        {
+          "profile": "cw94-noschedule",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noschedule",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 716,
+              "strict_exact": false,
+              "objdiff_percent": 80.911896
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 77.71978
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 87.91089
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": false,
+              "objdiff_percent": 97.83673
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 209,
+              "strict_exact": false,
+              "objdiff_percent": 87.05556
+            }
+          ]
+        },
+        {
+          "profile": "cw94-nostrength",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "nostrength",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 716,
+              "strict_exact": false,
+              "objdiff_percent": 88.977974
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 80.68132
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 91.871284
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 209,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ]
+        },
+        {
+          "profile": "cw94-noloop",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noloop",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 716,
+              "strict_exact": false,
+              "objdiff_percent": 88.977974
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 608,
+              "strict_exact": false,
+              "objdiff_percent": 80.68132
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 91.871284
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 272,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 209,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ]
+        },
+        {
+          "profile": "pro8-speed",
+          "flags": [
+            "python",
+            "tools/run_compiler.py",
+            "--out",
+            "build/IroCounterLoop-native.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/IroCounterLoop-native.c",
+            "-o",
+            "build/IroCounterLoop-native.obj"
+          ],
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "address": "0x63dbd0",
+              "size": 730,
+              "compiled_size": 668,
+              "strict_exact": false,
+              "objdiff_percent": 74.0837
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "address": "0x63deb0",
+              "size": 576,
+              "compiled_size": 573,
+              "strict_exact": false,
+              "objdiff_percent": 71.90659
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "address": "0x63e0f0",
+              "size": 329,
+              "compiled_size": 311,
+              "strict_exact": false,
+              "objdiff_percent": 52.72277
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "address": "0x63e240",
+              "size": 272,
+              "compiled_size": 288,
+              "strict_exact": false,
+              "objdiff_percent": 59.142857
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "address": "0x63e350",
+              "size": 209,
+              "compiled_size": 203,
+              "strict_exact": false,
+              "objdiff_percent": 67.541664
+            }
+          ]
+        }
+      ],
+      "review_evidence": {
+        "IroCounterLoop-semantic-review.json": {
+          "functions": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "review": "Tests begin-loop marker200 and induction availability. Extracts count constant or clones expression, computes final induction, preserves native800 earlyout; updates counter metadata and suppresses original induction assignment only when reference/volatility/live-bitvector checks allow. Preserves native variable-pointer dereference contract on normal path; invalid absent variable is not made safe."
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "review": "Requires unset changed flag and40000 marker; builds two labeled blocks, clones condition lists, flips branch10/11, saves original loop condition in counter metadata, clears old goto8, inserts two blocks into linear/block links, converts first test to back branch with400 flag, recalculates back edge and loop bounds, sets membership bit and updates loop analysis."
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "review": "Initializes depth analysis, processes80000 loops, recomputes nesting then cancels begin/end counter markers for depth>=2. Restores removed assignment flag for node kinds2/3 and clears metadata pointers/type. Assertion line340 requires matching end marker."
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "review": "Clears induction computed pair, rejects20c012 flags and unsupported control flow, optionally computes iteration count, verifies valid count/final induction. Strict exact including PE fixups."
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "review": "Analyzes loop, calls exact predicate, marks40000, allocates and clears34-byte counter metadata, selects existing count expression for one iteration or builds integer constant, attaches induction final expression. Strict exact including PE fixups."
+            },
+            {
+              "name": "IRO_RotateLoop",
+              "review": "Analyzes header/latch/body and optional positive-count restriction; clones test from header to latch with inverted kind10/11, adds label block and splices both linked representations, recomputes back edge and updates first block to body; marks changed only on nonnull recomputed edge. Calls graph rebuild only when changed. Source owner unproved."
+            }
+          ],
+          "abi": {
+            "calling_convention": "cdecl",
+            "loop_next": 106,
+            "loop_flags": 0,
+            "loop_depth": 4,
+            "first_last": [
+              16,
+              20
+            ],
+            "back_body": [
+              28,
+              32
+            ],
+            "condition": 36,
+            "induction": 44,
+            "count_valid": 52,
+            "count_pair": 54,
+            "list_pair": 62,
+            "final_list": 70,
+            "linear_flags": 2,
+            "linear_index": 10,
+            "linear_operands": [
+              42,
+              46,
+              50
+            ],
+            "linear_next": 62,
+            "counter_metadata_size": 34,
+            "counter_fields": [
+              0,
+              2,
+              6,
+              10,
+              14,
+              18,
+              22,
+              26,
+              30
+            ],
+            "node_first_last": [
+              16,
+              20
+            ],
+            "node_next": 48
+          },
+          "limits": "1800 bounded cases compare native and compiled effects using deterministic external helpers. Not a complete helper implementation or optimizer pipeline proof; fatal assertion paths/invalid pointers are outside valid-loop contract. Raw private Windows record views preserve proved byte offsets without changing shared Mac headers."
+        },
+        "IroCounterLoop-emulation-results.json": {
+          "results": [
+            {
+              "name": "IRO_SetCounterLoopFlags",
+              "cases": 300,
+              "passed": true
+            },
+            {
+              "name": "IRO_TransformCounterLoop",
+              "cases": 300,
+              "passed": true
+            },
+            {
+              "name": "IRO_AdjustCounterLoopsForLoopDepth",
+              "cases": 300,
+              "passed": true
+            },
+            {
+              "name": "IsLoopCounterLoop",
+              "cases": 300,
+              "passed": true
+            },
+            {
+              "name": "IRO_MarkPossibleCounterLoop",
+              "cases": 300,
+              "passed": true
+            },
+            {
+              "name": "IRO_RotateLoop",
+              "cases": 300,
+              "passed": true
+            }
+          ],
+          "limits": "Bounded packed records, valid pointers/short node indices, deterministic helper stubs. Compare loop/graph/allocated heap, linear index, call traces and Boolean returns. Tests include early-outs and rejection modes; no full optimizer end-to-end proof or arbitrary helper mutation contract."
+        },
+        "IroCounterLoop-full-image-audit.json": {
+          "counter_loop_cluster": [
+            "0x63dbd0",
+            "0x63e421"
+          ],
+          "separately_owned_rotate": [
+            "0x63da30",
+            "0x63dbca"
+          ],
+          "following_unit": "IroNonRegLoopAccesses begins63e430",
+          "preceding": "63d9f0 standard bad_alloc constructor/exception landing pad excluded",
+          "direct_calls": {
+            "0x63da30": [
+              "0x5c54ff"
+            ],
+            "0x63e350": [
+              "0x5c5568"
+            ],
+            "0x63deb0": [
+              "0x5c5579"
+            ],
+            "0x63dbd0": [
+              "0x5c57a7"
+            ],
+            "0x63e0f0": [
+              "0x5c5bf3"
+            ],
+            "0x63e240": [
+              "0x63e365"
+            ]
+          },
+          "unknown_interior_calls": [],
+          "unmapped_padding_prologues": [],
+          "allocated_literal_references": {
+            "0x698a16": [
+              "0x4a98a4",
+              "0x54b763",
+              "0x54c1c3",
+              "0x54c1e3",
+              "0x54c219",
+              "0x5b2b04",
+              "0x5b2b17",
+              "0x5b2b6b",
+              "0x5b2b83",
+              "0x5b2b96",
+              "0x5b2ba9",
+              "0x5b2bc3",
+              "0x5be558",
+              "0x5be653",
+              "0x5be663",
+              "0x5c58f3",
+              "0x5c5913",
+              "0x5c5d83",
+              "0x5c5da3",
+              "0x5c5df3",
+              "0x5c711b",
+              "0x5c7153",
+              "0x5f47d3",
+              "0x5f4b33",
+              "0x5f4b46",
+              "0x5f4b56",
+              "0x5f5289",
+              "0x5f555a",
+              "0x5f5858",
+              "0x5f5a6a",
+              "0x5f5ad7",
+              "0x5f5af6",
+              "0x5f5f95",
+              "0x5f5fa8",
+              "0x5f6015",
+              "0x5f6028",
+              "0x5f6076",
+              "0x5f6089",
+              "0x5f60d3",
+              "0x5f60e6",
+              "0x5f6125",
+              "0x5f6138",
+              "0x5f6177",
+              "0x5f61b6",
+              "0x5f61c9",
+              "0x5f6217",
+              "0x5f63f3",
+              "0x5f6453",
+              "0x5f64ca",
+              "0x5f6813",
+              "0x5f68fa",
+              "0x5f6b09",
+              "0x5f7006",
+              "0x5f7163",
+              "0x5f7196",
+              "0x5f7533",
+              "0x5f7606",
+              "0x5f78b6",
+              "0x5f7903",
+              "0x5f7973",
+              "0x5f79ca",
+              "0x602133",
+              "0x602146",
+              "0x602499",
+              "0x60255b",
+              "0x602649",
+              "0x6028a3",
+              "0x60294b",
+              "0x6032c3",
+              "0x603593",
+              "0x6038a3",
+              "0x6038e4",
+              "0x603918",
+              "0x60392b",
+              "0x603a28",
+              "0x603a38",
+              "0x6040b3",
+              "0x6040c6",
+              "0x6040d9",
+              "0x6040f3",
+              "0x6041b7",
+              "0x604317",
+              "0x6044d6",
+              "0x6044e9",
+              "0x604503",
+              "0x604513",
+              "0x6045f6",
+              "0x604606",
+              "0x6046b7",
+              "0x60565b",
+              "0x605673",
+              "0x6056fb",
+              "0x605723",
+              "0x605743",
+              "0x605756",
+              "0x605a13",
+              "0x605cab",
+              "0x605cbb",
+              "0x605cd3",
+              "0x605d63",
+              "0x605f69",
+              "0x60d3a4",
+              "0x60def9",
+              "0x60df13",
+              "0x60df33",
+              "0x60df46",
+              "0x60e0b4",
+              "0x60e0c7",
+              "0x60e1fa",
+              "0x60e383",
+              "0x60e396",
+              "0x60f834",
+              "0x60f854",
+              "0x60febb",
+              "0x60fed3",
+              "0x60fef3",
+              "0x60ff06",
+              "0x610063",
+              "0x610076",
+              "0x6122aa",
+              "0x615ee3",
+              "0x615ef3",
+              "0x615f06",
+              "0x616063",
+              "0x616505",
+              "0x6166b5",
+              "0x6166c8",
+              "0x6166db",
+              "0x61d593",
+              "0x61d5a6",
+              "0x61d8e4",
+              "0x61dad3",
+              "0x61dcfa",
+              "0x61ded3",
+              "0x61dee3",
+              "0x61df03",
+              "0x61df16",
+              "0x61df63",
+              "0x61e3f3",
+              "0x61e513",
+              "0x61e526",
+              "0x61e554",
+              "0x61e577",
+              "0x61e9a9",
+              "0x61ea69",
+              "0x61f09b",
+              "0x61f0e9",
+              "0x61f103",
+              "0x61f116",
+              "0x61f129",
+              "0x61f1a3",
+              "0x61f1b6",
+              "0x61f223",
+              "0x61f243",
+              "0x61f256",
+              "0x61f269",
+              "0x63e0e3"
+            ],
+            "0x6bfaa5": [
+              "0x63dd5e",
+              "0x63de61"
+            ],
+            "0x6bfac9": [
+              "0x63ddd8",
+              "0x63de91"
+            ],
+            "0x6bfaf9": [
+              "0x63e1f6"
+            ],
+            "0x6bfb0d": [
+              "0x63e26f"
+            ],
+            "0x6bfb55": [
+              "0x63e281"
+            ],
+            "0x6bfb95": [
+              "0x63e29b"
+            ],
+            "0x6bfb99": [
+              "0x63e331"
+            ],
+            "0x6bfbf1": [
+              "0x63e341"
+            ],
+            "0x6bfc4d": [
+              "0x63e387"
+            ]
+          },
+          "mac_missing": "IRO_MarkAllCounterLoops has no CSV/native individually identified body; nearby IroLoop driver directly invokes MarkPossible/Transform/SetFlags/Adjust; possible inline or platform-specific remains unproved",
+          "whole_image_function_pointer_PE_fixups": {}
+        },
+        "IroCounterLoop-Mac-checklist.json": [
+          {
+            "name": "IRO_SetCounterLoopFlags",
+            "address": "0x63dbd0",
+            "status": "mapped native reviewed"
+          },
+          {
+            "name": "IRO_TransformCounterLoop",
+            "address": "0x63deb0",
+            "status": "mapped native reviewed"
+          },
+          {
+            "name": "IRO_AdjustCounterLoopsForLoopDepth",
+            "address": "0x63e0f0",
+            "status": "mapped native reviewed"
+          },
+          {
+            "name": "IsLoopCounterLoop",
+            "address": "0x63e240",
+            "status": "mapped native reviewed"
+          },
+          {
+            "name": "IRO_MarkPossibleCounterLoop",
+            "address": "0x63e350",
+            "status": "mapped native reviewed"
+          },
+          {
+            "name": "IRO_MarkAllCounterLoops",
+            "mac_address": "0x1a822c",
+            "status": "unlocated ordinary Mac symbol; no separate native function proved",
+            "evidence": "whole-image CSV no names, no additional cluster call/seam members; native IroLoop driver calls MarkPossible63e350 at5c5568, Transform63deb0 at5c5579, SetFlags63dbd0 at5c57a7, Adjust63e0f0 at5c5bf3",
+            "limit": "May be integrated/inlined/platform-specific. No fabricated emitted body or confirmed absence. TU membership remains incomplete pending reconciliation."
+          },
+          {
+            "name": "IRO_RotateLoop",
+            "mac_address": "0x1a9968",
+            "address": "0x63da30",
+            "status": "separate canonical function, source filename unproved",
+            "evidence": "Mac ordinary rotate name and native loop rotation, sole caller5c54ff; removed from counter-loop candidate"
+          }
+        ],
+        "IroCounterLoop-alias-policy.json": {
+          "safe_native_address_aliases": {
+            "0x63dbd0": "IRO_SetCounterLoopFlags",
+            "0x63deb0": "IRO_TransformCounterLoop",
+            "0x63e0f0": "IRO_AdjustCounterLoopsForLoopDepth",
+            "0x63e240": "IsLoopCounterLoop",
+            "0x63e350": "IRO_MarkPossibleCounterLoop"
+          },
+          "separate_rotate": {
+            "0x63da30": "IRO_RotateLoop"
+          },
+          "legacy_definition_guards": [],
+          "legacy_same_name_aliases": "None authorized without checking original address, parameters and platform layout. No existing baseline counter-loop source found.",
+          "shared_externals": "All helper address names preserved. Pair one699b6e, zero704908, loop options70f231/70f25e, linear_index710998 and inttype699c6c remain extern; no state ownership inferred.",
+          "forbidden_bindings": "No section-name/dot-prefixed or anonymous address bindings. Literal bindings anchored by actual original instruction references and full-payload bytes/category/fixups validation."
+        },
+        "IroCounterLoop-emitted-functions.json": [
+          {
+            "name": "_IRO_SetCounterLoopFlags",
+            "section": 12,
+            "offset": 0
+          },
+          {
+            "name": "_IRO_TransformCounterLoop",
+            "section": 13,
+            "offset": 0
+          },
+          {
+            "name": "_IRO_AdjustCounterLoopsForLoopDepth",
+            "section": 14,
+            "offset": 0
+          },
+          {
+            "name": "_IsLoopCounterLoop",
+            "section": 15,
+            "offset": 0
+          },
+          {
+            "name": "_IRO_MarkPossibleCounterLoop",
+            "section": 16,
+            "offset": 0
+          }
+        ],
+        "IroCounterLoop-owned-data.json": [
+          {
+            "name": "_counter_filename",
+            "section": ".data",
+            "size": 17,
+            "method": "named binding",
+            "address": "0x006bfaf9",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_bitvector_filename",
+            "section": ".data",
+            "size": 12,
+            "method": "named binding",
+            "address": "0x00698a16",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_generate",
+            "section": ".data",
+            "size": 33,
+            "method": "named binding",
+            "address": "0x006bfaa5",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_remove",
+            "section": ".data",
+            "size": 48,
+            "method": "named binding",
+            "address": "0x006bfac9",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_form",
+            "section": ".data",
+            "size": 69,
+            "method": "named binding",
+            "address": "0x006bfb0d",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_flags",
+            "section": ".data",
+            "size": 64,
+            "method": "named binding",
+            "address": "0x006bfb55",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_newline",
+            "section": ".data",
+            "size": 2,
+            "method": "named binding",
+            "address": "0x006bfb95",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_count",
+            "section": ".data",
+            "size": 88,
+            "method": "named binding",
+            "address": "0x006bfb99",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_final",
+            "section": ".data",
+            "size": 90,
+            "method": "named binding",
+            "address": "0x006bfbf1",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_log_yes",
+            "section": ".data",
+            "size": 37,
+            "method": "named binding",
+            "address": "0x006bfc4d",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ]
+      },
+      "related_rotation_candidate": {
+        "source_candidate": "build\\IroRotateLoop-native.c",
+        "intended_source": null,
+        "source_filename_proof": "unproved; canonical IRO_RotateLoop identity established by Mac ordinary name and native rotation semantics only",
+        "sha256": "e99fff662370932d6cb0e306594b49869a9be8064e3127cae720654e382d1dc9",
+        "frozen": true,
+        "identified_native_functions": 1,
+        "native_code_bytes": 410,
+        "strict_exact_functions": [],
+        "strict_exact_bytes": 0,
+        "selected_profile": "CW94 -O4 -opt speed -opt intrinsics -inline auto -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3",
+        "profiles": "build/IroRotateLoop-profiles.json",
+        "data": {
+          "complete": true,
+          "allocated_data_bytes": 0,
+          "bss_bytes": 0,
+          "all_bytes_fixups_exact": true,
+          "shared_pooled_literal": null
+        },
+        "membership_complete": "original TU source filename unproved",
+        "all_identified_native_bodies_attempted": true,
+        "semantics": "build/IroCounterLoop-semantic-review.json",
+        "emulation": "build/IroCounterLoop-emulation-results.json",
+        "membership": "build/IroCounterLoop-full-image-audit.json",
+        "mac_checklist": "build/IroCounterLoop-Mac-checklist.json",
+        "alias_policy": "build/IroCounterLoop-alias-policy.json",
+        "encoding": {
+          "cp932": true,
+          "repository_checker": "tools/check_sjis.py absent; strict CP932 encoding passed"
+        },
+        "no_active_source_or_config_edits": true,
+        "source_text": "/* Native IroCounterLoop.c; private packed Windows records. */\ntypedef unsigned char U8;\ntypedef unsigned short U16;\ntypedef unsigned int U32;\ntypedef struct Pair { U32 lo,hi; } Pair;\ntypedef union R R;\n#pragma pack(push,2)\nunion R {\n struct {char pad[0xe]; Pair value;} Q0xe;\n struct {char pad[0x10]; Pair value;} Q0x10;\n struct {char pad[0x18]; Pair value;} Q0x18;\n struct {char pad[0x36]; Pair value;} Q0x36;\n struct {char pad[2]; R* value;} P2;\n struct {char pad[4]; R* value;} P4;\n struct {char pad[6]; R* value;} P6;\n struct {char pad[8]; R* value;} P8;\n struct {char pad[0xa]; R* value;} P0xa;\n struct {char pad[0xe]; R* value;} P0xe;\n struct {char pad[0x10]; R* value;} P0x10;\n struct {char pad[0x14]; R* value;} P0x14;\n struct {char pad[0x16]; R* value;} P0x16;\n struct {char pad[0x1a]; R* value;} P0x1a;\n struct {char pad[0x1c]; R* value;} P0x1c;\n struct {char pad[0x1e]; R* value;} P0x1e;\n struct {char pad[0x20]; R* value;} P0x20;\n struct {char pad[0x24]; R* value;} P0x24;\n struct {char pad[0x2a]; R* value;} P0x2a;\n struct {char pad[0x2c]; R* value;} P0x2c;\n struct {char pad[0x2e]; R* value;} P0x2e;\n struct {char pad[0x30]; R* value;} P0x30;\n struct {char pad[0x32]; R* value;} P0x32;\n struct {char pad[0x3e]; R* value;} P0x3e;\n struct {char pad[0x42]; R* value;} P0x42;\n struct {char pad[0x6a]; R* value;} P0x6a;\n struct {char pad[4]; int value;} I4;\n struct {char pad[0xa]; int value;} I0xa;\n struct {char pad[0x16]; int value;} I0x16;\n struct {char pad[0x24]; int value;} I0x24;\n struct { U32 value;} U0;\n struct {char pad[2]; U32 value;} U2;\n struct {char pad[0xa]; U32 value;} U0xa;\n struct { U8 value;} B0;\n struct {char pad[2]; U8 value;} B2;\n struct {char pad[0xd]; U8 value;} B0xd;\n struct {char pad[0x2e]; U8 value;} B0x2e;\n struct {char pad[0x32]; U8 value;} B0x32;\n struct {char pad[0x34]; U8 value;} B0x34;\n struct { U16 value;} W0;\n};\n#pragma pack(pop)\n#define Q(p,o) ((p)->Q##o.value)\n#define P(p,o) ((p)->P##o.value)\n#define I(p,o) ((p)->I##o.value)\n#define U(p,o) ((p)->U##o.value)\n#define B(p,o) ((p)->B##o.value)\n#define W(p,o) ((p)->W##o.value)\n#include <string.h>\nextern Pair native_one,native_zero;\nextern U8 native_rotation_option,native_loop_option;\nextern U32 native_linear_index;\nextern R native_int_type;\nextern void fn_0045a250(const char*,int),fn_005ed4c0(const char*,...);\nextern void fn_005c3330(R*),fn_005c3060(R*),fn_005c3130(R*),fn_005c3210(R*,R*),fn_005a9d80(void),fn_005be430(void),fn_005c6f70(R*),fn_0061d980(void),fn_005bfb20(U32),fn_005c0470(R*,int);\nextern U8 fn_004d9440(Pair,Pair),fn_004d9710(Pair,Pair),fn_005b07f0(R*),fn_00453150(R*),fn_005bfe10(R*,R*,int);\nextern R *fn_005aeed0(R*,R*),*fn_005acf30(R*,void*),*fn_005a9cc0(void),*fn_005be150(void),*fn_005bd630(int),*fn_005c6a60(R*,R*,R*),*fn_004c5470(int),*fn_005ab970(Pair,R*);\nextern void fn_005ad280(void*),fn_005ad1e0(R*,R*,void*),fn_005ad440(R*,R*,R*),fn_005ad400(R*,R*,R*),fn_005ae7b0(R*);\nU8 IRO_RotateLoop(R *loop)\n{\n R *first,*last,*back,*body,*linear,*label,*node,*item; R *list[2]; U8 changed=0;\n fn_005c3330(loop); first=P(loop,0x10);last=P(loop,0x14);\n if(first==last && !(U(loop,0)&0x200000)) {\n  if(!native_rotation_option || (B(loop,0x34) && fn_004d9710(Q(loop,0x36),native_zero))) {\n   fn_005c3060(loop);back=P(loop,0x1c);\n   if(back && B(P(back,0x14),0)==8) {\n    body=P(loop,0x20);\n    if(P(back,0x30)==body && body!=P(loop,0x10)) {\n     linear=P(back,0x14);item=fn_005aeed0(P(linear,0x2a),linear);\n     fn_005ad280(list);fn_005ad1e0(P(item,0x3e),P(loop,0x24),list);\n     fn_005acf30(P(loop,0x24),list);fn_005ad440(list[0],list[1],P(back,0x14));\n     B(P(back,0x14),0)=B(P(P(loop,0x10),0x14),0)==10?11:10;\n     label=fn_005a9cc0();P(P(back,0x14),0x2a)=label;P(P(back,0x14),0x2e)=list[1];\n     node=fn_005be150();linear=fn_005bd630(13);I(linear,0xa)=native_linear_index++;P(linear,0x3e)=0;P(linear,0x2a)=label;U(linear,2)|=1;P(label,4)=node;\n     P(node,0x10)=P(node,0x14)=linear;P(linear,0x3e)=P(P(P(loop,0x10),0x14),0x3e);P(P(P(loop,0x10),0x14),0x3e)=linear;\n     P(node,0x30)=P(P(loop,0x10),0x30);P(P(loop,0x10),0x30)=node;\n     P(loop,0x1c)=fn_005c6a60(loop,P(back,0x30),back);if(P(loop,0x1c))changed=1;\n     P(loop,0x10)=P(loop,0x20);\n    }\n   }\n  }\n }\n if(changed)fn_005be430();return changed;\n}\n",
+        "scope": "Separate reviewed candidate with unproved physical source filename; not mapped into CounterLoop TU."
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 5,
+        "attempted_members": 5,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All5 identified native members reviewed,8 compiler profiles and1500 bounded native-instruction cases. Mac MarkAll remains unlocated; rotation candidate separately attempted but original source filename unproved. Await normal-project confirmation."
+      },
+      "integration_review": {
+        "legacy": "No legacy source or canonical collision; only native address discovery aliases.",
+        "data": "All emitted allocations exact; BitVector.h is a shared pooled literal, not exclusive ownership. Strict original object metadata unavailable, so complete_sources remains false.",
+        "normal_validation": "Normal project791/1726 exact; all5 body bytes and relocation offset/kind/address/addend records equal bounded-execution candidate. All emitted data allocations exact; original membership still unproved."
       }
     }
   },

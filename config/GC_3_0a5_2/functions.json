@@ -20751,5 +20751,60 @@
       "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
       "unresolved_indirect_flow": false
     }
+  },
+  {
+    "name": "IRO_SetCounterLoopFlags",
+    "address": "0x63dbd0",
+    "size": 730,
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+    "identity_evidence": "Ordinary Mac symbols plus native loop semantics, filename/assertion, caller and seam review.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable native CFG and whole-image scope audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_TransformCounterLoop",
+    "address": "0x63deb0",
+    "size": 576,
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+    "identity_evidence": "Ordinary Mac symbols plus native loop semantics, filename/assertion, caller and seam review.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable native CFG and whole-image scope audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_AdjustCounterLoopsForLoopDepth",
+    "address": "0x63e0f0",
+    "size": 329,
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+    "identity_evidence": "Ordinary Mac symbols plus native loop semantics, filename/assertion, caller and seam review.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable native CFG and whole-image scope audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsLoopCounterLoop",
+    "address": "0x63e240",
+    "size": 272,
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+    "identity_evidence": "Ordinary Mac symbols plus native loop semantics, filename/assertion, caller and seam review.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable native CFG and whole-image scope audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_MarkPossibleCounterLoop",
+    "address": "0x63e350",
+    "size": 209,
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
+    "identity_evidence": "Ordinary Mac symbols plus native loop semantics, filename/assertion, caller and seam review.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable native CFG and whole-image scope audit",
+      "unresolved_indirect_flow": false
+    }
   }
 ]

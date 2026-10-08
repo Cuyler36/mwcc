@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 238 source files build, 1,721 candidate functions are
-mapped, and 789 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 239 source files build, 1,726 candidate functions are
+mapped, and 791 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -57,6 +57,11 @@ twelve exact matches. Three additional prefix candidates were attempted and
 preserved separately because their physical source ownership is unproven.
 Legacy helpers with changed signatures or layouts remain provisional. Generated
 switch data still has unresolved addresses; these bodies remain nonmatching.
+
+IroCounterLoop has all five identified Windows bodies reconstructed, with two
+exact matches. All five passed 300 bounded instruction comparisons each, and
+460 bytes of data match. The Mac MarkAll helper remains unlocated; the separately
+reviewed rotation function retains unproven source ownership.
 
 Six native bit-vector operations match exactly: copy, copy-and-change detection,
 initialize, union, intersection, and empty-intersection testing. Their names use

@@ -2914,5 +2914,25 @@
   "check_register_value_range": {
     "name": "fn_00575330",
     "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
+  },
+  "fn_0063dbd0": {
+    "name": "IRO_SetCounterLoopFlags",
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+  },
+  "fn_0063deb0": {
+    "name": "IRO_TransformCounterLoop",
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+  },
+  "fn_0063e0f0": {
+    "name": "IRO_AdjustCounterLoopsForLoopDepth",
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+  },
+  "fn_0063e240": {
+    "name": "IsLoopCounterLoop",
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
+  },
+  "fn_0063e350": {
+    "name": "IRO_MarkPossibleCounterLoop",
+    "source": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c"
   }
 }

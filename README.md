@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 240 source files build, 1,846 candidate functions are
-mapped, and 830 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 241 source files build, 1,870 candidate functions are
+mapped, and 844 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -62,6 +62,12 @@ IroCounterLoop has all five identified Windows bodies reconstructed, with two
 exact matches. All five passed 300 bounded instruction comparisons each, and
 460 bytes of data match. The Mac MarkAll helper remains unlocated; the separately
 reviewed rotation function retains unproven source ownership.
+
+Alias has all 24 supported main-cluster functions attempted, with 14 exact
+matches. Each body passes 250 bounded native instruction comparisons, including
+recursive alias operations. Its initialized data and BSS match; one switch table
+remains unresolved. An additional exact prefix helper stays separate until its
+physical source ownership is established.
 
 Six native bit-vector operations match exactly: copy, copy-and-change detection,
 initialize, union, intersection, and empty-intersection testing. Their names use
@@ -133,7 +139,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 42 original-only TU views to objdiff. The twenty
+map. It currently adds 41 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

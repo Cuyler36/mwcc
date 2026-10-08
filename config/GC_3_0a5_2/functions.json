@@ -20449,6 +20449,270 @@
     }
   },
   {
+    "name": "fn_0059fa20",
+    "address": "0x59fa20",
+    "size": 892,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059fda0",
+    "address": "0x59fda0",
+    "size": 308,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059fee0",
+    "address": "0x59fee0",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059ffa0",
+    "address": "0x59ffa0",
+    "size": 39,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059ffd0",
+    "address": "0x59ffd0",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0010",
+    "address": "0x5a0010",
+    "size": 34,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0040",
+    "address": "0x5a0040",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0060",
+    "address": "0x5a0060",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a00c0",
+    "address": "0x5a00c0",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a00e0",
+    "address": "0x5a00e0",
+    "size": 102,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0150",
+    "address": "0x5a0150",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0170",
+    "address": "0x5a0170",
+    "size": 493,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0360",
+    "address": "0x5a0360",
+    "size": 11,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0370",
+    "address": "0x5a0370",
+    "size": 219,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0450",
+    "address": "0x5a0450",
+    "size": 102,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a04c0",
+    "address": "0x5a04c0",
+    "size": 169,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0570",
+    "address": "0x5a0570",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a05d0",
+    "address": "0x5a05d0",
+    "size": 855,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize_aliases",
+    "address": "0x5a0930",
+    "size": 592,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0b80",
+    "address": "0x5a0b80",
+    "size": 294,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0cb0",
+    "address": "0x5a0cb0",
+    "size": 224,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0d90",
+    "address": "0x5a0d90",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0de0",
+    "address": "0x5a0de0",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_safe_const",
+    "address": "0x5a0e00",
+    "size": 95,
+    "source": "src/GC_3_0a5_2/backend/Alias.c",
+    "identity_evidence": "Native CFG/semantics and Alias.c assertions; supplied CSV confirms initialize_aliases and is_safe_const. Unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CCallGraph_RemoveDeadNodes",
     "address": "0x5a0e60",
     "size": 152,

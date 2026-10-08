@@ -241,7 +241,8 @@
     "src/GC_3_0a5_2/backend/Registers.c",
     "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
     "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
-    "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+    "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "src/GC_3_0a5_2/backend/Alias.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3820,6 +3821,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/Alias.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4652,7 +4671,21 @@
     "src/GC_3_0a5_2/frontend/CPrepLexer/lexer_reconfig",
     "src/GC_3_0a5_2/frontend/CPrepLexer/lexer_cleanup",
     "src/GC_3_0a5_2/frontend/CPrepLexer/lexer_unload",
-    "src/GC_3_0a5_2/frontend/CPrepLexer/lexer_load"
+    "src/GC_3_0a5_2/frontend/CPrepLexer/lexer_load",
+    "src/GC_3_0a5_2/backend/Alias/fn_0059ffd0",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0010",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0040",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0060",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a00c0",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a00e0",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0150",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0360",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0370",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0450",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a04c0",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0570",
+    "src/GC_3_0a5_2/backend/Alias/fn_005a0de0",
+    "src/GC_3_0a5_2/backend/Alias/is_safe_const"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -7827,6 +7860,65 @@
       "_fn_00699a2d": "0x699a2d",
       "_fn_007106b0": "0x7106b0",
       "_CMach_CalcIntMonadic": "0x4e4480"
+    },
+    "src/GC_3_0a5_2/backend/Alias.c": {
+      "_filename": "0x6ad63c",
+      "_aliasList": "0x6e9108",
+      "_aliasWorstCase": "0x715c54",
+      "_aliasSequence": "0x7100b4",
+      "_nbytes_loaded_or_stored_by": "0x58b4c0",
+      "_fn_0063d460": "0x63d460",
+      "_lalloc": "0x46c660",
+      "_memclrw": "0x46c400",
+      "_CError_Internal": "0x45a250",
+      "_fn_0059fa20": "0x59fa20",
+      "_fn_0059fda0": "0x59fda0",
+      "_fn_0059fee0": "0x59fee0",
+      "_fn_0059ffa0": "0x59ffa0",
+      "_fn_0059ffd0": "0x59ffd0",
+      "_fn_005a0010": "0x5a0010",
+      "_fn_005a0040": "0x5a0040",
+      "_fn_005a0060": "0x5a0060",
+      "_fn_005a00c0": "0x5a00c0",
+      "_fn_005a00e0": "0x5a00e0",
+      "_fn_005a0150": "0x5a0150",
+      "_fn_005a0170": "0x5a0170",
+      "_fn_005a0360": "0x5a0360",
+      "_fn_005a0370": "0x5a0370",
+      "_fn_005a0450": "0x5a0450",
+      "_fn_005a04c0": "0x5a04c0",
+      "_fn_005a0570": "0x5a0570",
+      "_fn_005a05d0": "0x5a05d0",
+      "_initialize_aliases": "0x5a0930",
+      "_fn_005a0b80": "0x5a0b80",
+      "_fn_005a0cb0": "0x5a0cb0",
+      "_fn_005a0d90": "0x5a0d90",
+      "_fn_005a0de0": "0x5a0de0",
+      "_is_safe_const": "0x5a0e00",
+      "_fn_00455840": "0x455840",
+      "_fn_004531a0": "0x4531a0",
+      "_fn_00542360": "0x542360",
+      "_fn_00453290": "0x453290",
+      "_fn_004533f0": "0x4533f0",
+      "_fn_00599360": "0x599360",
+      "_alias_hash": "0x6e7120",
+      "_n_gathered_aliases": "0x6e90fc",
+      "_n_aliases": "0x6e9100",
+      "_temp_alias_links": "0x6e9104",
+      "_aliasScratch": "0x6e910c",
+      "_unknownAlias": "0x7107fc",
+      "_localWorstCase": "0x710070",
+      "_worst_case_obj": "0x70ff00",
+      "_worst_case_memory_type": "0x6ad620",
+      "_aliasVirtualType": "0x6ad62e",
+      "_alias_external_option": "0x725e6e",
+      "_worst_case_name": "0x6ad644",
+      "_GetHashNameNode": "0x46d1d0",
+      "_CParser_GetUniqueName": "0x455e00",
+      "_native_char_type": "0x699c24",
+      "_bitvectorinitialize": "0x63d3b0",
+      "_bitvectorintersectionisempty": "0x63d1f0",
+      "_Registers_ClassForType": "0x579560"
     }
   },
   "original_source_units": {
@@ -7852,6 +7944,7 @@
     "Registers.c": "src/GC_3_0a5_2/backend/Registers.c",
     "InlineAsmPPC.c": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
     "IroCounterLoop.c": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
-    "CPrepLexer.c": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+    "CPrepLexer.c": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+    "Alias.c": "src/GC_3_0a5_2/backend/Alias.c"
   }
 }

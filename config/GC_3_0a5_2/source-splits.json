@@ -3418,5 +3418,101 @@
   "fn_004d7010": {
     "name": "lexer_scan_hexfloat",
     "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+  },
+  "fn_0059fa20": {
+    "name": "fn_0059fa20",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_0059fda0": {
+    "name": "fn_0059fda0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_0059fee0": {
+    "name": "fn_0059fee0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_0059ffa0": {
+    "name": "fn_0059ffa0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_0059ffd0": {
+    "name": "fn_0059ffd0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0010": {
+    "name": "fn_005a0010",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0040": {
+    "name": "fn_005a0040",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0060": {
+    "name": "fn_005a0060",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a00c0": {
+    "name": "fn_005a00c0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a00e0": {
+    "name": "fn_005a00e0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0150": {
+    "name": "fn_005a0150",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0170": {
+    "name": "fn_005a0170",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0360": {
+    "name": "fn_005a0360",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0370": {
+    "name": "fn_005a0370",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0450": {
+    "name": "fn_005a0450",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a04c0": {
+    "name": "fn_005a04c0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0570": {
+    "name": "fn_005a0570",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a05d0": {
+    "name": "fn_005a05d0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0930": {
+    "name": "initialize_aliases",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0b80": {
+    "name": "fn_005a0b80",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0cb0": {
+    "name": "fn_005a0cb0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0d90": {
+    "name": "fn_005a0d90",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0de0": {
+    "name": "fn_005a0de0",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_005a0e00": {
+    "name": "is_safe_const",
+    "source": "src/GC_3_0a5_2/backend/Alias.c"
   }
 }

@@ -669,6 +669,308 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/Alias.c",
+      "original_filename": "Alias.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_0059fa20",
+          "address": "0x0059fa20",
+          "size": 892,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059fac3",
+            "0x0059fc4d",
+            "0x0059fd2a",
+            "0x0059fd7a",
+            "0x0059fd90"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "fn_0059fda0",
+          "address": "0x59fda0",
+          "size": 308,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0059fee0",
+          "address": "0x0059fee0",
+          "size": 178,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059ff4a",
+            "0x0059ff82"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "fn_0059ffa0",
+          "address": "0x59ffa0",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0059ffd0",
+          "address": "0x59ffd0",
+          "size": 59,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0010",
+          "address": "0x5a0010",
+          "size": 34,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0040",
+          "address": "0x5a0040",
+          "size": 21,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0060",
+          "address": "0x5a0060",
+          "size": 86,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a00c0",
+          "address": "0x5a00c0",
+          "size": 19,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a00e0",
+          "address": "0x5a00e0",
+          "size": 102,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0150",
+          "address": "0x5a0150",
+          "size": 22,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0170",
+          "address": "0x005a0170",
+          "size": 493,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005a02b2"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "fn_005a0360",
+          "address": "0x5a0360",
+          "size": 11,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0370",
+          "address": "0x5a0370",
+          "size": 219,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0450",
+          "address": "0x005a0450",
+          "size": 102,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005a04ad"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "fn_005a04c0",
+          "address": "0x5a04c0",
+          "size": 169,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0570",
+          "address": "0x5a0570",
+          "size": 85,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a05d0",
+          "address": "0x005a05d0",
+          "size": 855,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005a079a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "initialize_aliases",
+          "address": "0x5a0930",
+          "size": 592,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0b80",
+          "address": "0x005a0b80",
+          "size": 294,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005a0c9a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c"
+        },
+        {
+          "name": "fn_005a0cb0",
+          "address": "0x5a0cb0",
+          "size": 224,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0d90",
+          "address": "0x5a0d90",
+          "size": 76,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0de0",
+          "address": "0x5a0de0",
+          "size": 22,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "is_safe_const",
+          "address": "0x5a0e00",
+          "size": 95,
+          "compiled_source": "src/GC_3_0a5_2/backend/Alias.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG plus assertion, state-reference and neighboring-source audit",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
       "original_filename": "BE_symbol.c",
       "evidence": [
@@ -11919,103 +12221,6 @@
       "compiled": true,
       "membership_complete": false,
       "status": "attempted_incomplete"
-    },
-    {
-      "source": "src/GC_3_0a5_2/frontend/Alias.c",
-      "original_filename": "Alias.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_0059fa20",
-          "address": "0x0059fa20",
-          "size": 892,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059fac3",
-            "0x0059fc4d",
-            "0x0059fd2a",
-            "0x0059fd7a",
-            "0x0059fd90"
-          ]
-        },
-        {
-          "name": "FUN_0059fee0",
-          "address": "0x0059fee0",
-          "size": 178,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059ff4a",
-            "0x0059ff82"
-          ]
-        },
-        {
-          "name": "FUN_005a0170",
-          "address": "0x005a0170",
-          "size": 493,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005a02b2"
-          ]
-        },
-        {
-          "name": "FUN_005a0450",
-          "address": "0x005a0450",
-          "size": 102,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005a04ad"
-          ]
-        },
-        {
-          "name": "FUN_005a05d0",
-          "address": "0x005a05d0",
-          "size": 855,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005a079a"
-          ]
-        },
-        {
-          "name": "FUN_005a0b80",
-          "address": "0x005a0b80",
-          "size": 294,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005a0c9a"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/BuildAgentClient.c",
@@ -174397,6 +174602,2595 @@
         "all_owned_bss_symbol_sizes_equal": true,
         "checked_functions": 121,
         "fully_resolved_functions": 98,
+        "objdiff_cli_success": true,
+        "image_partition_exact": true
+      }
+    },
+    "src/GC_3_0a5_2/backend/Alias.c": {
+      "source_candidate": "build\\Alias\\final24-native.c",
+      "intended_source": "src/GC_3_0a5_2/backend/Alias.c",
+      "sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+      "frozen": true,
+      "identified_native_functions": 24,
+      "native_code_bytes": 4997,
+      "strict_exact_functions": [
+        "fn_0059ffd0",
+        "fn_005a0010",
+        "fn_005a0040",
+        "fn_005a0060",
+        "fn_005a00c0",
+        "fn_005a00e0",
+        "fn_005a0150",
+        "fn_005a0360",
+        "fn_005a0370",
+        "fn_005a0450",
+        "fn_005a04c0",
+        "fn_005a0570",
+        "fn_005a0de0",
+        "is_safe_const"
+      ],
+      "strict_exact_bytes": 1046,
+      "source_filename_proof": "Alias.c at0x6ad63c;11 assertion calls in6 main members",
+      "selected_profile": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "compiler": "cw94",
+      "profiles": "build/Alias/final24-profiles.json",
+      "rows": "build/Alias/final24-rows.json",
+      "bindings": "build/Alias/final24-bindings.json",
+      "data": {
+        "complete": false,
+        "exact_allocated_bytes": 8346,
+        "initialized_bytes": 49,
+        "bss_bytes": 8285,
+        "exact_switch_bytes": 12,
+        "unresolved_switch_bytes": 36,
+        "evidence": "build/Alias/final24-owned-data.json"
+      },
+      "membership_complete": false,
+      "all_identified_native_bodies_attempted": true,
+      "semantics": "build/Alias/final24-semantic-review.json",
+      "emulation": "build/Alias/final24-execution-validation.json",
+      "membership": "build/Alias/final24-membership-audit.json",
+      "mac_checklist": "build/Alias/Mac-checklist.json",
+      "alias_policy": "build/Alias/alias-policy.json",
+      "held_prefix": {
+        "source": "build/Alias/full25-native.c",
+        "standalone_body": "build/Alias/prefix59f9f0-native.c.txt",
+        "profiles": "build/Alias/full25-profiles.json",
+        "strict_exact": true,
+        "included_in_main": false,
+        "source_text": "void update_all_alias_values(void) {NativeAlias *a;for(a=aliasList;a;a=a->next)fn_00599360(a,0);}\n",
+        "scope": "Separately attempted native helper; physical source ownership remains unproved, so no active mapping."
+      },
+      "encoding": {
+        "cp932": true,
+        "repository_checker": "tools/check_sjis.py absent; strict CP932 encoding passed"
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 24,
+        "attempted_members": 24,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "condition": "All24 supported main bodies reviewed and attempted;normal project code,data,common sizes and relocations equal final candidate. All6000 refreshed instruction cases pass,plus250 supplemental all-kind-pair checks. Eight compiler profiles and full-image partition/objdiff CLI pass. Unproved original membership and36 unresolved switch bytes remain recorded."
+      },
+      "source": "src/GC_3_0a5_2/backend/Alias.c",
+      "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 24,
+      "strict_exact_count": 14,
+      "data_complete": false,
+      "review_evidence": {
+        "semantic_review": {
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+          "all_identified_members_attempted": true,
+          "identified": 24,
+          "reviewed": 24,
+          "abi": {
+            "Alias_size": 46,
+            "Edge_size": 16,
+            "Object_size": 96,
+            "Type_size": 14,
+            "PCode_alias_offset": 28,
+            "Alias_fields": {
+              "next": 0,
+              "hashNext": 4,
+              "incoming": 8,
+              "outgoing": 12,
+              "object": 16,
+              "offset": 20,
+              "size": 24,
+              "sequence": 28,
+              "value": 32,
+              "bits": 36,
+              "index": 40,
+              "kind": 44
+            },
+            "Edge_fields": {
+              "nextOutgoing": 0,
+              "nextIncoming": 4,
+              "owner": 8,
+              "target": 12
+            },
+            "predicates": "Unsigned8 result in AL; pointers in EAX; all cdecl and callee-save checks passed."
+          },
+          "functions": [
+            {
+              "name": "fn_0059fa20",
+              "address": "0x59fa20",
+              "strict_exact": false,
+              "review": "Invalidates alias values by whole/partial/union kind. Bit marking, ordered update calls, incoming/outgoing walks, signed interval overlap with x86 wrapping additions, and all native assertions retained. Unknown kind falls through. Null assertion is nonreturning."
+            },
+            {
+              "name": "fn_0059fda0",
+              "address": "0x59fda0",
+              "strict_exact": false,
+              "review": "Three live arguments plus an unused fourth slot present in native callers. Marks a union, then invalidates other virtual/ordinary members according to the source object virtual type. Returns void; native EAX incidental values are unused."
+            },
+            {
+              "name": "fn_0059fee0",
+              "address": "0x59fee0",
+              "strict_exact": false,
+              "review": "Visits whole-object outgoing partial aliases, marks and invalidates each once, asserts kind1 and single whole owner. Test graph preserves these invariants."
+            },
+            {
+              "name": "fn_0059ffa0",
+              "address": "0x59ffa0",
+              "strict_exact": false,
+              "review": "Walks alias list, writes aliasSequence, increments with native32-bit wrapping, and clears cached value. Nonmatch consists of loop alignment padding in configured CW94."
+            },
+            {
+              "name": "fn_0059ffd0",
+              "address": "0x59ffd0",
+              "strict_exact": true,
+              "review": "AL predicate for a PCode alias exactly covering the supplied object and load/store width. Corrected saved int declaration to UInt8 after inspecting native mov/xor AL returns."
+            },
+            {
+              "name": "fn_005a0010",
+              "address": "0x5a0010",
+              "strict_exact": true,
+              "review": "AL predicate, not void: makes/looks up a whole object alias and calls pair overlap. Caller0x6278b8 tests AL. Original return restored."
+            },
+            {
+              "name": "fn_005a0040",
+              "address": "0x5a0040",
+              "strict_exact": true,
+              "review": "AL predicate for PCode alias versus worst-case alias. Caller0x62e3b3 tests AL. Original return restored."
+            },
+            {
+              "name": "fn_005a0060",
+              "address": "0x5a0060",
+              "strict_exact": true,
+              "review": "AL unique-alias predicate after overlap, null/identity/kind checks and matching memory width. Corrected saved int declaration to UInt8."
+            },
+            {
+              "name": "fn_005a00c0",
+              "address": "0x5a00c0",
+              "strict_exact": true,
+              "review": "AL pair overlap wrapper for PCode and Alias. Caller0x627ee1 tests AL. Original return restored."
+            },
+            {
+              "name": "fn_005a00e0",
+              "address": "0x5a00e0",
+              "strict_exact": true,
+              "review": "AL unique PCode-pair predicate; both load/store widths checked in native order. Corrected saved int declaration; local ordering now produces strict match."
+            },
+            {
+              "name": "fn_005a0150",
+              "address": "0x5a0150",
+              "strict_exact": true,
+              "review": "AL overlap wrapper for two PCode aliases. Caller0x599c79 tests AL. Original return restored."
+            },
+            {
+              "name": "fn_005a0170",
+              "address": "0x5a0170",
+              "strict_exact": false,
+              "review": "AL overlap predicate, virtual-type cross-object exception, all nine kind-pair cases, identical-pointer shortcuts, intersection emptiness, and signed interval overlap. Unknown kind asserts and native emitted continuation returns1.36-byte switch remains unbound for strict matching; compiled switch executed with independently relocated local table during validation."
+            },
+            {
+              "name": "fn_005a0360",
+              "address": "0x5a0360",
+              "strict_exact": true,
+              "review": "Calls external PCode alias discovery0x63d460 then local bitset gathering0x5a0370. Void/no arguments."
+            },
+            {
+              "name": "fn_005a0370",
+              "address": "0x5a0370",
+              "strict_exact": true,
+              "review": "Rebuilds union membership vectors and scratch storage only when gathered count differs. Includes whole aliases and their direct partial children. Count ceiling/word-rounding follows native32-bit operations."
+            },
+            {
+              "name": "fn_005a0450",
+              "address": "0x5a0450",
+              "strict_exact": true,
+              "review": "Whole-alias fallback when zero requested size or original alias already covers full object; otherwise applies wrapped displacement. Native null-result assertion retained."
+            },
+            {
+              "name": "fn_005a04c0",
+              "address": "0x5a04c0",
+              "strict_exact": true,
+              "review": "Adds directed edge once, recursively flattens union targets, normalizes partial target to whole when owner is a union, allocates/clears16-byte edge and links both lists in native order."
+            },
+            {
+              "name": "fn_005a0570",
+              "address": "0x5a0570",
+              "strict_exact": true,
+              "review": "Union construction: identical alias shortcut, same-object nonunion whole alias shortcut, otherwise add both to global worst case and return it."
+            },
+            {
+              "name": "fn_005a05d0",
+              "address": "0x5a05d0",
+              "strict_exact": false,
+              "review": "Lookup/create with signed16-bit hash-name field and modulo2039 unsigned32-bit product, normalized zero-size request, whole/partial creation46 bytes, recursive whole lookup, edge creation, safe-const classification, virtual/aliased-local worst case choice, and wrapped range-end bound check."
+            },
+            {
+              "name": "initialize_aliases",
+              "address": "0x5a0930",
+              "strict_exact": false,
+              "review": "Clears96-byte sentinel object, initializes real type/name, option/list/counters/hash2039 entries, allocates three kind2 sets, links worst-case sentinel into the two worst-case sets, and gathers membership bits. Does not reset external aliasSequence."
+            },
+            {
+              "name": "fn_005a0b80",
+              "address": "0x5a0b80",
+              "strict_exact": false,
+              "review": "Recursively adds aliased locals/virtual or datatype1 aliases to worst case subject to safe-const checks. Asserts invalid alias kind; source retains same branches."
+            },
+            {
+              "name": "fn_005a0cb0",
+              "address": "0x5a0cb0",
+              "strict_exact": false,
+              "review": "Creates96-byte virtual object for pointer/array source types; preserves native qualifier and unsafe flags, unique name, virtual type, offset0x7fffff/size1 alias and optional worst-case linkage. The native kind6 branch remains though the current entry condition limits kinds12/13."
+            },
+            {
+              "name": "fn_005a0d90",
+              "address": "0x5a0d90",
+              "strict_exact": false,
+              "review": "AL union/virtual-worst-case predicate. Corrected saved int return to UInt8. Original redundant virtual-type Boolean materialization differs in code generation, defined behavior agrees."
+            },
+            {
+              "name": "fn_005a0de0",
+              "address": "0x5a0de0",
+              "strict_exact": true,
+              "review": "AL virtual-type identity predicate. Object-bearing alias precondition; union with null object is outside valid native domain."
+            },
+            {
+              "name": "is_safe_const",
+              "address": "0x5a0e00",
+              "strict_exact": true,
+              "review": "Unwraps array types, classifies the remaining type, applies const-object predicate and conditional class virtual check. Native Boolean result normalization and short circuit order preserved; now strict exact after branch layout refinement."
+            }
+          ],
+          "limits": "Semantic review plus bounded native-instruction comparisons with modeled external helper contracts; not unrestricted formal or full compiler proof. Invalid/cyclic alias graphs and allocation failure do not define supported execution. Native CError_Internal longjmps and is modeled as terminal."
+        },
+        "instruction_validation": {
+          "functions": [
+            {
+              "name": "fn_0059fa20",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_0059fda0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_0059fee0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_0059ffa0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_0059ffd0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0010",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0040",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0060",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a00c0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a00e0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0150",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0170",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0360",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0370",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0450",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a04c0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0570",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a05d0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "initialize_aliases",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0b80",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0cb0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0d90",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "fn_005a0de0",
+              "cases": 250,
+              "all_passed": true
+            },
+            {
+              "name": "is_safe_const",
+              "cases": 250,
+              "all_passed": true
+            }
+          ],
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+          "scope": "Actual original versus compiled x86 instructions, including sibling and recursive Alias bodies. Deterministic external helpers; valid finite alias graphs, whole/part/union relations, modulo2039 caches, overlap offsets, virtual object types, qualifiers, load/store widths and initialization. AL or EAX return, callee-save/stack ABI, helper events and observable memory checked. CError_Internal stops as native longjmp. Bounded evidence, not formal or full compiler equivalence."
+        },
+        "membership": {
+          "main_candidates": [
+            {
+              "name": "fn_0059fa20",
+              "address": "0x59fa20",
+              "size": 892,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059fda0",
+              "address": "0x59fda0",
+              "size": 308,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059fee0",
+              "address": "0x59fee0",
+              "size": 178,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059ffa0",
+              "address": "0x59ffa0",
+              "size": 39,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059ffd0",
+              "address": "0x59ffd0",
+              "size": 59,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0010",
+              "address": "0x5a0010",
+              "size": 34,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0040",
+              "address": "0x5a0040",
+              "size": 21,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0060",
+              "address": "0x5a0060",
+              "size": 86,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a00c0",
+              "address": "0x5a00c0",
+              "size": 19,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a00e0",
+              "address": "0x5a00e0",
+              "size": 102,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0150",
+              "address": "0x5a0150",
+              "size": 22,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0170",
+              "address": "0x5a0170",
+              "size": 493,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0360",
+              "address": "0x5a0360",
+              "size": 11,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0370",
+              "address": "0x5a0370",
+              "size": 219,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0450",
+              "address": "0x5a0450",
+              "size": 102,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a04c0",
+              "address": "0x5a04c0",
+              "size": 169,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0570",
+              "address": "0x5a0570",
+              "size": 85,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a05d0",
+              "address": "0x5a05d0",
+              "size": 855,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "initialize_aliases",
+              "address": "0x5a0930",
+              "size": 592,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0b80",
+              "address": "0x5a0b80",
+              "size": 294,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0cb0",
+              "address": "0x5a0cb0",
+              "size": 224,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0d90",
+              "address": "0x5a0d90",
+              "size": 76,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0de0",
+              "address": "0x5a0de0",
+              "size": 22,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "is_safe_const",
+              "address": "0x5a0e00",
+              "size": 95,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            }
+          ],
+          "state_and_filename_references": {
+            "0x715c54": [
+              {
+                "fixup": "0x4b9db5",
+                "function": "0x4b9ca0"
+              },
+              {
+                "fixup": "0x4ba115",
+                "function": "0x4b9ca0"
+              },
+              {
+                "fixup": "0x5a0046",
+                "function": "0x5a0040"
+              },
+              {
+                "fixup": "0x5a02e0",
+                "function": "0x5a0170"
+              },
+              {
+                "fixup": "0x5a05a5",
+                "function": "0x5a0570"
+              },
+              {
+                "fixup": "0x5a05b3",
+                "function": "0x5a0570"
+              },
+              {
+                "fixup": "0x5a05bf",
+                "function": "0x5a0570"
+              },
+              {
+                "fixup": "0x5a0769",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0778",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a08b7",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0aef",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0afe",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0c11",
+                "function": "0x5a0b80"
+              },
+              {
+                "fixup": "0x5a0c54",
+                "function": "0x5a0b80"
+              },
+              {
+                "fixup": "0x5a0d83",
+                "function": "0x5a0cb0"
+              },
+              {
+                "fixup": "0x5a0db2",
+                "function": "0x5a0d90"
+              },
+              {
+                "fixup": "0x628652",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x62868d",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x6286c1",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x6286e9",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x63d4cf",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d692",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d6b8",
+                "function": "0x63d6a0"
+              },
+              {
+                "fixup": "0x63d752",
+                "function": "0x63d6a0"
+              },
+              {
+                "fixup": "0x63d7b7",
+                "function": "0x63d6a0"
+              },
+              {
+                "fixup": "0x63d7c3",
+                "function": "0x63d6a0"
+              },
+              {
+                "fixup": "0x63d7cf",
+                "function": "0x63d6a0"
+              },
+              {
+                "fixup": "0x63d8b4",
+                "function": "0x63d800"
+              },
+              {
+                "fixup": "0x63d8c9",
+                "function": "0x63d800"
+              },
+              {
+                "fixup": "0x63d8d2",
+                "function": "0x63d800"
+              },
+              {
+                "fixup": "0x63d994",
+                "function": "0x63d800"
+              },
+              {
+                "fixup": "0x643d55",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x643d62",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x643da1",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x643f37",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x643f43",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x64400b",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x644096",
+                "function": "0x643cc0"
+              },
+              {
+                "fixup": "0x6442e3",
+                "function": "0x644130"
+              }
+            ],
+            "0x710070": [
+              {
+                "fixup": "0x56bfd0",
+                "function": "0x56bf40"
+              },
+              {
+                "fixup": "0x5a08d7",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0b5f",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b6e",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x62865e",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x628699",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x6286c9",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x6286f1",
+                "function": "0x628640"
+              },
+              {
+                "fixup": "0x63d4d5",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d583",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d682",
+                "function": "0x63d460"
+              }
+            ],
+            "0x7100b4": [
+              {
+                "fixup": "0x597814",
+                "function": "0x597790"
+              },
+              {
+                "fixup": "0x597b32",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597bb8",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597bc0",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597c56",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597cd9",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597ce1",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597f27",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597fa5",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x597fad",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x5980b1",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x598135",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x59813d",
+                "function": "0x597980"
+              },
+              {
+                "fixup": "0x598341",
+                "function": "0x598170"
+              },
+              {
+                "fixup": "0x5983c5",
+                "function": "0x598170"
+              },
+              {
+                "fixup": "0x5983cd",
+                "function": "0x598170"
+              },
+              {
+                "fixup": "0x598475",
+                "function": "0x598410"
+              },
+              {
+                "fixup": "0x5984f4",
+                "function": "0x598410"
+              },
+              {
+                "fixup": "0x5984fc",
+                "function": "0x598410"
+              },
+              {
+                "fixup": "0x5986d1",
+                "function": "0x598560"
+              },
+              {
+                "fixup": "0x598755",
+                "function": "0x598560"
+              },
+              {
+                "fixup": "0x59875d",
+                "function": "0x598560"
+              },
+              {
+                "fixup": "0x598932",
+                "function": "0x5987a0"
+              },
+              {
+                "fixup": "0x5989b5",
+                "function": "0x5987a0"
+              },
+              {
+                "fixup": "0x5989bd",
+                "function": "0x5987a0"
+              },
+              {
+                "fixup": "0x598bc0",
+                "function": "0x598b30"
+              },
+              {
+                "fixup": "0x598c57",
+                "function": "0x598b30"
+              },
+              {
+                "fixup": "0x598c64",
+                "function": "0x598b30"
+              },
+              {
+                "fixup": "0x5990e0",
+                "function": "0x599090"
+              },
+              {
+                "fixup": "0x59928e",
+                "function": "0x5991e0"
+              },
+              {
+                "fixup": "0x59930d",
+                "function": "0x5991e0"
+              },
+              {
+                "fixup": "0x599315",
+                "function": "0x5991e0"
+              },
+              {
+                "fixup": "0x599378",
+                "function": "0x599360"
+              },
+              {
+                "fixup": "0x5993d2",
+                "function": "0x599360"
+              },
+              {
+                "fixup": "0x5993db",
+                "function": "0x599360"
+              },
+              {
+                "fixup": "0x5993f4",
+                "function": "0x5993f0"
+              },
+              {
+                "fixup": "0x599483",
+                "function": "0x5993f0"
+              },
+              {
+                "fixup": "0x59948b",
+                "function": "0x5993f0"
+              },
+              {
+                "fixup": "0x59ffab",
+                "function": "0x59ffa0"
+              },
+              {
+                "fixup": "0x59ffb4",
+                "function": "0x59ffa0"
+              }
+            ],
+            "0x6e9108": [
+              {
+                "fixup": "0x59f9f3",
+                "function": "0x59f9f0"
+              },
+              {
+                "fixup": "0x59ffa2",
+                "function": "0x59ffa0"
+              },
+              {
+                "fixup": "0x5a0386",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a06b2",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a06ba",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a07e5",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a07ed",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a096f",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a73",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a7b",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0ac3",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0acb",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b33",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b3b",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e9100": [
+              {
+                "fixup": "0x59fa52",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59faf1",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x5a0287",
+                "function": "0x5a0170"
+              },
+              {
+                "fixup": "0x5a037b",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a039e",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a03c8",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a03e7",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a06a2",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a06ab",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a07d5",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a07de",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0983",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a63",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a6c",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0ab4",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0abd",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b23",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b2c",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e910c": [
+              {
+                "fixup": "0x59fa58",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fa66",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fa82",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fad1",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59faf7",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fb10",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fb50",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fb82",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fc62",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fcfb",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fd59",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x5a03bd",
+                "function": "0x5a0370"
+              }
+            ],
+            "0x6ad63c": [
+              {
+                "fixup": "0x59fabf",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fc49",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fd26",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fd76",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59fd8c",
+                "function": "0x59fa20"
+              },
+              {
+                "fixup": "0x59ff46",
+                "function": "0x59fee0"
+              },
+              {
+                "fixup": "0x59ff7e",
+                "function": "0x59fee0"
+              },
+              {
+                "fixup": "0x5a02ae",
+                "function": "0x5a0170"
+              },
+              {
+                "fixup": "0x5a04a9",
+                "function": "0x5a0450"
+              },
+              {
+                "fixup": "0x5a0796",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0c96",
+                "function": "0x5a0b80"
+              }
+            ],
+            "0x6e90fc": [
+              {
+                "fixup": "0x5a0375",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a03b2",
+                "function": "0x5a0370"
+              },
+              {
+                "fixup": "0x5a098e",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7120": [
+              {
+                "fixup": "0x5a063b",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0702",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a070c",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a0835",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a083f",
+                "function": "0x5a05d0"
+              },
+              {
+                "fixup": "0x5a09a0",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a00",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x70ff00": [
+              {
+                "fixup": "0x5a0934",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0941",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0ae9",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0b59",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x628632",
+                "function": "0x6285b0"
+              }
+            ],
+            "0x70ff10": [
+              {
+                "fixup": "0x5a0948",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x70ff02": [
+              {
+                "fixup": "0x5a0957",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x70ff0c": [
+              {
+                "fixup": "0x5a0962",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x725e6e": [
+              {
+                "fixup": "0x5a0968",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x63d494",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d640",
+                "function": "0x63d460"
+              }
+            ],
+            "0x6e9104": [
+              {
+                "fixup": "0x5a0979",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7124": [
+              {
+                "fixup": "0x5a09ab",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a0b",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7128": [
+              {
+                "fixup": "0x5a09b6",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a16",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e712c": [
+              {
+                "fixup": "0x5a09c1",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a21",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7130": [
+              {
+                "fixup": "0x5a09cc",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a2c",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7134": [
+              {
+                "fixup": "0x5a09d7",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a37",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e7138": [
+              {
+                "fixup": "0x5a09e2",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x5a0a42",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x6e713c": [
+              {
+                "fixup": "0x5a09f3",
+                "function": "0x5a0930"
+              }
+            ],
+            "0x7107fc": [
+              {
+                "fixup": "0x5a0a98",
+                "function": "0x5a0930"
+              },
+              {
+                "fixup": "0x63d575",
+                "function": "0x63d460"
+              },
+              {
+                "fixup": "0x63d673",
+                "function": "0x63d460"
+              }
+            ]
+          },
+          "callers": {
+            "0x5a0cb0": [
+              "0x46a4dd"
+            ],
+            "0x5a0d90": [
+              "0x4b9d89",
+              "0x4ba0e0",
+              "0x627ff6",
+              "0x62810e",
+              "0x6284a7",
+              "0x628513",
+              "0x6285f1",
+              "0x62a581",
+              "0x62df38",
+              "0x62e003"
+            ],
+            "0x5a0e00": [
+              "0x4c3fd3",
+              "0x575ec1",
+              "0x576360"
+            ],
+            "0x5a05d0": [
+              "0x56bfc5",
+              "0x570db7",
+              "0x58ca0f",
+              "0x58d569",
+              "0x5a001d",
+              "0x5a0479",
+              "0x5a0497",
+              "0x5a0508",
+              "0x5a0596",
+              "0x5a075e",
+              "0x5a07af",
+              "0x5a08ac",
+              "0x5a08cc",
+              "0x5a0af3",
+              "0x5a0b63",
+              "0x5a0c06",
+              "0x5a0c49",
+              "0x5a0d4a",
+              "0x6220ee",
+              "0x622378",
+              "0x6248a8",
+              "0x624dde",
+              "0x6280af",
+              "0x62815a",
+              "0x62824c",
+              "0x6284e7",
+              "0x628557",
+              "0x628587",
+              "0x636beb",
+              "0x636c74",
+              "0x63d794",
+              "0x6440bd",
+              "0x6441ce",
+              "0x6441ea",
+              "0x64421b",
+              "0x64422a",
+              "0x644241",
+              "0x6442d8",
+              "0x644307"
+            ],
+            "0x5a04c0": [
+              "0x56bfd4",
+              "0x5a04e7",
+              "0x5a05a9",
+              "0x5a05b7",
+              "0x5a076d",
+              "0x5a084a",
+              "0x5a08bb",
+              "0x5a08db",
+              "0x5a0b02",
+              "0x5a0b72",
+              "0x5a0c15",
+              "0x5a0c58",
+              "0x5a0d87",
+              "0x63d4d9",
+              "0x63d7d3",
+              "0x643d59",
+              "0x643f3b",
+              "0x64400f",
+              "0x64409a",
+              "0x6442e7"
+            ],
+            "0x5a0930": [
+              "0x5830aa"
+            ],
+            "0x5a0360": [
+              "0x596854",
+              "0x5976f8",
+              "0x599660",
+              "0x627089"
+            ],
+            "0x59fa20": [
+              "0x597ac7",
+              "0x597bef",
+              "0x597ec1",
+              "0x598539"
+            ],
+            "0x59ffa0": [
+              "0x5994b5"
+            ],
+            "0x5a0150": [
+              "0x599c79",
+              "0x599d09",
+              "0x599d2d",
+              "0x62e152",
+              "0x62e6c7",
+              "0x62e7b2",
+              "0x62e7d2"
+            ],
+            "0x59fee0": [
+              "0x59fa6e",
+              "0x59fe22",
+              "0x59fe8f"
+            ],
+            "0x59fda0": [
+              "0x59fad9",
+              "0x59fb89"
+            ],
+            "0x5a0170": [
+              "0x5a0029",
+              "0x5a004d",
+              "0x5a006f",
+              "0x5a00cb",
+              "0x5a00f1",
+              "0x5a015e"
+            ],
+            "0x5a0370": [
+              "0x5a0365",
+              "0x5a0b79"
+            ],
+            "0x5a0b80": [
+              "0x5a0bf3",
+              "0x63d49c",
+              "0x63d9d5",
+              "0x644310"
+            ],
+            "0x59ffd0": [
+              "0x6276e6",
+              "0x62791c",
+              "0x62803c",
+              "0x6281e9",
+              "0x628c97",
+              "0x629971",
+              "0x62a6e1"
+            ],
+            "0x5a0010": [
+              "0x6278b8",
+              "0x629b53",
+              "0x629e45",
+              "0x629ff8",
+              "0x62a179",
+              "0x62a4c3",
+              "0x62a5f9",
+              "0x62a670",
+              "0x62a8d2",
+              "0x62a9a6"
+            ],
+            "0x5a00c0": [
+              "0x627ee1",
+              "0x628092",
+              "0x62813d",
+              "0x62847e",
+              "0x6284ca",
+              "0x62853a"
+            ],
+            "0x5a00e0": [
+              "0x629ba5",
+              "0x62a50e",
+              "0x62a93b",
+              "0x62aa1d",
+              "0x62de03",
+              "0x62e0b7",
+              "0x62e182",
+              "0x62e2f1",
+              "0x62e3f2",
+              "0x62e892",
+              "0x62e8b2"
+            ],
+            "0x5a0060": [
+              "0x62a446",
+              "0x62df6a"
+            ],
+            "0x5a0de0": [
+              "0x62a598"
+            ],
+            "0x5a0040": [
+              "0x62e3b3"
+            ],
+            "0x5a0570": [
+              "0x63d72b",
+              "0x63d8a6",
+              "0x63d8b8",
+              "0x63d8d6",
+              "0x643de7",
+              "0x6440d5"
+            ],
+            "0x5a0450": [
+              "0x644030"
+            ]
+          },
+          "unrecognized_interior_call_targets": [],
+          "limits": "All24 supported main members attempted and reviewed. Prefix and out-of-cluster alias-family helpers inspected and recorded separately, so no absence or original physical object-completeness claim is made.",
+          "final_native_members": [
+            {
+              "name": "fn_0059fa20",
+              "address": "0x59fa20",
+              "size": 892,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059fda0",
+              "address": "0x59fda0",
+              "size": 308,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059fee0",
+              "address": "0x59fee0",
+              "size": 178,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059ffa0",
+              "address": "0x59ffa0",
+              "size": 39,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_0059ffd0",
+              "address": "0x59ffd0",
+              "size": 59,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0010",
+              "address": "0x5a0010",
+              "size": 34,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0040",
+              "address": "0x5a0040",
+              "size": 21,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0060",
+              "address": "0x5a0060",
+              "size": 86,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a00c0",
+              "address": "0x5a00c0",
+              "size": 19,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a00e0",
+              "address": "0x5a00e0",
+              "size": 102,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0150",
+              "address": "0x5a0150",
+              "size": 22,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0170",
+              "address": "0x5a0170",
+              "size": 493,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0360",
+              "address": "0x5a0360",
+              "size": 11,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0370",
+              "address": "0x5a0370",
+              "size": 219,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0450",
+              "address": "0x5a0450",
+              "size": 102,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a04c0",
+              "address": "0x5a04c0",
+              "size": 169,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0570",
+              "address": "0x5a0570",
+              "size": 85,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a05d0",
+              "address": "0x5a05d0",
+              "size": 855,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "initialize_aliases",
+              "address": "0x5a0930",
+              "size": 592,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0b80",
+              "address": "0x5a0b80",
+              "size": 294,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0cb0",
+              "address": "0x5a0cb0",
+              "size": 224,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0d90",
+              "address": "0x5a0d90",
+              "size": 76,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "fn_005a0de0",
+              "address": "0x5a0de0",
+              "size": 22,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            },
+            {
+              "name": "is_safe_const",
+              "address": "0x5a0e00",
+              "size": 95,
+              "source": "src/GC_3_0a5_2/backend/Alias.c",
+              "unresolved_indirect_flow": false
+            }
+          ],
+          "filename_proof": {
+            "address": "0x6ad63c",
+            "bytes": "416c6961732e6300",
+            "assertions": [
+              {
+                "function": "fn_0059fa20",
+                "address": "0x59fabe",
+                "line": 1095,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fa20",
+                "address": "0x59fc48",
+                "line": 1076,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fa20",
+                "address": "0x59fd25",
+                "line": 1129,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fa20",
+                "address": "0x59fd75",
+                "line": 1135,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fa20",
+                "address": "0x59fd8b",
+                "line": 1143,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fee0",
+                "address": "0x59ff45",
+                "line": 1009,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_0059fee0",
+                "address": "0x59ff7d",
+                "line": 1019,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_005a0170",
+                "address": "0x5a02ad",
+                "line": 867,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_005a0450",
+                "address": "0x5a04a8",
+                "line": 728,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_005a05d0",
+                "address": "0x5a0795",
+                "line": 404,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              },
+              {
+                "function": "fn_005a0b80",
+                "address": "0x5a0c95",
+                "line": 285,
+                "filename_address": "0x6ad63c",
+                "callee": "CError_Internal 0x45a250"
+              }
+            ]
+          },
+          "held_prefix": {
+            "address": "0x59f9f0",
+            "name": "update_all_alias_values",
+            "attempted": true,
+            "strict_exact": true,
+            "source": "build/Alias/prefix59f9f0-native.c.txt",
+            "included_in_main": false,
+            "reason": "Ordinary Mac identity and native alias-list traversal are supported; physical source ownership is not established."
+          },
+          "excluded_neighbors": [
+            {
+              "address": "0x59f7f0",
+              "reason": "Native assertion names StructMoves.c at0x6ad600."
+            },
+            {
+              "address": "0x59f8e0",
+              "reason": "Operand normalization and scratch allocation; physically adjacent to proven StructMoves helper, no Alias ownership proof."
+            },
+            {
+              "address": "0x59f950",
+              "reason": "Operand/object direct-address predicate, no Alias ownership proof."
+            },
+            {
+              "address": "0x5a0e60",
+              "reason": "Different global list0x711bac and its own reachability/cleanup helpers; Alias private-state cluster ends before this body."
+            },
+            {
+              "address": "0x599360",
+              "identity_candidate": "update_alias_value",
+              "reason": "Uses CSE snapshot/undo records and globals0x6e68fc/0x6e6900/0x6e6904 as well as external aliasSequence; original source ownership unproved. Retained external helper."
+            },
+            {
+              "address": "0x63d460",
+              "reason": "Alias/PCode gather semantics; belongs outside proved main source cluster, assertion/source ownership unproved. Retained external helper."
+            },
+            {
+              "address": "0x63d6a0",
+              "reason": "Alias/PCode load/store propagation semantics, source ownership unproved."
+            },
+            {
+              "address": "0x63d800",
+              "reason": "Reaching-definition alias merging, source ownership unproved."
+            },
+            {
+              "address": "0x63d8f0",
+              "size": 11,
+              "reason": "Writes1 to global0x7100e8, no Alias ownership proof."
+            },
+            {
+              "address": "0x63d900",
+              "size": 239,
+              "reason": "Real callable native entry through0x63d9ee; currently absent from Ghidra function list. Propagation and alias-use updates, ownership unproved."
+            },
+            {
+              "address": "0x63d1f0..0x63d420",
+              "reason": "Six already mapped and exact BitVectors members remain BitVectors."
+            },
+            {
+              "address": "0x63da30",
+              "reason": "IRO_RotateLoop; independently reviewed by root."
+            }
+          ],
+          "membership_complete": false,
+          "unexplored_windows_candidates": []
+        },
+        "Mac_checklist": {
+          "count": 32,
+          "entries": [
+            {
+              "name": "is_safe_const_alias",
+              "mac_address": "0x00165d5c",
+              "symbol_file_line": 32274,
+              "status": "semantic identity lead",
+              "candidate": "is_safe_const 0x5a0e00, CSV has the Windows spelling",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "add_aliased_locals_to_worst_case",
+              "mac_address": "0x00165e98",
+              "symbol_file_line": 32276,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0b80",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "hash_alias",
+              "mac_address": "0x001660f4",
+              "symbol_file_line": 32278,
+              "status": "reconstructed inline helper",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "create_alias",
+              "mac_address": "0x0016612c",
+              "symbol_file_line": 32279,
+              "status": "reconstructed inline helper",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "lookup_alias",
+              "mac_address": "0x001661e8",
+              "symbol_file_line": 32281,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "create_alias_union",
+              "mac_address": "0x00166414",
+              "symbol_file_line": 32283,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0570",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "aliases_overlap",
+              "mac_address": "0x001665a4",
+              "symbol_file_line": 32285,
+              "status": "reconstructed inline helper",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "is_address_load",
+              "mac_address": "0x00166620",
+              "symbol_file_line": 32286,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "canidiatealias",
+              "mac_address": "0x00166730",
+              "symbol_file_line": 32288,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "get_alias_reg",
+              "mac_address": "0x00166868",
+              "symbol_file_line": 32290,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "update_worst_case_for_use",
+              "mac_address": "0x0016688c",
+              "symbol_file_line": 32291,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "make_displ_alias",
+              "mac_address": "0x00166940",
+              "symbol_file_line": 32293,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0450",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "update_instr_with_alias",
+              "mac_address": "0x00166a00",
+              "symbol_file_line": 32295,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "addresspropagatestouse",
+              "mac_address": "0x00166e10",
+              "symbol_file_line": 32297,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "finishpropagatealiases",
+              "mac_address": "0x00166ef8",
+              "symbol_file_line": 32299,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "propagatealiasinfo",
+              "mac_address": "0x00166f24",
+              "symbol_file_line": 32301,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "updateloadstorealias",
+              "mac_address": "0x00166f78",
+              "symbol_file_line": 32303,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "may_alias_alias",
+              "mac_address": "0x00167604",
+              "symbol_file_line": 32305,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a00c0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "initialize_aliases",
+              "mac_address": "0x00165f5c",
+              "symbol_file_line": 32312,
+              "status": "semantic identity lead",
+              "candidate": "initialize_aliases 0x5a0930, supplied CSV",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "initialize_alias_values",
+              "mac_address": "0x001678c0",
+              "symbol_file_line": 32313,
+              "status": "semantic identity lead",
+              "candidate": "fn_0059ffa0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "update_alias_value",
+              "mac_address": "0x00167914",
+              "symbol_file_line": 32314,
+              "status": "semantic identity lead",
+              "candidate": "external0x599360, ownership unproved",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "update_all_alias_values",
+              "mac_address": "0x00167b5c",
+              "symbol_file_line": 32315,
+              "status": "semantic identity lead",
+              "candidate": "held prefix0x59f9f0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "gather_alias_info",
+              "mac_address": "0x001672ec",
+              "symbol_file_line": 32316,
+              "status": "semantic identity lead",
+              "candidate": "external0x63d460 or local0x5a0370, identity not established",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "make_alias",
+              "mac_address": "0x00166288",
+              "symbol_file_line": 32317,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "may_alias",
+              "mac_address": "0x00167764",
+              "symbol_file_line": 32319,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0150",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "make_virtual_alias",
+              "mac_address": "0x00165df4",
+              "symbol_file_line": 32320,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0cb0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "make_alias_set",
+              "mac_address": "0x001663e0",
+              "symbol_file_line": 32324,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "add_alias_member",
+              "mac_address": "0x00166484",
+              "symbol_file_line": 32326,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a04c0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "make_alias_set_from_IR",
+              "mac_address": "0x0016656c",
+              "symbol_file_line": 32328,
+              "status": "not located conclusively",
+              "candidate": null,
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "uniquely_aliases",
+              "mac_address": "0x0016778c",
+              "symbol_file_line": 32332,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a00e0",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "may_alias_worst_case",
+              "mac_address": "0x00167848",
+              "symbol_file_line": 32334,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0040",
+              "physical_ownership_proven": false
+            },
+            {
+              "name": "may_alias_object",
+              "mac_address": "0x0016787c",
+              "symbol_file_line": 32336,
+              "status": "semantic identity lead",
+              "candidate": "fn_005a0010",
+              "physical_ownership_proven": false
+            }
+          ],
+          "limits": "Ordinary Mac symbols provide original spellings and architectural leads, not explicit Alias.c SO/FUN ownership or Windows ABI. Only supplied Windows CSV names initialize_aliases and is_safe_const are applied canonically; unverified names remain fn-address identifiers. Unlocated entries are not claimed absent."
+        },
+        "alias_policy": {
+          "old_source_present": false,
+          "old_function_aliases_added": [],
+          "unsafe_old_abi_aliases": [],
+          "applied_native_csv_names": [
+            "initialize_aliases",
+            "is_safe_const"
+          ],
+          "canonical_mapped_external_helpers": [
+            "lalloc",
+            "memclrw",
+            "CError_Internal",
+            "GetHashNameNode",
+            "CParser_GetUniqueName",
+            "Registers_ClassForType",
+            "nbytes_loaded_or_stored_by",
+            "bitvectorinitialize",
+            "bitvectorintersectionisempty"
+          ],
+          "unknown_helpers_retained_with_address_names": true,
+          "held_prefix_not_mapped": true
+        },
+        "owned_data": [
+          {
+            "name": "_worst_case_memory_type",
+            "section": ".data",
+            "size": 14,
+            "method": "named binding",
+            "address": "0x006ad620",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_aliasVirtualType",
+            "section": ".data",
+            "size": 14,
+            "method": "named binding",
+            "address": "0x006ad62e",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_worst_case_name",
+            "section": ".data",
+            "size": 13,
+            "method": "named binding",
+            "address": "0x006ad644",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_filename",
+            "section": ".data",
+            "size": 8,
+            "method": "named binding",
+            "address": "0x006ad63c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "__anonymous_section_21",
+            "section": ".rdata",
+            "size": 12,
+            "method": "resolved function reference (anonymous section)",
+            "address": "0x00654720",
+            "bytes_exact": true,
+            "target_section": ".rdata",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "__anonymous_section_23",
+            "section": ".rdata",
+            "size": 36,
+            "method": "resolved function reference (anonymous section)",
+            "unresolved": "no established retail address"
+          },
+          {
+            "name": "_worst_case_obj",
+            "section": ".bss",
+            "size": 96,
+            "method": "named binding",
+            "address": "0x0070ff00",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_localWorstCase",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x00710070",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_unknownAlias",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x007107fc",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_aliasScratch",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006e910c",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_temp_alias_links",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006e9104",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_n_aliases",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006e9100",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_n_gathered_aliases",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006e90fc",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_alias_hash",
+            "section": ".bss",
+            "size": 8156,
+            "method": "named binding",
+            "address": "0x006e7120",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_aliasList",
+            "section": ".bss",
+            "size": 4,
+            "coff_common": true,
+            "method": "source-scoped common binding",
+            "address": "0x006e9108",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_aliasWorstCase",
+            "section": ".bss",
+            "size": 4,
+            "coff_common": true,
+            "method": "source-scoped common binding",
+            "address": "0x00715c54",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_alias_external_option",
+            "section": ".bss",
+            "size": 1,
+            "coff_common": true,
+            "method": "source-scoped common binding",
+            "address": "0x00725e6e",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "overlap_kind_pair_coverage": {
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+          "cases": 250,
+          "kind_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "all_passed": true,
+          "scope": "All nine kind-pair branches exercised, random pointer pairing and signed interval boundary values; supplements the refreshed6000-case final24 execution report."
+        }
+      },
+      "compiler_profiles": [
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 14,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 2,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-nointrinsics",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "nointrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 14,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-inlineoff",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "off",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 13,
+          "unresolved_count": 8,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-noschedule",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noschedule",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 7,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-nostrength",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "nostrength",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 14,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "cw94",
+          "profile": "alias-cw94-noloop",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noloop",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 14,
+          "unresolved_count": 1,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        },
+        {
+          "compiler": "pro8",
+          "profile": "alias-pro8-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "compiled": true,
+          "exact_count": 8,
+          "unresolved_count": 2,
+          "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a"
+        }
+      ],
+      "normal_project_validation": {
+        "source": "src/GC_3_0a5_2/backend/Alias.c",
+        "source_sha256": "3f66ae0a866680f78792fbd887e2e66a8b2625d58a2341da119c763ecabee57a",
+        "candidate_project_sections_sha256": "49a0bb1a85debaafbd2be2e13a12c9844b58371dcef2ed9b776940837b009b30",
+        "all_code_and_data_sections_equal": true,
+        "common_symbols_equal": true,
+        "checked_functions": 24,
         "objdiff_cli_success": true,
         "image_partition_exact": true
       }

@@ -1682,6 +1682,71 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/Coloring.c",
+      "original_filename": "Coloring.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "colorinstructions",
+          "address": "0x00596df0",
+          "size": 415,
+          "boundary_evidence": {
+            "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00596f09"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Coloring.c"
+        },
+        {
+          "name": "rewritepcode",
+          "address": "0x596f90",
+          "size": 334,
+          "compiled_source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "colorgraph",
+          "address": "0x005970e0",
+          "size": 532,
+          "boundary_evidence": {
+            "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005972dc"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Coloring.c"
+        },
+        {
+          "name": "simplifygraph",
+          "address": "0x597300",
+          "size": 985,
+          "compiled_source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
       "original_filename": "ELF_Endian.c",
       "evidence": [
@@ -22396,63 +22461,11 @@
     },
     {
       "source": "src/backend/Coloring.c",
-      "original_filename": "Coloring.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "Coloring_AllocateRegisters",
-          "address": "0x00596df0",
-          "size": 415,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00596f09"
-          ],
-          "compiled_source": "src/backend/Coloring.c"
-        },
-        {
-          "name": "Coloring_CommitAssignments",
-          "address": "0x00596f90",
-          "size": 334,
-          "compiled_source": "src/backend/Coloring.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "Coloring_SelectColors",
-          "address": "0x005970e0",
-          "size": 532,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005972dc"
-          ],
-          "compiled_source": "src/backend/Coloring.c"
-        },
-        {
-          "name": "Coloring_SimplifyGraph",
-          "address": "0x00597300",
-          "size": 985,
-          "compiled_source": "src/backend/Coloring.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -132498,6 +132511,1033 @@
         "project_total_mapped": 1662,
         "objdiff_cli": "passed selected TU diff",
         "image_inventory": "284 unique views;45 target-only;exact partition;0 ownership conflicts",
+        "source_cp932": "passed"
+      }
+    },
+    "src/GC_3_0a5_2/backend/Coloring.c": {
+      "source": "src/GC_3_0a5_2/backend/Coloring.c",
+      "source_sha256": "901c445cb0309f43feff8c7f8304b6ac03a3e2b2abf9bd1688976548ba2711ca",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 4,
+      "strict_exact_count": 0,
+      "data_complete": false,
+      "functions": [
+        {
+          "name": "colorinstructions",
+          "address": "0x596df0",
+          "size": 415,
+          "source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "compiled_size": 389,
+          "strict_exact": false,
+          "objdiff_percent": 64.0,
+          "semantic_review": "Native one function pointer arg; signed8 class0..4, setup each class, skip equal physical/total counts. Clear six stats in original chained order; preserve short used count and32byte register snapshot; no-available diagnostic12 returns before clearing active flag. Signed iteration count>10 asserts501; build graph(function), simplify/color, spill rewrite+increment or final pcode rewrite, reset pool on both paths, retry until success, collapse total to first_virtual, frontend statistics hook. Finally clear active flag. Compared all four original CFGs and500 bounded original/current instruction cases for this body with modeled helpers. Remaining copy lowering, register allocation and branch shape differences."
+        },
+        {
+          "name": "rewritepcode",
+          "address": "0x596f90",
+          "size": 334,
+          "source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "compiled_size": 321,
+          "strict_exact": false,
+          "objdiff_percent": 92.21154,
+          "semantic_review": "No args. Native block first+20, instruction operands+44/count+42,14byte operand kind0/class byte and signed16register. Rewrite each register from contiguous30byte graph color+18. Move-bit16 deletion only second operand class matches and reg pair equal; next pointer read after deletion as original. For each virtual node with object and !spilled1, require object info+64 used+9, query Registers_GetVarInfo, null-check, write color to short16/18 and flags2/6 by second-of-pair flag16. Original width, ordering and calls reviewed;500 instruction cases passed. Remaining register allocation/class load placement and padding differ."
+        },
+        {
+          "name": "colorgraph",
+          "address": "0x5970e0",
+          "size": 532,
+          "source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "compiled_size": 549,
+          "strict_exact": false,
+          "objdiff_percent": 89.867546,
+          "semantic_review": "One native stack pointer arg. Restore used register count through signed16 snapshot and32byte state before querying class mask. Traverse shared16byte incidence edges via left/right selected by signed index<edge.b. Remove neighbor assigned single or paired3-bit mask using x86 shift-count masks. Select first available even pair or single register below signed first_virtual. If no assignment, claim helper may extend available mask: retry SAME node before advancing; corrected after bounded execution exposed original control flow. Exhausted claim queries object predicate, assert391 if true, mark spilled1 and result false when still-1.500 native/current cases cover successful finite claims and exhaustion. Remaining register and branch shape differences."
+        },
+        {
+          "name": "simplifygraph",
+          "address": "0x597300",
+          "size": 985,
+          "source": "src/GC_3_0a5_2/backend/Coloring.c",
+          "compiled_size": 969,
+          "strict_exact": false,
+          "objdiff_percent": 91.0219,
+          "semantic_review": "No args, returns stack. Repeatedly scan unsigned first_virtual..total excluding flags6, decrement every adjacent degree by1 or2 if either paired512, mark simplified2 and push low-degree nodes; maintain reverse list of remaining nodes. If remaining, invoke cost helper620f10 once. Choose minimum cost/degree with flags128 maxfloat and1024 halfmaxfloat, first node wins ties and unordered comparisons; keep scores x87 throughfloat locals. Remove selected node, decrement neighbors, push, rescan until no remaining. Signed16degree/index and signed32cost reviewed.500 bounded instruction cases include weighted random graphs, paired flags and score priority. Remaining register allocation/x87 stack scheduling and alignment differ."
+        }
+      ],
+      "compiler_profiles": [
+        {
+          "profile": "speed-intrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 389,
+              "strict_exact": false,
+              "objdiff_percent": 64.0
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 321,
+              "strict_exact": false,
+              "objdiff_percent": 92.21154
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 549,
+              "strict_exact": false,
+              "objdiff_percent": 89.867546
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 969,
+              "strict_exact": false,
+              "objdiff_percent": 91.0219
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "speed-noschedule",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noschedule"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 389,
+              "strict_exact": false,
+              "objdiff_percent": 60.97196
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 321,
+              "strict_exact": false,
+              "objdiff_percent": 80.75
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 549,
+              "strict_exact": false,
+              "objdiff_percent": 79.59602
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 969,
+              "strict_exact": false,
+              "objdiff_percent": 75.14599
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "speed-nointrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "nointrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound relocation: _memcpy"
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 321,
+              "strict_exact": false,
+              "objdiff_percent": 92.21154
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound relocation: _memcpy"
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 969,
+              "strict_exact": false,
+              "objdiff_percent": 91.0219
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "space-intrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 332,
+              "strict_exact": false,
+              "objdiff_percent": 34.88785
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 284,
+              "strict_exact": false,
+              "objdiff_percent": 73.01923
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 403,
+              "strict_exact": false,
+              "objdiff_percent": 37.271523
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .data (0 retail blocks, 0 strings)"
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "space-nointrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "nointrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound relocation: _memcpy"
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 284,
+              "strict_exact": false,
+              "objdiff_percent": 73.01923
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound relocation: _memcpy"
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .data (0 retail blocks, 0 strings)"
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "pro53-speed",
+          "compiler": "pro53",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .bss (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 319,
+              "strict_exact": false,
+              "objdiff_percent": 63.53846
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .bss (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .data (0 retail blocks, 0 strings)"
+            }
+          ],
+          "strict_exact": 0
+        },
+        {
+          "profile": "pro6-speed",
+          "compiler": "pro6",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "colorinstructions",
+              "address": "0x596df0",
+              "size": 415,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .bss (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "rewritepcode",
+              "address": "0x596f90",
+              "size": 334,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "compiled_size": 296,
+              "strict_exact": false,
+              "objdiff_percent": 69.36539
+            },
+            {
+              "name": "colorgraph",
+              "address": "0x5970e0",
+              "size": 532,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .bss (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "simplifygraph",
+              "address": "0x597300",
+              "size": 985,
+              "source": "src/GC_3_0a5_2/backend/Coloring.c",
+              "error": "unbound literal: .data (0 retail blocks, 0 strings)"
+            }
+          ],
+          "strict_exact": 0
+        }
+      ],
+      "full_image_audit": {
+        "cluster": [
+          "0x596df0",
+          "0x5976e0"
+        ],
+        "members": [
+          {
+            "address": "0x596df0",
+            "name": "colorinstructions"
+          },
+          {
+            "address": "0x596f90",
+            "name": "rewritepcode"
+          },
+          {
+            "address": "0x5970e0",
+            "name": "colorgraph"
+          },
+          {
+            "address": "0x597300",
+            "name": "simplifygraph"
+          }
+        ],
+        "csv_names": [],
+        "direct_calls": {
+          "0x596df0": [
+            "0x4693e0",
+            "0x4bd427",
+            "0x4bd6a9"
+          ],
+          "0x597300": [
+            "0x596f1c"
+          ],
+          "0x5970e0": [
+            "0x596f22"
+          ],
+          "0x596f90": [
+            "0x596f31"
+          ]
+        },
+        "unknown_direct_call_targets": [],
+        "padding_prologue_candidates": [],
+        "owned_data_fixup_references": {
+          "0x726060": [
+            {
+              "fixup": "0x578412",
+              "function": "0x578410"
+            },
+            {
+              "fixup": "0x578533",
+              "function": "0x5784c0"
+            },
+            {
+              "fixup": "0x5785cd",
+              "function": "0x5784c0"
+            },
+            {
+              "fixup": "0x578632",
+              "function": "0x5784c0"
+            },
+            {
+              "fixup": "0x5789b4",
+              "function": "0x5789b0"
+            },
+            {
+              "fixup": "0x578a2e",
+              "function": "0x578a20"
+            },
+            {
+              "fixup": "0x578dde",
+              "function": "0x578dd0"
+            },
+            {
+              "fixup": "0x57935d",
+              "function": "0x579300"
+            },
+            {
+              "fixup": "0x5793e8",
+              "function": "0x579300"
+            },
+            {
+              "fixup": "0x579427",
+              "function": "0x579420"
+            },
+            {
+              "fixup": "0x579450",
+              "function": "0x579420"
+            },
+            {
+              "fixup": "0x5794c1",
+              "function": "0x579420"
+            },
+            {
+              "fixup": "0x596e1a",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x596fcc",
+              "function": "0x596f90"
+            },
+            {
+              "fixup": "0x597006",
+              "function": "0x596f90"
+            },
+            {
+              "fixup": "0x597035",
+              "function": "0x596f90"
+            },
+            {
+              "fixup": "0x5970c9",
+              "function": "0x596f90"
+            },
+            {
+              "fixup": "0x5970e6",
+              "function": "0x5970e0"
+            },
+            {
+              "fixup": "0x59714f",
+              "function": "0x5970e0"
+            },
+            {
+              "fixup": "0x5971f3",
+              "function": "0x5970e0"
+            },
+            {
+              "fixup": "0x597229",
+              "function": "0x5970e0"
+            },
+            {
+              "fixup": "0x5972b3",
+              "function": "0x5970e0"
+            },
+            {
+              "fixup": "0x597303",
+              "function": "0x597300"
+            },
+            {
+              "fixup": "0x59731e",
+              "function": "0x597300"
+            },
+            {
+              "fixup": "0x59744f",
+              "function": "0x597300"
+            },
+            {
+              "fixup": "0x61f283",
+              "function": "0x61f280"
+            },
+            {
+              "fixup": "0x61f34a",
+              "function": "0x61f340"
+            },
+            {
+              "fixup": "0x61f38c",
+              "function": "0x61f340"
+            },
+            {
+              "fixup": "0x61f44f",
+              "function": "0x61f340"
+            },
+            {
+              "fixup": "0x61f473",
+              "function": "0x61f470"
+            },
+            {
+              "fixup": "0x61f4c9",
+              "function": "0x61f470"
+            },
+            {
+              "fixup": "0x61f569",
+              "function": "0x61f470"
+            },
+            {
+              "fixup": "0x61f5f5",
+              "function": "0x61f470"
+            },
+            {
+              "fixup": "0x61f693",
+              "function": "0x61f690"
+            },
+            {
+              "fixup": "0x61f78d",
+              "function": "0x61f690"
+            },
+            {
+              "fixup": "0x61f7f4",
+              "function": "0x61f7b0"
+            },
+            {
+              "fixup": "0x61f807",
+              "function": "0x61f7b0"
+            },
+            {
+              "fixup": "0x61f85f",
+              "function": "0x61f7b0"
+            },
+            {
+              "fixup": "0x61fa10",
+              "function": "0x61f7b0"
+            },
+            {
+              "fixup": "0x61fa31",
+              "function": "0x61f7b0"
+            },
+            {
+              "fixup": "0x61fae4",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fb5f",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fb6c",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fba3",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fc2c",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fca0",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fd10",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fe2a",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fe51",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61fea9",
+              "function": "0x61fae0"
+            },
+            {
+              "fixup": "0x61ff13",
+              "function": "0x61ff10"
+            },
+            {
+              "fixup": "0x62054c",
+              "function": "0x620500"
+            },
+            {
+              "fixup": "0x620610",
+              "function": "0x620500"
+            },
+            {
+              "fixup": "0x6206f3",
+              "function": "0x6206f0"
+            },
+            {
+              "fixup": "0x6207e2",
+              "function": "0x6206f0"
+            },
+            {
+              "fixup": "0x6209c3",
+              "function": "0x6209a0"
+            },
+            {
+              "fixup": "0x620b03",
+              "function": "0x620a40"
+            },
+            {
+              "fixup": "0x620c4e",
+              "function": "0x620c40"
+            },
+            {
+              "fixup": "0x620c94",
+              "function": "0x620c40"
+            },
+            {
+              "fixup": "0x620ce7",
+              "function": "0x620c40"
+            },
+            {
+              "fixup": "0x620d31",
+              "function": "0x620c40"
+            },
+            {
+              "fixup": "0x620f7c",
+              "function": "0x620f10"
+            },
+            {
+              "fixup": "0x621010",
+              "function": "0x620f10"
+            }
+          ],
+          "0x6e68f0": [
+            {
+              "fixup": "0x596e9a",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x5970f4",
+              "function": "0x5970e0"
+            }
+          ],
+          "0x6e68d0": [
+            {
+              "fixup": "0x596ea9",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x597112",
+              "function": "0x5970e0"
+            }
+          ],
+          "0x6e68d4": [
+            {
+              "fixup": "0x596eb6",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x59711f",
+              "function": "0x5970e0"
+            }
+          ],
+          "0x6e68d8": [
+            {
+              "fixup": "0x596ec3",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x59712c",
+              "function": "0x5970e0"
+            }
+          ],
+          "0x6e68dc": [
+            {
+              "fixup": "0x596ed0",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x597139",
+              "function": "0x5970e0"
+            }
+          ],
+          "0x6ad5cc": [
+            {
+              "fixup": "0x596f05",
+              "function": "0x596df0"
+            },
+            {
+              "fixup": "0x5972d8",
+              "function": "0x5970e0"
+            }
+          ]
+        },
+        "signature_callers": {
+          "0x4693e0": {
+            "target": "0x596df0",
+            "preceding": [
+              "4693bc cmp byte ptr [0x70f222], 0",
+              "4693c3 jne 0x4695e3",
+              "4693c9 cmp byte ptr [0x70f230], 1",
+              "4693d0 jl 0x4693dc",
+              "4693d2 push dword ptr [esp + 0x48]",
+              "4693d6 call 0x596d70",
+              "4693db pop ecx",
+              "4693dc push dword ptr [esp + 0x48]"
+            ],
+            "following": [
+              "4693e5 cmp byte ptr [0x70f230], 1",
+              "4693ec pop ecx",
+              "4693ed jl 0x4693f9",
+              "4693ef push dword ptr [esp + 0x48]",
+              "4693f3 call 0x596d70",
+              "4693f8 pop ecx",
+              "4693f9 push 0"
+            ]
+          },
+          "0x4bd427": {
+            "target": "0x596df0",
+            "preceding": [
+              "4bd401 mov dword ptr [0x710784], ecx",
+              "4bd407 or word ptr [edx + 0x2a], 2",
+              "4bd40c call 0x52e040",
+              "4bd411 cmp byte ptr [0x725dfa], 0",
+              "4bd418 jne 0x4bd480",
+              "4bd41a call 0x4697d0",
+              "4bd41f mov byte ptr [0x72605b], al",
+              "4bd424 push dword ptr [esp]"
+            ],
+            "following": [
+              "4bd42c pop ecx",
+              "4bd42d call 0x589eb0",
+              "4bd432 push 0",
+              "4bd434 push dword ptr [0x71071c]",
+              "4bd43a call 0x589600",
+              "4bd43f mov eax, dword ptr [0x7101cc]",
+              "4bd444 pop ecx"
+            ]
+          },
+          "0x4bd6a9": {
+            "target": "0x596df0",
+            "preceding": [
+              "4bd67a jne 0x4bd730",
+              "4bd680 cmp byte ptr [0x6dcb2a], 0",
+              "4bd687 jne 0x4bd730",
+              "4bd68d cmp byte ptr [0x6dcb29], 0",
+              "4bd694 jne 0x4bd730",
+              "4bd69a mov byte ptr [0x716ec7], 1",
+              "4bd6a1 jmp 0x4bd730",
+              "4bd6a6 push dword ptr [esp]"
+            ],
+            "following": [
+              "4bd6ae cmp byte ptr [0x725dfa], 0",
+              "4bd6b5 pop ecx",
+              "4bd6b6 je 0x4bd6c0",
+              "4bd6b8 add esp, 0xc",
+              "4bd6bb pop ebp",
+              "4bd6bc pop edi",
+              "4bd6bd pop esi"
+            ]
+          },
+          "0x596f1c": {
+            "target": "0x597300",
+            "preceding": [
+              "596f04 push 0x6ad5cc",
+              "596f09 call 0x45a250",
+              "596f0e pop ecx",
+              "596f0f pop ecx",
+              "596f10 push dword ptr [esp + 0x10]",
+              "596f14 call 0x61f280",
+              "596f19 pop ecx",
+              "596f1a xor ebx, ebx"
+            ],
+            "following": [
+              "596f21 push eax",
+              "596f22 call 0x5970e0",
+              "596f27 test eax, eax",
+              "596f29 sete bl",
+              "596f2c test ebx, ebx",
+              "596f2e pop ecx",
+              "596f2f jne 0x596f81"
+            ]
+          },
+          "0x596f22": {
+            "target": "0x5970e0",
+            "preceding": [
+              "596f0e pop ecx",
+              "596f0f pop ecx",
+              "596f10 push dword ptr [esp + 0x10]",
+              "596f14 call 0x61f280",
+              "596f19 pop ecx",
+              "596f1a xor ebx, ebx",
+              "596f1c call 0x597300",
+              "596f21 push eax"
+            ],
+            "following": [
+              "596f27 test eax, eax",
+              "596f29 sete bl",
+              "596f2c test ebx, ebx",
+              "596f2e pop ecx",
+              "596f2f jne 0x596f81",
+              "596f31 call 0x596f90",
+              "596f36 call 0x46c480"
+            ]
+          },
+          "0x596f31": {
+            "target": "0x596f90",
+            "preceding": [
+              "596f1c call 0x597300",
+              "596f21 push eax",
+              "596f22 call 0x5970e0",
+              "596f27 test eax, eax",
+              "596f29 sete bl",
+              "596f2c test ebx, ebx",
+              "596f2e pop ecx",
+              "596f2f jne 0x596f81"
+            ],
+            "following": [
+              "596f36 call 0x46c480",
+              "596f3b test ebx, ebx",
+              "596f3d jne 0x596ef6",
+              "596f3f mov eax, dword ptr [esp + 4]",
+              "596f43 mov ecx, dword ptr [eax*4 + 0x710274]",
+              "596f4a push 0x704938",
+              "596f4f mov dword ptr [eax*4 + 0x716ea0], ecx"
+            ]
+          }
+        }
+      },
+      "owned_data": [
+        {
+          "name": "_filename",
+          "section": ".data",
+          "size": 11,
+          "method": "named binding",
+          "address": "0x006ad5cc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_7",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006ad5d8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_used_regs_before_coloring",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006e68f0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_saved_registers",
+          "section": ".bss",
+          "size": 32,
+          "method": "named binding",
+          "address": "0x006e68d0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_coloring_class",
+          "section": ".bss",
+          "size": 1,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x00726060",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "bounded_execution": {
+        "functions": [
+          {
+            "name": "colorinstructions",
+            "cases": 500,
+            "all_passed": true
+          },
+          {
+            "name": "rewritepcode",
+            "cases": 500,
+            "all_passed": true
+          },
+          {
+            "name": "colorgraph",
+            "cases": 500,
+            "all_passed": true
+          },
+          {
+            "name": "simplifygraph",
+            "cases": 500,
+            "all_passed": true
+          }
+        ],
+        "source_sha256": "901c445cb0309f43feff8c7f8304b6ac03a3e2b2abf9bd1688976548ba2711ca",
+        "scope": "Actual original and compiled instructions; deterministic external helper models; randomized valid graph, class, operand and object state. Not full compiler or formal equivalence proof.",
+        "additional_checks": "x87 control0x037f, large positive signed32 costs, callee-saved registers and return stack verified; helper claims finite and include success/exhaustion."
+      },
+      "data_ownership_review": {
+        "filename": "11-byte Coloring.c string6ad5cc; two assertion fixups, both inside fourbody cluster.",
+        "floating_constants": "8bytes6ad5d8/6ad5dc halfmax and maxfloat, automatically anchored by code references; no manual anonymous bindings.",
+        "saved_registers": "32bytes6e68d0 copied in/out only by colorinstructions and colorgraph; source private snapshot.",
+        "used_regs_before_coloring": "SInt16 at6e68f0; emitted allocation4 includes2 alignment padding bytes, original allocation extent lacks object metadata.",
+        "coloring_class": "byte726060; ordinary Mac name, only class loop writes it; many RegisterInfo/InterferenceGraph consumers external.",
+        "limits": "All emitted data resolves and matches; original source allocation/membership metadata still unavailable, so strict data completion withheld."
+      },
+      "membership_review": {
+        "all_known_windows_candidates_attempted": true,
+        "mac_members": {
+          "simplifygraph": "597300 native simplification and spill selection",
+          "colorgraph": "5970e0 native coloring",
+          "rewritepcode": "596f90 native pcode rewrite",
+          "colorinstructions": "596df0 native class allocation driver"
+        },
+        "mac_data": [
+          "used_regs_before_coloring",
+          "coloring_class"
+        ],
+        "other_old_helpers": "Imported baseline18-function TU has private setup, recursive pointer-graph and class-specialized helper bodies. Native contiguous graph, class-parameterized register API and graph-builder external calls replace these roles. No evidence of additional native Coloring bodies in complete saved entries/CSV/assertion/state/call/seam audit. Baseline helpers remain provisional, not falsely assigned target ranges.",
+        "seams": [
+          "Previous596d70 is optimizer block cleanup with different state/calls; noColoringfilename or snapshot refs.",
+          "Next5976e0 starts separate block/liveness algorithm with6e68f8/6e6904 allocation state; do not absorb by adjacency."
+        ],
+        "physical_ownership_limit": "Assertion filename proves family; four-body extent inferred from independent audit and Mac roles, not original source object metadata."
+      },
+      "abi_policy": {
+        "old_definitions": "Baseline src/backend/Coloring.c unchanged, no global compatibility alias.",
+        "old_allocate": "Same single pointer count, but native function/graph/object payload and class architecture changed; old body provisional.",
+        "old_commit": "Old2args -> native0args; remove wrong mapping.",
+        "old_select": "Old2args -> native1arg; remove wrong mapping.",
+        "old_simplify": "Old3args -> native0args; remove wrong mapping.",
+        "shared_layouts": "Native contiguous30B graph vs old pointer table; private native records only. Unmigrated callers are not equivalent."
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 4,
+        "attempted_members": 4,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "Four native body reconstructions, seven final compiler profiles plus source formulations, full-image assertion/state/call/prologue and all Mac family candidates,500 actual-instruction helper-modeled cases/body. All four reviewed nonmatches."
+      },
+      "validation_limits": "Bounded execution uses modeled helpers and valid finite graph domains; not full compiler execution or formal equivalence. No exact code matches claimed. CP932 passed; tools/check_sjis.py absent.",
+      "normal_project_validation": {
+        "all_source_build": "passed",
+        "strict_exact_native_members": 0,
+        "project_total_exact": 770,
+        "project_total_mapped": 1662,
+        "objdiff_cli": "passed selected TU diff",
+        "image_inventory": "285 unique views;45 target-only;exact partition;0 ownership conflicts",
+        "execution_validated_object": "All four current project bodies and relocation offset/kind/address/addend records equal isolated tested candidate; COFF symbol indices excluded.",
         "source_cp932": "passed"
       }
     }

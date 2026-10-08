@@ -18529,54 +18529,46 @@
     }
   },
   {
-    "name": "Coloring_AllocateRegisters",
-    "address": "0x00596df0",
+    "name": "colorinstructions",
+    "address": "0x596df0",
     "size": 415,
-    "source": "src/backend/Coloring.c",
-    "baseline_name": "Coloring_AllocateRegisters",
-    "baseline_address": "0x004cdef0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Coloring.c",
+    "identity_evidence": "Coloring.c assertions plus all four ordinary Mac names and exact native algorithm roles; whole-image state/call/seam review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Coloring_CommitAssignments",
-    "address": "0x00596f90",
+    "name": "rewritepcode",
+    "address": "0x596f90",
     "size": 334,
-    "source": "src/backend/Coloring.c",
-    "baseline_name": "Coloring_CommitAssignments",
-    "baseline_address": "0x004ce1a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Coloring.c",
+    "identity_evidence": "Coloring.c assertions plus all four ordinary Mac names and exact native algorithm roles; whole-image state/call/seam review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Coloring_SelectColors",
-    "address": "0x005970e0",
+    "name": "colorgraph",
+    "address": "0x5970e0",
     "size": 532,
-    "source": "src/backend/Coloring.c",
-    "baseline_name": "Coloring_SelectColors",
-    "baseline_address": "0x004ce2d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Coloring.c",
+    "identity_evidence": "Coloring.c assertions plus all four ordinary Mac names and exact native algorithm roles; whole-image state/call/seam review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Coloring_SimplifyGraph",
-    "address": "0x00597300",
+    "name": "simplifygraph",
+    "address": "0x597300",
     "size": 985,
-    "source": "src/backend/Coloring.c",
-    "baseline_name": "Coloring_SimplifyGraph",
-    "baseline_address": "0x004ce400",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Coloring.c",
+    "identity_evidence": "Coloring.c assertions plus all four ordinary Mac names and exact native algorithm roles; whole-image state/call/seam review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entry, reachable native CFG and full-image call/prologue audit",
       "unresolved_indirect_flow": false
     }
   },

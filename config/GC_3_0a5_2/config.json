@@ -234,7 +234,8 @@
     "src/GC_3_0a5_2/frontend/CTypeTools.c",
     "src/GC_3_0a5_2/backend/CMachine.c",
     "src/GC_3_0a5_2/backend/BE_symbol.c",
-    "src/GC_3_0a5_2/frontend/CScope.c"
+    "src/GC_3_0a5_2/frontend/CScope.c",
+    "src/GC_3_0a5_2/backend/Coloring.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3669,6 +3670,27 @@
       "include_dirs": [
         "src/frontend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/Coloring.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -6853,6 +6875,40 @@
       "_fn_0045d870": "0x45d870",
       "_fn_0053d780": "0x53d780",
       "_fn_00524320": "0x524320"
+    },
+    "src/GC_3_0a5_2/backend/Coloring.c": {
+      "_filename": "0x6ad5cc",
+      "_saved_registers": "0x6e68d0",
+      "_used_regs_before_coloring": "0x6e68f0",
+      "_coloring_class": "0x726060",
+      "_nodes": "0x711afc",
+      "_blocks": "0x7108c8",
+      "_register_count": "0x716ea0",
+      "_first_virtual": "0x710274",
+      "_used_register_count": "0x716c84",
+      "_register_state": "0x70f2e0",
+      "_iterations": "0x7100e0",
+      "_stats": "0x704938",
+      "_virtual_registers_active": "0x710394",
+      "_class_names": "0x7100c0",
+      "_CError_Internal": "0x45a250",
+      "_CompilerTools_ResetPool": "0x46c480",
+      "_PPCError_ReportError": "0x5ed3d0",
+      "_delete_instruction": "0x582a50",
+      "_Registers_GetVarInfo": "0x579790",
+      "_fn_005792c0": "0x5792c0",
+      "_fn_00594700": "0x594700",
+      "_fn_005946b0": "0x5946b0",
+      "_fn_00594590": "0x594590",
+      "_fn_0061f280": "0x61f280",
+      "_fn_00620500": "0x620500",
+      "_fn_00620f10": "0x620f10",
+      "_fn_004b9c40": "0x4b9c40",
+      "_fn_0057a740": "0x57a740",
+      "_colorinstructions": "0x596df0",
+      "_rewritepcode": "0x596f90",
+      "_colorgraph": "0x5970e0",
+      "_simplifygraph": "0x597300"
     }
   },
   "original_source_units": {
@@ -6871,6 +6927,7 @@
     "CMachine.c": "src/GC_3_0a5_2/backend/CMachine.c",
     "BE_symbol.c": "src/GC_3_0a5_2/backend/BE_symbol.c",
     "StackFrame.c": "src/GC_3_0a5_2/backend/StackFrame.c",
-    "CScope.c": "src/GC_3_0a5_2/frontend/CScope.c"
+    "CScope.c": "src/GC_3_0a5_2/frontend/CScope.c",
+    "Coloring.c": "src/GC_3_0a5_2/backend/Coloring.c"
   }
 }

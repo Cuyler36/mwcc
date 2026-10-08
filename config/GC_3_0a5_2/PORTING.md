@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLAccessPaths.c: complete Windows unit
+
+All 22 retained Windows functions match, including 18 canonical Mac members
+and four Windows helpers whose original names remain unknown. The port uses
+native 516-byte specs and the recovered 16-byte path record. The four-argument
+recursive-copy functions preserve the plugin parameter. The complete unit
+passes objdiff-cli for 2,323 code bytes and 88 initialized data bytes, including
+strict loader-fixup checks. Mac framework helpers outside this Windows cluster
+remain explicit inventory differences, without a whole-binary absence claim.
+
 ## CLPrefs.c: complete Windows unit
 
 All eight retained Windows functions match, including the seven named Mac

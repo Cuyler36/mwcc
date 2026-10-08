@@ -943,6 +943,544 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+      "original_filename": "CLAccessPaths.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Path_Init",
+          "address": "0x4264b0",
+          "size": 107,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Path_New",
+          "address": "0x426520",
+          "size": 22,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Path_Free",
+          "address": "0x426540",
+          "size": 66,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_Initialize",
+          "address": "0x00426590",
+          "size": 56,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004265be"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "Paths_Terminate",
+          "address": "0x004265d0",
+          "size": 110,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0042660f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "Paths_GrowPaths",
+          "address": "0x00426640",
+          "size": 105,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0042667e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "Paths_AddPath",
+          "address": "0x4266b0",
+          "size": 64,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_InsertPath",
+          "address": "0x4266f0",
+          "size": 202,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_RemovePath",
+          "address": "0x4267c0",
+          "size": 122,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_DeletePath",
+          "address": "0x426840",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_GetPath",
+          "address": "0x00426880",
+          "size": 69,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004268b1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "Paths_Count",
+          "address": "0x004268d0",
+          "size": 43,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004268f1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "fn_00426900",
+          "address": "0x426900",
+          "size": 78,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00426950",
+          "address": "0x426950",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_FindPathSpec",
+          "address": "0x00426970",
+          "size": 107,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004269a1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "fn_004269e0",
+          "address": "0x4269e0",
+          "size": 159,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00426a80",
+          "address": "0x426a80",
+          "size": 72,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "GatherRecurse",
+          "address": "0x426ad0",
+          "size": 407,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_GatherRecurse",
+          "address": "0x426c70",
+          "size": 45,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Paths_CountRecurse",
+          "address": "0x00426ca0",
+          "size": 107,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00426d01"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "CopyRecurseSpecs",
+          "address": "0x00426d10",
+          "size": 251,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00426d76"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        },
+        {
+          "name": "Paths_CopyRecurseSpecs",
+          "address": "0x00426e10",
+          "size": 62,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00426e44"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Path_Init",
+          "mac_address": "0x0001a764",
+          "linkage_names": [
+            "Path_Init"
+          ]
+        },
+        {
+          "name": "Path_New",
+          "mac_address": "0x0001a7e0",
+          "linkage_names": [
+            "Path_New"
+          ]
+        },
+        {
+          "name": "Path_Free",
+          "mac_address": "0x0001a820",
+          "linkage_names": [
+            "Path_Free"
+          ]
+        },
+        {
+          "name": "Paths_Initialize",
+          "mac_address": "0x0001a87c",
+          "linkage_names": [
+            "Paths_Initialize"
+          ]
+        },
+        {
+          "name": "Paths_Terminate",
+          "mac_address": "0x0001a8ec",
+          "linkage_names": [
+            "Paths_Terminate"
+          ]
+        },
+        {
+          "name": "Paths_GrowPaths",
+          "mac_address": "0x0001a994",
+          "linkage_names": [
+            "Paths_GrowPaths"
+          ]
+        },
+        {
+          "name": "Paths_AddPath",
+          "mac_address": "0x0001aa40",
+          "linkage_names": [
+            "Paths_AddPath"
+          ]
+        },
+        {
+          "name": "Paths_InsertPath",
+          "mac_address": "0x0001aaa0",
+          "linkage_names": [
+            "Paths_InsertPath"
+          ]
+        },
+        {
+          "name": "Paths_RemovePath",
+          "mac_address": "0x0001ab58",
+          "linkage_names": [
+            "Paths_RemovePath"
+          ]
+        },
+        {
+          "name": "Paths_DeletePath",
+          "mac_address": "0x0001abd0",
+          "linkage_names": [
+            "Paths_DeletePath"
+          ]
+        },
+        {
+          "name": "Paths_GetPath",
+          "mac_address": "0x0001ac38",
+          "linkage_names": [
+            "Paths_GetPath"
+          ]
+        },
+        {
+          "name": "Paths_Count",
+          "mac_address": "0x0001acbc",
+          "linkage_names": [
+            "Paths_Count"
+          ]
+        },
+        {
+          "name": "Paths_FindPath",
+          "mac_address": "0x0001ad14",
+          "linkage_names": [
+            "Paths_FindPath"
+          ]
+        },
+        {
+          "name": "Paths_FindPathSpec",
+          "mac_address": "0x0001adb0",
+          "linkage_names": [
+            "Paths_FindPathSpec"
+          ]
+        },
+        {
+          "name": "GatherRecurse",
+          "mac_address": "0x0001ae68",
+          "linkage_names": [
+            "GatherRecurse"
+          ]
+        },
+        {
+          "name": "Paths_GatherRecurse",
+          "mac_address": "0x0001afdc",
+          "linkage_names": [
+            "Paths_GatherRecurse"
+          ]
+        },
+        {
+          "name": "Paths_CountRecurse",
+          "mac_address": "0x0001b034",
+          "linkage_names": [
+            "Paths_CountRecurse"
+          ]
+        },
+        {
+          "name": "CopyRecurseSpecs",
+          "mac_address": "0x0001b0cc",
+          "linkage_names": [
+            "CopyRecurseSpecs"
+          ]
+        },
+        {
+          "name": "Paths_CopyRecurseSpecs",
+          "mac_address": "0x0001b1e8",
+          "linkage_names": [
+            "Paths_CopyRecurseSpecs"
+          ]
+        },
+        {
+          "name": "Frameworks_Initialize",
+          "mac_address": "0x0001b250",
+          "linkage_names": [
+            "Frameworks_Initialize"
+          ]
+        },
+        {
+          "name": "Frameworks_Grow",
+          "mac_address": "0x0001b2c0",
+          "linkage_names": [
+            "Frameworks_Grow"
+          ]
+        },
+        {
+          "name": "Frameworks_Add",
+          "mac_address": "0x0001b36c",
+          "linkage_names": [
+            "Frameworks_Add"
+          ]
+        },
+        {
+          "name": "Framework_Init",
+          "mac_address": "0x0001b3cc",
+          "linkage_names": [
+            "Framework_Init"
+          ]
+        },
+        {
+          "name": "Framework_New",
+          "mac_address": "0x0001b488",
+          "linkage_names": [
+            "Framework_New"
+          ]
+        },
+        {
+          "name": "CheckForFileInFrameworkDir",
+          "mac_address": "0x0001b4e8",
+          "linkage_names": [
+            "CheckForFileInFrameworkDir"
+          ]
+        },
+        {
+          "name": "CheckForFileInFramework",
+          "mac_address": "0x0001b650",
+          "linkage_names": [
+            "CheckForFileInFramework"
+          ]
+        },
+        {
+          "name": "MakeFrameworkPath",
+          "mac_address": "0x0001b714",
+          "linkage_names": [
+            "MakeFrameworkPath"
+          ]
+        },
+        {
+          "name": "Frameworks_AddPath",
+          "mac_address": "0x0001b9d8",
+          "linkage_names": [
+            "Frameworks_AddPath"
+          ]
+        },
+        {
+          "name": "Frameworks_AddFrameworkName",
+          "mac_address": "0x0001ba18",
+          "linkage_names": [
+            "Frameworks_AddFrameworkName"
+          ]
+        },
+        {
+          "name": "Framework_CheckFrameworks",
+          "mac_address": "0x0001bad4",
+          "linkage_names": [
+            "Framework_CheckFrameworks"
+          ]
+        },
+        {
+          "name": "Frameworks_AddFramework_Internal",
+          "mac_address": "0x0001bb28",
+          "linkage_names": [
+            "Frameworks_AddFramework_Internal"
+          ]
+        },
+        {
+          "name": "Framework_GetEnvInfoPaths",
+          "mac_address": "0x0001bc90",
+          "linkage_names": [
+            "Framework_GetEnvInfoPaths"
+          ]
+        },
+        {
+          "name": "Framework_GetEnvInfo",
+          "mac_address": "0x0001be34",
+          "linkage_names": [
+            "Framework_GetEnvInfo"
+          ]
+        },
+        {
+          "name": "Frameworks_GetCount",
+          "mac_address": "0x0001bf9c",
+          "linkage_names": [
+            "Frameworks_GetCount"
+          ]
+        },
+        {
+          "name": "Frameworks_GetInfo",
+          "mac_address": "0x0001bfc4",
+          "linkage_names": [
+            "Frameworks_GetInfo"
+          ]
+        },
+        {
+          "name": "Frameworks_GetSharedLibrary",
+          "mac_address": "0x0001c068",
+          "linkage_names": [
+            "Frameworks_GetSharedLibrary"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLBrowser.c",
       "original_filename": "CLBrowser.c",
       "evidence": [
@@ -16541,394 +17079,6 @@
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLAccessPaths.c",
-      "original_filename": "CLAccessPaths.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_00426590",
-          "address": "0x00426590",
-          "size": 56,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004265be"
-          ]
-        },
-        {
-          "name": "FUN_004265d0",
-          "address": "0x004265d0",
-          "size": 110,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0042660f"
-          ]
-        },
-        {
-          "name": "FUN_00426640",
-          "address": "0x00426640",
-          "size": 105,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0042667e"
-          ]
-        },
-        {
-          "name": "FUN_00426880",
-          "address": "0x00426880",
-          "size": 69,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004268b1"
-          ]
-        },
-        {
-          "name": "FUN_004268d0",
-          "address": "0x004268d0",
-          "size": 43,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004268f1"
-          ]
-        },
-        {
-          "name": "FUN_00426970",
-          "address": "0x00426970",
-          "size": 107,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004269a1"
-          ]
-        },
-        {
-          "name": "FUN_00426ca0",
-          "address": "0x00426ca0",
-          "size": 107,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00426d01"
-          ]
-        },
-        {
-          "name": "copy_access_paths_to_file_specs",
-          "address": "0x00426d10",
-          "size": 251,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00426d76"
-          ],
-          "compiled_source": "src/driver/CLAccessPaths.c"
-        },
-        {
-          "name": "copy_access_paths_to_file_specs_checked",
-          "address": "0x00426e10",
-          "size": 62,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00426e44"
-          ],
-          "compiled_source": "src/driver/CLAccessPaths.c"
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Path_Init",
-          "mac_address": "0x0001a764",
-          "linkage_names": [
-            "Path_Init"
-          ]
-        },
-        {
-          "name": "Path_New",
-          "mac_address": "0x0001a7e0",
-          "linkage_names": [
-            "Path_New"
-          ]
-        },
-        {
-          "name": "Path_Free",
-          "mac_address": "0x0001a820",
-          "linkage_names": [
-            "Path_Free"
-          ]
-        },
-        {
-          "name": "Paths_Initialize",
-          "mac_address": "0x0001a87c",
-          "linkage_names": [
-            "Paths_Initialize"
-          ]
-        },
-        {
-          "name": "Paths_Terminate",
-          "mac_address": "0x0001a8ec",
-          "linkage_names": [
-            "Paths_Terminate"
-          ]
-        },
-        {
-          "name": "Paths_GrowPaths",
-          "mac_address": "0x0001a994",
-          "linkage_names": [
-            "Paths_GrowPaths"
-          ]
-        },
-        {
-          "name": "Paths_AddPath",
-          "mac_address": "0x0001aa40",
-          "linkage_names": [
-            "Paths_AddPath"
-          ]
-        },
-        {
-          "name": "Paths_InsertPath",
-          "mac_address": "0x0001aaa0",
-          "linkage_names": [
-            "Paths_InsertPath"
-          ]
-        },
-        {
-          "name": "Paths_RemovePath",
-          "mac_address": "0x0001ab58",
-          "linkage_names": [
-            "Paths_RemovePath"
-          ]
-        },
-        {
-          "name": "Paths_DeletePath",
-          "mac_address": "0x0001abd0",
-          "linkage_names": [
-            "Paths_DeletePath"
-          ]
-        },
-        {
-          "name": "Paths_GetPath",
-          "mac_address": "0x0001ac38",
-          "linkage_names": [
-            "Paths_GetPath"
-          ]
-        },
-        {
-          "name": "Paths_Count",
-          "mac_address": "0x0001acbc",
-          "linkage_names": [
-            "Paths_Count"
-          ]
-        },
-        {
-          "name": "Paths_FindPath",
-          "mac_address": "0x0001ad14",
-          "linkage_names": [
-            "Paths_FindPath"
-          ]
-        },
-        {
-          "name": "Paths_FindPathSpec",
-          "mac_address": "0x0001adb0",
-          "linkage_names": [
-            "Paths_FindPathSpec"
-          ]
-        },
-        {
-          "name": "GatherRecurse",
-          "mac_address": "0x0001ae68",
-          "linkage_names": [
-            "GatherRecurse"
-          ]
-        },
-        {
-          "name": "Paths_GatherRecurse",
-          "mac_address": "0x0001afdc",
-          "linkage_names": [
-            "Paths_GatherRecurse"
-          ]
-        },
-        {
-          "name": "Paths_CountRecurse",
-          "mac_address": "0x0001b034",
-          "linkage_names": [
-            "Paths_CountRecurse"
-          ]
-        },
-        {
-          "name": "CopyRecurseSpecs",
-          "mac_address": "0x0001b0cc",
-          "linkage_names": [
-            "CopyRecurseSpecs"
-          ]
-        },
-        {
-          "name": "Paths_CopyRecurseSpecs",
-          "mac_address": "0x0001b1e8",
-          "linkage_names": [
-            "Paths_CopyRecurseSpecs"
-          ]
-        },
-        {
-          "name": "Frameworks_Initialize",
-          "mac_address": "0x0001b250",
-          "linkage_names": [
-            "Frameworks_Initialize"
-          ]
-        },
-        {
-          "name": "Frameworks_Grow",
-          "mac_address": "0x0001b2c0",
-          "linkage_names": [
-            "Frameworks_Grow"
-          ]
-        },
-        {
-          "name": "Frameworks_Add",
-          "mac_address": "0x0001b36c",
-          "linkage_names": [
-            "Frameworks_Add"
-          ]
-        },
-        {
-          "name": "Framework_Init",
-          "mac_address": "0x0001b3cc",
-          "linkage_names": [
-            "Framework_Init"
-          ]
-        },
-        {
-          "name": "Framework_New",
-          "mac_address": "0x0001b488",
-          "linkage_names": [
-            "Framework_New"
-          ]
-        },
-        {
-          "name": "CheckForFileInFrameworkDir",
-          "mac_address": "0x0001b4e8",
-          "linkage_names": [
-            "CheckForFileInFrameworkDir"
-          ]
-        },
-        {
-          "name": "CheckForFileInFramework",
-          "mac_address": "0x0001b650",
-          "linkage_names": [
-            "CheckForFileInFramework"
-          ]
-        },
-        {
-          "name": "MakeFrameworkPath",
-          "mac_address": "0x0001b714",
-          "linkage_names": [
-            "MakeFrameworkPath"
-          ]
-        },
-        {
-          "name": "Frameworks_AddPath",
-          "mac_address": "0x0001b9d8",
-          "linkage_names": [
-            "Frameworks_AddPath"
-          ]
-        },
-        {
-          "name": "Frameworks_AddFrameworkName",
-          "mac_address": "0x0001ba18",
-          "linkage_names": [
-            "Frameworks_AddFrameworkName"
-          ]
-        },
-        {
-          "name": "Framework_CheckFrameworks",
-          "mac_address": "0x0001bad4",
-          "linkage_names": [
-            "Framework_CheckFrameworks"
-          ]
-        },
-        {
-          "name": "Frameworks_AddFramework_Internal",
-          "mac_address": "0x0001bb28",
-          "linkage_names": [
-            "Frameworks_AddFramework_Internal"
-          ]
-        },
-        {
-          "name": "Framework_GetEnvInfoPaths",
-          "mac_address": "0x0001bc90",
-          "linkage_names": [
-            "Framework_GetEnvInfoPaths"
-          ]
-        },
-        {
-          "name": "Framework_GetEnvInfo",
-          "mac_address": "0x0001be34",
-          "linkage_names": [
-            "Framework_GetEnvInfo"
-          ]
-        },
-        {
-          "name": "Frameworks_GetCount",
-          "mac_address": "0x0001bf9c",
-          "linkage_names": [
-            "Frameworks_GetCount"
-          ]
-        },
-        {
-          "name": "Frameworks_GetInfo",
-          "mac_address": "0x0001bfc4",
-          "linkage_names": [
-            "Frameworks_GetInfo"
-          ]
-        },
-        {
-          "name": "Frameworks_GetSharedLibrary",
-          "mac_address": "0x0001c068",
-          "linkage_names": [
-            "Frameworks_GetSharedLibrary"
-          ]
-        }
-      ],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
@@ -50347,7 +50497,7 @@
       }
     },
     "src/driver/CLAccessPaths.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -50476,7 +50626,8 @@
           "space-nointrinsics": "0db6e18b1f701e0062dbb02abc209f556b30de06b682eaef6442438d2ba8900e",
           "space-intrinsics": "b73ee7f0467e111ff285d1ad2320ff7dc53f7adfa3c7c028144e7a1710c750e2"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
     },
     "src/driver/CLCompilerLinkerDropin_V10.cpp": {
       "status": "unattempted",
@@ -66658,6 +66809,429 @@
       "membership_reviewed": true,
       "source_sha256": "61103f7f3c21b8805c379b3cc380016a28596c044f0b0c4ddfc3c51153dfce2f",
       "strict_exact_count": 8
+    },
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c": {
+      "source": "src\\GC_3_0a5_2\\driver\\CLAccessPaths.c",
+      "source_sha256": "c4ba6f8cd6e352355e6bbd866059a81affc2c98bd0f6e24d9a65e2b07bbfbd49",
+      "status": "exact",
+      "functions": [
+        {
+          "name": "Path_Init",
+          "address": "0x4264b0",
+          "size": 107,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 107
+        },
+        {
+          "name": "Path_New",
+          "address": "0x426520",
+          "size": 22,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 22
+        },
+        {
+          "name": "Path_Free",
+          "address": "0x426540",
+          "size": 66,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 66
+        },
+        {
+          "name": "Paths_Initialize",
+          "address": "0x426590",
+          "size": 56,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 56
+        },
+        {
+          "name": "Paths_Terminate",
+          "address": "0x4265d0",
+          "size": 110,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 110
+        },
+        {
+          "name": "Paths_GrowPaths",
+          "address": "0x426640",
+          "size": 105,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 105
+        },
+        {
+          "name": "Paths_AddPath",
+          "address": "0x4266b0",
+          "size": 64,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 64
+        },
+        {
+          "name": "Paths_InsertPath",
+          "address": "0x4266f0",
+          "size": 202,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 202
+        },
+        {
+          "name": "Paths_RemovePath",
+          "address": "0x4267c0",
+          "size": 122,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 122
+        },
+        {
+          "name": "Paths_DeletePath",
+          "address": "0x426840",
+          "size": 51,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 51
+        },
+        {
+          "name": "Paths_GetPath",
+          "address": "0x426880",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 69
+        },
+        {
+          "name": "Paths_Count",
+          "address": "0x4268d0",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "fn_00426900",
+          "address": "0x426900",
+          "size": 78,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 78
+        },
+        {
+          "name": "fn_00426950",
+          "address": "0x426950",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 18
+        },
+        {
+          "name": "Paths_FindPathSpec",
+          "address": "0x426970",
+          "size": 107,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 107
+        },
+        {
+          "name": "fn_004269e0",
+          "address": "0x4269e0",
+          "size": 159,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 159
+        },
+        {
+          "name": "fn_00426a80",
+          "address": "0x426a80",
+          "size": 72,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 72
+        },
+        {
+          "name": "GatherRecurse",
+          "address": "0x426ad0",
+          "size": 407,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 407
+        },
+        {
+          "name": "Paths_GatherRecurse",
+          "address": "0x426c70",
+          "size": 45,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 45
+        },
+        {
+          "name": "Paths_CountRecurse",
+          "address": "0x426ca0",
+          "size": 107,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 107
+        },
+        {
+          "name": "CopyRecurseSpecs",
+          "address": "0x426d10",
+          "size": 251,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 251
+        },
+        {
+          "name": "Paths_CopyRecurseSpecs",
+          "address": "0x426e10",
+          "size": 62,
+          "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+          "exact": true,
+          "compiled_size": 62
+        }
+      ],
+      "source_bindings": {
+        "_xmalloc@8": "0x426300",
+        "_xcalloc@8": "0x426360",
+        "_xrealloc@12": "0x4263e0",
+        "_xfree@4": "0x426490",
+        "_OS_EqualPathSpec@8": "0x4113c0",
+        "_OS_OpenDir@8": "0x4118c0",
+        "_OS_ReadDir@16": "0x411990",
+        "_OS_CloseDir@4": "0x411bf0",
+        "_CLProj_GetFileName@4": "0x417500",
+        "_CLProj_MakeOSSpecFromPath@20": "0x417670",
+        "_fn_004151f0": "0x418820",
+        "_fn_00427c40": "0x427c40",
+        "_data_0071099c": "0x71099c",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_Path_Init": "0x4264b0",
+        "_Path_New": "0x426520",
+        "_Path_Free": "0x426540",
+        "_Paths_Initialize": "0x426590",
+        "_Paths_Terminate": "0x4265d0",
+        "_Paths_GrowPaths": "0x426640",
+        "_Paths_AddPath": "0x4266b0",
+        "_Paths_InsertPath": "0x4266f0",
+        "_Paths_RemovePath": "0x4267c0",
+        "_Paths_DeletePath": "0x426840",
+        "_Paths_GetPath": "0x426880",
+        "_Paths_Count": "0x4268d0",
+        "_fn_00426900": "0x426900",
+        "_fn_00426950": "0x426950",
+        "_Paths_FindPathSpec": "0x426970",
+        "_fn_004269e0": "0x4269e0",
+        "_fn_00426a80": "0x426a80",
+        "_GatherRecurse": "0x426ad0",
+        "_Paths_GatherRecurse": "0x426c70",
+        "_Paths_CountRecurse": "0x426ca0",
+        "_CopyRecurseSpecs": "0x426d10",
+        "_Paths_CopyRecurseSpecs": "0x426e10"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@149",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066e088",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@150",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066e0d4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@169",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066e098",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@206",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066e0b8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@236",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066e0c0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@405",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066e0a8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "2323",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "88",
+          "match_percent": 100.0
+        }
+      ],
+      "compiler": "build/compilers/cw94/mwcc.exe",
+      "flags": "-c -O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+      "experiments": {
+        "profiles": 1,
+        "successful_compiles": 5,
+        "initial_exact": 17,
+        "final_exact": 22,
+        "changes_for_remaining": "4B localstorageforlowbytemode; STABSUInt16 addedslot; baselineexplicitvalidflagforassert; recursiveUInt16orderreturnABI andwrapperreturn."
+      },
+      "record_ABI": {
+        "OSPathSpec": {
+          "size": 260
+        },
+        "OSSpec": {
+          "size": 516,
+          "directory": 0,
+          "name256": 260
+        },
+        "DirectorySearch": {
+          "size": 268,
+          "handle": 0,
+          "findData": 4,
+          "path260": 8
+        },
+        "Paths": {
+          "size": 8,
+          "pathsArray": 0,
+          "arraySize16": 4,
+          "pathsCount16": 6
+        },
+        "Path": {
+          "size": 16,
+          "spec": 0,
+          "recursive": 4,
+          "flags16": 8,
+          "index16": 10,
+          "order16": 12,
+          "gathered8": 14,
+          "field_name_provenance": "spec/recursive/flags canonicalMacSTABS; index/order/gathered are descriptive inferred Windows fields, original names unavailable."
+        }
+      },
+      "membership": {
+        "Mac_explicit": 36,
+        "Windows_cluster": 22,
+        "canonical_retained_Mac_core": 18,
+        "unknown_original_Windows_helper_names": [
+          "fn_00426900",
+          "fn_00426950",
+          "fn_004269e0",
+          "fn_00426a80"
+        ],
+        "Mac_absent_from_this_Windows_cluster": [
+          "Paths_FindPath",
+          "Frameworks_Initialize",
+          "Frameworks_Grow",
+          "Frameworks_Add",
+          "Framework_Init",
+          "Framework_New",
+          "CheckForFileInFrameworkDir",
+          "CheckForFileInFramework",
+          "MakeFrameworkPath",
+          "Frameworks_AddPath",
+          "Frameworks_AddFrameworkName",
+          "Framework_CheckFrameworks",
+          "Frameworks_AddFramework_Internal",
+          "Framework_GetEnvInfoPaths",
+          "Framework_GetEnvInfo",
+          "Frameworks_GetCount",
+          "Frameworks_GetInfo",
+          "Frameworks_GetSharedLibrary"
+        ],
+        "absence_limit": "Absence means no separate function in the recovered contiguous WindowsTU cluster; does not claim platform-elided names were searched across every other binaryTU.",
+        "cluster": "4264b0..426e4e. Functions includeall9 assertioninventorybodies plus13 assertion-freehelpers. Next426e50 manipulatesglobaltargetaccesspathlists (differentcallerTU, notassignedhere).",
+        "ownership_proof": "CLAccessPaths.c assertions exactfile66e088; corefunctionorder/layout/semantics correspond explicitSTABS. FourWindowshelpers interleaved and directly calledby retainedcore; canonicalnames unavailable soaddressaliaseskept.",
+        "boundary_method": "Capstone reachableoriginalCFG plus savedGhidraentries, trailingalignmentNOPexcluded; allcompiledsizesexact.",
+        "data": "Six literalobjects88B writable.data exact andfixupexact, no emittedBSS/rodata; no newstaticnameddata."
+      },
+      "semantic_review": {
+        "Path_Init": "Allocates260B, copies OSPathSpec, clears recursive pointer, ushortflags8, ushortorderc, bytegatherede. Leaves indexa uninitialized until insertion; preserved.",
+        "Path_New": "Allocates16B xmalloc@8(NULL,16), calls Path_Init; returns pointer without extra failure checks.",
+        "Path_Free": "NULL ignored; writes indexa=ffff before freeing spec, recursively terminating/freeing child list, then frees node, all xfree@4.",
+        "Paths_Initialize": "Asserts55 paths!=NULL, zeros8B including counters, redundantly setsarrayNULL,returns1.",
+        "Paths_Terminate": "Asserts66; unsigned16 iteration throughcount callsPath_Free, freesarray; resets pointer and both16bit counters,returns1.",
+        "Paths_GrowPaths": "Static per MacSTABS. Asserts89; unsigned16 count>=capacity growscapacity20 with16bit truncation, xrealloc@12(labelaccess paths,old,capacity<<2); writesoldcount toindex and incrementscount,returns1.",
+        "Paths_AddPath": "Grow slot, array[slot]=path, records slot in path.index; returns1 or0.",
+        "Paths_InsertPath": "Grow first; if requestedindex>oldcount use oldcount-1, with special oldcount0=>0. Memmove (newcount-index)*4 bytes (observed extra-slot copy preserved), writes path andindex; renumbers laterindexfields. Unsigned16 incoming index behavior preserved.",
+        "Paths_RemovePath": "Invalid unsigned16 index>=count returns0. Otherwise shifts(count-index-1)*4 bytes, decrements16bitcount, renumbers remainingpathindexfields. Does not free removednode.",
+        "Paths_DeletePath": "Bounds check, Path_Free(array[index]), then Paths_RemovePath; returnsRemove result.",
+        "Paths_GetPath": "Asserts165; unsigned16 index<count returnsarray[index],elseNULL. Truncates incomingargument to16bits as original.",
+        "Paths_Count": "Asserts175;returnsstored16bitcount.",
+        "fn_00426900": "Windows helper originalnameunknown. Receives unsigned16 startorder; NULL list returnsorder. Eachnode storescurrentorder atoffsetc, then order=recursive(child,order+1) with16bitwrap. Returns nextorder; this is preorder numbering, not nesting depth. ExactAX return propagation proven, including emptylist/NULLchild and siblingbehavior.",
+        "fn_00426950": "Windows originalnameunknown. Returns recursive helper nextUInt16 order; wrapper machine body18B exact.",
+        "Paths_FindPathSpec": "Asserts228; scans unsigned16 index<count, compares OSPathSpecs using OS_EqualPathSpec@8 at4113c0,returnsfirstmatchingpath orNULL.",
+        "fn_004269e0": "Windows helper originalnameunknown. If gathered alreadyset returns; otherwise setsit beforedirectoryopen. LoopsOS_ReadDir untilerr!=0 and registers filenames whosemodebit1set viafn427c40(currenttarget,path,filename). CallsOS_CloseDir evenifopenfails, matchingretail.",
+        "fn_00426a80": "Windows helper originalnameunknown. CLProj_GetFileName@4; end=name+strlen-1, skips finalbackslash; excludes names beginning( and ending) onlywhenname<end. Emptyname behavior is left unchanged, no extra boundscheck.",
+        "GatherRecurse": "Static perMacSTABS; initialpollUserBreak returns1 immediately ifrequested. Open/read directory; modebit2directories accepted byfn426a80 createPath_New fromspec.directory260B, inheritflags, appendto shared flat descendantlist, recursively gather, deletechildifnofiles. Filesmodeelse registercallbackonlyifparentnotalreadygathered, incrementfiles, poll every50; cancellationreturns0 withoutclosing/currentgatheredwrite, asretail. Normal/errorloopend closesdirectory, marksgathered1, returnsfiles>0.",
+        "Paths_GatherRecurse": "Allocateszeroed8B childPaths withxcalloc@8(NULL,8), callsGatherRecurse, returnswhetherchildlistcountnonzero; ignoresGatherRecursestatus.",
+        "Paths_CountRecurse": "Countsinitialpaths; loopsunsigned16index against evolving total; assert390 ifGetPathNULL; addschildCountRecurse tosame loopbound. Potentialout-of-range behavior with growingbound deliberatelypreserved, allbytesexact.",
+        "CopyRecurseSpecs": "Static originalname, now4args plugin,list**,paths,count*. Countassert406 preservesliteralpath && *count > 0 andword!=0 behavior. CLProj_MakeOSSpecFromPath@20(pathspec,NULL,0,&spec,0), raw516B copy, list advances516, count decrements16bit, thenchildrecursionpassingplugin. Windows has no Mac FSSpec conversion.",
+        "Paths_CopyRecurseSpecs": "Canonical4arg wrapper plugin,list,paths,UInt16count. CallsCopyRecurseSpecs addressesoflist/count; assertscount==0 at421. Plugin forwarded butunused natively."
+      },
+      "limits": {
+        "unported_behavior": [],
+        "equivalent_nonmatches": [],
+        "unknown_names": "FourWindowsonlyhelpernames anddata0071099c globalname unresolved; nofunctional uncertainty for22 compiledexactbodies. External427c40 keptaddressaliaspendingauthoritativeCLDependenciesname."
+      },
+      "provenance": {
+        "binary": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+        "binary_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "symbolmap": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "symbolmap_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "stabs_snapshot": "build/accesspaths-stabs.txt",
+        "disasm": "build/accesspaths-retail.txt",
+        "Ghidra_live": "Unavailable; savedentryexport andoriginalPE Capstone used."
+      },
+      "encoding": "CP932 succeeds; repositorytools/check_sjis.py absent.",
+      "code_bytes": 2323,
+      "initialized_data_bytes": 88,
+      "bss_bytes": 0,
+      "membership_reviewed": true,
+      "strict_exact_count": 22
     }
   },
   "ownership_review": {

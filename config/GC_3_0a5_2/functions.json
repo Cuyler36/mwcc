@@ -3299,28 +3299,248 @@
     "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
   },
   {
-    "name": "copy_access_paths_to_file_specs",
-    "address": "0x00426d10",
-    "size": 251,
-    "source": "src/driver/CLAccessPaths.c",
-    "baseline_name": "copy_access_paths_to_file_specs",
-    "baseline_address": "0x00427660",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "Path_Init",
+    "address": "0x4264b0",
+    "size": 107,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "copy_access_paths_to_file_specs_checked",
-    "address": "0x00426e10",
+    "name": "Path_New",
+    "address": "0x426520",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Path_Free",
+    "address": "0x426540",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_Initialize",
+    "address": "0x426590",
+    "size": 56,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_Terminate",
+    "address": "0x4265d0",
+    "size": 110,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_GrowPaths",
+    "address": "0x426640",
+    "size": 105,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_AddPath",
+    "address": "0x4266b0",
+    "size": 64,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_InsertPath",
+    "address": "0x4266f0",
+    "size": 202,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_RemovePath",
+    "address": "0x4267c0",
+    "size": 122,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_DeletePath",
+    "address": "0x426840",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_GetPath",
+    "address": "0x426880",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_Count",
+    "address": "0x4268d0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00426900",
+    "address": "0x426900",
+    "size": 78,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00426950",
+    "address": "0x426950",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_FindPathSpec",
+    "address": "0x426970",
+    "size": 107,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004269e0",
+    "address": "0x4269e0",
+    "size": 159,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00426a80",
+    "address": "0x426a80",
+    "size": 72,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GatherRecurse",
+    "address": "0x426ad0",
+    "size": 407,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_GatherRecurse",
+    "address": "0x426c70",
+    "size": 45,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_CountRecurse",
+    "address": "0x426ca0",
+    "size": 107,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CopyRecurseSpecs",
+    "address": "0x426d10",
+    "size": 251,
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "baseline_name": "copy_access_paths_to_file_specs",
+    "baseline_address": "0x00427660",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Paths_CopyRecurseSpecs",
+    "address": "0x426e10",
     "size": 62,
-    "source": "src/driver/CLAccessPaths.c",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c",
     "baseline_name": "copy_access_paths_to_file_specs_checked",
     "baseline_address": "0x00427740",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLAccessPaths.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

@@ -41,7 +41,7 @@
     "src/backend/StackFrameEABI.c",
     "src/backend/Switch.c",
     "src/backend/TOC.c",
-    "src/driver/CLAccessPaths.c",
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c",
     "src/GC_3_0a5_2/driver/CLBrowser.c",
     "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
     "src/driver/CLCompilerLinkerDropin_V10.cpp",
@@ -1015,25 +1015,6 @@
       ],
       "include_dirs": [
         "src/backend"
-      ]
-    },
-    "src/driver/CLAccessPaths.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
       ]
     },
     "src/driver/CLCompilerLinkerDropin_V10.cpp": {
@@ -3248,6 +3229,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3593,7 +3593,29 @@
     "src/GC_3_0a5_2/driver/CLPrefs/Prefs_Terminate",
     "src/GC_3_0a5_2/driver/CLPrefs/Prefs_AddPanel",
     "src/GC_3_0a5_2/driver/CLPrefs/Prefs_FindPanel",
-    "src/GC_3_0a5_2/driver/CLPrefs/fn_00426220"
+    "src/GC_3_0a5_2/driver/CLPrefs/fn_00426220",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Path_Init",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Path_New",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Path_Free",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_Initialize",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_Terminate",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_GrowPaths",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_AddPath",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_InsertPath",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_RemovePath",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_DeletePath",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_GetPath",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_Count",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/fn_00426900",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/fn_00426950",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_FindPathSpec",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/fn_004269e0",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/fn_00426a80",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/GatherRecurse",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_GatherRecurse",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_CountRecurse",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/CopyRecurseSpecs",
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_CopyRecurseSpecs"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3607,7 +3629,8 @@
     "src/GC_3_0a5_2/driver/CLOverlays.c",
     "src/GC_3_0a5_2/driver/CLSegs.c",
     "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
-    "src/GC_3_0a5_2/driver/CLPrefs.c"
+    "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3931,6 +3954,44 @@
       "_Prefs_AddPanel": "0x426160",
       "_Prefs_FindPanel": "0x4261f0",
       "_fn_00426220": "0x426220"
+    },
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c": {
+      "_xmalloc@8": "0x426300",
+      "_xcalloc@8": "0x426360",
+      "_xrealloc@12": "0x4263e0",
+      "_xfree@4": "0x426490",
+      "_OS_EqualPathSpec@8": "0x4113c0",
+      "_OS_OpenDir@8": "0x4118c0",
+      "_OS_ReadDir@16": "0x411990",
+      "_OS_CloseDir@4": "0x411bf0",
+      "_CLProj_GetFileName@4": "0x417500",
+      "_CLProj_MakeOSSpecFromPath@20": "0x417670",
+      "_fn_004151f0": "0x418820",
+      "_fn_00427c40": "0x427c40",
+      "_data_0071099c": "0x71099c",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_Path_Init": "0x4264b0",
+      "_Path_New": "0x426520",
+      "_Path_Free": "0x426540",
+      "_Paths_Initialize": "0x426590",
+      "_Paths_Terminate": "0x4265d0",
+      "_Paths_GrowPaths": "0x426640",
+      "_Paths_AddPath": "0x4266b0",
+      "_Paths_InsertPath": "0x4266f0",
+      "_Paths_RemovePath": "0x4267c0",
+      "_Paths_DeletePath": "0x426840",
+      "_Paths_GetPath": "0x426880",
+      "_Paths_Count": "0x4268d0",
+      "_fn_00426900": "0x426900",
+      "_fn_00426950": "0x426950",
+      "_Paths_FindPathSpec": "0x426970",
+      "_fn_004269e0": "0x4269e0",
+      "_fn_00426a80": "0x426a80",
+      "_GatherRecurse": "0x426ad0",
+      "_Paths_GatherRecurse": "0x426c70",
+      "_Paths_CountRecurse": "0x426ca0",
+      "_CopyRecurseSpecs": "0x426d10",
+      "_Paths_CopyRecurseSpecs": "0x426e10"
     }
   }
 }

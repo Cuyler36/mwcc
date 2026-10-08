@@ -1114,5 +1114,93 @@
   "create_data_block": {
     "name": "PrefPanel_New",
     "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "Path_Init": {
+    "name": "Path_Init",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Path_New": {
+    "name": "Path_New",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Path_Free": {
+    "name": "Path_Free",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_Initialize": {
+    "name": "Paths_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_Terminate": {
+    "name": "Paths_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_GrowPaths": {
+    "name": "Paths_GrowPaths",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_AddPath": {
+    "name": "Paths_AddPath",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_InsertPath": {
+    "name": "Paths_InsertPath",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_RemovePath": {
+    "name": "Paths_RemovePath",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_DeletePath": {
+    "name": "Paths_DeletePath",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_GetPath": {
+    "name": "Paths_GetPath",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_Count": {
+    "name": "Paths_Count",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "fn_00426900": {
+    "name": "fn_00426900",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "fn_00426950": {
+    "name": "fn_00426950",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_FindPathSpec": {
+    "name": "Paths_FindPathSpec",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "fn_004269e0": {
+    "name": "fn_004269e0",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "fn_00426a80": {
+    "name": "fn_00426a80",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "GatherRecurse": {
+    "name": "GatherRecurse",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_GatherRecurse": {
+    "name": "Paths_GatherRecurse",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "Paths_CountRecurse": {
+    "name": "Paths_CountRecurse",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "copy_access_paths_to_file_specs": {
+    "name": "CopyRecurseSpecs",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "copy_access_paths_to_file_specs_checked": {
+    "name": "Paths_CopyRecurseSpecs",
+    "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
   }
 }

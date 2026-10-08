@@ -1,3 +1,4 @@
+#include "version.h"
 #include "compiler/common.h"
 #include "compiler/CScope.h"
 #include "compiler/enode.h"
@@ -57,6 +58,7 @@
 
 /* Declarations gathered from the merged files. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int CScope_ParseUsingDirective(NameSpace *container)
 {
     NameSpaceList *entry;
@@ -83,11 +85,13 @@ unsigned int CScope_ParseUsingDirective(NameSpace *container)
         entry = CError_ReportError(ERR_SEMICOLON_EXPECTED);
     return (unsigned int)entry;
 }
+#endif
 
 /* Layout of the scope entry inspected by this routine. */
 
 /* Result shared by class and namespace scope lookup. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_ParseUsingDeclaration(NameSpace *nspace, AccessType flag, Boolean unused)
 {
     Boolean isVirtual;
@@ -156,6 +160,7 @@ void CScope_ParseUsingDeclaration(NameSpace *nspace, AccessType flag, Boolean un
     if (tk != ';')
         CError_ReportError(ERR_SEMICOLON_EXPECTED);
 }
+#endif
 #undef CERROR_FILE
 
 /* Result record used by fn_0049a3e0; unused fields are not yet identified. */
@@ -173,6 +178,7 @@ static inline Boolean CScope_ResolveLookupContext(CScopeParseResult *result, Obj
     return 1;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_AddClassUsingDeclaration(TypeClass *def, TypeClass *tp, HashNameNode *name, Boolean flag)
 {
     CScopeParseResult result;
@@ -201,6 +207,7 @@ void CScope_AddClassUsingDeclaration(TypeClass *def, TypeClass *tp, HashNameNode
         CError_ReportError(ERR_ILLEGAL_USE_TEMPLATE_ARGUMENT_DEPENDENT_TYPE, name->name);
     }
 }
+#endif
 #undef CERROR_FILE
 
 #define CERROR_FILE "NameSpace.c"
@@ -337,6 +344,7 @@ void add_using_declaration(BClassList *bases, NameSpace *scope, ObjBase *def, Ha
 }
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_ParseMemberName(TypeClass *ctx, CScopeParseResult *node, Boolean flag)
 {
     Boolean result;
@@ -391,6 +399,7 @@ Boolean CScope_ParseMemberName(TypeClass *ctx, CScopeParseResult *node, Boolean 
     result = parse_name_in_namespace(node, ctx->nspace);
     return result;
 }
+#endif
 #undef CERROR_FILE
 
 BClassList *CScope_GetClassAccessPath(BClassList *classes, TypeClass *base)
@@ -535,6 +544,7 @@ ObjectList *remove_dalias_objects(NameSpaceObjectList *list)
 }
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_FindTypeName(NameSpace *nspace, HashNameNode *name, CScopeParseResult *result)
 {
     LookupCtx state;
@@ -580,8 +590,10 @@ Boolean CScope_FindTypeName(NameSpace *nspace, HashNameNode *name, CScopeParseRe
     }
     return 0;
 }
+#endif
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceObjectList *CScope_FindName(NameSpace *space, HashNameNode *name)
 {
     NameSpaceName *entry;
@@ -600,7 +612,9 @@ NameSpaceObjectList *CScope_FindName(NameSpace *space, HashNameNode *name)
     }
     return NULL;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_ParseNameSpaceAlias(HashNameNode *name)
 {
     NameSpaceObjectList *list;
@@ -626,7 +640,9 @@ void CScope_ParseNameSpaceAlias(HashNameNode *name)
     if (tk != ';')
         CError_ReportError(ERR_SEMICOLON_EXPECTED);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpace *parse_namespace_name(NameSpace *nameSpace)
 {
     CScopeParseResult lookupState;
@@ -690,7 +706,9 @@ NameSpace *parse_namespace_name(NameSpace *nameSpace)
     }
     return nameSpace;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Type *CScope_GetTagType(NameSpace *nspace, HashNameNode *name)
 {
     NameSpaceObjectList *list;
@@ -701,7 +719,9 @@ Type *CScope_GetTagType(NameSpace *nspace, HashNameNode *name)
     }
     return NULL;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_DefineTypeTag(NameSpace *ns, HashNameNode *name, Type *type)
 {
     ObjType *tag = galloc(6);
@@ -716,6 +736,7 @@ void CScope_DefineTypeTag(NameSpace *ns, HashNameNode *name, Type *type)
     tag->type = type;
     CScope_AddObject(ns, name, (ObjBase *)tag);
 }
+#endif
 #undef CERROR_FILE
 
 /* Hash-table owner/namespace record as laid out in this build: the hash
@@ -739,6 +760,7 @@ NameSpaceObjectList *CScope_NextNameSpaceObjectList(ScopeSearch *state)
 }
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 Object *CScope_NextObject(ScopeSearch *s)
 {
     while (1) {
@@ -762,6 +784,7 @@ Object *CScope_NextObject(ScopeSearch *s)
         s->nextName = s->owner->data.hash[s->bucketIndex];
     }
 }
+#endif
 #undef CERROR_FILE
 
 int CScope_InitScopeSearch(ScopeSearch *save, NameSpace *obj)
@@ -775,6 +798,7 @@ int CScope_InitScopeSearch(ScopeSearch *save, NameSpace *obj)
 }
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_PossibleTypeName(HashNameNode *name)
 {
     Boolean more;
@@ -825,12 +849,14 @@ Boolean CScope_PossibleTypeName(HashNameNode *name)
     } while (more);
     return 0;
 }
+#endif
 #undef CERROR_FILE
 
 #define CERROR_FILE "CScopeParseResult.c"
 
 /* State carried while searching namespaces and using lists. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceObjectList *CScope_FindObjectList(CScopeParseResult *result, HashNameNode *name)
 {
     NameSpace *namespace;
@@ -873,6 +899,7 @@ NameSpaceObjectList *CScope_FindObjectList(CScopeParseResult *result, HashNameNo
     } while (more);
     return NULL;
 }
+#endif
 
 static void CScope_NSIteratorInit(LookupCtx *iterator, NameSpace *nspace, CScopeParseResult *result)
 {
@@ -938,6 +965,7 @@ Boolean CScope_FindObject(NameSpace *nspace, CScopeParseResult *result, HashName
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_ParseElaborateName(CScopeParseResult *result)
 {
     HashNameNode *name;
@@ -1054,6 +1082,7 @@ Boolean CScope_ParseElaborateName(CScopeParseResult *result)
     result->name = name;
     return 1;
 }
+#endif
 
 #define TCE(t) ((TypeClassExt800 *)(t))
 
@@ -1234,6 +1263,7 @@ restart:
 
 /* Iterator state record whose address is handed to fn_00499ee0. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_ParseDeclName(CScopeParseResult *lookup)
 {
     HashNameNode *name;
@@ -1389,7 +1419,9 @@ Boolean CScope_ParseDeclName(CScopeParseResult *lookup)
     CError_ReportError(ERR_UNDEFINED_IDENTIFIER, name->name);
     return 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_ParseExprName(CScopeParseResult *scope)
 {
     Boolean moreScopes;
@@ -1546,11 +1578,13 @@ Boolean CScope_ParseExprName(CScopeParseResult *scope)
     scope->name = name;
     return 1;
 }
+#endif
 
 /* Additional storage used by classes carrying flag 0x800. */
 
 /* Storage for a scope lookup and its parser result. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean parse_name_in_namespace(CScopeParseResult *scope, NameSpace *ns)
 {
     Boolean isDestructor;
@@ -1635,8 +1669,10 @@ Boolean parse_name_in_namespace(CScopeParseResult *scope, NameSpace *ns)
         return 1;
     }
 }
+#endif
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean parse_qualified_templdep_type(CScopeParseResult *context, Type *qualifier, Boolean allowToken328)
 {
     TypeTemplDep *node;
@@ -1696,6 +1732,7 @@ Boolean parse_qualified_templdep_type(CScopeParseResult *context, Type *qualifie
     context->type.base = qualifier;
     return 1;
 }
+#endif
 #undef CERROR_FILE
 
 static Boolean NextNameSpace(LookupCtx *ctx)
@@ -1739,6 +1776,7 @@ Type *CScope_FindTagType(NameSpace *nspace, HashNameNode *name)
     return NULL;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Type *CScope_GetType(NameSpace *nspace, HashNameNode *name, UInt32 *qual)
 {
     NameSpaceObjectList *objects;
@@ -1786,6 +1824,7 @@ Type *CScope_GetType(NameSpace *nspace, HashNameNode *name, UInt32 *qual)
     } while (more);
     return NULL;
 }
+#endif
 #undef CERROR_FILE
 
 static int lookup(struct NameSpace *a1, HashNameNode *a2)
@@ -2565,6 +2604,7 @@ ScopeRec *build_usings_scope_list(NameSpace *ns)
     return root.outer;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 struct ScopeRec *build_namespace_scope_rec(NameSpace *nspace)
 {
     ScopeRec *rec;
@@ -2611,14 +2651,18 @@ struct ScopeRec *build_namespace_scope_rec(NameSpace *nspace)
     }
     return rec;
 }
+#endif
 #undef CERROR_FILE
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_AddGlobalObject(Object *object)
 {
     object->nspace = registration_context;
     CScope_AddObject(registration_context, object->name, (ObjBase *)object);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_AddObject(NameSpace *scope, HashNameNode *name, ObjBase *object)
 {
     HashNameNode *lookupName;
@@ -2750,9 +2794,11 @@ addName:
 done:
     return;
 }
+#endif
 
 /* 0x1c-byte scope record: pointer at 0x04, flags at 0x18/0x19. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpace *CScope_NewListNameSpace(HashNameNode *name, Boolean is_global)
 {
     NameSpace *ns;
@@ -2769,6 +2815,7 @@ NameSpace *CScope_NewListNameSpace(HashNameNode *name, Boolean is_global)
     ns->is_global = is_global;
     return ns;
 }
+#endif
 
 static inline int CScope_0049b0e0_inline1(NameSpace *v2, HashNameNode *a1)
 {
@@ -2788,6 +2835,7 @@ static inline int CScope_0049b0e0_inline1(NameSpace *v2, HashNameNode *a1)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceObjectList *CScope_ArgumentDependentNameLookup(NameSpaceObjectList *results, HashNameNode *name,
                                                         ENodeList *objects, char excludeMethods)
 {
@@ -2843,6 +2891,7 @@ NameSpaceObjectList *CScope_ArgumentDependentNameLookup(NameSpaceObjectList *res
     }
     return results;
 }
+#endif
 
 NameSpaceList *collect_type_namespaces(NameSpaceList *acc, Type *type)
 {
@@ -2913,6 +2962,7 @@ NameSpaceObjectList *CScope_InsertNameSpaceName(NameSpace *nspace, HashNameNode 
     return &entry->first;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt8 CScope_IsEmptyNameSpace(NameSpace *nameSpace)
 {
     if (nameSpace->is_hash != '\0') {
@@ -2920,7 +2970,9 @@ UInt8 CScope_IsEmptyNameSpace(NameSpace *nameSpace)
     }
     return nameSpace->data.list == NULL;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpace *CScope_FindGlobalNS(NameSpace *scope)
 
 {
@@ -2932,6 +2984,7 @@ NameSpace *CScope_FindGlobalNS(NameSpace *scope)
     }
     return registration_context;
 }
+#endif
 
 NameSpace *CScope_FindNonClassNonTemplNameSpace(NameSpace *nspace)
 {
@@ -2957,6 +3010,7 @@ UInt8 CScope_IsInLocalNameSpace(NameSpace *scope)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_FindClassMemberObject(TypeClass *tclass, CScopeParseResult *result, HashNameNode *name)
 {
     NameSpaceObjectList *objects;
@@ -2974,7 +3028,9 @@ Boolean CScope_FindClassMemberObject(TypeClass *tclass, CScopeParseResult *resul
     }
     return 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt8 CScope_FindQualifiedClassMember(CScopeParseResult *holder, TypeClass *type, HashNameNode *name)
 {
     Boolean success;
@@ -2996,6 +3052,7 @@ UInt8 CScope_FindQualifiedClassMember(CScopeParseResult *holder, TypeClass *type
     }
     return 0;
 }
+#endif
 
 BClassList *find_base_class_path(TypeClass *theclass, TypeClass *target, unsigned int offset)
 {
@@ -3048,6 +3105,7 @@ void CScope_MergeNameSpace(NameSpace *dest, NameSpace *source)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpace *CScope_NewHashNameSpace(HashNameNode *name)
 {
     NameSpace *nspace;
@@ -3062,7 +3120,9 @@ NameSpace *CScope_NewHashNameSpace(HashNameNode *name)
     nspace->is_global = 1;
     return nspace;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceList *fn_0049b300(NameSpaceList *list, NameSpace *nspace)
 {
     NameSpaceList *n;
@@ -3086,7 +3146,9 @@ NameSpaceList *fn_0049b300(NameSpaceList *list, NameSpace *nspace)
     }
     return list;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceObjectList *CScope_InsertName(NameSpace *scope, HashNameNode *name)
 {
     NameSpaceName *entry;
@@ -3117,7 +3179,9 @@ NameSpaceObjectList *CScope_InsertName(NameSpace *scope, HashNameNode *name)
     target->names += 1U;
     return &entry->first;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameSpaceName *CScope_FindNameSpaceName(NameSpace *nameSpace, HashNameNode *name)
 {
     NameSpaceName *node;
@@ -3133,6 +3197,7 @@ NameSpaceName *CScope_FindNameSpaceName(NameSpace *nameSpace, HashNameNode *name
     }
     return NULL;
 }
+#endif
 
 /* 0x491250, one pointer arg, Boolean result */
 /* 0x55e480, "CScopeParseResult.c" file name */
@@ -3140,6 +3205,7 @@ NameSpaceName *CScope_FindNameSpaceName(NameSpace *nameSpace, HashNameNode *name
 /* Global describing a hashed namespace / object table. Offsets verified from
  * the disassembly: bucket array pointer at 0x10, is_hash flag byte at 0x18. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CScope_IsEmptySymTable(void)
 {
     SInt32 i;
@@ -3159,7 +3225,9 @@ Boolean CScope_IsEmptySymTable(void)
     }
     return 1;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_RestoreScope(CScopeSave *save)
 {
     currentNameSpace = save->nspace;
@@ -3167,8 +3235,10 @@ void CScope_RestoreScope(CScopeSave *save)
     data_00588238 = save->function;
     data_005884f8 = save->member_context;
 }
+#endif
 
 /* Enters member function FUNCTION of THECLASS (static when IS_STATIC), saving the current scope in SAVE. */
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_SetMethodScope(Object *cls, TypeClass *ns, unsigned char flag, CScopeSave *save)
 {
     save->nspace = currentNameSpace;
@@ -3180,8 +3250,10 @@ void CScope_SetMethodScope(Object *cls, TypeClass *ns, unsigned char flag, CScop
     currentNameSpace = ns->nspace;
     data_005884f8 = !flag;
 }
+#endif
 
 /* Enters FUNCTION's scope, saving the current one in SAVED. */
+#if VERSION != VERSION_GC_3_0A5_2
 void CScope_SetFunctionScope(Object *function, CScopeSave *saved)
 {
     saved->nspace = currentNameSpace;
@@ -3199,5 +3271,6 @@ void CScope_SetFunctionScope(Object *function, CScopeSave *saved)
         currentNameSpace = function->nspace;
     }
 }
+#endif
 
 #undef CERROR_FILE

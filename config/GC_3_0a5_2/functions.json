@@ -11310,470 +11310,1010 @@
     }
   },
   {
-    "name": "CScope_ParseNameSpaceAlias",
-    "address": "0x004e5610",
-    "size": 311,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseNameSpaceAlias",
-    "baseline_address": "0x00497070",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CScope_ParseUsingDirective",
+    "address": "0x4e55a0",
+    "size": 109,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "parse_namespace_name",
-    "address": "0x004e5750",
-    "size": 372,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "parse_namespace_name",
-    "baseline_address": "0x00497180",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CScope_ParseNameSpaceAlias",
+    "address": "0x4e5610",
+    "size": 311,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseNameSpaceAlias",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed existing namespace alias equality, conflicting object diagnostic2850, allocation6/zero/access, parse advancement and semicolon skip. Remaining register allocation/branch layout differences.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_ParseQualifiedNamespaceSpecifier",
+    "address": "0x4e5750",
+    "size": 372,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "parse_namespace_name",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed global scope386, identifier requirement, using/parent namespace iteration, namespace-only match, qualification flag42 and token advancement; diagnostic279c preserves current namespace recovery.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_ParseUsingDeclaration",
-    "address": "0x004e58d0",
+    "address": "0x4e58d0",
     "size": 631,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseUsingDeclaration",
-    "baseline_address": "0x004972f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseUsingDeclaration",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed class template flag100, typename290, four-arg member parse, dependent-kind10/subtype1 object creation10/96B, template metadata callback, single/overload-list using objects, scope save/restore and semicolon handling.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_AddClassUsingDeclaration",
-    "address": "0x004e5b50",
+    "address": "0x4e5b50",
     "size": 469,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_AddClassUsingDeclaration",
-    "baseline_address": "0x00497510",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_AddClassUsingDeclaration",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B clear, class member search, inheritance validation, allowed kinds0/1/2/4/5 and2864 failure. Switch code labels differ; no anonymous binding.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
     }
   },
   {
-    "name": "add_using_declaration",
-    "address": "0x004e5d30",
+    "name": "CScope_AddUsingObject",
+    "address": "0x4e5d30",
     "size": 1216,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "add_using_declaration",
-    "baseline_address": "0x00497640",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "add_using_declaration",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed six native arguments, access checker53f5b0, alias copies10/6/22/32/96B, duplicate type/tag/object rejection, member hiding,96B alias link64/overrideclass68/zero72, nonstatic member-function relation and full-ID diagnostics. Native C++ layouts and helper identities remain private.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_FindObjectListInNameSpace",
-    "address": "0x004e66e0",
-    "size": 155,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_FindObjectListInNameSpace",
-    "baseline_address": "0x00497bf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CScope_HidesObject",
+    "address": "0x4e61f0",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed object/function/member-function predicate, qualifier-mask18000 comparison, skipping implicit this for nonstatic args and argument-list comparator454700.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_ParseMemberName",
+    "address": "0x4e6270",
+    "size": 794,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed native FOUR args, qualified identifier peeking/restoring, four-arg expression parser path, destructor checker/implicit result, dependent-name rejection unless allowed, found-template notification and base-class validation.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e6590",
+    "address": "0x4e6590",
+    "size": 336,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed class namespace search, in-class output byte, outer namespace fallback, template-instantiation flags800/100 exception, warning27cc and namespace/class/global missing-name diagnostics. Name unproved.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_GetLocalObject",
+    "address": "0x4e66e0",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_FindObjectListInNameSpace",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed hash/list local-only lookup, kind5 object acceptance, kind2 tag rejection, conflicting-kind diagnostic278a. Switch targets differ.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
     }
   },
   {
     "name": "CScope_FindTypeName",
-    "address": "0x004e6780",
+    "address": "0x4e6780",
     "size": 254,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_FindTypeName",
-    "baseline_address": "0x00497d30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_FindTypeName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B clear, namespace iteration and namespace/type/tag result handling; qualified/error state uses native fields, switch targets differ.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
     }
   },
   {
-    "name": "CScope_GetTagType",
-    "address": "0x004e6880",
+    "name": "CScope_GetLocalTagType",
+    "address": "0x4e6880",
     "size": 131,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_GetTagType",
-    "baseline_address": "0x00497e40",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_GetTagType",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed local-only hash/list search and first kind2 tag return; differs from recursive GetTagType.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_DefineTypeTag",
-    "address": "0x004e6910",
+    "address": "0x4e6910",
     "size": 75,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_DefineTypeTag",
-    "baseline_address": "0x00497ea0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_DefineTypeTag",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed6B zeroed allocation,kind2,access inherited only for class namespace,type assignment and AddObject; return pointer retained though legacy declaredvoid.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_NextObject",
-    "address": "0x004e6960",
+    "name": "CScope_NextObjectIteratorObject",
+    "address": "0x4e6960",
     "size": 107,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_NextObject",
-    "baseline_address": "0x00497f30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_NextObject",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed16B cursor state, kinds filtered to5, linked name/object traversal,1024 hash buckets, list end and null return.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_InitScopeSearch",
-    "address": "0x004e69d0",
+    "name": "CScope_InitObjectIterator",
+    "address": "0x4e69d0",
     "size": 49,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_InitScopeSearch",
-    "baseline_address": "0x00497fa0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_InitScopeSearch",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindClassMemberObject",
+    "address": "0x4e6a10",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_PossibleTypeName",
+    "address": "0x4e6a70",
+    "size": 251,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed iterator state and kinds1/3 accepted,2 accepted only C++ option, all other kinds false; differing switch labels.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CScope_FindObjectList",
+    "address": "0x4e6b70",
+    "size": 251,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B clear, current namespace and using/parent traversal, tag filtering in C, owning namespace selection and first object-list return.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindNonClassObject",
+    "address": "0x4e6c70",
+    "size": 282,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B clear and explicitly bypassing class namespaces in both scope-record and direct namespace cursors, using merge, C tag skipping and SetupParseNameResult.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_ParseTypeName",
+    "address": "0x4e6d90",
+    "size": 863,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseElaborateName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed C identifier/type/tag loop, C++ qualified namespace parse, native class mode2, qualified type helper, unqualified fallback and unresolved identifier name recovery.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_ParseElaborateName",
-    "address": "0x004e6d90",
-    "size": 863,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseElaborateName",
-    "baseline_address": "0x004983b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x4e70f0",
+    "size": 974,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed C tag-only lookup, C++ qualified parser/type early result, class mode1, qualified tag search, assertion2326 and native unqualified type-or-tag behavior. Correct native address70f0, not oldmapped6d90.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_ParseQualifiedScope",
-    "address": "0x004e74c0",
+    "name": "CScope_ParseQualifiedNameSpace",
+    "address": "0x4e74c0",
     "size": 1879,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseQualifiedScope",
-    "baseline_address": "0x004986e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseQualifiedScope",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed all1879 native bytes: FOUR args(result,namespace,two flags), global/template qualifier tokens, namespace/class/type branches, template primary/instance conversion, dependent-kind10/subtype11 expansion,18B access context, class completion, template-member fallback and token positions. Large control-flow/register differences remain; no end-to-end parser execution harness.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e7c20",
+    "address": "0x4e7c20",
+    "size": 494,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B state, namespace/type/tag-to-class namespace lookup,28a6 nonclass-type diagnostic, report-only missing-name paths and C++ namespace traversal.12B switch table independently anchored/full-payload/fixup validated by source_data.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_ParseDeclName",
-    "address": "0x004e7e10",
+    "address": "0x4e7e10",
     "size": 1291,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseDeclName",
-    "baseline_address": "0x00498b50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseDeclName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed TWO native args(result,namespace), C/C++ paths, native constructor/destructor names, operator scope save/restore13B fields including failure, qualified class/namespace lookup, unresolved error45d870 and unqualified identifier failure recovery.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e8320",
+    "address": "0x4e8320",
+    "size": 405,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_ParseExprName",
-    "address": "0x004e84c0",
+    "address": "0x4e84c0",
     "size": 1321,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_ParseExprName",
-    "baseline_address": "0x00498fb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_ParseExprName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed native48B state, qualified parser four args, template-token warning, operator temporary namespace,14B dependent name nodes and node27 expression, destructor implicit handling, qualified diagnostics versus unqualified identifier recovery.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "parse_name_in_namespace",
-    "address": "0x004e89f0",
+    "address": "0x4e89f0",
     "size": 1050,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "parse_name_in_namespace",
-    "baseline_address": "0x004993b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "parse_name_in_namespace",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed1050 native bytes, repeated qualifiers, template/operator/destructor cases, class completion/member lookup, namespace-using merge, conversion-template function fallback with32B iterator and8B object node, class incomplete diagnostic and template-instance qualifier continuation.99.15% CLI, remaining stack allocation/order and branch placement.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_CheckDtorName",
+    "address": "0x4e8e10",
+    "size": 297,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "parse_qualified_templdep_type",
-    "address": "0x004e8f40",
+    "address": "0x4e8f40",
     "size": 679,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "parse_qualified_templdep_type",
-    "baseline_address": "0x004995f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "parse_qualified_templdep_type",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed FOUR native args, saved token state, qualified flag42, operator subtype1/flag46, template token subtype4 nodes,16B dependent types with qualifier8/name-or-args12, argument parsing and buffered-token restoration.91.01% CLI.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_FindTagType",
-    "address": "0x004e91f0",
+    "name": "CScope_GetTagType",
+    "address": "0x4e91f0",
     "size": 219,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_FindTagType",
-    "baseline_address": "0x00499760",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_FindTagType",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed recursive type-tag-only lookup over namespace/using/parent scopes. Native91f0; oldname FindTagType.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_GetType",
+    "address": "0x4e92d0",
+    "size": 295,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed recursive type/type-tag lookup and optional qualifier output; packed native ObjType fields2/6.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindQualifiedType",
+    "address": "0x4e9400",
+    "size": 157,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed class completion and mode2 result, namespace lookup mode2, tag/type payload and qualifiers, assertion2417 for unexpectedkind.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindLookupName",
+    "address": "0x4e94a0",
+    "size": 381,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed recursive native using-list collection, mode0/1/2/3 filtering, namespace extraction and ambiguity diagnostics. Unmatched local switch labels prevent safe table binding.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
     }
   },
   {
     "name": "CScope_FindQualifiedClassMember",
-    "address": "0x004e9620",
+    "address": "0x4e9620",
     "size": 237,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_FindQualifiedClassMember",
-    "baseline_address": "0x00499dc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_FindQualifiedClassMember",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "set_parse_result_from_objects",
-    "address": "0x004e9890",
+    "name": "CScope_AddScopeObjects",
+    "address": "0x4e9710",
+    "size": 375,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed iterator traversal, kind5/function filtering, copying8B list nodes and preserving duplicate-pointer/type/namespace checks.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_SetupParseNameResult",
+    "address": "0x4e9890",
     "size": 159,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "set_parse_result_from_objects",
-    "baseline_address": "0x00499e50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "set_parse_result_from_objects",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed48B result fields: overload-list early branch, namespace rejection, type/tag type28/qual36/object8/name4/access40/is_type45 and ordinary objects12; differing local switch labels.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
     }
   },
   {
-    "name": "find_scope_object_list",
-    "address": "0x004e9930",
+    "name": "CScope_NSIteratorFind",
+    "address": "0x4e9930",
     "size": 166,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "find_scope_object_list",
-    "baseline_address": "0x00499ee0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "find_scope_object_list",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed separate scope/direct paths, using-list merge, class search mode0 and objects12 extraction/reset, local namespace find and null.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_and_append_class_member_path",
-    "address": "0x004e9e70",
+    "name": "fn_004e99e0",
+    "address": "0x4e99e0",
+    "size": 1168,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed1168B namespace-using merge: local_names16 priority, hash/list search, kind-sensitive object identity including one-level aliases, lazy copy, function/tag compatibility diagnostics, tags appended vs ordinary objects prepended,8B local nodes and optional owning namespace output. Switch local-label mismatch remains.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CScope_FindClassMember",
+    "address": "0x4e9e70",
     "size": 139,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "find_and_append_class_member_path",
-    "baseline_address": "0x0049a3e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "find_and_append_class_member_path",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed13 native state global assignments and recursive path, mostderived20/foundclass24 result, ambiguity43. Native does not write returned path into result16.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_class_member_path",
-    "address": "0x004e9f00",
+    "name": "CScope_RecFindClassMember",
+    "address": "0x4e9f00",
     "size": 1515,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "find_class_member_path",
-    "baseline_address": "0x0049a4a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "find_class_member_path",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed1515 native bytes: base dominance, namespace/tag/type/all modes, template identity+52 exception, class-offset ambiguity, qualifiers/access, base virtual flag17 and offset lookup,8B path nodes and path dominance. Native switch labels differ; no end-to-end class lookup execution harness.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CScope_IsSameNSOL",
+    "address": "0x4ea4f0",
+    "size": 214,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed symmetric containment of kind5 object lists and recursive alias unwrapping+64; no nonobject acceptance.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_CopyNameSpaceObjectList",
+    "address": "0x4ea5d0",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ea650",
+    "address": "0x4ea650",
+    "size": 194,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_AddGlobalObject",
-    "address": "0x004ea720",
+    "address": "0x4ea720",
     "size": 32,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_AddGlobalObject",
-    "baseline_address": "0x0049ac80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_AddGlobalObject",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_AddObject",
-    "address": "0x004ea740",
+    "address": "0x4ea740",
     "size": 788,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_AddObject",
-    "baseline_address": "0x0049aca0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_AddObject",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed class/function namespace handling, native34Bnamespace and U32classflags34, append-vs-insert,8B allocation before conflict checks, type/tag errors, tag ordering, overload-only acceptance and fresh galloc8 nodes in overload branches.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_IsEmptyNameSpace",
-    "address": "0x004eaa60",
+    "address": "0x4eaa60",
     "size": 39,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_IsEmptyNameSpace",
-    "baseline_address": "0x0049afc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_IsEmptyNameSpace",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_IsStdNameSpace",
+    "address": "0x4eaa90",
+    "size": 71,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed namespace/global-root/name predicate and exact std C-string equality; native compares4 bytes through repe cmpsb, current strcmp call is equivalent for valid NUL-terminated names but does not match.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindGlobalNS",
+    "address": "0x4eaae0",
+    "size": 44,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindNonClassNonFunctionNS",
+    "address": "0x4eab10",
+    "size": 45,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed namespace parent traversal excluding class/template/function contexts and root fallback.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_NewListNameSpace",
-    "address": "0x004eab40",
+    "address": "0x4eab40",
     "size": 64,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_NewListNameSpace",
-    "baseline_address": "0x0049b050",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_NewListNameSpace",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_0049b300",
-    "address": "0x004eaef0",
-    "size": 108,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "fn_0049b300",
-    "baseline_address": "0x0049b300",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "name": "CScope_NewHashNameSpace",
+    "address": "0x4eab80",
+    "size": 71,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_ArgumentDependentNameLookup",
+    "address": "0x4eabd0",
+    "size": 413,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed THREE native args, early rejection for member-function results, associated namespace collection, nonmember overload enumeration, existing pointer or namespace/name/type duplicate checks and8B local prepend.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_BuildAssociatedNameSpaceList",
+    "address": "0x4ead70",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed argument nodes and special kind75 overload-reference node16, collecting function types and namespaces; ordinary node type4.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_BuildTypeAssociatedNameSpaceList",
+    "address": "0x4eade0",
+    "size": 263,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed all16 native type switch slots, pointer/array unwrapping, enum namespace6, function args12/result14, member pointer type6/owner10, class namespace and template-instance argument list60/kind7/type8. Both switch tables unresolved because labels differ.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CScope_AddNameSpaceToList",
+    "address": "0x4eaef0",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "fn_0049b300",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed pointer duplicate elimination,8B local prepend, recursive enclosing namespace and all base class namespaces.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_AppendName",
+    "address": "0x4eaf60",
+    "size": 133,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_InsertName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_InsertName",
-    "address": "0x004eaf60",
-    "size": 133,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_InsertName",
-    "baseline_address": "0x0049b370",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x4eaff0",
+    "size": 114,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindNameSpaceName",
+    "address": "0x4eb070",
+    "size": 89,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_FindQualName",
+    "address": "0x4eb0d0",
+    "size": 99,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_FindName",
-    "address": "0x004eb140",
+    "address": "0x4eb140",
     "size": 123,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_FindName",
-    "baseline_address": "0x0049b4a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_FindName",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CScope_IsEmptySymTable",
-    "address": "0x004eb1c0",
+    "name": "CScope_ExtractNameSpace",
+    "address": "0x4eb1c0",
     "size": 141,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_IsEmptySymTable",
-    "baseline_address": "0x0049b500",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_IsEmptySymTable",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed object kinds0..5, namespace direct return, type/tag class extraction, dependent-kind10 quiet null, invalidtype2850 and optional output error; incompatible with oldmapped IsEmptySymTable(void).",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CScope_IsEmptySymTable",
+    "address": "0x4eb250",
+    "size": 118,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed root hash assertion357,1024 buckets and kind5/public-runtime-object4558160 predicate;98.5% register-only difference.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_RestoreScope",
-    "address": "0x004eb2d0",
+    "address": "0x4eb2d0",
     "size": 41,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_RestoreScope",
-    "baseline_address": "0x0049b590",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_RestoreScope",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_SetMethodScope",
-    "address": "0x004eb300",
+    "address": "0x4eb300",
     "size": 86,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_SetMethodScope",
-    "baseline_address": "0x0049b5c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_SetMethodScope",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CScope_SetFunctionScope",
-    "address": "0x004eb360",
+    "address": "0x4eb360",
     "size": 128,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "CScope_SetFunctionScope",
-    "baseline_address": "0x0049b610",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "CScope_SetFunctionScope",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "BE_elf_SaveScope",
-    "address": "0x004eb500",
+    "name": "fn_004eb3e0",
+    "address": "0x4eb3e0",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004eb440",
+    "address": "0x4eb440",
+    "size": 102,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_SetNameSpaceScope",
+    "address": "0x4eb4b0",
+    "size": 79,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_GetScope",
+    "address": "0x4eb500",
     "size": 42,
-    "source": "src/backend/BE_elf.c",
-    "baseline_name": "BE_elf_SaveScope",
-    "baseline_address": "0x0049b780",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "BE_elf_SaveScope",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "build_namespace_scope_rec",
-    "address": "0x004eb530",
+    "name": "CScope_BuildNameSpaceLookupList",
+    "address": "0x4eb530",
     "size": 312,
-    "source": "src/frontend/CScope.c",
-    "baseline_name": "build_namespace_scope_rec",
-    "baseline_address": "0x0049ab50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": "build_namespace_scope_rec",
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed12B recursive parent scopes, transitive using-list duplicate elimination, nearest common ancestor attachment,8B local list allocations and assertion140;98.97% instruction scheduling.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_Cleanup",
+    "address": "0x4eb670",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Strict exact native code and PE fixup proof; native argument/result shape reviewed.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CScope_Setup",
+    "address": "0x4eb690",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/frontend/CScope.c",
+    "old_name": null,
+    "status": "native body ported and best attempted; see per-function review",
+    "review": "Reviewed4096B zeroed table and34B zeroed root allocation, is_hash/global, five scope globals and external71034c clearing; private native root extent matchesdisassembly.",
+    "identity_evidence": "Assertion filename, whole-image CSV and Mac candidates, native ABI and CFG review in TU ledger.",
+    "boundary_evidence": {
+      "method": "Saved native entries with full-image assertion/call/prologue seam audit",
       "unresolved_indirect_flow": false
     }
   },

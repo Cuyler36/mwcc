@@ -893,3 +893,9 @@ ninja all_source progress
 The integrate step runs objdiff-cli on every fully resolved imported function
 and writes reports under `build/GC_3_0a5_2/objdiff-imports`. It preserves the ten
 original manually verified mappings and regenerates the bulk imports.
+
+Lexer compiler lead (symbol contributor, reported 2026-10-08): the lexer may
+contain MSVC symbols. Treat this as an unverified compiler-selection lead;
+compare native lexer bodies with the local isolated MSVC toolchains as well as
+CodeWarrior before selecting its compiler. Symbol style alone is insufficient
+to establish the compiler or version.

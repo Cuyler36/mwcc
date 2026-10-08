@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "BE_elf.c"
 #include "compiler/common.h"
 #include "compiler/BE_elf.h"
@@ -58,6 +59,7 @@ NameSpace *BE_elf_SaveAndSetClassScope(TypeClass *theclass, CScopeSave *save)
 }
 
 /* Enters THECLASS's scope outside any function, saving the current one in SAVED. */
+#if VERSION != VERSION_GC_3_0A5_2
 void BE_elf_SaveScopeAndEnterClass(TypeClass *theclass, CScopeSave *saved)
 {
     NameSpace *wrapped_type;
@@ -74,6 +76,7 @@ void BE_elf_SaveScopeAndEnterClass(TypeClass *theclass, CScopeSave *saved)
     data_00588238 = NULL;
     data_005884f8 = 0;
 }
+#endif
 
 TypeClass *BE_elf_SaveAndSetScope(NameSpace *scope, CScopeSave *save)
 {
@@ -94,6 +97,7 @@ TypeClass *BE_elf_SaveAndSetScope(NameSpace *scope, CScopeSave *save)
     return value;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void BE_elf_SaveScope(CScopeSave *snapshot)
 {
     snapshot->nspace = currentNameSpace;
@@ -101,6 +105,7 @@ void BE_elf_SaveScope(CScopeSave *snapshot)
     snapshot->function = data_00588238;
     snapshot->member_context = data_005884f8;
 }
+#endif
 
 void fn_0049b7b0(void)
 {

@@ -2526,5 +2526,317 @@
   "CMach_MemberAlignValue": {
     "name": "CMach_MemberAlignValue",
     "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "fn_004e8320": {
+    "name": "fn_004e8320",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_IsStdNameSpace": {
+    "name": "CScope_IsStdNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ExtractNameSpace": {
+    "name": "CScope_ExtractNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_BuildNameSpaceLookupList": {
+    "name": "CScope_BuildNameSpaceLookupList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindNonClassObject": {
+    "name": "CScope_FindNonClassObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddNameSpaceToList": {
+    "name": "CScope_AddNameSpaceToList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "parse_name_in_namespace": {
+    "name": "parse_name_in_namespace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseExprName": {
+    "name": "CScope_ParseExprName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindTypeName": {
+    "name": "CScope_FindTypeName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_GetTagType": {
+    "name": "CScope_GetTagType",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_BuildAssociatedNameSpaceList": {
+    "name": "CScope_BuildAssociatedNameSpaceList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindNonClassNonFunctionNS": {
+    "name": "CScope_FindNonClassNonFunctionNS",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_NSIteratorFind": {
+    "name": "CScope_NSIteratorFind",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_HidesObject": {
+    "name": "CScope_HidesObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_NewListNameSpace": {
+    "name": "CScope_NewListNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindQualifiedType": {
+    "name": "CScope_FindQualifiedType",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_NextObjectIteratorObject": {
+    "name": "CScope_NextObjectIteratorObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004e99e0": {
+    "name": "fn_004e99e0",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004e7c20": {
+    "name": "fn_004e7c20",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindLookupName": {
+    "name": "CScope_FindLookupName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_SetFunctionScope": {
+    "name": "CScope_SetFunctionScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_BuildTypeAssociatedNameSpaceList": {
+    "name": "CScope_BuildTypeAssociatedNameSpaceList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_RecFindClassMember": {
+    "name": "CScope_RecFindClassMember",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindGlobalNS": {
+    "name": "CScope_FindGlobalNS",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_GetScope": {
+    "name": "CScope_GetScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseUsingDeclaration": {
+    "name": "CScope_ParseUsingDeclaration",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddGlobalObject": {
+    "name": "CScope_AddGlobalObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_RestoreScope": {
+    "name": "CScope_RestoreScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddUsingObject": {
+    "name": "CScope_AddUsingObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_PossibleTypeName": {
+    "name": "CScope_PossibleTypeName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindObjectList": {
+    "name": "CScope_FindObjectList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindQualName": {
+    "name": "CScope_FindQualName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_InitObjectIterator": {
+    "name": "CScope_InitObjectIterator",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseQualifiedNameSpace": {
+    "name": "CScope_ParseQualifiedNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_NewHashNameSpace": {
+    "name": "CScope_NewHashNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_IsEmptySymTable": {
+    "name": "CScope_IsEmptySymTable",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004eb440": {
+    "name": "fn_004eb440",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004ea650": {
+    "name": "fn_004ea650",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseNameSpaceAlias": {
+    "name": "CScope_ParseNameSpaceAlias",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_CopyNameSpaceObjectList": {
+    "name": "CScope_CopyNameSpaceObjectList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_IsEmptyNameSpace": {
+    "name": "CScope_IsEmptyNameSpace",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AppendName": {
+    "name": "CScope_AppendName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_InsertName": {
+    "name": "CScope_InsertName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseTypeName": {
+    "name": "CScope_ParseTypeName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindName": {
+    "name": "CScope_FindName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_SetMethodScope": {
+    "name": "CScope_SetMethodScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_DefineTypeTag": {
+    "name": "CScope_DefineTypeTag",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseQualifiedNamespaceSpecifier": {
+    "name": "CScope_ParseQualifiedNamespaceSpecifier",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "parse_qualified_templdep_type": {
+    "name": "parse_qualified_templdep_type",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_SetNameSpaceScope": {
+    "name": "CScope_SetNameSpaceScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ArgumentDependentNameLookup": {
+    "name": "CScope_ArgumentDependentNameLookup",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_CheckDtorName": {
+    "name": "CScope_CheckDtorName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_Setup": {
+    "name": "CScope_Setup",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddClassUsingDeclaration": {
+    "name": "CScope_AddClassUsingDeclaration",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_GetLocalObject": {
+    "name": "CScope_GetLocalObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseUsingDirective": {
+    "name": "CScope_ParseUsingDirective",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindClassMemberObject": {
+    "name": "CScope_FindClassMemberObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseElaborateName": {
+    "name": "CScope_ParseElaborateName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseDeclName": {
+    "name": "CScope_ParseDeclName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_IsSameNSOL": {
+    "name": "CScope_IsSameNSOL",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_ParseMemberName": {
+    "name": "CScope_ParseMemberName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_GetType": {
+    "name": "CScope_GetType",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindQualifiedClassMember": {
+    "name": "CScope_FindQualifiedClassMember",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddScopeObjects": {
+    "name": "CScope_AddScopeObjects",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindClassMember": {
+    "name": "CScope_FindClassMember",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004e6590": {
+    "name": "fn_004e6590",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_FindNameSpaceName": {
+    "name": "CScope_FindNameSpaceName",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_GetLocalTagType": {
+    "name": "CScope_GetLocalTagType",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_004eb3e0": {
+    "name": "fn_004eb3e0",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_Cleanup": {
+    "name": "CScope_Cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_SetupParseNameResult": {
+    "name": "CScope_SetupParseNameResult",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_AddObject": {
+    "name": "CScope_AddObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "parse_namespace_name": {
+    "name": "CScope_ParseQualifiedNamespaceSpecifier",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "CScope_NextObject": {
+    "name": "CScope_NextObjectIteratorObject",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_0049b300": {
+    "name": "CScope_AddNameSpaceToList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "BE_elf_SaveScope": {
+    "name": "CScope_GetScope",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "BE_elf_SaveScopeAndEnterClass": {
+    "name": "fn_004eb440",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "build_namespace_scope_rec": {
+    "name": "CScope_BuildNameSpaceLookupList",
+    "source": "src/GC_3_0a5_2/frontend/CScope.c"
   }
 }

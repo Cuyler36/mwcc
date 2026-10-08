@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "SFPE_PPC_EABI.c"
 #include "compiler/common.h"
 #include "compiler/PCodeAssembly.h"
@@ -69,6 +70,7 @@ static inline int PCodeAssembly_ShouldEmitDebugInfo(void)
     return copts.filesyminfo != 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 int PCodeAssembly_EmitFunction(Object *object, struct PCodeAssemblyEntry *symbolEntries)
 {
     PCodeBlock *block;
@@ -156,7 +158,9 @@ int PCodeAssembly_EmitFunction(Object *object, struct PCodeAssemblyEntry *symbol
     }
     return size;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int optimize_branches(int arg)
 {
     long prev;
@@ -324,6 +328,7 @@ int optimize_branches(int arg)
             return arg;
     } while (1);
 }
+#endif
 
 void expand_out_of_range_conditional_branches(void)
 {

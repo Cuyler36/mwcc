@@ -2398,5 +2398,13 @@
   "CExpr2_ConvertDoubleToUnsignedCInt64": {
     "name": "CInt64_ConvertUFromLongDouble",
     "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "PCodeAssembly_EmitFunction": {
+    "name": "assemblefunction",
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c"
+  },
+  "optimize_branches": {
+    "name": "optimizefinalbranches",
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c"
   }
 }

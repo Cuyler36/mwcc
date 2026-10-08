@@ -229,7 +229,8 @@
     "src/GC_3_0a5_2/frontend/CError.c",
     "src/GC_3_0a5_2/frontend/CABI.c",
     "src/GC_3_0a5_2/frontend/CCallGraph.c",
-    "src/GC_3_0a5_2/frontend/CBrowse.c"
+    "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "src/GC_3_0a5_2/backend/PCodeAssembly.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3563,6 +3564,25 @@
       "include_dirs": [
         "src/frontend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/PCodeAssembly.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -4226,7 +4246,8 @@
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_ConvertToLongDouble",
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_ConvertFromLongDouble",
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_ConvertUFromLongDouble",
-    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Init"
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Init",
+    "src/GC_3_0a5_2/backend/PCodeAssembly/invertybit"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -6031,6 +6052,69 @@
       "_CBrowse_AddClassMemberFunction": "0x4c6ba0",
       "_CBrowse_AddClassMemberVar": "0x4c6d10",
       "_CBrowse_BeginClass": "0x4c6e40"
+    },
+    "src/GC_3_0a5_2/backend/PCodeAssembly.c": {
+      "_assemblefunction": "0x5830b0",
+      "_insert_align_nops": "0x583480",
+      "_optimizefinalbranches": "0x583610",
+      "_insertlongbranches": "0x583b50",
+      "_invertybit": "0x583de0",
+      "_pcode_update_mem_labeldiff_imm": "0x5852c0",
+      "_assemblepcode": "0x583eb0",
+      "_pcbasicblocks": "0x7108c8",
+      "_pcodeInfoDescriptors": "0x6b52ec",
+      "_codebase": "0x6e5ac8",
+      "_CError_Internal": "0x45a250",
+      "_PPCError_Error": "0x56ee40",
+      "_pccomputeoffsets": "0x582810",
+      "_makepcode": "0x582f60",
+      "_appendpcode": "0x582aa0",
+      "_deletepcode": "0x582a50",
+      "_getbit": "0x46c120",
+      "_pcodestats_compute": "0x4b9ca0",
+      "_ObjGen_BestSection": "0x4c49d0",
+      "_ObjGen_SymFunc": "0x4c4840",
+      "_CMangler_GetLinkName": "0x556b70",
+      "_generate_traceback": "0x588360",
+      "_ObjGen_DeclareCode": "0x4c1ce0",
+      "_ObjGen_GetSectionGList": "0x4c1000",
+      "_AppendGListNoData": "0x46d880",
+      "_Registers_GetVarInfo": "0x579790",
+      "_memcpy": "0x404850",
+      "_pcodeSpecialRegisters": "0x6ace26",
+      "_CTool_EndianConvertWord32": "0x46c090",
+      "_fn_005873a0": "0x5873a0",
+      "_fn_00587340": "0x587340",
+      "_fn_005872d0": "0x5872d0",
+      "_fn_005873d0": "0x5873d0",
+      "_fn_005873f0": "0x5873f0",
+      "_fn_005ccef0": "0x5ccef0",
+      "_fn_005cd070": "0x5cd070",
+      "_fn_0070f056": "0x70f056",
+      "_fn_0070f04b": "0x70f04b",
+      "_fn_0058b310": "0x58b310",
+      "_fn_0070f222": "0x70f222",
+      "_fn_0070f00a": "0x70f00a",
+      "_fn_0070f287": "0x70f287",
+      "_fn_0070efff": "0x70efff",
+      "_fn_0070f06e": "0x70f06e",
+      "_fn_00725eda": "0x725eda",
+      "_fn_0070f00b": "0x70f00b",
+      "_fn_0070f230": "0x70f230",
+      "_fn_00710130": "0x710130",
+      "_fn_007108b0": "0x7108b0",
+      "_fn_004c3010": "0x4c3010",
+      "_fn_004c4770": "0x4c4770",
+      "_fn_004c1500": "0x4c1500",
+      "_fn_004dcf40": "0x4dcf40",
+      "_fn_004c16c0": "0x4c16c0",
+      "_fn_004c1ca0": "0x4c1ca0",
+      "_fn_004c0990": "0x4c0990",
+      "_fn_004c0fc0": "0x4c0fc0",
+      "_fn_005d84f0": "0x5d84f0",
+      "_fn_004c07d0": "0x4c07d0",
+      "_fn_0070f05a": "0x70f05a",
+      "_fn_0070f063": "0x70f063"
     }
   },
   "original_source_units": {
@@ -6043,6 +6127,7 @@
     "CError.c": "src/GC_3_0a5_2/frontend/CError.c",
     "CABI.c": "src/GC_3_0a5_2/frontend/CABI.c",
     "CCallGraph.c": "src/GC_3_0a5_2/frontend/CCallGraph.c",
-    "CBrowse.c": "src/GC_3_0a5_2/frontend/CBrowse.c"
+    "CBrowse.c": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "PCodeAssembly.c": "src/GC_3_0a5_2/backend/PCodeAssembly.c"
   }
 }

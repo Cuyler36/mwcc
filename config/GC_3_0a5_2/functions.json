@@ -15385,29 +15385,80 @@
     }
   },
   {
-    "name": "PCodeAssembly_EmitFunction",
-    "address": "0x005830b0",
+    "name": "assemblefunction",
+    "address": "0x5830b0",
     "size": 962,
-    "source": "src/backend/PCodeAssembly.c",
-    "baseline_name": "PCodeAssembly_EmitFunction",
-    "baseline_address": "0x004a2b70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "User CSV v10-applied name plus Mac ordinary symbol and native behavior",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "expand_out_of_range_conditional_branches",
-    "address": "0x00583b50",
-    "size": 649,
-    "source": "src/backend/PCodeAssembly.c",
-    "baseline_name": "expand_out_of_range_conditional_branches",
-    "baseline_address": "0x004a32e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "insert_align_nops",
+    "address": "0x583480",
+    "size": 390,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "Mac ordinary symbol, native signature/role, assembler call graph and source assertion evidence; no explicit Mac SO/STABS declaration",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "optimizefinalbranches",
+    "address": "0x583610",
+    "size": 1339,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "User CSV v10-applied name plus Mac ordinary symbol and native behavior",
+    "boundary_evidence": {
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insertlongbranches",
+    "address": "0x583b50",
+    "size": 649,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "Mac ordinary symbol, native signature/role, assembler call graph and source assertion evidence; no explicit Mac SO/STABS declaration",
+    "boundary_evidence": {
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "invertybit",
+    "address": "0x583de0",
+    "size": 198,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "Mac ordinary symbol, native signature/role, assembler call graph and source assertion evidence; no explicit Mac SO/STABS declaration",
+    "boundary_evidence": {
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assemblepcode",
+    "address": "0x583eb0",
+    "size": 5132,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "Mac ordinary symbol, native signature/role, assembler call graph and source assertion evidence; no explicit Mac SO/STABS declaration",
+    "boundary_evidence": {
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "pcode_update_mem_labeldiff_imm",
+    "address": "0x5852c0",
+    "size": 599,
+    "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "identity_evidence": "Mac ordinary symbol, native signature/role, assembler call graph and source assertion evidence; no explicit Mac SO/STABS declaration",
+    "boundary_evidence": {
+      "method": "Full native CFG and assembler membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
     }
   },
   {

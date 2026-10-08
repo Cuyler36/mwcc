@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLLoadAndCache.c: complete Windows unit
+
+All three formerly unmapped functions match: FixTextHandle, LoadAndCacheFile,
+and CopyFileText. Full-TU objdiff verifies 518 code bytes and 20 initialized
+bytes. The Windows loader takes four arguments, including the plugin, uses
+native eight-byte MemBuffer records, checks plugin flags before line-ending
+conversion, and exits on allocation failure. Original error-path behavior,
+including the get-size failure's open descriptor, is preserved. The old
+CLPrefs line-ending helper belongs to this TU as FixTextHandle.
+
 ## CLDependencies.c: reviewed equivalent nonmatch
 
 All twenty retained Windows functions are inventoried and reviewed; nineteen

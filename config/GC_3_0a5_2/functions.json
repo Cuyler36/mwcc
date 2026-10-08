@@ -7452,6 +7452,39 @@
     }
   },
   {
+    "name": "FixTextHandle",
+    "address": "0x49a7b0",
+    "size": 109,
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+    "identity_evidence": "CLLoadAndCache.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "LoadAndCacheFile",
+    "address": "0x49a820",
+    "size": 344,
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+    "identity_evidence": "CLLoadAndCache.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CopyFileText",
+    "address": "0x49a980",
+    "size": 65,
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+    "identity_evidence": "CLLoadAndCache.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "time_g_clear_tm",
     "address": "0x0049ade0",
     "size": 67,

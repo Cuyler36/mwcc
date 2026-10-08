@@ -2515,6 +2515,76 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+      "original_filename": "CLLoadAndCache.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "FixTextHandle",
+          "address": "0x49a7b0",
+          "size": 109,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "LoadAndCacheFile",
+          "address": "0x49a820",
+          "size": 344,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CopyFileText",
+          "address": "0x49a980",
+          "size": 65,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "FixTextHandle",
+          "mac_address": "0x00025db8",
+          "linkage_names": [
+            "FixTextHandle"
+          ]
+        },
+        {
+          "name": "LoadAndCacheFile",
+          "mac_address": "0x00025e68",
+          "linkage_names": [
+            "LoadAndCacheFile"
+          ]
+        },
+        {
+          "name": "CopyFileText",
+          "mac_address": "0x00026000",
+          "linkage_names": [
+            "CopyFileText"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
       "original_filename": "CLOverlays.c",
       "evidence": [
@@ -17991,42 +18061,6 @@
           "mac_address": "0x0000d7a4",
           "linkage_names": [
             "CLStyledMessageDispatch"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLLoadAndCache.c",
-      "original_filename": "CLLoadAndCache.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [],
-      "mac_functions": [
-        {
-          "name": "FixTextHandle",
-          "mac_address": "0x00025db8",
-          "linkage_names": [
-            "FixTextHandle"
-          ]
-        },
-        {
-          "name": "LoadAndCacheFile",
-          "mac_address": "0x00025e68",
-          "linkage_names": [
-            "LoadAndCacheFile"
-          ]
-        },
-        {
-          "name": "CopyFileText",
-          "mac_address": "0x00026000",
-          "linkage_names": [
-            "CopyFileText"
           ]
         }
       ],
@@ -51017,7 +51051,7 @@
       }
     },
     "src/driver/CLLoadAndCache.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -51146,7 +51180,8 @@
           "space-nointrinsics": "09915424a98f9fdbd8785e0be6362d44e80f85c92b6c45adde18af22c3521afd",
           "space-intrinsics": "de75e3159bbb5e6f721add0f844bf1f7feda376b7be674f00392cff6689de3bf"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
     },
     "src/driver/CLMain.c": {
       "status": "unattempted",
@@ -66287,6 +66322,97 @@
       "membership_reviewed": true,
       "source_sha256": "7941070bac0b6b45e0b8349194f3572369d5d86a71fa9be1fcc5e691bb618fee",
       "strict_exact_count": 19
+    },
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c": {
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/CLLoadAndCache.c",
+        "mac_functions": [
+          "FixTextHandle",
+          "LoadAndCacheFile",
+          "CopyFileText"
+        ],
+        "windows_functions": 3,
+        "windows_region": [
+          "0x0049a7b0",
+          "0x0049a9c1"
+        ],
+        "identity_evidence": "Three consecutive Windows functions reproduce the three Mac debug roles. FixTextHandle was independently called by CLFiles; LoadAndCacheFile calls configured CachedIncludeFile/CacheIncludeFile and native file/handle APIs, and CopyFileText follows with the matching lock/copy/size/unlock sequence. Boundaries include all reachable branch tails and exclude alignment.",
+        "new_behavior": [
+          "LoadAndCacheFile adds plugin argument and tests CLPlugins_GetPluginDesc(plugin)->flags bit 0x80 before converting LF",
+          "8-byte MemBuffer allocation; native OS_* locks, size and disposal",
+          "Fatal allocation error fprintf(stderr) then exit(-23)",
+          "Read failure frees native handle and its MemBuffer allocation; original get-size error leaves descriptor open and is preserved",
+          "FixTextHandle preserves CRLF pairs, converts lone LF to CR, scans the complete stored handle size"
+        ],
+        "cache_addresses": {
+          "CachedIncludeFile": "0x43e000",
+          "CacheIncludeFile": "0x43de20"
+        },
+        "rejected_old_cache_addresses": [
+          "0x43d510",
+          "0x43d280"
+        ]
+      },
+      "verification": {
+        "strict_exact_functions": 3,
+        "attempted_functions": 3,
+        "code_bytes": 518,
+        "data_bytes": 20,
+        "all_data_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "518",
+            "match_percent": 100.0
+          },
+          ".data": {
+            "bytes": "20",
+            "match_percent": 100.0
+          }
+        },
+        "complete": true,
+        "encoding": "CP932 encoding succeeds; tools/check_sjis.py absent",
+        "source_sha256": "a003d9a514f5c06f1fab5ec04265fa034bd38ab6141e1d07685920cde0ac27cc"
+      },
+      "functions": [
+        {
+          "name": "FixTextHandle",
+          "address": "0x49a7b0",
+          "size": 109,
+          "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+        },
+        {
+          "name": "LoadAndCacheFile",
+          "address": "0x49a820",
+          "size": 344,
+          "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+        },
+        {
+          "name": "CopyFileText",
+          "address": "0x49a980",
+          "size": 65,
+          "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+        }
+      ],
+      "data_evidence": [
+        {
+          "name": "@206",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00694dd8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 518,
+      "initialized_data_bytes": 20,
+      "bss_bytes": 0,
+      "status": "exact",
+      "membership_reviewed": true,
+      "source_sha256": "a003d9a514f5c06f1fab5ec04265fa034bd38ab6141e1d07685920cde0ac27cc",
+      "strict_exact_count": 3
     }
   },
   "ownership_review": {

@@ -52,7 +52,7 @@
     "src/GC_3_0a5_2/driver/CLFiles.c",
     "src/driver/CLIO.c",
     "src/GC_3_0a5_2/driver/CLLicenses.c",
-    "src/driver/CLLoadAndCache.c",
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
     "src/driver/CLMain.c",
     "src/GC_3_0a5_2/driver/CLOverlays.c",
     "src/driver/CLPluginRequests.cpp",
@@ -1099,25 +1099,6 @@
         "-O4",
         "-opt",
         "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLLoadAndCache.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
         "-inline",
         "auto",
         "-sym",
@@ -3244,6 +3225,27 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3578,7 +3580,10 @@
     "src/GC_3_0a5_2/driver/CLDependencies/AddDepFile",
     "src/GC_3_0a5_2/driver/CLDependencies/Deps_AddDependency",
     "src/GC_3_0a5_2/driver/CLDependencies/EscapeName",
-    "src/GC_3_0a5_2/driver/CLDependencies/Deps_ListDependencies"
+    "src/GC_3_0a5_2/driver/CLDependencies/Deps_ListDependencies",
+    "src/GC_3_0a5_2/driver/CLLoadAndCache/FixTextHandle",
+    "src/GC_3_0a5_2/driver/CLLoadAndCache/LoadAndCacheFile",
+    "src/GC_3_0a5_2/driver/CLLoadAndCache/CopyFileText"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3590,7 +3595,8 @@
     "src/GC_3_0a5_2/driver/CLErrors.c",
     "src/GC_3_0a5_2/driver/CLFiles.c",
     "src/GC_3_0a5_2/driver/CLOverlays.c",
-    "src/GC_3_0a5_2/driver/CLSegs.c"
+    "src/GC_3_0a5_2/driver/CLSegs.c",
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3861,6 +3867,29 @@
       "_Deps_AddDependency": "0x43d030",
       "_EscapeName": "0x43d0d0",
       "_Deps_ListDependencies": "0x43d120"
+    },
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c": {
+      "_CachedIncludeFile": "0x43e000",
+      "_CacheIncludeFile": "0x43de20",
+      "_CLPlugins_GetPluginDesc": "0x4153f0",
+      "_MacFileTypes_GetFileType@8": "0x42f8a0",
+      "_OS_Open@12": "0x40fc10",
+      "_OS_GetSize@8": "0x40fe60",
+      "_OS_Read@12": "0x40fdb0",
+      "_OS_Close@4": "0x40fe40",
+      "_OS_NewHandle@8": "0x411c90",
+      "_OS_FreeHandle@4": "0x411d40",
+      "_OS_LockHandle@4": "0x411d00",
+      "_OS_UnlockHandle@4": "0x411d30",
+      "_OS_GetHandleSize@8": "0x411d80",
+      "_xmalloc@8": "0x426300",
+      "_xfree@4": "0x426490",
+      "_fprintf": "0x407e30",
+      "_exit": "0x402e70",
+      "_memcpy": "0x404850",
+      "_FixTextHandle": "0x49a7b0",
+      "_LoadAndCacheFile": "0x49a820",
+      "_CopyFileText": "0x49a980"
     }
   }
 }

@@ -1042,5 +1042,25 @@
   "CLDependencies_WriteDependencies": {
     "name": "Deps_ListDependencies",
     "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "FixTextHandle": {
+    "name": "FixTextHandle",
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+  },
+  "LoadAndCacheFile": {
+    "name": "LoadAndCacheFile",
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+  },
+  "CopyFileText": {
+    "name": "CopyFileText",
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+  },
+  "CLLoadAndCache_GetFileText": {
+    "name": "LoadAndCacheFile",
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+  },
+  "CLLoadAndCache_CopyStorageHandleData": {
+    "name": "CopyFileText",
+    "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
   }
 }

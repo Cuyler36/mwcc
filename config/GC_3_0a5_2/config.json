@@ -3842,7 +3842,8 @@
     "src/GC_3_0a5_2/backend/PPCError/PPCError_ErrorTerm",
     "src/GC_3_0a5_2/backend/PPCError/PPCError_Message",
     "src/GC_3_0a5_2/backend/PPCError/PPCError_Warning",
-    "src/GC_3_0a5_2/backend/PPCError/PPCError_Error"
+    "src/GC_3_0a5_2/backend/PPCError/PPCError_Error",
+    "src/GC_3_0a5_2/backend/RegisterInfo/Registers_GetVarInfo"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4703,6 +4704,12 @@
       "_PPCError_Message": "0x56ed50",
       "_PPCError_Warning": "0x56ed90",
       "_PPCError_Error": "0x56ee40"
+    },
+    "src/GC_3_0a5_2/backend/RegisterInfo.c": {
+      "_galloc": "0x46c6a0",
+      "_memclrw": "0x46c400",
+      "_CError_Internal": "0x45a250",
+      "_Registers_GetVarInfo": "0x579790"
     }
   },
   "original_source_units": {

@@ -829,11 +829,11 @@
           ]
         },
         {
-          "name": "Registers_GetInfo",
+          "name": "Registers_GetVarInfo",
           "address": "0x00579790",
           "size": 156,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native x86 CFG and original 12-byte switch table",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -916,7 +916,7 @@
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "ownership_prepared"
+      "status": "attempted_partial"
     },
     {
       "source": "src/GC_3_0a5_2/backend/StackFrame.c",
@@ -42600,140 +42600,79 @@
       }
     },
     "src/GC_3_0a5_2/backend/RegisterInfo.c": {
-      "status": "ownership_prepared",
-      "membership_reviewed": false,
-      "unresolved": [
-        "Direct diagnostic source evidence confirmed; imported bodies differ materially and are not declared equivalent."
-      ],
-      "evidence": "ownership_review in this inventory",
-      "compiler_experiments": {
-        "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
-        "source_sha256": "9be76d57b4e0eec8068d183c61d3d61857462403bf02ecca8619b019fab31230",
-        "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
-        "mapped_functions": 1,
-        "variants": [
-          {
-            "compiler": "cw94",
-            "profile": "configured",
-            "flags": [
-              "-O4",
-              "-opt",
-              "speed",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          },
-          {
-            "compiler": "cw94",
-            "profile": "speed-nointrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "speed",
-              "-opt",
-              "nointrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          },
-          {
-            "compiler": "cw94",
-            "profile": "speed-intrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "speed",
-              "-opt",
-              "intrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          },
-          {
-            "compiler": "cw94",
-            "profile": "space-nointrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "space",
-              "-opt",
-              "nointrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          },
-          {
-            "compiler": "cw94",
-            "profile": "space-intrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "space",
-              "-opt",
-              "intrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          }
-        ],
-        "reproducible_inputs_sha256": {
-          "configured": "3a956d9a3d44b8c076d45636641d506ca71891e881bf02b8ac33ef3940cec25f",
-          "speed-nointrinsics": "943d536701fa168443ec84c2e7a2478dde8d316c5b2a0a30bafc6469e3d62a6a",
-          "speed-intrinsics": "0eee3d59a24abdf9763a58a05b697c1c4b810df810f01a29d20f256a19f7fbb1",
-          "space-nointrinsics": "3483cfca062cb215230dc27af650cc5636834f003e7104081a3059b6eb371c13",
-          "space-intrinsics": "9a33ba8d277903333d434f24b88a540747b6d210fcd2e1d68c2bb7f6e5f1e777"
+      "functions": [
+        {
+          "name": "Registers_GetVarInfo",
+          "address": "0x579790",
+          "size": 156,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 156
         }
-      }
+      ],
+      "source_bindings": {
+        "_galloc": "0x46c6a0",
+        "_memclrw": "0x46c400",
+        "_CError_Internal": "0x45a250",
+        "_Registers_GetVarInfo": "0x579790"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@28",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x006ace56",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_4",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652a2c",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+      "status": "attempted_partial",
+      "membership_reviewed": false,
+      "strict_exact_count": 1,
+      "code_bytes": 156,
+      "initialized_data_bytes": 16,
+      "rodata_bytes": 12,
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "source_sha256": "83509766c95ab995b26095df8ac751e485f400fe9f3eb3be93dbda7dd05e7e81",
+      "semantics": [
+        "Datatype0/2 cache a zeroed20-byte allocation at object+0x54. Datatype1 requires pre-existing pointer at+0x40. Assertion lines649/662 and filename preserved.",
+        "Imported1.2.5 record size44 and object offsets are obsolete. Native private pointer-only object view avoids altering shared headers for unported callers."
+      ],
+      "limitations": [
+        "Only the getter has been ported in this pass; the nine other assertion-proven Windows members and additional functions require reconstruction.",
+        "Mac ordinary Registers_GetVarInfo provides canonical name; no RegisterInfo.c SO/FUN records in supplied map.",
+        "No whole-TU completeness claim; untouched original members remain target-only within this TU."
+      ],
+      "cp932_compatible": true
     },
     "src/GC_3_0a5_2/frontend/CMiddleLayer.c": {
       "status": "ownership_prepared",

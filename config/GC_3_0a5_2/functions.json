@@ -13642,17 +13642,17 @@
     }
   },
   {
-    "name": "Registers_GetInfo",
+    "name": "Registers_GetVarInfo",
     "address": "0x00579790",
     "size": 156,
     "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
     "baseline_name": "Registers_GetInfo",
     "baseline_address": "0x004c1720",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG and original 12-byte switch table",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Registers_GetVarInfo ordinary Mac symbol; Windows object datatype0/1/2 switch and RegisterInfo.c assertions649/662; exact native bytes and PE fixups."
   },
   {
     "name": "SFPE_PPC_EABI_GenerateConversion",

@@ -23,6 +23,15 @@ ownership in their separate view. No complete-TU claim is made: this Mac map
 has no explicit PPCError.c SO/FUN membership, and separate Windows bodies for
 PPCError_GetErrorString and PPCError_VAErrorMessage remain unproved.
 
+RegisterInfo's Registers_GetVarInfo at 0x00579790 is now exact: 156 code bytes,
+the 12-byte switch table, and 16 filename-data bytes. Native object datatype
+0/2 caches a cleared 20-byte record at offset 0x54, while datatype 1 uses the
+pointer at offset 0x40. Assertions name RegisterInfo.c at lines 649/662.
+The Mac ordinary symbol corrects the imported Registers_GetInfo name.
+The private native layout does not change shared headers for unported callers.
+This is explicitly a partial pass: nine other assertion-proven members and
+additional undiscovered members require work before the TU can be complete.
+
 `translation-units.json` is the source checklist and per-TU attempt ledger.
 Its initial inventory contains 262 units: 209 imported compiled sources and 53
 original-only Windows source views. It records 1,984 known Windows functions,

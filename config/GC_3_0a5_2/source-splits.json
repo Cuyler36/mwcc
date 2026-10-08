@@ -328,7 +328,7 @@
     "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
   },
   "Registers_GetInfo": {
-    "name": "Registers_GetInfo",
+    "name": "Registers_GetVarInfo",
     "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
   },
   "restore_gprs": {

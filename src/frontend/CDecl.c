@@ -5204,6 +5204,7 @@ void CDecl_PrependFuncArg(TypeFunc *type, TypeIntegral *argtype)
         arg->next = NULL;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CDecl_MakePTMFuncType(TypeFunc *func)
 {
     FuncArg *arg;
@@ -5244,6 +5245,7 @@ void CDecl_MakePTMFuncType(TypeFunc *func)
 
     func->flags |= 0x80;
 }
+#endif
 
 void prepend_class_pointer_argument(TypeFunc *owner, TypeClass *classType, char parseModifiers)
 {

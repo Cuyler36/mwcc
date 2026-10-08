@@ -17256,96 +17256,125 @@
       "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
       "original_filename": "CMemberPointer.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_00542e40",
+          "name": "fn_00542e40",
           "address": "0x00542e40",
           "size": 176,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00542ec7"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00542fc0",
+          "name": "fn_00542ef0",
+          "address": "0x542ef0",
+          "size": 195,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00542fc0",
           "address": "0x00542fc0",
           "size": 790,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0054318a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543360",
+          "name": "fn_005432e0",
+          "address": "0x5432e0",
+          "size": 122,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00543360",
           "address": "0x00543360",
           "size": 795,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005434ca",
             "0x005434e0"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543680",
+          "name": "fn_00543680",
           "address": "0x00543680",
           "size": 429,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0054371a",
             "0x0054373a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543830",
+          "name": "fn_00543830",
           "address": "0x00543830",
           "size": 85,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0054384c",
             "0x0054387c"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543890",
+          "name": "fn_00543890",
           "address": "0x00543890",
           "size": 210,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005438b2"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543970",
+          "name": "fn_00543970",
           "address": "0x00543970",
           "size": 646,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -17353,27 +17382,117 @@
             "0x00543af0",
             "0x00543baa",
             "0x00543bea"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
         },
         {
-          "name": "FUN_00543db0",
+          "name": "fn_00543c00",
+          "address": "0x543c00",
+          "size": 98,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00543c70",
+          "address": "0x543c70",
+          "size": 308,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00543db0",
           "address": "0x00543db0",
           "size": 304,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00543ecf"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+        },
+        {
+          "name": "fn_00543ee0",
+          "address": "0x543ee0",
+          "size": 85,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00543f40",
+          "address": "0x543f40",
+          "size": 173,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00543ff0",
+          "address": "0x543ff0",
+          "size": 155,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CDecl_MakePTMFuncType",
+          "address": "0x544090",
+          "size": 124,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CPTM_GetMemberFunctionPointerSize",
+          "address": "0x544110",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544120",
+          "address": "0x544120",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
@@ -177193,6 +177312,3939 @@
         "checked_functions": 24,
         "objdiff_cli_success": true,
         "image_partition_exact": true
+      }
+    },
+    "src/GC_3_0a5_2/frontend/CMemberPointer.c": {
+      "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+      "source_destination": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+      "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-initial-speed\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+      "object_sha256": "327215278698d8a1b222f6c4e7391dcc2f5896d568fb745eb6436ebd1caec35d",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "status": "attempted_equivalent",
+      "all_identified_windows_candidates_attempted": true,
+      "known_windows_candidates_unattempted": 0,
+      "semantic_review_pending": 0,
+      "native_functions": 18,
+      "native_code_bytes": 4707,
+      "strict_exact_count": 8,
+      "functions": [
+        {
+          "name": "fn_00542e40",
+          "address": "0x542e40",
+          "size": 176,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 172,
+          "strict_exact": false,
+          "objdiff_match_percent": 86.96923,
+          "native_role": "Native member-function call preparation; related Mac CExpr_NewPTMFCall role",
+          "semantic_review": "Selects rt_ptmf_scall versus unnamed memory-return helper from CMach_PassResultInHiddenArg. Allocates two8-byte expression-list records with lalloc, carries the existing call arguments, obtains the function-member address, asserts pointer kind12 and retypes it to void_ptr. Returns the value from the three-argument call dispatcher; Ghidra false void corrected.",
+          "source_signature": "NativeMemberExpr *fn_00542e40(NativeMemberExpr *node,NativeMemberExprList *args)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00542ef0",
+          "address": "0x542ef0",
+          "size": 195,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 193,
+          "strict_exact": false,
+          "objdiff_match_percent": 51.03896,
+          "native_role": "Native call argument promotion; related Mac CExpr_PTMFCall role",
+          "semantic_review": "Traverses actual expression records against20-byte formal records. elipsis/oldstyle sentinel pointers invoke the generic promotion helper without advancing the sentinel. Missing formals report0x27b2 then return nullnode; absent actuals preserve a nonzero default record at formal+8 or diagnose and clear remaining formal. Constructs the object-reference expression then passes four arguments to the native call helper, returning its node.",
+          "source_signature": "NativeMemberExpr *fn_00542ef0(NativeMemberObject *helper,NativeMemberFunction *function,NativeMemberExprList *args)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00542fc0",
+          "address": "0x542fc0",
+          "size": 790,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 786,
+          "strict_exact": false,
+          "objdiff_match_percent": 42.91011,
+          "native_role": "Native pointer-to-member comparison; related old CExpr member-pointer comparison branches",
+          "semantic_review": "Aligns unequal owner types with the four-argument cast helper, compares data-member pointers after ptrdiff retyping, and validates integer-zero operands. Function-member comparisons choose rt_ptmf_test for a constant operand and rt_ptmf_cmpr for two addresses. Preserves source evaluation order, two8-byte argument records, call-node flag mask0x1f200003 and optional logical-not for operator0x17. Native redundant inline null-member checks are retained.",
+          "source_signature": "NativeMemberExpr *fn_00542fc0(UInt8 op,NativeMemberExpr *left,NativeMemberExpr *right)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_005432e0",
+          "address": "0x5432e0",
+          "size": 122,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 122,
+          "strict_exact": false,
+          "objdiff_match_percent": 94.479164,
+          "native_role": "Related baseline CExpr_MemberPointerConversion",
+          "semantic_review": "A zero integer node becomes a type-appropriate zero: data members use intconstnode; function members update rt_ptmf_null object type, create the indirect expression, checkreference and assign target type. Kind0x4b delegates to the five-argument reference conversion helper; other nodes return unchanged. Native API has four arguments, unlike the legacy three-argument form.",
+          "source_signature": "NativeMemberExpr *fn_005432e0(NativeMemberExpr *node,NativeMemberType *type,UInt8 convert,UInt8 mode)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543360",
+          "address": "0x543360",
+          "size": 795,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 786,
+          "strict_exact": false,
+          "objdiff_match_percent": 87.28671,
+          "native_role": "Related baseline CExpr_CastMemberPointer",
+          "semantic_review": "Checks class owners and both inheritance directions, records access only when requested, diagnoses ambiguity and rejects unavailable/negative offsets or size mismatch. Reversed path negates the offset. Equal owners/zero offset only retype. Constant data-member adjustment intentionally adds offset only when CInt64_NotEqual(value,zero) returns false; nonzero constants skip addition. Dynamic data members use a temporary assignment and conditional adjustment tree. Function members use the five-argument funccallexpr runtime cast with offset, member address, temporary andNULL, then indirect/retype. Native four-argument API differs from baseline three-argument API.",
+          "source_signature": "NativeMemberExpr *fn_00543360(NativeMemberExpr *node,NativeMemberPointer *from,NativeMemberPointer *to,UInt8 access)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543680",
+          "address": "0x543680",
+          "size": 429,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 453,
+          "strict_exact": false,
+          "objdiff_match_percent": 48.81879,
+          "native_role": "Related baseline make_memberpointer/getpointertomemberfunc conversion entry",
+          "semantic_review": "Requires kind0x4b, returns unchanged if conversion byte+41 is false, and preserves ordinary warning/error continuation and mutation of bytes+40/+42. Reloads object-list pointer after diagnostics. Function members delegate with all eight native arguments and reject nonmember target types. Data members record six-argument access, create cleared18-byte member-pointer type and use wrapping offset+1 with sign extension; qualifier mask is preserved.",
+          "source_signature": "NativeMemberExpr *fn_00543680(NativeMemberExpr *node,NativeMemberType *type,UInt32 context,UInt8 convert,UInt8 mode)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543830",
+          "address": "0x543830",
+          "size": 85,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 85,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Native member expression assignment helper",
+          "semantic_review": "Asserts indirect expression/class type and builds kind0x43 operation4 with stvoid result and supplied operands. Complete body bytes and PE fixup cells match.",
+          "source_signature": "NativeMemberExpr *fn_00543830(NativeMemberExpr *node,NativeMemberExpr *value)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "fn_00543890",
+          "address": "0x543890",
+          "size": 210,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 210,
+          "strict_exact": false,
+          "objdiff_match_percent": 89.98837,
+          "native_role": "Native data-member dereference expression",
+          "semantic_review": "Takes the class-object address, converts object and member to stunsignedlong, subtracts the encoded1 offset through the native two-argument arithmetic helper, adds to the base and restores pointer type. Reference targets add the native reference conversion before final indirect. Preserves qualifier mask and returns checkreference result; native EAX confirms Ghidra false void.",
+          "source_signature": "NativeMemberExpr *fn_00543890(NativeMemberType *type,UInt32 quals,NativeMemberExpr *base,NativeMemberExpr *member)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543970",
+          "address": "0x543970",
+          "size": 646,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 644,
+          "strict_exact": false,
+          "objdiff_match_percent": 84.62931,
+          "native_role": "Related baseline getpointertomemberfunc selection/type construction",
+          "semantic_review": "Without a target, rejects ambiguous overload lists, captures access before alias unwrapping, verifies nonstatic method flags and optionally instantiates templates. With a target, delegates all six overload-selection arguments and honors diagnostic gating. Rejects destructors, preserves mode-dependent six-argument access check, clones the entire44-byte method context, drops its first formal then applies canonical CDecl_MakePTMFuncType, clears flag2, creates a12-byte member-pointer type and kind0x52 function-member node. CMid_ObjectAddrRef is called only when object+72 is nonzero.",
+          "source_signature": "NativeMemberExpr *fn_00543970(NativeMemberType *scope,NativeMemberType *owner,NativeMemberObjectList *objects,void *templateArgs,NativeMemberPointer *target,void *context,UInt8 diagnose,UInt8 mode)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543c00",
+          "address": "0x543c00",
+          "size": 98,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 98,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Related baseline getpointertomemberfunc static initializer creation",
+          "semantic_review": "Creates a global data object, sets unique name/cscope_root/type/storage16-bit0x102, allocates12-byte initializer and passes its relocation list to CInit_DeclareData. Returns the checked indirect object expression. Complete native byte/fixup match.",
+          "source_signature": "NativeMemberExpr *fn_00543c00(NativeMemberObject *function,NativeMemberType *type)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "fn_00543c70",
+          "address": "0x543c70",
+          "size": 308,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 282,
+          "strict_exact": false,
+          "objdiff_match_percent": 64.408165,
+          "native_role": "Related baseline MemberPointerInitializer encoding",
+          "semantic_review": "Zeroes12-byte buffer and writes zero adjustment using CMach_InitIntMem. Virtual-function storage4 writes signed function+34 index and class-vtable+12 size with high-word sign extension; ordinary functions write-1 index and zero final word, then allocate and clear16-byte relocation with object pointer+4 and offset8. ReturnsNULL or the relocation list pointer, not an arbitrary integer result.",
+          "source_signature": "NativeMemberReloc *fn_00543c70(void *buffer,NativeMemberObject *object)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543db0",
+          "address": "0x543db0",
+          "size": 304,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 292,
+          "strict_exact": false,
+          "objdiff_match_percent": 80.23364,
+          "native_role": "Related baseline overload/member-function resolution loop",
+          "semantic_review": "First pass considers valid nonstatic method candidates, template restrictions and native function-type equivalence. Optional fallback reruns without exact comparison only when no candidate was selected. A second selection diagnoses ambiguity and returns the first candidate. Selected access is captured before storage6 alias unwrapping and final method invariant checks. Fourth context parameter is retained in the six-argument ABI even though this body does not inspect it.",
+          "source_signature": "NativeMemberObject *fn_00543db0(NativeMemberObjectList *objects,void *templateArgs,NativeMemberPointer *target,void *context,UInt8 *access,UInt8 fallback)",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "fn_00543ee0",
+          "address": "0x543ee0",
+          "size": 85,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 85,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Native parsed member-pointer type constructor",
+          "semantic_review": "Allocates18-byte type without clearing it, sets kind11, applies canonical member-function argument rewrite and size12 for function members or size4 for data members, sets member/owner, obtains next token and qualifier parse result, then stores output pointer. Native two-argument API; complete byte/fixup match. The unused padding remains uninitialized as native.",
+          "source_signature": "void fn_00543ee0(NativeMemberType **type,NativeMemberType *owner)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "fn_00543f40",
+          "address": "0x543f40",
+          "size": 173,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 173,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Native explicit-qualifier member-pointer type constructor",
+          "semantic_review": "Rejects owner flag1 at+34 with a resumable diagnostic followed by return. Otherwise allocates and clears18-byte type. Function members are copied into a separately allocated30-byte type before argument rewrite; data members retain original target. Three-argument ABI and complete byte/fixup match.",
+          "source_signature": "void fn_00543f40(NativeMemberType **type,NativeMemberType *owner,UInt32 quals)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "fn_00543ff0",
+          "address": "0x543ff0",
+          "size": 155,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 155,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Native method-context constructor",
+          "semantic_review": "Allocates/clears44-byte context, copies exactly30-byte function record, sets context+30 and mode+42, and adds flag16. Calls CDecl_AddThisPointerArgument only for zero mode, then diagnoses forbidden cv-qualified flags according to mode/0x3000 gates. Separating the helper call from the subsequent gate reproduces all native bytes and fixup cells.",
+          "source_signature": "NativeMemberFunctionContext *fn_00543ff0(NativeMemberFunction *f,NativeMemberType *context,UInt8 mode)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "CDecl_MakePTMFuncType",
+          "address": "0x544090",
+          "size": 124,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 124,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Canonical baseline function identity with migrated native layout",
+          "semantic_review": "Creates qualified void pointer plus two fresh formal records named this_name_node. First formal derives const/volatile qualifiers from function flags0x8000/0x10000; second has qualifier1 and precedes the first. Preserves existing tail and sets flag0x80. Complete native byte/fixup match. Legacy definition must be guarded for GC3; private native function flags/result offsets are22/14.",
+          "source_signature": "void CDecl_MakePTMFuncType(NativeMemberFunction *func)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "CPTM_GetMemberFunctionPointerSize",
+          "address": "0x544110",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 6,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "User CSV canonical symbol",
+          "semantic_review": "Returns12 in EAX. Complete byte/fixup match.",
+          "source_signature": "int CPTM_GetMemberFunctionPointerSize(void)",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "fn_00544120",
+          "address": "0x544120",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+          "compiled_size": 6,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "native_role": "Native data-member pointer size accessor",
+          "semantic_review": "Returns4 in EAX. Complete byte/fixup match; canonical native function name remains unproved.",
+          "source_signature": "int fn_00544120(void)",
+          "review_status": "strict_exact"
+        }
+      ],
+      "source_bindings": {
+        "_filename": "0x69aad8",
+        "_fn_005432e0": "0x5432e0",
+        "_fn_00543830": "0x543830",
+        "_CDecl_MakePTMFuncType": "0x544090",
+        "_fn_00543ee0": "0x543ee0",
+        "_fn_00543f40": "0x543f40",
+        "_fn_00543ff0": "0x543ff0",
+        "_CPTM_GetMemberFunctionPointerSize": "0x544110",
+        "_fn_00544120": "0x544120",
+        "_fn_00542e40": "0x542e40",
+        "_fn_00542ef0": "0x542ef0",
+        "_fn_00542fc0": "0x542fc0",
+        "_fn_00543360": "0x543360",
+        "_fn_00543680": "0x543680",
+        "_fn_00543890": "0x543890",
+        "_fn_00543970": "0x543970",
+        "_fn_00543c00": "0x543c00",
+        "_fn_00543c70": "0x543c70",
+        "_fn_00543db0": "0x543db0",
+        "_intconstnode": "0x5242b0",
+        "_rt_ptmf_null": "0x71081c",
+        "_CExpr_New_EINDIRECT_Node": "0x521ad0",
+        "_checkreference": "0x55b9f0",
+        "_CError_Internal": "0x45a250",
+        "_CExpr_NewENode": "0x5243b0",
+        "_stvoid": "0x725d96",
+        "_CDecl_NewPointerType": "0x544530",
+        "_CParser_NewFuncArg": "0x455420",
+        "_this_name_node": "0x715c28",
+        "_galloc": "0x46c6a0",
+        "_lex": "0x447b70",
+        "_tk": "0x717466",
+        "_fn_00514660": "0x514660",
+        "_memclrw": "0x46c400",
+        "_CError_Error": "0x45c480",
+        "_CDecl_AddThisPointerArgument": "0x5149b0",
+        "_CMach_PassResultInHiddenArg": "0x4e2470",
+        "_fn_00716cac": "0x716cac",
+        "_rt_ptmf_scall": "0x710928",
+        "_lalloc": "0x46c660",
+        "_fn_00559da0": "0x559da0",
+        "_void_ptr": "0x6771c8",
+        "_nullnode": "0x5242f0",
+        "_elipsis": "0x7037c0",
+        "_oldstyle": "0x70bb08",
+        "_argumentpromotion": "0x5a8b60",
+        "_CExpr_New_EOBJREF_Node": "0x521c20",
+        "_fn_005a7d70": "0x5a7d70",
+        "_fn_005a7ac0": "0x5a7ac0",
+        "_CABI_GetPtrDiffTType": "0x5547c0",
+        "_makediadicnode": "0x524130",
+        "_fn_005162a0": "0x5162a0",
+        "_rt_ptmf_cmpr": "0x7107b8",
+        "_rt_ptmf_test": "0x7107ac",
+        "_stsignedlong": "0x699c64",
+        "_fn_00454c20": "0x454c20",
+        "_makemonadicnode": "0x5241b0",
+        "_CClass_GetBasePath": "0x541ba0",
+        "_CClass_NewAccessCheck": "0x53f5b0",
+        "_CClass_GetPathOffset": "0x541770",
+        "_CInt64_NotEqual": "0x4d9420",
+        "_CInt64_Add": "0x4da370",
+        "_CExpr_NewETEMPNode": "0x55a2e0",
+        "_CExpr_CopyENode": "0x524350",
+        "_stunsignedlong": "0x699c6c",
+        "_ptmstruct": "0x71741a",
+        "_create_temp_node": "0x52df70",
+        "_rt_ptmf_cast": "0x7102c8",
+        "_funccallexpr": "0x5a89a0",
+        "_fn_0070f1b3": "0x70f1b3",
+        "_CError_Warning": "0x45a320",
+        "_fn_00520110": "0x520110",
+        "_CClass_IsDestructor": "0x542380",
+        "_fn_005dca80": "0x5dca80",
+        "_CMid_ObjectAddrRef": "0x47b230",
+        "_CParser_NewGlobalDataObject": "0x4555b0",
+        "_CParser_GetUniqueName": "0x455e00",
+        "_cscope_root": "0x7101c4",
+        "_CInit_DeclareData": "0x52f040",
+        "_CMach_InitIntMem": "0x4e40d0",
+        "_fn_005dedc0": "0x5dedc0",
+        "_fn_00454e40": "0x454e40"
+      },
+      "profiles": {
+        "count": 10,
+        "successful": 10,
+        "best_strict": 8,
+        "best": "cw94 speed-intrinsics",
+        "summary": [
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-intrinsics-cw94",
+            "strict": 8,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-nointrinsics-cw94",
+            "strict": 8,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-space-intrinsics-cw94",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-space-nointrinsics-cw94",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-noloop-cw94",
+            "strict": 8,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-noschedule-cw94",
+            "strict": 4,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro8",
+            "profile": "memberpointer-speed-pro8",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro7",
+            "profile": "memberpointer-speed-pro7",
+            "strict": 2,
+            "unresolved": 2
+          },
+          {
+            "compiler": "pro6",
+            "profile": "memberpointer-speed-pro6",
+            "strict": 2,
+            "unresolved": 2
+          },
+          {
+            "compiler": "pro53",
+            "profile": "memberpointer-speed-pro53",
+            "strict": 2,
+            "unresolved": 2
+          }
+        ]
+      },
+      "data": {
+        "all_data_complete": true,
+        "records": [
+          {
+            "name": "_filename",
+            "section": ".data",
+            "size": 17,
+            "method": "named binding",
+            "address": "0x0069aad8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "exact_bytes": 17,
+        "bss_bytes": 0,
+        "section_policy": "All18 functions belong to one TU and one objdiff .text projection. CW94 compiler object emits same-named .text COMDATs; normal project comparison groups them. Filename allocation is in .data. No manual anonymous/generated-symbol bindings."
+      },
+      "ownership_review": {
+        "supported_cluster": [
+          "0x542e40",
+          "0x544130"
+        ],
+        "identified_members": 18,
+        "direct_calls": {
+          "0x542e40": [
+            "0x5a7125"
+          ],
+          "0x542ef0": [
+            "0x542ede"
+          ],
+          "0x542fc0": [
+            "0x51ec9a",
+            "0x51efda",
+            "0x55a986"
+          ],
+          "0x5432e0": [
+            "0x5e29ab",
+            "0x5e8c53"
+          ],
+          "0x543360": [
+            "0x54326f",
+            "0x5e2717"
+          ],
+          "0x543680": [
+            "0x45185d",
+            "0x45b43d",
+            "0x49eec5",
+            "0x5189eb",
+            "0x51caf4",
+            "0x51cb11",
+            "0x51ec5c",
+            "0x51ec7c",
+            "0x51ef9c",
+            "0x51efbc",
+            "0x520735",
+            "0x543350",
+            "0x55a9ce",
+            "0x5a7aea",
+            "0x5dcd2f",
+            "0x5e03ce",
+            "0x5e1eb9",
+            "0x5e413b",
+            "0x5e54d3",
+            "0x5e86c7",
+            "0x5e9779"
+          ],
+          "0x543830": [
+            "0x52092a"
+          ],
+          "0x543890": [
+            "0x5207ce"
+          ],
+          "0x543970": [
+            "0x543820"
+          ],
+          "0x543c00": [
+            "0x47c352",
+            "0x5594e8"
+          ],
+          "0x543c70": [
+            "0x536c02",
+            "0x543c39"
+          ],
+          "0x543db0": [
+            "0x536baa",
+            "0x53e839",
+            "0x5439ad"
+          ],
+          "0x543ee0": [
+            "0x51297e",
+            "0x512c10",
+            "0x51322d"
+          ],
+          "0x543f40": [
+            "0x512f4c",
+            "0x5a664d"
+          ],
+          "0x543ff0": [
+            "0x4eeb9d",
+            "0x50df0b"
+          ],
+          "0x544090": [
+            "0x513e89",
+            "0x543aa5",
+            "0x543f26",
+            "0x543fe5"
+          ],
+          "0x544110": [
+            "0x457852",
+            "0x513e8f"
+          ],
+          "0x544120": [
+            "0x513ea0"
+          ]
+        },
+        "unknown_interior_direct_calls": [],
+        "filename": "CMemberPointer.c",
+        "filename_address": "0x69aad8",
+        "filename_references": [
+          {
+            "instruction": "0x542ec2",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x542e40"
+          },
+          {
+            "instruction": "0x543185",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x542fc0"
+          },
+          {
+            "instruction": "0x5434c5",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543360"
+          },
+          {
+            "instruction": "0x5434db",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543360"
+          },
+          {
+            "instruction": "0x543715",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543680"
+          },
+          {
+            "instruction": "0x543735",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543680"
+          },
+          {
+            "instruction": "0x543847",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543830"
+          },
+          {
+            "instruction": "0x543877",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543830"
+          },
+          {
+            "instruction": "0x5438ad",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543890"
+          },
+          {
+            "instruction": "0x543aeb",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543970"
+          },
+          {
+            "instruction": "0x543ba5",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543970"
+          },
+          {
+            "instruction": "0x543be5",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543970"
+          },
+          {
+            "instruction": "0x543eca",
+            "inside_supported_cluster": true,
+            "enclosing_supported_entry": "0x543db0"
+          }
+        ],
+        "filename_proved_members": [
+          "0x542e40",
+          "0x542fc0",
+          "0x543360",
+          "0x543680",
+          "0x543830",
+          "0x543890",
+          "0x543970",
+          "0x543db0"
+        ],
+        "extra_saved_ghidra_entries": [],
+        "indirect_jumps": [],
+        "related_mac_ordinary_symbols": [
+          {
+            "name": "is_memberpointerequal",
+            "raw_name": "_is_memberpointerequal",
+            "address": "0x0002b6a4",
+            "kind": "t",
+            "line": 21183
+          },
+          {
+            "name": "mwEXIDX._is_memberpointerequal",
+            "raw_name": "mwEXIDX._is_memberpointerequal",
+            "address": "0x002160f0",
+            "kind": "s",
+            "line": 21184
+          },
+          {
+            "name": "CExpr_MakePTMF",
+            "raw_name": "_CExpr_MakePTMF",
+            "address": "0x000577bc",
+            "kind": "t",
+            "line": 22415
+          },
+          {
+            "name": "mwEXIDX._CExpr_MakePTMF",
+            "raw_name": "mwEXIDX._CExpr_MakePTMF",
+            "address": "0x00217530",
+            "kind": "s",
+            "line": 22416
+          },
+          {
+            "name": "CExpr_MemberPointerCast",
+            "raw_name": "_CExpr_MemberPointerCast",
+            "address": "0x00058f48",
+            "kind": "t",
+            "line": 22417
+          },
+          {
+            "name": "mwEXIDX._CExpr_MemberPointerCast",
+            "raw_name": "mwEXIDX._CExpr_MemberPointerCast",
+            "address": "0x002175e4",
+            "kind": "s",
+            "line": 22418
+          },
+          {
+            "name": "CExpr_ConvertToMemberPointer",
+            "raw_name": "_CExpr_ConvertToMemberPointer",
+            "address": "0x00057c84",
+            "kind": "t",
+            "line": 22503
+          },
+          {
+            "name": "mwEXIDX._CExpr_ConvertToMemberPointer",
+            "raw_name": "mwEXIDX._CExpr_ConvertToMemberPointer",
+            "address": "0x0021753c",
+            "kind": "s",
+            "line": 22504
+          },
+          {
+            "name": "CExpr_MemberPointerConversion",
+            "raw_name": "_CExpr_MemberPointerConversion",
+            "address": "0x00058ea0",
+            "kind": "t",
+            "line": 22528
+          },
+          {
+            "name": "mwEXIDX._CExpr_MemberPointerConversion",
+            "raw_name": "mwEXIDX._CExpr_MemberPointerConversion",
+            "address": "0x002175d8",
+            "kind": "s",
+            "line": 22529
+          },
+          {
+            "name": "memberpointercompare",
+            "raw_name": "_memberpointercompare",
+            "address": "0x0005b544",
+            "kind": "t",
+            "line": 22558
+          },
+          {
+            "name": "mwEXIDX._memberpointercompare",
+            "raw_name": "mwEXIDX._memberpointercompare",
+            "address": "0x002176b0",
+            "kind": "s",
+            "line": 22559
+          },
+          {
+            "name": "CDecl_TemplatePTM",
+            "raw_name": "_CDecl_TemplatePTM",
+            "address": "0x0007294c",
+            "kind": "t",
+            "line": 23135
+          },
+          {
+            "name": "mwEXIDX._CDecl_TemplatePTM",
+            "raw_name": "mwEXIDX._CDecl_TemplatePTM",
+            "address": "0x00218328",
+            "kind": "s",
+            "line": 23136
+          },
+          {
+            "name": "CDecl_MakePTMFuncType",
+            "raw_name": "_CDecl_MakePTMFuncType",
+            "address": "0x000714f0",
+            "kind": "t",
+            "line": 23220
+          },
+          {
+            "name": "mwEXIDX._CDecl_MakePTMFuncType",
+            "raw_name": "mwEXIDX._CDecl_MakePTMFuncType",
+            "address": "0x00218298",
+            "kind": "s",
+            "line": 23250
+          },
+          {
+            "name": "makememberpointertype",
+            "raw_name": "_makememberpointertype",
+            "address": "0x0007281c",
+            "kind": "t",
+            "line": 23255
+          },
+          {
+            "name": "mwEXIDX._makememberpointertype",
+            "raw_name": "mwEXIDX._makememberpointertype",
+            "address": "0x0021831c",
+            "kind": "s",
+            "line": 23256
+          },
+          {
+            "name": "CInit_InitTypeMemberPointer",
+            "raw_name": "_CInit_InitTypeMemberPointer",
+            "address": "0x000898c4",
+            "kind": "t",
+            "line": 25686
+          },
+          {
+            "name": "mwEXIDX._CInit_InitTypeMemberPointer",
+            "raw_name": "mwEXIDX._CInit_InitTypeMemberPointer",
+            "address": "0x00218de4",
+            "kind": "s",
+            "line": 25687
+          },
+          {
+            "name": "CTemplTool_GetPTMTemplArgExpr",
+            "raw_name": "_CTemplTool_GetPTMTemplArgExpr",
+            "address": "0x000a8a64",
+            "kind": "t",
+            "line": 26597
+          },
+          {
+            "name": "mwEXIDX._CTemplTool_GetPTMTemplArgExpr",
+            "raw_name": "mwEXIDX._CTemplTool_GetPTMTemplArgExpr",
+            "address": "0x00219f60",
+            "kind": "s",
+            "line": 26635
+          },
+          {
+            "name": "CExpr2_MemberPointerConversion",
+            "raw_name": "_CExpr2_MemberPointerConversion",
+            "address": "0x00113440",
+            "kind": "t",
+            "line": 28969
+          },
+          {
+            "name": "mwEXIDX._CExpr2_MemberPointerConversion",
+            "raw_name": "mwEXIDX._CExpr2_MemberPointerConversion",
+            "address": "0x0021c90c",
+            "kind": "s",
+            "line": 28970
+          },
+          {
+            "name": "CExpr_NewPTMFCall",
+            "raw_name": "_CExpr_NewPTMFCall",
+            "address": "0x00116850",
+            "kind": "t",
+            "line": 28993
+          },
+          {
+            "name": "mwEXIDX._CExpr_NewPTMFCall",
+            "raw_name": "mwEXIDX._CExpr_NewPTMFCall",
+            "address": "0x0021ca68",
+            "kind": "s",
+            "line": 28994
+          },
+          {
+            "name": "CExpr_PTMFCall",
+            "raw_name": "_CExpr_PTMFCall",
+            "address": "0x001168cc",
+            "kind": "t",
+            "line": 28995
+          },
+          {
+            "name": "mwEXIDX._CExpr_PTMFCall",
+            "raw_name": "mwEXIDX._CExpr_PTMFCall",
+            "address": "0x0021ca74",
+            "kind": "s",
+            "line": 28996
+          },
+          {
+            "name": "CPrec_GetTypeMemberPointerPatch",
+            "raw_name": "_CPrec_GetTypeMemberPointerPatch",
+            "address": "0x0011e64c",
+            "kind": "t",
+            "line": 29341
+          },
+          {
+            "name": "mwEXIDX._CPrec_GetTypeMemberPointerPatch",
+            "raw_name": "mwEXIDX._CPrec_GetTypeMemberPointerPatch",
+            "address": "0x0021cf00",
+            "kind": "s",
+            "line": 29342
+          }
+        ],
+        "physical_membership_complete": false,
+        "excluded_neighbors": {
+          "prior": [
+            "0x542d30 CClass_AddClass",
+            "0x542d60 CClass_AddFriend",
+            "0x542e20 CClass_Init"
+          ],
+          "tail": [
+            "0x544130 generic hash insertion",
+            "0x544180 generic type lookup",
+            "0x5441e0 type hashing",
+            "0x5442b0 hash initialization"
+          ],
+          "reason": "Tail hash helpers lack original physical owner evidence; proximity and type-related behavior do not prove CMemberPointer ownership."
+        },
+        "limits": "Linear code scan corroborates supported boundaries but cannot prove original object membership or absence of unnamed indirect entries. Ordinary Mac symbols are related-role search leads rather than original Windows source membership."
+      },
+      "baseline_alias_policy": {
+        "canonical_definition_to_guard": "CDecl_MakePTMFuncType in src/frontend/CDecl.c for GC3 only",
+        "safe_additional_aliases": [],
+        "retained_baseline_policy": "Keep legacy changed-signature/member-layout helpers provisional; no global aliases to the native18."
+      },
+      "validation": {
+        "bounded_functions": 11,
+        "cases": 2200,
+        "passed": 2200,
+        "encoding": "Strict CP932 encoding passed."
+      },
+      "evidence": [
+        "build/CMemberPointer/initial-attempt.json",
+        "build/CMemberPointer/profiles.json",
+        "build/CMemberPointer/scoped-bindings.json",
+        "build/CMemberPointer/semantic-review.json",
+        "build/CMemberPointer/execution-validation.json",
+        "build/CMemberPointer/data-review.json",
+        "build/CMemberPointer-independent-membership-audit.json"
+      ],
+      "limitations": [
+        "Physical membership remains false because original Windows COFF/debug metadata is unavailable. Root whole-image audit corroborates18 entries,13 filename references in8 members, no outside filename references, no unlisted direct interior calls and no extra saved Ghidra entries.",
+        "Three preceding CClass routines are excluded. Four following generic hash helpers544130/544180/5441e0/5442b0 lack physical ownership proof and remain excluded rather than assigned by adjacency.",
+        "Mac ordinary symbols provide related CExpr/CDecl roles but no CPTM named family. The role correspondence is documented; it does not justify changed-signature aliases.",
+        "Ten functions remain nonmatching despite code resolution, source-formulation review and ten whole-TU compiler profiles. Eight strict bodies plus the17-byte filename are exact; this is a completed attempt, not a100% TU match.",
+        "Bounded instruction checks cover eleven bodies,200 cases each, using valid packed records and explicit helper models. Pure helper results and external callbacks are fixed per case. These are supporting checks rather than complete application execution or a formal proof for all ASTs.",
+        "Actual helper argument values are compared; addresses of stack-local output parameters are normalized because equivalent native/candidate frames place them at different addresses. Their written semantic values are checked through subsequent behavior.",
+        "Native object/alias/type/argument-list invariants are required. Arbitrary invalid pointers, cyclic overload/alias lists, memory exhaustion and external helpers breaking their native contracts are outside equivalence claims.",
+        "CDecl_MakePTMFuncType has canonical identity but private GC3 type layouts and flag semantics. Root must guard only its old definition for GC3 and verify all three retained versions; other legacy helpers retain provisional names and receive no compatibility aliases.",
+        "Builtin type objects, namespace, elipsis/oldstyle sentinels and runtime helper globals remain external; original ownership of shared globals is not inferred from references. No BSS definitions are added."
+      ],
+      "membership_reviewed": false,
+      "mapped_function_count": 18,
+      "data_complete": true,
+      "review_evidence": {
+        "initial-attempt.json": {
+          "source": "build/CMemberPointer-native-candidate.c",
+          "compiler": "cw94",
+          "profile": "memberpointer-initial-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-initial-speed\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/CMemberPointer-native-candidate.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-initial-speed\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 18,
+          "functions": [
+            {
+              "name": "fn_00542e40",
+              "address": "0x542e40",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00542ef0",
+              "address": "0x542ef0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00542fc0",
+              "address": "0x542fc0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005432e0",
+              "address": "0x5432e0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00543360",
+              "address": "0x543360",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543680",
+              "address": "0x543680",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543830",
+              "address": "0x543830",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00543890",
+              "address": "0x543890",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543970",
+              "address": "0x543970",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543c00",
+              "address": "0x543c00",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00543c70",
+              "address": "0x543c70",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543db0",
+              "address": "0x543db0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00543ee0",
+              "address": "0x543ee0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00543f40",
+              "address": "0x543f40",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00543ff0",
+              "address": "0x543ff0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "CDecl_MakePTMFuncType",
+              "address": "0x544090",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "CPTM_GetMemberFunctionPointerSize",
+              "address": "0x544110",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00544120",
+              "address": "0x544120",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-initial-speed\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+          "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+          "source_stable": true,
+          "exact_count": 8,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        "profiles.json": [
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-intrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 8,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-nointrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 8,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-space-intrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-intrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-space-nointrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-space-nointrinsics-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-noloop-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noloop",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noloop-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noloop",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noloop-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noloop-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 8,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "memberpointer-speed-noschedule-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noschedule",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noschedule-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noschedule",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noschedule-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-noschedule-cw94\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 4,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "pro8",
+            "profile": "memberpointer-speed-pro8",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro8\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro8/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro8\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro8\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "pro7",
+            "profile": "memberpointer-speed-pro7",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro7\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro7/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro7\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "unresolved": "unbound literal: .bss (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "unresolved": "unbound literal: .bss (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro7\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 2,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "pro6",
+            "profile": "memberpointer-speed-pro6",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro6\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro6/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro6\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "unresolved": "unbound literal: .bss (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "unresolved": "unbound literal: .bss (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro6\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 2,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/CMemberPointer-native-candidate.c",
+            "compiler": "pro53",
+            "profile": "memberpointer-speed-pro53",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro53\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro53/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/CMemberPointer-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro53\\build\\CMemberPointer-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 18,
+            "functions": [
+              {
+                "name": "fn_00542e40",
+                "address": "0x542e40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542ef0",
+                "address": "0x542ef0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00542fc0",
+                "address": "0x542fc0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_005432e0",
+                "address": "0x5432e0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543360",
+                "address": "0x543360",
+                "exact": false,
+                "unresolved": "unbound literal: _@157 (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543680",
+                "address": "0x543680",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543830",
+                "address": "0x543830",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543890",
+                "address": "0x543890",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543970",
+                "address": "0x543970",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c00",
+                "address": "0x543c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543c70",
+                "address": "0x543c70",
+                "exact": false,
+                "unresolved": "unbound literal: _@293 (0 retail blocks, 0 strings)"
+              },
+              {
+                "name": "fn_00543db0",
+                "address": "0x543db0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543ee0",
+                "address": "0x543ee0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00543f40",
+                "address": "0x543f40",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00543ff0",
+                "address": "0x543ff0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "CDecl_MakePTMFuncType",
+                "address": "0x544090",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "CPTM_GetMemberFunctionPointerSize",
+                "address": "0x544110",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00544120",
+                "address": "0x544120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\memberpointer-speed-pro53\\build\\CMemberPointer-native-candidate.c\\compiled.obj",
+            "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 2,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "scoped-bindings.json": {
+          "_filename": "0x69aad8",
+          "_fn_005432e0": "0x5432e0",
+          "_fn_00543830": "0x543830",
+          "_CDecl_MakePTMFuncType": "0x544090",
+          "_fn_00543ee0": "0x543ee0",
+          "_fn_00543f40": "0x543f40",
+          "_fn_00543ff0": "0x543ff0",
+          "_CPTM_GetMemberFunctionPointerSize": "0x544110",
+          "_fn_00544120": "0x544120",
+          "_fn_00542e40": "0x542e40",
+          "_fn_00542ef0": "0x542ef0",
+          "_fn_00542fc0": "0x542fc0",
+          "_fn_00543360": "0x543360",
+          "_fn_00543680": "0x543680",
+          "_fn_00543890": "0x543890",
+          "_fn_00543970": "0x543970",
+          "_fn_00543c00": "0x543c00",
+          "_fn_00543c70": "0x543c70",
+          "_fn_00543db0": "0x543db0",
+          "_intconstnode": "0x5242b0",
+          "_rt_ptmf_null": "0x71081c",
+          "_CExpr_New_EINDIRECT_Node": "0x521ad0",
+          "_checkreference": "0x55b9f0",
+          "_CError_Internal": "0x45a250",
+          "_CExpr_NewENode": "0x5243b0",
+          "_stvoid": "0x725d96",
+          "_CDecl_NewPointerType": "0x544530",
+          "_CParser_NewFuncArg": "0x455420",
+          "_this_name_node": "0x715c28",
+          "_galloc": "0x46c6a0",
+          "_lex": "0x447b70",
+          "_tk": "0x717466",
+          "_fn_00514660": "0x514660",
+          "_memclrw": "0x46c400",
+          "_CError_Error": "0x45c480",
+          "_CDecl_AddThisPointerArgument": "0x5149b0",
+          "_CMach_PassResultInHiddenArg": "0x4e2470",
+          "_fn_00716cac": "0x716cac",
+          "_rt_ptmf_scall": "0x710928",
+          "_lalloc": "0x46c660",
+          "_fn_00559da0": "0x559da0",
+          "_void_ptr": "0x6771c8",
+          "_nullnode": "0x5242f0",
+          "_elipsis": "0x7037c0",
+          "_oldstyle": "0x70bb08",
+          "_argumentpromotion": "0x5a8b60",
+          "_CExpr_New_EOBJREF_Node": "0x521c20",
+          "_fn_005a7d70": "0x5a7d70",
+          "_fn_005a7ac0": "0x5a7ac0",
+          "_CABI_GetPtrDiffTType": "0x5547c0",
+          "_makediadicnode": "0x524130",
+          "_fn_005162a0": "0x5162a0",
+          "_rt_ptmf_cmpr": "0x7107b8",
+          "_rt_ptmf_test": "0x7107ac",
+          "_stsignedlong": "0x699c64",
+          "_fn_00454c20": "0x454c20",
+          "_makemonadicnode": "0x5241b0",
+          "_CClass_GetBasePath": "0x541ba0",
+          "_CClass_NewAccessCheck": "0x53f5b0",
+          "_CClass_GetPathOffset": "0x541770",
+          "_CInt64_NotEqual": "0x4d9420",
+          "_CInt64_Add": "0x4da370",
+          "_CExpr_NewETEMPNode": "0x55a2e0",
+          "_CExpr_CopyENode": "0x524350",
+          "_stunsignedlong": "0x699c6c",
+          "_ptmstruct": "0x71741a",
+          "_create_temp_node": "0x52df70",
+          "_rt_ptmf_cast": "0x7102c8",
+          "_funccallexpr": "0x5a89a0",
+          "_fn_0070f1b3": "0x70f1b3",
+          "_CError_Warning": "0x45a320",
+          "_fn_00520110": "0x520110",
+          "_CClass_IsDestructor": "0x542380",
+          "_fn_005dca80": "0x5dca80",
+          "_CMid_ObjectAddrRef": "0x47b230",
+          "_CParser_NewGlobalDataObject": "0x4555b0",
+          "_CParser_GetUniqueName": "0x455e00",
+          "_cscope_root": "0x7101c4",
+          "_CInit_DeclareData": "0x52f040",
+          "_CMach_InitIntMem": "0x4e40d0",
+          "_fn_005dedc0": "0x5dedc0",
+          "_fn_00454e40": "0x454e40"
+        },
+        "semantic-review.json": {
+          "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+          "functions": [
+            {
+              "name": "fn_00542e40",
+              "address": "0x542e40",
+              "size": 176,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 172,
+              "strict_exact": false,
+              "objdiff_match_percent": 86.96923,
+              "native_role": "Native member-function call preparation; related Mac CExpr_NewPTMFCall role",
+              "semantic_review": "Selects rt_ptmf_scall versus unnamed memory-return helper from CMach_PassResultInHiddenArg. Allocates two8-byte expression-list records with lalloc, carries the existing call arguments, obtains the function-member address, asserts pointer kind12 and retypes it to void_ptr. Returns the value from the three-argument call dispatcher; Ghidra false void corrected.",
+              "source_signature": "NativeMemberExpr *fn_00542e40(NativeMemberExpr *node,NativeMemberExprList *args)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00542ef0",
+              "address": "0x542ef0",
+              "size": 195,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 193,
+              "strict_exact": false,
+              "objdiff_match_percent": 51.03896,
+              "native_role": "Native call argument promotion; related Mac CExpr_PTMFCall role",
+              "semantic_review": "Traverses actual expression records against20-byte formal records. elipsis/oldstyle sentinel pointers invoke the generic promotion helper without advancing the sentinel. Missing formals report0x27b2 then return nullnode; absent actuals preserve a nonzero default record at formal+8 or diagnose and clear remaining formal. Constructs the object-reference expression then passes four arguments to the native call helper, returning its node.",
+              "source_signature": "NativeMemberExpr *fn_00542ef0(NativeMemberObject *helper,NativeMemberFunction *function,NativeMemberExprList *args)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00542fc0",
+              "address": "0x542fc0",
+              "size": 790,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 786,
+              "strict_exact": false,
+              "objdiff_match_percent": 42.91011,
+              "native_role": "Native pointer-to-member comparison; related old CExpr member-pointer comparison branches",
+              "semantic_review": "Aligns unequal owner types with the four-argument cast helper, compares data-member pointers after ptrdiff retyping, and validates integer-zero operands. Function-member comparisons choose rt_ptmf_test for a constant operand and rt_ptmf_cmpr for two addresses. Preserves source evaluation order, two8-byte argument records, call-node flag mask0x1f200003 and optional logical-not for operator0x17. Native redundant inline null-member checks are retained.",
+              "source_signature": "NativeMemberExpr *fn_00542fc0(UInt8 op,NativeMemberExpr *left,NativeMemberExpr *right)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_005432e0",
+              "address": "0x5432e0",
+              "size": 122,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 122,
+              "strict_exact": false,
+              "objdiff_match_percent": 94.479164,
+              "native_role": "Related baseline CExpr_MemberPointerConversion",
+              "semantic_review": "A zero integer node becomes a type-appropriate zero: data members use intconstnode; function members update rt_ptmf_null object type, create the indirect expression, checkreference and assign target type. Kind0x4b delegates to the five-argument reference conversion helper; other nodes return unchanged. Native API has four arguments, unlike the legacy three-argument form.",
+              "source_signature": "NativeMemberExpr *fn_005432e0(NativeMemberExpr *node,NativeMemberType *type,UInt8 convert,UInt8 mode)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543360",
+              "address": "0x543360",
+              "size": 795,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 786,
+              "strict_exact": false,
+              "objdiff_match_percent": 87.28671,
+              "native_role": "Related baseline CExpr_CastMemberPointer",
+              "semantic_review": "Checks class owners and both inheritance directions, records access only when requested, diagnoses ambiguity and rejects unavailable/negative offsets or size mismatch. Reversed path negates the offset. Equal owners/zero offset only retype. Constant data-member adjustment intentionally adds offset only when CInt64_NotEqual(value,zero) returns false; nonzero constants skip addition. Dynamic data members use a temporary assignment and conditional adjustment tree. Function members use the five-argument funccallexpr runtime cast with offset, member address, temporary andNULL, then indirect/retype. Native four-argument API differs from baseline three-argument API.",
+              "source_signature": "NativeMemberExpr *fn_00543360(NativeMemberExpr *node,NativeMemberPointer *from,NativeMemberPointer *to,UInt8 access)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543680",
+              "address": "0x543680",
+              "size": 429,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 453,
+              "strict_exact": false,
+              "objdiff_match_percent": 48.81879,
+              "native_role": "Related baseline make_memberpointer/getpointertomemberfunc conversion entry",
+              "semantic_review": "Requires kind0x4b, returns unchanged if conversion byte+41 is false, and preserves ordinary warning/error continuation and mutation of bytes+40/+42. Reloads object-list pointer after diagnostics. Function members delegate with all eight native arguments and reject nonmember target types. Data members record six-argument access, create cleared18-byte member-pointer type and use wrapping offset+1 with sign extension; qualifier mask is preserved.",
+              "source_signature": "NativeMemberExpr *fn_00543680(NativeMemberExpr *node,NativeMemberType *type,UInt32 context,UInt8 convert,UInt8 mode)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543830",
+              "address": "0x543830",
+              "size": 85,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 85,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Native member expression assignment helper",
+              "semantic_review": "Asserts indirect expression/class type and builds kind0x43 operation4 with stvoid result and supplied operands. Complete body bytes and PE fixup cells match.",
+              "source_signature": "NativeMemberExpr *fn_00543830(NativeMemberExpr *node,NativeMemberExpr *value)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "fn_00543890",
+              "address": "0x543890",
+              "size": 210,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 210,
+              "strict_exact": false,
+              "objdiff_match_percent": 89.98837,
+              "native_role": "Native data-member dereference expression",
+              "semantic_review": "Takes the class-object address, converts object and member to stunsignedlong, subtracts the encoded1 offset through the native two-argument arithmetic helper, adds to the base and restores pointer type. Reference targets add the native reference conversion before final indirect. Preserves qualifier mask and returns checkreference result; native EAX confirms Ghidra false void.",
+              "source_signature": "NativeMemberExpr *fn_00543890(NativeMemberType *type,UInt32 quals,NativeMemberExpr *base,NativeMemberExpr *member)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543970",
+              "address": "0x543970",
+              "size": 646,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 644,
+              "strict_exact": false,
+              "objdiff_match_percent": 84.62931,
+              "native_role": "Related baseline getpointertomemberfunc selection/type construction",
+              "semantic_review": "Without a target, rejects ambiguous overload lists, captures access before alias unwrapping, verifies nonstatic method flags and optionally instantiates templates. With a target, delegates all six overload-selection arguments and honors diagnostic gating. Rejects destructors, preserves mode-dependent six-argument access check, clones the entire44-byte method context, drops its first formal then applies canonical CDecl_MakePTMFuncType, clears flag2, creates a12-byte member-pointer type and kind0x52 function-member node. CMid_ObjectAddrRef is called only when object+72 is nonzero.",
+              "source_signature": "NativeMemberExpr *fn_00543970(NativeMemberType *scope,NativeMemberType *owner,NativeMemberObjectList *objects,void *templateArgs,NativeMemberPointer *target,void *context,UInt8 diagnose,UInt8 mode)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543c00",
+              "address": "0x543c00",
+              "size": 98,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 98,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Related baseline getpointertomemberfunc static initializer creation",
+              "semantic_review": "Creates a global data object, sets unique name/cscope_root/type/storage16-bit0x102, allocates12-byte initializer and passes its relocation list to CInit_DeclareData. Returns the checked indirect object expression. Complete native byte/fixup match.",
+              "source_signature": "NativeMemberExpr *fn_00543c00(NativeMemberObject *function,NativeMemberType *type)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "fn_00543c70",
+              "address": "0x543c70",
+              "size": 308,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 282,
+              "strict_exact": false,
+              "objdiff_match_percent": 64.408165,
+              "native_role": "Related baseline MemberPointerInitializer encoding",
+              "semantic_review": "Zeroes12-byte buffer and writes zero adjustment using CMach_InitIntMem. Virtual-function storage4 writes signed function+34 index and class-vtable+12 size with high-word sign extension; ordinary functions write-1 index and zero final word, then allocate and clear16-byte relocation with object pointer+4 and offset8. ReturnsNULL or the relocation list pointer, not an arbitrary integer result.",
+              "source_signature": "NativeMemberReloc *fn_00543c70(void *buffer,NativeMemberObject *object)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543db0",
+              "address": "0x543db0",
+              "size": 304,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 292,
+              "strict_exact": false,
+              "objdiff_match_percent": 80.23364,
+              "native_role": "Related baseline overload/member-function resolution loop",
+              "semantic_review": "First pass considers valid nonstatic method candidates, template restrictions and native function-type equivalence. Optional fallback reruns without exact comparison only when no candidate was selected. A second selection diagnoses ambiguity and returns the first candidate. Selected access is captured before storage6 alias unwrapping and final method invariant checks. Fourth context parameter is retained in the six-argument ABI even though this body does not inspect it.",
+              "source_signature": "NativeMemberObject *fn_00543db0(NativeMemberObjectList *objects,void *templateArgs,NativeMemberPointer *target,void *context,UInt8 *access,UInt8 fallback)",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "fn_00543ee0",
+              "address": "0x543ee0",
+              "size": 85,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 85,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Native parsed member-pointer type constructor",
+              "semantic_review": "Allocates18-byte type without clearing it, sets kind11, applies canonical member-function argument rewrite and size12 for function members or size4 for data members, sets member/owner, obtains next token and qualifier parse result, then stores output pointer. Native two-argument API; complete byte/fixup match. The unused padding remains uninitialized as native.",
+              "source_signature": "void fn_00543ee0(NativeMemberType **type,NativeMemberType *owner)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "fn_00543f40",
+              "address": "0x543f40",
+              "size": 173,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 173,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Native explicit-qualifier member-pointer type constructor",
+              "semantic_review": "Rejects owner flag1 at+34 with a resumable diagnostic followed by return. Otherwise allocates and clears18-byte type. Function members are copied into a separately allocated30-byte type before argument rewrite; data members retain original target. Three-argument ABI and complete byte/fixup match.",
+              "source_signature": "void fn_00543f40(NativeMemberType **type,NativeMemberType *owner,UInt32 quals)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "fn_00543ff0",
+              "address": "0x543ff0",
+              "size": 155,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 155,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Native method-context constructor",
+              "semantic_review": "Allocates/clears44-byte context, copies exactly30-byte function record, sets context+30 and mode+42, and adds flag16. Calls CDecl_AddThisPointerArgument only for zero mode, then diagnoses forbidden cv-qualified flags according to mode/0x3000 gates. Separating the helper call from the subsequent gate reproduces all native bytes and fixup cells.",
+              "source_signature": "NativeMemberFunctionContext *fn_00543ff0(NativeMemberFunction *f,NativeMemberType *context,UInt8 mode)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "CDecl_MakePTMFuncType",
+              "address": "0x544090",
+              "size": 124,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 124,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Canonical baseline function identity with migrated native layout",
+              "semantic_review": "Creates qualified void pointer plus two fresh formal records named this_name_node. First formal derives const/volatile qualifiers from function flags0x8000/0x10000; second has qualifier1 and precedes the first. Preserves existing tail and sets flag0x80. Complete native byte/fixup match. Legacy definition must be guarded for GC3; private native function flags/result offsets are22/14.",
+              "source_signature": "void CDecl_MakePTMFuncType(NativeMemberFunction *func)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "CPTM_GetMemberFunctionPointerSize",
+              "address": "0x544110",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "User CSV canonical symbol",
+              "semantic_review": "Returns12 in EAX. Complete byte/fixup match.",
+              "source_signature": "int CPTM_GetMemberFunctionPointerSize(void)",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "fn_00544120",
+              "address": "0x544120",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "native_role": "Native data-member pointer size accessor",
+              "semantic_review": "Returns4 in EAX. Complete byte/fixup match; canonical native function name remains unproved.",
+              "source_signature": "int fn_00544120(void)",
+              "review_status": "strict_exact"
+            }
+          ],
+          "all_identified_members_attempted": true,
+          "unattempted_members": [],
+          "diagnostic_policy": "CError_Error and CError_Warning return unless their documented special fatal handling applies. Native source keeps the explicit continuation/return/goto. CError_Internal is terminal in the actual executable; invalid object/type invariant paths are preserved and are outside the valid-record instruction test domain.",
+          "abi_policy": "18 mapped definitions are emitted exactly once. Eight exact bodies and all tested native EAX pointer results use cdecl. Hidden Ghidra void signatures and stack-reuse argument omissions were corrected from raw instructions. 64-bit integer helper values use native high/low words and EAX/EDX return."
+        },
+        "execution-validation.json": {
+          "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+          "functions": [
+            {
+              "function": "fn_005432e0",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543ff0",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543c70",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543360",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543890",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00542e40",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00542ef0",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00542fc0",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543680",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543970",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            },
+            {
+              "function": "fn_00543db0",
+              "cases": 200,
+              "passed": 200,
+              "failures": []
+            }
+          ],
+          "method": "Bounded native and relocated candidate x86 instructions in Unicorn, valid native records, explicit helper models. Compares full synthetic heap, globals, helper arguments, returns, stack and callee-saved registers."
+        },
+        "data-review.json": {
+          "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+          "complete": true,
+          "records": [
+            {
+              "name": "_filename",
+              "section": ".data",
+              "size": 17,
+              "method": "named binding",
+              "address": "0x0069aad8",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "emitted_sections": [
+            {
+              "name": ".drectve",
+              "size": 0,
+              "flags": "0x100a00"
+            },
+            {
+              "name": ".data",
+              "size": 17,
+              "flags": "0xc0101040"
+            },
+            {
+              "name": ".text",
+              "size": 122,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 85,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 124,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 85,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 173,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 155,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 6,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 6,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 172,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 193,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 786,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 786,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 453,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 210,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 644,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 98,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 282,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 292,
+              "flags": "0x60501020"
+            }
+          ],
+          "emitted_functions": [
+            "_fn_005432e0",
+            "_fn_00543830",
+            "_CDecl_MakePTMFuncType",
+            "_fn_00543ee0",
+            "_fn_00543f40",
+            "_fn_00543ff0",
+            "_CPTM_GetMemberFunctionPointerSize",
+            "_fn_00544120",
+            "_fn_00542e40",
+            "_fn_00542ef0",
+            "_fn_00542fc0",
+            "_fn_00543360",
+            "_fn_00543680",
+            "_fn_00543890",
+            "_fn_00543970",
+            "_fn_00543c00",
+            "_fn_00543c70",
+            "_fn_00543db0"
+          ],
+          "ownership_policy": "Only emitted source filename allocation is owned here. Referenced builtin types, runtime-helper objects and current namespace are external shared state; no inferred BSS is added."
+        },
+        "CMemberPointer-independent-membership-audit.json": {
+          "supported_cluster": [
+            "0x542e40",
+            "0x544130"
+          ],
+          "identified_members": 18,
+          "direct_calls": {
+            "0x542e40": [
+              "0x5a7125"
+            ],
+            "0x542ef0": [
+              "0x542ede"
+            ],
+            "0x542fc0": [
+              "0x51ec9a",
+              "0x51efda",
+              "0x55a986"
+            ],
+            "0x5432e0": [
+              "0x5e29ab",
+              "0x5e8c53"
+            ],
+            "0x543360": [
+              "0x54326f",
+              "0x5e2717"
+            ],
+            "0x543680": [
+              "0x45185d",
+              "0x45b43d",
+              "0x49eec5",
+              "0x5189eb",
+              "0x51caf4",
+              "0x51cb11",
+              "0x51ec5c",
+              "0x51ec7c",
+              "0x51ef9c",
+              "0x51efbc",
+              "0x520735",
+              "0x543350",
+              "0x55a9ce",
+              "0x5a7aea",
+              "0x5dcd2f",
+              "0x5e03ce",
+              "0x5e1eb9",
+              "0x5e413b",
+              "0x5e54d3",
+              "0x5e86c7",
+              "0x5e9779"
+            ],
+            "0x543830": [
+              "0x52092a"
+            ],
+            "0x543890": [
+              "0x5207ce"
+            ],
+            "0x543970": [
+              "0x543820"
+            ],
+            "0x543c00": [
+              "0x47c352",
+              "0x5594e8"
+            ],
+            "0x543c70": [
+              "0x536c02",
+              "0x543c39"
+            ],
+            "0x543db0": [
+              "0x536baa",
+              "0x53e839",
+              "0x5439ad"
+            ],
+            "0x543ee0": [
+              "0x51297e",
+              "0x512c10",
+              "0x51322d"
+            ],
+            "0x543f40": [
+              "0x512f4c",
+              "0x5a664d"
+            ],
+            "0x543ff0": [
+              "0x4eeb9d",
+              "0x50df0b"
+            ],
+            "0x544090": [
+              "0x513e89",
+              "0x543aa5",
+              "0x543f26",
+              "0x543fe5"
+            ],
+            "0x544110": [
+              "0x457852",
+              "0x513e8f"
+            ],
+            "0x544120": [
+              "0x513ea0"
+            ]
+          },
+          "unknown_interior_direct_calls": [],
+          "filename": "CMemberPointer.c",
+          "filename_address": "0x69aad8",
+          "filename_references": [
+            {
+              "instruction": "0x542ec2",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x542e40"
+            },
+            {
+              "instruction": "0x543185",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x542fc0"
+            },
+            {
+              "instruction": "0x5434c5",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543360"
+            },
+            {
+              "instruction": "0x5434db",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543360"
+            },
+            {
+              "instruction": "0x543715",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543680"
+            },
+            {
+              "instruction": "0x543735",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543680"
+            },
+            {
+              "instruction": "0x543847",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543830"
+            },
+            {
+              "instruction": "0x543877",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543830"
+            },
+            {
+              "instruction": "0x5438ad",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543890"
+            },
+            {
+              "instruction": "0x543aeb",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543970"
+            },
+            {
+              "instruction": "0x543ba5",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543970"
+            },
+            {
+              "instruction": "0x543be5",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543970"
+            },
+            {
+              "instruction": "0x543eca",
+              "inside_supported_cluster": true,
+              "enclosing_supported_entry": "0x543db0"
+            }
+          ],
+          "filename_proved_members": [
+            "0x542e40",
+            "0x542fc0",
+            "0x543360",
+            "0x543680",
+            "0x543830",
+            "0x543890",
+            "0x543970",
+            "0x543db0"
+          ],
+          "extra_saved_ghidra_entries": [],
+          "indirect_jumps": [],
+          "related_mac_ordinary_symbols": [
+            {
+              "name": "is_memberpointerequal",
+              "raw_name": "_is_memberpointerequal",
+              "address": "0x0002b6a4",
+              "kind": "t",
+              "line": 21183
+            },
+            {
+              "name": "mwEXIDX._is_memberpointerequal",
+              "raw_name": "mwEXIDX._is_memberpointerequal",
+              "address": "0x002160f0",
+              "kind": "s",
+              "line": 21184
+            },
+            {
+              "name": "CExpr_MakePTMF",
+              "raw_name": "_CExpr_MakePTMF",
+              "address": "0x000577bc",
+              "kind": "t",
+              "line": 22415
+            },
+            {
+              "name": "mwEXIDX._CExpr_MakePTMF",
+              "raw_name": "mwEXIDX._CExpr_MakePTMF",
+              "address": "0x00217530",
+              "kind": "s",
+              "line": 22416
+            },
+            {
+              "name": "CExpr_MemberPointerCast",
+              "raw_name": "_CExpr_MemberPointerCast",
+              "address": "0x00058f48",
+              "kind": "t",
+              "line": 22417
+            },
+            {
+              "name": "mwEXIDX._CExpr_MemberPointerCast",
+              "raw_name": "mwEXIDX._CExpr_MemberPointerCast",
+              "address": "0x002175e4",
+              "kind": "s",
+              "line": 22418
+            },
+            {
+              "name": "CExpr_ConvertToMemberPointer",
+              "raw_name": "_CExpr_ConvertToMemberPointer",
+              "address": "0x00057c84",
+              "kind": "t",
+              "line": 22503
+            },
+            {
+              "name": "mwEXIDX._CExpr_ConvertToMemberPointer",
+              "raw_name": "mwEXIDX._CExpr_ConvertToMemberPointer",
+              "address": "0x0021753c",
+              "kind": "s",
+              "line": 22504
+            },
+            {
+              "name": "CExpr_MemberPointerConversion",
+              "raw_name": "_CExpr_MemberPointerConversion",
+              "address": "0x00058ea0",
+              "kind": "t",
+              "line": 22528
+            },
+            {
+              "name": "mwEXIDX._CExpr_MemberPointerConversion",
+              "raw_name": "mwEXIDX._CExpr_MemberPointerConversion",
+              "address": "0x002175d8",
+              "kind": "s",
+              "line": 22529
+            },
+            {
+              "name": "memberpointercompare",
+              "raw_name": "_memberpointercompare",
+              "address": "0x0005b544",
+              "kind": "t",
+              "line": 22558
+            },
+            {
+              "name": "mwEXIDX._memberpointercompare",
+              "raw_name": "mwEXIDX._memberpointercompare",
+              "address": "0x002176b0",
+              "kind": "s",
+              "line": 22559
+            },
+            {
+              "name": "CDecl_TemplatePTM",
+              "raw_name": "_CDecl_TemplatePTM",
+              "address": "0x0007294c",
+              "kind": "t",
+              "line": 23135
+            },
+            {
+              "name": "mwEXIDX._CDecl_TemplatePTM",
+              "raw_name": "mwEXIDX._CDecl_TemplatePTM",
+              "address": "0x00218328",
+              "kind": "s",
+              "line": 23136
+            },
+            {
+              "name": "CDecl_MakePTMFuncType",
+              "raw_name": "_CDecl_MakePTMFuncType",
+              "address": "0x000714f0",
+              "kind": "t",
+              "line": 23220
+            },
+            {
+              "name": "mwEXIDX._CDecl_MakePTMFuncType",
+              "raw_name": "mwEXIDX._CDecl_MakePTMFuncType",
+              "address": "0x00218298",
+              "kind": "s",
+              "line": 23250
+            },
+            {
+              "name": "makememberpointertype",
+              "raw_name": "_makememberpointertype",
+              "address": "0x0007281c",
+              "kind": "t",
+              "line": 23255
+            },
+            {
+              "name": "mwEXIDX._makememberpointertype",
+              "raw_name": "mwEXIDX._makememberpointertype",
+              "address": "0x0021831c",
+              "kind": "s",
+              "line": 23256
+            },
+            {
+              "name": "CInit_InitTypeMemberPointer",
+              "raw_name": "_CInit_InitTypeMemberPointer",
+              "address": "0x000898c4",
+              "kind": "t",
+              "line": 25686
+            },
+            {
+              "name": "mwEXIDX._CInit_InitTypeMemberPointer",
+              "raw_name": "mwEXIDX._CInit_InitTypeMemberPointer",
+              "address": "0x00218de4",
+              "kind": "s",
+              "line": 25687
+            },
+            {
+              "name": "CTemplTool_GetPTMTemplArgExpr",
+              "raw_name": "_CTemplTool_GetPTMTemplArgExpr",
+              "address": "0x000a8a64",
+              "kind": "t",
+              "line": 26597
+            },
+            {
+              "name": "mwEXIDX._CTemplTool_GetPTMTemplArgExpr",
+              "raw_name": "mwEXIDX._CTemplTool_GetPTMTemplArgExpr",
+              "address": "0x00219f60",
+              "kind": "s",
+              "line": 26635
+            },
+            {
+              "name": "CExpr2_MemberPointerConversion",
+              "raw_name": "_CExpr2_MemberPointerConversion",
+              "address": "0x00113440",
+              "kind": "t",
+              "line": 28969
+            },
+            {
+              "name": "mwEXIDX._CExpr2_MemberPointerConversion",
+              "raw_name": "mwEXIDX._CExpr2_MemberPointerConversion",
+              "address": "0x0021c90c",
+              "kind": "s",
+              "line": 28970
+            },
+            {
+              "name": "CExpr_NewPTMFCall",
+              "raw_name": "_CExpr_NewPTMFCall",
+              "address": "0x00116850",
+              "kind": "t",
+              "line": 28993
+            },
+            {
+              "name": "mwEXIDX._CExpr_NewPTMFCall",
+              "raw_name": "mwEXIDX._CExpr_NewPTMFCall",
+              "address": "0x0021ca68",
+              "kind": "s",
+              "line": 28994
+            },
+            {
+              "name": "CExpr_PTMFCall",
+              "raw_name": "_CExpr_PTMFCall",
+              "address": "0x001168cc",
+              "kind": "t",
+              "line": 28995
+            },
+            {
+              "name": "mwEXIDX._CExpr_PTMFCall",
+              "raw_name": "mwEXIDX._CExpr_PTMFCall",
+              "address": "0x0021ca74",
+              "kind": "s",
+              "line": 28996
+            },
+            {
+              "name": "CPrec_GetTypeMemberPointerPatch",
+              "raw_name": "_CPrec_GetTypeMemberPointerPatch",
+              "address": "0x0011e64c",
+              "kind": "t",
+              "line": 29341
+            },
+            {
+              "name": "mwEXIDX._CPrec_GetTypeMemberPointerPatch",
+              "raw_name": "mwEXIDX._CPrec_GetTypeMemberPointerPatch",
+              "address": "0x0021cf00",
+              "kind": "s",
+              "line": 29342
+            }
+          ],
+          "physical_membership_complete": false,
+          "excluded_neighbors": {
+            "prior": [
+              "0x542d30 CClass_AddClass",
+              "0x542d60 CClass_AddFriend",
+              "0x542e20 CClass_Init"
+            ],
+            "tail": [
+              "0x544130 generic hash insertion",
+              "0x544180 generic type lookup",
+              "0x5441e0 type hashing",
+              "0x5442b0 hash initialization"
+            ],
+            "reason": "Tail hash helpers lack original physical owner evidence; proximity and type-related behavior do not prove CMemberPointer ownership."
+          },
+          "limits": "Linear code scan corroborates supported boundaries but cannot prove original object membership or absence of unnamed indirect entries. Ordinary Mac symbols are related-role search leads rather than original Windows source membership."
+        }
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 18,
+        "attempted_members": 18,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All18 identified bodies reviewed and attempted;10 compiler profiles compile,11 reviewed bodies pass2200 bounded instruction comparisons,and all18 normal-project functions/data sections/relocations equal the frozen candidate. All three retained CDecl objects have identical symbols,section bytes and relocations. Full image partition and objdiff CLI pass. Original object membership remains unproved."
+      },
+      "integration_review": {
+        "legacy": "Only CDecl_MakePTMFuncType definition guarded out for GC3 in legacy CDecl.c. Changed-signature member-pointer helpers remain provisional; no unsafe compatibility aliases.",
+        "data": "Only emitted17-byte filename allocation is claimed. Shared runtime/builtin objects remain external; generic tail hash helpers remain unowned."
+      },
+      "normal_project_validation": {
+        "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+        "source_sha256": "98d24e8c9aca8214d84c70d5abd79e73ca2244fc5c5583eae433e897fa0c86a1",
+        "candidate_project_sections_sha256": "6ca14c4b1a87e490724ddbba7923af64100fde74cb68ebf5e3c15f64446055eb",
+        "all_code_data_sections_equal": true,
+        "checked_functions": 18,
+        "all_functions_fully_resolved": true,
+        "objdiff_cli_success": true,
+        "image_partition_exact": true
+      },
+      "retained_version_validation": {
+        "objects": [
+          {
+            "version": "GC_1_2_5",
+            "source": "src/frontend/CDecl.c",
+            "normalized_object_sha256": "db595235e2f97224d4c2258d373baef8ab0a9766a7c2ec4ecbab5c32864e9530"
+          },
+          {
+            "version": "GC_1_2_5n",
+            "source": "src/frontend/CDecl.c",
+            "normalized_object_sha256": "db595235e2f97224d4c2258d373baef8ab0a9766a7c2ec4ecbab5c32864e9530"
+          },
+          {
+            "version": "GC_1_3",
+            "source": "src/frontend/CDecl.c",
+            "normalized_object_sha256": "dc4587b89f55dc82620a07ac97e5a4f94b1c95510bbf7a661502c200263961b2"
+          }
+        ],
+        "symbols_sections_and_relocations_unchanged": true
       }
     }
   },

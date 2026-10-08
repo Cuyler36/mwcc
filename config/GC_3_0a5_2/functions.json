@@ -15469,6 +15469,204 @@
     }
   },
   {
+    "name": "fn_00542e40",
+    "address": "0x542e40",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00542ef0",
+    "address": "0x542ef0",
+    "size": 195,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00542fc0",
+    "address": "0x542fc0",
+    "size": 790,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005432e0",
+    "address": "0x5432e0",
+    "size": 122,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543360",
+    "address": "0x543360",
+    "size": 795,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543680",
+    "address": "0x543680",
+    "size": 429,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543830",
+    "address": "0x543830",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543890",
+    "address": "0x543890",
+    "size": 210,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543970",
+    "address": "0x543970",
+    "size": 646,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543c00",
+    "address": "0x543c00",
+    "size": 98,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543c70",
+    "address": "0x543c70",
+    "size": 308,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543db0",
+    "address": "0x543db0",
+    "size": 304,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543ee0",
+    "address": "0x543ee0",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543f40",
+    "address": "0x543f40",
+    "size": 173,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00543ff0",
+    "address": "0x543ff0",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CDecl_MakePTMFuncType",
+    "address": "0x544090",
+    "size": 124,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CPTM_GetMemberFunctionPointerSize",
+    "address": "0x544110",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00544120",
+    "address": "0x544120",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "identity_evidence": "Native CMemberPointer.c filename, behavior/call/ABI review and supplied symbols where available; unproved names retain native address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with independent whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_00544300",
     "address": "0x544300",
     "size": 249,

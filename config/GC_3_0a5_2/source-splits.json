@@ -3514,5 +3514,77 @@
   "fn_005a0e00": {
     "name": "is_safe_const",
     "source": "src/GC_3_0a5_2/backend/Alias.c"
+  },
+  "fn_00542e40": {
+    "name": "fn_00542e40",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00542ef0": {
+    "name": "fn_00542ef0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00542fc0": {
+    "name": "fn_00542fc0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_005432e0": {
+    "name": "fn_005432e0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543360": {
+    "name": "fn_00543360",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543680": {
+    "name": "fn_00543680",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543830": {
+    "name": "fn_00543830",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543890": {
+    "name": "fn_00543890",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543970": {
+    "name": "fn_00543970",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543c00": {
+    "name": "fn_00543c00",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543c70": {
+    "name": "fn_00543c70",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543db0": {
+    "name": "fn_00543db0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543ee0": {
+    "name": "fn_00543ee0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543f40": {
+    "name": "fn_00543f40",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00543ff0": {
+    "name": "fn_00543ff0",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00544090": {
+    "name": "CDecl_MakePTMFuncType",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00544110": {
+    "name": "CPTM_GetMemberFunctionPointerSize",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_00544120": {
+    "name": "fn_00544120",
+    "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
   }
 }

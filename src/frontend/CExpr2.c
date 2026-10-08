@@ -5518,6 +5518,7 @@ static CInt64 divu(CInt64 lhs, CInt64 rhs)
     return result;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CExpr2_FormatCInt64Decimal(char *output, CInt64 num)
 {
     int length;
@@ -5559,7 +5560,9 @@ int CExpr2_FormatCInt64Decimal(char *output, CInt64 num)
     *output = 0;
     return length;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *parse_binary_digits(CInt64 *value, char *digits, unsigned char *overflow)
 {
     UInt32 low;
@@ -5592,7 +5595,9 @@ char *parse_binary_digits(CInt64 *value, char *digits, unsigned char *overflow)
     } while (TRUE);
     return digits;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *CExpr2_ParseHexInt64(CInt64 *value, char *p, Boolean *overflow)
 {
     SInt8 digit;
@@ -5645,7 +5650,9 @@ char *CExpr2_ParseHexInt64(CInt64 *value, char *p, Boolean *overflow)
     }
     return p;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *CExpr2_ParseOctalInt64(CInt64 *val, char *s, Boolean *overflow)
 {
     char c;
@@ -5684,7 +5691,9 @@ char *CExpr2_ParseOctalInt64(CInt64 *val, char *s, Boolean *overflow)
     }
     return s;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 double CExpr2_ConvertCInt64ToDouble(CInt64 *val)
 {
     CInt64 tmp;
@@ -5694,6 +5703,8 @@ double CExpr2_ConvertCInt64ToDouble(CInt64 *val)
     }
     return CExpr2_ConvertUnsignedCInt64ToDouble(val);
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 double CExpr2_ConvertUnsignedCInt64ToDouble(CInt64 *v)
 {
     double result;
@@ -5735,7 +5746,9 @@ double CExpr2_ConvertUnsignedCInt64ToDouble(CInt64 *v)
 
     return result;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertDoubleToCInt64(CInt64 *p, double x)
 {
     CInt64 r, w, v;
@@ -5749,12 +5762,16 @@ void CExpr2_ConvertDoubleToCInt64(CInt64 *p, double x)
         CExpr2_ConvertDoubleToUnsignedCInt64(p, x);
     }
 }
+#endif
 
 /* The powers of two from 2^0 to 2^64, built on first use. */
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean data_00580758;
 float data_0058075a;
 float data_0058075e[65];
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 static inline float power_of_two(short n)
 {
     static float data_00555490 = 1.0f;
@@ -5771,7 +5788,9 @@ static inline float power_of_two(short n)
     }
     return data_0058075e[n];
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 static inline void get_power_of_two(PowerOfTwo *result, short n)
 {
     static float data_00555494 = 1.0f;
@@ -5788,8 +5807,10 @@ static inline void get_power_of_two(PowerOfTwo *result, short n)
     }
     result->value = data_0058075e[n];
 }
+#endif
 
 /* VALUE as an unsigned 64-bit integer: 0 at or below zero, all ones from 2^64 up. */
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertDoubleToUnsignedCInt64(CInt64 *result, double value)
 {
     static double data_00555488 = 0.0;
@@ -5826,6 +5847,7 @@ void CExpr2_ConvertDoubleToUnsignedCInt64(CInt64 *result, double value)
     result->hi = hi;
     result->lo = lo;
 }
+#endif
 
 #if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertCInt64ToUInt8(CInt64 *value)
@@ -5850,6 +5872,7 @@ void CExpr2_SignExtendSignedChar(CInt64 *value)
 }
 #endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt8 *CExpr2_ParseDecimalCInt64(CInt64 *v, char *s, Boolean *ovf)
 {
     CInt64 t;
@@ -5900,6 +5923,7 @@ UInt8 *CExpr2_ParseDecimalCInt64(CInt64 *v, char *s, Boolean *ovf)
     }
     return (UInt8 *)s;
 }
+#endif
 
 #if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertCInt64ToUnsignedShort(CInt64 *value)

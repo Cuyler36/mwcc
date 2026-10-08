@@ -9809,56 +9809,58 @@
     }
   },
   {
-    "name": "CExpr2_FormatCInt64Decimal",
-    "address": "0x004d8810",
+    "name": "CInt64_PrintDec",
+    "address": "0x4d8810",
     "size": 418,
-    "source": "src/frontend/CExpr2.c",
-    "baseline_name": "CExpr2_FormatCInt64Decimal",
-    "baseline_address": "0x00474490",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   },
   {
-    "name": "CExpr2_ParseDecimalCInt64",
-    "address": "0x004d8b60",
+    "name": "CInt64_ScanBinString",
+    "address": "0x4d89c0",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  {
+    "name": "CInt64_ScanHexString",
+    "address": "0x4d8a50",
+    "size": 271,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  {
+    "name": "CInt64_ScanDecString",
+    "address": "0x4d8b60",
     "size": 351,
-    "source": "src/frontend/CExpr2.c",
-    "baseline_name": "CExpr2_ParseDecimalCInt64",
-    "baseline_address": "0x004747d0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   },
   {
-    "name": "CExpr2_ParseOctalInt64",
-    "address": "0x004d8cc0",
+    "name": "CInt64_ScanOctString",
+    "address": "0x4d8cc0",
     "size": 207,
-    "source": "src/frontend/CExpr2.c",
-    "baseline_name": "CExpr2_ParseOctalInt64",
-    "baseline_address": "0x00474960",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   },
   {
-    "name": "CExpr2_ConvertCInt64ToDouble",
-    "address": "0x004d8d90",
+    "name": "CInt64_ConvertToLongDouble",
+    "address": "0x4d8d90",
     "size": 121,
-    "source": "src/frontend/CExpr2.c",
-    "baseline_name": "CExpr2_ConvertCInt64ToDouble",
-    "baseline_address": "0x00474a30",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  {
+    "name": "CInt64_ConvertUToLongDouble",
+    "address": "0x4d8e10",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  {
+    "name": "CInt64_ConvertFromLongDouble",
+    "address": "0x4d8e80",
+    "size": 142,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  {
+    "name": "CInt64_ConvertUFromLongDouble",
+    "address": "0x4d8f10",
+    "size": 283,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   },
   {
     "name": "CInt64_ConvertUInt8",
@@ -10323,6 +10325,12 @@
       "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
+  },
+  {
+    "name": "CInt64_Init",
+    "address": "0x4da430",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   },
   {
     "name": "setup_return_operand",

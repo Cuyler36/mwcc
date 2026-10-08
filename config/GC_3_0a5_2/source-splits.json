@@ -2362,5 +2362,41 @@
   "CBrowse_StoreBrowseData": {
     "name": "CBrowse_Finish",
     "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CExpr2_FormatCInt64Decimal": {
+    "name": "CInt64_PrintDec",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ParseDecimalCInt64": {
+    "name": "CInt64_ScanDecString",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ParseOctalInt64": {
+    "name": "CInt64_ScanOctString",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ConvertCInt64ToDouble": {
+    "name": "CInt64_ConvertToLongDouble",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "parse_binary_digits": {
+    "name": "CInt64_ScanBinString",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ParseHexInt64": {
+    "name": "CInt64_ScanHexString",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ConvertUnsignedCInt64ToDouble": {
+    "name": "CInt64_ConvertUToLongDouble",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ConvertDoubleToCInt64": {
+    "name": "CInt64_ConvertFromLongDouble",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ConvertDoubleToUnsignedCInt64": {
+    "name": "CInt64_ConvertUFromLongDouble",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   }
 }

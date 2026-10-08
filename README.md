@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 228 source files build, 1,489 candidate functions are
-mapped, and 655 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 228 source files build, 1,495 candidate functions are
+mapped, and 661 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -95,10 +95,12 @@ ELF_Endian.c has all eight known Windows members ported and reviewed, including
 the recovered conversion-block routine. Six functions match exactly; two code
 nonmatches and one differing switch table remain. Its data and BSS match.
 
-CInt64.c now has 36 mapped members reviewed and 32 exact matches. Eight numeric
-helpers move out of the imported CExpr2 grouping under their canonical names.
-The division helper also passes 800 bounded instruction checks per original
-and compiled body, covering zero divisors and optional outputs.
+CInt64.c has all 46 identified members attempted and 41 exact matches. Numeric
+printing, scanning, and floating conversions now belong to this native TU.
+All original 32 exact matches are preserved; Mul also becomes exact. Two
+signed-range switch tables remain unresolved. Division passes 800 bounded
+instruction checks per body, and multiplication passes 564 per body against
+the current compiled object. Five Mac names remain separately unlocated.
 
 Arguments.c has all 27 retained Windows functions reviewed: 24 exact and three
 equivalent instruction nonmatches. Its initialized data, switch table, and BSS
@@ -177,7 +179,7 @@ The build downloads what it needs but this repository does not contain:
 Each function of the compiled sources is compared with the original's; `ninja` fails when a function designated
 Matching differs. `python tools/verify.py` builds and checks every version.
 Run `python tools/test_compare.py` for the relocation and translation-unit
-regression tests. verify.py leaves GC 1.2.5 selected; reconfigure GC 3.0a5.2 afterward.
+regression tests. verify.py preserves the active build and objdiff view.
 Downloaded executables, compiler libraries, archives, and generated objects stay
 in ignored directories and are not distributed with this repository.
 

@@ -14307,6 +14307,78 @@
       ],
       "windows_functions": [
         {
+          "name": "CInt64_PrintDec",
+          "address": "0x4d8810",
+          "size": 418,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ScanBinString",
+          "address": "0x4d89c0",
+          "size": 141,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ScanHexString",
+          "address": "0x4d8a50",
+          "size": 271,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ScanDecString",
+          "address": "0x4d8b60",
+          "size": 351,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ScanOctString",
+          "address": "0x4d8cc0",
+          "size": 207,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ConvertToLongDouble",
+          "address": "0x4d8d90",
+          "size": 121,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ConvertUToLongDouble",
+          "address": "0x4d8e10",
+          "size": 101,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ConvertFromLongDouble",
+          "address": "0x4d8e80",
+          "size": 142,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CInt64_ConvertUFromLongDouble",
+          "address": "0x4d8f10",
+          "size": 283,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
           "name": "CInt64_ConvertUInt8",
           "address": "0x4d9030",
           "size": 18,
@@ -14701,6 +14773,14 @@
             "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
+        },
+        {
+          "name": "CInt64_Init",
+          "address": "0x4da430",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
         }
       ],
       "mac_functions": [],
@@ -30998,50 +31078,6 @@
       ],
       "windows_functions": [
         {
-          "name": "CExpr2_FormatCInt64Decimal",
-          "address": "0x004d8810",
-          "size": 418,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_ParseDecimalCInt64",
-          "address": "0x004d8b60",
-          "size": 351,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_ParseOctalInt64",
-          "address": "0x004d8cc0",
-          "size": 207,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_ConvertCInt64ToDouble",
-          "address": "0x004d8d90",
-          "size": 121,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
           "name": "create_objectrefnode",
           "address": "0x00521ad0",
           "size": 334,
@@ -42931,9 +42967,10 @@
     },
     "src/GC_3_0a5_2/frontend/CInt64.c": {
       "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-      "status": "attempted_equivalent",
-      "source_sha256": "64715c8f3219d280b92d557aabf187a5710677ab8a7cfbc1300d9912b35267d5",
-      "compiler": "CW 9.4 Windows x86 3.2.5 build 428",
+      "frozen_candidate": "build\\CInt64-native-expansion.c",
+      "candidate_sha256": "7b9392c78cfdfa9a6a427e7abe829eff2ea31fc0aa3481a21b586cb3fb8c42c0",
+      "active_source_restored_to_HEAD": true,
+      "compiler": "cw94",
       "flags": [
         "-O4",
         "-opt",
@@ -42947,533 +42984,97 @@
         "-str",
         "noreadonly"
       ],
-      "strict_exact_count": 32,
-      "mapped_function_count": 36,
-      "functions": [
-        {
-          "name": "CInt64_And",
-          "address": "0x004d9140",
-          "size": 25,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_And",
-          "baseline_address": "0x00474e30",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 25
-        },
-        {
-          "name": "CInt64_IsInURange",
-          "address": "0x004d9160",
-          "size": 83,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_IsInURange",
-          "baseline_address": "0x00474e50",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 83
-        },
-        {
-          "name": "CInt64_NotEqual",
-          "address": "0x004d9420",
-          "size": 31,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_NotEqual",
-          "baseline_address": "0x004750c0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 31
-        },
-        {
-          "name": "CInt64_Equal",
-          "address": "0x004d9440",
-          "size": 31,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Equal",
-          "baseline_address": "0x004750f0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 31
-        },
-        {
-          "name": "CInt64_GreaterEqualU",
-          "address": "0x004d9460",
-          "size": 74,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_GreaterEqualU",
-          "baseline_address": "0x00475110",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 74
-        },
-        {
-          "name": "CInt64_GreaterEqual",
-          "address": "0x004d94b0",
-          "size": 213,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_GreaterEqual",
-          "baseline_address": "0x00475170",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 213
-        },
-        {
-          "name": "CInt64_LessEqualU",
-          "address": "0x004d9590",
-          "size": 74,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_LessEqualU",
-          "baseline_address": "0x00475210",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 74
-        },
-        {
-          "name": "CInt64_LessEqual",
-          "address": "0x004d95e0",
-          "size": 213,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_LessEqual",
-          "baseline_address": "0x00475270",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 213
-        },
-        {
-          "name": "CInt64_GreaterU",
-          "address": "0x004d96c0",
-          "size": 74,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_GreaterU",
-          "baseline_address": "0x00475310",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 74
-        },
-        {
-          "name": "CInt64_Greater",
-          "address": "0x004d9710",
-          "size": 213,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Greater",
-          "baseline_address": "0x00475370",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 213
-        },
-        {
-          "name": "CInt64_LessU",
-          "address": "0x004d97f0",
-          "size": 74,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_LessU",
-          "baseline_address": "0x00475410",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 74
-        },
-        {
-          "name": "CInt64_Less",
-          "address": "0x004d9840",
-          "size": 213,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Less",
-          "baseline_address": "0x00475470",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 213
-        },
-        {
-          "name": "CInt64_ShrU",
-          "address": "0x004d9920",
-          "size": 98,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_ShrU",
-          "baseline_address": "0x00475560",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 98
-        },
-        {
-          "name": "CInt64_Shr",
-          "address": "0x004d9990",
-          "size": 122,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Shr",
-          "baseline_address": "0x004755c0",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 122
-        },
-        {
-          "name": "CInt64_Shl",
-          "address": "0x004d9a10",
-          "size": 88,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Shl",
-          "baseline_address": "0x00475650",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 88
-        },
-        {
-          "name": "CInt64_ModU",
-          "address": "0x004d9a70",
-          "size": 38,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_ModU",
-          "baseline_address": "0x004756b0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 38
-        },
-        {
-          "name": "CInt64_Mod",
-          "address": "0x004d9aa0",
-          "size": 377,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Mod",
-          "baseline_address": "0x004756e0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 377
-        },
-        {
-          "name": "CInt64_DivU",
-          "address": "0x004d9c20",
-          "size": 39,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_DivU",
-          "baseline_address": "0x00475890",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 39
-        },
-        {
-          "name": "CInt64_Div",
-          "address": "0x004d9c50",
-          "size": 570,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Div",
-          "baseline_address": "0x004758c0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 570
-        },
-        {
-          "name": "CInt64_Mul",
-          "address": "0x004d9ff0",
-          "size": 559,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Mul",
-          "baseline_address": "0x00475ca0",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": false,
-          "compiled_size": 559
-        },
-        {
-          "name": "CInt64_MulU",
-          "address": "0x004da220",
-          "size": 162,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_MulU",
-          "baseline_address": "0x00475f30",
-          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": false,
-          "compiled_size": 162
-        },
-        {
-          "name": "CInt64_Sub",
-          "address": "0x004da2d0",
-          "size": 82,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Sub",
-          "baseline_address": "0x00475fe0",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 82
-        },
-        {
-          "name": "CInt64_Neg",
-          "address": "0x004da330",
-          "size": 60,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Inv",
-          "baseline_address": "0x00476040",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
-          "exact": true,
-          "compiled_size": 60
-        },
-        {
-          "name": "CInt64_Add",
-          "address": "0x004da370",
-          "size": 86,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CInt64_Add",
-          "baseline_address": "0x00476090",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "exact": true,
-          "compiled_size": 86
-        },
-        {
-          "name": "CInt64_Inv",
-          "address": "0x004da3d0",
-          "size": 28,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CFunc_BitwiseNot",
-          "baseline_address": "0x00476100",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
-          "exact": true,
-          "compiled_size": 28
-        },
-        {
-          "name": "CInt64_Not",
-          "address": "0x004da3f0",
-          "size": 53,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "baseline_name": "CFunc_LogicalNotCInt64",
-          "baseline_address": "0x00476130",
-          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
-          "exact": true,
-          "compiled_size": 53
-        },
-        {
-          "name": "CInt64_ConvertUInt8",
-          "address": "0x4d9030",
-          "size": 18,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 18
-        },
-        {
-          "name": "CInt64_ConvertInt8",
-          "address": "0x4d9050",
-          "size": 37,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 37
-        },
-        {
-          "name": "CInt64_ConvertUInt16",
-          "address": "0x4d9080",
-          "size": 18,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 18
-        },
-        {
-          "name": "CInt64_ConvertInt16",
-          "address": "0x4d90a0",
-          "size": 37,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 37
-        },
-        {
-          "name": "CInt64_ConvertUInt32",
-          "address": "0x4d90d0",
-          "size": 11,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 11
-        },
-        {
-          "name": "CInt64_ConvertInt32",
-          "address": "0x4d90e0",
-          "size": 23,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 23
-        },
-        {
-          "name": "CInt64_Or",
-          "address": "0x4d9100",
-          "size": 25,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 25
-        },
-        {
-          "name": "CInt64_Xor",
-          "address": "0x4d9120",
-          "size": 25,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": true,
-          "compiled_size": 25
-        },
-        {
-          "name": "CInt64_IsInRange",
-          "address": "0x4d91c0",
-          "size": 597,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "error": "unbound literal: .sw$310 (0 retail blocks, 0 strings)"
-        },
-        {
-          "name": "CInt64_DivMod",
-          "address": "0x4d9e90",
-          "size": 343,
-          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "exact": false,
-          "compiled_size": 347
-        }
-      ],
-      "owned_constants": [
-        {
-          "name": "cint64_negone",
-          "address": "0x699b6e",
-          "size": 8,
-          "bytes_exact": true
-        },
-        {
-          "name": "cint64_one",
-          "address": "0x699b76",
-          "size": 8,
-          "bytes_exact": true
-        },
-        {
-          "name": "cint64_max",
-          "address": "0x699b7e",
-          "size": 8,
-          "bytes_exact": true
-        },
-        {
-          "name": "cint64_min",
-          "address": "0x699b86",
-          "size": 8,
-          "bytes_exact": true
-        }
-      ],
-      "unproven_constant_omitted": "cint64_zero: no verified Windows address",
-      "mac_symbol_family_count": 51,
-      "mac_symbols_without_windows_mapping": [
-        "CInt64_ConvertFromLongDouble",
-        "CInt64_ConvertToLongDouble",
-        "CInt64_ConvertUFromLongDouble",
-        "CInt64_ConvertUToLongDouble",
-        "CInt64_Init",
-        "CInt64_PrintBin",
-        "CInt64_PrintDec",
-        "CInt64_PrintHex",
-        "CInt64_ScanAsmNumber",
-        "CInt64_ScanBinString",
-        "CInt64_ScanDecString",
-        "CInt64_ScanHexString",
-        "CInt64_ScanOctString",
+      "identified_native_members": 46,
+      "prior_members": 36,
+      "new_members": 10,
+      "strict_exact": 41,
+      "prior_strict_exact_preserved": 32,
+      "additional_old_match": "CInt64_Mul now strict exact after inline-helper cleanup",
+      "all_identified_native_members_attempted": true,
+      "all_emitted_mapped": true,
+      "membership_reviewed": false,
+      "universal_platform_member_absence_proved": false,
+      "unlocated_mac_names": [
+        "CInt64_UnsignedCompare",
         "CInt64_SignedCompare",
-        "CInt64_UnsignedCompare"
+        "CInt64_ScanAsmNumber",
+        "CInt64_PrintHex",
+        "CInt64_PrintBin"
+      ],
+      "membership_evidence": [
+        "Entire supplied CSV audited for CInt64 names, all within4d8810..4da431; four native CExpr2 aliases reassigned by explicit supplied CSV+Mac names and body identity.",
+        "Two unnamed native floating converters4d8e80 and4d8f10 matched Mac names by native signed/unsigned conversion bodies and exact compiler code.",
+        "Full executable direct CALL scan found no unidentified target in4d8810..4da440; padded-prologue scan found no missing seams.",
+        "Native float-table globals referenced only within the cluster; integer constants shared across many other TUs through inlining.",
+        "Mac51 ordinary CInt64 names audited;5 separately unlocated retained as limits, without fabricated address mappings."
+      ],
+      "data_complete": false,
+      "data_sections": {
+        ".data": 48,
+        ".rdata": 96,
+        ".bss": 265
+      },
+      "unresolved_data": [
+        "Two allocated32-byte CInt64_IsInRange switch tables cannot be anchored with full original payload/label/fixup proof. They remain unassigned; no manual anonymous/section bindings."
+      ],
+      "proven_data": [
+        "Four existing8-byte integer constants699b6e..699b8e",
+        "Unsigned-range32-byte table64bca4 via exact function reference",
+        "Floating constant pool699b90..699ba0 via exact native converter references",
+        "Lazy powers-of-two table: initialized byte6e1c28,size1; current float6e1c2a,size4;65floatvalues6e1c2e,size260. Source declaration order avoids inferred alignment padding overlapping native fields."
       ],
       "nonmatching_review": {
-        "CInt64_Mul": "Same instruction operations and call order; differing nonoverlapping stack temporary slots. All sign cases yield modulo-2**64 multiplication.",
-        "CInt64_MulU": "Same shift-and-add algorithm. Registers and scheduling differ. First loop adds rhs shifted by lhs low-word bits; second adds high-word cross product modulo 2**32.",
-        "CInt64_IsInRange": "Same signed bounds for widths1/2/4/8, invalid widths return false. Both operands XOR the high sign bit before unsigned comparison; negative values compare >=signed lower bound, nonnegative <=signed upper bound. Stack allocation and inline comparison scheduling differ. Two switch tables unresolved; no exact claim.",
-        "CInt64_DivMod": "Native64-step restoring unsigned division. Zero divisor returns without writing outputs; optional quotient/remainder outputs respected. Same carry shifts, unsigned >=test and modular subtraction through Add plus complemented divisor+1. Register permutation ECX/EDX and one extra spill/reload remain; no exact claim."
+        "CInt64_ScanHexString": "Every instruction/control edge matches aside from zero/sign-extension temporary ECX versus EBP; digit class signed-byte comparisons0..9,A..F,a..f; top-nibble overflow before four carry shifts; modulo Add; sticky overflow and stopping cursor reviewed. No known semantic gap.",
+        "CInt64_ConvertUToLongDouble": "Both paths return zero for zero input; otherwise build high word with32 double/add-one steps if nonzero, then low word with32 steps; same x87 fadd and1.0 data reference. Candidate adds saved EBX/copy and different counter scheduling. No known semantic gap, no numeric execution test claimed.",
+        "CInt64_DivMod": "Existing native64-step unsigned restoring division implementation retained unchanged; prior bounded original/candidate interpreter evidence retained in build/cint64-division-semantics.json.",
+        "CInt64_MulU": "Existing two-word shift/add multiplication retained unchanged; previous bounded semantic evidence retained.",
+        "CInt64_IsInRange": "Native signed bounds for widths1,2,4,8 and invalid-width false reviewed; sign-bias unsigned comparison inline. Current candidate eliminates all out-of-line helper artifacts; two switch-table references remain unresolved, no strict/objdiff claim."
       },
+      "integration": {
+        "moved_baseline_definitions": [
+          "CExpr2_FormatCInt64Decimal",
+          "CExpr2_ParseDecimalCInt64",
+          "CExpr2_ParseOctalInt64",
+          "CExpr2_ConvertCInt64ToDouble",
+          "parse_binary_digits",
+          "CExpr2_ParseHexInt64",
+          "CExpr2_ConvertUnsignedCInt64ToDouble",
+          "CExpr2_ConvertDoubleToCInt64",
+          "CExpr2_ConvertDoubleToUnsignedCInt64"
+        ],
+        "private_old_helpers_to_guard_if_unused": [
+          "power_of_two",
+          "get_power_of_two"
+        ],
+        "moved_global_aliases": {
+          "data_00580758": "data_006e1c28 at6e1c28",
+          "data_0058075a": "data_006e1c2a at6e1c2a",
+          "data_0058075e": "data_006e1c2e at6e1c2e"
+        },
+        "new_Init": "native4da430/1byte empty void function",
+        "existing_header": "No shared header edit needed; canonical converter/scanner declarations local to candidate. No old API argument semantics changed."
+      },
+      "validation": [
+        "Per-function objdiff-cli for all45 resolved candidates; strict bytes plus entire native PE fixup-cell sets",
+        "source_data full allocated bytes/category/fixup validation; two unresolved tables preserved",
+        "Candidate CP932 encoding passes; repository checker absent",
+        "Active native CInt64 source byte-identical to HEAD"
+      ],
+      "evidence": [
+        "build/CInt64-completion-attempt.json",
+        "build/CInt64-completion-owned-data.json",
+        "build/CInt64-completion-full-image-audit.json",
+        "build/CInt64-completion-Mac-checklist.json",
+        "build/CInt64-completion-emitted-inventory.json",
+        "build/CInt64-completion-aliases.json",
+        "build/CInt64-completion-scoped-bindings.json",
+        "build/CInt64-completion-reviewed-rows.json",
+        "build/CInt64-completion-retail.txt"
+      ],
+      "status": "attempted_equivalent",
+      "mapped_function_count": 46,
+      "strict_exact_count": 41,
+      "source_sha256": "7b9392c78cfdfa9a6a427e7abe829eff2ea31fc0aa3481a21b586cb3fb8c42c0",
       "bounded_validation": [
         {
           "name": "CInt64_Mul",
@@ -43483,7 +43084,9 @@
             "compiled"
           ],
           "result": "all equal to modulo-2**64 product",
-          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence."
+          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence.",
+          "validated_source_sha256": "7b9392c78cfdfa9a6a427e7abe829eff2ea31fc0aa3481a21b586cb3fb8c42c0",
+          "current_compiled_object": true
         },
         {
           "name": "CInt64_MulU",
@@ -43493,7 +43096,9 @@
             "compiled"
           ],
           "result": "all equal to modulo-2**64 product",
-          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence."
+          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence.",
+          "validated_source_sha256": "7b9392c78cfdfa9a6a427e7abe829eff2ea31fc0aa3481a21b586cb3fb8c42c0",
+          "current_compiled_object": true
         },
         {
           "name": "CInt64_DivMod",
@@ -43503,148 +43108,664 @@
             "compiled"
           ],
           "result": "Unsigned quotient/remainder and zero-divisor/optional-output behavior agree in all cases.",
-          "limitation": "Bounded observed-instruction interpreter with exact Add call model; not exhaustive equivalence."
+          "limitation": "Bounded observed-instruction interpreter with exact Add call model; not exhaustive equivalence.",
+          "validated_source_sha256": "7b9392c78cfdfa9a6a427e7abe829eff2ea31fc0aa3481a21b586cb3fb8c42c0",
+          "current_compiled_object": true
         }
       ],
-      "limitations": [
-        "Mac symbol presence does not prove a Windows out-of-line body.",
-        "No complete-TU claim: additional symbol-family members need Windows ownership and porting.",
-        "Bounded arithmetic interpreter checks supplement instruction dataflow review; they are not exhaustive formal verification.",
-        "Two IsInRange switch tables remain unresolved; normal comparison does not substitute diagnostic table addresses.",
-        "ConvertInt32 native ABI returns void: imported integer return was unsupported; every current caller discards the return."
-      ],
-      "cp932_compatible": true,
-      "membership_reviewed": false,
-      "scope": "All36 mapped Windows numeric-family members reviewed; canonical names from ordinary Mac symbols, not full original TU ownership proof.",
-      "compiler_experiments": {
-        "scope": "Historical compiler-profile evidence for prior26-member source; not refreshed for current expanded source.",
-        "source_sha256": "ae2f60ad0cd2847242764e2cdde1aca5cb9170c36befec7487182bf7d6f91c29",
-        "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
-        "mapped_functions": 26,
-        "variants": [
-          {
-            "compiler": "cw94",
-            "profile": "configured",
-            "flags": [
-              "-O4",
-              "-opt",
-              "speed",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly"
-            ],
-            "compiled": true,
-            "exact_count": 24,
-            "unresolved_count": 0,
-            "objdiff_success": true
+      "mapped_members": [
+        {
+          "name": "CInt64_ConvertUInt8",
+          "address": "0x4d9030",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_ConvertCInt64ToUInt8",
+          "baseline_address": "0x00474d20",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
           },
-          {
-            "compiler": "cw94",
-            "profile": "speed-nointrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "speed",
-              "-opt",
-              "nointrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 24,
-            "unresolved_count": 0,
-            "objdiff_success": true
+          "compiled_size": 18,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertInt8",
+          "address": "0x4d9050",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_SignExtendSignedChar",
+          "baseline_address": "0x00474d40",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
           },
-          {
-            "compiler": "cw94",
-            "profile": "speed-intrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "speed",
-              "-opt",
-              "intrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 24,
-            "unresolved_count": 0,
-            "objdiff_success": true
+          "compiled_size": 37,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertUInt16",
+          "address": "0x4d9080",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_ConvertCInt64ToUnsignedShort",
+          "baseline_address": "0x00474d70",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
           },
-          {
-            "compiler": "cw94",
-            "profile": "space-nointrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "space",
-              "-opt",
-              "nointrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
+          "compiled_size": 18,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertInt16",
+          "address": "0x4d90a0",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_SignExtendShort",
+          "baseline_address": "0x00474d90",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
           },
-          {
-            "compiler": "cw94",
-            "profile": "space-intrinsics",
-            "flags": [
-              "-O4",
-              "-inline",
-              "auto",
-              "-sym",
-              "off",
-              "-Cpp_exceptions",
-              "off",
-              "-str",
-              "noreadonly",
-              "-opt",
-              "space",
-              "-opt",
-              "intrinsics"
-            ],
-            "compiled": true,
-            "exact_count": 0,
-            "unresolved_count": 0,
-            "objdiff_success": true
-          }
-        ],
-        "reproducible_inputs_sha256": {
-          "configured": "627fc623c9f57b99509233ba6d6ec6520da9447304f4a5bc11c8f9c9c29ac982",
-          "speed-nointrinsics": "243b8f533ff5cebdb71ad65e1f6516d137ca36365794ffed4c0f8629d4e9e5ec",
-          "speed-intrinsics": "f94c8663f93f693eac7f1be6aeadb7abe38bed0f7cce912f2fd1d2f19915c996",
-          "space-nointrinsics": "1d76a10ab48a3126efc61553b09ee9ecabb94154febd673b604805b3f21c374f",
-          "space-intrinsics": "e0e67ae6b3d3d24b3d8008b4bce9eb1f8ed8d38dd737b8a64b34b95e775aebb7"
+          "compiled_size": 37,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertUInt32",
+          "address": "0x4d90d0",
+          "size": 11,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_ClearCInt64Hi",
+          "baseline_address": "0x00474dc0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 11,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertInt32",
+          "address": "0x4d90e0",
+          "size": 23,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_SignExtendCInt64",
+          "baseline_address": "0x00474dd0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 23,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Or",
+          "address": "0x4d9100",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CExpr2_BitwiseOrCInt64",
+          "baseline_address": "0x00474df0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 25,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Xor",
+          "address": "0x4d9120",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "xor_64",
+          "baseline_address": "0x00474e10",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 25,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_And",
+          "address": "0x004d9140",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_And",
+          "baseline_address": "0x00474e30",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 25,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_IsInURange",
+          "address": "0x004d9160",
+          "size": 83,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_IsInURange",
+          "baseline_address": "0x00474e50",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 83,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_IsInRange",
+          "address": "0x4d91c0",
+          "size": 597,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "error": "unbound literal: .sw$313 (0 retail blocks, 0 strings)"
+        },
+        {
+          "name": "CInt64_NotEqual",
+          "address": "0x004d9420",
+          "size": 31,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_NotEqual",
+          "baseline_address": "0x004750c0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 31,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Equal",
+          "address": "0x004d9440",
+          "size": 31,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Equal",
+          "baseline_address": "0x004750f0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 31,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterEqualU",
+          "address": "0x004d9460",
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterEqualU",
+          "baseline_address": "0x00475110",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 74,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterEqual",
+          "address": "0x004d94b0",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterEqual",
+          "baseline_address": "0x00475170",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 213,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessEqualU",
+          "address": "0x004d9590",
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessEqualU",
+          "baseline_address": "0x00475210",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 74,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessEqual",
+          "address": "0x004d95e0",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessEqual",
+          "baseline_address": "0x00475270",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 213,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterU",
+          "address": "0x004d96c0",
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterU",
+          "baseline_address": "0x00475310",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 74,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Greater",
+          "address": "0x004d9710",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Greater",
+          "baseline_address": "0x00475370",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 213,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessU",
+          "address": "0x004d97f0",
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessU",
+          "baseline_address": "0x00475410",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 74,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Less",
+          "address": "0x004d9840",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Less",
+          "baseline_address": "0x00475470",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 213,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ShrU",
+          "address": "0x004d9920",
+          "size": 98,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_ShrU",
+          "baseline_address": "0x00475560",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 98,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Shr",
+          "address": "0x004d9990",
+          "size": 122,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Shr",
+          "baseline_address": "0x004755c0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 122,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Shl",
+          "address": "0x004d9a10",
+          "size": 88,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Shl",
+          "baseline_address": "0x00475650",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 88,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ModU",
+          "address": "0x004d9a70",
+          "size": 38,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_ModU",
+          "baseline_address": "0x004756b0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 38,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Mod",
+          "address": "0x004d9aa0",
+          "size": 377,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Mod",
+          "baseline_address": "0x004756e0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 377,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_DivU",
+          "address": "0x004d9c20",
+          "size": 39,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_DivU",
+          "baseline_address": "0x00475890",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 39,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Div",
+          "address": "0x004d9c50",
+          "size": 570,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Div",
+          "baseline_address": "0x004758c0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 570,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_DivMod",
+          "address": "0x4d9e90",
+          "size": 343,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 347,
+          "strict_exact": false,
+          "objdiff_percent": 95.947365
+        },
+        {
+          "name": "CInt64_Mul",
+          "address": "0x004d9ff0",
+          "size": 559,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Mul",
+          "baseline_address": "0x00475ca0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 559,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_MulU",
+          "address": "0x004da220",
+          "size": 162,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_MulU",
+          "baseline_address": "0x00475f30",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 162,
+          "strict_exact": false,
+          "objdiff_percent": 88.92857
+        },
+        {
+          "name": "CInt64_Sub",
+          "address": "0x004da2d0",
+          "size": 82,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Sub",
+          "baseline_address": "0x00475fe0",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 82,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Neg",
+          "address": "0x004da330",
+          "size": 60,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Inv",
+          "baseline_address": "0x00476040",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 60,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Add",
+          "address": "0x004da370",
+          "size": 86,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Add",
+          "baseline_address": "0x00476090",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 86,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Inv",
+          "address": "0x004da3d0",
+          "size": 28,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CFunc_BitwiseNot",
+          "baseline_address": "0x00476100",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 28,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Not",
+          "address": "0x004da3f0",
+          "size": 53,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CFunc_LogicalNotCInt64",
+          "baseline_address": "0x00476130",
+          "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 53,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_PrintDec",
+          "address": "0x4d8810",
+          "size": 418,
+          "compiled_size": 418,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ScanBinString",
+          "address": "0x4d89c0",
+          "size": 141,
+          "compiled_size": 141,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ScanHexString",
+          "address": "0x4d8a50",
+          "size": 271,
+          "compiled_size": 271,
+          "strict_exact": false,
+          "objdiff_percent": 99.709305
+        },
+        {
+          "name": "CInt64_ScanDecString",
+          "address": "0x4d8b60",
+          "size": 351,
+          "compiled_size": 351,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ScanOctString",
+          "address": "0x4d8cc0",
+          "size": 207,
+          "compiled_size": 207,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertToLongDouble",
+          "address": "0x4d8d90",
+          "size": 121,
+          "compiled_size": 121,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertUToLongDouble",
+          "address": "0x4d8e10",
+          "size": 101,
+          "compiled_size": 105,
+          "strict_exact": false,
+          "objdiff_percent": 81.64103
+        },
+        {
+          "name": "CInt64_ConvertFromLongDouble",
+          "address": "0x4d8e80",
+          "size": 142,
+          "compiled_size": 142,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ConvertUFromLongDouble",
+          "address": "0x4d8f10",
+          "size": 283,
+          "compiled_size": 283,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Init",
+          "address": "0x4da430",
+          "size": 1,
+          "compiled_size": 1,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
         }
-      },
-      "data_evidence": [
+      ],
+      "owned_data": [
         {
           "name": "_cint64_negone",
           "section": ".data",
@@ -43690,7 +43811,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_20",
+          "name": "__anonymous_section_16",
           "section": ".rdata",
           "size": 32,
           "method": "resolved function reference (anonymous section)",
@@ -43701,30 +43822,2840 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_22",
+          "name": "__anonymous_section_18",
           "section": ".rdata",
           "size": 32,
           "method": "resolved function reference (anonymous section)",
           "unresolved": "no established retail address"
         },
         {
-          "name": "__anonymous_section_23",
+          "name": "__anonymous_section_19",
           "section": ".rdata",
           "size": 32,
           "method": "resolved function reference (anonymous section)",
           "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_52",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00699b90",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_006e1c2e",
+          "section": ".bss",
+          "size": 260,
+          "method": "named binding",
+          "address": "0x006e1c2e",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_006e1c2a",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006e1c2a",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_006e1c28",
+          "section": ".bss",
+          "size": 1,
+          "method": "named binding",
+          "address": "0x006e1c28",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
         }
       ],
-      "data_complete": false,
-      "expanded_members": {
-        "CExpr2_ConvertCInt64ToUInt8": "CInt64_ConvertUInt8",
-        "CExpr2_SignExtendSignedChar": "CInt64_ConvertInt8",
-        "CExpr2_ConvertCInt64ToUnsignedShort": "CInt64_ConvertUInt16",
-        "CExpr2_SignExtendShort": "CInt64_ConvertInt16",
-        "CExpr2_ClearCInt64Hi": "CInt64_ConvertUInt32",
-        "CExpr2_SignExtendCInt64": "CInt64_ConvertInt32",
-        "CExpr2_BitwiseOrCInt64": "CInt64_Or",
-        "xor_64": "CInt64_Xor"
+      "whole_image_audit": {
+        "cluster": [
+          "0x4d8810",
+          "0x4da440"
+        ],
+        "named_entries": [
+          {
+            "name": "CInt64_ConvertUInt8",
+            "address": "0x4d9030",
+            "size": 18,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_ConvertCInt64ToUInt8",
+            "baseline_address": "0x00474d20",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ConvertInt8",
+            "address": "0x4d9050",
+            "size": 37,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_SignExtendSignedChar",
+            "baseline_address": "0x00474d40",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ConvertUInt16",
+            "address": "0x4d9080",
+            "size": 18,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_ConvertCInt64ToUnsignedShort",
+            "baseline_address": "0x00474d70",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ConvertInt16",
+            "address": "0x4d90a0",
+            "size": 37,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_SignExtendShort",
+            "baseline_address": "0x00474d90",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ConvertUInt32",
+            "address": "0x4d90d0",
+            "size": 11,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_ClearCInt64Hi",
+            "baseline_address": "0x00474dc0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ConvertInt32",
+            "address": "0x4d90e0",
+            "size": 23,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_SignExtendCInt64",
+            "baseline_address": "0x00474dd0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Or",
+            "address": "0x4d9100",
+            "size": 25,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CExpr2_BitwiseOrCInt64",
+            "baseline_address": "0x00474df0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Xor",
+            "address": "0x4d9120",
+            "size": 25,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "xor_64",
+            "baseline_address": "0x00474e10",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_And",
+            "address": "0x004d9140",
+            "size": 25,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_And",
+            "baseline_address": "0x00474e30",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_IsInURange",
+            "address": "0x004d9160",
+            "size": 83,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_IsInURange",
+            "baseline_address": "0x00474e50",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_IsInRange",
+            "address": "0x4d91c0",
+            "size": 597,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_NotEqual",
+            "address": "0x004d9420",
+            "size": 31,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_NotEqual",
+            "baseline_address": "0x004750c0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Equal",
+            "address": "0x004d9440",
+            "size": 31,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Equal",
+            "baseline_address": "0x004750f0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_GreaterEqualU",
+            "address": "0x004d9460",
+            "size": 74,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_GreaterEqualU",
+            "baseline_address": "0x00475110",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_GreaterEqual",
+            "address": "0x004d94b0",
+            "size": 213,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_GreaterEqual",
+            "baseline_address": "0x00475170",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_LessEqualU",
+            "address": "0x004d9590",
+            "size": 74,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_LessEqualU",
+            "baseline_address": "0x00475210",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_LessEqual",
+            "address": "0x004d95e0",
+            "size": 213,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_LessEqual",
+            "baseline_address": "0x00475270",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_GreaterU",
+            "address": "0x004d96c0",
+            "size": 74,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_GreaterU",
+            "baseline_address": "0x00475310",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Greater",
+            "address": "0x004d9710",
+            "size": 213,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Greater",
+            "baseline_address": "0x00475370",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_LessU",
+            "address": "0x004d97f0",
+            "size": 74,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_LessU",
+            "baseline_address": "0x00475410",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Less",
+            "address": "0x004d9840",
+            "size": 213,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Less",
+            "baseline_address": "0x00475470",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ShrU",
+            "address": "0x004d9920",
+            "size": 98,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_ShrU",
+            "baseline_address": "0x00475560",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Shr",
+            "address": "0x004d9990",
+            "size": 122,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Shr",
+            "baseline_address": "0x004755c0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Shl",
+            "address": "0x004d9a10",
+            "size": 88,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Shl",
+            "baseline_address": "0x00475650",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_ModU",
+            "address": "0x004d9a70",
+            "size": 38,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_ModU",
+            "baseline_address": "0x004756b0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Mod",
+            "address": "0x004d9aa0",
+            "size": 377,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Mod",
+            "baseline_address": "0x004756e0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_DivU",
+            "address": "0x004d9c20",
+            "size": 39,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_DivU",
+            "baseline_address": "0x00475890",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Div",
+            "address": "0x004d9c50",
+            "size": 570,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Div",
+            "baseline_address": "0x004758c0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_DivMod",
+            "address": "0x4d9e90",
+            "size": 343,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Mul",
+            "address": "0x004d9ff0",
+            "size": 559,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Mul",
+            "baseline_address": "0x00475ca0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_MulU",
+            "address": "0x004da220",
+            "size": 162,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_MulU",
+            "baseline_address": "0x00475f30",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Sub",
+            "address": "0x004da2d0",
+            "size": 82,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Sub",
+            "baseline_address": "0x00475fe0",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Neg",
+            "address": "0x004da330",
+            "size": 60,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Inv",
+            "baseline_address": "0x00476040",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Add",
+            "address": "0x004da370",
+            "size": 86,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CInt64_Add",
+            "baseline_address": "0x00476090",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Inv",
+            "address": "0x004da3d0",
+            "size": 28,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CFunc_BitwiseNot",
+            "baseline_address": "0x00476100",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_Not",
+            "address": "0x004da3f0",
+            "size": 53,
+            "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+            "baseline_name": "CFunc_LogicalNotCInt64",
+            "baseline_address": "0x00476130",
+            "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+            "boundary_evidence": {
+              "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+              "unresolved_indirect_flow": false
+            }
+          },
+          {
+            "name": "CInt64_PrintDec",
+            "address": "0x4d8810",
+            "size": 418
+          },
+          {
+            "name": "CInt64_ScanBinString",
+            "address": "0x4d89c0",
+            "size": 141
+          },
+          {
+            "name": "CInt64_ScanHexString",
+            "address": "0x4d8a50",
+            "size": 271
+          },
+          {
+            "name": "CInt64_ScanDecString",
+            "address": "0x4d8b60",
+            "size": 351
+          },
+          {
+            "name": "CInt64_ScanOctString",
+            "address": "0x4d8cc0",
+            "size": 207
+          },
+          {
+            "name": "CInt64_ConvertToLongDouble",
+            "address": "0x4d8d90",
+            "size": 121
+          },
+          {
+            "name": "CInt64_ConvertUToLongDouble",
+            "address": "0x4d8e10",
+            "size": 101
+          },
+          {
+            "name": "CInt64_ConvertFromLongDouble",
+            "address": "0x4d8e80",
+            "size": 142
+          },
+          {
+            "name": "CInt64_ConvertUFromLongDouble",
+            "address": "0x4d8f10",
+            "size": 283
+          },
+          {
+            "name": "CInt64_Init",
+            "address": "0x4da430",
+            "size": 1
+          }
+        ],
+        "direct_call_targets": {
+          "0x4da430": [
+            "0x441f30"
+          ],
+          "0x4d8b60": [
+            "0x44265f",
+            "0x4c882c"
+          ],
+          "0x4d91c0": [
+            "0x442a27",
+            "0x443857",
+            "0x443efa",
+            "0x4461b6",
+            "0x4463a6",
+            "0x446596",
+            "0x4467c4",
+            "0x463f81",
+            "0x464031",
+            "0x464121",
+            "0x4641d1",
+            "0x46434e",
+            "0x4643fa",
+            "0x464593",
+            "0x46460a",
+            "0x4646ba",
+            "0x46473a",
+            "0x4647aa",
+            "0x4c8a86",
+            "0x4c8abb",
+            "0x4c8c0e",
+            "0x4c8c36",
+            "0x4fe660",
+            "0x4fe6b5",
+            "0x50f880",
+            "0x50fa9f",
+            "0x50fab8",
+            "0x50faec",
+            "0x50fbcf",
+            "0x50fbec",
+            "0x50fc0e",
+            "0x50fc2b",
+            "0x50fc4d",
+            "0x50fc6a",
+            "0x50fc8c",
+            "0x50fca9",
+            "0x50fe83",
+            "0x50feaf",
+            "0x50feff",
+            "0x580e76",
+            "0x580ecb"
+          ],
+          "0x4d8810": [
+            "0x442a46",
+            "0x462171",
+            "0x557ce3",
+            "0x5b8281",
+            "0x5b82ac",
+            "0x5b82e2",
+            "0x5b87b3"
+          ],
+          "0x4d9160": [
+            "0x463f4f",
+            "0x463fff",
+            "0x4640ef",
+            "0x46419f",
+            "0x46431c",
+            "0x4643c2",
+            "0x4645f9",
+            "0x464688",
+            "0x464708",
+            "0x464798",
+            "0x4c8ae3",
+            "0x4c8bdc",
+            "0x4c8c62",
+            "0x50f8b7",
+            "0x50fa29",
+            "0x50fb05",
+            "0x50fb33",
+            "0x50fb5d",
+            "0x50fb83",
+            "0x50fbad",
+            "0x50fec8",
+            "0x50ff8d"
+          ],
+          "0x4d9440": [
+            "0x4a1036",
+            "0x4a11c1",
+            "0x4a143e",
+            "0x4a16d2",
+            "0x4a1831",
+            "0x4a1995",
+            "0x4a1a16",
+            "0x4a1baa",
+            "0x4a25f3",
+            "0x4a30d6",
+            "0x4a324f",
+            "0x4a3335",
+            "0x4a33f5",
+            "0x4a3821",
+            "0x4a3e9f",
+            "0x4a404d",
+            "0x4a412c",
+            "0x4a41ec",
+            "0x4a4451",
+            "0x4a4568",
+            "0x4a45de",
+            "0x4a4fad",
+            "0x4a52c1",
+            "0x4ab32b",
+            "0x4ab5ab",
+            "0x4ab746",
+            "0x4ab8a5",
+            "0x4aba71",
+            "0x4abfbb",
+            "0x4ac0d3",
+            "0x4ac182",
+            "0x4ac242",
+            "0x4ac2fa",
+            "0x4ac3c2",
+            "0x4ac5ba",
+            "0x4ac724",
+            "0x4ac803",
+            "0x4ac84c",
+            "0x4b0b0c",
+            "0x4b0b8e",
+            "0x4b1fe9",
+            "0x4b219a",
+            "0x4b61f4",
+            "0x4b64c5",
+            "0x4b76a4",
+            "0x4b796d",
+            "0x4e49d4",
+            "0x4e4ea4",
+            "0x522f88",
+            "0x523030",
+            "0x53ca98",
+            "0x55a392",
+            "0x55a3d6",
+            "0x57d198",
+            "0x57d31a",
+            "0x57d37b",
+            "0x57d3d8",
+            "0x58df35",
+            "0x58e4a5",
+            "0x58e4e2",
+            "0x58eba8",
+            "0x58ec13",
+            "0x58f082",
+            "0x58f148",
+            "0x598f9f",
+            "0x598fe9",
+            "0x5a81ba",
+            "0x5a823c",
+            "0x5a96af",
+            "0x5af71c",
+            "0x5afde0",
+            "0x5b055f",
+            "0x5b08f2",
+            "0x5b7413",
+            "0x5b7511",
+            "0x5b755c",
+            "0x5b794f",
+            "0x5b8016",
+            "0x5bff14",
+            "0x5c00c7",
+            "0x5c2489",
+            "0x5c2526",
+            "0x5c263c",
+            "0x5c3c36",
+            "0x5c4152",
+            "0x5c4202",
+            "0x5c42b4",
+            "0x5c4344",
+            "0x5cc6e2",
+            "0x5ddf3d",
+            "0x5edafc",
+            "0x5ef1b2",
+            "0x5ef2ca",
+            "0x5ef4ba",
+            "0x5ef704",
+            "0x5f0680",
+            "0x5f06b1",
+            "0x5f1228",
+            "0x5f193c",
+            "0x5f1966",
+            "0x5f3216",
+            "0x5f371a",
+            "0x5f7078",
+            "0x5f99d8",
+            "0x5f9bcb",
+            "0x5fa025",
+            "0x5faa59",
+            "0x5ff2c2",
+            "0x6006e7",
+            "0x600dba",
+            "0x600f94",
+            "0x6015bc",
+            "0x608551",
+            "0x608572",
+            "0x60866f",
+            "0x608ad5",
+            "0x608af6",
+            "0x608bbb",
+            "0x6130b1",
+            "0x6144ab",
+            "0x6145c0",
+            "0x614c87",
+            "0x617afa",
+            "0x618ef9",
+            "0x619135",
+            "0x61915a",
+            "0x6197cb",
+            "0x6198cc",
+            "0x63e2ec",
+            "0x63e3c9",
+            "0x640e4a",
+            "0x6410da",
+            "0x641be5",
+            "0x6424e5"
+          ],
+          "0x4d9840": [
+            "0x4a30f2",
+            "0x4a3134",
+            "0x4a3ebb",
+            "0x4a3efd",
+            "0x4ac3de",
+            "0x4ac420",
+            "0x4e4dd5",
+            "0x50f8e7",
+            "0x50fde8",
+            "0x52cccc",
+            "0x58ddab",
+            "0x58f195",
+            "0x58f2ba",
+            "0x5bff56",
+            "0x5c5198",
+            "0x5c523b",
+            "0x5ee02e",
+            "0x5ee09d",
+            "0x5ee651",
+            "0x5ee6b5",
+            "0x5ef780",
+            "0x5efb4f",
+            "0x5f1c00",
+            "0x5f1ccd",
+            "0x5f9eb7",
+            "0x5f9f1c",
+            "0x5f9f4b",
+            "0x5f9f8e",
+            "0x61318f",
+            "0x614384",
+            "0x614540",
+            "0x6187c7",
+            "0x6187f9",
+            "0x61926b",
+            "0x61a232",
+            "0x6404a8",
+            "0x641d85",
+            "0x641df0",
+            "0x641f08",
+            "0x642685",
+            "0x6426f0",
+            "0x642808"
+          ],
+          "0x4da370": [
+            "0x4a3112",
+            "0x4a3154",
+            "0x4a32db",
+            "0x4a339b",
+            "0x4a3edb",
+            "0x4a3f1d",
+            "0x4a40d2",
+            "0x4a4192",
+            "0x4a7547",
+            "0x4ac11e",
+            "0x4ac1de",
+            "0x4ac3fe",
+            "0x4ac440",
+            "0x4ae420",
+            "0x4aeb36",
+            "0x4b2240",
+            "0x4b2258",
+            "0x4b2618",
+            "0x4b2638",
+            "0x4b2670",
+            "0x4b2696",
+            "0x4b59c4",
+            "0x4b5b9f",
+            "0x4b5c73",
+            "0x4b5ff8",
+            "0x4b6e2b",
+            "0x4b7025",
+            "0x4b7118",
+            "0x4b74a8",
+            "0x4b8116",
+            "0x4b822f",
+            "0x4d8889",
+            "0x4d8a32",
+            "0x4d8b0a",
+            "0x4d8c09",
+            "0x4d8c33",
+            "0x4d8c68",
+            "0x4d8c92",
+            "0x4d8d61",
+            "0x4d8ddb",
+            "0x4d8ef1",
+            "0x4d9b0e",
+            "0x4d9b75",
+            "0x4d9bb0",
+            "0x4d9bfe",
+            "0x4d9cd4",
+            "0x4d9d37",
+            "0x4d9dcc",
+            "0x4d9e14",
+            "0x4d9e7a",
+            "0x4d9fad",
+            "0x4d9fc7",
+            "0x4da04c",
+            "0x4da090",
+            "0x4da0e5",
+            "0x4da136",
+            "0x4da1b4",
+            "0x4da209",
+            "0x4da2a2",
+            "0x4da2fc",
+            "0x4da312",
+            "0x4da35c",
+            "0x4e4865",
+            "0x4e4d35",
+            "0x50f4fc",
+            "0x50f534",
+            "0x50f844",
+            "0x54349e",
+            "0x58ddcf",
+            "0x58e23b",
+            "0x58e259",
+            "0x58e281",
+            "0x58e29f",
+            "0x58e310",
+            "0x58f1ba",
+            "0x58f262",
+            "0x5b3177",
+            "0x5b3386",
+            "0x5c000a",
+            "0x5c0192",
+            "0x5c1148",
+            "0x5c123c",
+            "0x5c25ad",
+            "0x5d9f5c",
+            "0x5ee07d",
+            "0x5ee69c",
+            "0x5ee7e4",
+            "0x5efb35",
+            "0x5efbbc",
+            "0x5f198a",
+            "0x5f19bf",
+            "0x5f1cb4",
+            "0x5f2955",
+            "0x5f2c79",
+            "0x5f2f69",
+            "0x5f3298",
+            "0x5f3396",
+            "0x5f392a",
+            "0x5f39b2",
+            "0x5f3d32",
+            "0x5f3ea8",
+            "0x5f3efe",
+            "0x5faedf",
+            "0x5faf81",
+            "0x5ff3c0",
+            "0x613009",
+            "0x6131ea",
+            "0x61412e",
+            "0x614c47",
+            "0x614d71",
+            "0x617aa6",
+            "0x6183a4",
+            "0x6183c7",
+            "0x618c9f",
+            "0x618cbf",
+            "0x619502",
+            "0x619522",
+            "0x619ff2",
+            "0x61a012",
+            "0x641cca",
+            "0x6425ca"
+          ],
+          "0x4d9710": [
+            "0x4a311c",
+            "0x4a315e",
+            "0x4a3ee5",
+            "0x4a3f27",
+            "0x4ac408",
+            "0x4ac44a",
+            "0x4e4e07",
+            "0x52cc06",
+            "0x52cd4e",
+            "0x58dd8b",
+            "0x58e263",
+            "0x58e2a9",
+            "0x58f0c2",
+            "0x58f0e3",
+            "0x58f2e0",
+            "0x5c0b92",
+            "0x5f9fd5",
+            "0x5f9ff6",
+            "0x613164",
+            "0x6143e0",
+            "0x614ccb",
+            "0x618912",
+            "0x618944",
+            "0x6191f3",
+            "0x61a210",
+            "0x61a24a",
+            "0x63da91",
+            "0x640268",
+            "0x641c10",
+            "0x641d12",
+            "0x641dc5",
+            "0x642510",
+            "0x642612",
+            "0x6426c5"
+          ],
+          "0x4da2d0": [
+            "0x4a31ee",
+            "0x4a32f2",
+            "0x4a33b2",
+            "0x4a3fec",
+            "0x4a40e9",
+            "0x4a41a9",
+            "0x4a4581",
+            "0x4ac061",
+            "0x4ac136",
+            "0x4ac1f6",
+            "0x4ac78d",
+            "0x4ae480",
+            "0x4b25ca",
+            "0x4b264e",
+            "0x4b26b0",
+            "0x4e4890",
+            "0x4e4d60",
+            "0x58efc8",
+            "0x58f0a4",
+            "0x58f108",
+            "0x58f128",
+            "0x58f16c",
+            "0x58f1d8",
+            "0x58f21e",
+            "0x58f228",
+            "0x58f280",
+            "0x5b57d2",
+            "0x5c0098",
+            "0x5c15af",
+            "0x5c166f",
+            "0x5c173f",
+            "0x5c189f",
+            "0x5c195f",
+            "0x5c1a2f",
+            "0x5c244d",
+            "0x5c2cf8",
+            "0x5edb2b",
+            "0x5f191f",
+            "0x5f3531",
+            "0x5f39f6",
+            "0x5f3e52",
+            "0x5f9853",
+            "0x5f9a20",
+            "0x5f9ad8",
+            "0x5f9b5f",
+            "0x5f9dfe",
+            "0x5f9e9d",
+            "0x5fa982",
+            "0x6019d4",
+            "0x601dbe",
+            "0x612d25",
+            "0x612fff",
+            "0x614154",
+            "0x61841c",
+            "0x61843f",
+            "0x618c26",
+            "0x618d25",
+            "0x618d45",
+            "0x61903e",
+            "0x619222",
+            "0x6192a5",
+            "0x619436",
+            "0x619456",
+            "0x619f15",
+            "0x619f35",
+            "0x61a101",
+            "0x61a186",
+            "0x61a1a6",
+            "0x61a1dc",
+            "0x641c40",
+            "0x641c95",
+            "0x641e2e",
+            "0x641f46",
+            "0x642540",
+            "0x642595",
+            "0x64272e",
+            "0x642846"
+          ],
+          "0x4d9a70": [
+            "0x4a3245",
+            "0x4a332b",
+            "0x4a33eb",
+            "0x4a4043",
+            "0x4a4122",
+            "0x4a41e2",
+            "0x4a45d4",
+            "0x4ac0c9",
+            "0x4ac178",
+            "0x4ac238",
+            "0x4ac7f9",
+            "0x4aea50",
+            "0x4e5096",
+            "0x5edd4b",
+            "0x614243"
+          ],
+          "0x4da330": [
+            "0x4a329f",
+            "0x4a335b",
+            "0x4a341b",
+            "0x4a409d",
+            "0x4a4158",
+            "0x4a4210",
+            "0x4a45f8",
+            "0x4ac14e",
+            "0x4ac20e",
+            "0x4ac46f",
+            "0x4ac868",
+            "0x4aeb18",
+            "0x4e44fd",
+            "0x4e4608",
+            "0x52224b",
+            "0x522328",
+            "0x5223aa",
+            "0x5227e4",
+            "0x523328",
+            "0x55dae5",
+            "0x573b8e",
+            "0x576e36",
+            "0x57e074",
+            "0x5aa120",
+            "0x5ab85d",
+            "0x5aeb52",
+            "0x5bfdf8",
+            "0x5bfee5",
+            "0x5c042e",
+            "0x5c0851",
+            "0x5c0a78",
+            "0x5c0edd",
+            "0x5c1124",
+            "0x5c12ce",
+            "0x5c2190",
+            "0x5c24ce",
+            "0x5c4793",
+            "0x5c51b0",
+            "0x5c5253",
+            "0x5ef2b8",
+            "0x5f271c",
+            "0x5f859a",
+            "0x612e30",
+            "0x613ce0",
+            "0x613ea5",
+            "0x618c3a",
+            "0x6191da",
+            "0x619236",
+            "0x6192c0"
+          ],
+          "0x4d9aa0": [
+            "0x4a5daf",
+            "0x4ad37b",
+            "0x4adabb",
+            "0x4adbbb",
+            "0x4adf2b",
+            "0x4aeab0",
+            "0x4aebaf",
+            "0x4b651b",
+            "0x4b79bb",
+            "0x4b829c",
+            "0x4e5125",
+            "0x5b800c",
+            "0x5ef9a6",
+            "0x5efb03",
+            "0x614260",
+            "0x640502"
+          ],
+          "0x4da220": [
+            "0x4ae4f0",
+            "0x4b26d0",
+            "0x4b26f0",
+            "0x4b5c21",
+            "0x4b70c1",
+            "0x4da0a5",
+            "0x4da101",
+            "0x4da16f",
+            "0x4da1d0",
+            "0x4e47f0",
+            "0x5bffc6",
+            "0x5edd33",
+            "0x5eea38",
+            "0x5eea86",
+            "0x5eece2",
+            "0x5eee78",
+            "0x5faf6f",
+            "0x614187",
+            "0x6189d8",
+            "0x6189f8"
+          ],
+          "0x4d9ff0": [
+            "0x4ae550",
+            "0x4b5c3a",
+            "0x4b70e0",
+            "0x4e4cc0",
+            "0x5ab8fc",
+            "0x5bffde",
+            "0x5ed763",
+            "0x5eea56",
+            "0x5eeaa4",
+            "0x5eed06",
+            "0x5eee96",
+            "0x5eefc2",
+            "0x5ef03f",
+            "0x5efb2b",
+            "0x5efbe4",
+            "0x5f013d",
+            "0x5f07ff",
+            "0x5f0b91",
+            "0x5f2b18",
+            "0x5f2e26",
+            "0x5f3126",
+            "0x5f362d",
+            "0x5f3fbe",
+            "0x6141a0",
+            "0x618a22",
+            "0x618a42",
+            "0x63f9c7",
+            "0x641cf2",
+            "0x6425f2"
+          ],
+          "0x4d9a10": [
+            "0x4ae623",
+            "0x4b271a",
+            "0x4b5b67",
+            "0x4b5d75",
+            "0x4b6fed",
+            "0x4b7228",
+            "0x4c7d9d",
+            "0x4c7eaf",
+            "0x4c82a3",
+            "0x4e48b5",
+            "0x4e4d85",
+            "0x5b57c8",
+            "0x5b585c",
+            "0x5b58fd",
+            "0x5b59cd",
+            "0x5b5a1f",
+            "0x5eea11",
+            "0x5eecbb",
+            "0x5eef44",
+            "0x5f07d0",
+            "0x5f1901",
+            "0x5f1c30",
+            "0x5f2a4e",
+            "0x5f2d7a",
+            "0x5f3074",
+            "0x5f357b",
+            "0x5f3749",
+            "0x5f98b2",
+            "0x5f9ba3",
+            "0x5ff489",
+            "0x614284",
+            "0x619034",
+            "0x6192e8",
+            "0x619308",
+            "0x61a0e1",
+            "0x61a0f7",
+            "0x61a17c",
+            "0x61a19c",
+            "0x61a1d2",
+            "0x61a1f2",
+            "0x63ee07",
+            "0x640288",
+            "0x64061d",
+            "0x641337"
+          ],
+          "0x4d9920": [
+            "0x4ae690",
+            "0x4b2730",
+            "0x4b2760",
+            "0x4e48e0",
+            "0x536b48",
+            "0x5b0912",
+            "0x5ef7d2",
+            "0x5ef7fc",
+            "0x5ef823",
+            "0x5ef84a",
+            "0x5f32b1",
+            "0x5ff3da",
+            "0x6142b5",
+            "0x6185bf",
+            "0x618606",
+            "0x619342",
+            "0x619362"
+          ],
+          "0x4d9990": [
+            "0x4ae6f0",
+            "0x4e4db0",
+            "0x6142d0",
+            "0x619387",
+            "0x6193a7"
+          ],
+          "0x4d9140": [
+            "0x4ae750",
+            "0x4b2746",
+            "0x4e4a38",
+            "0x4e4f08",
+            "0x5b08e8",
+            "0x5b5933",
+            "0x5b5991",
+            "0x5b60a6",
+            "0x5b60df",
+            "0x5b6149",
+            "0x5b6183",
+            "0x5c24fe",
+            "0x5c251c",
+            "0x5c254a",
+            "0x5c2568",
+            "0x5c2614",
+            "0x5c2632",
+            "0x5c265c",
+            "0x5c267a",
+            "0x5ef8ec",
+            "0x5ef920",
+            "0x5ef954",
+            "0x5ef985",
+            "0x5f1c4a",
+            "0x5f3cd8",
+            "0x5fa6c2",
+            "0x6142f4",
+            "0x618521",
+            "0x61905d"
+          ],
+          "0x4d9120": [
+            "0x4ae7b0",
+            "0x4e4a60",
+            "0x4e4f30",
+            "0x5f3c88",
+            "0x5fa67d",
+            "0x61433c"
+          ],
+          "0x4d9100": [
+            "0x4ae810",
+            "0x4c7daf",
+            "0x4c7ec1",
+            "0x4c82b5",
+            "0x4e4a85",
+            "0x4e4f55",
+            "0x5b590f",
+            "0x5b59dc",
+            "0x5b5a31",
+            "0x5b611b",
+            "0x5b61c0",
+            "0x5f1c90",
+            "0x5f3c38",
+            "0x5f98c4",
+            "0x5fa6e9",
+            "0x614318"
+          ],
+          "0x4d9c20": [
+            "0x4ae980",
+            "0x4e5071",
+            "0x6141e3",
+            "0x618ad9",
+            "0x618af9",
+            "0x641e80",
+            "0x641ea0",
+            "0x641f98",
+            "0x641fb8",
+            "0x642780",
+            "0x6427a0",
+            "0x642898",
+            "0x6428b8"
+          ],
+          "0x4d9c50": [
+            "0x4ae9e0",
+            "0x4e5100",
+            "0x5b8037",
+            "0x5ef861",
+            "0x614200",
+            "0x618b22",
+            "0x618b42",
+            "0x6404d0"
+          ],
+          "0x4d95e0": [
+            "0x4b221a",
+            "0x4e4e40",
+            "0x52cc68",
+            "0x52cca7",
+            "0x58e2cb",
+            "0x58f065",
+            "0x5940af",
+            "0x5b3252",
+            "0x5b3482",
+            "0x5f29dd",
+            "0x5f2af2",
+            "0x5f2ba0",
+            "0x5f2d01",
+            "0x5f2e06",
+            "0x5f2eae",
+            "0x5f2ff1",
+            "0x5f3100",
+            "0x5f31aa",
+            "0x5f343f",
+            "0x5f3607",
+            "0x5f36b1",
+            "0x5f3dac",
+            "0x5f3f69",
+            "0x5f4029",
+            "0x613080",
+            "0x613ad3",
+            "0x614430"
+          ],
+          "0x4d94b0": [
+            "0x4b2262",
+            "0x4e4e72",
+            "0x52cc4e",
+            "0x52cc8d",
+            "0x58f03a",
+            "0x5940ef",
+            "0x5f29ba",
+            "0x5f2ac5",
+            "0x5f2b7d",
+            "0x5f2cde",
+            "0x5f2ddf",
+            "0x5f2e8b",
+            "0x5f2fce",
+            "0x5f30d9",
+            "0x5f3187",
+            "0x5f3416",
+            "0x5f35e0",
+            "0x5f368e",
+            "0x5f3d8f",
+            "0x5f3f4c",
+            "0x5f400c",
+            "0x600a31",
+            "0x613ab0",
+            "0x614480",
+            "0x641ed2",
+            "0x641fe6",
+            "0x6427d2",
+            "0x6428e6"
+          ],
+          "0x4d97f0": [
+            "0x4b5cc2",
+            "0x4b5d21",
+            "0x4b5dbf",
+            "0x4b716d",
+            "0x4b71cf",
+            "0x4b7272",
+            "0x4e4905",
+            "0x5bff3d",
+            "0x5c24b5",
+            "0x5c25e4",
+            "0x5c26b0",
+            "0x5edd79",
+            "0x5ef762",
+            "0x5ef88a",
+            "0x5f34c7",
+            "0x5f34e7",
+            "0x5f3dee",
+            "0x5f3e0e",
+            "0x5f9882",
+            "0x5f9e28",
+            "0x61312f",
+            "0x61436d",
+            "0x61450e",
+            "0x614ca7",
+            "0x614ceb",
+            "0x614e03",
+            "0x61874f",
+            "0x618781",
+            "0x63fdec",
+            "0x63feca"
+          ],
+          "0x4d96c0": [
+            "0x4b5f48",
+            "0x4b73f8",
+            "0x4e4937",
+            "0x50f571",
+            "0x50fe12",
+            "0x50ff2e",
+            "0x544642",
+            "0x56aec2",
+            "0x613104",
+            "0x6143c3",
+            "0x61458e",
+            "0x614dab",
+            "0x618894",
+            "0x6188c6",
+            "0x61a115",
+            "0x61a13c",
+            "0x64031c"
+          ],
+          "0x4d9050": [
+            "0x4c811a",
+            "0x4e45b7",
+            "0x4e4682",
+            "0x4e4bab",
+            "0x4e4bb6",
+            "0x4e5038",
+            "0x57e324",
+            "0x5b5aa3",
+            "0x5e9fb3"
+          ],
+          "0x4d90a0": [
+            "0x4c812a",
+            "0x4e45c3",
+            "0x4e468e",
+            "0x4e4bc2",
+            "0x4e4bcd",
+            "0x4e5044",
+            "0x57e319",
+            "0x5b5aab",
+            "0x5e9fbb"
+          ],
+          "0x4d90e0": [
+            "0x4c813a",
+            "0x4e45cf",
+            "0x4e469a",
+            "0x4e4bd9",
+            "0x4e4be4",
+            "0x4e5050",
+            "0x57e30e",
+            "0x5b5ab3",
+            "0x5e9fc3"
+          ],
+          "0x4d8a50": [
+            "0x4c86d9"
+          ],
+          "0x4d89c0": [
+            "0x4c87b5"
+          ],
+          "0x4d8cc0": [
+            "0x4c8812"
+          ],
+          "0x4d9e90": [
+            "0x4d88fb",
+            "0x4d8957",
+            "0x4d9a83",
+            "0x4d9acb",
+            "0x4d9b40",
+            "0x4d9c34",
+            "0x4d9c88",
+            "0x4d9d6c",
+            "0x4d9d97",
+            "0x4d9e45"
+          ],
+          "0x4d8e10": [
+            "0x4d8da0",
+            "0x4d8dfd",
+            "0x4e3998"
+          ],
+          "0x4d8f10": [
+            "0x4d8ea5",
+            "0x4d8ebf",
+            "0x4e41c7"
+          ],
+          "0x4d8d90": [
+            "0x4e39a5"
+          ],
+          "0x4d8e80": [
+            "0x4e41e1"
+          ],
+          "0x4d9030": [
+            "0x4e44b1",
+            "0x4e4576",
+            "0x4e46e1",
+            "0x4e46ec",
+            "0x4e4b6c",
+            "0x57e2dc",
+            "0x5b5a78",
+            "0x5e9f88"
+          ],
+          "0x4d9080": [
+            "0x4e44bd",
+            "0x4e4585",
+            "0x4e46f8",
+            "0x4e4703",
+            "0x4e4b7b",
+            "0x57e2d1",
+            "0x5b5a80",
+            "0x5e9f90"
+          ],
+          "0x4d90d0": [
+            "0x4e44c9",
+            "0x4e4594",
+            "0x4e470f",
+            "0x4e471a",
+            "0x4e4b8a",
+            "0x57e2c6",
+            "0x5b5a88",
+            "0x5e9f98"
+          ],
+          "0x4da3d0": [
+            "0x4e4518",
+            "0x4e4628",
+            "0x55db3f",
+            "0x576e66",
+            "0x5f9b9a",
+            "0x5f9bad",
+            "0x5f9c0c",
+            "0x5ff774",
+            "0x5ff804",
+            "0x613cc8",
+            "0x619054"
+          ],
+          "0x4da3f0": [
+            "0x4e4538",
+            "0x4e4648",
+            "0x521568",
+            "0x54e646",
+            "0x54e95c",
+            "0x54e965",
+            "0x54eb2e",
+            "0x54eb37",
+            "0x54eb96",
+            "0x54eb9f",
+            "0x54ec06",
+            "0x54ec0f",
+            "0x54ec6e",
+            "0x54ec77",
+            "0x55db11",
+            "0x576e4e",
+            "0x5f19ed",
+            "0x613ca9"
+          ],
+          "0x4d9590": [
+            "0x4e4970",
+            "0x5ef9e2",
+            "0x5f298f",
+            "0x5f2a94",
+            "0x5f2b52",
+            "0x5f2cb3",
+            "0x5f2db4",
+            "0x5f2e60",
+            "0x5f2fa3",
+            "0x5f30ae",
+            "0x5f3160",
+            "0x5f33e5",
+            "0x5f35b5",
+            "0x5f3667",
+            "0x5f3d6a",
+            "0x5f3f2b",
+            "0x5f3feb",
+            "0x613066",
+            "0x614418",
+            "0x614d0b",
+            "0x614dc7",
+            "0x618551",
+            "0x618572"
+          ],
+          "0x4d9460": [
+            "0x4e49a2",
+            "0x5efbee",
+            "0x5f350d",
+            "0x5f3e2e",
+            "0x5f9a2a",
+            "0x5fa903",
+            "0x5fa923",
+            "0x5fa962",
+            "0x600a10",
+            "0x600bf1",
+            "0x614468",
+            "0x614d8b",
+            "0x614de3"
+          ],
+          "0x4d9420": [
+            "0x4e4a06",
+            "0x4e4ed6",
+            "0x54344d",
+            "0x54493e",
+            "0x58de85",
+            "0x58e9a4",
+            "0x58ed23",
+            "0x5b599b",
+            "0x5b8295",
+            "0x5c2572",
+            "0x5c2684",
+            "0x5f1c68",
+            "0x61301b",
+            "0x6144d6",
+            "0x6185d1",
+            "0x618618",
+            "0x618ff6",
+            "0x619073"
+          ]
+        },
+        "unknown_interior_call_targets": [],
+        "allocated_data_fixup_references": {
+          "0x699b76": [
+            "0x4ada93",
+            "0x4adb94",
+            "0x4adcf9",
+            "0x4adf04",
+            "0x4b5bc7",
+            "0x4b5d48",
+            "0x4b5d71",
+            "0x4b5e8f",
+            "0x4b60d2",
+            "0x4b7053",
+            "0x4b71f5",
+            "0x4b7224",
+            "0x4b733f",
+            "0x4b7582",
+            "0x4cf746",
+            "0x4cf786",
+            "0x4cfa0e",
+            "0x4d8883",
+            "0x4d8a29",
+            "0x4d8dd5",
+            "0x4d8eeb",
+            "0x4d9b08",
+            "0x4d9b6f",
+            "0x4d9baa",
+            "0x4d9bf8",
+            "0x4d9cce",
+            "0x4d9d31",
+            "0x4d9dc6",
+            "0x4d9e0e",
+            "0x4d9e74",
+            "0x4d9fa7",
+            "0x4da046",
+            "0x4da08a",
+            "0x4da0df",
+            "0x4da130",
+            "0x4da1ae",
+            "0x4da203",
+            "0x4da2f6",
+            "0x4da356",
+            "0x50f4f0",
+            "0x50f528",
+            "0x50f838",
+            "0x5140b4",
+            "0x514199",
+            "0x5142fc",
+            "0x514363",
+            "0x514382",
+            "0x536b3c",
+            "0x53970b",
+            "0x55a3cc",
+            "0x58e304",
+            "0x58f1b0",
+            "0x58f20f",
+            "0x58f258",
+            "0x5aa40c",
+            "0x5aa54b",
+            "0x5b08d0",
+            "0x5b08dc",
+            "0x5b0906",
+            "0x5b57b3",
+            "0x5b57c4",
+            "0x5b5858",
+            "0x5b58f9",
+            "0x5b59c9",
+            "0x5b5a1b",
+            "0x5bb9c7",
+            "0x5bc625",
+            "0x5c008e",
+            "0x5c0188",
+            "0x5c0a06",
+            "0x5c0d32",
+            "0x5c1142",
+            "0x5c1230",
+            "0x5c1cf6",
+            "0x5c4758",
+            "0x5c52d0",
+            "0x5d9f52",
+            "0x5ea907",
+            "0x5ebc75",
+            "0x5edb21",
+            "0x5ee071",
+            "0x5ee690",
+            "0x5eea0d",
+            "0x5eecb7",
+            "0x5eef40",
+            "0x5ef436",
+            "0x5ef4ad",
+            "0x5ef7c6",
+            "0x5ef8e0",
+            "0x5f07b6",
+            "0x5f0df2",
+            "0x5f0f32",
+            "0x5f18e4",
+            "0x5f1919",
+            "0x5f197e",
+            "0x5f19b3",
+            "0x5f1ca8",
+            "0x5f2a4a",
+            "0x5f2d76",
+            "0x5f3070",
+            "0x5f3525",
+            "0x5f3577",
+            "0x5f3e46",
+            "0x5f7e21",
+            "0x5f7e6d",
+            "0x5f98ae",
+            "0x5f9c4e",
+            "0x5fa976",
+            "0x5ff865",
+            "0x5ff899",
+            "0x5ffe51",
+            "0x5ffeca",
+            "0x600095",
+            "0x6000c9",
+            "0x600558",
+            "0x600589",
+            "0x600795",
+            "0x6007c9",
+            "0x60091b",
+            "0x600949",
+            "0x600e6a",
+            "0x600e99",
+            "0x60104a",
+            "0x601079",
+            "0x6013fd",
+            "0x60142a",
+            "0x6014cb",
+            "0x6014f9",
+            "0x601667",
+            "0x601699",
+            "0x6019c4",
+            "0x601db2",
+            "0x608544",
+            "0x6086d5",
+            "0x608ac8",
+            "0x612feb",
+            "0x6131de",
+            "0x618397",
+            "0x6183ba",
+            "0x61840f",
+            "0x618432",
+            "0x61845d",
+            "0x6185b5",
+            "0x6185fa",
+            "0x618668",
+            "0x618693",
+            "0x618c19",
+            "0x61901f",
+            "0x619030",
+            "0x619216",
+            "0x619298",
+            "0x61942c",
+            "0x61944c",
+            "0x6194f8",
+            "0x619518",
+            "0x619816",
+            "0x619887",
+            "0x6198e4",
+            "0x619f0b",
+            "0x619f2b",
+            "0x619fe8",
+            "0x61a008",
+            "0x61a0cd",
+            "0x61a0f3",
+            "0x61a15c",
+            "0x61a168",
+            "0x61a198",
+            "0x61a1be",
+            "0x63ee03",
+            "0x63fd1e",
+            "0x63fd70",
+            "0x63ffe3",
+            "0x640030",
+            "0x640284",
+            "0x640619",
+            "0x641333",
+            "0x641cc1",
+            "0x6425c1"
+          ],
+          "0x699b7a": [
+            "0x4add02",
+            "0x4b5bcd",
+            "0x4b5d4e",
+            "0x4b5d6b",
+            "0x4b5e94",
+            "0x4b60d8",
+            "0x4b7058",
+            "0x4b71fb",
+            "0x4b721e",
+            "0x4b7344",
+            "0x4b7588",
+            "0x4cf74c",
+            "0x4cf78c",
+            "0x4cfa14",
+            "0x4d887d",
+            "0x4d8a23",
+            "0x4d8dcf",
+            "0x4d8ee5",
+            "0x4d9b02",
+            "0x4d9b69",
+            "0x4d9ba4",
+            "0x4d9bf2",
+            "0x4d9cc8",
+            "0x4d9d2b",
+            "0x4d9dc0",
+            "0x4d9e08",
+            "0x4d9e6e",
+            "0x4d9fa1",
+            "0x4da040",
+            "0x4da084",
+            "0x4da0d9",
+            "0x4da12a",
+            "0x4da1a8",
+            "0x4da1fd",
+            "0x4da2f0",
+            "0x4da350",
+            "0x50f4ea",
+            "0x50f522",
+            "0x50f832",
+            "0x5140ba",
+            "0x514193",
+            "0x514302",
+            "0x51435d",
+            "0x514387",
+            "0x536b36",
+            "0x539705",
+            "0x55a3c6",
+            "0x58e2fe",
+            "0x58f1aa",
+            "0x58f209",
+            "0x58f252",
+            "0x5aa416",
+            "0x5aa545",
+            "0x5b08ca",
+            "0x5b08d6",
+            "0x5b0900",
+            "0x5b57ad",
+            "0x5b57be",
+            "0x5b5852",
+            "0x5b58f3",
+            "0x5b59c3",
+            "0x5b5a15",
+            "0x5bb9c1",
+            "0x5bc61f",
+            "0x5c0088",
+            "0x5c0182",
+            "0x5c0a00",
+            "0x5c0d2c",
+            "0x5c113c",
+            "0x5c122a",
+            "0x5c475d",
+            "0x5c52ca",
+            "0x5d9f4c",
+            "0x5ea901",
+            "0x5ebc6f",
+            "0x5edb1b",
+            "0x5ee06b",
+            "0x5ee68a",
+            "0x5eea07",
+            "0x5eecb1",
+            "0x5eef3a",
+            "0x5ef430",
+            "0x5ef4a7",
+            "0x5ef7c0",
+            "0x5ef8da",
+            "0x5f07bc",
+            "0x5f0dec",
+            "0x5f0f2c",
+            "0x5f18ea",
+            "0x5f1913",
+            "0x5f1978",
+            "0x5f19ad",
+            "0x5f1ca2",
+            "0x5f2a44",
+            "0x5f2d70",
+            "0x5f306a",
+            "0x5f351f",
+            "0x5f3571",
+            "0x5f3e40",
+            "0x5f7e1b",
+            "0x5f7e67",
+            "0x5f98a8",
+            "0x5f9c48",
+            "0x5fa970",
+            "0x5ff85f",
+            "0x5ff893",
+            "0x60008f",
+            "0x6000c3",
+            "0x600552",
+            "0x600583",
+            "0x60078f",
+            "0x6007c3",
+            "0x600915",
+            "0x600943",
+            "0x600e64",
+            "0x600e93",
+            "0x601044",
+            "0x601073",
+            "0x6013f7",
+            "0x601424",
+            "0x6014c5",
+            "0x6014f3",
+            "0x601661",
+            "0x601693",
+            "0x6019be",
+            "0x601dac",
+            "0x60853e",
+            "0x6086db",
+            "0x608ac2",
+            "0x612fe5",
+            "0x6131d8",
+            "0x618391",
+            "0x6183b4",
+            "0x618409",
+            "0x61842c",
+            "0x618457",
+            "0x6185af",
+            "0x6185f4",
+            "0x618662",
+            "0x61868d",
+            "0x618c13",
+            "0x619019",
+            "0x61902a",
+            "0x619210",
+            "0x619292",
+            "0x619426",
+            "0x619446",
+            "0x6194f2",
+            "0x619512",
+            "0x619882",
+            "0x619f05",
+            "0x619f25",
+            "0x619fe2",
+            "0x61a002",
+            "0x61a0c7",
+            "0x61a0ed",
+            "0x61a156",
+            "0x61a162",
+            "0x61a192",
+            "0x61a1b8",
+            "0x63edfd",
+            "0x63fd18",
+            "0x63fd6a",
+            "0x63ffdd",
+            "0x64002a",
+            "0x64027e",
+            "0x640613",
+            "0x64132d",
+            "0x641cbb",
+            "0x6425bb"
+          ],
+          "0x699b6e": [
+            "0x4b26fa",
+            "0x55a388",
+            "0x5b5806",
+            "0x5bff0a",
+            "0x5c00bd",
+            "0x5c0491",
+            "0x5c4148",
+            "0x5c41f8",
+            "0x5c42aa",
+            "0x5c433a",
+            "0x5edaf2",
+            "0x5ef1a8",
+            "0x5ef605",
+            "0x5ef6fe",
+            "0x5efbaa",
+            "0x5f121e",
+            "0x5f32ad",
+            "0x5f3745",
+            "0x5ff3d6",
+            "0x5ff485",
+            "0x5ff952",
+            "0x5ff97f",
+            "0x5ff9c9",
+            "0x5ff9f9",
+            "0x5ffb00",
+            "0x5ffb2d",
+            "0x612f5c",
+            "0x619128",
+            "0x61914d",
+            "0x61a1ee",
+            "0x63dc11",
+            "0x63e2e2",
+            "0x63e3bf"
+          ],
+          "0x699b72": [
+            "0x4b270c",
+            "0x55a382",
+            "0x5b580c",
+            "0x5bff04",
+            "0x5c00b7",
+            "0x5c048b",
+            "0x5c4142",
+            "0x5c41f2",
+            "0x5c42a4",
+            "0x5c4334",
+            "0x5edaec",
+            "0x5ef1a2",
+            "0x5ef5ff",
+            "0x5ef6f8",
+            "0x5efba4",
+            "0x5f1218",
+            "0x5f32a7",
+            "0x5f373f",
+            "0x5ff3d0",
+            "0x5ff47f",
+            "0x5ff94c",
+            "0x5ff979",
+            "0x5ff9c3",
+            "0x5ff9f3",
+            "0x5ffafa",
+            "0x5ffb27",
+            "0x612f62",
+            "0x619122",
+            "0x619147",
+            "0x61a1e8",
+            "0x63dc17",
+            "0x63e2dc",
+            "0x63e3b9"
+          ],
+          "0x699b7e": [
+            "0x4b5ad1",
+            "0x4b61e8",
+            "0x4b64b9",
+            "0x4b6f3b",
+            "0x4b7698",
+            "0x4b7961",
+            "0x58ee8f",
+            "0x612f39"
+          ],
+          "0x699b82": [
+            "0x4b5ad7",
+            "0x4b61e2",
+            "0x4b64b3",
+            "0x4b6f41",
+            "0x4b7692",
+            "0x4b795b",
+            "0x58ee8a",
+            "0x612f3f"
+          ],
+          "0x699b90": [
+            "0x4d8e41",
+            "0x4d8e60"
+          ],
+          "0x699b98": [
+            "0x4d8e8a",
+            "0x4d8f1d"
+          ],
+          "0x6e1c28": [
+            "0x4d8f3a",
+            "0x4d8f60",
+            "0x4d8f8c",
+            "0x4d8ff6"
+          ],
+          "0x6e1c2e": [
+            "0x4d8f4a",
+            "0x4d8fb3",
+            "0x4d8fcf"
+          ],
+          "0x6e1c2a": [
+            "0x4d8f5a",
+            "0x4d8fc3"
+          ],
+          "0x6e1d2e": [
+            "0x4d8f67"
+          ],
+          "0x699b86": [
+            "0x4d920a",
+            "0x4d9249",
+            "0x4d9304",
+            "0x4d9343",
+            "0x4d94b5",
+            "0x4d94f4",
+            "0x4d95e5",
+            "0x4d9624",
+            "0x4d9715",
+            "0x4d9754",
+            "0x4d9845",
+            "0x4d9884",
+            "0x58ee78",
+            "0x5c24f2",
+            "0x5c2510",
+            "0x5c253e",
+            "0x5c255c",
+            "0x5c2608",
+            "0x5c2626",
+            "0x5c2650",
+            "0x5c266e",
+            "0x612f2e"
+          ],
+          "0x699b8a": [
+            "0x4d920f",
+            "0x4d924f",
+            "0x4d9309",
+            "0x4d9349",
+            "0x4d94ba",
+            "0x4d94fa",
+            "0x4d95ea",
+            "0x4d962a",
+            "0x4d971a",
+            "0x4d975a",
+            "0x4d984a",
+            "0x4d988a",
+            "0x58ee72",
+            "0x5c24ec",
+            "0x5c250a",
+            "0x5c2538",
+            "0x5c2556",
+            "0x5c2602",
+            "0x5c2620",
+            "0x5c264a",
+            "0x5c2668",
+            "0x612f33"
+          ]
+        },
+        "assertion_string_pushes": [],
+        "unmapped_padding_prologue_candidates": []
+      },
+      "mac_members": [
+        {
+          "address": "0011a8a0",
+          "name": "CInt64_DivMod",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011ada0",
+          "name": "CInt64_UnsignedCompare",
+          "disposition": "No distinct Windows body identified from whole-image CSV names, cluster direct calls/prologues, or known numeric-data references; no platform absence claim.",
+          "detail": "Semantics represented by private inline compare_unsigned_words, used within strict-exact mapped comparisons. Imported unassigned public body removed after whole-source caller audit found no outside caller."
+        },
+        {
+          "address": "0011adf0",
+          "name": "CInt64_SignedCompare",
+          "disposition": "No distinct Windows body identified from whole-image CSV names, cluster direct calls/prologues, or known numeric-data references; no platform absence claim.",
+          "detail": "Native mapped signed comparisons inline high-sign-bit bias and unsigned word comparison; no separately retained SignedCompare entry proved."
+        },
+        {
+          "address": "0011b24c",
+          "name": "CInt64_IsInURange",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b0ec",
+          "name": "CInt64_IsInRange",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a4dc",
+          "name": "CInt64_Init",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b404",
+          "name": "CInt64_ConvertUInt8",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b3c8",
+          "name": "CInt64_ConvertUInt16",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b398",
+          "name": "CInt64_ConvertUInt32",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a6c4",
+          "name": "CInt64_MulU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011aacc",
+          "name": "CInt64_DivU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011abe0",
+          "name": "CInt64_ModU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a548",
+          "name": "CInt64_Add",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a654",
+          "name": "CInt64_Sub",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011ac34",
+          "name": "CInt64_Shl",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011ad30",
+          "name": "CInt64_ShrU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011aeb0",
+          "name": "CInt64_LessU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011af30",
+          "name": "CInt64_GreaterU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011afbc",
+          "name": "CInt64_LessEqualU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b048",
+          "name": "CInt64_GreaterEqualU",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b08c",
+          "name": "CInt64_Equal",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b0bc",
+          "name": "CInt64_NotEqual",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b2f8",
+          "name": "CInt64_And",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b324",
+          "name": "CInt64_Xor",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b350",
+          "name": "CInt64_Or",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b3e0",
+          "name": "CInt64_ConvertInt8",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b3a4",
+          "name": "CInt64_ConvertInt16",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b37c",
+          "name": "CInt64_ConvertInt32",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a7a0",
+          "name": "CInt64_Mul",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a9c4",
+          "name": "CInt64_Div",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011ab20",
+          "name": "CInt64_Mod",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011aca4",
+          "name": "CInt64_Shr",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011ae74",
+          "name": "CInt64_Less",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011aeec",
+          "name": "CInt64_Greater",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011af74",
+          "name": "CInt64_LessEqual",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b004",
+          "name": "CInt64_GreaterEqual",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a5e4",
+          "name": "CInt64_Neg",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a524",
+          "name": "CInt64_Inv",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011a4e0",
+          "name": "CInt64_Not",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b41c",
+          "name": "CInt64_ConvertUFromLongDouble",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b548",
+          "name": "CInt64_ConvertFromLongDouble",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b5b0",
+          "name": "CInt64_ConvertUToLongDouble",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b7c8",
+          "name": "CInt64_ConvertToLongDouble",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011bebc",
+          "name": "CInt64_PrintDec",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011bab8",
+          "name": "CInt64_ScanHexString",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011bbf4",
+          "name": "CInt64_ScanBinString",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b818",
+          "name": "CInt64_ScanOctString",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011b910",
+          "name": "CInt64_ScanDecString",
+          "disposition": "mapped native member and best attempt completed"
+        },
+        {
+          "address": "0011bcec",
+          "name": "CInt64_ScanAsmNumber",
+          "disposition": "No distinct Windows body identified from whole-image CSV names, cluster direct calls/prologues, or known numeric-data references; no platform absence claim."
+        },
+        {
+          "address": "0011c008",
+          "name": "CInt64_PrintHex",
+          "disposition": "No distinct Windows body identified from whole-image CSV names, cluster direct calls/prologues, or known numeric-data references; no platform absence claim."
+        },
+        {
+          "address": "0011c150",
+          "name": "CInt64_PrintBin",
+          "disposition": "No distinct Windows body identified from whole-image CSV names, cluster direct calls/prologues, or known numeric-data references; no platform absence claim."
+        }
+      ],
+      "emitted_inventory": [
+        {
+          "name": "_CInt64_ConvertUInt8",
+          "storage": 2,
+          "size": 18,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertInt8",
+          "storage": 2,
+          "size": 37,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertUInt16",
+          "storage": 2,
+          "size": 18,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertInt16",
+          "storage": 2,
+          "size": 37,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertUInt32",
+          "storage": 2,
+          "size": 11,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertInt32",
+          "storage": 2,
+          "size": 23,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Or",
+          "storage": 2,
+          "size": 25,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Xor",
+          "storage": 2,
+          "size": 25,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_And",
+          "storage": 2,
+          "size": 25,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_IsInURange",
+          "storage": 2,
+          "size": 83,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_IsInRange",
+          "storage": 2,
+          "size": 613,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_NotEqual",
+          "storage": 2,
+          "size": 31,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Equal",
+          "storage": 2,
+          "size": 31,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_GreaterEqualU",
+          "storage": 2,
+          "size": 74,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_GreaterEqual",
+          "storage": 2,
+          "size": 213,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_LessEqualU",
+          "storage": 2,
+          "size": 74,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_LessEqual",
+          "storage": 2,
+          "size": 213,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_GreaterU",
+          "storage": 2,
+          "size": 74,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Greater",
+          "storage": 2,
+          "size": 213,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_LessU",
+          "storage": 2,
+          "size": 74,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Less",
+          "storage": 2,
+          "size": 213,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ShrU",
+          "storage": 2,
+          "size": 98,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Shr",
+          "storage": 2,
+          "size": 122,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Shl",
+          "storage": 2,
+          "size": 88,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ModU",
+          "storage": 2,
+          "size": 38,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Mod",
+          "storage": 2,
+          "size": 377,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_DivU",
+          "storage": 2,
+          "size": 39,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Div",
+          "storage": 2,
+          "size": 570,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_DivMod",
+          "storage": 2,
+          "size": 347,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Mul",
+          "storage": 2,
+          "size": 559,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_MulU",
+          "storage": 2,
+          "size": 162,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Neg",
+          "storage": 2,
+          "size": 60,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Inv",
+          "storage": 2,
+          "size": 28,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Not",
+          "storage": 2,
+          "size": 53,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Sub",
+          "storage": 2,
+          "size": 82,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Add",
+          "storage": 2,
+          "size": 86,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_PrintDec",
+          "storage": 2,
+          "size": 418,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ScanBinString",
+          "storage": 2,
+          "size": 141,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ScanHexString",
+          "storage": 2,
+          "size": 271,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ScanOctString",
+          "storage": 2,
+          "size": 207,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ScanDecString",
+          "storage": 2,
+          "size": 351,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertToLongDouble",
+          "storage": 2,
+          "size": 121,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertUToLongDouble",
+          "storage": 2,
+          "size": 105,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertFromLongDouble",
+          "storage": 2,
+          "size": 142,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_ConvertUFromLongDouble",
+          "storage": 2,
+          "size": 283,
+          "mapped": true
+        },
+        {
+          "name": "_CInt64_Init",
+          "storage": 2,
+          "size": 1,
+          "mapped": true
+        }
+      ],
+      "baseline_alias_abi_review": [
+        {
+          "address": "0x4d8810",
+          "baseline_name": "CExpr2_FormatCInt64Decimal",
+          "name": "CInt64_PrintDec",
+          "symbol": "_CInt64_PrintDec",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI"
+        },
+        {
+          "address": "0x4d8b60",
+          "baseline_name": "CExpr2_ParseDecimalCInt64",
+          "name": "CInt64_ScanDecString",
+          "symbol": "_CInt64_ScanDecString",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI"
+        },
+        {
+          "address": "0x4d8cc0",
+          "baseline_name": "CExpr2_ParseOctalInt64",
+          "name": "CInt64_ScanOctString",
+          "symbol": "_CInt64_ScanOctString",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI"
+        },
+        {
+          "address": "0x4d8d90",
+          "baseline_name": "CExpr2_ConvertCInt64ToDouble",
+          "name": "CInt64_ConvertToLongDouble",
+          "symbol": "_CInt64_ConvertToLongDouble",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI"
+        },
+        {
+          "address": "0x4d89c0",
+          "baseline_name": "parse_binary_digits",
+          "name": "CInt64_ScanBinString",
+          "symbol": "_CInt64_ScanBinString",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI; no previous function row"
+        },
+        {
+          "address": "0x4d8a50",
+          "baseline_name": "CExpr2_ParseHexInt64",
+          "name": "CInt64_ScanHexString",
+          "symbol": "_CInt64_ScanHexString",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI; no previous function row"
+        },
+        {
+          "address": "0x4d8e10",
+          "baseline_name": "CExpr2_ConvertUnsignedCInt64ToDouble",
+          "name": "CInt64_ConvertUToLongDouble",
+          "symbol": "_CInt64_ConvertUToLongDouble",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI; no previous function row"
+        },
+        {
+          "address": "0x4d8e80",
+          "baseline_name": "CExpr2_ConvertDoubleToCInt64",
+          "name": "CInt64_ConvertFromLongDouble",
+          "symbol": "_CInt64_ConvertFromLongDouble",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI; no previous function row"
+        },
+        {
+          "address": "0x4d8f10",
+          "baseline_name": "CExpr2_ConvertDoubleToUnsignedCInt64",
+          "name": "CInt64_ConvertUFromLongDouble",
+          "symbol": "_CInt64_ConvertUFromLongDouble",
+          "abi": "same cdecl argument count, pointer/scalar representation and return ABI; no previous function row"
+        }
+      ],
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 46,
+        "attempted_members": 46,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "Whole-image CInt64 identities, calls, padded seams and table references audited; all46 emitted native bodies mapped and attempted; five Mac names remain explicit search limits."
+      },
+      "retained_versions_validation": [
+        {
+          "version": "GC_1_2_5",
+          "normalized_object_sha256": "ab8e1ab30dc09cc1c53db064db36780c748f10203d3d6299bef10e12be9b4de1",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_2_5n",
+          "normalized_object_sha256": "ab8e1ab30dc09cc1c53db064db36780c748f10203d3d6299bef10e12be9b4de1",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_3",
+          "normalized_object_sha256": "4c55110d3922f86b03210435f15107350f8f60c171dcbc0c439463bf5e81a1af",
+          "unchanged": true
+        }
+      ],
+      "normal_project_validation": {
+        "build": "all_source progress passed",
+        "mapped_members_with_source": 46,
+        "strict_exact": 41,
+        "objdiff_cli": "normal per-TU view processed successfully",
+        "data_complete": false,
+        "retained_versions": "All symbols, section bytes and relocations unchanged in three retained CExpr2 objects."
       }
     },
     "src/GC_3_0a5_2/driver/ParserErrors.c": {

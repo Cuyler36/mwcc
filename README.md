@@ -11,8 +11,9 @@ This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstructi
 to GC 3.0a5.2 while retaining the earlier versions.
 
 Current GC 3.0a5.2 status: 209 source files build, 1,079 candidate functions are
-mapped, and 217 functions pass full-byte and relocation checks. Targets.c is one
-complete translation unit: 380 code bytes and 112 data bytes. The remaining
+mapped, and 217 functions pass full-byte and relocation checks. Targets.c
+(380 code and 112 data bytes) and the setjmp runtime unit (55 code bytes) are
+complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines

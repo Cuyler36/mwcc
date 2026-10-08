@@ -44,6 +44,16 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
+## setjmp: complete runtime unit
+
+The MSL setjmp unit also passes complete-TU objdiff: `_Setjmp` at 0x00404920
+(24 bytes) and `longjmp` at 0x00404940 (31 bytes). Both are naked assembly,
+including the required zero-to-one `longjmp` return conversion. There are no
+relocations, PE fixups, or allocated data contributions. Neighboring code is
+separate and intervening bytes are NOP padding. The attempt ledger records the
+remaining limit: Windows debug metadata does not independently give this TU's
+original boundary; the implementation is inherited from the MSL source.
+
 ## Targets.c: complete symbol-identified unit
 
 The 1.2.5 reconstruction's `src/driver/Targets.c` bundles 42 functions from

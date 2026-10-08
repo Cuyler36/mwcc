@@ -108,6 +108,7 @@ def generate(args):
     attempts = previous.get('attempts', {})
     for unit in units.values():
         unit['status'] = attempts.get(unit['source'], {}).get('status', 'unattempted')
+        unit['membership_complete'] = attempts.get(unit['source'], {}).get('membership_reviewed', False)
     result = dict(schema_version=1, original_sha1=config['sha1'], symbol_provenance=symbols['provenance'],
         limitations=[
             'Diagnostic calls prove caller filename references, not all TU members or data ownership.',

@@ -923,8 +923,8 @@
       ],
       "ownership_conflicts": [],
       "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
+      "membership_complete": true,
+      "status": "exact"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/Alias.c",
@@ -33009,8 +33009,8 @@
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
+      "membership_complete": true,
+      "status": "exact"
     },
     {
       "source": "src/msl/signal.c",
@@ -38821,5 +38821,249 @@
       ]
     }
   ],
-  "attempts": {}
+  "attempts": {
+    "src/msl/setjmp_x86.c": {
+      "source": "src/msl/setjmp_x86.c",
+      "actual_included_implementation": "lib/msl/MSL_X86/setjmp.x86.c",
+      "source_sha256": "e230589c8f32e050e2f9a4fcea3b32e49fbff17269cb9bf0947e835c45cd1a3a",
+      "implementation_sha256": "29046b9d0880dd797e618ce36a7cad089530592db0fb8931b80e97097d6246f7",
+      "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+      "objdiff_command": "build/tools/objdiff-cli.exe diff -1 build/GC_3_0a5_2/target/src/msl/setjmp_x86.c.obj -2 build/GC_3_0a5_2/base/src/msl/setjmp_x86.c.obj -o build/GC_3_0a5_2/inventory/baseline/setjmp-objdiff.json",
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "kind": "SECTION_CODE",
+          "size": "55",
+          "match_percent": 100.0
+        }
+      ],
+      "objdiff_function_scores": [
+        {
+          "name": "__Setjmp",
+          "match_percent": 100.0
+        },
+        {
+          "name": "_longjmp",
+          "match_percent": 100.0
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Setjmp",
+          "symbol": "__Setjmp",
+          "address": "0x00404920",
+          "size": 24,
+          "bytes_exact": true,
+          "sha256": "ad136ab95b0bc60e2d3478e155b3c476acae1058b362154a3f757d307c80c1a1",
+          "relocations": [],
+          "absolute_fixups_in_body": [],
+          "instructions": [
+            {
+              "address": "0x00404920",
+              "mnemonic": "pop",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x00404921",
+              "mnemonic": "pop",
+              "operands": "eax"
+            },
+            {
+              "address": "0x00404922",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax], ebx"
+            },
+            {
+              "address": "0x00404924",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax + 4], esi"
+            },
+            {
+              "address": "0x00404927",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax + 8], edi"
+            },
+            {
+              "address": "0x0040492a",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax + 0xc], esp"
+            },
+            {
+              "address": "0x0040492d",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax + 0x10], ebp"
+            },
+            {
+              "address": "0x00404930",
+              "mnemonic": "mov",
+              "operands": "dword ptr [eax + 0x14], ecx"
+            },
+            {
+              "address": "0x00404933",
+              "mnemonic": "xor",
+              "operands": "eax, eax"
+            },
+            {
+              "address": "0x00404935",
+              "mnemonic": "push",
+              "operands": "eax"
+            },
+            {
+              "address": "0x00404936",
+              "mnemonic": "push",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x00404937",
+              "mnemonic": "ret",
+              "operands": ""
+            }
+          ],
+          "post_function_padding": {
+            "address": "0x00404938",
+            "size": 8,
+            "all_nop": true
+          }
+        },
+        {
+          "name": "longjmp",
+          "symbol": "_longjmp",
+          "address": "0x00404940",
+          "size": 31,
+          "bytes_exact": true,
+          "sha256": "6fb48dbaaa3a5fbd32d219bace1353c34500c455c917a5ed7a21ea0b3f0fa70f",
+          "relocations": [],
+          "absolute_fixups_in_body": [],
+          "instructions": [
+            {
+              "address": "0x00404940",
+              "mnemonic": "pop",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x00404941",
+              "mnemonic": "pop",
+              "operands": "edx"
+            },
+            {
+              "address": "0x00404942",
+              "mnemonic": "pop",
+              "operands": "eax"
+            },
+            {
+              "address": "0x00404943",
+              "mnemonic": "mov",
+              "operands": "ebx, dword ptr [edx]"
+            },
+            {
+              "address": "0x00404945",
+              "mnemonic": "mov",
+              "operands": "esi, dword ptr [edx + 4]"
+            },
+            {
+              "address": "0x00404948",
+              "mnemonic": "mov",
+              "operands": "edi, dword ptr [edx + 8]"
+            },
+            {
+              "address": "0x0040494b",
+              "mnemonic": "mov",
+              "operands": "esp, dword ptr [edx + 0xc]"
+            },
+            {
+              "address": "0x0040494e",
+              "mnemonic": "mov",
+              "operands": "ebp, dword ptr [edx + 0x10]"
+            },
+            {
+              "address": "0x00404951",
+              "mnemonic": "or",
+              "operands": "eax, eax"
+            },
+            {
+              "address": "0x00404953",
+              "mnemonic": "jne",
+              "operands": "0x40495a"
+            },
+            {
+              "address": "0x00404959",
+              "mnemonic": "inc",
+              "operands": "eax"
+            },
+            {
+              "address": "0x0040495a",
+              "mnemonic": "push",
+              "operands": "eax"
+            },
+            {
+              "address": "0x0040495b",
+              "mnemonic": "push",
+              "operands": "dword ptr [edx + 0x14]"
+            },
+            {
+              "address": "0x0040495e",
+              "mnemonic": "ret",
+              "operands": ""
+            }
+          ],
+          "post_function_padding": {
+            "address": "0x0040495f",
+            "size": 1,
+            "all_nop": true
+          }
+        }
+      ],
+      "compiled_sections": [
+        {
+          "name": ".drectve",
+          "size": 0,
+          "flags": "0x00100a00",
+          "relocations": 0
+        },
+        {
+          "name": ".text",
+          "size": 24,
+          "flags": "0x60501020",
+          "relocations": 0
+        },
+        {
+          "name": ".text",
+          "size": 31,
+          "flags": "0x60501020",
+          "relocations": 0
+        }
+      ],
+      "semantics": {
+        "_Setjmp": "Stores EBX, ESI, EDI, ESP, EBP and return address to six 32-bit slots, returns zero. Naked implementation restores caller stack shape with dummy argument slot.",
+        "longjmp": "Restores saved nonvolatile registers and stack, resumes saved address, coercing requested result zero to one. Naked assembly matches original instruction sequence exactly."
+      },
+      "neighbors": {
+        "before": "0x00404910 is a separate 15-byte initialization helper plus one NOP. 0x004048e0 is a reverse byte-search function. Neither accesses or restores a jump context.",
+        "after": "0x00404960 is a separate wrapper calling 0x004057b0; 0x00404970 destroys an array. Neither belongs to setjmp implementation."
+      },
+      "data": {
+        "compiled_allocated_data_sections": 0,
+        "compiled_data_symbols": 0,
+        "function_external_references": 0,
+        "unused_declaration": "__local_destructor_chain is only an extern declaration; compiler emits no symbol/reference for it."
+      },
+      "conclusion": "Both reconstructed implementation functions pass complete objdiff, bytes and fixups; no allocated data contribution.",
+      "confidence": "high",
+      "completeness_limits": [
+        "Windows original has no recovered COFF/PDB source-unit boundary metadata here; unit identity is inherited from baseline MSL implementation and exact two-function instruction sequences.",
+        "No observed evidence of added functions or static data. Their universal absence cannot be proven solely from absence of debug symbols.",
+        "Wrapper filename setjmp_x86.c is repository naming; included implementation basename is setjmp.x86.c."
+      ],
+      "status": "exact",
+      "membership_reviewed": true
+    },
+    "src/GC_3_0a5_2/driver/Targets.c": {
+      "status": "exact",
+      "membership_reviewed": true,
+      "functions": 4,
+      "code_bytes": 380,
+      "data_bytes": 112,
+      "evidence": "Explicit STABS membership and strict full-TU objdiff at baseline commit 872a240"
+    }
+  }
 }

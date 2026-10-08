@@ -235,7 +235,8 @@
     "src/GC_3_0a5_2/backend/CMachine.c",
     "src/GC_3_0a5_2/backend/BE_symbol.c",
     "src/GC_3_0a5_2/frontend/CScope.c",
-    "src/GC_3_0a5_2/backend/Coloring.c"
+    "src/GC_3_0a5_2/backend/Coloring.c",
+    "src/GC_3_0a5_2/backend/InterferenceGraph.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3691,6 +3692,27 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/InterferenceGraph.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -4463,7 +4485,9 @@
     "src/GC_3_0a5_2/frontend/CScope/fn_004eb440",
     "src/GC_3_0a5_2/frontend/CScope/CScope_SetNameSpaceScope",
     "src/GC_3_0a5_2/frontend/CScope/CScope_GetScope",
-    "src/GC_3_0a5_2/frontend/CScope/CScope_Cleanup"
+    "src/GC_3_0a5_2/frontend/CScope/CScope_Cleanup",
+    "src/GC_3_0a5_2/backend/InterferenceGraph/interferes",
+    "src/GC_3_0a5_2/backend/InterferenceGraph/makeinterfere"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -6909,6 +6933,39 @@
       "_rewritepcode": "0x596f90",
       "_colorgraph": "0x5970e0",
       "_simplifygraph": "0x597300"
+    },
+    "src/GC_3_0a5_2/backend/InterferenceGraph.c": {
+      "_register_class": "0x726060",
+      "_used_registers": "0x716ea0",
+      "_first_virtual": "0x710274",
+      "_call_clobber_count": "0x71003c",
+      "_call_clobbers": "0x70eac0",
+      "_interferencegraph": "0x711afc",
+      "_pcodeblocks": "0x7108c8",
+      "_local_objects": "0x710924",
+      "_argument_objects": "0x716d50",
+      "_register_objects": "0x7108b0",
+      "_liveclasses": "0x716c3c",
+      "_uniform_spill_weight": "0x70f231",
+      "_coalesced": "0x6ebf00",
+      "_coalesced_nregisters": "0x6ebf04",
+      "_blocked_count": "0x6ebf08",
+      "_blocked_dense": "0x6ebf0c",
+      "_blocked_sparse": "0x6ebf10",
+      "_interferencematrix": "0x6ebf14",
+      "_fn_0046c660": "0x46c660",
+      "_fn_0046c5e0": "0x46c5e0",
+      "_fn_0046c480": "0x46c480",
+      "_fn_0045a250": "0x45a250",
+      "_fn_00578410": "0x578410",
+      "_fn_006210c0": "0x6210c0",
+      "_fn_00579420": "0x579420",
+      "_fn_00578460": "0x578460",
+      "_fn_005784b0": "0x5784b0",
+      "_fn_00582a50": "0x582a50",
+      "_fn_0058ba80": "0x58ba80",
+      "_fn_00579300": "0x579300",
+      "_fn_00579790": "0x579790"
     }
   },
   "original_source_units": {
@@ -6928,6 +6985,7 @@
     "BE_symbol.c": "src/GC_3_0a5_2/backend/BE_symbol.c",
     "StackFrame.c": "src/GC_3_0a5_2/backend/StackFrame.c",
     "CScope.c": "src/GC_3_0a5_2/frontend/CScope.c",
-    "Coloring.c": "src/GC_3_0a5_2/backend/Coloring.c"
+    "Coloring.c": "src/GC_3_0a5_2/backend/Coloring.c",
+    "InterferenceGraph.c": "src/GC_3_0a5_2/backend/InterferenceGraph.c"
   }
 }

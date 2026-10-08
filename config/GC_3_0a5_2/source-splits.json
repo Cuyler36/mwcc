@@ -2838,5 +2838,13 @@
   "build_namespace_scope_rec": {
     "name": "CScope_BuildNameSpaceLookupList",
     "source": "src/GC_3_0a5_2/frontend/CScope.c"
+  },
+  "fn_0061f280": {
+    "name": "buildinterferencegraph",
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c"
+  },
+  "fn_00620f10": {
+    "name": "estimatespillcosts",
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c"
   }
 }

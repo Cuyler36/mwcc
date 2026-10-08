@@ -19849,6 +19849,116 @@
     }
   },
   {
+    "name": "buildinterferencegraph",
+    "address": "0x61f280",
+    "size": 188,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "findrematerializations",
+    "address": "0x61f340",
+    "size": 290,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0061f470",
+    "address": "0x61f470",
+    "size": 543,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0061f690",
+    "address": "0x61f690",
+    "size": 279,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "coalescenodes",
+    "address": "0x61f7b0",
+    "size": 808,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "buildinterferencematrix",
+    "address": "0x61fae0",
+    "size": 1072,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0061ff10",
+    "address": "0x61ff10",
+    "size": 887,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "interferes",
+    "address": "0x620290",
+    "size": 138,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "makeinterfere",
+    "address": "0x620320",
+    "size": 476,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "estimatespillcosts",
+    "address": "0x620f10",
+    "size": 429,
+    "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "COpt_CopyPropagation",
     "address": "0x00621d00",
     "size": 61,

@@ -295,5 +295,115 @@ class TranslationUnitTests(unittest.TestCase):
                 self.assertEqual(section['data'][start:end], expected)
 
 
+class BoundTableLiteralTests(unittest.TestCase):
+    def run_fixture(self, invalid=None):
+        class DataImage(Image):
+            def section_for_address(self, address):
+                if 0x2000 <= address < 0x3000:
+                    return SimpleNamespace(name='.data', virtual_address=0x2000, virtual_size=0x1000,
+                                           file_offset=0x2000, file_size=0x1000, characteristics=0xc0000040)
+                raise ValueError('outside data')
+        pe = DataImage(b'')
+        symbols = {0: dict(name='_table', section=1, value=0, storage=3, type=0)}
+        sections = [dict(name='.data', data=bytes(24) + b'MARK',
+                         relocs=[(i*4, index, 6) for i, index in enumerate([1, 2, 3, 2, 1, 4])],
+                         code=False, flags=0xc0000040)]
+        payloads = [b'A\0\0\0', bytes(4), b'shared\0\0', b'B\0\0\0']
+        for index, payload in enumerate(payloads, 1):
+            # Two different symbols have the same COFF-local ordinal and section name.
+            symbols[index] = dict(name='@1' if index in (1, 4) else '@'+str(index),
+                                  section=index+1, value=0, storage=3, type=0)
+            sections.append(dict(name='.data', data=payload, relocs=[], code=False, flags=0xc0000040))
+            pe.data[0x2200+index*0x20:0x2200+index*0x20+len(payload)] = payload
+        pointers = [0x2220, 0x2240, 0x2260, 0x2240, 0x2220, 0x2280]
+        pe.data[0x2000:0x201c] = struct.pack('<6I', *pointers) + b'MARK'
+        fixups = {0x2000+i*4 for i in range(6)}
+        bindings = {'_table': '0x2000'}
+        if invalid == 'table_bytes':
+            pe.data[0x201b] ^= 1
+        elif invalid == 'missing_fixup':
+            fixups.remove(0x2004)
+        elif invalid == 'extra_fixup':
+            fixups.add(0x2018)
+        elif invalid == 'payload':
+            pe.data[0x2261] ^= 1
+        elif invalid == 'padding':
+            pe.data[0x2223] = 1
+        elif invalid == 'pointed_fixup':
+            fixups.add(0x2240)
+        elif invalid == 'pointed_relocation':
+            sections[2]['relocs'] = [(0, 1, 6)]
+        elif invalid == 'category':
+            sections[2]['flags'] = 0x40000040
+        elif invalid == 'bounds':
+            struct.pack_into('<I', pe.data, 0x2000, 0x2ffe)
+        elif invalid == 'kind':
+            sections[0]['relocs'][0] = (0, 1, 7)
+        elif invalid == 'unbound':
+            bindings = {}
+        elif invalid == 'ambiguous':
+            pe.data[0x2300:0x2304] = payloads[0]
+            struct.pack_into('<I', pe.data, 0x2010, 0x2300)
+        elif invalid == 'cross_table_ambiguity':
+            symbols[5] = dict(name='_other_table', section=6, value=0, storage=3, type=0)
+            sections.append(dict(name='.data', data=bytes(4), relocs=[(0, 1, 6)],
+                                 code=False, flags=0xc0000040))
+            bindings['_other_table'] = '0x2100'
+            pe.data[0x2300:0x2304] = payloads[0]
+            struct.pack_into('<I', pe.data, 0x2100, 0x2300)
+            fixups.add(0x2100)
+        rows = []
+        if invalid == 'partial_function':
+            symbols[5] = dict(name='_function', section=6, value=0, storage=2, type=0x20)
+            symbols[6] = dict(name='@99', section=7, value=0, storage=3, type=0)
+            symbols[7] = dict(name='_unbound_call', section=0, value=0, storage=2, type=0x20)
+            code = b'\x68' + bytes(4) + b'\xe8' + bytes(4) + b'\xc3'
+            sections.extend([dict(name='.text', data=code, relocs=[(1, 6, 6), (6, 7, 20)],
+                                  code=True, flags=0x60000020),
+                             dict(name='.data', data=b'LOG\0', relocs=[], code=False, flags=0xc0000040)])
+            pe.data[0x2400:0x2404] = b'LOG\0'
+            pe.data[0x1000:0x100b] = b'\x68' + struct.pack('<I', 0x2400) + code[5:]
+            rows = [dict(symbol='_function', address=0x1000, size=len(code))]
+        claims, written = [], []
+        def config_read(path, *args, **kwargs):
+            return '[]' if path.name == 'functions.json' else '{}'
+        with patch.object(Path, 'read_text', config_read), \
+                patch.object(Path, 'write_text', lambda self, text: written.append(text)), \
+                patch.object(Path, 'mkdir'), patch('compare.version_config',
+                return_value={'source_bindings': {'source.c': bindings}}), \
+                patch('compare.base_relocations', return_value=fixups):
+            target, base, complete = source_data('test', 'source.c', rows, symbols, sections, pe, claims)
+        return complete, claims, __import__('json').loads(written[-1]), target, base
+
+    def test_full_table_proves_empty_shared_and_duplicate_ordinal_literals(self):
+        complete, claims, evidence, target, base = self.run_fixture()
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000, 0x201c), (0x2220, 0x2224), (0x2240, 0x2244),
+                                  (0x2260, 0x2268), (0x2280, 0x2284)])
+        self.assertEqual(target[0]['data'], base[0]['data'])
+        self.assertTrue(all(e['method'] == 'verified bound data table' for e in evidence[1:]))
+
+    def test_invalid_proof_does_not_attribute_any_pointed_allocation(self):
+        for invalid in ['table_bytes', 'missing_fixup', 'extra_fixup', 'payload', 'padding',
+                        'pointed_fixup', 'pointed_relocation', 'category', 'bounds', 'kind',
+                        'unbound', 'ambiguous']:
+            with self.subTest(invalid=invalid):
+                complete, claims, _, _, _ = self.run_fixture(invalid)
+                self.assertFalse(complete)
+                self.assertFalse(any(start >= 0x2200 for start, end in claims))
+
+    def test_unresolved_call_does_not_discard_verified_data_operand(self):
+        complete, claims, evidence, _, _ = self.run_fixture('partial_function')
+        self.assertTrue(complete)
+        self.assertIn((0x2400, 0x2404), claims)
+        self.assertEqual(evidence[-1]['method'], 'resolved function reference')
+
+    def test_conflicting_independently_anchored_tables_leave_literal_unassigned(self):
+        complete, claims, _, _, _ = self.run_fixture('cross_table_ambiguity')
+        self.assertFalse(complete)
+        self.assertNotIn((0x2220, 0x2224), claims)
+        self.assertNotIn((0x2300, 0x2304), claims)
+
+
 if __name__ == '__main__':
     unittest.main()

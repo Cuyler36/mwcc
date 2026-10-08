@@ -18,7 +18,7 @@ from bisect import bisect_left
 import subprocess
 import sys
 from functools import cache
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -179,6 +179,17 @@ def write_translation_unit(path, functions, data_sections=None):
     path.write_bytes(header + headers + bodies + symbols + strings)
 
 
+def source_unit_name(version, source):
+    """Group shared and version-specific sources under the active version."""
+    path = Path(source).with_suffix('').as_posix()
+    if version == 'GC_3_0a5_2' and path.startswith('src/'):
+        relative = path[len('src/'):]
+        if relative.startswith(version + '/'):
+            relative = relative[len(version) + 1:]
+        return f'src/{version}/{relative}'
+    return path
+
+
 def write_source_unit(version, source, rows, results, pe, claims=None):
     target, base = source_paths(version, source)
     mapped = {row["symbol"]: row for row in rows}
@@ -186,8 +197,8 @@ def write_source_unit(version, source, rows, results, pe, claims=None):
     config = version_config(version)
     if source not in config.get('sources', sources()):
         write_translation_unit(target, target_functions, [])
-        return dict(name=Path(source).with_suffix('').as_posix(), target_path=target,
-                    metadata=dict(complete=False, progress_categories=['code', 'data']))
+        return dict(name=source_unit_name(version, source), target_path=target,
+                    metadata=dict(complete=False, source_path=source, progress_categories=['code', 'data']))
     symbols, sections = read_object(Path(f"build/{version}/compiled/{source}.obj"))
     emitted = sorted((s for s in symbols.values() if s["section"] > 0 and s["type"] & 0x20
                       and sections[s["section"] - 1]["code"]),
@@ -219,7 +230,7 @@ def write_source_unit(version, source, rows, results, pe, claims=None):
         left, right = diff['left']['sections'], diff['right']['sections']
         shape = lambda items: sorted((s['name'], s['kind'], int(s.get('size', 0))) for s in items)
         complete = shape(left) == shape(right) and all(s.get('match_percent', 100) == 100 for s in left + right)
-    return dict(name=Path(source).with_suffix("").as_posix(), target_path=target, base_path=base,
+    return dict(name=source_unit_name(version, source), target_path=target, base_path=base,
                 metadata=dict(complete=bool(complete), source_path=source, progress_categories=["code", "data"]))
 
 
@@ -231,6 +242,94 @@ def read_memory(pe, address, size):
     backed = min(size, max(0, section.file_size - relative))
     offset = section.file_offset + relative
     return pe.data[offset:offset + backed] + bytes(size - backed)
+
+
+def table_literal_references(symbols, sections, pe, addresses, references, fixups):
+    """Recover local literals only from independently verified, anchored pointer tables."""
+    inferred = defaultdict(set)
+
+    def category(flags):
+        return '.bss' if flags & 0x80 else '.data' if flags & 0x80000000 else '.rdata'
+
+    def allocation(section_index, value):
+        section = sections[section_index - 1]
+        end = min((s['value'] for s in symbols.values()
+                   if s['section'] == section_index and s['storage'] in (2, 3)
+                   and not s['name'].startswith('.') and s['value'] > value),
+                  default=len(section['data']))
+        if not 0 <= value < end <= len(section['data']):
+            raise ValueError('invalid data allocation')
+        return section, end
+
+    def image_payload(address, size, expected_category):
+        retail = pe.section_for_address(address)
+        if (retail.characteristics & 0x20 or retail.name in ('.rsrc', '.reloc', '.idata', '.edata')
+                or retail.name != expected_category or category(retail.characteristics) != expected_category
+                or not retail.virtual_address <= address < address + size <= retail.virtual_address + retail.virtual_size):
+            raise ValueError('data allocation category or bounds mismatch')
+        return read_memory(pe, address, size)
+
+    for table_index, table in symbols.items():
+        if (table['section'] <= 0 or table['type'] & 0x20 or table['storage'] not in (2, 3)
+                or table['name'].startswith('.') or re.fullmatch(r'_?@\d+', table['name'])):
+            continue
+        anchors = set(references[table_index])
+        named = addresses.get(table['name'], addresses.get(c_symbol(table['name'])))
+        if named is not None:
+            anchors.add(named)
+        if len(anchors) != 1:
+            continue
+        address = next(iter(anchors))
+        try:
+            section, end = allocation(table['section'], table['value'])
+            begin = table['value']
+            if section['code'] or not section['flags'] & 0x40 or section['flags'] & 0x80:
+                continue
+            if any(offset < begin < offset + 4 for offset, _, _ in section['relocs']):
+                raise ValueError('relocation crosses pointer-table boundary')
+            relocations = [(offset, index, kind) for offset, index, kind in section['relocs']
+                           if begin <= offset < end]
+            if not relocations:
+                continue
+            body = bytearray(section['data'][begin:end])
+            retail = image_payload(address, len(body), category(section['flags']))
+            cells, candidates = set(), defaultdict(set)
+            for offset, index, kind in relocations:
+                local = offset - begin
+                if (kind != 6 or local + 4 > len(body)
+                        or any(abs(local - cell) < 4 for cell in cells)):
+                    raise ValueError('invalid pointer-table relocation')
+                cells.add(local)
+                literal = symbols[index]
+                if (literal['section'] <= 0 or literal['type'] & 0x20
+                        or not re.fullmatch(r'_?@\d+', literal['name'])):
+                    raise ValueError('pointer does not name a local literal')
+                pointed, pointed_end = allocation(literal['section'], literal['value'])
+                if (pointed['code'] or not pointed['flags'] & 0x40 or pointed['flags'] & 0x80
+                        or any(o < pointed_end and o + 4 > literal['value'] for o, _, _ in pointed['relocs'])):
+                    raise ValueError('pointed allocation is not relocation-free literal data')
+                addend = struct.unpack_from('<I', body, local)[0]
+                if addend != 0:
+                    raise ValueError('interior literal pointers are not established allocation bases')
+                pointer = struct.unpack_from('<I', retail, local)[0]
+                payload = pointed['data'][literal['value']:pointed_end]
+                if image_payload(pointer, len(payload), category(pointed['flags'])) != payload:
+                    raise ValueError('pointed literal payload mismatch')
+                if any(pointer <= f < pointer + len(payload) for f in fixups):
+                    raise ValueError('pointed literal contains a loader fixup')
+                if references[index] and references[index] != {pointer}:
+                    raise ValueError('literal conflicts with resolved function reference')
+                candidates[index].add(pointer)
+                struct.pack_into('<I', body, local, pointer)
+            if (bytes(body) != retail or {address + cell for cell in cells}
+                    != {f for f in fixups if address <= f < address + len(body)}
+                    or any(len(locations) != 1 for locations in candidates.values())):
+                raise ValueError('table bytes, fixups, or literal identities are ambiguous')
+            for index, locations in candidates.items():
+                inferred[index].update(locations)
+        except (ValueError, struct.error):
+            continue
+    return inferred
 
 
 def source_data(version, source, rows, symbols, sections, pe, claims):
@@ -259,7 +358,24 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
             _, resolutions = resolve_function(symbols, sections, row["symbol"], row["address"],
                                                addresses, pe, row["size"])
         except ValueError:
-            continue
+            # One unresolved call or ambiguous literal must not discard the
+            # independently verified data operands elsewhere in this body.
+            try:
+                section, begin, end = function_section(symbols, sections, row['symbol'])
+            except ValueError:
+                continue
+            resolutions = []
+            for relocation in section['relocs']:
+                if not begin <= relocation[0] < end:
+                    continue
+                isolated = dict(section, relocs=[relocation])
+                isolated_sections = [isolated if item is section else item for item in sections]
+                try:
+                    _, resolved = resolve_function(symbols, isolated_sections, row['symbol'], row['address'],
+                                                   addresses, pe, row['size'])
+                    resolutions.extend(resolved)
+                except ValueError:
+                    continue
         for resolution in resolutions:
             references[resolution["symbol_index"]].add(resolution["address"])
     code_ranges = []
@@ -270,6 +386,9 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
             code_ranges.append((section_index, begin, end, row['address']))
         except ValueError:
             continue
+    table_references = table_literal_references(symbols, sections, pe, addresses, references, fixups)
+    for symbol_index, locations in table_references.items():
+        references[symbol_index].update(locations)
     base, target, evidence = {}, {}, []
     complete = True
     for index, section in enumerate(sections, 1):
@@ -331,7 +450,8 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
                 method = 'resolved function reference (anonymous section)'
             elif location is None and len(references[symbol_index]) == 1:
                 location = next(iter(references[symbol_index]))
-                method = 'resolved function reference'
+                method = ('verified bound data table' if symbol_index in table_references
+                          else 'resolved function reference')
             entry = dict(name=name, section=category, size=len(payload), method=method)
             try:
                 if location is None:
@@ -820,6 +940,13 @@ def compare(version):
     for source in dict.fromkeys([*selected, *grouped]):
         units.append(write_source_unit(version, source, grouped[source], results, pe, claims))
     units.extend(unknown_units(version, rows, pe, claims))
+    # Keep distinct C and C++ inventory entries visible when their stems agree.
+    names = Counter(unit['name'] for unit in units)
+    for unit in units:
+        if names[unit['name']] > 1:
+            unit['name'] += Path(unit['metadata']['source_path']).suffix
+    if len({unit['name'] for unit in units}) != len(units):
+        raise ValueError('Duplicate logical objdiff unit names')
     Path("objdiff.json").write_text(json.dumps({
         "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
         "min_version": "3.8.0",

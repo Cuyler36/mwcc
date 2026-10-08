@@ -39,6 +39,19 @@ known original inventory and strict code/data/relocation checks. Push each TU
 as its review finishes. `source-splits.json` preserves physical splits and
 canonical symbol names when rediscovering baseline mappings.
 
+The GC3 objdiff tree uses logical `src/GC_3_0a5_2` paths for both shared and
+version-specific sources. Actual source metadata and Ninja output paths are
+unchanged. C/C++ entries with a shared stem retain their extensions to avoid
+collisions. The version matrix restores the initially configured build and
+regenerates its objdiff view after checking all versions.
+
+Data attribution also follows independently anchored pointer tables to local
+literals. It validates the entire table's bytes and exact loader-fixup set,
+then every pointed allocation's full payload, section category, bounds and
+absence of relocations. Ambiguous identities and interior pointers are rejected.
+This recovers CLIO's table-only severity strings without generated-symbol
+bindings. The regression suite has 25 tests, including negative proof cases.
+
 First matching priorities are the runtime setjmp unit, ResourceStrings.c,
 ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New

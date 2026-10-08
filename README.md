@@ -32,6 +32,11 @@ original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for
 inventory generation and the per-TU attempt ledger.
 
+Objdiff groups all GC3 sources under `src/GC_3_0a5_2`, including shared source
+files; its source metadata retains their actual paths. Distinct C/C++ entries
+with the same stem keep their extensions. `python tools/verify.py` tests all
+versions and restores the active build and objdiff view afterward.
+
 Supported versions:
 
 - `GC_1_2_5`: GameCube 1.2.5

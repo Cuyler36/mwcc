@@ -479,19 +479,19 @@ python configure.py --version GC_3_0a5_2
 ninja all_source progress
 ```
 
-Current result: **217/1,079 mapped functions exact and linked (20,772 bytes)**.
-All **209 enabled source units build**: the 207 baseline units, replacing the
+Initial baseline-import result: **217/1,079 mapped functions exact and linked (20,772 bytes)**.
+At that stage, all **209 enabled source units built**: the 207 baseline units, replacing the
 old Targets.c bundle with the three symbol-identified files. This includes the
 driver, frontend, backend, optimizer, MSL, and runtime. The 862 remaining mapped
 functions remain inspectable inside their source-level objdiff units and remain NonMatching.
 This is a baseline import, not a completed reconstruction of the compiler.
 
-The build uses CW 9.4 speed/space settings selected from the initial whole-source
-sweep for compiler/driver units. ParserErrors.c and Arguments.c retain Pro 5.3;
+The initial build used CW 9.4 speed/space settings from the whole-source
+sweep for compiler/driver units. ParserErrors.c and Arguments.c initially retained Pro 5.3;
 MSL/runtime retain their baseline Pro 4/5-family settings and headers. Successful
 compilation and selected matches do not establish which compiler built every
-unit. Targets.c remains complete at 4/4, while CInt64.c has 15 exact functions
-among 24 mapped imports. CInt64_Mul is close (99.94326% in objdiff) but is not exact.
+unit. Current per-TU results and revised compiler settings are recorded above
+and in the attempt ledger; these import figures are historical.
 
 Shared OS_ASSERT_AT handles the observed three- versus four-argument assertion
 ABIs. The baseline CLIO assertion implementation is excluded for GC 3.0a5.2,
@@ -516,7 +516,7 @@ exceed that count. Whole-unit completion is a separate final check, including da
 
 ### Source-level objdiff units and data
 
-Objdiff now has 209 source units and six unassigned image-section buckets.
+Objdiff has 261 source views and six unassigned image-section buckets.
 Targets.c is one unit containing all four functions, not four separate units.
 Every source object has one consolidated `.text` section and sized function
 symbols. Compiler data is grouped separately into `.rdata`, `.data`, and `.bss`;
@@ -529,7 +529,7 @@ objects intended for linking. Their packed offsets are synthetic; the original
 compiler outputs remain under `compiled/`. Unmapped emitted functions and data
 are visible on the base side and prevent whole-unit completion.
 
-Data attribution uses defined COFF symbols with named bindings, or resolved
+Data attribution uses allocated COFF symbols with named bindings, or resolved
 references from mapped functions. `build/GC_3_0a5_2/unit-data/<source>.json`
 records addresses, section classes, bytes, fixups, and unresolved spans.
 Sizes derived from compiled symbol boundaries are provisional until the target
@@ -539,9 +539,9 @@ global data progress counts physical image ranges only once.
 
 CW 9.4 defaults to read-only strings, but the observed target strings are in
 writable `.data`. Its source settings now include `-str noreadonly`. This
-preserves all 217 exact function matches and also matches Targets.c's 112 data
-bytes. Targets.c is the one inventoried complete TU: 380 code bytes and 112
-data bytes. `complete_sources` gates additional whole-unit claims until their
+preserved the initial 217 exact function matches and matched Targets.c's 112 data
+bytes. The completed units are listed in the README and per-TU reviews above.
+`complete_sources` gates additional whole-unit claims until their
 inventories are established and their code/data checks pass.
 Whole-unit completion also requires an objdiff-cli comparison with matching
 section classes/sizes and 100% section matches, recorded under `unit-diffs/`.
@@ -573,7 +573,21 @@ call sites: 0x00426300 is xmalloc, while memcpy is at 0x00404850;
 present in the supplied Mac symbol map. Corrected bindings eliminate the
 conflicting call-target observations found in the initial pass.
 
-To repeat the compiler sweep (logs and objects stay under build):
+To repeat the current bounded compiler-profile sweep (logs and objects stay under build):
+
+```sh
+python tools/sweep_gc3_units.py
+python tools/sweep_gc3_units.py --source src/GC_3_0a5_2/driver/Arguments.c
+```
+
+The sweep records each profile's source hash, bindings, function mappings,
+compiler flags, strict byte/fixup results, and mapped-code objdiff projection.
+It tests configured settings and CW94 speed/space with intrinsic variations.
+Unmapped units remain discovery tasks, and no compiler-profile result alone
+establishes semantic equivalence, original membership, or complete TU data.
+Partial refreshes also cover new source paths after physical TU replacements.
+
+To reproduce the initial compiler-selection import:
 
 ```sh
 python tools/port_gc3_baseline.py

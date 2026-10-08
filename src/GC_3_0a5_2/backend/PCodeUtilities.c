@@ -40,7 +40,7 @@ extern void change_num_operands(PCodeInstruction *, int);
 extern int gUsedVirtualRegistersGPR;
 extern unsigned char fn_004c3f60(Object *);
 typedef struct UtilityType { short unknown00, size; } UtilityType;
-extern unsigned char fn_005794e0(UtilityType *);
+extern unsigned char Registers_LoadStoreType(UtilityType *);
 extern unsigned char fn_00454260(UtilityType *);
 
 void branch_indirect(Object *object)
@@ -416,7 +416,7 @@ int opcode_for_load_gpr(unsigned char registerClass, short size)
 
 void store_fpr_x(UtilityType *type, short first, short second, short third)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     switch (registerClass) {
@@ -432,7 +432,7 @@ void store_fpr_x(UtilityType *type, short first, short second, short third)
 
 void store_fpr(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     short opcode = opcode_for_store_fpr(registerClass, size);
     load_store_register(opcode, destination, base, object, displacement);
@@ -440,7 +440,7 @@ void store_fpr(UtilityType *type, short destination, short base, Object *object,
 
 void store_gpr_x(UtilityType *type, short first, short second, short third)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     switch (registerClass) {
@@ -452,7 +452,7 @@ void store_gpr_x(UtilityType *type, short first, short second, short third)
 
 void store_gpr_u(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     switch (registerClass) {
@@ -464,7 +464,7 @@ void store_gpr_u(UtilityType *type, short destination, short base, Object *objec
 
 void store_gpr(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     short opcode = opcode_for_store_gpr(registerClass, size);
     load_store_register(opcode, destination, base, object, displacement);
@@ -472,7 +472,7 @@ void store_gpr(UtilityType *type, short destination, short base, Object *object,
 
 void load_fpr_x(UtilityType *type, short first, short second, short third)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     switch (registerClass) {
@@ -488,7 +488,7 @@ void load_fpr_x(UtilityType *type, short first, short second, short third)
 
 void load_fpr(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     short opcode = opcode_for_load_fpr(registerClass, size);
     load_store_register(opcode, destination, base, object, displacement);
@@ -496,7 +496,7 @@ void load_fpr(UtilityType *type, short destination, short base, Object *object, 
 
 void load_gpr_x(UtilityType *type, short first, short second, short third)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     if (!fn_00454260(type) && size == 2) size = -2;
@@ -509,7 +509,7 @@ void load_gpr_x(UtilityType *type, short first, short second, short third)
 
 void load_gpr_u(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     int opcode;
     if (!fn_00454260(type) && size == 2) size = -2;
@@ -522,7 +522,7 @@ void load_gpr_u(UtilityType *type, short destination, short base, Object *object
 
 void load_gpr(UtilityType *type, short destination, short base, Object *object, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     if (!fn_00454260(type) && size == 2) size = -2;
     load_store_register((short)opcode_for_load_gpr(registerClass, size), destination, base, object, displacement);
@@ -530,7 +530,7 @@ void load_gpr(UtilityType *type, short destination, short base, Object *object, 
 
 PCodeInstruction *make_load_gpr(UtilityType *type, short destination, short base, int displacement)
 {
-    unsigned char registerClass = fn_005794e0(type);
+    unsigned char registerClass = Registers_LoadStoreType(type);
     short size = type->size;
     if (!fn_00454260(type) && size == 2) size = -2;
     return makepcode((short)opcode_for_load_gpr(registerClass, size), destination, base, 0, displacement);

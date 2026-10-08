@@ -56,7 +56,7 @@ extern void store_gpr(Type *,SInt16,SInt16,void *,SInt32);
 extern void store_gpr_x(Type *,SInt16,SInt16,SInt16);
 extern void setpcodeflags(UInt64);
 extern void PPCError_FatalError(int);
-extern signed char fn_00579560(Type *);
+extern signed char Registers_ClassForType(Type *);
 void coerce_to_addressable_before(void *,Operand *,SInt16);
 void Coerce_to_register(Operand *,Type *,SInt16);
 
@@ -187,7 +187,7 @@ void store(SInt16 reg,Operand *op,Type *type)
 void fn_00590c30(SInt16 reg,Operand *op,Type *type)
 {
     coerce_to_addressable_before(0,op,-1);
-    switch(fn_00579560(type)) {
+    switch(Registers_ClassForType(type)) {
     case 3:CError_FATAL("Operands.c",0x56a);break;
     case 4:
         switch(op->kind) {

@@ -213,6 +213,7 @@ SInt32 fn_004c15f0(void)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt32 Registers_GetOperandRegMask(PCodeBlock *list)
 {
     UInt32 mask = 0;
@@ -233,6 +234,7 @@ UInt32 Registers_GetOperandRegMask(PCodeBlock *list)
     }
     return mask;
 }
+#endif
 
 #if VERSION != VERSION_GC_3_0A5_2
 VarInfo *Registers_GetInfo(Object *object)
@@ -598,6 +600,7 @@ void Registers_BindFPR(Object *obj, SInt16 regnum)
 /* VarInfo layout recovered from the original: 0x2c bytes, with the
  * register fields at 0x24/0x26 and the two flags at 0x28/0x2a. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Registers_BindGPRPair(Object *obj, SInt16 reg0, SInt16 reg1)
 {
     VarInfo *info;
@@ -640,6 +643,7 @@ void Registers_BindGPRPair(Object *obj, SInt16 reg0, SInt16 reg1)
             info->is_fpr = 1;
     }
 }
+#endif
 
 void Registers_AllocateVR(Object *obj)
 {
@@ -779,6 +783,7 @@ static VarInfo *Registers_NewInfo(void)
     return p;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Registers_AllocateGPRPair(Object *obj)
 {
     SInt16 reg1;
@@ -824,6 +829,7 @@ void Registers_AllocateGPRPair(Object *obj)
         info->regHi = reg2;
     }
 }
+#endif
 
 /* Register-allocation record linked from a variable Object. sizeof == 0x2c. */
 

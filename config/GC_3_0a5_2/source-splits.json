@@ -2146,5 +2146,17 @@
   "PCodeUtilities_ResolveLabel": {
     "name": "branch_label",
     "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "Registers_GetOperandRegMask": {
+    "name": "colored_vrs_as_vrsave",
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+  },
+  "Registers_BindGPRPair": {
+    "name": "retain_GPR_pair",
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+  },
+  "Registers_AllocateGPRPair": {
+    "name": "assign_GPR_pair",
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
   }
 }

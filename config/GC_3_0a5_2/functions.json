@@ -13857,17 +13857,323 @@
     }
   },
   {
+    "name": "fn_005784c0",
+    "address": "0x5784c0",
+    "size": 1186,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00578970",
+    "address": "0x578970",
+    "size": 53,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005789b0",
+    "address": "0x5789b0",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00578a20",
+    "address": "0x578a20",
+    "size": 940,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00578dd0",
+    "address": "0x578dd0",
+    "size": 1116,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00579230",
+    "address": "0x579230",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005792c0",
+    "address": "0x5792c0",
+    "size": 55,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00579300",
+    "address": "0x579300",
+    "size": 279,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00579420",
+    "address": "0x579420",
+    "size": 192,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Registers_LoadStoreType",
+    "address": "0x5794e0",
+    "size": 124,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Registers_ClassForType",
+    "address": "0x579560",
+    "size": 154,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00579600",
+    "address": "0x579600",
+    "size": 93,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "init_endian",
+    "address": "0x579660",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "colored_vrs_as_vrsave",
+    "address": "0x5796e0",
+    "size": 170,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "Registers_GetVarInfo",
-    "address": "0x00579790",
+    "address": "0x579790",
     "size": 156,
     "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
-    "baseline_name": "Registers_GetInfo",
-    "baseline_address": "0x004c1720",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
     "boundary_evidence": {
-      "method": "Reviewed native x86 CFG and original 12-byte switch table",
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
       "unresolved_indirect_flow": false
-    },
-    "identity_evidence": "Registers_GetVarInfo ordinary Mac symbol; Windows object datatype0/1/2 switch and RegisterInfo.c assertions649/662; exact native bytes and PE fixups."
+    }
+  },
+  {
+    "name": "assign_GPR_pair",
+    "address": "0x579830",
+    "size": 568,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_register_by_type",
+    "address": "0x579a70",
+    "size": 563,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "init_target_registers",
+    "address": "0x579cb0",
+    "size": 770,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "set_last_exception_registers",
+    "address": "0x579fc0",
+    "size": 511,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "setup_diagnostic_reg_strings",
+    "address": "0x57a1c0",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "reset_nonvolatile_registers",
+    "address": "0x57a230",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "open_fe_temp_registers",
+    "address": "0x57a270",
+    "size": 107,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "first_nonvolatile_reg",
+    "address": "0x57a2e0",
+    "size": 1045,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Own RegisterInfo.c assertion line(s) plus coherent native family",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GetABIFirstNonVolatile",
+    "address": "0x57a700",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0057a740",
+    "address": "0x57a740",
+    "size": 74,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0057a790",
+    "address": "0x57a790",
+    "size": 38,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Address alias; original name unknown; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_register_object",
+    "address": "0x57a7c0",
+    "size": 100,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "retain_GPR_pair",
+    "address": "0x57a830",
+    "size": 220,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "asm_used_register",
+    "address": "0x57a910",
+    "size": 211,
+    "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+    "identity_evidence": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof; Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+      "unresolved_indirect_flow": false
+    }
   },
   {
     "name": "SFPE_PPC_EABI_GenerateConversion",

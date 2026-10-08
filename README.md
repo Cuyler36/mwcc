@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 222 source files build, 1,322 candidate functions are
-mapped, and 538 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 222 source files build, 1,350 candidate functions are
+mapped, and 550 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -39,9 +39,10 @@ objdiff, including its filename data and PE relocations. Their canonical names
 come from the supplied GC3 symbols. The original TU's full membership remains
 under review; imported helper ownership is preserved separately.
 
-RegisterInfo's native Registers_GetVarInfo getter also matches, including its
-switch table. GC3 uses a 20-byte variable record; the imported 44-byte record
-and object offsets cannot be reused. Other members of that TU remain unported.
+RegisterInfo has 29 reconstructed native members and 13 exact matches, including
+Registers_GetVarInfo and its switch table. Four named data objects match;
+eight function switch relocations remain unresolved. GC3 uses a 20-byte variable
+record; the imported 44-byte record and object offsets cannot be reused.
 
 ELF_Endian.c has all eight known Windows members ported and reviewed, including
 the recovered conversion-block routine. Six functions match exactly; two code

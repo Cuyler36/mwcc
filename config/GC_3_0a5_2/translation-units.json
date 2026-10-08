@@ -1831,11 +1831,11 @@
       ],
       "windows_functions": [
         {
-          "name": "FUN_005784c0",
+          "name": "fn_005784c0",
           "address": "0x005784c0",
           "size": 1186,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1850,27 +1850,40 @@
             "0x0057889a",
             "0x005788ea",
             "0x0057893a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_005789b0",
+          "name": "fn_00578970",
+          "address": "0x578970",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005789b0",
           "address": "0x005789b0",
           "size": 101,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00578a0a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_00578a20",
+          "name": "fn_00578a20",
           "address": "0x00578a20",
           "size": 940,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1879,14 +1892,15 @@
             "0x00578b2c",
             "0x00578d4c",
             "0x00578d8a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_00578dd0",
+          "name": "fn_00578dd0",
           "address": "0x00578dd0",
           "size": 1116,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1899,27 +1913,117 @@
             "0x005790da",
             "0x0057911a",
             "0x0057913c"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_005792c0",
+          "name": "fn_00579230",
+          "address": "0x579230",
+          "size": 132,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005792c0",
           "address": "0x005792c0",
           "size": 55,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005792e8"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+        },
+        {
+          "name": "fn_00579300",
+          "address": "0x579300",
+          "size": 279,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00579420",
+          "address": "0x579420",
+          "size": 192,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Registers_LoadStoreType",
+          "address": "0x5794e0",
+          "size": 124,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Registers_ClassForType",
+          "address": "0x579560",
+          "size": 154,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00579600",
+          "address": "0x579600",
+          "size": 93,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "init_endian",
+          "address": "0x579660",
+          "size": 120,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "colored_vrs_as_vrsave",
+          "address": "0x5796e0",
+          "size": 170,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
         },
         {
           "name": "Registers_GetVarInfo",
           "address": "0x00579790",
           "size": 156,
           "boundary_evidence": {
-            "method": "Reviewed native x86 CFG and original 12-byte switch table",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1930,11 +2034,11 @@
           "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_00579830",
+          "name": "assign_GPR_pair",
           "address": "0x00579830",
           "size": 568,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1945,14 +2049,15 @@
             "0x005799ad",
             "0x00579a2a",
             "0x00579a5c"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_00579a70",
+          "name": "assign_register_by_type",
           "address": "0x00579a70",
           "size": 563,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1962,14 +2067,70 @@
             "0x00579b9f",
             "0x00579c3a",
             "0x00579c7b"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_0057a2e0",
+          "name": "init_target_registers",
+          "address": "0x579cb0",
+          "size": 770,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "set_last_exception_registers",
+          "address": "0x579fc0",
+          "size": 511,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "setup_diagnostic_reg_strings",
+          "address": "0x57a1c0",
+          "size": 101,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "reset_nonvolatile_registers",
+          "address": "0x57a230",
+          "size": 57,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "open_fe_temp_registers",
+          "address": "0x57a270",
+          "size": 107,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "first_nonvolatile_reg",
           "address": "0x0057a2e0",
           "size": 1045,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
@@ -1981,28 +2142,85 @@
             "0x0057a63c",
             "0x0057a652",
             "0x0057a68a"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
         },
         {
-          "name": "FUN_0057a830",
+          "name": "GetABIFirstNonVolatile",
+          "address": "0x57a700",
+          "size": 52,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0057a740",
+          "address": "0x57a740",
+          "size": 74,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0057a790",
+          "address": "0x57a790",
+          "size": 38,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "is_register_object",
+          "address": "0x57a7c0",
+          "size": 100,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "retain_GPR_pair",
           "address": "0x0057a830",
           "size": 220,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0057a8a1",
             "0x0057a8ea"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+        },
+        {
+          "name": "asm_used_register",
+          "address": "0x57a910",
+          "size": 211,
+          "compiled_source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and RegisterInfo.c assertion cluster; boundary wrapper and Registers.c helper excluded",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "attempted_partial"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/backend/StackFrame.c",
@@ -43518,16 +43736,454 @@
           "size": 156,
           "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
           "exact": true,
-          "compiled_size": 156
+          "compiled_size": 156,
+          "semantic_review": "Datatype0/2 lazily allocate and clear exactly20 bytes at object+54; datatype1 validates localInfo+40 with assertion649 and returns it. Other datatype asserts662 and returnsNULL if reporting returns. No NULL input guard. Exact156 bytes and PE fixups preserved.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "Registers_ClassForType",
+          "address": "0x579560",
+          "size": 154,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 154,
+          "semantic_review": "Signed kind dispatch1..12. Kind1 integral<23=>GPR4 else unsupported-2; kind4/12=>4; kind11 only if pointed type kind!=7=>4. Kind2 debug scalar integral<23=>4, CPU22 integral25=>FPR3, ordinary integral<23=>3; otherwise falls into vector-kind check. Kind5/vector path requires signed vectorKind>3,<15 and size16=>VR2; all other inputs -2. Exact154 and all tables/fixups.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "Registers_LoadStoreType",
+          "address": "0x5794e0",
+          "size": 124,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 124,
+          "semantic_review": "Class4 wide type returns2: debug float kind2/integral<23/size!=4, or ordinary integral kind1/integral<23 or kind4 size8. Class3 CPU22/integral25 returns1. Other classes/types return0. Exact124/fixups.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "init_endian",
+          "address": "0x579660",
+          "size": 120,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 120,
+          "semantic_review": "Native byte order true sets six shorts at716ed0/717462/7172c4/7171e2/7172d0/717280 to4,0,4,3,6,5; false sets0,4,3,4,5,6. Exact120/fixups. Four unnamed offsets retain address-based data aliases.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "colored_vrs_as_vrsave",
+          "address": "0x5796e0",
+          "size": 170,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 170,
+          "semantic_review": "Mode2 returnsffffffff, mode0 returns0, all other nonzero modes walk block.next and block.first+14, PC.next. Only flags20000000 instructions contribute. Signed positive numArgs count, 14-byte args, kind0/class2 set1<<(31-signedreg). Invalid register shifts retain native C/x86 preconditions. Current170 bytes differ only instruction scheduling of mode load and comparisons; body review confirms branch/loop and memory behavior.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "setup_diagnostic_reg_strings",
+          "address": "0x57a1c0",
+          "size": 101,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 101,
+          "semantic_review": "Writes ten string pointers to five class-name and format arrays: SPR/spr%ld, CRFIELD/cr%ld, VR/vr%ld, FPR/f%ld, GPR/r%ld. Exact101 and original literal addresses/fixups.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "GetABIFirstNonVolatile",
+          "address": "0x57a700",
+          "size": 52,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 52,
+          "semantic_review": "Signed class switch0..4 returns3,2,20,14,14 respectively, otherwise-1. Case4 precedes3 in emitted blocks, preserving original anonymous table exactly. Exact52/fixups.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "open_fe_temp_registers",
+          "address": "0x57a270",
+          "size": 107,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$223 (0 retail blocks, 0 strings)",
+          "compiled_size": 96,
+          "semantic_review": "Clears explicit_registers pointer, sets init byte1; signed class0..4 stores29-ABIfirst into last_argument_register giving26,27,9,15,15. No allocation. Equivalent96-byte candidate vs107; generated table unresolved because local branch offsets differ; not called exact.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "fn_0057a790",
+          "address": "0x57a790",
+          "size": 38,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 38,
+          "semantic_review": "NULL=>NULL; nonNULL datatype0=>address of inline object byte58; all other datatypes=>NULL. Separate nested default and NULL return blocks reproduce original38 bytes/fixups. Canonical identity unproven.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_0057a740",
+          "address": "0x57a740",
+          "size": 74,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 74,
+          "semantic_review": "Obtains inline byte58 attribute for datatype0/NULL-safe; disable_explicit_registers nonzero=>0, otherwise boolean of nonNULL/nonzero byte. Retrieval occurs before disable check. Exact74/fixups. Canonical identity unproven.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "is_register_object",
+          "address": "0x57a7c0",
+          "size": 100,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 100,
+          "semantic_review": "First dereferences storageClass+18 and returns1 for0101; otherwise inlined attribute predicate. NULL object faults before fallback guard, deliberately retained. Exact100/fixups; Mac is_register_object role/name supported.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "retain_GPR_pair",
+          "address": "0x57a830",
+          "size": 220,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 220,
+          "semantic_review": "Always calls external594740(NULL,4,low) then(NULL,4,high), even when objectNULL. NonNULL object obtains native20-byte info; writes class4, flags|6, low+10/high+12. Exact220/fixups. External594740 explicitly asserts Registers.c, excluded from TU.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "fn_00579600",
+          "address": "0x579600",
+          "size": 93,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 94,
+          "semantic_review": "For each signed class0..4 start count=nonvolatile_count, scan list backwards until physicalused==1, decrement count for each unused tail element. If reduced count is greater than nonvolatile_used, assign it; otherwise retain old. Predicate intentionally is greater, not less. Equivalent94-byte candidate vs93; loop strength reduction/register allocation differ. Canonical name unproven.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "asm_used_register",
+          "address": "0x57a910",
+          "size": 211,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 236,
+          "semantic_review": "Signed reg>=physical limit returns without action; negative indices have no new guard. External594650 false sets force_spill1. For unused physicalreg, inspect nonvolatile list at current used count (even if count reaches limit). First elementmatch optionally decrements positive availability, marksused1 and increments usedcount. Otherwise scans through listcount; every match marks1/decrements positive availability and continues scanning, preserving duplicates. Equivalent236 vs211; no canonical negative-index sanitization introduced.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "fn_005792c0",
+          "address": "0x5792c0",
+          "size": 55,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 55,
+          "semantic_review": "Class4 calls588120. Class3/debug/FPRvirtualcount>32 asserts1164. Other inputs no-op. Exact55/fixups. Canonical callback identity unproven.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "assign_GPR_pair",
+          "address": "0x579830",
+          "size": 568,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 569,
+          "semantic_review": "GetInfo first. Physicalmode validates available[4]>=2 via assert573, then calls594590(4) twice and retains both via594740(NULL,4,shortreg), recording class4/flags6/pair on object if nonNULL. Virtualmode increments class4 counter twice. Finally class4 and positive signed16 low/high validate; writesflags6/low/high or assert586. Invalid input/fatal-return behavior retained. Candidate569 vs568 equivalent, primarily register allocation and cold-block layout.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "assign_register_by_type",
+          "address": "0x579a70",
+          "size": 563,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$564 (0 retail blocks, 0 strings)",
+          "compiled_size": 547,
+          "semantic_review": "Gets object.type and native info; zeros two register shorts, writes unsigned-byte ClassForType return. Class4 wide predicate marks pair; nonwide performs second getter for validation/allocation despite unused return. Only unsigned class<5 attempts allocation. Pair assertsclass4 via539 and allocates if virtualmode or availability>1; nonpair external5947e0 if virtualmode or availability>0. Unsupported-2 becomes254 and is ignored. Candidate547 vs563; unresolved getter table, complete semantic branch/memory review.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "fn_00578970",
+          "address": "0x578970",
+          "size": 53,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 53,
+          "semantic_review": "Saves virtual_mode, forces1, creates object through620ec0(expr), stores entity.object+4, assigns register by native type, restores saved mode. External exceptional control flow naturally bypasses restoration as original. Exact53/fixups. Canonical name unproven.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_00579300",
+          "address": "0x579300",
+          "size": 279,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 286,
+          "semantic_review": "Two signed indices select30-byte virtual states. Returntrue if either nonNULL object datatype!=1. If both indices >=class physical bound, reject name-byte+a!=40, or stateflags800 with nonNULL object and type.size<4, independently for each. Then class4 and maximum index==frame_base_reg also rejects; else0. No negative-index guard or NULL-name guard added. Equivalent286 vs279; canonical callback name unproven.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_00579420",
+          "address": "0x579420",
+          "size": 192,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 194,
+          "semantic_review": "Only class4. If lowflags&6 or flags1000, source arg1.reg>=bound invokes620320(0,source), and flags8000 additionally invokes620320(dest,source). Otherwise opcodes37,38,c3,c4,de,e2,e3,ec,f0..f3,19a invoke620320(0,dest) only when signed dest>=bound. Equivalent194 vs192; native opcode list recovered from successive subtract/cmp instructions, no speculative switch table binding.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "first_nonvolatile_reg",
+          "address": "0x57a2e0",
+          "size": 1045,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$807 (0 retail blocks, 0 strings)",
+          "compiled_size": 1076,
+          "semantic_review": "Starts ABIfirst; disabled explicit register option returns it without touching records. Clears32-int local map; each matching class node indexes by signedreg-first without range checks, tracks maxreg+1. Valid kind5 object getter asserts reg==0 via262, validates signedclass0..4 via178; unused physicalreg marked1 and object class/flags2/low/hi0 updated through second getter, already-used emits5ed3d0(10,obj,class-name,reg). Invalid/missing object warns11 using name+10. Then scans holes within last_argument count, warns100 for next used slot after each gap with v/f/r class prefix and reg-1; any gap warning returns originalfirst, otherwise max. Invalid class prefix asserts226. Candidate1076 vs1045; tables unresolved, complete supported-input semantics reviewed.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "reset_nonvolatile_registers",
+          "address": "0x57a230",
+          "size": 57,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 55,
+          "semantic_review": "Init byte0=>no-op. Otherwise clear160 physical-used bytes and invoke first_nonvolatile_reg for signedclass0..4 for side effects. Native original inlines clearing as40 rep-stosd stores. Candidate calls proven memclrw(ptr,160), same zeroing and subsequent callback behavior,55 vs57; explicitly equivalent rather than exact. No unbound memset symbol retained.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "set_last_exception_registers",
+          "address": "0x579fc0",
+          "size": 511,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$893 (0 retail blocks, 0 strings)",
+          "compiled_size": 465,
+          "semantic_review": "Reads current_function.type.returntype at+e. Resets count; appends class4/reg1; appends explicit nodes with nonNULLobject using nodeclass/signedreg. Returnclass4 appendsGPR3 plusGPR4 for wide type; class3 FPR1; class2 VR2. Unsupported aggregate kinds5/6 and external4e2470 false appendGPR3 plusGPR4 ifsize>4. Calls621cf0 with countaddress. Packed four-byte entries write classbyte0, regshort2, leave padding1 unchanged. Equivalent465 vs511; all datawrites/call branches reviewed, unresolved dispatch table.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "init_target_registers",
+          "address": "0x579cb0",
+          "size": 770,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$1006 (0 retail blocks, 0 strings)",
+          "compiled_size": 752,
+          "semantic_review": "Clears640 special-name bytes and sets XER/LR/CTR/VRSAVE and GPR SP/SDA pointers. Initializes ten diagnostic pointers and five class limits4/8/32/32/32. Reserves GPR1/2/13 and CR5 withused2. For each class constructs descending nonvolatile list from last down tofirst if last>=0; first function mayreserve explicitregs, then reloadlast. Availability=count-reserve clamped0. Volatile list ascending includes unreserved regs outside ABIfirst..last. Sets stack/frame -1, virtual_mode=(signedoptlevel>0 && !inlineasm), force_spill0, calls set_last_exception_registers. Equivalent752 vs770 with unresolved inline ABI switch table; named initializeddata and BSS exact.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Mac ordinary symbol and corresponding native behavior; no SO/STABS source scope proof"
+        },
+        {
+          "name": "fn_005789b0",
+          "address": "0x5789b0",
+          "size": 101,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": true,
+          "compiled_size": 101,
+          "semantic_review": "Currentclass1 unsignedint,2 vector,3 longdouble ifstateflags1000 else double,4 signedint. Invalidclass asserts1681 thenNULL. Exact101/fixups and four-entry table after native case-order recovery. Canonical identity unproven; not mislabeled GetRegisterClassName since it returns Type*.",
+          "classification": "strict_exact",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_00579230",
+          "address": "0x579230",
+          "size": 132,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "exact": false,
+          "compiled_size": 126,
+          "semantic_review": "Only opcode3f and thirdarg kind4/class6or13. Calls4c2b40(third.object), then makes high595770(reg,base,obj,signed16disp,0) inserted beforeanchor, followed low595830(reg,reg,obj,disp,0) inserted beforeanchor. Otherinstructions no-op. Equivalent126 vs132; same object/argument fields, signed promotions, callorder, no datamutations beyond external insertion helpers.",
+          "classification": "reviewed_equivalent_nonmatch",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_005784c0",
+          "address": "0x5784c0",
+          "size": 1186,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$1225 (0 retail blocks, 0 strings)",
+          "compiled_size": 1170,
+          "semantic_review": "Five inline getter passes. Local-list class-assigned info usedbyte9=0; second-list same but objectflags1/2 inhibit clearing. Walk all blockPCargs kind0/class-byte matching currentclass, mark corresponding30-byte virtualstate.object info.used1 if objectexists. Unsigned32 countdown starts signextended numArgs: zero skips, negative counts retain invalid huge-count behavior. Final both lists clear assignedflag2 if usedbyte0, regardless class; second final pass deliberately lacks objectflagsfilter. Equivalent1170 vs1186; all getter asserts/allocations preserved. Ownership only related-family/layout proof because filename assertions are inherited getter sites.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Native family behavior/call graph/20-byte record; ordinary Mac names have no SO source proof",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_00578a20",
+          "address": "0x578a20",
+          "size": 940,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$1335 (0 retail blocks, 0 strings)",
+          "compiled_size": 948,
+          "semantic_review": "Spill insertion(anchor,beforebyte,signed16reg,state). Class1 native getter assignedreg or-1 producesopcode1ee, inserted before/after. Class4 chooses store28/2c/31 forsize1/2/4or8, invalidsizeassert1507 then retains uninitialized opcode behavior; stateflags20 chooses low offset before10 highoffset. Normal FP size8=>9a else96. CPU22 FP integral25/flags1000 selects594b60(obj,0,0):196 directrecord flags390, otherwise address3f toscratch then opcode withbase scratch andflags390. The original duplicate InsertBefore(anchor,first) after conditional insertion is deliberately preserved. Class2 address3f thenfe vectorstore insertedafterfirst. Invalidclassassert1628. Equivalent948 vs940, multiple dispatch/getter tables unresolved; helper587230 single-argument object base selector nested inside varargs MakeInstruction, object/displacement/flags remain additional Make args.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Address alias; original name unknown"
+        },
+        {
+          "name": "fn_00578dd0",
+          "address": "0x578dd0",
+          "size": 1116,
+          "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
+          "error": "unbound literal: .sw$1449 (0 retail blocks, 0 strings)",
+          "compiled_size": 1102,
+          "semantic_review": "Reload(before,signed16reg,state). Class1 getter assignedreg/-1 creates1ef(reg,scratch,assigned), insertedbefore. Class4 sizes1=>15,2 unsigned19/signed1d viaType_IsUnsigned,4/8=>22; invalidsizeassert1305 retains uninitializedopcode behavior. Clears28-byte Operand, reg/hi-1,kind8,obj, assertsdatatype1(1342), coerces(before,operand,reg), assertskind1(1353), emitsusingbase/object/displacement plus state20low/10highoffset. Class3 requiresdatatype1(1375); CPU22 float25/flags1000 uses594b60(obj,0,1),192 direct flags390 elseaddress3f+selectedop via scratch. OrdinaryFP size8=>92 else8e andwordoffset. Class2 assertsdatatype1(1422), emitsaddress3f+f9 vectorload. All insertionbeforefirst/afterfirst and varargs promotedreg/objects preserved. Invalidclassassert1438. Equivalent1102 vs1116; table addresses not guessed.",
+          "classification": "reviewed_equivalent_unresolved_table",
+          "ownership_evidence": "Own RegisterInfo.c assertion line(s) plus coherent native family",
+          "canonical_identity": "Address alias; original name unknown"
         }
       ],
-      "source_bindings": {
+      "bindings": {
+        "_Registers_GetVarInfo": "0x579790",
+        "_Registers_ClassForType": "0x579560",
+        "_Registers_LoadStoreType": "0x5794e0",
+        "_init_endian": "0x579660",
+        "_colored_vrs_as_vrsave": "0x5796e0",
+        "_setup_diagnostic_reg_strings": "0x57a1c0",
+        "_GetABIFirstNonVolatile": "0x57a700",
+        "_open_fe_temp_registers": "0x57a270",
+        "_fn_0057a790": "0x57a790",
+        "_fn_0057a740": "0x57a740",
+        "_is_register_object": "0x57a7c0",
+        "_retain_GPR_pair": "0x57a830",
+        "_fn_00579600": "0x579600",
+        "_asm_used_register": "0x57a910",
+        "_fn_005792c0": "0x5792c0",
+        "_assign_GPR_pair": "0x579830",
+        "_assign_register_by_type": "0x579a70",
+        "_fn_00578970": "0x578970",
+        "_fn_00579300": "0x579300",
+        "_fn_00579420": "0x579420",
+        "_first_nonvolatile_reg": "0x57a2e0",
+        "_reset_nonvolatile_registers": "0x57a230",
+        "_set_last_exception_registers": "0x579fc0",
+        "_init_target_registers": "0x579cb0",
+        "_fn_005789b0": "0x5789b0",
+        "_fn_00579230": "0x579230",
+        "_fn_005784c0": "0x5784c0",
+        "_fn_00578a20": "0x578a20",
+        "_fn_00578dd0": "0x578dd0",
         "_galloc": "0x46c6a0",
         "_memclrw": "0x46c400",
         "_CError_Internal": "0x45a250",
-        "_Registers_GetVarInfo": "0x579790"
+        "_nativeByteOrder": "0x70efe8",
+        "_operandsDebug": "0x70f019",
+        "_use_vrsave": "0x70f009",
+        "_disable_explicit_registers": "0x70f054",
+        "_register_init_enabled": "0x725dfd",
+        "_target_cpu": "0x70effa",
+        "_high_word_offset": "0x716ed0",
+        "_low_word_offset": "0x717462",
+        "_data_007172c4": "0x7172c4",
+        "_data_007171e2": "0x7171e2",
+        "_data_007172d0": "0x7172d0",
+        "_data_00717280": "0x717280",
+        "_current_register_class": "0x726060",
+        "_total_physical_registers": "0x710274",
+        "_available_registers": "0x710788",
+        "_nonvolatile_registers": "0x70ed68",
+        "_nonvolatile_count": "0x71019c",
+        "_nonvolatile_used": "0x716c84",
+        "_physical_register_used": "0x70f2e0",
+        "_register_class_names": "0x7100c0",
+        "_register_formats": "0x711b08",
+        "_explicit_registers": "0x7108b0",
+        "_last_argument_register": "0x716d24",
+        "_force_spill": "0x715c0c",
+        "_fn_00594740": "0x594740",
+        "_fn_00594650": "0x594650",
+        "_fn_00588120": "0x588120",
+        "_gUsedVirtualRegistersFPR": "0x716eac",
+        "_virtual_registers": "0x711afc",
+        "_local_objects": "0x710924",
+        "_other_objects": "0x716d50",
+        "_basic_blocks": "0x7108c8",
+        "_virtual_mode": "0x715c34",
+        "_virtual_register_count": "0x716ea0",
+        "_volatile_registers": "0x70eac0",
+        "_volatile_count": "0x71003c",
+        "_special_register_names": "0x70f5b8",
+        "_last_nonvolatile_reg": "0x6ace2e",
+        "_nonvol_reserve": "0x6ace42",
+        "_stack_base_reg": "0x7172bc",
+        "_frame_base_reg": "0x716ebe",
+        "_optimization_level": "0x70f230",
+        "_has_inline_assembly": "0x710894",
+        "_current_function": "0x7109b4",
+        "_exception_register_count": "0x6e38f8",
+        "_exception_registers": "0x6e38fc",
+        "_fn_00594590": "0x594590",
+        "_fn_005947e0": "0x5947e0",
+        "_fn_00620ec0": "0x620ec0",
+        "_fn_00620320": "0x620320",
+        "_fn_004e2470": "0x4e2470",
+        "_fn_00621cf0": "0x621cf0",
+        "_fn_0056ee40": "0x56ee40",
+        "_fn_005ed3d0": "0x5ed3d0",
+        "_stsignedint": "0x699c54",
+        "_stunsignedint": "0x699c5c",
+        "_stdouble": "0x699c94",
+        "_stlongdouble": "0x699ca4",
+        "_vector_type": "0x69a15c",
+        "_scratch_register": "0x71013c",
+        "_PCodeUtilities_MakeInstruction": "0x582f60",
+        "_PCode_InsertBefore": "0x5829d0",
+        "_PCode_InsertAfter": "0x582890",
+        "_fn_00587230": "0x587230",
+        "_fn_00594b60": "0x594b60",
+        "_Type_IsUnsigned": "0x454260",
+        "_fn_00595770": "0x595770",
+        "_fn_00595830": "0x595830",
+        "_fn_004c2b40": "0x4c2b40",
+        "_coerce_to_addressable_before": "0x591910"
       },
-      "data_complete": true,
+      "data_complete": false,
       "data_evidence": [
         {
           "name": "@28",
@@ -43550,40 +44206,2240 @@
           "target_section": ".rdata",
           "fixups_exact": true,
           "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_6",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006529f8",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_7",
+          "section": ".rdata",
+          "size": 48,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006529fc",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_9",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006529ec",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_10",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006529f0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@168",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace82",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@169",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ace86",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@170",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ace8e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@171",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ace96",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@172",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace9e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@173",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006acea2",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@174",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006aceaa",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@175",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006aceae",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@176",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006aceb6",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@177",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006aceba",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_25",
+          "section": ".rdata",
+          "size": 20,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652ad4",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_27",
+          "section": ".rdata",
+          "size": 20,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_29",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652aec",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_31",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652ae8",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_33",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652af0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_35",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652af4",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_last_nonvolatile_reg",
+          "section": ".data",
+          "size": 20,
+          "method": "named binding",
+          "address": "0x006ace2e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_nonvol_reserve",
+          "section": ".data",
+          "size": 20,
+          "method": "named binding",
+          "address": "0x006ace42",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_42",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652a38",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_43",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652a44",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_45",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_46",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652a5c",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_51",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_52",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_53",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_54",
+          "section": ".rdata",
+          "size": 20,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_57",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "@1000",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace66",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1001",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace6a",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1002",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace6e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1003",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ace72",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1004",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace7a",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1005",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ace7e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_65",
+          "section": ".rdata",
+          "size": 20,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_67",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652964",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_70",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_71",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_72",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_73",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x0065294c",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_74",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652958",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_76",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00652974",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_77",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_78",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_80",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_81",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006529d0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_82",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "_last_argument_register",
+          "section": ".bss",
+          "size": 20,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x00716d24",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_special_register_names",
+          "section": ".bss",
+          "size": 640,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x0070f5b8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
         }
       ],
+      "status": "attempted_equivalent",
       "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
-      "status": "attempted_partial",
+      "source_sha256": "034fc40adc5df586f9def917b5139cafa551ea2b8241c9095e7ca80d421516a1",
+      "summary": {
+        "identified_reconstructed": 29,
+        "strict_exact": 13,
+        "resolved_nonmatches": 8,
+        "unresolved_table_members": 8
+      },
+      "source_bindings": {
+        "_Registers_GetVarInfo": "0x579790",
+        "_Registers_ClassForType": "0x579560",
+        "_Registers_LoadStoreType": "0x5794e0",
+        "_init_endian": "0x579660",
+        "_colored_vrs_as_vrsave": "0x5796e0",
+        "_setup_diagnostic_reg_strings": "0x57a1c0",
+        "_GetABIFirstNonVolatile": "0x57a700",
+        "_open_fe_temp_registers": "0x57a270",
+        "_fn_0057a790": "0x57a790",
+        "_fn_0057a740": "0x57a740",
+        "_is_register_object": "0x57a7c0",
+        "_retain_GPR_pair": "0x57a830",
+        "_fn_00579600": "0x579600",
+        "_asm_used_register": "0x57a910",
+        "_fn_005792c0": "0x5792c0",
+        "_assign_GPR_pair": "0x579830",
+        "_assign_register_by_type": "0x579a70",
+        "_fn_00578970": "0x578970",
+        "_fn_00579300": "0x579300",
+        "_fn_00579420": "0x579420",
+        "_first_nonvolatile_reg": "0x57a2e0",
+        "_reset_nonvolatile_registers": "0x57a230",
+        "_set_last_exception_registers": "0x579fc0",
+        "_init_target_registers": "0x579cb0",
+        "_fn_005789b0": "0x5789b0",
+        "_fn_00579230": "0x579230",
+        "_fn_005784c0": "0x5784c0",
+        "_fn_00578a20": "0x578a20",
+        "_fn_00578dd0": "0x578dd0",
+        "_galloc": "0x46c6a0",
+        "_memclrw": "0x46c400",
+        "_CError_Internal": "0x45a250",
+        "_nativeByteOrder": "0x70efe8",
+        "_operandsDebug": "0x70f019",
+        "_use_vrsave": "0x70f009",
+        "_disable_explicit_registers": "0x70f054",
+        "_register_init_enabled": "0x725dfd",
+        "_target_cpu": "0x70effa",
+        "_high_word_offset": "0x716ed0",
+        "_low_word_offset": "0x717462",
+        "_data_007172c4": "0x7172c4",
+        "_data_007171e2": "0x7171e2",
+        "_data_007172d0": "0x7172d0",
+        "_data_00717280": "0x717280",
+        "_current_register_class": "0x726060",
+        "_total_physical_registers": "0x710274",
+        "_available_registers": "0x710788",
+        "_nonvolatile_registers": "0x70ed68",
+        "_nonvolatile_count": "0x71019c",
+        "_nonvolatile_used": "0x716c84",
+        "_physical_register_used": "0x70f2e0",
+        "_register_class_names": "0x7100c0",
+        "_register_formats": "0x711b08",
+        "_explicit_registers": "0x7108b0",
+        "_last_argument_register": "0x716d24",
+        "_force_spill": "0x715c0c",
+        "_fn_00594740": "0x594740",
+        "_fn_00594650": "0x594650",
+        "_fn_00588120": "0x588120",
+        "_gUsedVirtualRegistersFPR": "0x716eac",
+        "_virtual_registers": "0x711afc",
+        "_local_objects": "0x710924",
+        "_other_objects": "0x716d50",
+        "_basic_blocks": "0x7108c8",
+        "_virtual_mode": "0x715c34",
+        "_virtual_register_count": "0x716ea0",
+        "_volatile_registers": "0x70eac0",
+        "_volatile_count": "0x71003c",
+        "_special_register_names": "0x70f5b8",
+        "_last_nonvolatile_reg": "0x6ace2e",
+        "_nonvol_reserve": "0x6ace42",
+        "_stack_base_reg": "0x7172bc",
+        "_frame_base_reg": "0x716ebe",
+        "_optimization_level": "0x70f230",
+        "_has_inline_assembly": "0x710894",
+        "_current_function": "0x7109b4",
+        "_exception_register_count": "0x6e38f8",
+        "_exception_registers": "0x6e38fc",
+        "_fn_00594590": "0x594590",
+        "_fn_005947e0": "0x5947e0",
+        "_fn_00620ec0": "0x620ec0",
+        "_fn_00620320": "0x620320",
+        "_fn_004e2470": "0x4e2470",
+        "_fn_00621cf0": "0x621cf0",
+        "_fn_0056ee40": "0x56ee40",
+        "_fn_005ed3d0": "0x5ed3d0",
+        "_stsignedint": "0x699c54",
+        "_stunsignedint": "0x699c5c",
+        "_stdouble": "0x699c94",
+        "_stlongdouble": "0x699ca4",
+        "_vector_type": "0x69a15c",
+        "_scratch_register": "0x71013c",
+        "_PCodeUtilities_MakeInstruction": "0x582f60",
+        "_PCode_InsertBefore": "0x5829d0",
+        "_PCode_InsertAfter": "0x582890",
+        "_fn_00587230": "0x587230",
+        "_fn_00594b60": "0x594b60",
+        "_Type_IsUnsigned": "0x454260",
+        "_fn_00595770": "0x595770",
+        "_fn_00595830": "0x595830",
+        "_fn_004c2b40": "0x4c2b40",
+        "_coerce_to_addressable_before": "0x591910"
+      },
+      "compiler": {
+        "path": "build/compilers/cw94/mwcc.exe",
+        "flags": [
+          "-c",
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly",
+          "-DVERSION=3",
+          "-Iinclude",
+          "-i-",
+          "-Iinclude/libc"
+        ],
+        "valid_final_profiles": {
+          "cw94": {
+            "functions": 29,
+            "strict_exact": 13,
+            "resolved": 21
+          },
+          "o3": {
+            "functions": 29,
+            "strict_exact": 13,
+            "resolved": 21
+          },
+          "nointrinsics": {
+            "functions": 29,
+            "strict_exact": 13,
+            "resolved": 21
+          },
+          "space": {
+            "functions": 29,
+            "strict_exact": 2,
+            "resolved": 25
+          }
+        },
+        "source_tuning_rounds": 8,
+        "original_application_executed": false
+      },
+      "assertion_calls": {
+        "Registers_GetVarInfo": [
+          [
+            "0x5797da",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57980a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "Registers_ClassForType": [],
+        "Registers_LoadStoreType": [],
+        "init_endian": [],
+        "colored_vrs_as_vrsave": [],
+        "setup_diagnostic_reg_strings": [],
+        "GetABIFirstNonVolatile": [],
+        "open_fe_temp_registers": [],
+        "fn_0057a790": [],
+        "fn_0057a740": [],
+        "is_register_object": [],
+        "retain_GPR_pair": [
+          [
+            "0x57a8a1",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a8ea",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "fn_00579600": [],
+        "asm_used_register": [],
+        "fn_005792c0": [
+          [
+            "0x5792e8",
+            [
+              "0x48c",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "assign_GPR_pair": [
+          [
+            "0x579882",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5798ab",
+            [
+              "0x23d",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57993a",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5799ad",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579a2a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579a5c",
+            [
+              "0x24a",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "assign_register_by_type": [
+          [
+            "0x579aca",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579b6d",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579b9f",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579c3a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579c7b",
+            [
+              "0x21b",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "fn_00578970": [],
+        "fn_00579300": [],
+        "fn_00579420": [],
+        "first_nonvolatile_reg": [
+          [
+            "0x57a421",
+            [
+              "0xe2",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a51a",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a5ba",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a60a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a63c",
+            [
+              "0x106",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a652",
+            [
+              "0xb2",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57a68a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "reset_nonvolatile_registers": [],
+        "set_last_exception_registers": [],
+        "init_target_registers": [],
+        "fn_005789b0": [
+          [
+            "0x578a0a",
+            [
+              "0x691",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "fn_00579230": [],
+        "fn_005784c0": [
+          [
+            "0x57851b",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5785a1",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57869a",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57872a",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5787a2",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5787fa",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57884a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57889a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5788ea",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57893a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "fn_00578a20": [
+          [
+            "0x578a9a",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x578b2c",
+            [
+              "0x5e3",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x578d4c",
+            [
+              "0x65c",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x578d8a",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ]
+        ],
+        "fn_00578dd0": [
+          [
+            "0x578e42",
+            [
+              "0x296",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x578edf",
+            [
+              "0x519",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x578f20",
+            [
+              "0x53e",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x579032",
+            [
+              "0x58e",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57909a",
+            [
+              "0x59e",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x5790da",
+            [
+              "0x289",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57911a",
+            [
+              "0x549",
+              "0x6ace56"
+            ]
+          ],
+          [
+            "0x57913c",
+            [
+              "0x55f",
+              "0x6ace56"
+            ]
+          ]
+        ]
+      },
+      "original_indirect_jump_anchors": [
+        {
+          "function": "Registers_GetVarInfo",
+          "instruction": "0x57979f",
+          "operand": "dword ptr [ecx*4 + 0x652a2c]"
+        },
+        {
+          "function": "Registers_ClassForType",
+          "instruction": "0x579576",
+          "operand": "dword ptr [ecx*4 + 0x6529fc]"
+        },
+        {
+          "function": "Registers_ClassForType",
+          "instruction": "0x5795c5",
+          "operand": "dword ptr [ecx*4 + 0x6529f8]"
+        },
+        {
+          "function": "Registers_LoadStoreType",
+          "instruction": "0x5794f7",
+          "operand": "dword ptr [edx*4 + 0x6529f0]"
+        },
+        {
+          "function": "Registers_LoadStoreType",
+          "instruction": "0x579542",
+          "operand": "dword ptr [ecx*4 + 0x6529ec]"
+        },
+        {
+          "function": "GetABIFirstNonVolatile",
+          "instruction": "0x57a70a",
+          "operand": "dword ptr [ecx*4 + 0x652ad4]"
+        },
+        {
+          "function": "open_fe_temp_registers",
+          "instruction": "0x57a28f",
+          "operand": "dword ptr [ecx*4 + 0x652a88]"
+        },
+        {
+          "function": "fn_0057a790",
+          "instruction": "0x57a7a0",
+          "operand": "dword ptr [eax*4 + 0x652aec]"
+        },
+        {
+          "function": "fn_0057a740",
+          "instruction": "0x57a750",
+          "operand": "dword ptr [ecx*4 + 0x652ae8]"
+        },
+        {
+          "function": "is_register_object",
+          "instruction": "0x57a7df",
+          "operand": "dword ptr [eax*4 + 0x652af0]"
+        },
+        {
+          "function": "retain_GPR_pair",
+          "instruction": "0x57a86f",
+          "operand": "dword ptr [ecx*4 + 0x652af4]"
+        },
+        {
+          "function": "assign_GPR_pair",
+          "instruction": "0x579844",
+          "operand": "dword ptr [ecx*4 + 0x652a44]"
+        },
+        {
+          "function": "assign_GPR_pair",
+          "instruction": "0x5798f5",
+          "operand": "dword ptr [ecx*4 + 0x652a38]"
+        },
+        {
+          "function": "assign_register_by_type",
+          "instruction": "0x579a86",
+          "operand": "dword ptr [edx*4 + 0x652a5c]"
+        },
+        {
+          "function": "assign_register_by_type",
+          "instruction": "0x579b37",
+          "operand": "dword ptr [edx*4 + 0x652a50]"
+        },
+        {
+          "function": "first_nonvolatile_reg",
+          "instruction": "0x57a2fd",
+          "operand": "dword ptr [ecx*4 + 0x652ac0]"
+        },
+        {
+          "function": "first_nonvolatile_reg",
+          "instruction": "0x57a404",
+          "operand": "dword ptr [ecx*4 + 0x652ab4]"
+        },
+        {
+          "function": "first_nonvolatile_reg",
+          "instruction": "0x57a4d8",
+          "operand": "dword ptr [eax*4 + 0x652aa8]"
+        },
+        {
+          "function": "first_nonvolatile_reg",
+          "instruction": "0x57a57c",
+          "operand": "dword ptr [edx*4 + 0x652a9c]"
+        },
+        {
+          "function": "set_last_exception_registers",
+          "instruction": "0x57a1a6",
+          "operand": "dword ptr [edx*4 + 0x652a7c]"
+        },
+        {
+          "function": "init_target_registers",
+          "instruction": "0x579e97",
+          "operand": "dword ptr [edi*4 + 0x652a68]"
+        },
+        {
+          "function": "fn_005789b0",
+          "instruction": "0x5789c6",
+          "operand": "dword ptr [edx*4 + 0x652964]"
+        },
+        {
+          "function": "fn_005784c0",
+          "instruction": "0x5784dd",
+          "operand": "dword ptr [ecx*4 + 0x652958]"
+        },
+        {
+          "function": "fn_005784c0",
+          "instruction": "0x578563",
+          "operand": "dword ptr [edx*4 + 0x65294c]"
+        },
+        {
+          "function": "fn_005784c0",
+          "instruction": "0x57865b",
+          "operand": "dword ptr [edx*4 + 0x652940]"
+        },
+        {
+          "function": "fn_005784c0",
+          "instruction": "0x5786ec",
+          "operand": "dword ptr [ecx*4 + 0x652934]"
+        },
+        {
+          "function": "fn_005784c0",
+          "instruction": "0x578764",
+          "operand": "dword ptr [edx*4 + 0x652928]"
+        },
+        {
+          "function": "fn_00578a20",
+          "instruction": "0x578a48",
+          "operand": "dword ptr [ecx*4 + 0x6529a0]"
+        },
+        {
+          "function": "fn_00578a20",
+          "instruction": "0x578a58",
+          "operand": "dword ptr [ebx*4 + 0x652994]"
+        },
+        {
+          "function": "fn_00578a20",
+          "instruction": "0x578aff",
+          "operand": "dword ptr [eax*4 + 0x652974]"
+        },
+        {
+          "function": "fn_00578dd0",
+          "instruction": "0x578df4",
+          "operand": "dword ptr [edx*4 + 0x6529dc]"
+        },
+        {
+          "function": "fn_00578dd0",
+          "instruction": "0x578e04",
+          "operand": "dword ptr [ebx*4 + 0x6529d0]"
+        },
+        {
+          "function": "fn_00578dd0",
+          "instruction": "0x578e9d",
+          "operand": "dword ptr [eax*4 + 0x6529b0]"
+        }
+      ],
+      "emitted_literal_table_provenance": [
+        {
+          "symbol": "@28",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 16,
+          "relocations": []
+        },
+        {
+          "symbol": ".sw$27",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              4,
+              6
+            ],
+            [
+              4,
+              4,
+              6
+            ],
+            [
+              8,
+              4,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$81",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": [
+            [
+              0,
+              13,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$80",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 48,
+          "relocations": [
+            [
+              0,
+              13,
+              6
+            ],
+            [
+              4,
+              13,
+              6
+            ],
+            [
+              8,
+              13,
+              6
+            ],
+            [
+              12,
+              13,
+              6
+            ],
+            [
+              16,
+              13,
+              6
+            ],
+            [
+              20,
+              13,
+              6
+            ],
+            [
+              24,
+              13,
+              6
+            ],
+            [
+              28,
+              13,
+              6
+            ],
+            [
+              32,
+              13,
+              6
+            ],
+            [
+              36,
+              13,
+              6
+            ],
+            [
+              40,
+              13,
+              6
+            ],
+            [
+              44,
+              13,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$107",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": [
+            [
+              0,
+              22,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$106",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": [
+            [
+              0,
+              22,
+              6
+            ],
+            [
+              4,
+              22,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": "@168",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@169",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@170",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@171",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@172",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@173",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@174",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@175",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@176",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@177",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": ".sw$201",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 20,
+          "relocations": [
+            [
+              0,
+              70,
+              6
+            ],
+            [
+              4,
+              70,
+              6
+            ],
+            [
+              8,
+              70,
+              6
+            ],
+            [
+              12,
+              70,
+              6
+            ],
+            [
+              16,
+              70,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$223",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 20,
+          "relocations": [
+            [
+              0,
+              76,
+              6
+            ],
+            [
+              4,
+              76,
+              6
+            ],
+            [
+              8,
+              76,
+              6
+            ],
+            [
+              12,
+              76,
+              6
+            ],
+            [
+              16,
+              76,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$243",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": [
+            [
+              0,
+              82,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$272",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": [
+            [
+              0,
+              88,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$294",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": [
+            [
+              0,
+              94,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$322",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              100,
+              6
+            ],
+            [
+              4,
+              100,
+              6
+            ],
+            [
+              8,
+              100,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$494",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              121,
+              6
+            ],
+            [
+              4,
+              121,
+              6
+            ],
+            [
+              8,
+              121,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$493",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              121,
+              6
+            ],
+            [
+              4,
+              121,
+              6
+            ],
+            [
+              8,
+              121,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$564",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              130,
+              6
+            ],
+            [
+              4,
+              130,
+              6
+            ],
+            [
+              8,
+              130,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$563",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              130,
+              6
+            ],
+            [
+              4,
+              130,
+              6
+            ],
+            [
+              8,
+              130,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$810",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              148,
+              6
+            ],
+            [
+              4,
+              148,
+              6
+            ],
+            [
+              8,
+              148,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$809",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              148,
+              6
+            ],
+            [
+              4,
+              148,
+              6
+            ],
+            [
+              8,
+              148,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$808",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              148,
+              6
+            ],
+            [
+              4,
+              148,
+              6
+            ],
+            [
+              8,
+              148,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$807",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 20,
+          "relocations": [
+            [
+              0,
+              148,
+              6
+            ],
+            [
+              4,
+              148,
+              6
+            ],
+            [
+              8,
+              148,
+              6
+            ],
+            [
+              12,
+              148,
+              6
+            ],
+            [
+              16,
+              148,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$893",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              166,
+              6
+            ],
+            [
+              4,
+              166,
+              6
+            ],
+            [
+              8,
+              166,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": "@1000",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@1001",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@1002",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@1003",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 8,
+          "relocations": []
+        },
+        {
+          "symbol": "@1004",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": "@1005",
+          "section": ".data",
+          "offset": 0,
+          "section_size": 4,
+          "relocations": []
+        },
+        {
+          "symbol": ".sw$1006",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 20,
+          "relocations": [
+            [
+              0,
+              172,
+              6
+            ],
+            [
+              4,
+              172,
+              6
+            ],
+            [
+              8,
+              172,
+              6
+            ],
+            [
+              12,
+              172,
+              6
+            ],
+            [
+              16,
+              172,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1023",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 16,
+          "relocations": [
+            [
+              0,
+              196,
+              6
+            ],
+            [
+              4,
+              196,
+              6
+            ],
+            [
+              8,
+              196,
+              6
+            ],
+            [
+              12,
+              196,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1227",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              205,
+              6
+            ],
+            [
+              4,
+              205,
+              6
+            ],
+            [
+              8,
+              205,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1226",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              205,
+              6
+            ],
+            [
+              4,
+              205,
+              6
+            ],
+            [
+              8,
+              205,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1225",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              205,
+              6
+            ],
+            [
+              4,
+              205,
+              6
+            ],
+            [
+              8,
+              205,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1224",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              205,
+              6
+            ],
+            [
+              4,
+              205,
+              6
+            ],
+            [
+              8,
+              205,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1223",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              205,
+              6
+            ],
+            [
+              4,
+              205,
+              6
+            ],
+            [
+              8,
+              205,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1337",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 32,
+          "relocations": [
+            [
+              0,
+              223,
+              6
+            ],
+            [
+              4,
+              223,
+              6
+            ],
+            [
+              8,
+              223,
+              6
+            ],
+            [
+              12,
+              223,
+              6
+            ],
+            [
+              16,
+              223,
+              6
+            ],
+            [
+              20,
+              223,
+              6
+            ],
+            [
+              24,
+              223,
+              6
+            ],
+            [
+              28,
+              223,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1336",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              223,
+              6
+            ],
+            [
+              4,
+              223,
+              6
+            ],
+            [
+              8,
+              223,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1335",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 16,
+          "relocations": [
+            [
+              0,
+              223,
+              6
+            ],
+            [
+              4,
+              223,
+              6
+            ],
+            [
+              8,
+              223,
+              6
+            ],
+            [
+              12,
+              223,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1451",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 32,
+          "relocations": [
+            [
+              0,
+              235,
+              6
+            ],
+            [
+              4,
+              235,
+              6
+            ],
+            [
+              8,
+              235,
+              6
+            ],
+            [
+              12,
+              235,
+              6
+            ],
+            [
+              16,
+              235,
+              6
+            ],
+            [
+              20,
+              235,
+              6
+            ],
+            [
+              24,
+              235,
+              6
+            ],
+            [
+              28,
+              235,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1450",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 12,
+          "relocations": [
+            [
+              0,
+              235,
+              6
+            ],
+            [
+              4,
+              235,
+              6
+            ],
+            [
+              8,
+              235,
+              6
+            ]
+          ]
+        },
+        {
+          "symbol": ".sw$1449",
+          "section": ".rdata",
+          "offset": 0,
+          "section_size": 16,
+          "relocations": [
+            [
+              0,
+              235,
+              6
+            ],
+            [
+              4,
+              235,
+              6
+            ],
+            [
+              8,
+              235,
+              6
+            ],
+            [
+              12,
+              235,
+              6
+            ]
+          ]
+        }
+      ],
+      "binding_policy": "Only actual emitted named COFF symbols in source-scoped bindings. No @N/.sw$N/anonymous aliases. Address helpers retain fn aliases where original names are unproven. Shared data stays external unless independently recovered below.",
+      "baseline_aliases": {
+        "Registers_GetInfo": "Registers_GetVarInfo",
+        "Registers_GetOperandRegMask": "colored_vrs_as_vrsave",
+        "Registers_BindGPRPair": "retain_GPR_pair",
+        "Registers_AllocateGPRPair": "assign_GPR_pair"
+      },
+      "baseline_alias_limits": "Analogous roles only; native20-byte VarInfo, new Object offsets and generalized class bookkeeping require callers to be ported. Do not redirect individual old FPR/VR/GPR allocator entrypoints to generalized assign_register_by_type without ABI/behavior review. Existing root getter alias already integrated.",
+      "membership_limits": [
+        "No SO/STABS source scope found for RegisterInfo ordinary Mac family. Original membership beyond own-line assertions is behavior/call/data evidence, not adjacency alone.",
+        "5784b0/6 wrapper calls5784c0 thenRET; intentionally not placed in source until source ownership proven.",
+        "594740 retained external address alias: it asserts Registers.c at6ad5ac, despite related Mac retain_register ordinary symbol. No false ownership transfer.",
+        "Registers_GetNewVarInfo allocation role fully inlined in native getter/consumers; standalone native Windows entry not found, not invented.",
+        "GetRegisterClassName, used_vrstate_VRs, save_before_coloring_nonvolatile_registers, is_nonvolatile_register, update_asm_nonvolatile_registers, disables_optimizer have ordinary Mac names but no proven independent Windows assignment in this source; unknown callbacks remain address aliases rather than guessed canonical names.",
+        "Next native entry57a9f0 asserts SFPE_PPC_EABI.c, excluded. No claim that29 reconstructed members exhaust every possible source member elsewhere in image."
+      ],
+      "native_abi": {
+        "Object": "datatype2,namec,type10,storageClass18,flags1a,localInfo40,dataInfo54,inline registerAttribute58; pack2",
+        "VarInfo": "20bytes;used9,flags e,regClass f,reg10,regHi12",
+        "VirtualReg": "30bytes;object4,flags14; pack2",
+        "PCode": "next0,flagsLow c,flags10,opcode28,numArgs2a,args2c; arg14bytes kind0,class1,disp2,reg4,obj6",
+        "PCodeBlock": "next0,first14",
+        "ExplicitReg": "next0,object4,name8,class c,signedreg d; pack2",
+        "ExceptionReg": "4bytes,class0,padding1,regshort2"
+      },
+      "named_data_ownership": {
+        "last_nonvolatile_reg": "Original6ace2e,20bytes,{3,5,31,31,31}, explicit Mac last_nonvolatile_reg$287 ordinary data name; nativeinit indexes five classes.",
+        "nonvol_reserve": "Original6ace42,20bytes,{0,0,0,4,3}, explicit Mac nonvol_reserve$288 ordinary data name; native subtract verified.",
+        "special_register_names": "Original70f5b8,640byte BSS[5][32] pointers; explicit Mac symbol, nativeclear/indexing/initialization corroborate.",
+        "last_argument_register": "Original716d24,20byte BSS[5]int; explicit Mac symbol, open/temp and firstnonvol loops corroborate."
+      },
+      "data_limits": [
+        "Full emitted data attempted; named4data objects and all resolved literals/fixups are recorded. Anonymous table failures remain explicitly unresolved.",
+        "Shared physical/nonvolatile/volatile arrays, limits/counters, diagnostic arrays, function globals and option fields are external declarations with source bindings; original defining TU not proven from ordinary Mac source scope.",
+        "Mac spr_to_sysreg/save_state/used_regs_before_coloring/first_fe_temporary_register/last_exception_register data have no independently proven native mapping/extent here. No speculative BSS splits added."
+      ],
+      "objdiff": {
+        "command": "build/tools/objdiff-cli.exe diff -1 build/registerinfo-target.obj -2 build/registerinfo-base.obj -o build/registerinfo-full-diff.json",
+        "coverage": "21 resolved functions only;8 unresolved functions excluded, complete emitted data included with unresolved data ledger.",
+        "strict_definition": "Exact original body bytes AND absolute COFF relocation sites equal original PE base relocation sites; resolved calls/data have bound retail addresses."
+      },
+      "encoding": "Source strictly encodes CP932; repository tools/check_sjis.py absent; direct encoding fallback performed.",
+      "evidence_files": [
+        "build/registerinfo-retail.txt",
+        "build/registerinfo-remote-retail.txt",
+        "build/registerinfo-sizes.json",
+        "build/registerinfo-strings.json",
+        "build/registerinfo-probe.json",
+        "build/registerinfo-full-diff.json",
+        "build/registerinfo-diff.txt",
+        "build/probe_registerinfo.py"
+      ],
       "membership_reviewed": false,
-      "strict_exact_count": 1,
-      "code_bytes": 156,
-      "initialized_data_bytes": 16,
-      "rodata_bytes": 12,
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "source_sha256": "83509766c95ab995b26095df8ac751e485f400fe9f3eb3be93dbda7dd05e7e81",
-      "semantics": [
-        "Datatype0/2 cache a zeroed20-byte allocation at object+0x54. Datatype1 requires pre-existing pointer at+0x40. Assertion lines649/662 and filename preserved.",
-        "Imported1.2.5 record size44 and object offsets are obsolete. Native private pointer-only object view avoids altering shared headers for unported callers."
-      ],
-      "limitations": [
-        "Only the getter has been ported in this pass; the nine other assertion-proven Windows members and additional functions require reconstruction.",
-        "Mac ordinary Registers_GetVarInfo provides canonical name; no RegisterInfo.c SO/FUN records in supplied map.",
-        "No whole-TU completeness claim; untouched original members remain target-only within this TU."
-      ],
-      "cp932_compatible": true
+      "mapped_function_count": 29,
+      "strict_exact_count": 13
     },
     "src/GC_3_0a5_2/frontend/CMiddleLayer.c": {
       "status": "ownership_prepared",
@@ -75175,7 +78031,7 @@
     "src/GC_3_0a5_2/backend/Operands.c": {
       "source": "src/GC_3_0a5_2/backend/Operands.c",
       "frozen": true,
-      "source_sha256": "5ad77f681bb391f64523edf378a3b7c359272ad362296f95c12eefa4e17cc9da",
+      "source_sha256": "983210d83e57e0635d7b89caa62b23702f04c9d3a422d9dfd0ee4bc722ea1b24",
       "compiler": "build/compilers/cw94/mwcc.exe",
       "compiler_flags": [
         "-c",
@@ -76358,7 +79214,6 @@
         "_memclrw": "0x46c400",
         "_CodeGen_AllocateTemporaryObject": "0x46bb30",
         "_PPCError_FatalError": "0x56ec90",
-        "_fn_00579560": "0x579560",
         "_stbool": "0x699c1c",
         "_void_ptr": "0x6771c8",
         "_gUsedVirtualRegistersVR": "0x716ea8",
@@ -76403,7 +79258,8 @@
         "_op_absolute_ha": "0x595770",
         "_add_immediate_lo": "0x595830",
         "_add_immediate_before": "0x5958c0",
-        "_load_gpr_x": "0x595250"
+        "_load_gpr_x": "0x595250",
+        "_Registers_ClassForType": "0x579560"
       },
       "baseline_aliases": {
         "Operands_InsertBitField": "insert_bitfield",
@@ -76778,7 +79634,8 @@
         "fn_00595770": "op_absolute_ha",
         "fn_00595830": "add_immediate_lo",
         "fn_005958c0": "add_immediate_before",
-        "fn_00595250": "load_gpr_x"
+        "fn_00595250": "load_gpr_x",
+        "fn_00579560": "Registers_ClassForType"
       }
     },
     "src/GC_3_0a5_2/backend/PCodeUtilities.c": {
@@ -77749,7 +80606,6 @@
         "_change_num_operands": "0x58b310",
         "_gUsedVirtualRegistersGPR": "0x716eb0",
         "_fn_004c3f60": "0x4c3f60",
-        "_fn_005794e0": "0x5794e0",
         "_fn_00454260": "0x454260",
         "_fn_005829d0": "0x5829d0",
         "_utilityRegisterCounts": "0x71003c",
@@ -77799,7 +80655,8 @@
         "_branch_subroutine_ctr": "0x595aa0",
         "_branch_subroutine": "0x595b90",
         "_load_store_register": "0x5954e0",
-        "_add_immediate": "0x595890"
+        "_add_immediate": "0x595890",
+        "_Registers_LoadStoreType": "0x5794e0"
       },
       "aliases": {
         "PCodeUtilities_EmitInstructionAndCreateBlock": "branch_indirect",
@@ -77941,8 +80798,11 @@
       "membership_reviewed": false,
       "mapped_function_count": 37,
       "strict_exact_count": 24,
-      "source_sha256": "7ef095013777645527a2a8f3a462935110b6d1a41c9afe2bce30165d33da51ef",
-      "data_complete": true
+      "source_sha256": "a6b52a31499cfa4d21b9554fce487040a7051d539c0f4b44a60a3497b77badfa",
+      "data_complete": true,
+      "canonical_callsite_names": {
+        "fn_005794e0": "Registers_LoadStoreType"
+      }
     }
   },
   "ownership_review": {

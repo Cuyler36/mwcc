@@ -74,7 +74,7 @@
     "src/driver/LicenseImports.c",
     "src/driver/MacFileTypes.c",
     "src/driver/MacSpecs.c",
-    "src/driver/MemUtils.c",
+    "src/GC_3_0a5_2/driver/MemUtils.c",
     "src/driver/Memory.c",
     "src/driver/MsDos.c",
     "src/driver/OptimizerHelpers.c",
@@ -1252,7 +1252,7 @@
       "flags": [
         "-O4",
         "-opt",
-        "space",
+        "speed",
         "-inline",
         "auto",
         "-sym",
@@ -1591,26 +1591,6 @@
       ],
       "include_dirs": [
         "src/driver"
-      ]
-    },
-    "src/driver/MemUtils.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver",
-        "include"
       ]
     },
     "src/driver/Memory.c": {
@@ -3238,6 +3218,26 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/driver/MemUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include"
+      ]
     }
   },
   "matching_functions": [
@@ -3301,7 +3301,6 @@
     "src/driver/MacSpecs/find_or_create_spec_entry_negated",
     "src/driver/CLProj/CLProj_AppendString",
     "src/driver/CLProj/CLProj_CopyStringBounded",
-    "src/driver/MemUtils/MemUtils_CallPluginEntry",
     "src/driver/CLFileOps/set_bytes",
     "src/msl/misc_io/clearerr",
     "src/driver/StringUtils/_pstrcpy",
@@ -3502,7 +3501,15 @@
     "src/GC_3_0a5_2/driver/Arguments/Arg_ToolArgsForPlugin",
     "src/GC_3_0a5_2/driver/Arguments/Arg_FreeToolArgs",
     "src/GC_3_0a5_2/driver/CLWriteObjectFile/WriteObjectFile",
-    "src/GC_3_0a5_2/driver/CLWriteObjectFile/WriteBrowseData"
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile/WriteBrowseData",
+    "src/GC_3_0a5_2/driver/MemUtils/xmalloc",
+    "src/GC_3_0a5_2/driver/MemUtils/xcalloc",
+    "src/GC_3_0a5_2/driver/MemUtils/fn_004263c0",
+    "src/GC_3_0a5_2/driver/MemUtils/fn_004263d0",
+    "src/GC_3_0a5_2/driver/MemUtils/xrealloc",
+    "src/GC_3_0a5_2/driver/MemUtils/xstrdup",
+    "src/GC_3_0a5_2/driver/MemUtils/xfree",
+    "src/driver/CLPluginRequests/CallPlugin"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3580,6 +3587,17 @@
       "_CLProj_ChangeFileExtension@8": "0x4178e0",
       "_fn_00415090": "0x4186c0",
       "_Browser_PackBrowseFile": "0x43daf0"
+    },
+    "src/GC_3_0a5_2/driver/MemUtils.c": {
+      "__imp__GlobalAlloc@8": "0x6d42e8",
+      "__imp__GlobalReAlloc@12": "0x6d433c",
+      "_xmalloc@8": "0x426300",
+      "_xcalloc@8": "0x426360",
+      "_fn_004263c0@4": "0x4263c0",
+      "_fn_004263d0@4": "0x4263d0",
+      "_xrealloc@12": "0x4263e0",
+      "_xstrdup@4": "0x426460",
+      "_xfree@4": "0x426490"
     }
   }
 }

@@ -32,6 +32,16 @@ extern "C" {
 #include <setjmp.h>
 #include <stdio.h>
 #include <stdlib.h>
+#if VERSION == VERSION_GC_3_0A5_2
+/* CLPluginRequests.cpp STABS identifies this wrapper as CallPlugin. */
+int __stdcall CallPlugin(Plugin *plugin)
+{
+    short result;
+    result = CLPlugins_CallEntry(plugin, plugin->object);
+    return result;
+}
+#define MemUtils_CallPluginEntry CallPlugin
+#endif
 #include <string.h>
 
 void initialize_plugin_request(Plugin *owner, int phase)

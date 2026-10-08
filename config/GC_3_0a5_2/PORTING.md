@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## MemUtils.c: exact mapped code, provisional wrapper ownership
+
+The five symbol-named allocation functions and two adjacent Windows allocation
+wrappers match all 406 code bytes and 116 initialized data bytes. Windows uses
+the stdcall GlobalAlloc/GlobalReAlloc/GlobalFree path. The two additional
+wrappers retain address-based names; their TU attribution remains provisional,
+so the source is not marked complete. The imported MemUtils_CallPluginEntry
+belongs to CLPluginRequests.cpp and is restored there as CallPlugin, using its
+STABS identity and matching context call. Its Windows body remains exact.
+
 ## CLWriteObjectFile.c: complete Windows unit
 
 WriteObjectFile and WriteBrowseData match all 496 code bytes and 56 initialized

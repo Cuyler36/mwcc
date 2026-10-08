@@ -1509,7 +1509,7 @@
           "address": "0x0043d660",
           "size": 301,
           "compiled_source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
             "method": "Reachable x86 control flow bounded by Ghidra entries",
             "unresolved_indirect_flow": false
@@ -1584,6 +1584,113 @@
       "compiled": false,
       "membership_complete": false,
       "status": "unattempted"
+    },
+    {
+      "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+      "original_filename": "MemUtils.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "xmalloc",
+          "address": "0x426300",
+          "size": 94,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "xcalloc",
+          "address": "0x426360",
+          "size": 94,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_004263c0",
+          "address": "0x4263c0",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_004263d0",
+          "address": "0x4263d0",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "xrealloc",
+          "address": "0x4263e0",
+          "size": 126,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "xstrdup",
+          "address": "0x426460",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "xfree",
+          "address": "0x426490",
+          "size": 19,
+          "compiled_source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "xmalloc",
+          "mac_address": "0x00011f84",
+          "linkage_names": [
+            "xmalloc"
+          ]
+        },
+        {
+          "name": "xcalloc",
+          "mac_address": "0x0001203c",
+          "linkage_names": [
+            "xcalloc"
+          ]
+        },
+        {
+          "name": "xrealloc",
+          "mac_address": "0x00012084",
+          "linkage_names": [
+            "xrealloc"
+          ]
+        },
+        {
+          "name": "xstrdup",
+          "mac_address": "0x00012140",
+          "linkage_names": [
+            "xstrdup"
+          ]
+        },
+        {
+          "name": "xfree",
+          "mac_address": "0x00012180",
+          "linkage_names": [
+            "xfree"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_incomplete"
     },
     {
       "source": "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -17610,6 +17717,17 @@
       ],
       "windows_functions": [
         {
+          "name": "CallPlugin",
+          "address": "0x004250f0",
+          "size": 21,
+          "compiled_source": "src/driver/CLPluginRequests.cpp",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "FUN_00425a30",
           "address": "0x00425a30",
           "size": 361,
@@ -17740,7 +17858,7 @@
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_incomplete"
     },
     {
       "source": "src/driver/CLPlugins.c",
@@ -20396,101 +20514,6 @@
           "mac_address": "0x00017540",
           "linkage_names": [
             "OS_GetRsrcOSSpec"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/MemUtils.c",
-      "original_filename": "MemUtils.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "MemUtils_CallPluginEntry",
-          "address": "0x004250f0",
-          "size": 21,
-          "compiled_source": "src/driver/MemUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "xmalloc",
-          "address": "0x00426300",
-          "size": 94,
-          "compiled_source": "src/driver/MemUtils.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "xrealloc",
-          "address": "0x004263e0",
-          "size": 126,
-          "compiled_source": "src/driver/MemUtils.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "xstrdup",
-          "address": "0x00426460",
-          "size": 43,
-          "compiled_source": "src/driver/MemUtils.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "xmalloc",
-          "mac_address": "0x00011f84",
-          "linkage_names": [
-            "xmalloc"
-          ]
-        },
-        {
-          "name": "xcalloc",
-          "mac_address": "0x0001203c",
-          "linkage_names": [
-            "xcalloc"
-          ]
-        },
-        {
-          "name": "xrealloc",
-          "mac_address": "0x00012084",
-          "linkage_names": [
-            "xrealloc"
-          ]
-        },
-        {
-          "name": "xstrdup",
-          "mac_address": "0x00012140",
-          "linkage_names": [
-            "xstrdup"
-          ]
-        },
-        {
-          "name": "xfree",
-          "mac_address": "0x00012180",
-          "linkage_names": [
-            "xfree"
           ]
         }
       ],
@@ -41462,6 +41485,190 @@
         }
       ],
       "code_bytes": 3602
+    },
+    "src/GC_3_0a5_2/driver/MemUtils.c": {
+      "functions": [
+        {
+          "name": "xmalloc",
+          "address": "0x426300",
+          "size": 94,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 94
+        },
+        {
+          "name": "xcalloc",
+          "address": "0x426360",
+          "size": 94,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 94
+        },
+        {
+          "name": "fn_004263c0",
+          "address": "0x4263c0",
+          "size": 15,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 15
+        },
+        {
+          "name": "fn_004263d0",
+          "address": "0x4263d0",
+          "size": 15,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 15
+        },
+        {
+          "name": "xrealloc",
+          "address": "0x4263e0",
+          "size": 126,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 126
+        },
+        {
+          "name": "xstrdup",
+          "address": "0x426460",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "xfree",
+          "address": "0x426490",
+          "size": 19,
+          "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+          "exact": true,
+          "compiled_size": 19
+        }
+      ],
+      "bindings": {
+        "__imp__GlobalAlloc@8": "0x6d42e8",
+        "__imp__GlobalReAlloc@12": "0x6d433c",
+        "_xmalloc@8": "0x426300",
+        "_xcalloc@8": "0x426360",
+        "_fn_004263c0@4": "0x4263c0",
+        "_fn_004263d0@4": "0x4263d0",
+        "_xrealloc@12": "0x4263e0",
+        "_xstrdup@4": "0x426460",
+        "_xfree@4": "0x426490"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@247",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066e014",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@248",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066e01c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@249",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066e04c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@300",
+          "section": ".data",
+          "size": 56,
+          "method": "resolved function reference",
+          "address": "0x0066e050",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "source_sha256": "197c37483b79a91421b2233180a9ebe70e9f90b66176a91607a85aad91f42a96",
+      "selected_flags": "-O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly",
+      "compiler_profiles_attempted": 1,
+      "status": "attempted_incomplete",
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "406",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "116",
+          "match_percent": 100.0
+        }
+      ],
+      "function_semantics": {
+        "xmalloc": "GlobalAlloc(0x40,size); zero-filled fixed global block. On NULL fprintf(stderr,\"*** Out of memory when allocating %d bytes%s%s\",size,what?\" for \":\"\",what?what:\"\"); exit(-23), declared noreturn. No size-zero coercion, no recoverable longjmp.",
+        "xcalloc": "Same direct GlobalAlloc(0x40,size) and fatal path as xmalloc; no separate memset is needed because0x40 is GMEM_ZEROINIT.",
+        "fn_004263c0": "GlobalAlloc(0x40,size), return result includingNULL unchanged; stdcall one-argument wrapper. Original name unresolved.",
+        "fn_004263d0": "Identical one-argument direct GlobalAlloc wrapper; a distinct entry point in original. Original name unresolved.",
+        "xrealloc": "For nonNULL old, GlobalReAlloc(old,size,2); forNULL old, GlobalAlloc(0x40,size). On failure fprintf original resizing message and exit(-23). No size-zero coercion.",
+        "xstrdup": "strcpy(xmalloc(NULL,strlen(str)+1),str), with native stdcall allocatorABI.",
+        "xfree": "Call GlobalFree only when ptr!=NULL; native stdcall one-argumentABI."
+      },
+      "provenance": {
+        "symbol_map": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "source_unit": "MemUtils.c",
+        "STABS_source_line": 8241,
+        "STABS_function_lines": [
+          8279,
+          8291,
+          8300,
+          8313,
+          8318
+        ],
+        "Mac_named_functions": [
+          "xmalloc",
+          "xcalloc",
+          "xrealloc",
+          "xstrdup",
+          "xfree"
+        ],
+        "Windows_region": [
+          "0x00426300",
+          "0x004264a3"
+        ],
+        "Windows_only_wrappers": {
+          "fn_004263c0": "Address-based placeholder; not present under a recovered name in supplied Mac symbols. Ownership provisional from position between xcalloc and xrealloc in contiguous allocation-wrapper cluster.",
+          "fn_004263d0": "Address-based placeholder; same limitation. No guessed malloc/operator-new identity."
+        },
+        "old_MemUtils_CallPluginEntry": "Not in this recovered MemUtils.c Mac STABS unit. The next unit is CLPluginRequests.cpp; retain old baseline file for GC1.2.5 and do not import its unrelated plugin call into new allocator TU."
+      },
+      "binding_policy": "Source-scope all probe.bindings; function stdcall decorated names differ from old baselinecdecl. Import pointers are original IAT slots, not API executable addresses.",
+      "encoding": "Python CP932 encode passes; tools/check_sjis.py absent",
+      "completeness_limit": "All five named MemUtils functions plus both adjacent anonymous Windows wrappers are exactly reproduced, with all emitted code/data accounted for. Two wrappers have exact behavior but provisional TU attribution and unresolved original names; do not infer ownership beyond this cluster.",
+      "membership_reviewed": false,
+      "strict_exact_count": 7,
+      "code_bytes": 406,
+      "initialized_data_bytes": 116,
+      "bss_bytes": 0
+    },
+    "src/driver/CLPluginRequests.cpp": {
+      "status": "attempted_incomplete",
+      "membership_reviewed": false,
+      "ownership_review": "Moved CallPlugin from imported MemUtils.c; original source/name proven by STABS and Windows call/context behavior. Remaining plugin request functions still require porting."
     }
   },
   "ownership_review": {

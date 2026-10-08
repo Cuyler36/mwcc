@@ -3112,56 +3112,72 @@
     }
   },
   {
-    "name": "MemUtils_CallPluginEntry",
+    "name": "CallPlugin",
     "address": "0x004250f0",
     "size": 21,
-    "source": "src/driver/MemUtils.c",
+    "source": "src/driver/CLPluginRequests.cpp",
     "baseline_name": "MemUtils_CallPluginEntry",
     "baseline_address": "0x00416b20",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "CLPluginRequests.cpp STABS CallPlugin(Plugin*) wrapper, signed-short result, matching Windows context call and cluster ordering."
   },
   {
     "name": "xmalloc",
-    "address": "0x00426300",
+    "address": "0x426300",
     "size": 94,
-    "source": "src/driver/MemUtils.c",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
     "baseline_name": "xmalloc",
     "baseline_address": "0x004169a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
+  },
+  {
+    "name": "xcalloc",
+    "address": "0x426360",
+    "size": 94,
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
+  },
+  {
+    "name": "fn_004263c0",
+    "address": "0x4263c0",
+    "size": 15,
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
+  },
+  {
+    "name": "fn_004263d0",
+    "address": "0x4263d0",
+    "size": 15,
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
   },
   {
     "name": "xrealloc",
-    "address": "0x004263e0",
+    "address": "0x4263e0",
     "size": 126,
-    "source": "src/driver/MemUtils.c",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
     "baseline_name": "xrealloc",
     "baseline_address": "0x00416a60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
   },
   {
     "name": "xstrdup",
-    "address": "0x00426460",
+    "address": "0x426460",
     "size": 43,
-    "source": "src/driver/MemUtils.c",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
     "baseline_name": "xstrdup",
     "baseline_address": "0x00416af0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
+  },
+  {
+    "name": "xfree",
+    "address": "0x426490",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c",
+    "identity_evidence": "MemUtils STABS names and strict Windows function/data matching; anonymous wrapper ownership remains provisional."
   },
   {
     "name": "copy_access_paths_to_file_specs",

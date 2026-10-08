@@ -590,5 +590,37 @@
   "CExcept_CompareSpecifications": {
     "name": "CExcept_CompareSpecifications",
     "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "xmalloc": {
+    "name": "xmalloc",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "xcalloc": {
+    "name": "xcalloc",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "fn_004263c0": {
+    "name": "fn_004263c0",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "fn_004263d0": {
+    "name": "fn_004263d0",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "xrealloc": {
+    "name": "xrealloc",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "xstrdup": {
+    "name": "xstrdup",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "xfree": {
+    "name": "xfree",
+    "source": "src/GC_3_0a5_2/driver/MemUtils.c"
+  },
+  "MemUtils_CallPluginEntry": {
+    "name": "CallPlugin",
+    "source": "src/driver/CLPluginRequests.cpp"
   }
 }

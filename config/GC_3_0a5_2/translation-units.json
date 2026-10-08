@@ -2967,6 +2967,159 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+      "original_filename": "CLPrefs.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "PrefPanel_New",
+          "address": "0x426020",
+          "size": 138,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PrefPanel_GetHandle",
+          "address": "0x4260b0",
+          "size": 36,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PrefPanel_PutHandle",
+          "address": "0x4260e0",
+          "size": 47,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Prefs_Initialize",
+          "address": "0x426110",
+          "size": 11,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Prefs_Terminate",
+          "address": "0x426120",
+          "size": 60,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Prefs_AddPanel",
+          "address": "0x426160",
+          "size": 132,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Prefs_FindPanel",
+          "address": "0x4261f0",
+          "size": 42,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00426220",
+          "address": "0x426220",
+          "size": 141,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "PrefPanel_New",
+          "mac_address": "0x00016594",
+          "linkage_names": [
+            "PrefPanel_New"
+          ]
+        },
+        {
+          "name": "PrefPanel_GetHandle",
+          "mac_address": "0x00016664",
+          "linkage_names": [
+            "PrefPanel_GetHandle"
+          ]
+        },
+        {
+          "name": "PrefPanel_PutHandle",
+          "mac_address": "0x000166a8",
+          "linkage_names": [
+            "PrefPanel_PutHandle"
+          ]
+        },
+        {
+          "name": "Prefs_Initialize",
+          "mac_address": "0x00016700",
+          "linkage_names": [
+            "Prefs_Initialize"
+          ]
+        },
+        {
+          "name": "Prefs_Terminate",
+          "mac_address": "0x00016728",
+          "linkage_names": [
+            "Prefs_Terminate"
+          ]
+        },
+        {
+          "name": "Prefs_AddPanel",
+          "mac_address": "0x00016790",
+          "linkage_names": [
+            "Prefs_AddPanel"
+          ]
+        },
+        {
+          "name": "Prefs_FindPanel",
+          "mac_address": "0x00016844",
+          "linkage_names": [
+            "Prefs_FindPanel"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLSegs.c",
       "original_filename": "CLSegs.c",
       "evidence": [
@@ -19225,70 +19378,6 @@
           "mac_address": "0x0000a57c",
           "linkage_names": [
             "Plugin_Call"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLPrefs.c",
-      "original_filename": "CLPrefs.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [],
-      "mac_functions": [
-        {
-          "name": "PrefPanel_New",
-          "mac_address": "0x00016594",
-          "linkage_names": [
-            "PrefPanel_New"
-          ]
-        },
-        {
-          "name": "PrefPanel_GetHandle",
-          "mac_address": "0x00016664",
-          "linkage_names": [
-            "PrefPanel_GetHandle"
-          ]
-        },
-        {
-          "name": "PrefPanel_PutHandle",
-          "mac_address": "0x000166a8",
-          "linkage_names": [
-            "PrefPanel_PutHandle"
-          ]
-        },
-        {
-          "name": "Prefs_Initialize",
-          "mac_address": "0x00016700",
-          "linkage_names": [
-            "Prefs_Initialize"
-          ]
-        },
-        {
-          "name": "Prefs_Terminate",
-          "mac_address": "0x00016728",
-          "linkage_names": [
-            "Prefs_Terminate"
-          ]
-        },
-        {
-          "name": "Prefs_AddPanel",
-          "mac_address": "0x00016790",
-          "linkage_names": [
-            "Prefs_AddPanel"
-          ]
-        },
-        {
-          "name": "Prefs_FindPanel",
-          "mac_address": "0x00016844",
-          "linkage_names": [
-            "Prefs_FindPanel"
           ]
         }
       ],
@@ -51581,7 +51670,7 @@
       }
     },
     "src/driver/CLPrefs.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -51710,7 +51799,8 @@
           "space-nointrinsics": "2289203e7c03705db0b2071a6b489b4c8285039b31056777ee7ad42618ff0d41",
           "space-intrinsics": "403ea7c8b47dd5eeca16026a2823a791314b14fd86cce0ff2d6ef389210fc082"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLPrefs.c"
     },
     "src/driver/CLProj.c": {
       "status": "unattempted",
@@ -66413,6 +66503,161 @@
       "membership_reviewed": true,
       "source_sha256": "a003d9a514f5c06f1fab5ec04265fa034bd38ab6141e1d07685920cde0ac27cc",
       "strict_exact_count": 3
+    },
+    "src/GC_3_0a5_2/driver/CLPrefs.c": {
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/Project/CLPrefs.c",
+        "mac_functions": [
+          "PrefPanel_New",
+          "PrefPanel_GetHandle",
+          "PrefPanel_PutHandle",
+          "Prefs_Initialize",
+          "Prefs_Terminate",
+          "Prefs_AddPanel",
+          "Prefs_FindPanel"
+        ],
+        "windows_functions": 8,
+        "windows_region": [
+          "0x00426020",
+          "0x004262ad"
+        ],
+        "identity_evidence": "Seven consecutive Windows bodies match Mac explicit CLPrefs source roles, use shared panellist and 16-byte PrefPanel layout. Eighth adjacent wrapper calls Prefs_FindPanel, PrefPanel_PutHandle, PrefPanel_New, Prefs_AddPanel, then callback; following4262b0 is CLProj initialization confirmed by next source assertion. Unique diagnostic string reference4261d5 anchors Prefs_AddPanel.",
+        "new_windows_helper": {
+          "name": "fn_00426220",
+          "address": "0x426220",
+          "size": 141,
+          "behavior": "Replace existing panel data or allocate/register a new panel; notify optional callback on success",
+          "name_status": "No Mac symbol counterpart; original name unresolved, descriptive invented name avoided."
+        },
+        "new_behavior": [
+          "PrefPanel layout16: name0,data4/8,next12",
+          "PrefPanel_GetHandle copies into caller native handle",
+          "PrefPanel_PutHandle frees old native handle before copying replacement",
+          "PrefPanel_New allocates or zeroes initial payload and exits(-23) on native allocation error",
+          "Prefs_AddPanel duplicate diagnostic0x5c and verbose size logging",
+          "Prefs_Initialize and Prefs_Terminate own shared panellist; terminate frees name/handle/panel and clears head"
+        ],
+        "unknown_external_globals": {
+          "0x702f34": "Verbose preference definition flag, original name unknown",
+          "0x710b2c": "Optional panel-update callback, original name unknown"
+        }
+      },
+      "verification": {
+        "strict_exact_functions": 8,
+        "attempted_functions": 8,
+        "code_bytes": 607,
+        "data_bytes": 68,
+        "all_data_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "607",
+            "match_percent": 100.0
+          },
+          ".data": {
+            "bytes": "64",
+            "match_percent": 100.0
+          },
+          ".bss": {
+            "bytes": "4",
+            "match_percent": 100.0
+          }
+        },
+        "complete": true,
+        "encoding": "CP932 encoding succeeds; tools/check_sjis.py absent",
+        "source_sha256": "61103f7f3c21b8805c379b3cc380016a28596c044f0b0c4ddfc3c51153dfce2f"
+      },
+      "functions": [
+        {
+          "name": "PrefPanel_New",
+          "address": "0x426020",
+          "size": 138,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "PrefPanel_GetHandle",
+          "address": "0x4260b0",
+          "size": 36,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "PrefPanel_PutHandle",
+          "address": "0x4260e0",
+          "size": 47,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "Prefs_Initialize",
+          "address": "0x426110",
+          "size": 11,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "Prefs_Terminate",
+          "address": "0x426120",
+          "size": 60,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "Prefs_AddPanel",
+          "address": "0x426160",
+          "size": 132,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "Prefs_FindPanel",
+          "address": "0x4261f0",
+          "size": 42,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        },
+        {
+          "name": "fn_00426220",
+          "address": "0x426220",
+          "size": 141,
+          "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+        }
+      ],
+      "data_evidence": [
+        {
+          "name": "@160",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066dfac",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@218",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066dfc0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_panellist",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d85c8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 607,
+      "initialized_data_bytes": 64,
+      "bss_bytes": 4,
+      "status": "exact",
+      "membership_reviewed": true,
+      "source_sha256": "61103f7f3c21b8805c379b3cc380016a28596c044f0b0c4ddfc3c51153dfce2f",
+      "strict_exact_count": 8
     }
   },
   "ownership_review": {

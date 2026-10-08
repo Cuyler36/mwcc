@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLPrefs.c: complete Windows unit
+
+All eight retained Windows functions match, including the seven named Mac
+preference functions and the additional Windows callback helper. The native
+16-byte panel contains its name, an eight-byte memory buffer, and its next
+pointer. The constructor previously imported into CLIO.c is PrefPanel_New;
+its baseline body is excluded for GC3 and its canonical ownership is recorded.
+The complete unit passes objdiff-cli for 607 code bytes, 64 initialized data
+bytes, and four BSS bytes, with strict original loader-fixup checks.
+
 ## CLLoadAndCache.c: complete Windows unit
 
 All three formerly unmapped functions match: FixTextHandle, LoadAndCacheFile,

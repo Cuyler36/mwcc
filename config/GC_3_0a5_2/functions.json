@@ -3156,6 +3156,94 @@
     "identity_evidence": "CLPluginRequests.cpp STABS CallPlugin(Plugin*) wrapper, signed-short result, matching Windows context call and cluster ordering."
   },
   {
+    "name": "PrefPanel_New",
+    "address": "0x426020",
+    "size": 138,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PrefPanel_GetHandle",
+    "address": "0x4260b0",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PrefPanel_PutHandle",
+    "address": "0x4260e0",
+    "size": 47,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Prefs_Initialize",
+    "address": "0x426110",
+    "size": 11,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Prefs_Terminate",
+    "address": "0x426120",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Prefs_AddPanel",
+    "address": "0x426160",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Prefs_FindPanel",
+    "address": "0x4261f0",
+    "size": 42,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00426220",
+    "address": "0x426220",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
+    "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "xmalloc",
     "address": "0x426300",
     "size": 94,

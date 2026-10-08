@@ -1016,6 +1016,7 @@ int CLIO_CompareStringsIgnoreCase(char *left, char *right)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 NameTableEntry *create_data_block(char *name, const void *source, unsigned int size)
 {
     NameTableEntry *block;
@@ -1042,3 +1043,4 @@ NameTableEntry *create_data_block(char *name, const void *source, unsigned int s
     block->next = NULL;
     return block;
 }
+#endif

@@ -1062,5 +1062,57 @@
   "CLLoadAndCache_CopyStorageHandleData": {
     "name": "CopyFileText",
     "source": "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+  },
+  "PrefPanel_New": {
+    "name": "PrefPanel_New",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "PrefPanel_GetHandle": {
+    "name": "PrefPanel_GetHandle",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "PrefPanel_PutHandle": {
+    "name": "PrefPanel_PutHandle",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "Prefs_Initialize": {
+    "name": "Prefs_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "Prefs_Terminate": {
+    "name": "Prefs_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "Prefs_AddPanel": {
+    "name": "Prefs_AddPanel",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "Prefs_FindPanel": {
+    "name": "Prefs_FindPanel",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "fn_00426220": {
+    "name": "fn_00426220",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "CLPrefs_CopyDestinationToTemporary": {
+    "name": "PrefPanel_GetHandle",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "CLPrefs_CopyStorage": {
+    "name": "PrefPanel_PutHandle",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "CLPrefs_AddPrefPanel": {
+    "name": "Prefs_AddPanel",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "CLPrefs_FindNameTableEntry": {
+    "name": "Prefs_FindPanel",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
+  },
+  "create_data_block": {
+    "name": "PrefPanel_New",
+    "source": "src/GC_3_0a5_2/driver/CLPrefs.c"
   }
 }

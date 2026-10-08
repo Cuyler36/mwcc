@@ -57,7 +57,7 @@
     "src/GC_3_0a5_2/driver/CLOverlays.c",
     "src/driver/CLPluginRequests.cpp",
     "src/driver/CLPlugins.c",
-    "src/driver/CLPrefs.c",
+    "src/GC_3_0a5_2/driver/CLPrefs.c",
     "src/driver/CLProj.c",
     "src/GC_3_0a5_2/driver/CLSegs.c",
     "src/driver/CLStaticMain.c",
@@ -1156,25 +1156,6 @@
         "-O4",
         "-opt",
         "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLPrefs.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
         "-inline",
         "auto",
         "-sym",
@@ -3246,6 +3227,27 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLPrefs.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3583,7 +3585,15 @@
     "src/GC_3_0a5_2/driver/CLDependencies/Deps_ListDependencies",
     "src/GC_3_0a5_2/driver/CLLoadAndCache/FixTextHandle",
     "src/GC_3_0a5_2/driver/CLLoadAndCache/LoadAndCacheFile",
-    "src/GC_3_0a5_2/driver/CLLoadAndCache/CopyFileText"
+    "src/GC_3_0a5_2/driver/CLLoadAndCache/CopyFileText",
+    "src/GC_3_0a5_2/driver/CLPrefs/PrefPanel_New",
+    "src/GC_3_0a5_2/driver/CLPrefs/PrefPanel_GetHandle",
+    "src/GC_3_0a5_2/driver/CLPrefs/PrefPanel_PutHandle",
+    "src/GC_3_0a5_2/driver/CLPrefs/Prefs_Initialize",
+    "src/GC_3_0a5_2/driver/CLPrefs/Prefs_Terminate",
+    "src/GC_3_0a5_2/driver/CLPrefs/Prefs_AddPanel",
+    "src/GC_3_0a5_2/driver/CLPrefs/Prefs_FindPanel",
+    "src/GC_3_0a5_2/driver/CLPrefs/fn_00426220"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3596,7 +3606,8 @@
     "src/GC_3_0a5_2/driver/CLFiles.c",
     "src/GC_3_0a5_2/driver/CLOverlays.c",
     "src/GC_3_0a5_2/driver/CLSegs.c",
-    "src/GC_3_0a5_2/driver/CLLoadAndCache.c"
+    "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
+    "src/GC_3_0a5_2/driver/CLPrefs.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3890,6 +3901,36 @@
       "_FixTextHandle": "0x49a7b0",
       "_LoadAndCacheFile": "0x49a820",
       "_CopyFileText": "0x49a980"
+    },
+    "src/GC_3_0a5_2/driver/CLPrefs.c": {
+      "_panellist": "0x6d85c8",
+      "_data_00702f34": "0x702f34",
+      "_data_00710b2c": "0x710b2c",
+      "_xmalloc@8": "0x426300",
+      "_xstrdup@4": "0x426460",
+      "_xfree@4": "0x426490",
+      "_OS_NewHandle@8": "0x411c90",
+      "_OS_FreeHandle@4": "0x411d40",
+      "_OS_LockHandle@4": "0x411d00",
+      "_OS_UnlockHandle@4": "0x411d30",
+      "_OS_GetHandleSize@8": "0x411d80",
+      "_CLFileOps_CopyMemBuffer@8": "0x417f20",
+      "_CLErrors_EmitDiagnostic": "0x414a00",
+      "_CLIO_FormatAndDispatchText": "0x419d90",
+      "_CLIO_CompareStringsIgnoreCase@8": "0x424b60",
+      "_strcmp": "0x404120",
+      "_memcpy": "0x404850",
+      "_memset": "0x4041a0",
+      "_fprintf": "0x407e30",
+      "_exit": "0x402e70",
+      "_PrefPanel_New": "0x426020",
+      "_PrefPanel_GetHandle": "0x4260b0",
+      "_PrefPanel_PutHandle": "0x4260e0",
+      "_Prefs_Initialize": "0x426110",
+      "_Prefs_Terminate": "0x426120",
+      "_Prefs_AddPanel": "0x426160",
+      "_Prefs_FindPanel": "0x4261f0",
+      "_fn_00426220": "0x426220"
     }
   }
 }

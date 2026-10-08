@@ -17992,6 +17992,259 @@
     }
   },
   {
+    "name": "fn_005ccef0",
+    "address": "0x5ccef0",
+    "size": 81,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GetDataPoolRoot",
+    "address": "0x5ccf50",
+    "size": 150,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ccff0",
+    "address": "0x5ccff0",
+    "size": 117,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd070",
+    "address": "0x5cd070",
+    "size": 147,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd110",
+    "address": "0x5cd110",
+    "size": 91,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd170",
+    "address": "0x5cd170",
+    "size": 136,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd200",
+    "address": "0x5cd200",
+    "size": 610,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "elf_declare_symbol",
+    "address": "0x5cd470",
+    "size": 152,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd510",
+    "address": "0x5cd510",
+    "size": 217,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd5f0",
+    "address": "0x5cd5f0",
+    "size": 111,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "MakeSymbolTableEntry",
+    "address": "0x5cd660",
+    "size": 53,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cd6a0",
+    "address": "0x5cd6a0",
+    "size": 1006,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cda90",
+    "address": "0x5cda90",
+    "size": 800,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "MakeNamedSymbolTableEntry",
+    "address": "0x5cddb0",
+    "size": 748,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce0a0",
+    "address": "0x5ce0a0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InitELFSymbols",
+    "address": "0x5ce0b0",
+    "size": 27,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce0d0",
+    "address": "0x5ce0d0",
+    "size": 365,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce240",
+    "address": "0x5ce240",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "AddFunction",
+    "address": "0x5ce2e0",
+    "size": 220,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce3c0",
+    "address": "0x5ce3c0",
+    "size": 128,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "AddSymbol",
+    "address": "0x5ce440",
+    "size": 233,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce530",
+    "address": "0x5ce530",
+    "size": 48,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ce560",
+    "address": "0x5ce560",
+    "size": 15,
+    "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+    "identity_evidence": "BE_symbol.c filename assertions, coherent native ELF symbol-state and call family; user CSV names retained only where semantics corroborate them; unsupported identities retain addresses.",
+    "boundary_evidence": {
+      "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CTemplateClass_InstantiateClass",
     "address": "0x005d87a0",
     "size": 1721,

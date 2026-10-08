@@ -669,6 +669,296 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+      "original_filename": "BE_symbol.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_005ccef0",
+          "address": "0x005ccef0",
+          "size": 81,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ccf22"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "GetDataPoolRoot",
+          "address": "0x5ccf50",
+          "size": 150,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ccff0",
+          "address": "0x5ccff0",
+          "size": 117,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005cd070",
+          "address": "0x005cd070",
+          "size": 147,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005cd0fa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005cd110",
+          "address": "0x005cd110",
+          "size": 91,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005cd160"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005cd170",
+          "address": "0x5cd170",
+          "size": 136,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005cd200",
+          "address": "0x5cd200",
+          "size": 610,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "elf_declare_symbol",
+          "address": "0x005cd470",
+          "size": 152,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005cd4e2",
+            "0x005cd4fa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005cd510",
+          "address": "0x005cd510",
+          "size": 217,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005cd5da"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005cd5f0",
+          "address": "0x5cd5f0",
+          "size": 111,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "MakeSymbolTableEntry",
+          "address": "0x5cd660",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005cd6a0",
+          "address": "0x005cd6a0",
+          "size": 1006,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005cda1d"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005cda90",
+          "address": "0x5cda90",
+          "size": 800,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "MakeNamedSymbolTableEntry",
+          "address": "0x5cddb0",
+          "size": 748,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ce0a0",
+          "address": "0x5ce0a0",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "InitELFSymbols",
+          "address": "0x5ce0b0",
+          "size": 27,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ce0d0",
+          "address": "0x5ce0d0",
+          "size": 365,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ce240",
+          "address": "0x5ce240",
+          "size": 156,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "AddFunction",
+          "address": "0x5ce2e0",
+          "size": 220,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ce3c0",
+          "address": "0x5ce3c0",
+          "size": 128,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "AddSymbol",
+          "address": "0x5ce440",
+          "size": 233,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ce530",
+          "address": "0x005ce530",
+          "size": 48,
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ce557"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+        },
+        {
+          "name": "fn_005ce560",
+          "address": "0x5ce560",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG with direct-call/padded-entry/filename-fixup and seam audit; no indirect dispatch",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/BitVectors.c",
       "original_filename": "BitVectors.c",
       "evidence": [
@@ -20552,105 +20842,11 @@
     },
     {
       "source": "src/backend/BE_symbol.c",
-      "original_filename": "BE_symbol.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "FUN_005ccef0",
-          "address": "0x005ccef0",
-          "size": 81,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ccf22"
-          ]
-        },
-        {
-          "name": "FUN_005cd070",
-          "address": "0x005cd070",
-          "size": 147,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005cd0fa"
-          ]
-        },
-        {
-          "name": "FUN_005cd110",
-          "address": "0x005cd110",
-          "size": 91,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005cd160"
-          ]
-        },
-        {
-          "name": "FUN_005cd470",
-          "address": "0x005cd470",
-          "size": 152,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005cd4e2",
-            "0x005cd4fa"
-          ]
-        },
-        {
-          "name": "FUN_005cd510",
-          "address": "0x005cd510",
-          "size": 217,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005cd5da"
-          ]
-        },
-        {
-          "name": "FUN_005cd6a0",
-          "address": "0x005cd6a0",
-          "size": 1006,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005cda1d"
-          ]
-        },
-        {
-          "name": "FUN_005ce530",
-          "address": "0x005ce530",
-          "size": 48,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ce557"
-          ]
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -114995,6 +115191,3287 @@
           "relocations_resolved": true
         }
       ]
+    },
+    "src/GC_3_0a5_2/backend/BE_symbol.c": {
+      "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 23,
+      "strict_exact_count": 14,
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "source_sha256": "b07405047e4602ccb2f175425ef85d26c7fcd89bf29f5904120704a43091ca8b",
+      "mapped_members": [
+        {
+          "name": "fn_005ccef0",
+          "address": "0x5ccef0",
+          "size": 81,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 81,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "GetDataPoolRoot",
+          "address": "0x5ccf50",
+          "size": 150,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 150,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005ccff0",
+          "address": "0x5ccff0",
+          "size": 117,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 116,
+          "strict_exact": false,
+          "objdiff_percent": 89.70588,
+          "identified_member_attempted": true,
+          "semantic_review": "Native signed16 offset fast path reads object.var+52 VarInfo.short+16. Otherwise search section.pool+24 list+8 for inclusive low/exclusive high offset window base+-32768, then require valid+24. Return register+8 or zero. All loops/invalid cases retained; nonmatch merges cold zero blocks and final epilogue."
+        },
+        {
+          "name": "fn_005cd070",
+          "address": "0x5cd070",
+          "size": 147,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 131,
+          "strict_exact": false,
+          "objdiff_percent": 93.48214,
+          "identified_member_attempted": true,
+          "semantic_review": "Always call5d84f0(object) before symbol lookup. Signed16 offset returns directly; otherwise search the same native signed interval and require valid+24. Missing pool asserts679 and deliberately continues to original null dereference; successful result offset-base. Nonmatch coalesces cold invalid paths; no invented fallback."
+        },
+        {
+          "name": "fn_005cd110",
+          "address": "0x5cd110",
+          "size": 91,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 91,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005cd170",
+          "address": "0x5cd170",
+          "size": 136,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 136,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005cd200",
+          "address": "0x5cd200",
+          "size": 610,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 638,
+          "strict_exact": false,
+          "objdiff_percent": 76.70244,
+          "identified_member_attempted": true,
+          "semantic_review": "Allocate strlen(section.name+32)+5 text with .. prefix/.0 suffix,96-byte object attached to section.pool.object; initialize native type6771c8/kind5/name+12/storage0/flags+24=102/file+4/temporary+64/zero+72. Allocate/clear26-byte pool type3, reset pool tail to &head, append pool. Create52-byte hashed symbol, then info0/shndx0/section/alignment1/kind102/other40/flags10. Native original overwrites an existing pool-list head; preserved. Nonmatch is allocation/scheduling and hash-register choices."
+        },
+        {
+          "name": "elf_declare_symbol",
+          "address": "0x5cd470",
+          "size": 152,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 152,
+          "strict_exact": false,
+          "objdiff_percent": 99.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Six caller-confirmed cdecl slots: text,section,flag,unused,size,unused. Intern text46d340; save70f22b. Supported flag0 initializes kind102; nonzero asserts533 and retains native unspecified kind continuation. Lookup named symbol, assert543/returnNULL on failure. Temporarily clear option; AddSymbol(size,quals0,kind102,align1,attrs2,section), restore option, set section.symbol+108, return symbol. Nonmatch152/152 is register allocation only; no broad defined behavior claimed for failed flag assertion."
+        },
+        {
+          "name": "fn_005cd510",
+          "address": "0x5cd510",
+          "size": 217,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 217,
+          "strict_exact": false,
+          "objdiff_percent": 97.68116,
+          "identified_member_attempted": true,
+          "semantic_review": "Two caller-confirmed slots: section,unused. Reset string-buffer length70bc24; append section name and literal period; capture16-byte position, append formatted position, lock handle, intern its char pointer, unlock. Lookup kind102; missing asserts510 and returnsNULL. Set kind102,info0,size0,shndx0,offset=section+44,section,alignment1,linkage0,flags20; return symbol consumed by5cea3b. Nonmatch217/217 adds explicit final EAX move and changes padding; return ABI retained."
+        },
+        {
+          "name": "fn_005cd5f0",
+          "address": "0x5cd5f0",
+          "size": 111,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 111,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "MakeSymbolTableEntry",
+          "address": "0x5cd660",
+          "size": 53,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 53,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005cd6a0",
+          "address": "0x5cd6a0",
+          "size": 1006,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 898,
+          "strict_exact": false,
+          "objdiff_percent": 70.02244,
+          "identified_member_attempted": true,
+          "semantic_review": "Six caller-confirmed slots: text,section,external,unused,size,offset. Intern text; save option; initial kind102 for external0 else103. Find matching name/internal-kind category. Existing entry requires first12 text bytes .dwarf_type. (assert414 then continue otherwise), forces external0/kind102 and clears upper info nibble. Always allocate a NEW52-byte hashed/list node. Set initial info=external<<4,kind,default section. For AddSymbol effective kind is FE/FF when external is FE/FF, otherwise initial kind; quals20000 only external2; align1/attrs2. Temporarily clear option around AddSymbol, restore it, set supplied offset, return new node. This intentionally does not reuse the found node. Nonmatch includes hash scheduling, local spills and branch ordering."
+        },
+        {
+          "name": "fn_005cda90",
+          "address": "0x5cda90",
+          "size": 800,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 734,
+          "strict_exact": false,
+          "objdiff_percent": 71.08846,
+          "identified_member_attempted": true,
+          "semantic_review": "Find name/internal-kind category. Existing entry is changed to kind102 with info upper nibble cleared, and new node is local; otherwise binding from requestedkind. Always allocate a NEW52-byte hashed/list node with requested/forced kind, initial info nibble and default section. Native behavior differs from MakeNamedSymbolTableEntry which reuses an existing entry. Nonmatch is initialization/loop scheduling and spills."
+        },
+        {
+          "name": "MakeNamedSymbolTableEntry",
+          "address": "0x5cddb0",
+          "size": 748,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 698,
+          "strict_exact": false,
+          "objdiff_percent": 73.64341,
+          "identified_member_attempted": true,
+          "semantic_review": "Hash signed bytes seeded by strlen, rotate-left5/xor each byte, fold shifts10/20 and maskFFF. Lookup interned pointer and internal(kind102) versus external category; return existing node when found. Otherwise allocate/zero52 bytes, link hash chain and creation-order list, initialize info from kind, kind and default section. Hash loop has independent bounded native/current compiled prefix execution proof; nonmatch is unrolled instruction scheduling/register allocation."
+        },
+        {
+          "name": "fn_005ce0a0",
+          "address": "0x5ce0a0",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 6,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "InitELFSymbols",
+          "address": "0x5ce0b0",
+          "size": 27,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 27,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005ce0d0",
+          "address": "0x5ce0d0",
+          "size": 365,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 349,
+          "strict_exact": false,
+          "objdiff_percent": 83.17969,
+          "identified_member_attempted": true,
+          "semantic_review": "Unconditionally allocate a fresh52-byte node after native name hash; clear all52 bytes, set name, prepend hash chain, append global creation-order list and update tail. Return node with all other fields zero. Hash prefixes executed for1048 cases/body against signed-byte reference, including empty, high-bit and unroll-boundary strings. Nonmatch349/365 is scheduling/index-address selection."
+        },
+        {
+          "name": "fn_005ce240",
+          "address": "0x5ce240",
+          "size": 156,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 156,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "AddFunction",
+          "address": "0x5ce2e0",
+          "size": 220,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 220,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005ce3c0",
+          "address": "0x5ce3c0",
+          "size": 128,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 128,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "AddSymbol",
+          "address": "0x5ce440",
+          "size": 233,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 233,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005ce530",
+          "address": "0x5ce530",
+          "size": 48,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 48,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        },
+        {
+          "name": "fn_005ce560",
+          "address": "0x5ce560",
+          "size": 15,
+          "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+          "compiled_size": 15,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "identified_member_attempted": true,
+          "semantic_review": "Strict complete code-byte equality and exact PE absolute-fixup positions; native ABI/field effects reviewed."
+        }
+      ],
+      "data_complete": true,
+      "owned_data": [
+        {
+          "name": "_filename",
+          "section": ".data",
+          "size": 12,
+          "method": "named binding",
+          "address": "0x006b4990",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@299",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006b499c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@300",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006b49a0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@334",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006b49a4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@499",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x006b49a8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_symbol_state",
+          "section": ".bss",
+          "size": 16396,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x00711be8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_section_anchor",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e9868",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "compiler_experiments": [
+        {
+          "profile": "speed-intrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 81,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 150,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 116,
+              "strict_exact": false,
+              "objdiff_percent": 89.70588
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 131,
+              "strict_exact": false,
+              "objdiff_percent": 93.48214
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 91,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 136,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 638,
+              "strict_exact": false,
+              "objdiff_percent": 76.70244
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 152,
+              "strict_exact": false,
+              "objdiff_percent": 99.0
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 217,
+              "strict_exact": false,
+              "objdiff_percent": 97.68116
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 111,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 53,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 898,
+              "strict_exact": false,
+              "objdiff_percent": 70.02244
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 734,
+              "strict_exact": false,
+              "objdiff_percent": 71.08846
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 698,
+              "strict_exact": false,
+              "objdiff_percent": 73.64341
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 27,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 349,
+              "strict_exact": false,
+              "objdiff_percent": 83.17969
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 156,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 220,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 128,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 233,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 48,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 15,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ],
+          "strict_exact": 14
+        },
+        {
+          "profile": "speed-noschedule",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-opt",
+            "noschedule"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 81,
+              "strict_exact": false,
+              "objdiff_percent": 89.189186
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 150,
+              "strict_exact": false,
+              "objdiff_percent": 83.60656
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 116,
+              "strict_exact": false,
+              "objdiff_percent": 89.70588
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 131,
+              "strict_exact": false,
+              "objdiff_percent": 89.91071
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 91,
+              "strict_exact": false,
+              "objdiff_percent": 99.63637
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 136,
+              "strict_exact": false,
+              "objdiff_percent": 92.245285
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 638,
+              "strict_exact": false,
+              "objdiff_percent": 62.858536
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 152,
+              "strict_exact": false,
+              "objdiff_percent": 79.333336
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 217,
+              "strict_exact": false,
+              "objdiff_percent": 86.08696
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 111,
+              "strict_exact": false,
+              "objdiff_percent": 94.87805
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 53,
+              "strict_exact": false,
+              "objdiff_percent": 91.666664
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 898,
+              "strict_exact": false,
+              "objdiff_percent": 49.891026
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 734,
+              "strict_exact": false,
+              "objdiff_percent": 53.56154
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 698,
+              "strict_exact": false,
+              "objdiff_percent": 56.089146
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 27,
+              "strict_exact": false,
+              "objdiff_percent": 49.25
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 349,
+              "strict_exact": false,
+              "objdiff_percent": 55.882812
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 156,
+              "strict_exact": false,
+              "objdiff_percent": 95.918365
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 220,
+              "strict_exact": false,
+              "objdiff_percent": 96.9697
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 131,
+              "strict_exact": false,
+              "objdiff_percent": 76.145454
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 233,
+              "strict_exact": false,
+              "objdiff_percent": 94.028984
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 48,
+              "strict_exact": false,
+              "objdiff_percent": 99.6
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 15,
+              "strict_exact": false,
+              "objdiff_percent": 98.5
+            }
+          ],
+          "strict_exact": 1
+        },
+        {
+          "profile": "speed-nointrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "nointrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 81,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 150,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 116,
+              "strict_exact": false,
+              "objdiff_percent": 89.70588
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 131,
+              "strict_exact": false,
+              "objdiff_percent": 93.48214
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 91,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 136,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 152,
+              "strict_exact": false,
+              "objdiff_percent": 99.0
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 217,
+              "strict_exact": false,
+              "objdiff_percent": 97.68116
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _memset"
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 53,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _memset"
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 156,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 220,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 128,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 233,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 48,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 15,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ],
+          "strict_exact": 12
+        },
+        {
+          "profile": "space-intrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 72,
+              "strict_exact": false,
+              "objdiff_percent": 62.0
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 142,
+              "strict_exact": false,
+              "objdiff_percent": 85.983604
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 101,
+              "strict_exact": false,
+              "objdiff_percent": 44.490196
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 114,
+              "strict_exact": false,
+              "objdiff_percent": 35.17857
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 75,
+              "strict_exact": false,
+              "objdiff_percent": 73.69697
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 121,
+              "strict_exact": false,
+              "objdiff_percent": 76.754715
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 380,
+              "strict_exact": false,
+              "objdiff_percent": 38.419514
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 142,
+              "strict_exact": false,
+              "objdiff_percent": 33.166668
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 202,
+              "strict_exact": false,
+              "objdiff_percent": 68.63768
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 100,
+              "strict_exact": false,
+              "objdiff_percent": 74.243904
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 53,
+              "strict_exact": false,
+              "objdiff_percent": 98.958336
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 494,
+              "strict_exact": false,
+              "objdiff_percent": 28.592949
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 329,
+              "strict_exact": false,
+              "objdiff_percent": 19.107693
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 314,
+              "strict_exact": false,
+              "objdiff_percent": 19.914728
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 24,
+              "strict_exact": false,
+              "objdiff_percent": 75.0
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 151,
+              "strict_exact": false,
+              "objdiff_percent": 24.015625
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 144,
+              "strict_exact": false,
+              "objdiff_percent": 80.30612
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 199,
+              "strict_exact": false,
+              "objdiff_percent": 72.42424
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 121,
+              "strict_exact": false,
+              "objdiff_percent": 58.327274
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 186,
+              "strict_exact": false,
+              "objdiff_percent": 55.449276
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 37,
+              "strict_exact": false,
+              "objdiff_percent": 3.6666667
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 11,
+              "strict_exact": false,
+              "objdiff_percent": 71.25
+            }
+          ],
+          "strict_exact": 1
+        },
+        {
+          "profile": "space-nointrinsics",
+          "compiler": "cw94",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "nointrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 72,
+              "strict_exact": false,
+              "objdiff_percent": 62.0
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 142,
+              "strict_exact": false,
+              "objdiff_percent": 85.983604
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 101,
+              "strict_exact": false,
+              "objdiff_percent": 44.490196
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 114,
+              "strict_exact": false,
+              "objdiff_percent": 35.17857
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 75,
+              "strict_exact": false,
+              "objdiff_percent": 73.69697
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 121,
+              "strict_exact": false,
+              "objdiff_percent": 76.754715
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 142,
+              "strict_exact": false,
+              "objdiff_percent": 33.166668
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 202,
+              "strict_exact": false,
+              "objdiff_percent": 68.63768
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _memset"
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 53,
+              "strict_exact": false,
+              "objdiff_percent": 98.958336
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _memset"
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "error": "unbound relocation: _strlen"
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 144,
+              "strict_exact": false,
+              "objdiff_percent": 80.30612
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 199,
+              "strict_exact": false,
+              "objdiff_percent": 72.42424
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 121,
+              "strict_exact": false,
+              "objdiff_percent": 58.327274
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 186,
+              "strict_exact": false,
+              "objdiff_percent": 55.449276
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 37,
+              "strict_exact": false,
+              "objdiff_percent": 3.6666667
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 11,
+              "strict_exact": false,
+              "objdiff_percent": 71.25
+            }
+          ],
+          "strict_exact": 1
+        },
+        {
+          "profile": "pro53-speed",
+          "compiler": "pro53",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 81,
+              "strict_exact": false,
+              "objdiff_percent": 50.135136
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 150,
+              "strict_exact": false,
+              "objdiff_percent": 75.491806
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 117,
+              "strict_exact": false,
+              "objdiff_percent": 33.215687
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 118,
+              "strict_exact": false,
+              "objdiff_percent": 27.410715
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 91,
+              "strict_exact": false,
+              "objdiff_percent": 76.36364
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 134,
+              "strict_exact": false,
+              "objdiff_percent": 55.45283
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 607,
+              "strict_exact": false,
+              "objdiff_percent": 48.853657
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 144,
+              "strict_exact": false,
+              "objdiff_percent": 12.666667
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 220,
+              "strict_exact": false,
+              "objdiff_percent": 47.10145
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 110,
+              "strict_exact": false,
+              "objdiff_percent": 58.512196
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 50,
+              "strict_exact": false,
+              "objdiff_percent": 78.541664
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 941,
+              "strict_exact": false,
+              "objdiff_percent": 23.044872
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 766,
+              "strict_exact": false,
+              "objdiff_percent": 40.2
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 766,
+              "strict_exact": false,
+              "objdiff_percent": 39.841084
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 27,
+              "strict_exact": false,
+              "objdiff_percent": 50.0
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 358,
+              "strict_exact": false,
+              "objdiff_percent": 45.304688
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 149,
+              "strict_exact": false,
+              "objdiff_percent": 72.10204
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 207,
+              "strict_exact": false,
+              "objdiff_percent": 0.0
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 115,
+              "strict_exact": false,
+              "objdiff_percent": 41.4
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 188,
+              "strict_exact": false,
+              "objdiff_percent": 32.47826
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 38,
+              "strict_exact": false,
+              "objdiff_percent": 3.6666667
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 15,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            }
+          ],
+          "strict_exact": 2
+        },
+        {
+          "profile": "pro6-speed",
+          "compiler": "pro6",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics"
+          ],
+          "compiled": true,
+          "output": "",
+          "functions": [
+            {
+              "name": "fn_005ccef0",
+              "address": "0x5ccef0",
+              "size": 81,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 81,
+              "strict_exact": false,
+              "objdiff_percent": 55.405407
+            },
+            {
+              "name": "GetDataPoolRoot",
+              "address": "0x5ccf50",
+              "size": 150,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 150,
+              "strict_exact": false,
+              "objdiff_percent": 70.08197
+            },
+            {
+              "name": "fn_005ccff0",
+              "address": "0x5ccff0",
+              "size": 117,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 104,
+              "strict_exact": false,
+              "objdiff_percent": 38.215687
+            },
+            {
+              "name": "fn_005cd070",
+              "address": "0x5cd070",
+              "size": 147,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 118,
+              "strict_exact": false,
+              "objdiff_percent": 27.410715
+            },
+            {
+              "name": "fn_005cd110",
+              "address": "0x5cd110",
+              "size": 91,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 91,
+              "strict_exact": false,
+              "objdiff_percent": 91.60606
+            },
+            {
+              "name": "fn_005cd170",
+              "address": "0x5cd170",
+              "size": 136,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 134,
+              "strict_exact": false,
+              "objdiff_percent": 68.471695
+            },
+            {
+              "name": "fn_005cd200",
+              "address": "0x5cd200",
+              "size": 610,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 600,
+              "strict_exact": false,
+              "objdiff_percent": 45.912193
+            },
+            {
+              "name": "elf_declare_symbol",
+              "address": "0x5cd470",
+              "size": 152,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 144,
+              "strict_exact": false,
+              "objdiff_percent": 22.0
+            },
+            {
+              "name": "fn_005cd510",
+              "address": "0x5cd510",
+              "size": 217,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 218,
+              "strict_exact": false,
+              "objdiff_percent": 51.884056
+            },
+            {
+              "name": "fn_005cd5f0",
+              "address": "0x5cd5f0",
+              "size": 111,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 108,
+              "strict_exact": false,
+              "objdiff_percent": 76.46342
+            },
+            {
+              "name": "MakeSymbolTableEntry",
+              "address": "0x5cd660",
+              "size": 53,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 50,
+              "strict_exact": false,
+              "objdiff_percent": 86.875
+            },
+            {
+              "name": "fn_005cd6a0",
+              "address": "0x5cd6a0",
+              "size": 1006,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 933,
+              "strict_exact": false,
+              "objdiff_percent": 18.532051
+            },
+            {
+              "name": "fn_005cda90",
+              "address": "0x5cda90",
+              "size": 800,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 750,
+              "strict_exact": false,
+              "objdiff_percent": 30.111538
+            },
+            {
+              "name": "MakeNamedSymbolTableEntry",
+              "address": "0x5cddb0",
+              "size": 748,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 750,
+              "strict_exact": false,
+              "objdiff_percent": 33.697674
+            },
+            {
+              "name": "fn_005ce0a0",
+              "address": "0x5ce0a0",
+              "size": 6,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 6,
+              "strict_exact": true,
+              "objdiff_percent": 100.0
+            },
+            {
+              "name": "InitELFSymbols",
+              "address": "0x5ce0b0",
+              "size": 27,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 27,
+              "strict_exact": false,
+              "objdiff_percent": 49.25
+            },
+            {
+              "name": "fn_005ce0d0",
+              "address": "0x5ce0d0",
+              "size": 365,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 349,
+              "strict_exact": false,
+              "objdiff_percent": 43.78125
+            },
+            {
+              "name": "fn_005ce240",
+              "address": "0x5ce240",
+              "size": 156,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 147,
+              "strict_exact": false,
+              "objdiff_percent": 76.18367
+            },
+            {
+              "name": "AddFunction",
+              "address": "0x5ce2e0",
+              "size": 220,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 197,
+              "strict_exact": false,
+              "objdiff_percent": 64.42424
+            },
+            {
+              "name": "fn_005ce3c0",
+              "address": "0x5ce3c0",
+              "size": 128,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 115,
+              "strict_exact": false,
+              "objdiff_percent": 44.854546
+            },
+            {
+              "name": "AddSymbol",
+              "address": "0x5ce440",
+              "size": 233,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 186,
+              "strict_exact": false,
+              "objdiff_percent": 35.492752
+            },
+            {
+              "name": "fn_005ce530",
+              "address": "0x5ce530",
+              "size": 48,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 38,
+              "strict_exact": false,
+              "objdiff_percent": 3.6666667
+            },
+            {
+              "name": "fn_005ce560",
+              "address": "0x5ce560",
+              "size": 15,
+              "source": "src/GC_3_0a5_2/backend/BE_symbol.c",
+              "compiled_size": 15,
+              "strict_exact": false,
+              "objdiff_percent": 98.5
+            }
+          ],
+          "strict_exact": 1
+        }
+      ],
+      "whole_image_audit": {
+        "cluster": [
+          "0x5ccef0",
+          "0x5ce570"
+        ],
+        "members": [
+          {
+            "name": "fn_005ccef0",
+            "address": "0x5ccef0",
+            "size": 81,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "GetDataPoolRoot",
+            "address": "0x5ccf50",
+            "size": 150,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ccff0",
+            "address": "0x5ccff0",
+            "size": 117,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd070",
+            "address": "0x5cd070",
+            "size": 147,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd110",
+            "address": "0x5cd110",
+            "size": 91,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd170",
+            "address": "0x5cd170",
+            "size": 136,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd200",
+            "address": "0x5cd200",
+            "size": 610,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "elf_declare_symbol",
+            "address": "0x5cd470",
+            "size": 152,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd510",
+            "address": "0x5cd510",
+            "size": 217,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd5f0",
+            "address": "0x5cd5f0",
+            "size": 111,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "MakeSymbolTableEntry",
+            "address": "0x5cd660",
+            "size": 53,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cd6a0",
+            "address": "0x5cd6a0",
+            "size": 1006,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005cda90",
+            "address": "0x5cda90",
+            "size": 800,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "MakeNamedSymbolTableEntry",
+            "address": "0x5cddb0",
+            "size": 748,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce0a0",
+            "address": "0x5ce0a0",
+            "size": 6,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "InitELFSymbols",
+            "address": "0x5ce0b0",
+            "size": 27,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce0d0",
+            "address": "0x5ce0d0",
+            "size": 365,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce240",
+            "address": "0x5ce240",
+            "size": 156,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "AddFunction",
+            "address": "0x5ce2e0",
+            "size": 220,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce3c0",
+            "address": "0x5ce3c0",
+            "size": 128,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "AddSymbol",
+            "address": "0x5ce440",
+            "size": 233,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce530",
+            "address": "0x5ce530",
+            "size": 48,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          },
+          {
+            "name": "fn_005ce560",
+            "address": "0x5ce560",
+            "size": 15,
+            "source": "src/GC_3_0a5_2/backend/BE_symbol.c"
+          }
+        ],
+        "csv_names": [
+          {
+            "address": "0x5ccf50",
+            "name": "GetDataPoolRoot",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5cd470",
+            "name": "elf_declare_symbol",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5cd660",
+            "name": "MakeSymbolTableEntry",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5cddb0",
+            "name": "MakeNamedSymbolTableEntry",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5ce0b0",
+            "name": "InitELFSymbols",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5ce2e0",
+            "name": "AddFunction",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          },
+          {
+            "address": "0x5ce440",
+            "name": "AddSymbol",
+            "section": ".text",
+            "saved_ghidra_entry": true
+          }
+        ],
+        "direct_calls": {
+          "0x5ce0d0": [
+            "0x4be96e",
+            "0x555730"
+          ],
+          "0x5cd660": [
+            "0x4c08b2",
+            "0x4c0c22",
+            "0x4c0f49",
+            "0x4c107b",
+            "0x4c112b",
+            "0x4c12a8",
+            "0x4c1345",
+            "0x4c18a8",
+            "0x4c1fba",
+            "0x4c217b",
+            "0x4c2502",
+            "0x4c419d",
+            "0x4c448d",
+            "0x4dd3da",
+            "0x4de97f",
+            "0x4deadd",
+            "0x57d533",
+            "0x57e7e0",
+            "0x5812da",
+            "0x581620",
+            "0x58175a",
+            "0x581a71",
+            "0x581b8d",
+            "0x581dc1",
+            "0x581eff",
+            "0x586de5",
+            "0x5ccef8",
+            "0x5ccf58",
+            "0x5ccff7",
+            "0x5cd07e",
+            "0x5cd115",
+            "0x5ce279",
+            "0x5ce339",
+            "0x5ce3dc",
+            "0x5cfef5",
+            "0x5d860a"
+          ],
+          "0x5ccff0": [
+            "0x4c11c2",
+            "0x4c1479",
+            "0x4c2076",
+            "0x4c2261",
+            "0x4c258f",
+            "0x4fb86a",
+            "0x5049c8",
+            "0x591a91"
+          ],
+          "0x5ce240": [
+            "0x4c1cc4"
+          ],
+          "0x5ce2e0": [
+            "0x4c1d9b",
+            "0x5ce433"
+          ],
+          "0x5ce3c0": [
+            "0x4c1fac",
+            "0x4c216e",
+            "0x4c236e",
+            "0x4c248f",
+            "0x4c26c7"
+          ],
+          "0x5cd200": [
+            "0x4c2a76"
+          ],
+          "0x5ce0b0": [
+            "0x4c4f60"
+          ],
+          "0x5ce440": [
+            "0x4db449",
+            "0x4dc4ed",
+            "0x4dc994",
+            "0x4dc9af",
+            "0x4dcd30",
+            "0x4dcea9",
+            "0x4dcffe",
+            "0x4ddb6e",
+            "0x4dde08",
+            "0x4de38b",
+            "0x4de510",
+            "0x4df57c",
+            "0x4e00b3",
+            "0x4e078a",
+            "0x4e0b42",
+            "0x5cd4c0",
+            "0x5cd9d5",
+            "0x5ce41c"
+          ],
+          "0x5cda90": [
+            "0x4db63f",
+            "0x4db6ed"
+          ],
+          "0x5cd5f0": [
+            "0x554e63",
+            "0x55550e",
+            "0x55556c",
+            "0x5cea09"
+          ],
+          "0x5ce0a0": [
+            "0x5552c3",
+            "0x555371"
+          ],
+          "0x5ce560": [
+            "0x55670e",
+            "0x556748"
+          ],
+          "0x5ce530": [
+            "0x556739",
+            "0x556767"
+          ],
+          "0x5ccf50": [
+            "0x57e81a",
+            "0x581bbe",
+            "0x581c40"
+          ],
+          "0x5cd110": [
+            "0x581caa",
+            "0x581cfc"
+          ],
+          "0x5cd070": [
+            "0x5853bc",
+            "0x585480"
+          ],
+          "0x5ccef0": [
+            "0x585467"
+          ],
+          "0x5cd170": [
+            "0x5ccfd1"
+          ],
+          "0x5cddb0": [
+            "0x5cd49c",
+            "0x5cd58b",
+            "0x5cd68b"
+          ],
+          "0x5cd6a0": [
+            "0x5ce76e",
+            "0x5ce95e",
+            "0x5cebe8",
+            "0x5ced3f",
+            "0x5cee4e",
+            "0x5cef68",
+            "0x5d0804",
+            "0x5d1098",
+            "0x5d1e09",
+            "0x5d1e53",
+            "0x5d1ee0",
+            "0x5d1f60",
+            "0x5d1fb3",
+            "0x5d2009",
+            "0x5d207a",
+            "0x5d217a",
+            "0x5d2200",
+            "0x5d2280",
+            "0x5d22e9",
+            "0x5d2340",
+            "0x5d241e"
+          ],
+          "0x5cd510": [
+            "0x5cea35"
+          ],
+          "0x5cd470": [
+            "0x5cf205",
+            "0x5cf225",
+            "0x5cf245",
+            "0x5cf265",
+            "0x5cf285"
+          ]
+        },
+        "unknown_direct_call_targets": [],
+        "padding_prologue_candidates": [],
+        "owned_data_fixup_references": {
+          "0x715bf0": [
+            {
+              "fixup": "0x55670a",
+              "function": "0x5566e0"
+            },
+            {
+              "fixup": "0x5ce0a1",
+              "function": "0x5ce0a0"
+            }
+          ],
+          "0x6b4990": [
+            {
+              "fixup": "0x5ccf1e",
+              "function": "0x5ccef0"
+            },
+            {
+              "fixup": "0x5cd0f6",
+              "function": "0x5cd070"
+            },
+            {
+              "fixup": "0x5cd15c",
+              "function": "0x5cd110"
+            },
+            {
+              "fixup": "0x5cd4de",
+              "function": "0x5cd470"
+            },
+            {
+              "fixup": "0x5cd4f6",
+              "function": "0x5cd470"
+            },
+            {
+              "fixup": "0x5cd5d6",
+              "function": "0x5cd510"
+            },
+            {
+              "fixup": "0x5cda19",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5ce553",
+              "function": "0x5ce530"
+            }
+          ],
+          "0x715bec": [
+            {
+              "fixup": "0x5cd3d2",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd3e8",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd982",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cd99f",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cdd03",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5cdd1f",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5ce012",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce02f",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce1d2",
+              "function": "0x5ce0d0"
+            },
+            {
+              "fixup": "0x5ce1f1",
+              "function": "0x5ce0d0"
+            },
+            {
+              "fixup": "0x5ce532",
+              "function": "0x5ce530"
+            },
+            {
+              "fixup": "0x5ce53b",
+              "function": "0x5ce530"
+            },
+            {
+              "fixup": "0x5ce546",
+              "function": "0x5ce530"
+            },
+            {
+              "fixup": "0x5ce56a",
+              "function": "0x5ce560"
+            }
+          ],
+          "0x715be8": [
+            {
+              "fixup": "0x5cd3e2",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd456",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd653",
+              "function": "0x5cd5f0"
+            },
+            {
+              "fixup": "0x5cd992",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cda7e",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cdd12",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5cdda0",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5ce022",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce090",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce1e2",
+              "function": "0x5ce0d0"
+            },
+            {
+              "fixup": "0x5ce234",
+              "function": "0x5ce0d0"
+            },
+            {
+              "fixup": "0x5ce562",
+              "function": "0x5ce560"
+            }
+          ],
+          "0x711be8": [
+            {
+              "fixup": "0x5cd446",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd450",
+              "function": "0x5cd200"
+            },
+            {
+              "fixup": "0x5cd7e9",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cda6e",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cda78",
+              "function": "0x5cd6a0"
+            },
+            {
+              "fixup": "0x5cdbc4",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5cdd90",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5cdd9a",
+              "function": "0x5cda90"
+            },
+            {
+              "fixup": "0x5cdec5",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce080",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce08a",
+              "function": "0x5cddb0"
+            },
+            {
+              "fixup": "0x5ce0b4",
+              "function": "0x5ce0b0"
+            },
+            {
+              "fixup": "0x5ce224",
+              "function": "0x5ce0d0"
+            },
+            {
+              "fixup": "0x5ce22e",
+              "function": "0x5ce0d0"
+            }
+          ],
+          "0x6e9868": [
+            {
+              "fixup": "0x5cd62a",
+              "function": "0x5cd5f0"
+            },
+            {
+              "fixup": "0x5cd633",
+              "function": "0x5cd5f0"
+            },
+            {
+              "fixup": "0x5cd644",
+              "function": "0x5cd5f0"
+            },
+            {
+              "fixup": "0x5cd659",
+              "function": "0x5cd5f0"
+            },
+            {
+              "fixup": "0x5ce0c2",
+              "function": "0x5ce0b0"
+            }
+          ]
+        },
+        "signature_callers": {
+          "0x4c1fac": {
+            "target": "0x5ce3c0",
+            "preceding": [
+              "4c1f9b push 4",
+              "4c1f9d push esi",
+              "4c1f9e call 0x4c28f0",
+              "4c1fa3 add esp, 0x14",
+              "4c1fa6 mov ebx, eax",
+              "4c1fa8 push ebx",
+              "4c1fa9 push 4",
+              "4c1fab push esi"
+            ],
+            "following": [
+              "4c1fb1 add esp, 0xc",
+              "4c1fb4 mov ebp, eax",
+              "4c1fb6 push dword ptr [esp + 0x30]",
+              "4c1fba call 0x5cd660",
+              "4c1fbf pop ecx",
+              "4c1fc0 mov dword ptr [esp + 0xc], eax",
+              "4c1fc4 lea eax, [ebx + 0x28]"
+            ]
+          },
+          "0x4c216e": {
+            "target": "0x5ce3c0",
+            "preceding": [
+              "4c2156 add esp, 0x14",
+              "4c2159 mov dword ptr [esp + 0x20], eax",
+              "4c215d push eax",
+              "4c215e mov eax, dword ptr [esp + 0x3c]",
+              "4c2162 mov ecx, dword ptr [eax + 0x44]",
+              "4c2165 lea ecx, [ecx*4]",
+              "4c216c push ecx",
+              "4c216d push eax"
+            ],
+            "following": [
+              "4c2173 add esp, 0xc",
+              "4c2176 mov dword ptr [esp + 0x18], eax",
+              "4c217a push ebx",
+              "4c217b call 0x5cd660",
+              "4c2180 pop ecx",
+              "4c2181 mov dword ptr [esp + 0xc], eax",
+              "4c2185 mov eax, dword ptr [esp + 0x18]"
+            ]
+          },
+          "0x4c236e": {
+            "target": "0x5ce3c0",
+            "preceding": [
+              "4c235b push ebx",
+              "4c235c call 0x4c28f0",
+              "4c2361 add esp, 0x14",
+              "4c2364 mov esi, eax",
+              "4c2366 push esi",
+              "4c2367 mov ecx, dword ptr [ebx + 0x10]",
+              "4c236a push dword ptr [ecx + 2]",
+              "4c236d push ebx"
+            ],
+            "following": [
+              "4c2373 mov edi, eax",
+              "4c2375 mov edx, dword ptr [edi + 0x28]",
+              "4c2378 add esp, 0xc",
+              "4c237b cmp edx, dword ptr [esi + 0x58]",
+              "4c237e ja 0x4c23d0",
+              "4c2380 lea eax, [esi + 0x28]",
+              "4c2383 push dword ptr [edi + 0x28]"
+            ]
+          },
+          "0x4c248f": {
+            "target": "0x5ce3c0",
+            "preceding": [
+              "4c247a push 0x6994fc",
+              "4c247f push ebp",
+              "4c2480 push esi",
+              "4c2481 call 0x4c2840",
+              "4c2486 add esp, 0x10",
+              "4c2489 push ebp",
+              "4c248a push dword ptr [esp + 0x3c]",
+              "4c248e push esi"
+            ],
+            "following": [
+              "4c2494 add esp, 0xc",
+              "4c2497 mov dword ptr [esp + 0x14], eax",
+              "4c249b mov eax, dword ptr [eax + 0x28]",
+              "4c249e cmp eax, dword ptr [ebp + 0x58]",
+              "4c24a1 ja 0x4c2668",
+              "4c24a7 mov eax, dword ptr [esp + 0x14]",
+              "4c24ab push dword ptr [eax + 0x28]"
+            ]
+          },
+          "0x4c26c7": {
+            "target": "0x5ce3c0",
+            "preceding": [
+              "4c26b2 push 0x6994fc",
+              "4c26b7 push edi",
+              "4c26b8 push esi",
+              "4c26b9 call 0x4c2840",
+              "4c26be add esp, 0x10",
+              "4c26c1 push edi",
+              "4c26c2 push dword ptr [esp + 0x1c]",
+              "4c26c6 push esi"
+            ],
+            "following": [
+              "4c26cc mov ebp, eax",
+              "4c26ce mov edx, dword ptr [ebp + 0x28]",
+              "4c26d1 add esp, 0xc",
+              "4c26d4 cmp edx, dword ptr [edi + 0x58]",
+              "4c26d7 ja 0x4c27d1",
+              "4c26dd movzx ecx, byte ptr [edi + 4]",
+              "4c26e1 cmp cl, 0x18"
+            ]
+          },
+          "0x5ce76e": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5ce759 jne 0x5ce746",
+              "5ce75b mov byte ptr [eax + esi], 0",
+              "5ce75f push 0",
+              "5ce761 push dword ptr [esp + 0x54]",
+              "5ce765 push 1",
+              "5ce767 push 0",
+              "5ce769 push dword ptr [esp + 0x50]",
+              "5ce76d push eax"
+            ],
+            "following": [
+              "5ce773 add esp, 0x18",
+              "5ce776 push 0",
+              "5ce778 push dword ptr [0x716cd0]",
+              "5ce77e push 6",
+              "5ce780 push dword ptr [0x7108d0]",
+              "5ce786 push 0x18",
+              "5ce788 call 0x554a70"
+            ]
+          },
+          "0x5ce95e": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5ce949 jne 0x5ce936",
+              "5ce94b mov byte ptr [eax + esi], 0",
+              "5ce94f push dword ptr [esp + 0x50]",
+              "5ce953 push 1",
+              "5ce955 push 1",
+              "5ce957 push 0",
+              "5ce959 push dword ptr [esp + 0x54]",
+              "5ce95d push eax"
+            ],
+            "following": [
+              "5ce963 add esp, 0x18",
+              "5ce966 mov ebx, dword ptr [0x6eac1a]",
+              "5ce96c test ebx, ebx",
+              "5ce96e mov dword ptr [esp + 0x44], eax",
+              "5ce972 je 0x5ce9e9",
+              "5ce974 mov dword ptr [0x6eac12], ebx",
+              "5ce97a cmp word ptr [ebx + 0xc], 2"
+            ]
+          },
+          "0x5cea35": {
+            "target": "0x5cd510",
+            "preceding": [
+              "5cea17 push dword ptr [0x7108d0]",
+              "5cea1d push 0x18",
+              "5cea1f call 0x554a70",
+              "5cea24 add esp, 0x14",
+              "5cea27 mov ecx, dword ptr [0x711be4]",
+              "5cea2d push 0",
+              "5cea2f mov edx, dword ptr [ecx + 0x26]",
+              "5cea32 push dword ptr [edx + 4]"
+            ],
+            "following": [
+              "5cea3a pop ecx",
+              "5cea3b push eax",
+              "5cea3c mov eax, dword ptr [esp + 0x5c]",
+              "5cea40 push dword ptr [eax + 0x1e]",
+              "5cea43 push dword ptr [0x7108d0]",
+              "5cea49 push 0x18",
+              "5cea4b call 0x554a70"
+            ]
+          },
+          "0x5cebe8": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5cebd3 jne 0x5cebc0",
+              "5cebd5 mov byte ptr [eax + esi], 0",
+              "5cebd9 push 0",
+              "5cebdb push dword ptr [esp + 0x54]",
+              "5cebdf push 1",
+              "5cebe1 push 0",
+              "5cebe3 push dword ptr [esp + 0x50]",
+              "5cebe7 push eax"
+            ],
+            "following": [
+              "5cebed add esp, 0x18",
+              "5cebf0 push 0",
+              "5cebf2 push dword ptr [0x7108d0]",
+              "5cebf8 push 6",
+              "5cebfa push dword ptr [0x710750]",
+              "5cec00 push 0x18",
+              "5cec02 call 0x554a70"
+            ]
+          },
+          "0x5ced3f": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5ced26 mov byte ptr [eax + esi], 0",
+              "5ced2a push dword ptr [esp + 0x50]",
+              "5ced2e push dword ptr [esp + 0x50]",
+              "5ced32 push 1",
+              "5ced34 movzx edx, byte ptr [esp + 0x54]",
+              "5ced39 push edx",
+              "5ced3a push dword ptr [esp + 0x50]",
+              "5ced3e push eax"
+            ],
+            "following": [
+              "5ced44 add esp, 0x18",
+              "5ced47 mov eax, dword ptr [esp + 0x58]",
+              "5ced4b cmp word ptr [eax + 0x14], 0x2e",
+              "5ced50 jne 0x5cee56",
+              "5ced56 mov ecx, eax",
+              "5ced58 movzx eax, byte ptr [ecx + 0x6e]",
+              "5ced5c mov dword ptr [esp + 0x48], eax"
+            ]
+          },
+          "0x5cee4e": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5cee35 mov byte ptr [eax + esi], 0",
+              "5cee39 push dword ptr [esp + 0x50]",
+              "5cee3d push dword ptr [esp + 0x50]",
+              "5cee41 push 1",
+              "5cee43 movzx ecx, byte ptr [esp + 0x54]",
+              "5cee48 push ecx",
+              "5cee49 push dword ptr [esp + 0x50]",
+              "5cee4d push eax"
+            ],
+            "following": [
+              "5cee53 add esp, 0x18",
+              "5cee56 mov eax, dword ptr [esp + 0x58]",
+              "5cee5a mov ecx, dword ptr [eax]",
+              "5cee5c test ecx, ecx",
+              "5cee5e mov dword ptr [esp + 0x58], ecx",
+              "5cee62 jne 0x5cec38",
+              "5cee68 mov eax, dword ptr [esp + 0x54]"
+            ]
+          },
+          "0x5cef68": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5cef53 jne 0x5cef40",
+              "5cef55 mov byte ptr [eax + esi], 0",
+              "5cef59 push dword ptr [esp + 0x50]",
+              "5cef5d push 4",
+              "5cef5f push 1",
+              "5cef61 push 0",
+              "5cef63 push dword ptr [esp + 0x64]",
+              "5cef67 push eax"
+            ],
+            "following": [
+              "5cef6d mov ebp, dword ptr [0x6eabfe]",
+              "5cef73 mov ebx, dword ptr [ebp + 0x2c]",
+              "5cef76 add esp, 0x18",
+              "5cef79 add ebx, -4",
+              "5cef7c push ebx",
+              "5cef7d push 0",
+              "5cef7f push ebp"
+            ]
+          },
+          "0x5cf205": {
+            "target": "0x5cd470",
+            "preceding": [
+              "5cf1e5 mov ebx, dword ptr [0x6eabf2]",
+              "5cf1eb mov dword ptr [ebx + 0x58], 0",
+              "5cf1f2 push 0",
+              "5cf1f4 push 0",
+              "5cf1f6 push 3",
+              "5cf1f8 push 0",
+              "5cf1fa push dword ptr [0x6eabfe]",
+              "5cf200 push 0x6b4a65"
+            ],
+            "following": [
+              "5cf20a add esp, 0x18",
+              "5cf20d mov dword ptr [0x7108d0], eax",
+              "5cf212 push 0",
+              "5cf214 push 0",
+              "5cf216 push 3",
+              "5cf218 push 0",
+              "5cf21a push dword ptr [0x6eabde]"
+            ]
+          },
+          "0x5cf225": {
+            "target": "0x5cd470",
+            "preceding": [
+              "5cf20a add esp, 0x18",
+              "5cf20d mov dword ptr [0x7108d0], eax",
+              "5cf212 push 0",
+              "5cf214 push 0",
+              "5cf216 push 3",
+              "5cf218 push 0",
+              "5cf21a push dword ptr [0x6eabde]",
+              "5cf220 push 0x6b4abe"
+            ],
+            "following": [
+              "5cf22a add esp, 0x18",
+              "5cf22d mov dword ptr [0x710110], eax",
+              "5cf232 push 0",
+              "5cf234 push 0",
+              "5cf236 push 3",
+              "5cf238 push 0",
+              "5cf23a push dword ptr [0x6eabf2]"
+            ]
+          },
+          "0x5cf245": {
+            "target": "0x5cd470",
+            "preceding": [
+              "5cf22a add esp, 0x18",
+              "5cf22d mov dword ptr [0x710110], eax",
+              "5cf232 push 0",
+              "5cf234 push 0",
+              "5cf236 push 3",
+              "5cf238 push 0",
+              "5cf23a push dword ptr [0x6eabf2]",
+              "5cf240 push 0x6b4a92"
+            ],
+            "following": [
+              "5cf24a add esp, 0x18",
+              "5cf24d mov dword ptr [0x710324], eax",
+              "5cf252 push 0",
+              "5cf254 push 0",
+              "5cf256 push 3",
+              "5cf258 push 0",
+              "5cf25a push dword ptr [0x6eabd2]"
+            ]
+          },
+          "0x5cf265": {
+            "target": "0x5cd470",
+            "preceding": [
+              "5cf24a add esp, 0x18",
+              "5cf24d mov dword ptr [0x710324], eax",
+              "5cf252 push 0",
+              "5cf254 push 0",
+              "5cf256 push 3",
+              "5cf258 push 0",
+              "5cf25a push dword ptr [0x6eabd2]",
+              "5cf260 push 0x6b4ae8"
+            ],
+            "following": [
+              "5cf26a add esp, 0x18",
+              "5cf26d mov dword ptr [0x716cd0], eax",
+              "5cf272 push 0",
+              "5cf274 push 0",
+              "5cf276 push 3",
+              "5cf278 push 0",
+              "5cf27a push dword ptr [0x6eabd6]"
+            ]
+          },
+          "0x5cf285": {
+            "target": "0x5cd470",
+            "preceding": [
+              "5cf26a add esp, 0x18",
+              "5cf26d mov dword ptr [0x716cd0], eax",
+              "5cf272 push 0",
+              "5cf274 push 0",
+              "5cf276 push 3",
+              "5cf278 push 0",
+              "5cf27a push dword ptr [0x6eabd6]",
+              "5cf280 push 0x6b4ad8"
+            ],
+            "following": [
+              "5cf28a mov dword ptr [0x710750], eax",
+              "5cf28f mov dword ptr [0x6eac02], 0",
+              "5cf299 mov eax, dword ptr [0x6eac02]",
+              "5cf29e add esp, 0x18",
+              "5cf2a1 mov dword ptr [0x6eac06], eax",
+              "5cf2a6 mov dword ptr [0x6eabc6], 0x80",
+              "5cf2b0 mov dword ptr [0x6ea930], 0xffffffff"
+            ]
+          },
+          "0x5d0804": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d07eb mov byte ptr [eax + esi], 0",
+              "5d07ef push dword ptr [esp + 4]",
+              "5d07f3 push dword ptr [esp + 0xc]",
+              "5d07f7 push 1",
+              "5d07f9 movzx edx, byte ptr [esp + 0xc]",
+              "5d07fe push edx",
+              "5d07ff push dword ptr [esp + 0x1c]",
+              "5d0803 push eax"
+            ],
+            "following": [
+              "5d0809 add esp, 0x28",
+              "5d080c pop ebp",
+              "5d080d pop edi",
+              "5d080e pop esi",
+              "5d080f pop ebx",
+              "5d0810 ret ",
+              "5d0811 nop "
+            ]
+          },
+          "0x5d1098": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1083 jne 0x5d1070",
+              "5d1085 mov byte ptr [eax + esi], 0",
+              "5d1089 push 0",
+              "5d108b push dword ptr [esp + 0x14]",
+              "5d108f push 1",
+              "5d1091 push 0",
+              "5d1093 push dword ptr [esp + 0x24]",
+              "5d1097 push eax"
+            ],
+            "following": [
+              "5d109d add esp, 0x18",
+              "5d10a0 add esp, 0x18",
+              "5d10a3 mov dword ptr [0x6ea880], 0",
+              "5d10ad mov dword ptr [0x6ea884], 1",
+              "5d10b7 mov dword ptr [0x6ea888], 1",
+              "5d10c1 mov dword ptr [0x6ea88c], 0",
+              "5d10cb mov eax, dword ptr [0x6ea87c]"
+            ]
+          },
+          "0x5d1e09": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1de9 jne 0x5d1dd6",
+              "5d1deb mov byte ptr [eax + esi], 0",
+              "5d1def push dword ptr [esp + 0xa4]",
+              "5d1df6 push dword ptr [esp + 0x98]",
+              "5d1dfd push 1",
+              "5d1dff push 0",
+              "5d1e01 push dword ptr [esp + 0xa8]",
+              "5d1e08 push eax"
+            ],
+            "following": [
+              "5d1e0e add esp, 0x18",
+              "5d1e11 jmp 0x5d1dc2",
+              "5d1e13 xor ebx, ebx",
+              "5d1e15 test edi, edi",
+              "5d1e17 je 0x5d1e35",
+              "5d1e19 lea eax, [eax]",
+              "5d1e20 movzx ecx, byte ptr [ebp + ebx + 0xa]"
+            ]
+          },
+          "0x5d1e53": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1e33 jne 0x5d1e20",
+              "5d1e35 mov byte ptr [eax + esi], 0",
+              "5d1e39 push dword ptr [esp + 0x90]",
+              "5d1e40 push dword ptr [esp + 0xa0]",
+              "5d1e47 push 1",
+              "5d1e49 push 0",
+              "5d1e4b push dword ptr [esp + 0xa4]",
+              "5d1e52 push eax"
+            ],
+            "following": [
+              "5d1e58 add esp, 0x18",
+              "5d1e5b mov ecx, dword ptr [esp + 0xbc]",
+              "5d1e62 mov dword ptr [ecx + 0x26], eax",
+              "5d1e65 jmp 0x5d1dc2",
+              "5d1e6a lea eax, [eax]",
+              "5d1e70 lea ebx, [esp + 0x30]",
+              "5d1e74 push ebx"
+            ]
+          },
+          "0x5d1ee0": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1ebb mov byte ptr [eax + esi], 0",
+              "5d1ebf push dword ptr [esp + 0x98]",
+              "5d1ec6 push dword ptr [esp + 0xa4]",
+              "5d1ecd push 1",
+              "5d1ecf movzx ecx, byte ptr [esp + 0x9c]",
+              "5d1ed7 push ecx",
+              "5d1ed8 push dword ptr [esp + 0xa4]",
+              "5d1edf push eax"
+            ],
+            "following": [
+              "5d1ee5 add esp, 0x18",
+              "5d1ee8 mov ecx, dword ptr [esp + 0xbc]",
+              "5d1eef mov dword ptr [ecx + 0x26], eax",
+              "5d1ef2 jmp 0x5d1dc2",
+              "5d1ef7 lea ebx, [esp + 0x70]",
+              "5d1efb push ebx",
+              "5d1efc call 0x455ea0"
+            ]
+          },
+          "0x5d1f60": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1f3b mov byte ptr [eax + esi], 0",
+              "5d1f3f push dword ptr [esp + 0xa4]",
+              "5d1f46 push dword ptr [esp + 0xa0]",
+              "5d1f4d push 1",
+              "5d1f4f movzx edx, byte ptr [esp + 0x9c]",
+              "5d1f57 push edx",
+              "5d1f58 push dword ptr [esp + 0xb0]",
+              "5d1f5f push eax"
+            ],
+            "following": [
+              "5d1f65 add esp, 0x18",
+              "5d1f68 mov ecx, dword ptr [esp + 0xbc]",
+              "5d1f6f mov dword ptr [ecx + 0x26], eax",
+              "5d1f72 jmp 0x5d1dc2",
+              "5d1f77 xor ecx, ecx",
+              "5d1f79 test edi, edi",
+              "5d1f7b je 0x5d1f95"
+            ]
+          },
+          "0x5d1fb3": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1f93 jne 0x5d1f80",
+              "5d1f95 mov byte ptr [eax + esi], 0",
+              "5d1f99 push dword ptr [esp + 0x98]",
+              "5d1fa0 push dword ptr [esp + 0x98]",
+              "5d1fa7 push 1",
+              "5d1fa9 push 0",
+              "5d1fab push dword ptr [esp + 0xb4]",
+              "5d1fb2 push eax"
+            ],
+            "following": [
+              "5d1fb8 add esp, 0x18",
+              "5d1fbb mov ecx, dword ptr [esp + 0xbc]",
+              "5d1fc2 mov dword ptr [ecx + 0x1e], eax",
+              "5d1fc5 jmp 0x5d1dc2",
+              "5d1fca lea eax, [eax]",
+              "5d1fd0 xor ecx, ecx",
+              "5d1fd2 test edi, edi"
+            ]
+          },
+          "0x5d2009": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d1fe9 jne 0x5d1fd6",
+              "5d1feb mov byte ptr [eax + esi], 0",
+              "5d1fef push dword ptr [esp + 0x94]",
+              "5d1ff6 push dword ptr [esp + 0x9c]",
+              "5d1ffd push 1",
+              "5d1fff push 0",
+              "5d2001 push dword ptr [esp + 0xa0]",
+              "5d2008 push eax"
+            ],
+            "following": [
+              "5d200e add esp, 0x18",
+              "5d2011 mov ecx, dword ptr [esp + 0xbc]",
+              "5d2018 mov dword ptr [ecx + 0x2a], eax",
+              "5d201b jmp 0x5d1dc2",
+              "5d2020 mov eax, dword ptr [esp + 0xbc]",
+              "5d2027 mov ecx, dword ptr [eax + 0xc]",
+              "5d202a mov dword ptr [esp + 0x9c], ecx"
+            ]
+          },
+          "0x5d207a": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d2055 mov byte ptr [eax + esi], 0",
+              "5d2059 push dword ptr [esp + 0xa4]",
+              "5d2060 push dword ptr [esp + 0xa0]",
+              "5d2067 push 1",
+              "5d2069 movzx ebx, byte ptr [esp + 0xa0]",
+              "5d2071 push ebx",
+              "5d2072 push dword ptr [esp + 0xb0]",
+              "5d2079 push eax"
+            ],
+            "following": [
+              "5d207f add esp, 0x18",
+              "5d2082 mov ecx, dword ptr [esp + 0xbc]",
+              "5d2089 mov dword ptr [ecx + 0x2a], eax",
+              "5d208c mov eax, dword ptr [esp + 0xbc]",
+              "5d2093 cmp byte ptr [eax + 0x78], 0",
+              "5d2097 jne 0x5d1dc2",
+              "5d209d mov ecx, dword ptr [eax + 0x5e]"
+            ]
+          },
+          "0x5d217a": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d2155 mov byte ptr [eax + esi], 0",
+              "5d2159 push dword ptr [esp + 0x90]",
+              "5d2160 push dword ptr [esp + 0xa0]",
+              "5d2167 push 1",
+              "5d2169 movzx ebx, byte ptr [esp + 0xa4]",
+              "5d2171 push ebx",
+              "5d2172 push dword ptr [esp + 0xb0]",
+              "5d2179 push eax"
+            ],
+            "following": [
+              "5d217f add esp, 0x18",
+              "5d2182 mov ecx, dword ptr [esp + 0xbc]",
+              "5d2189 mov dword ptr [ecx + 0x2e], eax",
+              "5d218c jmp 0x5d1dc2",
+              "5d2191 lea edx, [esp + 0x80]",
+              "5d2198 push edx",
+              "5d2199 call 0x455ea0"
+            ]
+          },
+          "0x5d2200": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d21db mov byte ptr [eax + esi], 0",
+              "5d21df push dword ptr [esp + 0xa4]",
+              "5d21e6 push dword ptr [esp + 0xa0]",
+              "5d21ed push 1",
+              "5d21ef movzx ebx, byte ptr [esp + 0x9c]",
+              "5d21f7 push ebx",
+              "5d21f8 push dword ptr [esp + 0xb0]",
+              "5d21ff push eax"
+            ],
+            "following": [
+              "5d2205 add esp, 0x18",
+              "5d2208 mov ecx, dword ptr [esp + 0xbc]",
+              "5d220f mov dword ptr [ecx + 0x30], eax",
+              "5d2212 jmp 0x5d1dc2",
+              "5d2217 lea edx, [esp + 0x60]",
+              "5d221b push edx",
+              "5d221c call 0x455ea0"
+            ]
+          },
+          "0x5d2280": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d225b mov byte ptr [eax + esi], 0",
+              "5d225f push dword ptr [esp + 0x98]",
+              "5d2266 push dword ptr [esp + 0xa4]",
+              "5d226d push 1",
+              "5d226f movzx edx, byte ptr [esp + 0xb0]",
+              "5d2277 push edx",
+              "5d2278 push dword ptr [esp + 0xa4]",
+              "5d227f push eax"
+            ],
+            "following": [
+              "5d2285 add esp, 0x18",
+              "5d2288 mov ecx, dword ptr [esp + 0xbc]",
+              "5d228f mov dword ptr [ecx + 0x22], eax",
+              "5d2292 jmp 0x5d1dc2",
+              "5d2297 mov eax, dword ptr [esp + 0xbc]",
+              "5d229e mov ecx, dword ptr [eax + 0xc]",
+              "5d22a1 mov dword ptr [esp + 0x9c], ecx"
+            ]
+          },
+          "0x5d22e9": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d22c9 jne 0x5d22b6",
+              "5d22cb mov byte ptr [eax + esi], 0",
+              "5d22cf push dword ptr [esp + 0x98]",
+              "5d22d6 push dword ptr [esp + 0xa0]",
+              "5d22dd push 1",
+              "5d22df push 0",
+              "5d22e1 push dword ptr [esp + 0xb4]",
+              "5d22e8 push eax"
+            ],
+            "following": [
+              "5d22ee add esp, 0x18",
+              "5d22f1 mov ecx, dword ptr [esp + 0xbc]",
+              "5d22f8 mov dword ptr [ecx + 0x1e], eax",
+              "5d22fb jmp 0x5d1dc2",
+              "5d2300 xor ebx, ebx",
+              "5d2302 test edi, edi",
+              "5d2304 je 0x5d231b"
+            ]
+          },
+          "0x5d2340": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d231b mov byte ptr [eax + esi], 0",
+              "5d231f push dword ptr [esp + 0x90]",
+              "5d2326 push dword ptr [esp + 0xa8]",
+              "5d232d push 1",
+              "5d232f movzx ecx, byte ptr [esp + 0xa4]",
+              "5d2337 push ecx",
+              "5d2338 push dword ptr [esp + 0xb0]",
+              "5d233f push eax"
+            ],
+            "following": [
+              "5d2345 add esp, 0x18",
+              "5d2348 mov ecx, dword ptr [esp + 0xbc]",
+              "5d234f mov dword ptr [ecx + 0x54], eax",
+              "5d2352 jmp 0x5d1d52",
+              "5d2357 mov eax, dword ptr [esp + 0xbc]",
+              "5d235e mov ecx, dword ptr [eax + 0x2c]",
+              "5d2361 mov dword ptr [esp + 0x90], ecx"
+            ]
+          },
+          "0x5d241e": {
+            "target": "0x5cd6a0",
+            "preceding": [
+              "5d23f9 mov byte ptr [eax + esi], 0",
+              "5d23fd push dword ptr [esp + 0x90]",
+              "5d2404 push dword ptr [esp + 0xa8]",
+              "5d240b push 1",
+              "5d240d movzx ecx, byte ptr [esp + 0xa0]",
+              "5d2415 push ecx",
+              "5d2416 push dword ptr [esp + 0xb0]",
+              "5d241d push eax"
+            ],
+            "following": [
+              "5d2423 add esp, 0x18",
+              "5d2426 mov ecx, dword ptr [esp + 0xbc]",
+              "5d242d mov dword ptr [ecx + 0x44], eax",
+              "5d2430 jmp 0x5d1dc2",
+              "5d2435 nop ",
+              "5d2436 nop ",
+              "5d2437 nop "
+            ]
+          }
+        },
+        "seams": [
+          "Prior5cce80/90/b0/e0 four adapters have no shared symbol-state references or assertion filename and remain a separate ownership lead.",
+          "Next5ce570 maintains current class list710b3c+112 and calls5d86b0; unrelated to symbol allocation/state.",
+          "Previous5ccd50 walks optimizer expression trees, not native ELF symbols."
+        ],
+        "mac_limit": "Mac ordinary dump has no BE_symbol/ELF symbol-family names; no Mac-platform absence or complete original membership claim."
+      },
+      "bounded_validation": {
+        "cases_per_body": 1048,
+        "bodies": [
+          "original Windows fn_005ce0d0 prefix",
+          "current compiled fn_005ce0d0 prefix"
+        ],
+        "all_passed": true,
+        "scope": "Actual instruction prefixes through first galloc call; hash value/index only. Does not execute symbol allocation or the full compiler.",
+        "source_sha256": "b07405047e4602ccb2f175425ef85d26c7fcd89bf29f5904120704a43091ca8b",
+        "validated_current_project_object": true,
+        "basis": "All23 resolved current project bodies and relocation offset/type/address triples equal the isolated bodies, including the actually executed hash prefix."
+      },
+      "adjacent_adapter_candidates": {
+        "ownership": "Unproved physical filename; not assigned to BE_symbol.c based on adjacency alone.",
+        "functions": [
+          {
+            "name": "fn_005cce80",
+            "address": "0x5cce80",
+            "size": 3,
+            "compiled_size": 3,
+            "strict_exact": true
+          },
+          {
+            "name": "fn_005cce90",
+            "address": "0x5cce90",
+            "size": 31,
+            "compiled_size": 31,
+            "strict_exact": true
+          },
+          {
+            "name": "fn_005cceb0",
+            "address": "0x5cceb0",
+            "size": 47,
+            "compiled_size": 47,
+            "strict_exact": true
+          },
+          {
+            "name": "fn_005ccee0",
+            "address": "0x5ccee0",
+            "size": 11,
+            "compiled_size": 11,
+            "strict_exact": true
+          }
+        ],
+        "source_text": "/* Adjacent Windows adapters; original physical filename remains unproved. */\nextern short data_00716ebe, data_007172bc;\nextern long fn_00587410(void *);\nunsigned char fn_005cce80(void){return 1;}\nvoid fn_005cce90(void *unused,long *a,long *b,long *c){*a=-1;*b=0;*c=24;}\nvoid fn_005cceb0(long *a,long *b){if(data_00716ebe>0)*a=data_00716ebe;else *a=data_007172bc;*b=0;}\nlong fn_005ccee0(void *object){return fn_00587410(object);}\n"
+      },
+      "native_layout": {
+        "symbol_size": 52,
+        "symbol_next_offset": 24,
+        "hash_next_offset": 28,
+        "kind_offset": 48,
+        "pool_size": 26,
+        "section_symbol_offset": 108,
+        "object_size_allocated": 96,
+        "hash_state_size": 16396
+      },
+      "ownership_limits": [
+        "No original Windows object membership metadata;23-body source extent is supported by filename, shared state, full call/prologue scan and semantic seams.",
+        "Four preceding adapters are all attempted/exact but their original physical filename remains unresolved; not assigned by adjacency.",
+        "Mac supplied map has no ordinary ELF/BE_symbol family names; this is a search limitation, not a platform-absence claim.",
+        "Old BE_symbol.c helpers remain provisional and unmapped; no automatic typed aliases from old payloads.",
+        "Invalid elf_declare_symbol flag continuation has unspecified native register value after assertion; supported flag0 domain and current observed callers are recorded."
+      ],
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 23,
+        "attempted_members": 23,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All23 main functions reviewed and attempted under seven profiles; all four neighboring adapter candidates also attempted/exact with separate ownership; owned literals/BSS all exact."
+      },
+      "encoding_validation": "Strict CP932 encoding passed; repository tools/check_sjis.py is absent."
     }
   },
   "ownership_review": {

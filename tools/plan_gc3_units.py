@@ -33,15 +33,24 @@ def generate(args):
     _, pe = original('GC_3_0a5_2')
     units = {}
     filenames = defaultdict(list)
+    original_sources = config.get('original_source_units', {})
+    for filename, source in original_sources.items():
+        if source not in config['sources'] or Path(source).name != filename:
+            raise ValueError(f'Invalid original source-unit selection: {filename}: {source}')
     for source in config['sources']:
         filenames[Path(source).name].append(source)
         units[source] = dict(source=source, original_filename=Path(source).name,
                              evidence=['Imported 1.2.5 source; GC3 membership remains provisional'],
                              windows_functions=[], mac_functions=[], ownership_conflicts=[])
+        if Path(source).name in original_sources and original_sources[Path(source).name] != source:
+            units[source]['original_filename'] = None
+            units[source]['evidence'] = ['Provisional imported helper grouping; original source filename unresolved']
 
     def get_unit(filename):
         candidates = filenames[filename]
-        if len(candidates) == 1:
+        if filename in original_sources:
+            source = original_sources[filename]
+        elif len(candidates) == 1:
             source = candidates[0]
         else:
             category = ('driver' if filename.startswith(('CL', 'Arg', 'Parser')) else

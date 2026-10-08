@@ -186,6 +186,9 @@ def source_unit_name(version, source):
         relative = path[len('src/'):]
         if relative.startswith(version + '/'):
             relative = relative[len(version) + 1:]
+        selected = version_config(version).get('original_source_units', {}).get(Path(source).name)
+        if selected and selected != source:
+            relative = 'provisional/' + relative
         return f'src/{version}/{relative}'
     return path
 
@@ -909,7 +912,7 @@ def check(version, source=None):
     return rows, results
 
 
-def compare(version):
+def compare(version, publish_active=True):
     rows, results = check(version)
     _, pe = original(version)
     grouped = defaultdict(list)
@@ -947,7 +950,7 @@ def compare(version):
             unit['name'] += Path(unit['metadata']['source_path']).suffix
     if len({unit['name'] for unit in units}) != len(units):
         raise ValueError('Duplicate logical objdiff unit names')
-    Path("objdiff.json").write_text(json.dumps({
+    project_config = {
         "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
         "min_version": "3.8.0",
         "custom_make": "ninja",
@@ -956,7 +959,16 @@ def compare(version):
         "watch_patterns": ["src/**/*.c", "src/**/*.cpp", "include/**/*.h", "config/**/*.json"],
         "units": units,
         "progress_categories": [{"id": "code", "name": "Code"}, {"id": "data", "name": "Data"}],
-    }, indent=2) + "\n")
+    }
+    # Reports use a private version project so matrix checks never need to
+    # replace the live GUI configuration. Paths are relative to that project.
+    report_config = dict(project_config, build_base=False, build_target=False)
+    report_config['units'] = [dict(unit, **{key: os.path.relpath(unit[key], f'build/{version}').replace('\\', '/')
+                                          for key in ('target_path', 'base_path') if key in unit})
+                              for unit in units]
+    Path(f'build/{version}/objdiff.json').write_text(json.dumps(report_config, indent=2) + '\n')
+    if publish_active:
+        Path('objdiff.json').write_text(json.dumps(project_config, indent=2) + '\n')
     summary = [f"{version}: {exact}/{sum('source' in r for r in rows)} functions exact, {linked} linked"]
     if nonmatching:
         summary.append("  NonMatching: " + (str(len(nonmatching)) + " functions (see objdiff)" if len(nonmatching)>20
@@ -1013,7 +1025,7 @@ def unit(version, source):
 
 def report(version):
     objdiff = "build/tools/objdiff-cli" + (".exe" if os.name == "nt" else "")
-    subprocess.run([objdiff, "report", "generate", "-o", f"build/{version}/report.json"], check=True)
+    subprocess.run([objdiff, "report", "generate", '-p', f'build/{version}', "-o", f"build/{version}/report.json"], check=True)
     report = json.loads(Path(f"build/{version}/report.json").read_text())
     # (an unknown code range carries a symbol only so objdiff keeps its bytes: it is not a function)
     removed = 0
@@ -1059,5 +1071,7 @@ if __name__ == "__main__":
     command, version = sys.argv[1:3]
     if command == "unit":
         unit(version, sys.argv[3])
+    elif command == 'compare':
+        compare(version, publish_active='--no-active-objdiff' not in sys.argv[3:])
     else:
         {"extract": extract, "compare": compare, "report": report}[command](version)

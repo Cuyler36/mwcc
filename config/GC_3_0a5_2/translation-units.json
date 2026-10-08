@@ -405,6 +405,270 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+      "original_filename": "MacSpecs.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "AddDirMapEntry",
+          "address": "0x4241f0",
+          "size": 135,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindOrAddVolRef",
+          "address": "0x424280",
+          "size": 199,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindDirMapEntry",
+          "address": "0x00424350",
+          "size": 72,
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00424389"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+        },
+        {
+          "name": "FindOrAddDirRef",
+          "address": "0x4243a0",
+          "size": 208,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindOrAdd",
+          "address": "0x00424470",
+          "size": 341,
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00424575"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+        },
+        {
+          "name": "StepVolDir",
+          "address": "0x4245d0",
+          "size": 119,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ResolvePath",
+          "address": "0x424650",
+          "size": 65,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ResolveVolDir",
+          "address": "0x4246a0",
+          "size": 282,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_OSPathSpec_To_VolDir",
+          "address": "0x4247c0",
+          "size": 88,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_OSSpec_To_FSSpec",
+          "address": "0x424820",
+          "size": 113,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_VolDir_To_OSPathSpec",
+          "address": "0x4248a0",
+          "size": 173,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_FSSpec_To_OSSpec",
+          "address": "0x424950",
+          "size": 68,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_GetRsrcOSSpec",
+          "address": "0x4249a0",
+          "size": 282,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "AddDirMapEntry",
+          "mac_address": "0x00016ae8",
+          "linkage_names": [
+            "AddDirMapEntry"
+          ]
+        },
+        {
+          "name": "FindOrAddVolRef",
+          "mac_address": "0x00016ba8",
+          "linkage_names": [
+            "FindOrAddVolRef"
+          ]
+        },
+        {
+          "name": "FindDirMapEntry",
+          "mac_address": "0x00016cc0",
+          "linkage_names": [
+            "FindDirMapEntry"
+          ]
+        },
+        {
+          "name": "FindOrAddDirRef",
+          "mac_address": "0x00016d58",
+          "linkage_names": [
+            "FindOrAddDirRef"
+          ]
+        },
+        {
+          "name": "FindOrAdd",
+          "mac_address": "0x00016e6c",
+          "linkage_names": [
+            "FindOrAdd"
+          ]
+        },
+        {
+          "name": "StepVolDir",
+          "mac_address": "0x00016fd0",
+          "linkage_names": [
+            "StepVolDir"
+          ]
+        },
+        {
+          "name": "ResolvePath",
+          "mac_address": "0x000170a0",
+          "linkage_names": [
+            "ResolvePath"
+          ]
+        },
+        {
+          "name": "ResolveVolDir",
+          "mac_address": "0x00017104",
+          "linkage_names": [
+            "ResolveVolDir"
+          ]
+        },
+        {
+          "name": "OS_OSPathSpec_To_VolDir",
+          "mac_address": "0x00017240",
+          "linkage_names": [
+            "OS_OSPathSpec_To_VolDir"
+          ]
+        },
+        {
+          "name": "OS_OSSpec_To_FSSpec",
+          "mac_address": "0x000172b0",
+          "linkage_names": [
+            "OS_OSSpec_To_FSSpec"
+          ]
+        },
+        {
+          "name": "OS_VolDir_To_OSNameSpec",
+          "mac_address": "0x00017354",
+          "linkage_names": [
+            "OS_VolDir_To_OSNameSpec"
+          ]
+        },
+        {
+          "name": "OS_VolDir_To_OSPathSpec",
+          "mac_address": "0x000173d4",
+          "linkage_names": [
+            "OS_VolDir_To_OSPathSpec"
+          ]
+        },
+        {
+          "name": "OS_FSSpec_To_OSSpec",
+          "mac_address": "0x000174c0",
+          "linkage_names": [
+            "OS_FSSpec_To_OSSpec"
+          ]
+        },
+        {
+          "name": "OS_GetRsrcOSSpec",
+          "mac_address": "0x00017540",
+          "linkage_names": [
+            "OS_GetRsrcOSSpec"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
       "original_filename": "RegisterInfo.c",
       "evidence": [
@@ -21739,11 +22003,9 @@
     },
     {
       "source": "src/driver/MacSpecs.c",
-      "original_filename": "MacSpecs.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
       "windows_functions": [
         {
@@ -21767,216 +22029,13 @@
             "method": "Reachable x86 control flow bounded by Ghidra entries",
             "unresolved_indirect_flow": false
           }
-        },
-        {
-          "name": "store_mac_spec_entry",
-          "address": "0x004241f0",
-          "size": 135,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00424350",
-          "address": "0x00424350",
-          "size": 72,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00424389"
-          ]
-        },
-        {
-          "name": "find_or_create_child_entry",
-          "address": "0x004243a0",
-          "size": 208,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "find_or_create_spec_entry",
-          "address": "0x00424470",
-          "size": 341,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00424575"
-          ],
-          "compiled_source": "src/driver/MacSpecs.c"
-        },
-        {
-          "name": "find_or_create_spec_entry_negated",
-          "address": "0x00424650",
-          "size": 65,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "MacSpecs_MakeCWFileSpecFromString",
-          "address": "0x00424820",
-          "size": 113,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "fn_00413670",
-          "address": "0x004248a0",
-          "size": 173,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "MacSpecs_MakeOSSpec",
-          "address": "0x00424950",
-          "size": 68,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "MacSpecs_MakeResourceForkSpec",
-          "address": "0x004249a0",
-          "size": 282,
-          "compiled_source": "src/driver/MacSpecs.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
         }
       ],
-      "mac_functions": [
-        {
-          "name": "AddDirMapEntry",
-          "mac_address": "0x00016ae8",
-          "linkage_names": [
-            "AddDirMapEntry"
-          ]
-        },
-        {
-          "name": "FindOrAddVolRef",
-          "mac_address": "0x00016ba8",
-          "linkage_names": [
-            "FindOrAddVolRef"
-          ]
-        },
-        {
-          "name": "FindDirMapEntry",
-          "mac_address": "0x00016cc0",
-          "linkage_names": [
-            "FindDirMapEntry"
-          ]
-        },
-        {
-          "name": "FindOrAddDirRef",
-          "mac_address": "0x00016d58",
-          "linkage_names": [
-            "FindOrAddDirRef"
-          ]
-        },
-        {
-          "name": "FindOrAdd",
-          "mac_address": "0x00016e6c",
-          "linkage_names": [
-            "FindOrAdd"
-          ]
-        },
-        {
-          "name": "StepVolDir",
-          "mac_address": "0x00016fd0",
-          "linkage_names": [
-            "StepVolDir"
-          ]
-        },
-        {
-          "name": "ResolvePath",
-          "mac_address": "0x000170a0",
-          "linkage_names": [
-            "ResolvePath"
-          ]
-        },
-        {
-          "name": "ResolveVolDir",
-          "mac_address": "0x00017104",
-          "linkage_names": [
-            "ResolveVolDir"
-          ]
-        },
-        {
-          "name": "OS_OSPathSpec_To_VolDir",
-          "mac_address": "0x00017240",
-          "linkage_names": [
-            "OS_OSPathSpec_To_VolDir"
-          ]
-        },
-        {
-          "name": "OS_OSSpec_To_FSSpec",
-          "mac_address": "0x000172b0",
-          "linkage_names": [
-            "OS_OSSpec_To_FSSpec"
-          ]
-        },
-        {
-          "name": "OS_VolDir_To_OSNameSpec",
-          "mac_address": "0x00017354",
-          "linkage_names": [
-            "OS_VolDir_To_OSNameSpec"
-          ]
-        },
-        {
-          "name": "OS_VolDir_To_OSPathSpec",
-          "mac_address": "0x000173d4",
-          "linkage_names": [
-            "OS_VolDir_To_OSPathSpec"
-          ]
-        },
-        {
-          "name": "OS_FSSpec_To_OSSpec",
-          "mac_address": "0x000174c0",
-          "linkage_names": [
-            "OS_FSSpec_To_OSSpec"
-          ]
-        },
-        {
-          "name": "OS_GetRsrcOSSpec",
-          "mac_address": "0x00017540",
-          "linkage_names": [
-            "OS_GetRsrcOSSpec"
-          ]
-        }
-      ],
+      "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "ownership_prepared"
     },
     {
       "source": "src/driver/Memory.c",
@@ -54226,7 +54285,7 @@
       "superseded_by": "src/GC_3_0a5_2/driver/MacFileTypes.c"
     },
     "src/driver/MacSpecs.c": {
-      "status": "unattempted",
+      "status": "ownership_prepared",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -54355,7 +54414,24 @@
           "space-nointrinsics": "3513bf76cd87f93661b7c5989ca09fcc4498632be991a6c96eafaccf4227aa1d",
           "space-intrinsics": "005ed717926ae523a13a89a59f45570b2d8579cbf1a1cad4a9e20bcb2e226db3"
         }
-      }
+      },
+      "retained_helpers": [
+        {
+          "name": "short_predecessor",
+          "address": "0x412250",
+          "status": "Outside recovered MacSpecs cluster and absent from explicit Mac unit; retain baseline until true ownership established"
+        },
+        {
+          "name": "MacSpecs_LoadMacResource",
+          "address": "0x412290",
+          "status": "Outside cluster; Windows module/resource imports suggest SystemWindows but not yet source ownership proof; retain baseline"
+        },
+        {
+          "name": "MacSpecs_IsByteInDBCSCharacter",
+          "status": "Baseline helper has Win32 DBCS/LastError semantics absent from MacSpecs SO; original Windows body/ownership not established in this pass; retain baseline"
+        }
+      ],
+      "ownership_limit": "Only three provisional baseline native-Windows helpers remain; their real source names are unresolved. Canonical MacSpecs members moved to the original OSLib TU."
     },
     "src/driver/Memory.c": {
       "status": "unattempted",
@@ -70879,6 +70955,724 @@
       "binding_policy": "All bindings source-scoped, including canonical static fmList/defaultList. Baseline aliases require root header/config integration; no global binding aliases added. Helper fn4263c0 retains address name as original unavailable.",
       "membership_reviewed": true,
       "strict_exact_count": 5
+    },
+    "src/GC_3_0a5_2/OSLib/MacSpecs.c": {
+      "functions": [
+        {
+          "name": "AddDirMapEntry",
+          "address": "0x4241f0",
+          "size": 135,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "FindOrAddVolRef",
+          "address": "0x424280",
+          "size": 199,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "FindDirMapEntry",
+          "address": "0x424350",
+          "size": 72,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "FindOrAddDirRef",
+          "address": "0x4243a0",
+          "size": 208,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "FindOrAdd",
+          "address": "0x424470",
+          "size": 341,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "StepVolDir",
+          "address": "0x4245d0",
+          "size": 119,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "ResolvePath",
+          "address": "0x424650",
+          "size": 65,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "ResolveVolDir",
+          "address": "0x4246a0",
+          "size": 282,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "static cdecl"
+        },
+        {
+          "name": "OS_OSPathSpec_To_VolDir",
+          "address": "0x4247c0",
+          "size": 88,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "stdcall/12"
+        },
+        {
+          "name": "OS_OSSpec_To_FSSpec",
+          "address": "0x424820",
+          "size": 113,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "stdcall/8"
+        },
+        {
+          "name": "OS_VolDir_To_OSPathSpec",
+          "address": "0x4248a0",
+          "size": 173,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "stdcall/12"
+        },
+        {
+          "name": "OS_FSSpec_To_OSSpec",
+          "address": "0x424950",
+          "size": 68,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "stdcall/8"
+        },
+        {
+          "name": "OS_GetRsrcOSSpec",
+          "address": "0x4249a0",
+          "size": 282,
+          "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+          "abi": "stdcall/12"
+        }
+      ],
+      "source_bindings": {
+        "_fn_004263c0@4": "0x4263c0",
+        "_fn_004263d0@4": "0x4263d0",
+        "_OS_EqualPath@8": "0x4107b0",
+        "_OS_PathSpecToString@12": "0x4112a0",
+        "_OS_GetDirPtr@4": "0x410470",
+        "_OS_NameSpecToString@12": "0x411310",
+        "_OS_GetCWD@4": "0x4100a0",
+        "_OS_MakeNameSpec@8": "0x411160",
+        "_OS_MakeSpec2@12": "0x4175c0",
+        "_OS_Status@4": "0x40fa80",
+        "_OS_Mkdir@4": "0x40ffd0",
+        "_OS_IsFile@4": "0x411460",
+        "_OS_SpecToString@12": "0x4111f0",
+        "_c2pstrcpy@8": "0x42df10",
+        "_p2cstrcpy@8": "0x42df50",
+        "__imp__SetFileAttributesA@8": "0x6d4374",
+        "_STSbuf": "0x716d9c",
+        "_lastDirID": "0x66dd44",
+        "_lastVolRef": "0x66dd48",
+        "_dirMapRows": "0x6d81b8",
+        "_dirIDMap": "0x6d81bc",
+        "_vols": "0x6d85bc",
+        "_stname": "0x6d7e70",
+        "_stdir": "0x6d8074",
+        "_stvol": "0x6d8178",
+        "_AddDirMapEntry": "0x4241f0",
+        "_FindOrAddVolRef": "0x424280",
+        "_FindDirMapEntry": "0x424350",
+        "_FindOrAddDirRef": "0x4243a0",
+        "_FindOrAdd": "0x424470",
+        "_StepVolDir": "0x4245d0",
+        "_ResolvePath": "0x424650",
+        "_ResolveVolDir": "0x4246a0",
+        "_OS_OSPathSpec_To_VolDir": "0x4247c0",
+        "_OS_OSSpec_To_FSSpec": "0x424820",
+        "_OS_VolDir_To_OSPathSpec": "0x4248a0",
+        "_OS_FSSpec_To_OSSpec": "0x424950",
+        "_OS_GetRsrcOSSpec": "0x4249a0",
+        "_OS_OSPathSpec_To_VolDir@12": "0x4247c0",
+        "_OS_OSSpec_To_FSSpec@8": "0x424820",
+        "_OS_VolDir_To_OSPathSpec@12": "0x4248a0",
+        "_OS_FSSpec_To_OSSpec@8": "0x424950",
+        "_OS_GetRsrcOSSpec@12": "0x4249a0"
+      },
+      "recommended_settings": {
+        "compiler": "cw94",
+        "include_dirs": [
+          "src/driver"
+        ],
+        "flags": [
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-inline",
+          "auto",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly"
+        ]
+      },
+      "baseline_aliases": {
+        "store_mac_spec_entry": {
+          "name": "AddDirMapEntry",
+          "address": "0x4241f0"
+        },
+        "find_or_create_name_registry_entry": {
+          "name": "FindOrAddVolRef",
+          "address": "0x424280"
+        },
+        "lookup_dir_id": {
+          "name": "FindDirMapEntry",
+          "address": "0x424350"
+        },
+        "find_or_create_child_entry": {
+          "name": "FindOrAddDirRef",
+          "address": "0x4243a0"
+        },
+        "find_or_create_spec_entry": {
+          "name": "FindOrAdd",
+          "address": "0x424470"
+        },
+        "lookup_spec_and_advance_parent": {
+          "name": "StepVolDir",
+          "address": "0x4245d0"
+        },
+        "find_or_create_spec_entry_negated": {
+          "name": "ResolvePath",
+          "address": "0x424650"
+        },
+        "build_name_and_backslash_path": {
+          "name": "ResolveVolDir",
+          "address": "0x4246a0"
+        },
+        "parse_value_and_offset": {
+          "name": "OS_OSPathSpec_To_VolDir",
+          "address": "0x4247c0"
+        },
+        "MacSpecs_MakeCWFileSpecFromString": {
+          "name": "OS_OSSpec_To_FSSpec",
+          "address": "0x424820"
+        },
+        "fn_00413670": {
+          "name": "OS_VolDir_To_OSPathSpec",
+          "address": "0x4248a0"
+        },
+        "MacSpecs_MakeOSSpec": {
+          "name": "OS_FSSpec_To_OSSpec",
+          "address": "0x424950"
+        },
+        "MacSpecs_MakeResourceForkSpec": {
+          "name": "OS_GetRsrcOSSpec",
+          "address": "0x4249a0"
+        }
+      },
+      "mac_checklist": [
+        {
+          "name": "AddDirMapEntry",
+          "mac_address": "0x00016ae8",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "AddDirMapEntry",
+            "address": "0x4241f0",
+            "size": 135,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "FindOrAddVolRef",
+          "mac_address": "0x00016ba8",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "FindOrAddVolRef",
+            "address": "0x424280",
+            "size": 199,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "FindDirMapEntry",
+          "mac_address": "0x00016cc0",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "FindDirMapEntry",
+            "address": "0x424350",
+            "size": 72,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "FindOrAddDirRef",
+          "mac_address": "0x00016d58",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "FindOrAddDirRef",
+            "address": "0x4243a0",
+            "size": 208,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "FindOrAdd",
+          "mac_address": "0x00016e6c",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "FindOrAdd",
+            "address": "0x424470",
+            "size": 341,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "StepVolDir",
+          "mac_address": "0x00016fd0",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "StepVolDir",
+            "address": "0x4245d0",
+            "size": 119,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "ResolvePath",
+          "mac_address": "0x000170a0",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "ResolvePath",
+            "address": "0x424650",
+            "size": 65,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "ResolveVolDir",
+          "mac_address": "0x00017104",
+          "status": "reviewed equivalent; codegen nonmatch",
+          "windows": {
+            "name": "ResolveVolDir",
+            "address": "0x4246a0",
+            "size": 282,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "static cdecl"
+          }
+        },
+        {
+          "name": "OS_OSPathSpec_To_VolDir",
+          "mac_address": "0x00017240",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "OS_OSPathSpec_To_VolDir",
+            "address": "0x4247c0",
+            "size": 88,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "stdcall/12"
+          }
+        },
+        {
+          "name": "OS_OSSpec_To_FSSpec",
+          "mac_address": "0x000172b0",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "OS_OSSpec_To_FSSpec",
+            "address": "0x424820",
+            "size": 113,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "stdcall/8"
+          }
+        },
+        {
+          "name": "OS_VolDir_To_OSNameSpec",
+          "mac_address": "0x00017354",
+          "status": "unresolved standalone Windows counterpart; not emitted",
+          "windows": null
+        },
+        {
+          "name": "OS_VolDir_To_OSPathSpec",
+          "mac_address": "0x000173d4",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "OS_VolDir_To_OSPathSpec",
+            "address": "0x4248a0",
+            "size": 173,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "stdcall/12"
+          }
+        },
+        {
+          "name": "OS_FSSpec_To_OSSpec",
+          "mac_address": "0x000174c0",
+          "status": "strict byte+PE-fixup exact",
+          "windows": {
+            "name": "OS_FSSpec_To_OSSpec",
+            "address": "0x424950",
+            "size": 68,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "stdcall/8"
+          }
+        },
+        {
+          "name": "OS_GetRsrcOSSpec",
+          "mac_address": "0x00017540",
+          "status": "reviewed equivalent; codegen nonmatch",
+          "windows": {
+            "name": "OS_GetRsrcOSSpec",
+            "address": "0x4249a0",
+            "size": 282,
+            "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+            "abi": "stdcall/12"
+          }
+        }
+      ],
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/MacSpecs.c",
+        "mac_so_line": 10817,
+        "mac_members": 14,
+        "windows_members": 13,
+        "region": [
+          "0x4241f0",
+          "0x424ab8"
+        ],
+        "proof": "Canonical AddDirMapEntry..OS_GetRsrcOSSpec roles reproduce the explicit Mac unit in order except unresolved OS_VolDir_To_OSNameSpec. Native VolNode28/DirNode20 match Mac record layouts, directory and volume state, assertion filenames/expressions, and all shared-call chains. Following424ac0 begins exact StringExtras strcatn cluster.",
+        "assertions": [
+          "FindDirMapEntry: MacSpecs.c line195, dirID != 2",
+          "FindOrAdd: MacSpecs.c line296, *pb == OS_PATHSEP"
+        ],
+        "unresolved": "No standalone OS_VolDir_To_OSNameSpec slot in reviewed13-body cluster; do not claim whole-binary absence or invent implementation."
+      },
+      "baseline_extras_not_owned": [
+        {
+          "name": "short_predecessor",
+          "address": "0x412250",
+          "status": "Outside recovered MacSpecs cluster and absent from explicit Mac unit; retain baseline until true ownership established"
+        },
+        {
+          "name": "MacSpecs_LoadMacResource",
+          "address": "0x412290",
+          "status": "Outside cluster; Windows module/resource imports suggest SystemWindows but not yet source ownership proof; retain baseline"
+        },
+        {
+          "name": "MacSpecs_IsByteInDBCSCharacter",
+          "status": "Baseline helper has Win32 DBCS/LastError semantics absent from MacSpecs SO; original Windows body/ownership not established in this pass; retain baseline"
+        }
+      ],
+      "native_layout": {
+        "OSSpec": 516,
+        "OSPathSpec": 260,
+        "OSNameSpec": 256,
+        "DirNode": 20,
+        "VolNode": 28,
+        "FSSpec": "Recovered offsets vRefNum0/parID2/name6. Name conversion limited64bytes in OS_OSSpec_To_FSSpec. Source uses canonical Mac262byte declaration; total Windows external record extent is not proven by this TU (no sizeof/allocation emitted)."
+      },
+      "semantic_review": {
+        "AddDirMapEntry": "Exact: row=index>>8,col=index&255, max256 rows, zeroed1024byte wrapper allocation, unchanged overflow/error behavior.",
+        "FindOrAddVolRef": "Exact: equal-path lookup, bounded16bit ID assigned from uint32 lastVolRef,28byte node, separate name allocation, root ID2, parent volume.",
+        "FindDirMapEntry": "Exact: asserts dirID!=2, validates row then returns indexed pointer.",
+        "FindOrAddDirRef": "Exact: lookup/20byte node/name allocations, increment ID, register map, parent/link; preserved allocation-error behavior.",
+        "FindOrAdd": "Exact: added empty normalized-path rejection and terminal-component handling (advance only at actual slash); native local buffers260/64/260.",
+        "StepVolDir": "Exact: root/volume resolution, sentinel1, parent traversal.",
+        "ResolvePath": "Exact: negate volume ID on success, clear outputs on failure.",
+        "ResolveVolDir": "Reviewed equivalent13-body call chain: collect up to256 directory ancestors, copy volume, append each name/slash with native260-byte bound. Compiled instruction scheduling/temp-register differences and an extra memory push; no byte match claim.",
+        "OS_OSPathSpec_To_VolDir": "Exact: int outputs converted to short volume/int dir; failures3 and zero outputs.",
+        "OS_OSSpec_To_FSSpec": "Exact: write offsets0/2 then convert native name through64byte limited string to Pascal.",
+        "OS_VolDir_To_OSPathSpec": "Exact: current directory fallback, or combine resolved volume/directory only when total<260.",
+        "OS_FSSpec_To_OSSpec": "Exact: resolve parent path, Pascal-to-C name and native name construction.",
+        "OS_GetRsrcOSSpec": "Reviewed equivalent: normalized directory, RESOURCE.FRK status/create/hidden attribute behavior, existing-file error267, native name conversion. Cold success/IsFile block placement differs; prefix/calls/conditions/outputs agree; no exact claim."
+      },
+      "data_review": {
+        "owned_data_bytes": 1748,
+        "all_emitted_data": [
+          {
+            "name": "_lastDirID",
+            "section": ".data",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x0066dd44",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_lastVolRef",
+            "section": ".data",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x0066dd48",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@160",
+            "section": ".data",
+            "size": 64,
+            "method": "resolved function reference",
+            "address": "0x0066dd4c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@174",
+            "section": ".data",
+            "size": 12,
+            "method": "resolved function reference",
+            "address": "0x0066dd8c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@175",
+            "section": ".data",
+            "size": 12,
+            "method": "resolved function reference",
+            "address": "0x0066dd98",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@263",
+            "section": ".data",
+            "size": 20,
+            "method": "resolved function reference",
+            "address": "0x0066dda4",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@436",
+            "section": ".data",
+            "size": 16,
+            "method": "resolved function reference",
+            "address": "0x0066ddb8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_vols",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006d85bc",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_dirIDMap",
+            "section": ".bss",
+            "size": 1024,
+            "method": "named binding",
+            "address": "0x006d81bc",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_dirMapRows",
+            "section": ".bss",
+            "size": 4,
+            "method": "named binding",
+            "address": "0x006d81b8",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_stvol",
+            "section": ".bss",
+            "size": 64,
+            "method": "named binding",
+            "address": "0x006d8178",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_stdir",
+            "section": ".bss",
+            "size": 260,
+            "method": "named binding",
+            "address": "0x006d8074",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_stname",
+            "section": ".bss",
+            "size": 260,
+            "method": "named binding",
+            "address": "0x006d7e70",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "unresolved_mac_data": [
+          {
+            "name": "stpath",
+            "mac_address": "0x222a48",
+            "mac_size": 256,
+            "status": "Not emitted. Zero-filled256-byte gap6d7f74..6d8074 between recovered stname and stdir suggests counterpart; raw address probes6d7f74/6d7f70/6d8070/6d7f78 have no references. No confirmed binding/full-unit completeness claim."
+          }
+        ],
+        "external_data": {
+          "STSbuf": "716d9c external shared scratch; no local ownership"
+        },
+        "global_semantics": "lastDirID3@66dd44,lastVolRef2@66dd48; vols6d85bc4,dirIDMap6d81bc1024,dirMapRows6d81b84,stvol6d817864,stdir6d8074260,stname6d7e70260. Named refs plus bounded/nonoverlapping spans and Mac roles; all emitted data/fixups exact."
+      },
+      "verification": {
+        "strict_exact_functions": 11,
+        "attempted_functions": 13,
+        "code_bytes": 2145,
+        "data_bytes": 1748,
+        "all_data_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "2145",
+            "match_percent": 96.24106
+          },
+          ".data": {
+            "bytes": "132",
+            "match_percent": 100.0
+          },
+          ".bss": {
+            "bytes": "1616",
+            "match_percent": 100.0
+          }
+        },
+        "fixup_status": [
+          {
+            "name": "AddDirMapEntry",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindOrAddVolRef",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindDirMapEntry",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindOrAddDirRef",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindOrAdd",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "StepVolDir",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "ResolvePath",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "ResolveVolDir",
+            "bytes_exact": false,
+            "fixups_exact": true
+          },
+          {
+            "name": "OS_OSPathSpec_To_VolDir",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "OS_OSSpec_To_FSSpec",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "OS_VolDir_To_OSPathSpec",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "OS_FSSpec_To_OSSpec",
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "OS_GetRsrcOSSpec",
+            "bytes_exact": false,
+            "fixups_exact": true
+          }
+        ],
+        "selected_profile_unresolved_relocations": 0,
+        "profile_results": [
+          {
+            "profile": "macspecs-speed-intrinsics",
+            "compiled": true,
+            "exact_count": 11,
+            "unresolved_count": 0
+          },
+          {
+            "profile": "macspecs-speed-nointrinsics",
+            "compiled": true,
+            "exact_count": 8,
+            "unresolved_count": 4
+          },
+          {
+            "profile": "macspecs-space-intrinsics",
+            "compiled": true,
+            "exact_count": 0,
+            "unresolved_count": 0
+          },
+          {
+            "profile": "macspecs-space-nointrinsics",
+            "compiled": true,
+            "exact_count": 0,
+            "unresolved_count": 4
+          }
+        ],
+        "other_profile_limit": "No-intrinsics profiles require currently unbound strlen; no invented runtime address. Selectedintrinsics profile fully resolves all dependencies.",
+        "complete": false,
+        "original_application_executed": false,
+        "encoding": "Direct CP932 encoding succeeds; tools/check_sjis.py absent",
+        "source_sha256": "b281554ce439205fa2079d23254f0a7a6d5234af791bc7e3d89b1a5eccd8e2ce"
+      },
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "strict_exact_count": 11,
+      "source_sha256": "b281554ce439205fa2079d23254f0a7a6d5234af791bc7e3d89b1a5eccd8e2ce"
     }
   },
   "ownership_review": {

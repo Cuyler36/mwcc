@@ -1,4 +1,5 @@
 #define CERROR_FILE "unknown.c"
+#include "version.h"
 #include "compiler/common.h"
 #include "driver/MacSpecs.h"
 #include "compiler/enode.h"
@@ -91,6 +92,7 @@ Boolean __stdcall MacSpecs_IsByteInDBCSCharacter(BYTE *a, BYTE *b)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 struct NameRegistryEntry *find_or_create_name_registry_entry(struct NameRegistryEntry **entries, char *name)
 {
     NameRegistryEntry *entry;
@@ -417,3 +419,5 @@ int __stdcall MacSpecs_MakeResourceForkSpec(char *source, OSSpec *destination, c
         return error;
     return 0;
 }
+
+#endif

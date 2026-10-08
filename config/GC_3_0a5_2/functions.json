@@ -3229,106 +3229,161 @@
     }
   },
   {
-    "name": "store_mac_spec_entry",
-    "address": "0x004241f0",
+    "name": "AddDirMapEntry",
+    "address": "0x4241f0",
     "size": 135,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "store_mac_spec_entry",
     "baseline_address": "0x00413020",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_or_create_child_entry",
-    "address": "0x004243a0",
+    "name": "FindOrAddVolRef",
+    "address": "0x424280",
+    "size": 199,
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
+    "boundary_evidence": {
+      "method": "Reviewed original CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "FindDirMapEntry",
+    "address": "0x424350",
+    "size": 72,
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
+    "boundary_evidence": {
+      "method": "Reviewed original CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "FindOrAddDirRef",
+    "address": "0x4243a0",
     "size": 208,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "find_or_create_child_entry",
     "baseline_address": "0x004131d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_or_create_spec_entry",
-    "address": "0x00424470",
+    "name": "FindOrAdd",
+    "address": "0x424470",
     "size": 341,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "find_or_create_spec_entry",
     "baseline_address": "0x004132a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_or_create_spec_entry_negated",
-    "address": "0x00424650",
+    "name": "StepVolDir",
+    "address": "0x4245d0",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
+    "boundary_evidence": {
+      "method": "Reviewed original CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ResolvePath",
+    "address": "0x424650",
     "size": 65,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "find_or_create_spec_entry_negated",
     "baseline_address": "0x00413450",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "MacSpecs_MakeCWFileSpecFromString",
-    "address": "0x00424820",
+    "name": "ResolveVolDir",
+    "address": "0x4246a0",
+    "size": 282,
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
+    "boundary_evidence": {
+      "method": "Reviewed original CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_OSPathSpec_To_VolDir",
+    "address": "0x4247c0",
+    "size": 88,
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
+    "boundary_evidence": {
+      "method": "Reviewed original CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_OSSpec_To_FSSpec",
+    "address": "0x424820",
     "size": 113,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "MacSpecs_MakeCWFileSpecFromString",
     "baseline_address": "0x004135f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_00413670",
-    "address": "0x004248a0",
+    "name": "OS_VolDir_To_OSPathSpec",
+    "address": "0x4248a0",
     "size": 173,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "fn_00413670",
     "baseline_address": "0x00413670",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "MacSpecs_MakeOSSpec",
-    "address": "0x00424950",
+    "name": "OS_FSSpec_To_OSSpec",
+    "address": "0x424950",
     "size": 68,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "MacSpecs_MakeOSSpec",
     "baseline_address": "0x00413730",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "MacSpecs_MakeResourceForkSpec",
-    "address": "0x004249a0",
+    "name": "OS_GetRsrcOSSpec",
+    "address": "0x4249a0",
     "size": 282,
-    "source": "src/driver/MacSpecs.c",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "baseline_name": "MacSpecs_MakeResourceForkSpec",
     "baseline_address": "0x00413780",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacSpecs.c explicit Mac STABS members, native Windows registry/path cluster and reviewed signatures/calls.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed original CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

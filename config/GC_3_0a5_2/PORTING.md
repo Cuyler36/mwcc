@@ -42,8 +42,18 @@ canonical symbol names when rediscovering baseline mappings.
 The GC3 objdiff tree uses logical `src/GC_3_0a5_2` paths for both shared and
 version-specific sources. Actual source metadata and Ninja output paths are
 unchanged. C/C++ entries with a shared stem retain their extensions to avoid
-collisions. The version matrix restores the initially configured build and
-regenerates its objdiff view after checking all versions.
+collisions. The version matrix uses private Ninja files and per-version report
+projects, preserving the active Ninja file and objdiff view throughout. It
+checks progress generation as well as compilation and byte comparisons.
+Provisional imported helper groups with unresolved original filenames appear
+under `provisional`; `original_source_units` selects the symbol-proven canonical
+TU when a baseline helper grouping has the same basename.
+
+MWCC writes basename.dep in the working directory. The compiler runner locks
+each dependency basename through compilation and dependency transformation,
+preventing collisions between different source paths while allowing other
+basenames to compile concurrently. A two-process regression reproduces this
+case and checks that each object gets its own source dependencies.
 
 Data attribution also follows independently anchored pointer tables to local
 literals. It validates the entire table's bytes and exact loader-fixup set,
@@ -57,7 +67,7 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-The current inventory has 265 source views: 217 compiled files and 48
+The current inventory has 266 source views: 218 compiled files and 48
 original-only units. All twenty direct assertion ownership conflicts are now
 split physically. CFunc.cpp and CException.cpp retain provisional C language
 mode while imported pointer conversions are ported. CMiddleLayer.c,
@@ -74,6 +84,21 @@ span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## OSLib/MacSpecs.c: recovered canonical spec-conversion unit
+
+Thirteen canonical Windows functions are reconstructed; eleven pass strict
+byte/fixup checks. ResolveVolDir and OS_GetRsrcOSSpec remain reviewed equivalent
+code-generation nonmatches. All 2,145 original code bytes compare at 96.24106%,
+all 132 initialized data bytes and 1,616 BSS bytes match, and every function's
+fixups resolve and agree. OS_VolDir_To_OSNameSpec remains unmapped. A possible
+unused stpath allocation has no original reference and is not claimed.
+
+Three baseline helpers (short_predecessor, MacSpecs_LoadMacResource and the
+DBCS-byte helper) are preserved separately until their actual Windows source
+ownership is established. They are excluded from canonical MacSpecs membership;
+the imported view is explicitly provisional. Version guards include version.h
+directly, preserving the older builds and excluding moved definitions for GC3.
 
 ## MacFileTypes.c: reviewed native type-mapping unit
 

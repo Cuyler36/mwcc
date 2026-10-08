@@ -1,5 +1,6 @@
 #pragma bool off
 
+#include "version.h"
 #include "compiler/common.h"
 #include "driver/CLFileOps.h"
 #include "compiler/enode.h"

@@ -1,3 +1,4 @@
+#include "version.h"
 #include "compiler/common.h"
 #include "driver/CLIO.h"
 #include "compiler/objects.h"

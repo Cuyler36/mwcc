@@ -1,4 +1,5 @@
 #define CERROR_FILE "unknown.c"
+#include "version.h"
 #include "compiler/common.h"
 #include "driver/ClientGlue.h"
 #include "compiler/objects.h"

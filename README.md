@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 217 source files build, 1,209 candidate functions are
-mapped, and 424 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 218 source files build, 1,214 candidate functions are
+mapped, and 434 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -35,7 +35,9 @@ inventory generation and the per-TU attempt ledger.
 Objdiff groups all GC3 sources under `src/GC_3_0a5_2`, including shared source
 files; its source metadata retains their actual paths. Distinct C/C++ entries
 with the same stem keep their extensions. `python tools/verify.py` tests all
-versions and restores the active build and objdiff view afterward.
+versions with private Ninja files and objdiff report projects, preserving the
+active build and objdiff view throughout. Imported helper groups whose original
+source is unresolved appear under `provisional`.
 
 Supported versions:
 

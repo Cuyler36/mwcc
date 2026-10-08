@@ -218,7 +218,8 @@
     "src/GC_3_0a5_2/driver/StringExtras.c",
     "src/GC_3_0a5_2/OSLib/Generic.c",
     "src/GC_3_0a5_2/driver/TextUtils.c",
-    "src/GC_3_0a5_2/OSLib/FileHandles.c"
+    "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "src/GC_3_0a5_2/OSLib/MacSpecs.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3336,6 +3337,27 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/OSLib/MacSpecs.c": {
+      "compiler": "cw94",
+      "include_dirs": [
+        "src/driver"
+      ],
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -3386,7 +3408,6 @@
     "src/GC_3_0a5_2/driver/Targets/ParserToolMatchesPlugin",
     "src/GC_3_0a5_2/driver/Targets/ParserToolHandlesPanels",
     "src/GC_3_0a5_2/driver/Targets/SetupParserToolOptions",
-    "src/driver/MacSpecs/find_or_create_spec_entry_negated",
     "src/driver/CLFileOps/set_bytes",
     "src/msl/misc_io/clearerr",
     "src/driver/Memory/set_storage_handle_data",
@@ -3762,7 +3783,18 @@
     "src/GC_3_0a5_2/driver/MacFileTypes/OS_MacType_To_OSType",
     "src/GC_3_0a5_2/driver/MacFileTypes/OS_SetMacFileType",
     "src/GC_3_0a5_2/driver/MacFileTypes/OS_GetMacFileType",
-    "src/GC_3_0a5_2/driver/MacFileTypes/OS_SetMacFileCreatorAndType"
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_SetMacFileCreatorAndType",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/AddDirMapEntry",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/FindOrAddVolRef",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/FindDirMapEntry",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/FindOrAddDirRef",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/FindOrAdd",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/StepVolDir",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/ResolvePath",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/OS_OSPathSpec_To_VolDir",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/OS_OSSpec_To_FSSpec",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/OS_VolDir_To_OSPathSpec",
+    "src/GC_3_0a5_2/OSLib/MacSpecs/OS_FSSpec_To_OSSpec"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4476,6 +4508,54 @@
       "_OS_GetMacFileTypeMagic@12": "0x42f7b0",
       "_OS_GetMacFileType@8": "0x42f8a0",
       "_OS_SetMacFileCreatorAndType@12": "0x42fa00"
+    },
+    "src/GC_3_0a5_2/OSLib/MacSpecs.c": {
+      "_fn_004263c0@4": "0x4263c0",
+      "_fn_004263d0@4": "0x4263d0",
+      "_OS_EqualPath@8": "0x4107b0",
+      "_OS_PathSpecToString@12": "0x4112a0",
+      "_OS_GetDirPtr@4": "0x410470",
+      "_OS_NameSpecToString@12": "0x411310",
+      "_OS_GetCWD@4": "0x4100a0",
+      "_OS_MakeNameSpec@8": "0x411160",
+      "_OS_MakeSpec2@12": "0x4175c0",
+      "_OS_Status@4": "0x40fa80",
+      "_OS_Mkdir@4": "0x40ffd0",
+      "_OS_IsFile@4": "0x411460",
+      "_OS_SpecToString@12": "0x4111f0",
+      "_c2pstrcpy@8": "0x42df10",
+      "_p2cstrcpy@8": "0x42df50",
+      "__imp__SetFileAttributesA@8": "0x6d4374",
+      "_STSbuf": "0x716d9c",
+      "_lastDirID": "0x66dd44",
+      "_lastVolRef": "0x66dd48",
+      "_dirMapRows": "0x6d81b8",
+      "_dirIDMap": "0x6d81bc",
+      "_vols": "0x6d85bc",
+      "_stname": "0x6d7e70",
+      "_stdir": "0x6d8074",
+      "_stvol": "0x6d8178",
+      "_AddDirMapEntry": "0x4241f0",
+      "_FindOrAddVolRef": "0x424280",
+      "_FindDirMapEntry": "0x424350",
+      "_FindOrAddDirRef": "0x4243a0",
+      "_FindOrAdd": "0x424470",
+      "_StepVolDir": "0x4245d0",
+      "_ResolvePath": "0x424650",
+      "_ResolveVolDir": "0x4246a0",
+      "_OS_OSPathSpec_To_VolDir": "0x4247c0",
+      "_OS_OSSpec_To_FSSpec": "0x424820",
+      "_OS_VolDir_To_OSPathSpec": "0x4248a0",
+      "_OS_FSSpec_To_OSSpec": "0x424950",
+      "_OS_GetRsrcOSSpec": "0x4249a0",
+      "_OS_OSPathSpec_To_VolDir@12": "0x4247c0",
+      "_OS_OSSpec_To_FSSpec@8": "0x424820",
+      "_OS_VolDir_To_OSPathSpec@12": "0x4248a0",
+      "_OS_FSSpec_To_OSSpec@8": "0x424950",
+      "_OS_GetRsrcOSSpec@12": "0x4249a0"
     }
+  },
+  "original_source_units": {
+    "MacSpecs.c": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
   }
 }

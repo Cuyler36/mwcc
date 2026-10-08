@@ -29,7 +29,11 @@ def pro4_arguments(args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--version", choices=VERSIONS, default=VERSIONS[0])
-    version = parser.parse_args().version
+    parser.add_argument('--build-file', default='build.ninja')
+    parser.add_argument('--no-active-objdiff', action='store_true')
+    options = parser.parse_args()
+    version = options.version
+    build_file = Path(options.build_file)
     config = json.loads(Path(f"config/{version}/config.json").read_text())
     sources = json.loads(Path("config/sources.json").read_text())
     # Version-specific files/settings must not enter the older versions' builds.
@@ -67,7 +71,7 @@ def main():
         "  command = $python tools/compare.py extract $version",
         "  description = EXTRACT $version",
         "rule compare",
-        "  command = $python tools/compare.py compare $version",
+        "  command = $python tools/compare.py compare $version" + (' --no-active-objdiff' if options.no_active_objdiff else ''),
         "  description = COMPARE $version",
         "rule source_diff",
         "  command = $python tools/compare.py unit $version $source",
@@ -76,7 +80,7 @@ def main():
         "  command = $python tools/compare.py report $version",
         "  description = REPORT $version",
         "rule configure",
-        f"  command = $python configure.py --version {version}",
+        f"  command = $python configure.py --version {version} --build-file {quote_args([str(build_file)])}" + (' --no-active-objdiff' if options.no_active_objdiff else ''),
         "  generator = 1",
         "",
         f"version = {version}",
@@ -123,15 +127,16 @@ def main():
                 f"  source = {quote_args([source]).replace('$', '$$')}"]
     out += [
         f"build build/{version}/target/ok: extract | {config['original']} {configs} tools/compare.py tools/pe.py",
-        f"build build/{version}/ok objdiff.json: compare | build/{version}/target/ok {' '.join(objects)} {objdiff}",
+        f"build build/{version}/ok build/{version}/objdiff.json" + ('' if options.no_active_objdiff else ' objdiff.json') + f": compare | build/{version}/target/ok {' '.join(objects)} {objdiff}",
         f"build build/{version}/report.json: report | build/{version}/ok {objdiff}",
         f"build all_source: phony {' '.join(objects)}",
         f"build progress: phony build/{version}/report.json",
-        f"build build.ninja: configure | configure.py config/sources.json {' '.join(f'config/{v}/config.json' for v in VERSIONS)} {config.get('translation_units', '')}",
+        f"build {str(build_file).replace(' ', '$ ')}: configure | configure.py config/sources.json {' '.join(f'config/{v}/config.json' for v in VERSIONS)} {config.get('translation_units', '')}",
         f"default build/{version}/ok",
         "",
     ]
-    Path("build.ninja").write_text("\n".join(out))
+    build_file.parent.mkdir(parents=True, exist_ok=True)
+    build_file.write_text("\n".join(out))
 
 
 if __name__ == "__main__":

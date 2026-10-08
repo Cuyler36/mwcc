@@ -1494,5 +1494,57 @@
   "fn_00421d30": {
     "name": "OS_SetMacFileCreatorAndType",
     "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "store_mac_spec_entry": {
+    "name": "AddDirMapEntry",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "find_or_create_child_entry": {
+    "name": "FindOrAddDirRef",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "find_or_create_spec_entry": {
+    "name": "FindOrAdd",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "find_or_create_spec_entry_negated": {
+    "name": "ResolvePath",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "MacSpecs_MakeCWFileSpecFromString": {
+    "name": "OS_OSSpec_To_FSSpec",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "fn_00413670": {
+    "name": "OS_VolDir_To_OSPathSpec",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "MacSpecs_MakeOSSpec": {
+    "name": "OS_FSSpec_To_OSSpec",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "MacSpecs_MakeResourceForkSpec": {
+    "name": "OS_GetRsrcOSSpec",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "find_or_create_name_registry_entry": {
+    "name": "FindOrAddVolRef",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "lookup_dir_id": {
+    "name": "FindDirMapEntry",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "lookup_spec_and_advance_parent": {
+    "name": "StepVolDir",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "build_name_and_backslash_path": {
+    "name": "ResolveVolDir",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "parse_value_and_offset": {
+    "name": "OS_OSPathSpec_To_VolDir",
+    "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
   }
 }

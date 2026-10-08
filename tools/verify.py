@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and compare every version, then restore the active version and objdiff view."""
+"""Build and compare every version without replacing the active build or objdiff view."""
 import re
 import subprocess
 import sys
@@ -16,16 +16,19 @@ if active_version not in VERSIONS:
 ok = True
 try:
     for version in [*VERSIONS[1:], VERSIONS[0]]:
-        subprocess.run([sys.executable, "configure.py", "--version", version], check=True)
-        result = subprocess.run(["ninja"], capture_output=True, text=True)
+        build_file = f'build/verify_{version}.ninja'
+        subprocess.run([sys.executable, "configure.py", "--version", version,
+                        '--build-file', build_file, '--no-active-objdiff'], check=True)
+        result = subprocess.run(["ninja", '-f', build_file, 'progress'], capture_output=True, text=True)
         # (the comparison's summary; the build's last lines when it fails)
         print(Path(f"build/{version}/ok").read_text().rstrip() if result.returncode == 0 else result.stdout[-6000:])
         ok &= result.returncode == 0
 finally:
-    subprocess.run([sys.executable, 'configure.py', '--version', active_version], check=True)
-    restored = subprocess.run(['ninja'], capture_output=True, text=True)
+    # The active Ninja file and objdiff project stay in place throughout.
+    # Refresh their outputs if shared inputs changed during verification.
+    restored = subprocess.run(['ninja', 'progress'], capture_output=True, text=True)
     if restored.returncode:
         print(restored.stdout[-6000:])
     ok &= restored.returncode == 0
-    print(f'Restored active build and objdiff view: {active_version}')
+    print(f'Preserved active build and objdiff view: {active_version}')
 sys.exit(0 if ok else 1)

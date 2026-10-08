@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "Operands.c"
 #include "compiler/common.h"
 #include "compiler/Operands.h"
@@ -125,6 +126,7 @@ void Operands_EmitAddress(SInt16 reg, Operand *operand)
 
 /* Register-bearing prefix of an operand record. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int Operands_InsertBitField(unsigned short reg, Operand *operand, TypeBitfield *record)
 {
     TypeBitfield adjusted;
@@ -144,9 +146,11 @@ unsigned int Operands_InsertBitField(unsigned short reg, Operand *operand, TypeB
     end = shift + width;
     return (unsigned int)PCodeUtilities_EmitInstruction(PC_RLWIMI, operand->reg, (short)reg, 32 - end, shift, end - 1);
 }
+#endif
 
 /* Register operand prefix used by this instruction emitter. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ExtractBitfield(Operand *operand, TypeBitfield *tbitfield, SInt16 reg, Operand *result)
 {
     SInt32 shift;
@@ -183,6 +187,7 @@ void Operands_ExtractBitfield(Operand *operand, TypeBitfield *tbitfield, SInt16 
     result->kind = OpndType_GPR;
     result->reg = regno;
 }
+#endif
 
 /* 0x58846e, word access */
 
@@ -360,6 +365,7 @@ void Operands_EmitOpcodeWithObjectBaseOffset(short dest, Type *type, Object *obj
     emit_opcode_with_base_offset((type->size == 4) ? 0x8e : 0x92, dest, base, obj, 0);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ExtendGPR(Operand *operand, Type *type, short requestedReg)
 {
     int resultReg;
@@ -417,7 +423,9 @@ void Operands_ExtendGPR(Operand *operand, Type *type, short requestedReg)
     operand->kind = OpndType_GPR;
     operand->reg = resultReg;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_EmitSTVX(SInt16 reg, Operand *operand, Type *type)
 {
     Operands_Normalize(operand);
@@ -435,7 +443,9 @@ void Operands_EmitSTVX(SInt16 reg, Operand *operand, Type *type)
             break;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_EmitGPRMemoryInstruction(SInt16 reg, Operand *node, Type *type)
 {
     SInt16 opcode;
@@ -467,9 +477,11 @@ void Operands_EmitGPRMemoryInstruction(SInt16 reg, Operand *node, Type *type)
             break;
     }
 }
+#endif
 
 /* low word offset */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_StoreGPRPair(SInt16 reg, SInt16 regHi, Operand *op, Type *type)
 {
     SInt16 tmp;
@@ -500,7 +512,9 @@ void Operands_StoreGPRPair(SInt16 reg, SInt16 regHi, Operand *op, Type *type)
             break;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_EmitTypedGPRMemoryInstruction(short reg, Operand *opnd, Type *type)
 {
     short op;
@@ -553,7 +567,9 @@ void Operands_EmitTypedGPRMemoryInstruction(short reg, Operand *opnd, Type *type
             CError_FATAL(928);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ForceVR(Operand *operand, Type *type, short targetReg)
 {
     short resultReg;
@@ -609,7 +625,9 @@ void Operands_ForceVR(Operand *operand, Type *type, short targetReg)
     operand->kind = OpndType_VR;
     operand->reg = resultReg;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ForceFPR(Operand *operand, Type *type, short requestedReg)
 {
     short resultReg;
@@ -646,12 +664,14 @@ void Operands_ForceFPR(Operand *operand, Type *type, short requestedReg)
     operand->kind = OpndType_FPR;
     operand->reg = resultReg;
 }
+#endif
 
 static inline SInt16 Operands_SignedLowHalf(SInt32 value)
 {
     return value;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ForceGPRPair(Operand *op, Type *type, SInt16 first, SInt16 second)
 {
     SInt16 secondRegister = -1;
@@ -813,6 +833,7 @@ void Operands_ForceGPRPair(Operand *op, Type *type, SInt16 first, SInt16 second)
         op->regHi = secondRegister;
     }
 }
+#endif
 
 static __inline SInt32 Operands_GetOpcode(Type *type, SInt32 base, SInt32 line)
 {
@@ -837,6 +858,7 @@ static __inline SInt32 Operands_GetOpcode(Type *type, SInt32 base, SInt32 line)
     return op;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_ForceGPR(Operand *node, Type *type, SInt16 reg)
 {
     SInt16 targetReg;
@@ -932,7 +954,9 @@ void Operands_ForceGPR(Operand *node, Type *type, SInt16 reg)
     node->kind = OpndType_GPR;
     node->reg = targetReg;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_Normalize(Operand *op)
 {
     SInt16 indirect = 0;
@@ -996,11 +1020,13 @@ void Operands_Normalize(Operand *op)
             CError_FATAL(474);
     }
 }
+#endif
 
 /* Operand descriptor used by the P-code address generator.  Field offsets are
  * the ones observed in the original: type 0, reg 2, reg2 6, offset 8,
  * disp 0xe, object 0x12. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_Add(Operand *left, Operand *right, SInt16 hint, Operand *dest)
 {
     Operand *swap;
@@ -1201,6 +1227,7 @@ void Operands_Add(Operand *left, Operand *right, SInt16 hint, Operand *dest)
             break;
     }
 }
+#endif
 
 /* Operand record of the PPC code generator: byte kind, word register,
  * word low half of the constant, qual flags, 32-bit value, spare. */
@@ -1229,6 +1256,7 @@ static void Operands_SetQual(Operand *op, ENode *e)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void Operands_MakeIndirect(Operand *op, ENode *e)
 {
     switch (op->kind) {
@@ -1272,3 +1300,4 @@ void Operands_MakeIndirect(Operand *op, ENode *e)
             CError_FATAL(162);
     }
 }
+#endif

@@ -14325,197 +14325,398 @@
     }
   },
   {
-    "name": "Operands_InsertBitField",
-    "address": "0x0058fb80",
+    "name": "fn_0058f300",
+    "address": "0x58f300",
+    "size": 583,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058f550",
+    "address": "0x58f550",
+    "size": 1412,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_address",
+    "address": "0x58fae0",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insert_bitfield",
+    "address": "0x58fb80",
     "size": 129,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_InsertBitField",
-    "baseline_address": "0x0049f730",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_ExtractBitfield",
-    "address": "0x0058fc10",
+    "name": "extract_bitfield",
+    "address": "0x58fc10",
     "size": 308,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ExtractBitfield",
-    "baseline_address": "0x0049f7c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_ExtendGPR",
-    "address": "0x00590520",
-    "size": 534,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ExtendGPR",
-    "baseline_address": "0x0049fe50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "convert_floating_to_unsigned",
+    "address": "0x58fd50",
+    "size": 93,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_EmitSTVX",
-    "address": "0x005907e0",
-    "size": 133,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_EmitSTVX",
-    "baseline_address": "0x0049ffb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "convert_floating_to_integer",
+    "address": "0x58fdb0",
+    "size": 212,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_EmitGPRMemoryInstruction",
-    "address": "0x00590870",
-    "size": 169,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_EmitGPRMemoryInstruction",
-    "baseline_address": "0x004a0040",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "convert_unsigned_to_floating",
+    "address": "0x58fe90",
+    "size": 434,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_StoreGPRPair",
-    "address": "0x00590920",
-    "size": 390,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_StoreGPRPair",
-    "baseline_address": "0x004a0110",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "convert_integer_to_floating",
+    "address": "0x590050",
+    "size": 466,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_EmitTypedGPRMemoryInstruction",
-    "address": "0x00590ab0",
-    "size": 374,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_EmitTypedGPRMemoryInstruction",
-    "baseline_address": "0x004a0260",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_00590230",
+    "address": "0x590230",
+    "size": 380,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Operands_ForceVR",
-    "address": "0x00590d00",
-    "size": 395,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ForceVR",
-    "baseline_address": "0x004a03d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_ForceFPR",
-    "address": "0x00590e90",
-    "size": 244,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ForceFPR",
-    "baseline_address": "0x004a0550",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_ForceGPRPair",
-    "address": "0x00590f90",
-    "size": 1594,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ForceGPRPair",
-    "baseline_address": "0x004a0680",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_ForceGPR",
-    "address": "0x005915d0",
-    "size": 819,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_ForceGPR",
-    "baseline_address": "0x004a0ba0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_Normalize",
-    "address": "0x00591910",
-    "size": 646,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_Normalize",
-    "baseline_address": "0x004a0fc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_Add",
-    "address": "0x00591ba0",
-    "size": 2338,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_Add",
-    "baseline_address": "0x004a1130",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "Operands_MakeIndirect",
-    "address": "0x00592670",
-    "size": 1075,
-    "source": "src/backend/Operands.c",
-    "baseline_name": "Operands_MakeIndirect",
-    "baseline_address": "0x004a1860",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
-    "name": "PCodeUtilities_LoadImmediate",
-    "address": "0x00592f00",
+    "name": "load_floating_constant",
+    "address": "0x5903b0",
     "size": 135,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_LoadImmediate",
-    "baseline_address": "0x004a1c20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "extendpair",
+    "address": "0x590440",
+    "size": 216,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "extendgpr",
+    "address": "0x590520",
+    "size": 534,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "last_matches_rlwinm_or_exts",
+    "address": "0x590740",
+    "size": 149,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_v",
+    "address": "0x5907e0",
+    "size": 133,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "store_fp",
+    "address": "0x590870",
+    "size": 169,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "store_pair",
+    "address": "0x590920",
+    "size": 390,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "store",
+    "address": "0x590ab0",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_00590c30",
+    "address": "0x590c30",
+    "size": 198,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "Coerce_to_v_register",
+    "address": "0x590d00",
+    "size": 395,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "Coerce_to_fp_register",
+    "address": "0x590e90",
+    "size": 244,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "coerce_to_register_pair",
+    "address": "0x590f90",
+    "size": 1594,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "Coerce_to_register",
+    "address": "0x5915d0",
+    "size": 819,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "coerce_to_addressable_before",
+    "address": "0x591910",
+    "size": 646,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "combine",
+    "address": "0x591ba0",
+    "size": 2338,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_005924d0",
+    "address": "0x5924d0",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00592590",
+    "address": "0x592590",
+    "size": 219,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "indirect",
+    "address": "0x592670",
+    "size": 1075,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "symbol_operand",
+    "address": "0x592ab0",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_00592b40",
+    "address": "0x592b40",
+    "size": 39,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "set_op_flags",
+    "address": "0x592b70",
+    "size": 180,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00592c30",
+    "address": "0x592c30",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insert_add_immediate_after",
+    "address": "0x592cc0",
+    "size": 181,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insert_load_immediate_before",
+    "address": "0x592d80",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insert_load_immediate_after",
+    "address": "0x592e40",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_immediate",
+    "address": "0x592f00",
+    "size": 135,
+    "source": "src/GC_3_0a5_2/backend/Operands.c",
+    "identity_evidence": "Native Windows Operands.c assertions, bounded cluster and ordinary Mac symbol roles; additional helpers retain address names.",
+    "boundary_evidence": {
+      "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
       "unresolved_indirect_flow": false
     }
   },

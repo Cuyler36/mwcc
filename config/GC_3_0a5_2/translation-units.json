@@ -771,6 +771,497 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/Operands.c",
+      "original_filename": "Operands.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_0058f300",
+          "address": "0x0058f300",
+          "size": 583,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058f342",
+            "0x0058f3a2",
+            "0x0058f3ee"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_0058f550",
+          "address": "0x0058f550",
+          "size": 1412,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058f5c0",
+            "0x0058f643",
+            "0x0058f6a1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "load_address",
+          "address": "0x0058fae0",
+          "size": 155,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058fb2a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "insert_bitfield",
+          "address": "0x58fb80",
+          "size": 129,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "extract_bitfield",
+          "address": "0x58fc10",
+          "size": 308,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "convert_floating_to_unsigned",
+          "address": "0x58fd50",
+          "size": 93,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "convert_floating_to_integer",
+          "address": "0x58fdb0",
+          "size": 212,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "convert_unsigned_to_floating",
+          "address": "0x58fe90",
+          "size": 434,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "convert_integer_to_floating",
+          "address": "0x590050",
+          "size": 466,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00590230",
+          "address": "0x590230",
+          "size": 380,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "load_floating_constant",
+          "address": "0x5903b0",
+          "size": 135,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "extendpair",
+          "address": "0x590440",
+          "size": 216,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "extendgpr",
+          "address": "0x00590520",
+          "size": 534,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005905da"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "last_matches_rlwinm_or_exts",
+          "address": "0x590740",
+          "size": 149,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "store_v",
+          "address": "0x005907e0",
+          "size": 133,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059085b"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "store_fp",
+          "address": "0x00590870",
+          "size": 169,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059090e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "store_pair",
+          "address": "0x00590920",
+          "size": 390,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059096f",
+            "0x00590a8a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "store",
+          "address": "0x00590ab0",
+          "size": 374,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00590bcc",
+            "0x00590bf0",
+            "0x00590c1a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_00590c30",
+          "address": "0x00590c30",
+          "size": 198,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00590cda",
+            "0x00590ceb"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "Coerce_to_v_register",
+          "address": "0x00590d00",
+          "size": 395,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00590e0f",
+            "0x00590e3a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "Coerce_to_fp_register",
+          "address": "0x00590e90",
+          "size": 244,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00590f4a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "coerce_to_register_pair",
+          "address": "0x00590f90",
+          "size": 1594,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00591097",
+            "0x005910e3",
+            "0x005910f9",
+            "0x0059110f",
+            "0x0059131f",
+            "0x00591360",
+            "0x00591407",
+            "0x0059150e",
+            "0x005915be"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "Coerce_to_register",
+          "address": "0x005915d0",
+          "size": 819,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059180a",
+            "0x0059184c"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "coerce_to_addressable_before",
+          "address": "0x00591910",
+          "size": 646,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059199e",
+            "0x00591b8a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "combine",
+          "address": "0x00591ba0",
+          "size": 2338,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005920aa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_005924d0",
+          "address": "0x005924d0",
+          "size": 178,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059255a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_00592590",
+          "address": "0x592590",
+          "size": 219,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "indirect",
+          "address": "0x00592670",
+          "size": 1075,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0059282a",
+            "0x0059283e",
+            "0x005928c1",
+            "0x0059298e",
+            "0x00592a2a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "symbol_operand",
+          "address": "0x00592ab0",
+          "size": 141,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00592b2a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_00592b40",
+          "address": "0x592b40",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "set_op_flags",
+          "address": "0x00592b70",
+          "size": 180,
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00592bbc"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c"
+        },
+        {
+          "name": "fn_00592c30",
+          "address": "0x592c30",
+          "size": 132,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insert_add_immediate_after",
+          "address": "0x592cc0",
+          "size": 181,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insert_load_immediate_before",
+          "address": "0x592d80",
+          "size": 178,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insert_load_immediate_after",
+          "address": "0x592e40",
+          "size": 178,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "load_immediate",
+          "address": "0x592f00",
+          "size": 135,
+          "compiled_source": "src/GC_3_0a5_2/backend/Operands.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native x86 CFG bounded by saved entries and neighboring EnodeInfoHandler assertions",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/PPCError.c",
       "original_filename": "PPCError.c",
       "evidence": [
@@ -19080,317 +19571,11 @@
     },
     {
       "source": "src/backend/Operands.c",
-      "original_filename": "Operands.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "FUN_0058f300",
-          "address": "0x0058f300",
-          "size": 583,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058f342",
-            "0x0058f3a2",
-            "0x0058f3ee"
-          ]
-        },
-        {
-          "name": "FUN_0058f550",
-          "address": "0x0058f550",
-          "size": 1412,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058f5c0",
-            "0x0058f643",
-            "0x0058f6a1"
-          ]
-        },
-        {
-          "name": "FUN_0058fae0",
-          "address": "0x0058fae0",
-          "size": 155,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058fb2a"
-          ]
-        },
-        {
-          "name": "Operands_InsertBitField",
-          "address": "0x0058fb80",
-          "size": 129,
-          "compiled_source": "src/backend/Operands.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "Operands_ExtractBitfield",
-          "address": "0x0058fc10",
-          "size": 308,
-          "compiled_source": "src/backend/Operands.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "Operands_ExtendGPR",
-          "address": "0x00590520",
-          "size": 534,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005905da"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_EmitSTVX",
-          "address": "0x005907e0",
-          "size": 133,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059085b"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_EmitGPRMemoryInstruction",
-          "address": "0x00590870",
-          "size": 169,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059090e"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_StoreGPRPair",
-          "address": "0x00590920",
-          "size": 390,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059096f",
-            "0x00590a8a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_EmitTypedGPRMemoryInstruction",
-          "address": "0x00590ab0",
-          "size": 374,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00590bcc",
-            "0x00590bf0",
-            "0x00590c1a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "FUN_00590c30",
-          "address": "0x00590c30",
-          "size": 198,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00590cda",
-            "0x00590ceb"
-          ]
-        },
-        {
-          "name": "Operands_ForceVR",
-          "address": "0x00590d00",
-          "size": 395,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00590e0f",
-            "0x00590e3a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_ForceFPR",
-          "address": "0x00590e90",
-          "size": 244,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00590f4a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_ForceGPRPair",
-          "address": "0x00590f90",
-          "size": 1594,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00591097",
-            "0x005910e3",
-            "0x005910f9",
-            "0x0059110f",
-            "0x0059131f",
-            "0x00591360",
-            "0x00591407",
-            "0x0059150e",
-            "0x005915be"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_ForceGPR",
-          "address": "0x005915d0",
-          "size": 819,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059180a",
-            "0x0059184c"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_Normalize",
-          "address": "0x00591910",
-          "size": 646,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059199e",
-            "0x00591b8a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "Operands_Add",
-          "address": "0x00591ba0",
-          "size": 2338,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005920aa"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "FUN_005924d0",
-          "address": "0x005924d0",
-          "size": 178,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059255a"
-          ]
-        },
-        {
-          "name": "Operands_MakeIndirect",
-          "address": "0x00592670",
-          "size": 1075,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0059282a",
-            "0x0059283e",
-            "0x005928c1",
-            "0x0059298e",
-            "0x00592a2a"
-          ],
-          "compiled_source": "src/backend/Operands.c"
-        },
-        {
-          "name": "FUN_00592ab0",
-          "address": "0x00592ab0",
-          "size": 141,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00592b2a"
-          ]
-        },
-        {
-          "name": "FUN_00592b70",
-          "address": "0x00592b70",
-          "size": 180,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00592bbc"
-          ]
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -19679,17 +19864,6 @@
           "name": "PCodeUtilities_EmitInstruction",
           "address": "0x00582ec0",
           "size": 153,
-          "compiled_source": "src/backend/PCodeUtilities.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCodeUtilities_LoadImmediate",
-          "address": "0x00592f00",
-          "size": 135,
           "compiled_source": "src/backend/PCodeUtilities.c",
           "evidence": "Existing Ghidra label; baseline identity requires semantic review",
           "boundary_evidence": {
@@ -74813,6 +74987,1593 @@
         "Ordinary Mac symbols establish names, not complete original TU membership.",
         "Legacy diagnostic/file wrappers remain in provisional baseline source."
       ]
+    },
+    "src/GC_3_0a5_2/backend/Operands.c": {
+      "source": "src/GC_3_0a5_2/backend/Operands.c",
+      "frozen": true,
+      "source_sha256": "6fb3b627da9284631cdb8b2c471bef5ee4214e64ceb93c6c9ed01ca4b7c9fa27",
+      "compiler": "build/compilers/cw94/mwcc.exe",
+      "compiler_flags": [
+        "-c",
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly",
+        "-DVERSION=3",
+        "-Iinclude",
+        "-i-",
+        "-Iinclude/libc"
+      ],
+      "inventory": {
+        "count": 36,
+        "original_cluster_start": "0x58f300",
+        "end_exclusive": "0x592f90",
+        "original_assertion_source": "Operands.c at0x6ad57c",
+        "next_tu": "EnodeInfoHandler.c at0x592f90 with filename0x6ad588",
+        "mac_explicit_stabs_members": null,
+        "mac_evidence": "Map lacks an explicit SO/STABS Operands.c scope. Ordinary canonical names atMac e7cd8..eabac establish names by signatures/call roles/semantics; source ownership inferred from Windows assertions and continuouscluster. Additional helpers retain address aliases. Mac insert_add_immediate_before has no proven Windows body; Windows ORI-materializer592c30 is extra. Earlier baseline logical-expression/trailing-object functions are outside this Windows cluster and not copied."
+      },
+      "functions": [
+        {
+          "name": "fn_0058f300",
+          "address": "0x58f300",
+          "size": 583,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 583,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "64-bit bitfield insertion: snapshot width, endian-copy12 bytes, validate underlying native integral/enum size8 (assert0xa0d then continue). end<=32 writes upper register; crossing32 handles width<=32 via two RLWIMIs, width>32 via three, with special end64 upper insertion+lower MR. Crossing assertions0xa28/0xa2d check rotation zero/nonzero. start>=32 uses lower register. Preserve native mask endpoints and emission order. Canonical name unknown; opcode/register-allocation nonmatch.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 64,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 157,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 234,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_0058f550",
+          "address": "0x58f550",
+          "size": 1412,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 1330,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "64-bit extraction: allocate low/high for -1 hints before endian reversal; validate size8 (0x96b). end<=32 selects upper source, unsigned clears high and uses native width&31 rotation, signed uses SRAWI or separate temp then high sign extension. Crossing width>32 splits upper/lower, special end64 asserted shift0(0x9c7), otherwise asserted shift!=0(0x9d3), with distinct signed/unsigned upper extraction and final lower RLWIMI. Crossing width<=32 unsigned combines upper/lower; signed original path uses upper source extraction and sign extension without lower insertion, preserved. start>=32 uses lower source, including original start==0 condition rather than simplifying to shifted start. Writes only result.kind3/reg/regHi. Canonical name unknown; code generation nonmatch, no runtime input validation added.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 108,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 204,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 298,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "load_address",
+          "address": "0x58fae0",
+          "size": 155,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$21 (0 retail blocks, 0 strings)",
+          "compiled_size": 159,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Normalize with (NULL,op,-1); indirect offset kind9 emits MR only for zero full32 displacement and NULL object, otherwise passes truncated signed16 displacement to address helper. Indexed kind10 emits ADD. Other kinds report assertion line0x953. Does not rewrite operand.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 38,
+              "symbol": ".sw$21",
+              "section": 6,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 119,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "insert_bitfield",
+          "address": "0x58fb80",
+          "size": 129,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 129,
+          "status": "strict_exact",
+          "review": "Snapshot unsigned width before optional12-byte endian copy/reversal. Compute start=32-underlying.size*8+unsigned offset and end=start+width; emit RLWIMI into op.reg with rotation32-end, MB start, ME end-1. Signed16 input register. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "extract_bitfield",
+          "address": "0x58fc10",
+          "size": 308,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 308,
+          "status": "strict_exact",
+          "review": "Requested register -1 allocates full32 counter; snapshot unsigned width, optional endian copy. Unsigned emits RLWINM with (start+width)&31 and mask32-width..31; signed start0 uses SRAWI; signed nonzero allocates independent temp, RLWINM temp with start&31 and mask0..width then SRAWI. Writes only result.kind0 and result.reg. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "convert_floating_to_unsigned",
+          "address": "0x58fd50",
+          "size": 93,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 93,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Move FPR operand to register1 only when necessary; call native three-argument helper(runtime,NULL,20-byte descriptor), allocate GPR, copy register3. Write kind0 and reg only. Remaining difference is cleanup/register-counter scheduling, not call ABI or side effects.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 31,
+              "symbol": "_data_006ad568",
+              "section": 2,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "convert_floating_to_integer",
+          "address": "0x58fdb0",
+          "size": 212,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 212,
+          "status": "strict_exact",
+          "review": "Allocate double temporary, clear28-byte operand and independently initialize reg/regHi=-1, symbol kind8; normalize; FCTIWZ into newFPR; typed double store at0; requested or newGPR typed signed-int load at low_word_offset; write kind0/reg. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "convert_unsigned_to_floating",
+          "address": "0x58fe90",
+          "size": 434,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 434,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Select alternating cached conversion temporary when enabled, otherwise allocate double temporary; clear28-byte local and normalize. Copy unsigned conversion constant words into local, load into allocatedFPR. Store inputGPR to low_word_offset; if caching disabled emit0x4330 LIS and store high_word_offset. Allocate/load doubleFPR at0. Requested -1 allocates result; emit opcode subtract?0xa5:0xa4 with result,loaded,constant; write kind5/reg.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 112,
+              "symbol": "_uns_to_float_cc",
+              "section": 33,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 118,
+              "symbol": "_uns_to_float_cc",
+              "section": 33,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "convert_integer_to_floating",
+          "address": "0x590050",
+          "size": 466,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 466,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Same native alternating temporary and double conversion flow, using signed conversion constant. XORIS0x5b of inputGPR with0x8000 into newGPR before lowword store. Optional0x4330 upperword store, double load, subtract selector, result sentinel -1, kind5/reg writes preserved.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 113,
+              "symbol": "_int_to_float_cc",
+              "section": 32,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 125,
+              "symbol": "_int_to_float_cc",
+              "section": 32,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_00590230",
+          "address": "0x590230",
+          "size": 380,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 378,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Clear conversion enabled flag, both cached object pointers, and selector on every invocation. Only conversion_enabled && !operandsDebug && count>=4 enables caching; allocate two temporaries through46b9c0, normalize each, emit0x4330 LIS using newly allocatedGPR and typed signed-int store at high_word_offset. Canonical initializer name unknown.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "load_floating_constant",
+          "address": "0x5903b0",
+          "size": 135,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 135,
+          "status": "strict_exact",
+          "review": "Two original local operand clears/initializations retained, including first before581920(type,value). Symbol operand then indirect(NULL expression); if resulting kind!=5 call Coerce_to_fp_register with requested register. No rewrite of caller operand. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "extendpair",
+          "address": "0x590440",
+          "size": 216,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 212,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Coerce non-GPR input first. Allocate/request high register, if equal to current lowreg allocate/request low and emitMR, then write lowreg. Unsigned high=LI0, signed=SRAWI(low,31). Write kind3/regHi only after emission. Native low/high hints -1; no zero-sentinel assumptions.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "extendgpr",
+          "address": "0x590520",
+          "size": 534,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 534,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Remember inputkind>=9 before coercion. Size1 stbool early return; unsigned extension skips already-loaded input and matching last RLWINM; signed byte allocates/requested register before consulting last EXTSB optimization (counter side effect preserved). Size2 skips loaded input, uses unsigned RLWINM or signed EXTSH, matching-last early return before allocation. Size4 no-op. Invalid size0x69a. Final kind0/reg writes only after emitted extension; return paths preserve operand.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590558",
+              "table": "0x653c88",
+              "table_prefix_u32": [
+                "0x59055f",
+                "0x5905b6"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 59,
+              "symbol": ".sw$773",
+              "section": 50,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 182,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "last_matches_rlwinm_or_exts",
+          "address": "0x590740",
+          "size": 149,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 149,
+          "status": "strict_exact",
+          "review": "Current block instruction count must be positive. Last instruction destination argument kind0,class4,reg matching operand; opcode exact or EXTSB accepted for desired EXTSH. RLWINM additionally requires rotation0 and exact MB/ME signed16 args. Return UInt8 only. Native packed PCode offsets28/2c/2d/30/4a/58/66 checked. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "store_v",
+          "address": "0x5907e0",
+          "size": 133,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 133,
+          "status": "strict_exact",
+          "review": "Normalize; kind9 native base-offset vector store, kind10 indexed vector store; apply full64-bit flags after each store, otherwise assertion0x5f4. Strict exact.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590803",
+              "table": "0x653c98",
+              "table_prefix_u32": [
+                "0x59080a",
+                "0x59082e"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 38,
+              "symbol": ".sw$101",
+              "section": 12,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 119,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "store_fp",
+          "address": "0x590870",
+          "size": 169,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 169,
+          "status": "strict_exact",
+          "review": "Debug predicate is operandsDebug && type.kind2 && integral<0x17, diagnostic0x21. Normalize, dispatch typed base-offset or indexed FP store and64-bit flags; otherwise assertion0x5dc. Strict exact.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x5908b4",
+              "table": "0x653ca0",
+              "table_prefix_u32": [
+                "0x5908bb",
+                "0x5908e0"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 71,
+              "symbol": ".sw$117",
+              "section": 14,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 154,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "store_pair",
+          "address": "0x590920",
+          "size": 390,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 390,
+          "status": "strict_exact",
+          "review": "Validate native eight-byte integral/enum or debug float-not4 predicate; assertion0x5ad does not suppress continuation. Normalize; base-offset stores low then high using signed-int type; indexed computes a new base then same stores. Flags after each store, invalid kind assertion0x5c1. Strict exact.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590992",
+              "table": "0x653ca8",
+              "table_prefix_u32": [
+                "0x590999",
+                "0x5909fe"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 75,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 117,
+              "symbol": ".sw$143",
+              "section": 16,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 358,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "store",
+          "address": "0x590ab0",
+          "size": 374,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$197 (0 retail blocks, 0 strings)",
+          "compiled_size": 201,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Normalize; accepted native scalar kinds1(integral<0x17),4,12,13,kind11 with pointee.kind!=7, or debug float4. Invalid type assertions0x593/599 still continue to typed store. Kinds9/10 choose offset/indexed helper and64-bit flags; other kind assertion0x59e.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590adc",
+              "table": "0x653cb0",
+              "table_prefix_u32": [
+                "0x590ae3",
+                "0x590b5a"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 47,
+              "symbol": ".sw$197",
+              "section": 19,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 68,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 133,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 186,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_00590c30",
+          "address": "0x590c30",
+          "size": 198,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$213 (0 retail blocks, 0 strings)",
+          "compiled_size": 198,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Normalize; native register-class helper signed-byte result3 reports0x56a, result4 dispatches typed FP stores by kind9/10 with64-bit flags; invalid operand0x57a, other class0x582. Canonical name unknown.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590c63",
+              "table": "0x653cc0",
+              "table_prefix_u32": [
+                "0x590c71",
+                "0x590c6a"
+              ]
+            },
+            {
+              "instruction": "0x590c7c",
+              "table": "0x653cb8",
+              "table_prefix_u32": [
+                "0x590c83",
+                "0x590ca8"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 54,
+              "symbol": ".sw$213",
+              "section": 22,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 79,
+              "symbol": ".sw$214",
+              "section": 21,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 166,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 183,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "Coerce_to_v_register",
+          "address": "0x590d00",
+          "size": 395,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$523 (0 retail blocks, 0 strings)",
+          "compiled_size": 390,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Normalize; existingVR6 retains register. Kinds9/10 choose requested or newVR for native vector loads followed64-bit flags. Immediate4 chooses opcode160 for type subclass4..6,161 for7..9 and14,162 for10..13; other subclass0x53c. Immediate branch writes kind/reg before flags; final kind6/reg assignment remains. Invalidkind0x546. Unresolved switch tables.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590d28",
+              "table": "0x653cf4",
+              "table_prefix_u32": [
+                "0x590d9f",
+                "0x590e30"
+              ]
+            },
+            {
+              "instruction": "0x590dbc",
+              "table": "0x653cc8",
+              "table_prefix_u32": [
+                "0x590dc3",
+                "0x590dc3"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 43,
+              "symbol": ".sw$523",
+              "section": 41,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 197,
+              "symbol": ".sw$524",
+              "section": 40,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 278,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 315,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "Coerce_to_fp_register",
+          "address": "0x590e90",
+          "size": 244,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$550 (0 retail blocks, 0 strings)",
+          "compiled_size": 241,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Native debug float predicate/0x21; normalize; FPR5 retains register, kind9/10 allocate/requestFPR and typed native load plus64-bit flags; invalidkind0x4fe. Write kind5/reg. Normalizer itself rejects kind5 in original table; this behavior is preserved rather than adding permissive input handling. Unresolved switch table.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x590ed5",
+              "table": "0x653d10",
+              "table_prefix_u32": [
+                "0x590edc",
+                "0x590f40"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 72,
+              "symbol": ".sw$550",
+              "section": 43,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 183,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "coerce_to_register_pair",
+          "address": "0x590f90",
+          "size": 1594,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$1192 (0 retail blocks, 0 strings)",
+          "compiled_size": 1574,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Validate native size8 integral/enum/extra kind5 or debug float!=4 (0x457 then continue). Normalize. Existing pair: fill missing requested counterpart, overlap-aware MR ordering and alias assertions0x46f/47d, then preserve original op.reg/regHi as returned register fields even after copies (native behavior). Kinds0/1/2 report48e/491/494. Immediate uses adjusted LIS+ADDI and unsigned/nonnegative upper0 or signed negative upper-1. Kind9 allocates low/high, orders loads low-first only when base aliases requested high, reports4b4 when both aliasbase; flags after each. Kind10 allocates separate address temp BEFORE output registers, emitsADD then high/low loads. Invalid4cf; missing resulting high4d3 skips operand writes. Outputkind3. Unresolved table.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x591010",
+              "table": "0x653d28",
+              "table_prefix_u32": [
+                "0x5910d9",
+                "0x5910ef"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 85,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 124,
+              "symbol": ".sw$1192",
+              "section": 59,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 257,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 340,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 362,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 384,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 942,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 1127,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 1386,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 1558,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "Coerce_to_register",
+          "address": "0x5915d0",
+          "size": 819,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$1018 (0 retail blocks, 0 strings)",
+          "compiled_size": 838,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Dispatch size8 integral/enum or debug float!=4 directly to pair(hint,-1). Otherwise normalize; existing GPR0/pair3 return. Offset1 materializes address with signed16 displacement, indexed2 emitsADD, immediate4 uses adjusted LIS+ADDI with temporary predicate, kinds9/10 use typed loads and64-bit flags. CR7 uses native opcode1ed(reg,CR,bit), selectors13/16 bit0,14/15 bit1,17/18 bit2, inversions16/15/18 XORI1; invalidselector431, invalidkind43a. Final kind0/reg. Unresolved tables.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x59163e",
+              "table": "0x653d6c",
+              "table_prefix_u32": [
+                "0x59164d",
+                "0x591655"
+              ]
+            },
+            {
+              "instruction": "0x5917cf",
+              "table": "0x653d54",
+              "table_prefix_u32": [
+                "0x5917eb",
+                "0x5917f6"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 131,
+              "symbol": ".sw$1018",
+              "section": 55,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 515,
+              "symbol": ".sw$1019",
+              "section": 54,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 582,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 650,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "coerce_to_addressable_before",
+          "address": "0x591910",
+          "size": 646,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$688 (0 retail blocks, 0 strings)",
+          "compiled_size": 632,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Native three-arg ABI before,op,hint (hint unused). Non-symbol allowed kinds0..4,6,7,9,10 unchanged; kind5 and >11 assert3ad. Symbol8/indirectsymbol11 resolve object datatype@2: local1 small-data predicate/base or explicit load with emit=(before==NULL); absolute2 object.address@40 emits adjustedLIS when not signed16, inserts into current block or before anchor, stores signed low16 displacement and NULL object. Otherobject classification581be0 uses5ccff0; ordinary4c2b40 plus4c3f60 chooses cached address load when displacement0, otherwise separate two-register high/low object relocations; zero base emits explicit address. before insertion and object-clearing follow native branches. Indirectsymbol result must be kind1 then changes to9, else380. Existing operand flags/displacement untouched except native writes. Unresolved table.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x591939",
+              "table": "0x653d98",
+              "table_prefix_u32": [
+                "0x5919a5",
+                "0x5919a5"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 44,
+              "symbol": ".sw$688",
+              "section": 47,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 134,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 616,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "combine",
+          "address": "0x591ba0",
+          "size": 2338,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$1421 (0 retail blocks, 0 strings)",
+          "compiled_size": 2364,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Reviewed all native pair-kind cases0,1,2,4,11,12,13,15,22,23,24,26,44,45,46,48. Normalize symbols with three-arg ABI. (1,1) folds only when LEFT objectNULL and sum signed16; otherwise materializes left. Native stack AND frame registers handled. (2,0) uses last destination dependency when optimization flag permits; current-block last pointer read occurs only when permitted. Hints are honored only on native branches, otherwise counters allocate. (2,2) allocates two independent sums. (4,1) uses signed-lowword updates, separate high temp when low+displacement overflows, local folding predicate5870d0, global relocation/cache path5924d0 only for datatype0/non-required/base>0/disp0. (4,0) stores signed16 lowhalf displacement, adjusted highADDIS when needed. (4,2) signed16 converts indexed to kind1 with sumADD and leaves native object field unwritten; large immediate usesADDIS/ADDI with separate temp when both halvesnonzero. Constants sum32 bits, invalidpair2e4. Preserves final field-write sets, helper order, and64-bit flag nonwrites. Unresolved switch table.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x591bf2",
+              "table": "0x653dc8",
+              "table_prefix_u32": [
+                "0x591bf9",
+                "0x591c31"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 85,
+              "symbol": ".sw$1421",
+              "section": 61,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 1190,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_005924d0",
+          "address": "0x5924d0",
+          "size": 178,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 177,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Walk24-byte address-cache entries by object and load.parent_block@8 equal currentblock; base must equal cachedreg or assertion1e7 thencontinue. Allocate derivedreg once, create lowobject load with emission flag; insert before suppliedanchor only when nonNULL. Store derivedload, returnfull32 derivedreg; return-1 ifnotfound. Canonical name unknown.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 134,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_00592590",
+          "address": "0x592590",
+          "size": 219,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 219,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Walk same object/currentblock cache. Existing entry recreates highobject load, updates load pointer, inserts beforeanchor only for nonNULL, returnscachedfull32reg. Miss allocates24 bytes via lalloc, clears, links priorhead, storesobject/newreg, makeshighload with emitflag and inserts ifneeded; publishes load andnewhead, returnsreg. Canonical name unknown.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "indirect",
+          "address": "0x592670",
+          "size": 1075,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$1059 (0 retail blocks, 0 strings)",
+          "compiled_size": 302,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Kinds3/5 assertion177 andreturn; kind6/unknown1b1. Kind7 or alreadyindirect9/10/11 coerce to pointerGPR(hint-1), then zero displacement/object andchange9; kind0samewithoutcoercion; kind1changes9; kind2changes10. Immediate4 signed16fit base0/fullvalue, otherwise adjustedLIS newreg and signed16low displacement; NULLobject andkind9. Symbol8 checks native GetEnodeInfo(object).flags&2: symbol_operand when registered, otherwisekind11. Every addresskindwrite occurs before set_op_flags NULLassert, preserving original pointer dereference order. Unresolved table; inlined flags logic can cause larger code than equivalent emitted call.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x592689",
+              "table": "0x653e8c",
+              "table_prefix_u32": [
+                "0x5926ae",
+                "0x5926bc"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 28,
+              "symbol": ".sw$1059",
+              "section": 57,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 198,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "symbol_operand",
+          "address": "0x592ab0",
+          "size": 141,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "error": "unbound literal: .sw$232 (0 retail blocks, 0 strings)",
+          "compiled_size": 149,
+          "status": "reviewed_equivalent_unresolved_relocation",
+          "review": "Get native ENodeInfo; clear28 bytes and independently set reg/regHi=-1. Info.kind2 fetches info again and recognizes flags&6==6 as GPRPair3 using regHi@12; otherwise GPR0. Info.kind3 mapsFPR5,4 mapsVR6, other0x166. Always set reg from info@10. Unresolved emitted switch table.",
+          "original_indirect_jumps": [
+            {
+              "instruction": "0x592ae6",
+              "table": "0x653ebc",
+              "table_prefix_u32": [
+                "0x592b1b",
+                "0x592b16"
+              ]
+            }
+          ],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 57,
+              "symbol": ".sw$232",
+              "section": 24,
+              "section_name": ".rdata",
+              "symbol_value": 0,
+              "kind": 6
+            },
+            {
+              "instruction_operand_offset": 118,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_00592b40",
+          "address": "0x592b40",
+          "size": 39,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 39,
+          "status": "strict_exact",
+          "review": "Clear28 bytes; reg/regHi=-1, symbol kind8, object pointer@10. Canonical name unknown. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "set_op_flags",
+          "address": "0x592b70",
+          "size": 180,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 180,
+          "status": "strict_exact",
+          "review": "NULL operand assertion0x128; NULL expression clears both flag dwords. EINTCONST0x34 uses expression.flags@8 bit2=>0x80,bit1=>0x40. Other expressions call volatile then const predicates, using UInt64 assignment/OR. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": [
+            {
+              "instruction_operand_offset": 72,
+              "symbol": "@22",
+              "section": 5,
+              "section_name": ".data",
+              "symbol_value": 0,
+              "kind": 6
+            }
+          ]
+        },
+        {
+          "name": "fn_00592c30",
+          "address": "0x592c30",
+          "size": 132,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 122,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Signed16 fit emits LI. Otherwise optionally allocates temporary only when optimization_level>1 and low16!=0; LIS uses unadjusted signed high16, then ORI with unsigned low16. Destination/base register arguments truncate to signed16. Canonical name unknown; distinct from additive load_immediate.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "insert_add_immediate_after",
+          "address": "0x592cc0",
+          "size": 181,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 181,
+          "status": "strict_exact",
+          "review": "Signed16 fit makes ADDI(reg,base,0,value), inserts after anchor. Otherwise ADDIS with high16 carry for signed lowhalf; optional temp under optimization predicate, optional ADDI inserted after first instruction. Parameter register high halves ignored at emitted calls. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "insert_load_immediate_before",
+          "address": "0x592d80",
+          "size": 178,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 178,
+          "status": "strict_exact",
+          "review": "Signed16 fit makes LI before anchor. Otherwise adjusted LIS before anchor then optional ADDI after newly inserted LIS, never before the original anchor in reverse order. Temp allocation predicate preserved. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "insert_load_immediate_after",
+          "address": "0x592e40",
+          "size": 178,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": true,
+          "compiled_size": 178,
+          "status": "strict_exact",
+          "review": "Same adjusted LIS/ADDI materialization with first instruction inserted after anchor and second after first. Strict exact.",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        },
+        {
+          "name": "load_immediate",
+          "address": "0x592f00",
+          "size": 135,
+          "source": "src/GC_3_0a5_2/backend/Operands.c",
+          "exact": false,
+          "compiled_size": 134,
+          "status": "reviewed_equivalent_codegen_nonmatch",
+          "review": "Signed16 fit LI, otherwise adjusted LIS highhalf followed by ADDI signed lowhalf. Optional temporary only for optimization_level>1 and nonzero lowhalf. Distinct from ORI variant592c30. Remaining mismatch is original word-only parameter load vs generated dword load (high bits never consumed untruncated).",
+          "original_indirect_jumps": [],
+          "emitted_data_references": []
+        }
+      ],
+      "source_bindings": {
+        "_load_address": "0x58fae0",
+        "_insert_bitfield": "0x58fb80",
+        "_extract_bitfield": "0x58fc10",
+        "_convert_floating_to_unsigned": "0x58fd50",
+        "_convert_floating_to_integer": "0x58fdb0",
+        "_store_v": "0x5907e0",
+        "_store_fp": "0x590870",
+        "_store_pair": "0x590920",
+        "_store": "0x590ab0",
+        "_fn_00590c30": "0x590c30",
+        "_symbol_operand": "0x592ab0",
+        "_fn_00592b40": "0x592b40",
+        "_set_op_flags": "0x592b70",
+        "_fn_00592c30": "0x592c30",
+        "_insert_add_immediate_after": "0x592cc0",
+        "_insert_load_immediate_before": "0x592d80",
+        "_insert_load_immediate_after": "0x592e40",
+        "_load_immediate": "0x592f00",
+        "_fn_0058f300": "0x58f300",
+        "_fn_0058f550": "0x58f550",
+        "_convert_unsigned_to_floating": "0x58fe90",
+        "_convert_integer_to_floating": "0x590050",
+        "_fn_00590230": "0x590230",
+        "_load_floating_constant": "0x5903b0",
+        "_extendpair": "0x590440",
+        "_extendgpr": "0x590520",
+        "_last_matches_rlwinm_or_exts": "0x590740",
+        "_Coerce_to_v_register": "0x590d00",
+        "_Coerce_to_fp_register": "0x590e90",
+        "_coerce_to_register_pair": "0x590f90",
+        "_Coerce_to_register": "0x5915d0",
+        "_coerce_to_addressable_before": "0x591910",
+        "_combine": "0x591ba0",
+        "_fn_005924d0": "0x5924d0",
+        "_fn_00592590": "0x592590",
+        "_indirect": "0x592670",
+        "_gUsedVirtualRegistersGPR": "0x716eb0",
+        "_gUsedVirtualRegistersFPR": "0x716eac",
+        "_optimization_level": "0x70f230",
+        "_nativeByteOrder": "0x70efe8",
+        "_operandsDebug": "0x70f019",
+        "_low_word_offset": "0x717462",
+        "_high_word_offset": "0x716ed0",
+        "_stsignedint": "0x699c54",
+        "_stdouble": "0x699c94",
+        "_floating_unsigned_helper": "0x715c78",
+        "_data_006ad568": "0x6ad568",
+        "_one_point_zero": "0x6ad550",
+        "_CError_FATAL": "0x45a250",
+        "_CABI_ReverseBitField": "0x5546d0",
+        "_Type_IsUnsigned": "0x454260",
+        "_PCodeUtilities_EmitInstruction": "0x582ec0",
+        "_PCodeUtilities_MakeInstruction": "0x582f60",
+        "_PCode_InsertAfter": "0x582890",
+        "_PCode_InsertBefore": "0x5829d0",
+        "_GetEnodeInfo": "0x579790",
+        "_CParserIsVolatileExpr": "0x453050",
+        "_CParserIsConstExpr": "0x4530a0",
+        "_memclrw": "0x46c400",
+        "_CodeGen_AllocateTemporaryObject": "0x46bb30",
+        "_fn_00595890": "0x595890",
+        "_fn_00595b90": "0x595b90",
+        "_fn_00594d60": "0x594d60",
+        "_fn_00595370": "0x595370",
+        "_fn_00594bf0": "0x594bf0",
+        "_fn_00594bd0": "0x594bd0",
+        "_fn_00594c20": "0x594c20",
+        "_fn_00594f90": "0x594f90",
+        "_fn_00594df0": "0x594df0",
+        "_fn_00582850": "0x582850",
+        "_PPCError_FatalError": "0x56ec90",
+        "_fn_00579560": "0x579560",
+        "_stbool": "0x699c1c",
+        "_void_ptr": "0x6771c8",
+        "_gUsedVirtualRegistersVR": "0x716ea8",
+        "_conversion_enabled": "0x70f018",
+        "_conversion_slots_enabled": "0x6e5ecc",
+        "_conversion_slot": "0x6e5ec0",
+        "_conversion_slots": "0x6e5ec4",
+        "_int_to_float_cc": "0x6ad558",
+        "_uns_to_float_cc": "0x6ad560",
+        "_fn_0046b9c0": "0x46b9c0",
+        "_fn_00581920": "0x581920",
+        "_fn_00595050": "0x595050",
+        "_fn_00595030": "0x595030",
+        "_fn_005951c0": "0x5951c0",
+        "_fn_00595080": "0x595080",
+        "_data_00710390": "0x710390",
+        "_data_007101cc": "0x7101cc",
+        "_lalloc": "0x46c660",
+        "_fn_00595770": "0x595770",
+        "_fn_00595830": "0x595830",
+        "_fn_00587380": "0x587380",
+        "_fn_00587230": "0x587230",
+        "_fn_00581be0": "0x581be0",
+        "_fn_005ccff0": "0x5ccff0",
+        "_fn_004c2b40": "0x4c2b40",
+        "_fn_004c3f60": "0x4c3f60",
+        "_fn_005958c0": "0x5958c0",
+        "_fn_00582aa0": "0x582aa0",
+        "_fn_00595250": "0x595250",
+        "_stack_base_reg": "0x7172bc",
+        "_frame_base_reg": "0x716ebe",
+        "_combine_optimization_disabled": "0x70f06c",
+        "_fn_005870d0": "0x5870d0"
+      },
+      "baseline_aliases": {
+        "Operands_InsertBitField": "insert_bitfield",
+        "Operands_ExtractBitfield": "extract_bitfield",
+        "Operands_ExtendGPR": "extendgpr",
+        "Operands_EmitSTVX": "store_v",
+        "Operands_EmitGPRMemoryInstruction": "store_fp",
+        "Operands_StoreGPRPair": "store_pair",
+        "Operands_EmitTypedGPRMemoryInstruction": "store",
+        "Operands_ForceVR": "Coerce_to_v_register",
+        "Operands_ForceFPR": "Coerce_to_fp_register",
+        "Operands_ForceGPRPair": "coerce_to_register_pair",
+        "Operands_ForceGPR": "Coerce_to_register",
+        "Operands_Normalize": "coerce_to_addressable_before",
+        "Operands_Add": "combine",
+        "Operands_MakeIndirect": "indirect"
+      },
+      "binding_policy": "Only emitted named COFF symbols in source-scoped bindings. No @N, .sw$N, or anonymous section bindings supplied. Runtime and lower-level helpers use proven address aliases where canonical names lack evidence. Shared globals bind to original addresses without redefining them.",
+      "native_abi": {
+        "Operand": {
+          "size": 28,
+          "pack": 2,
+          "kind": 0,
+          "reg": 2,
+          "regHi": 4,
+          "secondary_reg": 6,
+          "displacement_signed32": 8,
+          "immediate_signed32": 12,
+          "object": 16,
+          "flags_unsigned64": 20
+        },
+        "TypeBitfield": {
+          "size": 12,
+          "pack": 2,
+          "type": 0,
+          "size32": 2,
+          "underlying_type_pointer": 6,
+          "offset_unsigned8": 10,
+          "width_unsigned8": 11
+        },
+        "ENodeInfo": "flagsbyte@e,kindbyte@f,regword@10,regHiword@12",
+        "Type": "kindbyte@0,size32@2,integralbyte@6; vector subclasssignedbyte@10",
+        "register_counters": "Full32-bit counters; truncation occurs only where native register operands/fields use signed16. -1 allocation sentinel; register0 valid.",
+        "coerce_to_addressable_before": "cdecl(void*before,Operand*,SInt16 unused_hint). Baseline one-argument Operands_Normalize alias is insufficient for native calls; callers need native ABI.",
+        "flags": "UInt64 passed by value (lowthenhigh stackwords). No32-bit truncation."
+      },
+      "data": [
+        {
+          "name": "_data_006ad568",
+          "section": ".data",
+          "size": 20,
+          "method": "named binding",
+          "address": "0x006ad568",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_one_point_zero",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x006ad550",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@22",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x006ad57c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_6",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_12",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653c98",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_14",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653ca0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_16",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653ca8",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_19",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_21",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653cb8",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_22",
+          "section": ".rdata",
+          "size": 8,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_24",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "_int_to_float_cc",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x006ad558",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_uns_to_float_cc",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x006ad560",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_40",
+          "section": ".rdata",
+          "size": 44,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_41",
+          "section": ".rdata",
+          "size": 28,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_43",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_47",
+          "section": ".rdata",
+          "size": 48,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_50",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653c88",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_54",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_55",
+          "section": ".rdata",
+          "size": 44,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_57",
+          "section": ".rdata",
+          "size": 48,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_59",
+          "section": ".rdata",
+          "size": 44,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_61",
+          "section": ".rdata",
+          "size": 196,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "_conversion_slots_enabled",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e5ecc",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_conversion_slots",
+          "section": ".bss",
+          "size": 8,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e5ec4",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_conversion_slot",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e5ec0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_00710390",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x00710390",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "data_complete": false,
+      "strict_exact": 13,
+      "resolved_function_count": 25,
+      "objdiff_scope": "Only25 resolved members plus resolved data. Eleven unresolved switch-table functions are explicitly excluded from partial objdiff, not treated as byte-equivalent. No whole-TU100% claim.",
+      "objdiff_artifact": "build/operands-full-diff.json",
+      "experiments": {
+        "valid_profiles": 4,
+        "baseline_strict_exact": 13,
+        "alternate_profiles": [
+          {
+            "name": "o3",
+            "strict_exact": 10,
+            "resolved": 22,
+            "snapshot": "build/operands-profile-o3.json"
+          },
+          {
+            "name": "nointrinsics",
+            "strict_exact": 13,
+            "resolved": 25,
+            "snapshot": "build/operands-profile-nointrinsics.json"
+          },
+          {
+            "name": "space",
+            "strict_exact": 0,
+            "resolved": 33,
+            "snapshot": "build/operands-profile-space.json"
+          }
+        ],
+        "invalid_experiment": "-opt size is unsupported; usagewarning returned0. Excluded from validprofile count; corrected to documented-opt space.",
+        "source_tuning": "Native field widths, signedness, sentinel, promotion, temporaryallocation, object ABI and data ownership corrections; final36-function source built successfully."
+      },
+      "limitations": [
+        "No Ghidra bridge available; static retail PE/Capstone plus supplied symbols andbaseline used.",
+        "No original application execution or runtime differential tests. Semantic equivalence assessed from complete native bodies and native supported calling convention. Undefined original states (invalid types after fatalreturns, exhausted16-bitregister space, malformed/null native records) are not given invented safe behavior.",
+        "Switch tables unresolved where generated branch offsets differ. Original indirect-jump addresses and emitted COFF data references recorded perfunction; source_data independently verifies namedconstants/BSS and exact tables.",
+        "Ordinary Mac function names are proven real, but cross-platform source membership is not explicit STABS evidence. New addressaliases remain until strongername evidence.",
+        "1.2.5 callerOperand22 and one-argumentNormalize declarations are incompatible withnative layout/API. Root must integrate source-scoped symbols and port callsites; this private source does not alter shared headers.",
+        "one_point_zero dataownership inferred from Mac ordinarydata neighborhood and native contiguousdata; unused native literalretained withoutinventing use."
+      ],
+      "checks": {
+        "source_cp932": true,
+        "repository_sjis_checker": "tools/check_sjis.py absent",
+        "source_only_no_global_config_git_edits": true
+      },
+      "proof_files": [
+        "build/operands-retail.txt",
+        "build/operands-sizes.json",
+        "build/operands-imported.json",
+        "build/operands-inventory.json",
+        "build/operands-probe.json",
+        "build/operands-diff.txt",
+        "build/probe_operands.py"
+      ],
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 36,
+      "strict_exact_count": 13
     }
   },
   "ownership_review": {

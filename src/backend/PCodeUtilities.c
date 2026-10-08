@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "PCodeUtilities.c"
 #include "compiler/common.h"
 #include "compiler/PCodeUtilities.h"
@@ -53,6 +54,7 @@ void PCodeUtilities_EmitLoadImmediate(SInt16 destination, SInt32 value)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCodeUtilities_LoadImmediate(SInt16 target, SInt32 value)
 {
     SInt16 intermediate = target;
@@ -69,6 +71,7 @@ void PCodeUtilities_LoadImmediate(SInt16 target, SInt32 value)
         PCodeUtilities_EmitInstruction(PC_LI, target, value);
     }
 }
+#endif
 
 static inline UInt8 exception_scopes_enabled(void)
 {

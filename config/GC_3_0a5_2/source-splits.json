@@ -2058,5 +2058,65 @@
   "DAT_00587708": {
     "name": "GListErrorProc",
     "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "Operands_InsertBitField": {
+    "name": "insert_bitfield",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ExtractBitfield": {
+    "name": "extract_bitfield",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ExtendGPR": {
+    "name": "extendgpr",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_EmitSTVX": {
+    "name": "store_v",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_EmitGPRMemoryInstruction": {
+    "name": "store_fp",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_StoreGPRPair": {
+    "name": "store_pair",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_EmitTypedGPRMemoryInstruction": {
+    "name": "store",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ForceVR": {
+    "name": "Coerce_to_v_register",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ForceFPR": {
+    "name": "Coerce_to_fp_register",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ForceGPRPair": {
+    "name": "coerce_to_register_pair",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_ForceGPR": {
+    "name": "Coerce_to_register",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_Normalize": {
+    "name": "coerce_to_addressable_before",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_Add": {
+    "name": "combine",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "Operands_MakeIndirect": {
+    "name": "indirect",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "PCodeUtilities_LoadImmediate": {
+    "name": "load_immediate",
+    "source": "src/GC_3_0a5_2/backend/Operands.c"
   }
 }

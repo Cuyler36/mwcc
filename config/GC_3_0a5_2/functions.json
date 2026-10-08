@@ -21076,6 +21076,39 @@
     }
   },
   {
+    "name": "sourcetext_define_line",
+    "address": "0x5a4240",
+    "size": 125,
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+    "identity_evidence": "SourceText.c filename and define_line assertion, complete supplied sourcetext symbol family, native file/list behavior and caller/ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "sourcetext_get_line_number",
+    "address": "0x5a42c0",
+    "size": 149,
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+    "identity_evidence": "SourceText.c filename and define_line assertion, complete supplied sourcetext symbol family, native file/list behavior and caller/ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "sourcetext_get_line_offset",
+    "address": "0x5a4360",
+    "size": 123,
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+    "identity_evidence": "SourceText.c filename and define_line assertion, complete supplied sourcetext symbol family, native file/list behavior and caller/ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with whole-image filename/call/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CExpr_ConstructObject",
     "address": "0x005a6b70",
     "size": 780,

@@ -244,7 +244,8 @@
     "src/GC_3_0a5_2/frontend/CPrepLexer.c",
     "src/GC_3_0a5_2/backend/Alias.c",
     "src/GC_3_0a5_2/frontend/CMemberPointer.c",
-    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "src/GC_3_0a5_2/frontend/SourceText.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3877,6 +3878,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/SourceText.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4733,7 +4752,9 @@
     "src/GC_3_0a5_2/frontend/CMemberPointer/CPTM_GetMemberFunctionPointerSize",
     "src/GC_3_0a5_2/frontend/CMemberPointer/fn_00544120",
     "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses/fn_0063ea50",
-    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses/IRO_OptimizeNonRegAccesses"
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses/IRO_OptimizeNonRegAccesses",
+    "src/GC_3_0a5_2/frontend/SourceText/sourcetext_define_line",
+    "src/GC_3_0a5_2/frontend/SourceText/sourcetext_get_line_offset"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8107,6 +8128,19 @@
       "_log_newline": "0x6bfd11",
       "_log_no_predecessor": "0x6bfd15",
       "_IRO_OptimizeNonRegAccesses": "0x63ec20"
+    },
+    "src/GC_3_0a5_2/frontend/SourceText.c": {
+      "_sourcetext_filename": "0x6ad6af",
+      "_sourcetext_define_line_name": "0x6ad698",
+      "_sourcetext_define_line": "0x5a4240",
+      "_sourcetext_get_line_number": "0x5a42c0",
+      "_sourcetext_get_line_offset": "0x5a4360",
+      "_AppendGListLong": "0x46d6c0",
+      "_galloc": "0x46c6a0",
+      "_InitGList": "0x46d9a0",
+      "_preprocessor_internal_msg": "0x44ca40",
+      "_preprocessor_load_file": "0x44ba70",
+      "_scanner_getlinetable": "0x47eef0"
     }
   },
   "original_source_units": {
@@ -8135,6 +8169,7 @@
     "CPrepLexer.c": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
     "Alias.c": "src/GC_3_0a5_2/backend/Alias.c",
     "CMemberPointer.c": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
-    "IroNonRegLoopAccesses.c": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+    "IroNonRegLoopAccesses.c": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "SourceText.c": "src/GC_3_0a5_2/frontend/SourceText.c"
   }
 }

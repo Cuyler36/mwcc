@@ -22310,28 +22310,52 @@
       "source": "src/GC_3_0a5_2/frontend/SourceText.c",
       "original_filename": "SourceText.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_005a4240",
+          "name": "sourcetext_define_line",
           "address": "0x005a4240",
           "size": 125,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed native CFG with whole-image filename/call/seam audit",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a42b3"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/SourceText.c"
+        },
+        {
+          "name": "sourcetext_get_line_number",
+          "address": "0x5a42c0",
+          "size": 149,
+          "compiled_source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "sourcetext_get_line_offset",
+          "address": "0x5a4360",
+          "size": 123,
+          "compiled_source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with whole-image filename/call/seam audit",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
@@ -190460,6 +190484,3133 @@
           "ninja_all_source_progress": true,
           "strict_exact_total": 854,
           "mapped_total": 1894,
+          "objdiff_cli": true,
+          "inventory_partition": true,
+          "ownership_conflicts": 0,
+          "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        }
+      }
+    },
+    "src/GC_3_0a5_2/frontend/SourceText.c": {
+      "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+      "source_destination": "src/GC_3_0a5_2/frontend/SourceText.c",
+      "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed\\build\\SourceText-native-candidate.c\\compiled.obj",
+      "object_sha256": "f11ff912dc61b40036a6fb35312ffcbbec520d38fd54ae15bc1a721f9516935a",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "status": "attempted_equivalent",
+      "all_identified_windows_candidates_attempted": true,
+      "known_windows_candidates_unattempted": 0,
+      "semantic_review_pending": 0,
+      "native_functions": 3,
+      "native_code_bytes": 397,
+      "strict_exact_count": 2,
+      "functions": [
+        {
+          "name": "sourcetext_define_line",
+          "address": "0x5a4240",
+          "size": 125,
+          "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "source_signature": "void sourcetext_define_line(SourceTextFile *file,SInt32 line,UInt32 offset)",
+          "compiled_size": 125,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+          "semantic_review": "Allocates a fresh16-byte list when the list or its handle is absent, stores it before initialization, and passes signed file-size/16 rounded toward zero plus4 as capacity. InitGList AX nonzero returns immediately. Matching list.size+4 against wrapping32-bit line*4 either appends offset or calls preprocessor_internal_msg(1,0,filename,function,117), then returns normally. Full code/fixup match; assertion callback continuation is preserved.",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "sourcetext_get_line_number",
+          "address": "0x5a42c0",
+          "size": 149,
+          "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "source_signature": "UInt32 sourcetext_get_line_number(SourceTextFile *file,UInt32 offset)",
+          "compiled_size": 149,
+          "strict_exact": false,
+          "objdiff_match_percent": 96.111115,
+          "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+          "semantic_review": "Null file returns0. Missing list/handle or requested offset beyond the final stored offset triggers source loading only when contents is absent; successful load or existing contents calls scanner_getlinetable. Reloads both list and handle afterward and returns0 if missing. Clamps offset to file size and binary-searches the sorted line-start array using signed low/high and arithmetic midpoint, returning the last line start<=offset plus1. Native/candidate differences are register allocation, equivalent instruction encoding and padding; all imported relocations resolve.1,200 bounded native comparisons pass.",
+          "review_status": "reviewed_equivalent_on_native_defined_domains"
+        },
+        {
+          "name": "sourcetext_get_line_offset",
+          "address": "0x5a4360",
+          "size": 123,
+          "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "source_signature": "UInt32 sourcetext_get_line_offset(SourceTextFile *file,UInt32 line)",
+          "compiled_size": 123,
+          "strict_exact": true,
+          "objdiff_match_percent": 100.0,
+          "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+          "semantic_review": "Null file returns0. Missing list/handle or a line beyond list.size/4 performs the same guarded load/scan and reloads list/handle. Missing reloaded state returns0. Within the stored count, line0 becomes1 and returns table[line-1]; an out-of-range line returns file size. Full code/fixup match and1,200 bounded native comparisons pass.",
+          "review_status": "strict_exact"
+        }
+      ],
+      "source_bindings": {
+        "_sourcetext_filename": "0x6ad6af",
+        "_sourcetext_define_line_name": "0x6ad698",
+        "_sourcetext_define_line": "0x5a4240",
+        "_sourcetext_get_line_number": "0x5a42c0",
+        "_sourcetext_get_line_offset": "0x5a4360",
+        "_AppendGListLong": "0x46d6c0",
+        "_galloc": "0x46c6a0",
+        "_InitGList": "0x46d9a0",
+        "_preprocessor_internal_msg": "0x44ca40",
+        "_preprocessor_load_file": "0x44ba70",
+        "_scanner_getlinetable": "0x47eef0"
+      },
+      "profiles": {
+        "count": 10,
+        "successful": 10,
+        "best_strict": 2,
+        "best": "cw94 speed-intrinsics",
+        "summary": [
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-intrinsics-cw94",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-nointrinsics-cw94",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-space-intrinsics-cw94",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-space-nointrinsics-cw94",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-noloop-cw94",
+            "strict": 2,
+            "unresolved": 0
+          },
+          {
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-noschedule-cw94",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro8",
+            "profile": "sourcetext-speed-pro8",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro7",
+            "profile": "sourcetext-speed-pro7",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro6",
+            "profile": "sourcetext-speed-pro6",
+            "strict": 0,
+            "unresolved": 0
+          },
+          {
+            "compiler": "pro53",
+            "profile": "sourcetext-speed-pro53",
+            "strict": 0,
+            "unresolved": 0
+          }
+        ]
+      },
+      "data": {
+        "all_data_complete": true,
+        "records": [
+          {
+            "name": "_sourcetext_filename",
+            "section": ".data",
+            "size": 13,
+            "method": "named binding",
+            "address": "0x006ad6af",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_sourcetext_define_line_name",
+            "section": ".data",
+            "size": 23,
+            "method": "named binding",
+            "address": "0x006ad698",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "exact_bytes": 36,
+        "bss_bytes": 0,
+        "section_policy": "All3 functions are one TU and one objdiff .text projection. CW94 object emits same-named .text COMDATs, grouped by normal project comparison. Named native assertion string allocations are .data. No manual anonymous/generated bindings."
+      },
+      "ownership_review": {
+        "supported_cluster": [
+          "0x5a4240",
+          "0x5a43e0"
+        ],
+        "identified_members": 3,
+        "direct_calls": {
+          "0x5a4240": [
+            "0x47d712",
+            "0x47da33",
+            "0x47fcd7",
+            "0x4816f2",
+            "0x482c0f",
+            "0x482ca7",
+            "0x482da0",
+            "0x482de4",
+            "0x482ec3",
+            "0x4837e3",
+            "0x483995",
+            "0x483ba3",
+            "0x483d55",
+            "0x483f63",
+            "0x484114",
+            "0x484363",
+            "0x484514",
+            "0x4847a3",
+            "0x484954",
+            "0x484ca3",
+            "0x484eab",
+            "0x485c6d",
+            "0x485d3c",
+            "0x48649d",
+            "0x4866f7",
+            "0x48679e",
+            "0x487053",
+            "0x48725b",
+            "0x487fad",
+            "0x488087",
+            "0x4887fe",
+            "0x488a67",
+            "0x488b0d",
+            "0x489419",
+            "0x489623",
+            "0x48a599",
+            "0x48a687",
+            "0x48aeab",
+            "0x48b127",
+            "0x48b1eb",
+            "0x48bb13",
+            "0x48bd1b",
+            "0x48ca2b",
+            "0x48caf7",
+            "0x48d25d",
+            "0x48d4b6",
+            "0x48d55c",
+            "0x48dea9",
+            "0x48e0b2",
+            "0x48f42b",
+            "0x48f54e",
+            "0x4900ec",
+            "0x490b05",
+            "0x4916e7",
+            "0x491c1e",
+            "0x491e87",
+            "0x491f2d",
+            "0x4925da",
+            "0x493267",
+            "0x493add",
+            "0x4941e4",
+            "0x494dc7",
+            "0x4952fd",
+            "0x495566",
+            "0x49560c",
+            "0x495c43",
+            "0x496827",
+            "0x496d7a",
+            "0x496ff6",
+            "0x4970ba",
+            "0x4976d5",
+            "0x4982a7",
+            "0x4987de",
+            "0x498a47",
+            "0x498aed"
+          ],
+          "0x5a4360": [
+            "0x47e1d4",
+            "0x47e1eb",
+            "0x47e441",
+            "0x47f212",
+            "0x482b69",
+            "0x482d45",
+            "0x492383",
+            "0x4923c2",
+            "0x49401a",
+            "0x494053",
+            "0x495a43",
+            "0x495a82",
+            "0x497503",
+            "0x497542",
+            "0x498f23",
+            "0x498f62",
+            "0x4d6141",
+            "0x4d6164",
+            "0x4d64fc",
+            "0x4d66b8",
+            "0x4d66fa",
+            "0x4d69f0",
+            "0x4d6a05",
+            "0x4d7c9c"
+          ],
+          "0x5a42c0": [
+            "0x47e415",
+            "0x47e42d",
+            "0x492370",
+            "0x4923af",
+            "0x494007",
+            "0x494040",
+            "0x495a30",
+            "0x495a6f",
+            "0x4974f0",
+            "0x49752f",
+            "0x498f10",
+            "0x498f4f",
+            "0x4d64e7",
+            "0x4d66a9",
+            "0x4d66e8"
+          ]
+        },
+        "unknown_interior_direct_calls": [],
+        "assertion_strings": [
+          {
+            "address": "0x6ad698",
+            "text": "sourcetext_define_line",
+            "references": [
+              {
+                "instruction": "0x5a42a5",
+                "fixup": "0x5a42a6",
+                "enclosing_entry": "0x5a4240",
+                "inside_supported_cluster": true
+              }
+            ]
+          },
+          {
+            "address": "0x6ad6af",
+            "text": "SourceText.c",
+            "references": [
+              {
+                "instruction": "0x5a42aa",
+                "fixup": "0x5a42ab",
+                "enclosing_entry": "0x5a4240",
+                "inside_supported_cluster": true
+              }
+            ]
+          }
+        ],
+        "extra_saved_ghidra_entries": [],
+        "csv_sourcetext_family": [
+          {
+            "address": "0x5a4240",
+            "name": "sourcetext_define_line",
+            "inside_supported_cluster": true
+          },
+          {
+            "address": "0x5a42c0",
+            "name": "sourcetext_get_line_number",
+            "inside_supported_cluster": true
+          },
+          {
+            "address": "0x5a4360",
+            "name": "sourcetext_get_line_offset",
+            "inside_supported_cluster": true
+          }
+        ],
+        "original_physical_membership_proven": false,
+        "ownership_basis": "One filename-proved function plus the complete three-entry CSV sourcetext_ family, native matching packed file/list layouts, lexer/scanner callers and helper behavior. No original Windows object/debug membership is available.",
+        "excluded_neighbors": [
+          {
+            "address": "0x5a4210",
+            "reason": "Generic 12-byte member-function-pointer dispatch thunk; no SourceText ownership proof."
+          },
+          {
+            "address": "0x5a43e0",
+            "reason": "C++ operator new: malloc/new-handler/bad_alloc runtime references."
+          },
+          {
+            "address": "0x5a4480",
+            "reason": "C++ bad_alloc destructor/vtable support."
+          },
+          {
+            "address": "0x5a44e0",
+            "reason": "Generic checked arithmetic addition runtime helper."
+          },
+          {
+            "address": "0x5a4530",
+            "reason": "Generic checked arithmetic addition runtime helper."
+          },
+          {
+            "address": "0x5a4580",
+            "reason": "Generic checked arithmetic multiplication runtime helper."
+          },
+          {
+            "address": "0x5a45f0",
+            "reason": "Generic signed quotient/remainder runtime helper."
+          },
+          {
+            "address": "0x5a4680",
+            "reason": "Generic signed modulo runtime helper."
+          }
+        ]
+      },
+      "baseline_alias_policy": {
+        "safe_additional_aliases": [],
+        "retained_baseline_policy": "Retain provisional legacy CPrep line helpers; no API identity is proved."
+      },
+      "validation": {
+        "bounded_functions": 3,
+        "cases": 3600,
+        "passed": 3600,
+        "encoding": "Strict CP932 encoding passed."
+      },
+      "evidence": [
+        "build/SourceText/initial-attempt.json",
+        "build/SourceText/profiles.json",
+        "build/SourceText/scoped-bindings.json",
+        "build/SourceText/semantic-review.json",
+        "build/SourceText/execution-validation.json",
+        "build/SourceText/data-review.json",
+        "build/SourceText/membership-audit.json",
+        "build/SourceText/declaration-experiments.json",
+        "build/SourceText/formulation-experiments.json"
+      ],
+      "limitations": [
+        "Original physical TU membership is unproved because Windows object/debug metadata is unavailable. The complete three-entry CSV family, common native packed layouts, callers and the define_line filename/name assertion support the reconstruction. Whole-image audit found no outside assertion filename/name references, extra saved Ghidra entries or unknown direct interior calls.",
+        "The preceding12-byte member-function dispatch thunk and following operator-new/bad_alloc/arithmetic runtime helpers are excluded; adjacency alone is not treated as SourceText ownership proof.",
+        "sourcetext_get_line_number remains96.111115% in objdiff after47 equivalent declaration/expression formulations and ten whole-TU compiler profiles. Both other bodies and36 owned data bytes are exact. This is a complete best-effort TU attempt, not a100% TU match.",
+        "The3600 native instruction comparisons use deterministic models of shared allocation/list/load/scan/assertion helpers; complete synthetic heap, callback arguments/order, stack and callee-saved registers are checked. Models deliberately clobber ECX/EDX. These are bounded supporting checks, not a formal proof or full compiler execution.",
+        "Valid source/file/list/table records, sorted line starts and at least one allocated table entry for get_line_number are required. Invalid pointers, zero-length handle-backed number tables, unsorted tables, allocator failure and external helpers violating their native contracts are outside equivalence claims.",
+        "Only the two exact assertion string allocations are owned; dynamically allocated line records and shared helpers do not justify BSS definitions. No generated anonymous symbol bindings are added.",
+        "The related legacy CPrep line-role symbols do not establish identical APIs. No compatibility aliases are proposed; existing source-specific lexer imports should resolve to the canonical three native functions."
+      ],
+      "membership_reviewed": false,
+      "mapped_function_count": 3,
+      "data_complete": true,
+      "review_evidence": {
+        "initial-attempt.json": {
+          "source": "build/SourceText-native-candidate.c",
+          "compiler": "cw94",
+          "profile": "sourcetext-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/SourceText-native-candidate.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed\\build\\SourceText-native-candidate.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 3,
+          "functions": [
+            {
+              "name": "sourcetext_define_line",
+              "address": "0x5a4240",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "sourcetext_get_line_number",
+              "address": "0x5a42c0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "sourcetext_get_line_offset",
+              "address": "0x5a4360",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed\\build\\SourceText-native-candidate.c\\compiled.obj",
+          "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+          "source_stable": true,
+          "exact_count": 2,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        "profiles.json": [
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-intrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-nointrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-space-intrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-intrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-space-nointrinsics-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "nointrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-space-nointrinsics-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-noloop-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noloop",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noloop-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noloop",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noloop-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noloop-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "cw94",
+            "profile": "sourcetext-speed-noschedule-cw94",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noschedule",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noschedule-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-opt",
+              "noschedule",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noschedule-cw94\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-noschedule-cw94\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "pro8",
+            "profile": "sourcetext-speed-pro8",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro8\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro8/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro8\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro8\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "pro7",
+            "profile": "sourcetext-speed-pro7",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro7\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro7/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro7\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro7\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "pro6",
+            "profile": "sourcetext-speed-pro6",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro6\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro6/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro6\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro6\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/SourceText-native-candidate.c",
+            "compiler": "pro53",
+            "profile": "sourcetext-speed-pro53",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro53\\build\\SourceText-native-candidate.c\\compiled.obj",
+              "--",
+              "build/compilers/pro53/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "reuse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/SourceText-native-candidate.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro53\\build\\SourceText-native-candidate.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 3,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\sourcetext-speed-pro53\\build\\SourceText-native-candidate.c\\compiled.obj",
+            "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "scoped-bindings.json": {
+          "_sourcetext_filename": "0x6ad6af",
+          "_sourcetext_define_line_name": "0x6ad698",
+          "_sourcetext_define_line": "0x5a4240",
+          "_sourcetext_get_line_number": "0x5a42c0",
+          "_sourcetext_get_line_offset": "0x5a4360",
+          "_AppendGListLong": "0x46d6c0",
+          "_galloc": "0x46c6a0",
+          "_InitGList": "0x46d9a0",
+          "_preprocessor_internal_msg": "0x44ca40",
+          "_preprocessor_load_file": "0x44ba70",
+          "_scanner_getlinetable": "0x47eef0"
+        },
+        "semantic-review.json": {
+          "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+          "functions": [
+            {
+              "name": "sourcetext_define_line",
+              "address": "0x5a4240",
+              "size": 125,
+              "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+              "source_signature": "void sourcetext_define_line(SourceTextFile *file,SInt32 line,UInt32 offset)",
+              "compiled_size": 125,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+              "semantic_review": "Allocates a fresh16-byte list when the list or its handle is absent, stores it before initialization, and passes signed file-size/16 rounded toward zero plus4 as capacity. InitGList AX nonzero returns immediately. Matching list.size+4 against wrapping32-bit line*4 either appends offset or calls preprocessor_internal_msg(1,0,filename,function,117), then returns normally. Full code/fixup match; assertion callback continuation is preserved.",
+              "review_status": "strict_exact"
+            },
+            {
+              "name": "sourcetext_get_line_number",
+              "address": "0x5a42c0",
+              "size": 149,
+              "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+              "source_signature": "UInt32 sourcetext_get_line_number(SourceTextFile *file,UInt32 offset)",
+              "compiled_size": 149,
+              "strict_exact": false,
+              "objdiff_match_percent": 96.111115,
+              "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+              "semantic_review": "Null file returns0. Missing list/handle or requested offset beyond the final stored offset triggers source loading only when contents is absent; successful load or existing contents calls scanner_getlinetable. Reloads both list and handle afterward and returns0 if missing. Clamps offset to file size and binary-searches the sorted line-start array using signed low/high and arithmetic midpoint, returning the last line start<=offset plus1. Native/candidate differences are register allocation, equivalent instruction encoding and padding; all imported relocations resolve.1,200 bounded native comparisons pass.",
+              "review_status": "reviewed_equivalent_on_native_defined_domains"
+            },
+            {
+              "name": "sourcetext_get_line_offset",
+              "address": "0x5a4360",
+              "size": 123,
+              "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+              "source_signature": "UInt32 sourcetext_get_line_offset(SourceTextFile *file,UInt32 line)",
+              "compiled_size": 123,
+              "strict_exact": true,
+              "objdiff_match_percent": 100.0,
+              "identity_provenance": "User version10 CSV applied to native addresses, existing lexer bindings and matching native record semantics; define_line additionally contains its own exact assertion name and SourceText.c filename.",
+              "semantic_review": "Null file returns0. Missing list/handle or a line beyond list.size/4 performs the same guarded load/scan and reloads list/handle. Missing reloaded state returns0. Within the stored count, line0 becomes1 and returns table[line-1]; an out-of-range line returns file size. Full code/fixup match and1,200 bounded native comparisons pass.",
+              "review_status": "strict_exact"
+            }
+          ],
+          "all_identified_members_attempted": true,
+          "unattempted_members": [],
+          "abi_policy": "All three definitions use cdecl. Native SourceTextFile uses packed2 fields contents+10,size+14,line-list+18. The16-byte generic list stores a UInt32** handle at+0 and a byte count at+4. InitGList status isSInt16/AX; preprocessor_load_file isUInt8/AL. Lookup results are32-bit EAX; define_line has no return-value contract. Shared helper declarations are scoped to this source.",
+          "diagnostic_policy": "preprocessor_internal_msg is a five-argument callback. The native define_line assertion path returns after this call; its handler is allowed to return in semantic checks.",
+          "baseline_review": "The Pro8 map contains CPrep_InitLineOffsets and CPrep_ComputeLineColumn roles, but the retained1.2.5 source/header tree contains no corresponding definitions. SourceText has native handle-backed records and three separately named APIs. No source body or unsafe compatibility alias is invented from role similarity alone."
+        },
+        "execution-validation.json": {
+          "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+          "functions": [
+            {
+              "name": "sourcetext_define_line",
+              "passed": 1200,
+              "failures": [],
+              "observed_helpers": [
+                "0x44ca40",
+                "0x46c6a0",
+                "0x46d6c0",
+                "0x46d9a0"
+              ]
+            },
+            {
+              "name": "sourcetext_get_line_number",
+              "passed": 1200,
+              "failures": [],
+              "observed_helpers": [
+                "0x44ba70",
+                "0x47eef0"
+              ]
+            },
+            {
+              "name": "sourcetext_get_line_offset",
+              "passed": 1200,
+              "failures": [],
+              "observed_helpers": [
+                "0x44ba70",
+                "0x47eef0"
+              ]
+            }
+          ],
+          "total_passed": 3600,
+          "comparison": "Runs actual native/candidate x86 under Unicorn with deterministic external helper models; compares returned EAX for nonvoid bodies, complete synthetic heap, helper arguments/order, allocation cursor, cdecl stack and callee-saved registers. Helper models deliberately clobber ECX/EDX.",
+          "domains": "Valid allocated file/list/table records with at least one entry for binary-search lookups. Tests null file, absent list/handle, source content/load gates, replacement/clearing of scanner tables, offset clamp, sorted-table boundaries, line zero/count/count+1/UINT_MAX, signed-size division, init AX result and nonterminal assertion continuation. Allocator failure, invalid pointers, unsorted tables and impossible table byte counts are outside claims."
+        },
+        "data-review.json": {
+          "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+          "complete": true,
+          "records": [
+            {
+              "name": "_sourcetext_filename",
+              "section": ".data",
+              "size": 13,
+              "method": "named binding",
+              "address": "0x006ad6af",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_sourcetext_define_line_name",
+              "section": ".data",
+              "size": 23,
+              "method": "named binding",
+              "address": "0x006ad698",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "emitted_sections": [
+            {
+              "name": ".drectve",
+              "size": 0,
+              "flags": "0x100a00"
+            },
+            {
+              "name": ".data",
+              "size": 13,
+              "flags": "0xc0101040"
+            },
+            {
+              "name": ".data",
+              "size": 23,
+              "flags": "0xc0101040"
+            },
+            {
+              "name": ".text",
+              "size": 125,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 149,
+              "flags": "0x60501020"
+            },
+            {
+              "name": ".text",
+              "size": 123,
+              "flags": "0x60501020"
+            }
+          ],
+          "emitted_functions": [
+            "_sourcetext_define_line",
+            "_sourcetext_get_line_number",
+            "_sourcetext_get_line_offset"
+          ],
+          "ownership_policy": "Only the two native assertion string allocations are owned here: sourcetext_define_line at6ad698 (23 bytes) and SourceText.c at6ad6af (13 bytes). No BSS; line lists and tables belong to dynamically allocated file records. Generic allocator/list helpers remain external."
+        },
+        "membership-audit.json": {
+          "supported_cluster": [
+            "0x5a4240",
+            "0x5a43e0"
+          ],
+          "identified_members": 3,
+          "direct_calls": {
+            "0x5a4240": [
+              "0x47d712",
+              "0x47da33",
+              "0x47fcd7",
+              "0x4816f2",
+              "0x482c0f",
+              "0x482ca7",
+              "0x482da0",
+              "0x482de4",
+              "0x482ec3",
+              "0x4837e3",
+              "0x483995",
+              "0x483ba3",
+              "0x483d55",
+              "0x483f63",
+              "0x484114",
+              "0x484363",
+              "0x484514",
+              "0x4847a3",
+              "0x484954",
+              "0x484ca3",
+              "0x484eab",
+              "0x485c6d",
+              "0x485d3c",
+              "0x48649d",
+              "0x4866f7",
+              "0x48679e",
+              "0x487053",
+              "0x48725b",
+              "0x487fad",
+              "0x488087",
+              "0x4887fe",
+              "0x488a67",
+              "0x488b0d",
+              "0x489419",
+              "0x489623",
+              "0x48a599",
+              "0x48a687",
+              "0x48aeab",
+              "0x48b127",
+              "0x48b1eb",
+              "0x48bb13",
+              "0x48bd1b",
+              "0x48ca2b",
+              "0x48caf7",
+              "0x48d25d",
+              "0x48d4b6",
+              "0x48d55c",
+              "0x48dea9",
+              "0x48e0b2",
+              "0x48f42b",
+              "0x48f54e",
+              "0x4900ec",
+              "0x490b05",
+              "0x4916e7",
+              "0x491c1e",
+              "0x491e87",
+              "0x491f2d",
+              "0x4925da",
+              "0x493267",
+              "0x493add",
+              "0x4941e4",
+              "0x494dc7",
+              "0x4952fd",
+              "0x495566",
+              "0x49560c",
+              "0x495c43",
+              "0x496827",
+              "0x496d7a",
+              "0x496ff6",
+              "0x4970ba",
+              "0x4976d5",
+              "0x4982a7",
+              "0x4987de",
+              "0x498a47",
+              "0x498aed"
+            ],
+            "0x5a4360": [
+              "0x47e1d4",
+              "0x47e1eb",
+              "0x47e441",
+              "0x47f212",
+              "0x482b69",
+              "0x482d45",
+              "0x492383",
+              "0x4923c2",
+              "0x49401a",
+              "0x494053",
+              "0x495a43",
+              "0x495a82",
+              "0x497503",
+              "0x497542",
+              "0x498f23",
+              "0x498f62",
+              "0x4d6141",
+              "0x4d6164",
+              "0x4d64fc",
+              "0x4d66b8",
+              "0x4d66fa",
+              "0x4d69f0",
+              "0x4d6a05",
+              "0x4d7c9c"
+            ],
+            "0x5a42c0": [
+              "0x47e415",
+              "0x47e42d",
+              "0x492370",
+              "0x4923af",
+              "0x494007",
+              "0x494040",
+              "0x495a30",
+              "0x495a6f",
+              "0x4974f0",
+              "0x49752f",
+              "0x498f10",
+              "0x498f4f",
+              "0x4d64e7",
+              "0x4d66a9",
+              "0x4d66e8"
+            ]
+          },
+          "unknown_interior_direct_calls": [],
+          "assertion_strings": [
+            {
+              "address": "0x6ad698",
+              "text": "sourcetext_define_line",
+              "references": [
+                {
+                  "instruction": "0x5a42a5",
+                  "fixup": "0x5a42a6",
+                  "enclosing_entry": "0x5a4240",
+                  "inside_supported_cluster": true
+                }
+              ]
+            },
+            {
+              "address": "0x6ad6af",
+              "text": "SourceText.c",
+              "references": [
+                {
+                  "instruction": "0x5a42aa",
+                  "fixup": "0x5a42ab",
+                  "enclosing_entry": "0x5a4240",
+                  "inside_supported_cluster": true
+                }
+              ]
+            }
+          ],
+          "extra_saved_ghidra_entries": [],
+          "csv_sourcetext_family": [
+            {
+              "address": "0x5a4240",
+              "name": "sourcetext_define_line",
+              "inside_supported_cluster": true
+            },
+            {
+              "address": "0x5a42c0",
+              "name": "sourcetext_get_line_number",
+              "inside_supported_cluster": true
+            },
+            {
+              "address": "0x5a4360",
+              "name": "sourcetext_get_line_offset",
+              "inside_supported_cluster": true
+            }
+          ],
+          "original_physical_membership_proven": false,
+          "ownership_basis": "One filename-proved function plus the complete three-entry CSV sourcetext_ family, native matching packed file/list layouts, lexer/scanner callers and helper behavior. No original Windows object/debug membership is available.",
+          "excluded_neighbors": [
+            {
+              "address": "0x5a4210",
+              "reason": "Generic 12-byte member-function-pointer dispatch thunk; no SourceText ownership proof."
+            },
+            {
+              "address": "0x5a43e0",
+              "reason": "C++ operator new: malloc/new-handler/bad_alloc runtime references."
+            },
+            {
+              "address": "0x5a4480",
+              "reason": "C++ bad_alloc destructor/vtable support."
+            },
+            {
+              "address": "0x5a44e0",
+              "reason": "Generic checked arithmetic addition runtime helper."
+            },
+            {
+              "address": "0x5a4530",
+              "reason": "Generic checked arithmetic addition runtime helper."
+            },
+            {
+              "address": "0x5a4580",
+              "reason": "Generic checked arithmetic multiplication runtime helper."
+            },
+            {
+              "address": "0x5a45f0",
+              "reason": "Generic signed quotient/remainder runtime helper."
+            },
+            {
+              "address": "0x5a4680",
+              "reason": "Generic signed modulo runtime helper."
+            }
+          ]
+        },
+        "declaration-experiments.json": [
+          {
+            "index": 0,
+            "source": "build/SourceText/declaration-0.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "source": "build/SourceText/declaration-1.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "source": "build/SourceText/declaration-2.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "source": "build/SourceText/declaration-3.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "source": "build/SourceText/declaration-4.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "source": "build/SourceText/declaration-5.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "source": "build/SourceText/declaration-6.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "source": "build/SourceText/declaration-7.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "source": "build/SourceText/declaration-8.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "source": "build/SourceText/declaration-9.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "source": "build/SourceText/declaration-10.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "source": "build/SourceText/declaration-11.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "source": "build/SourceText/declaration-12.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 13,
+            "source": "build/SourceText/declaration-13.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 14,
+            "source": "build/SourceText/declaration-14.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 15,
+            "source": "build/SourceText/declaration-15.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 16,
+            "source": "build/SourceText/declaration-16.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 17,
+            "source": "build/SourceText/declaration-17.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 18,
+            "source": "build/SourceText/declaration-18.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 19,
+            "source": "build/SourceText/declaration-19.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 20,
+            "source": "build/SourceText/declaration-20.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 21,
+            "source": "build/SourceText/declaration-21.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 22,
+            "source": "build/SourceText/declaration-22.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 23,
+            "source": "build/SourceText/declaration-23.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 24,
+            "source": "build/SourceText/declaration-24.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 25,
+            "source": "build/SourceText/declaration-25.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 26,
+            "source": "build/SourceText/declaration-26.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 27,
+            "source": "build/SourceText/declaration-27.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 28,
+            "source": "build/SourceText/declaration-28.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 29,
+            "source": "build/SourceText/declaration-29.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 30,
+            "source": "build/SourceText/declaration-30.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 31,
+            "source": "build/SourceText/declaration-31.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 32,
+            "source": "build/SourceText/declaration-32.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 33,
+            "source": "build/SourceText/declaration-33.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 34,
+            "source": "build/SourceText/declaration-34.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 35,
+            "source": "build/SourceText/declaration-35.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          }
+        ],
+        "formulation-experiments.json": [
+          {
+            "index": 0,
+            "source": "build/SourceText/formulation-0.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "source": "build/SourceText/formulation-1.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "source": "build/SourceText/formulation-2.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "source": "build/SourceText/formulation-3.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "source": "build/SourceText/formulation-4.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "source": "build/SourceText/formulation-5.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "source": "build/SourceText/formulation-6.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "source": "build/SourceText/formulation-7.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "source": "build/SourceText/formulation-8.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "source": "build/SourceText/formulation-9.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "source": "build/SourceText/formulation-10.c",
+            "compiled": true,
+            "exact": 2,
+            "functions": [
+              {
+                "name": "sourcetext_define_line",
+                "address": "0x5a4240",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_number",
+                "address": "0x5a42c0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "sourcetext_get_line_offset",
+                "address": "0x5a4360",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ]
+          }
+        ],
+        "normal_project": {
+          "source": "src/GC_3_0a5_2/frontend/SourceText.c",
+          "source_sha256": "be7b50d3bb9c2719a63640382067c0519cf771a0499d674e0ddcf24a0908a826",
+          "candidate_project_sections_sha256": "26b40293e935eb6be1d36c980f94699dee3528b71698349f274fe7998622e49a",
+          "all_code_and_data_sections_equal": true,
+          "common_symbols_equal": true,
+          "checked_functions": 3,
+          "functions": [
+            {
+              "name": "sourcetext_define_line",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "sourcetext_get_line_number",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "sourcetext_get_line_offset",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            }
+          ]
+        }
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 3,
+        "attempted_members": 3,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All three identified bodies reviewed and attempted; ten compiling profiles and 47 additional formulations. All three pass 3600 bounded native instruction comparisons in total. Normal-project full build, strict match verification, objdiff-cli, image partition audit and CP932 checks passed. Original physical membership remains unproved."
+      },
+      "integration_review": {
+        "legacy": "No API identity is proved for provisional old CPrep line-role helpers; no compatibility aliases or guards added.",
+        "data": "Only the two exact assertion string allocations are claimed. Dynamic line records, shared helpers and neighboring runtime routines remain separate.",
+        "normal_project_checks": {
+          "ninja_all_source_progress": true,
+          "strict_exact_total": 856,
+          "mapped_total": 1897,
           "objdiff_cli": true,
           "inventory_partition": true,
           "ownership_conflicts": 0,

@@ -3610,5 +3610,17 @@
   "fn_0063ec20": {
     "name": "IRO_OptimizeNonRegAccesses",
     "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_005a4240": {
+    "name": "sourcetext_define_line",
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c"
+  },
+  "fn_005a42c0": {
+    "name": "sourcetext_get_line_number",
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c"
+  },
+  "fn_005a4360": {
+    "name": "sourcetext_get_line_offset",
+    "source": "src/GC_3_0a5_2/frontend/SourceText.c"
   }
 }

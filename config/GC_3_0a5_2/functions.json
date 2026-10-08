@@ -2774,19 +2774,6 @@
     }
   },
   {
-    "name": "free_if_not_null",
-    "address": "0x00421770",
-    "size": 16,
-    "source": "src/driver/CLSegs.c",
-    "baseline_name": "free_if_not_null",
-    "baseline_address": "0x004277b0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
     "name": "allocate_license_slot",
     "address": "0x00421830",
     "size": 168,
@@ -4800,54 +4787,100 @@
     }
   },
   {
-    "name": "CLSegs_InitSegments",
-    "address": "0x0043c520",
+    "name": "Segment_New",
+    "address": "0x43c4d0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Segment_Free",
+    "address": "0x43c500",
+    "size": 17,
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    },
+    "baseline_name": "free_if_not_null",
+    "baseline_address": "0x004277b0"
+  },
+  {
+    "name": "Segments_Initialize",
+    "address": "0x43c520",
     "size": 200,
-    "source": "src/driver/CLSegs.c",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
     "baseline_name": "CLSegs_InitSegments",
     "baseline_address": "0x004277c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLSegs_FreeValues",
-    "address": "0x0043c5f0",
+    "name": "Segments_Terminate",
+    "address": "0x43c5f0",
     "size": 98,
-    "source": "src/driver/CLSegs.c",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
     "baseline_name": "CLSegs_FreeValues",
     "baseline_address": "0x00427870",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "allocate_access_path_value_index",
-    "address": "0x0043c660",
+    "name": "Segments_GrowSegments",
+    "address": "0x43c660",
     "size": 105,
-    "source": "src/driver/CLSegs.c",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
     "baseline_name": "allocate_access_path_value_index",
     "baseline_address": "0x004278d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLSegs_AddValue",
-    "address": "0x0043c6d0",
+    "name": "Segments_AddSegment",
+    "address": "0x43c6d0",
     "size": 67,
-    "source": "src/driver/CLSegs.c",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
     "baseline_name": "CLSegs_AddValue",
     "baseline_address": "0x00427930",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Segments_GetSegment",
+    "address": "0x43c720",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Segments_Count",
+    "address": "0x43c770",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+    "identity_evidence": "CLSegs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

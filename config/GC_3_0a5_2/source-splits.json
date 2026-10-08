@@ -898,5 +898,41 @@
   "CLOverlays_GetValueCount": {
     "name": "Overlay_CountFiles",
     "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "Segment_New": {
+    "name": "Segment_New",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "Segment_Free": {
+    "name": "Segment_Free",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "CLSegs_InitSegments": {
+    "name": "Segments_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "CLSegs_FreeValues": {
+    "name": "Segments_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "allocate_access_path_value_index": {
+    "name": "Segments_GrowSegments",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "CLSegs_AddValue": {
+    "name": "Segments_AddSegment",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "Segments_GetSegment": {
+    "name": "Segments_GetSegment",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "Segments_Count": {
+    "name": "Segments_Count",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "free_if_not_null": {
+    "name": "Segment_Free",
+    "source": "src/GC_3_0a5_2/driver/CLSegs.c"
   }
 }

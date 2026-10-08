@@ -2510,6 +2510,198 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+      "original_filename": "CLSegs.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Segment_New",
+          "address": "0x43c4d0",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Segment_Free",
+          "address": "0x43c500",
+          "size": 17,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Segments_Initialize",
+          "address": "0x0043c520",
+          "size": 200,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043c576",
+            "0x0043c5be",
+            "0x0043c5de"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c"
+        },
+        {
+          "name": "Segments_Terminate",
+          "address": "0x0043c5f0",
+          "size": 98,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043c62f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c"
+        },
+        {
+          "name": "Segments_GrowSegments",
+          "address": "0x0043c660",
+          "size": 105,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043c69e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c"
+        },
+        {
+          "name": "Segments_AddSegment",
+          "address": "0x43c6d0",
+          "size": 67,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Segments_GetSegment",
+          "address": "0x0043c720",
+          "size": 69,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043c751"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c"
+        },
+        {
+          "name": "Segments_Count",
+          "address": "0x0043c770",
+          "size": 43,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043c791"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLSegs.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Segment_New",
+          "mac_address": "0x0001d338",
+          "linkage_names": [
+            "Segment_New"
+          ]
+        },
+        {
+          "name": "Segment_Free",
+          "mac_address": "0x0001d3a0",
+          "linkage_names": [
+            "Segment_Free"
+          ]
+        },
+        {
+          "name": "Segments_Initialize",
+          "mac_address": "0x0001d3c8",
+          "linkage_names": [
+            "Segments_Initialize"
+          ]
+        },
+        {
+          "name": "Segments_Terminate",
+          "mac_address": "0x0001d4d4",
+          "linkage_names": [
+            "Segments_Terminate"
+          ]
+        },
+        {
+          "name": "Segments_GrowSegments",
+          "mac_address": "0x0001d57c",
+          "linkage_names": [
+            "Segments_GrowSegments"
+          ]
+        },
+        {
+          "name": "Segments_AddSegment",
+          "mac_address": "0x0001d628",
+          "linkage_names": [
+            "Segments_AddSegment"
+          ]
+        },
+        {
+          "name": "Segments_InsertSegment",
+          "mac_address": "0x0001d698",
+          "linkage_names": [
+            "Segments_InsertSegment"
+          ]
+        },
+        {
+          "name": "Segments_DeleteSegment",
+          "mac_address": "0x0001d740",
+          "linkage_names": [
+            "Segments_DeleteSegment"
+          ]
+        },
+        {
+          "name": "Segments_GetSegment",
+          "mac_address": "0x0001d7dc",
+          "linkage_names": [
+            "Segments_GetSegment"
+          ]
+        },
+        {
+          "name": "Segments_Count",
+          "mac_address": "0x0001d860",
+          "linkage_names": [
+            "Segments_Count"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
       "original_filename": "CLWriteObjectFile.c",
       "evidence": [
@@ -19129,185 +19321,6 @@
           "mac_address": "0x00011f04",
           "linkage_names": [
             "Proj_Terminate"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLSegs.c",
-      "original_filename": "CLSegs.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "free_if_not_null",
-          "address": "0x00421770",
-          "size": 16,
-          "compiled_source": "src/driver/CLSegs.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLSegs_InitSegments",
-          "address": "0x0043c520",
-          "size": 200,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043c576",
-            "0x0043c5be",
-            "0x0043c5de"
-          ],
-          "compiled_source": "src/driver/CLSegs.c"
-        },
-        {
-          "name": "CLSegs_FreeValues",
-          "address": "0x0043c5f0",
-          "size": 98,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043c62f"
-          ],
-          "compiled_source": "src/driver/CLSegs.c"
-        },
-        {
-          "name": "allocate_access_path_value_index",
-          "address": "0x0043c660",
-          "size": 105,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043c69e"
-          ],
-          "compiled_source": "src/driver/CLSegs.c"
-        },
-        {
-          "name": "CLSegs_AddValue",
-          "address": "0x0043c6d0",
-          "size": 67,
-          "compiled_source": "src/driver/CLSegs.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_0043c720",
-          "address": "0x0043c720",
-          "size": 69,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043c751"
-          ]
-        },
-        {
-          "name": "FUN_0043c770",
-          "address": "0x0043c770",
-          "size": 43,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043c791"
-          ]
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Segment_New",
-          "mac_address": "0x0001d338",
-          "linkage_names": [
-            "Segment_New"
-          ]
-        },
-        {
-          "name": "Segment_Free",
-          "mac_address": "0x0001d3a0",
-          "linkage_names": [
-            "Segment_Free"
-          ]
-        },
-        {
-          "name": "Segments_Initialize",
-          "mac_address": "0x0001d3c8",
-          "linkage_names": [
-            "Segments_Initialize"
-          ]
-        },
-        {
-          "name": "Segments_Terminate",
-          "mac_address": "0x0001d4d4",
-          "linkage_names": [
-            "Segments_Terminate"
-          ]
-        },
-        {
-          "name": "Segments_GrowSegments",
-          "mac_address": "0x0001d57c",
-          "linkage_names": [
-            "Segments_GrowSegments"
-          ]
-        },
-        {
-          "name": "Segments_AddSegment",
-          "mac_address": "0x0001d628",
-          "linkage_names": [
-            "Segments_AddSegment"
-          ]
-        },
-        {
-          "name": "Segments_InsertSegment",
-          "mac_address": "0x0001d698",
-          "linkage_names": [
-            "Segments_InsertSegment"
-          ]
-        },
-        {
-          "name": "Segments_DeleteSegment",
-          "mac_address": "0x0001d740",
-          "linkage_names": [
-            "Segments_DeleteSegment"
-          ]
-        },
-        {
-          "name": "Segments_GetSegment",
-          "mac_address": "0x0001d7dc",
-          "linkage_names": [
-            "Segments_GetSegment"
-          ]
-        },
-        {
-          "name": "Segments_Count",
-          "mac_address": "0x0001d860",
-          "linkage_names": [
-            "Segments_Count"
           ]
         }
       ],
@@ -51697,7 +51710,7 @@
       }
     },
     "src/driver/CLSegs.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -51826,7 +51839,8 @@
           "space-nointrinsics": "e967fa2ae0833da4e9f40aff4ebcedb27a36df9940e548fcaba0f4eab8df7388",
           "space-intrinsics": "e67a513781315540b8070786ad312f1c92c6a76915811de1ccda94d5aa6faa7e"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLSegs.c"
     },
     "src/driver/CLStaticMain.c": {
       "status": "unattempted",
@@ -65349,6 +65363,264 @@
       "bss_bytes": 0,
       "membership_reviewed": true,
       "strict_exact_count": 17
+    },
+    "src/GC_3_0a5_2/driver/CLSegs.c": {
+      "source": "src\\GC_3_0a5_2\\driver\\CLSegs.c",
+      "source_sha256": "94c08f3bb2886220dfc2bcc68e7b799df2e2a02b4bccb1fc40d3566e836d9ca9",
+      "status": "exact",
+      "functions": [
+        {
+          "name": "Segment_New",
+          "address": "0x43c4d0",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "Segment_Free",
+          "address": "0x43c500",
+          "size": 17,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 17
+        },
+        {
+          "name": "Segments_Initialize",
+          "address": "0x43c520",
+          "size": 200,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 200
+        },
+        {
+          "name": "Segments_Terminate",
+          "address": "0x43c5f0",
+          "size": 98,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 98
+        },
+        {
+          "name": "Segments_GrowSegments",
+          "address": "0x43c660",
+          "size": 105,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 105
+        },
+        {
+          "name": "Segments_AddSegment",
+          "address": "0x43c6d0",
+          "size": 67,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 67
+        },
+        {
+          "name": "Segments_GetSegment",
+          "address": "0x43c720",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 69
+        },
+        {
+          "name": "Segments_Count",
+          "address": "0x43c770",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLSegs.c",
+          "exact": true,
+          "compiled_size": 43
+        }
+      ],
+      "source_bindings": {
+        "_xmalloc@8": "0x426300",
+        "_xrealloc@12": "0x4263e0",
+        "_xfree@4": "0x426490",
+        "_CLInternalError": "0x414bb0",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_Segment_New": "0x43c4d0",
+        "_Segment_Free": "0x43c500",
+        "_Segments_Initialize": "0x43c520",
+        "_Segments_Terminate": "0x43c5f0",
+        "_Segments_GrowSegments": "0x43c660",
+        "_Segments_AddSegment": "0x43c6d0",
+        "_Segments_GetSegment": "0x43c720",
+        "_Segments_Count": "0x43c770"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@93",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671e88",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@94",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00671ea4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@120",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671e7c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@121",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00671e94",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@122",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00671e9c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@123",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00671eb4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@151",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671ebc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "642",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "76",
+          "match_percent": 100.0
+        }
+      ],
+      "compiler": "build/compilers/cw94/mwcc.exe",
+      "flags": "-c -O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+      "experiments": {
+        "profiles": 1,
+        "source_compiles": 1,
+        "first_compile_exact_functions": 8
+      },
+      "record_ABI": {
+        "Segment": {
+          "size": 34,
+          "name": 0,
+          "attrs": 32,
+          "packing": 2
+        },
+        "Segments": {
+          "size": 8,
+          "segsArray": 0,
+          "arraySize": 4,
+          "segsCount": 6
+        }
+      },
+      "membership": {
+        "Mac_explicit_STABS": 10,
+        "Windows": 8,
+        "actual_cluster": "43c4d0..43c79b, contiguous order matching all retained Mac functions",
+        "missing_candidates": [
+          "Segment_New43c4d0/43 has no assertion.",
+          "Segment_Free43c500/17 has no assertion."
+        ],
+        "Mac_functions_absent_in_Windows": [
+          "Segments_InsertSegment",
+          "Segments_DeleteSegment"
+        ],
+        "false_baseline_mapping": {
+          "name": "free_if_not_null",
+          "address": "0x421770",
+          "size": 16,
+          "retained_in_Windows": true,
+          "belongs_to_this_TU": false,
+          "behavior": "NULL argument does nothing; otherwise CRT free4057b0 then caller stack cleanup. Actual Segment_Free43c500 calls xfree426490 with callee cleanup.",
+          "ownership": "Unknown original name/TU. Adjacent421710/740 CRT malloc/realloc wrappers and421780 formatted string helper; CLLicenses.c begins421830. No explicit evidence suffices to rename.",
+          "evidence": "build/segs-unknown421770-neighborhood.txt"
+        },
+        "assertion_ownership_check": {
+          "GetSegment": "43c747 PUSH671e88,43c74c PUSH671ea4,43c751 callCLIO_ReportAssertionFailure.",
+          "Count": "43c787 PUSH671e88,43c78c PUSH671ea4,43c791 callCLIO_ReportAssertionFailure.",
+          "original_literals": {
+            "0x671e88": "CLSegs.c",
+            "0x671ea4": "segs != NULL"
+          },
+          "conclusion": "No CLAccessPaths conflict; existing saved assertion inventory agrees CLSegs.c. Explicit Mac names, record offsets and contiguous retained function order support identities."
+        },
+        "data": "Seven literal objects totaling76B writable .data; no emitted BSS/rodata or static named data in explicit Mac STABS block."
+      },
+      "semantic_review": {
+        "Segment_New": "Allocates34B using xmalloc@8(NULL,34), strncpy32 then name31=0; writes16bit attrs. No extra allocation failure check.",
+        "Segment_Free": "NULL is ignored; otherwise xfree@4.",
+        "Segments_Initialize": "Asserts segs!=NULL at36; zeroes8B then redundantly assigns arrayNULL; Jump Table attrs40 inserted idx0/assert44; Main attrs65535 inserted idx1/assert49; returns1.",
+        "Segments_Terminate": "Asserts57; if array nonNULL walks unsigned16 index<segsCount, calls Segment_Free, then xfree array; only pointer reset, counts left unchanged, returns1.",
+        "Segments_GrowSegments": "Static function from lowercase STABS f linkage. Asserts78; unsigned16 count>=capacity grows capacity by20 with16bit wrapping; xrealloc@12 labelsegments capacity*4; count increments16bit, prior count written to supplied index, returns1.",
+        "Segments_AddSegment": "GrowSegments outputni; ontrue writesarray[ni]=seg and*index=ni, returns1; falsebranch returns0. Output pointer is not treated as optional.",
+        "Segments_GetSegment": "Unsigned16 index comparedcount, returnsarray[index] orNULL; asserts137. Parameter truncation matches original word load.",
+        "Segments_Count": "Asserts147, returnsstored unsigned16 count.",
+        "strict_proof": "All8 exact machine bodies and relocation sites include branch paths, memory accesses/writes, argument widths, call cleanup, literals and errorcalls."
+      },
+      "provenance": {
+        "binary": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+        "binary_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "symbolmap": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "symbolmap_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "original_disasm": "build/segs-retail.txt",
+        "function_extents": "Reachable x86 CFG including coldasserttail, excluding alignmentNOPs. Segment_New ends43c4fb, Segment_Free ends43c511, Count ends43c79b.",
+        "Ghidra_live": "Unavailable; saved Ghidra entries plus original PE Capstone used."
+      },
+      "encoding": "CP932 succeeds; tools/check_sjis.py absent.",
+      "code_bytes": 642,
+      "initialized_data_bytes": 76,
+      "bss_bytes": 0,
+      "membership_reviewed": true,
+      "strict_exact_count": 8
     }
   },
   "ownership_review": {

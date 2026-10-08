@@ -62,6 +62,18 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLSegs.c: complete Windows unit
+
+All eight Windows functions match 642 code bytes and 76 initialized bytes.
+The canonical Segment_/Segments_ names and static GrowSegments come from the
+Mac map. Windows has no retained InsertSegment/DeleteSegment bodies in the
+reviewed cluster. Segment_New and Segment_Free were missing from the initial
+inventory. The imported free_if_not_null match at 0x00421770 was a false
+identity: it calls CRT free, while Segment_Free at 0x0043c500 calls xfree.
+The displaced 16-byte body remains in the original image with unknown name
+and ownership; it is not treated as removed code. Full-TU objdiff and strict
+relocation checks pass.
+
 ## CLOverlays.c: complete Windows unit
 
 All seventeen Windows functions match 1,772 code bytes and 144 initialized

@@ -236,7 +236,8 @@
     "src/GC_3_0a5_2/backend/BE_symbol.c",
     "src/GC_3_0a5_2/frontend/CScope.c",
     "src/GC_3_0a5_2/backend/Coloring.c",
-    "src/GC_3_0a5_2/backend/InterferenceGraph.c"
+    "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "src/GC_3_0a5_2/backend/Spill.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3713,6 +3714,29 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/Spill.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-opt",
+        "noloop",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -4487,7 +4511,8 @@
     "src/GC_3_0a5_2/frontend/CScope/CScope_GetScope",
     "src/GC_3_0a5_2/frontend/CScope/CScope_Cleanup",
     "src/GC_3_0a5_2/backend/InterferenceGraph/interferes",
-    "src/GC_3_0a5_2/backend/InterferenceGraph/makeinterfere"
+    "src/GC_3_0a5_2/backend/InterferenceGraph/makeinterfere",
+    "src/GC_3_0a5_2/backend/Spill/makespilltemporary"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -6965,6 +6990,37 @@
       "_fn_0058ba80": "0x58ba80",
       "_fn_00579300": "0x579300",
       "_fn_00579790": "0x579790"
+    },
+    "src/GC_3_0a5_2/backend/Spill.c": {
+      "_register_class": "0x726060",
+      "_used_registers": "0x716ea0",
+      "_first_virtual": "0x710274",
+      "_interferencegraph": "0x711afc",
+      "_pcodeblocks": "0x7108c8",
+      "_native_loads": "0x704938",
+      "_native_stores": "0x70493c",
+      "_native_remats": "0x704940",
+      "_native_load_weight": "0x704944",
+      "_native_store_weight": "0x704948",
+      "_native_remat_weight": "0x70494c",
+      "_rTEMP_for_VR_spill": "0x71013c",
+      "_last_unused_vreg_before_spilling": "0x6fbf18",
+      "_fn_0046c660": "0x46c660",
+      "_fn_0046c400": "0x46c400",
+      "_fn_00455e00": "0x455e00",
+      "_fn_0046bc00": "0x46bc00",
+      "_fn_0045a250": "0x45a250",
+      "_fn_005ed260": "0x5ed260",
+      "_fn_005789b0": "0x5789b0",
+      "_fn_00578970": "0x578970",
+      "_fn_0058a4e0": "0x58a4e0",
+      "_fn_00579790": "0x579790",
+      "_fn_00582db0": "0x582db0",
+      "_fn_00579230": "0x579230",
+      "_fn_005829d0": "0x5829d0",
+      "_fn_00582a50": "0x582a50",
+      "_fn_00578a20": "0x578a20",
+      "_fn_00578dd0": "0x578dd0"
     }
   },
   "original_source_units": {
@@ -6985,6 +7041,7 @@
     "StackFrame.c": "src/GC_3_0a5_2/backend/StackFrame.c",
     "CScope.c": "src/GC_3_0a5_2/frontend/CScope.c",
     "Coloring.c": "src/GC_3_0a5_2/backend/Coloring.c",
-    "InterferenceGraph.c": "src/GC_3_0a5_2/backend/InterferenceGraph.c"
+    "InterferenceGraph.c": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
+    "Spill.c": "src/GC_3_0a5_2/backend/Spill.c"
   }
 }

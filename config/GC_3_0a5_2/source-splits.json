@@ -2846,5 +2846,29 @@
   "fn_00620f10": {
     "name": "estimatespillcosts",
     "source": "src/GC_3_0a5_2/backend/InterferenceGraph.c"
+  },
+  "fn_00620500": {
+    "name": "insertspillcode",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_006206f0": {
+    "name": "assign_spill_locations",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_006209a0": {
+    "name": "spillcall",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_00620a40": {
+    "name": "spillcopy",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_00620c40": {
+    "name": "spillinstruction",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_00620ec0": {
+    "name": "makespilltemporary",
+    "source": "src/GC_3_0a5_2/backend/Spill.c"
   }
 }

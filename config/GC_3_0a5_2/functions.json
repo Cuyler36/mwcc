@@ -19948,6 +19948,72 @@
     }
   },
   {
+    "name": "insertspillcode",
+    "address": "0x620500",
+    "size": 494,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_spill_locations",
+    "address": "0x6206f0",
+    "size": 683,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "spillcall",
+    "address": "0x6209a0",
+    "size": 145,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "spillcopy",
+    "address": "0x620a40",
+    "size": 506,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "spillinstruction",
+    "address": "0x620c40",
+    "size": 633,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "makespilltemporary",
+    "address": "0x620ec0",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/backend/Spill.c",
+    "identity_evidence": "Mac candidate identity plus native behavior, assertion/state/call/seam review; unsupported names retain original address.",
+    "boundary_evidence": {
+      "method": "Reviewed native reachable CFG and saved entries; out-of-cluster spill-cost member independently identified",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "estimatespillcosts",
     "address": "0x620f10",
     "size": 429,

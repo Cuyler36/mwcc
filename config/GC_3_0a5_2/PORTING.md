@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLFiles.c: complete Windows unit
+
+All fifteen Windows functions match 1,098 code bytes and 104 initialized
+bytes. Fourteen use their original File_, Files_, VFile_, and VFiles_ names.
+The added file-map helper asserts CLFiles.c and is called by Files_GetFile;
+its unavailable static name remains an address alias. GC3 expands File to
+0x8b4 bytes, embeds native handles/specs, and lazily rebuilds an indexed file
+map. Insertions renumber following files and invalidate that map. Full-TU
+objdiff and strict relocation checks pass with CW94 speed/intrinsic settings.
+
 ## StringUtils.c: reviewed mapped functions, incomplete membership
 
 Seven of eight Windows functions match exactly. HPrintF is equivalent after

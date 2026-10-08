@@ -1500,6 +1500,306 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+      "original_filename": "CLFiles.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "File_New",
+          "address": "0x436520",
+          "size": 13,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "File_Free",
+          "address": "0x436530",
+          "size": 114,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Files_Initialize",
+          "address": "0x004365b0",
+          "size": 57,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004365df"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_Terminate",
+          "address": "0x004365f0",
+          "size": 84,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043661f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_AddFile",
+          "address": "0x436650",
+          "size": 21,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00436670",
+          "address": "0x00436670",
+          "size": 104,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004366ce"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_InsertFile",
+          "address": "0x004366e0",
+          "size": 163,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043672e",
+            "0x00436746"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_GetFile",
+          "address": "0x00436790",
+          "size": 133,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004367d1",
+            "0x004367f1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_FindFile",
+          "address": "0x436820",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Files_Count",
+          "address": "0x00436850",
+          "size": 43,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436871"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFiles_Initialize",
+          "address": "0x436880",
+          "size": 13,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "VFiles_Terminate",
+          "address": "0x436890",
+          "size": 60,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "VFile_New",
+          "address": "0x4368d0",
+          "size": 176,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "VFiles_Add",
+          "address": "0x436980",
+          "size": 35,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "VFiles_Find",
+          "address": "0x4369b0",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLFiles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "File_New",
+          "mac_address": "0x0001c180",
+          "linkage_names": [
+            "File_New"
+          ]
+        },
+        {
+          "name": "File_Free",
+          "mac_address": "0x0001c1d0",
+          "linkage_names": [
+            "File_Free"
+          ]
+        },
+        {
+          "name": "Files_Initialize",
+          "mac_address": "0x0001c24c",
+          "linkage_names": [
+            "Files_Initialize"
+          ]
+        },
+        {
+          "name": "Files_Terminate",
+          "mac_address": "0x0001c298",
+          "linkage_names": [
+            "Files_Terminate"
+          ]
+        },
+        {
+          "name": "Files_AddFile",
+          "mac_address": "0x0001c30c",
+          "linkage_names": [
+            "Files_AddFile"
+          ]
+        },
+        {
+          "name": "Files_InsertFile",
+          "mac_address": "0x0001c330",
+          "linkage_names": [
+            "Files_InsertFile"
+          ]
+        },
+        {
+          "name": "Files_GetFile",
+          "mac_address": "0x0001c45c",
+          "linkage_names": [
+            "Files_GetFile"
+          ]
+        },
+        {
+          "name": "Files_FindFile",
+          "mac_address": "0x0001c508",
+          "linkage_names": [
+            "Files_FindFile"
+          ]
+        },
+        {
+          "name": "Files_Count",
+          "mac_address": "0x0001c564",
+          "linkage_names": [
+            "Files_Count"
+          ]
+        },
+        {
+          "name": "VFiles_Initialize",
+          "mac_address": "0x0001c5bc",
+          "linkage_names": [
+            "VFiles_Initialize"
+          ]
+        },
+        {
+          "name": "VFiles_Terminate",
+          "mac_address": "0x0001c5cc",
+          "linkage_names": [
+            "VFiles_Terminate"
+          ]
+        },
+        {
+          "name": "VFile_New",
+          "mac_address": "0x0001c62c",
+          "linkage_names": [
+            "VFile_New"
+          ]
+        },
+        {
+          "name": "VFiles_Add",
+          "mac_address": "0x0001c720",
+          "linkage_names": [
+            "VFiles_Add"
+          ]
+        },
+        {
+          "name": "VFiles_Find",
+          "mac_address": "0x0001c740",
+          "linkage_names": [
+            "VFiles_Find"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
       "original_filename": "CLIncludeFileCache.c",
       "evidence": [
@@ -16433,225 +16733,6 @@
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLFiles.c",
-      "original_filename": "CLFiles.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_004365b0",
-          "address": "0x004365b0",
-          "size": 57,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004365df"
-          ]
-        },
-        {
-          "name": "FUN_004365f0",
-          "address": "0x004365f0",
-          "size": 84,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043661f"
-          ]
-        },
-        {
-          "name": "CLFiles_InsertIndexedListLinkAtFirstIndex",
-          "address": "0x00436650",
-          "size": 21,
-          "compiled_source": "src/driver/CLFiles.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00436670",
-          "address": "0x00436670",
-          "size": 104,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004366ce"
-          ]
-        },
-        {
-          "name": "FUN_004366e0",
-          "address": "0x004366e0",
-          "size": 163,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043672e",
-            "0x00436746"
-          ]
-        },
-        {
-          "name": "CLFiles_FindFileByIndex",
-          "address": "0x00436790",
-          "size": 133,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004367d1",
-            "0x004367f1"
-          ],
-          "compiled_source": "src/driver/CLFiles.c"
-        },
-        {
-          "name": "CLFiles_GetIndex",
-          "address": "0x00436850",
-          "size": 43,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436871"
-          ],
-          "compiled_source": "src/driver/CLFiles.c"
-        },
-        {
-          "name": "CLFiles_InitChain",
-          "address": "0x00436880",
-          "size": 13,
-          "compiled_source": "src/driver/CLFiles.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "File_New",
-          "mac_address": "0x0001c180",
-          "linkage_names": [
-            "File_New"
-          ]
-        },
-        {
-          "name": "File_Free",
-          "mac_address": "0x0001c1d0",
-          "linkage_names": [
-            "File_Free"
-          ]
-        },
-        {
-          "name": "Files_Initialize",
-          "mac_address": "0x0001c24c",
-          "linkage_names": [
-            "Files_Initialize"
-          ]
-        },
-        {
-          "name": "Files_Terminate",
-          "mac_address": "0x0001c298",
-          "linkage_names": [
-            "Files_Terminate"
-          ]
-        },
-        {
-          "name": "Files_AddFile",
-          "mac_address": "0x0001c30c",
-          "linkage_names": [
-            "Files_AddFile"
-          ]
-        },
-        {
-          "name": "Files_InsertFile",
-          "mac_address": "0x0001c330",
-          "linkage_names": [
-            "Files_InsertFile"
-          ]
-        },
-        {
-          "name": "Files_GetFile",
-          "mac_address": "0x0001c45c",
-          "linkage_names": [
-            "Files_GetFile"
-          ]
-        },
-        {
-          "name": "Files_FindFile",
-          "mac_address": "0x0001c508",
-          "linkage_names": [
-            "Files_FindFile"
-          ]
-        },
-        {
-          "name": "Files_Count",
-          "mac_address": "0x0001c564",
-          "linkage_names": [
-            "Files_Count"
-          ]
-        },
-        {
-          "name": "VFiles_Initialize",
-          "mac_address": "0x0001c5bc",
-          "linkage_names": [
-            "VFiles_Initialize"
-          ]
-        },
-        {
-          "name": "VFiles_Terminate",
-          "mac_address": "0x0001c5cc",
-          "linkage_names": [
-            "VFiles_Terminate"
-          ]
-        },
-        {
-          "name": "VFile_New",
-          "mac_address": "0x0001c62c",
-          "linkage_names": [
-            "VFile_New"
-          ]
-        },
-        {
-          "name": "VFiles_Add",
-          "mac_address": "0x0001c720",
-          "linkage_names": [
-            "VFiles_Add"
-          ]
-        },
-        {
-          "name": "VFiles_Find",
-          "mac_address": "0x0001c740",
-          "linkage_names": [
-            "VFiles_Find"
-          ]
-        }
-      ],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
@@ -42403,6 +42484,209 @@
       "bss_bytes": 256,
       "membership_reviewed": false,
       "strict_exact_count": 7
+    },
+    "src/GC_3_0a5_2/driver/CLFiles.c": {
+      "membership_proof": {
+        "mac_explicit_functions": 14,
+        "windows_functions": 15,
+        "windows_region": [
+          "0x00436520",
+          "0x004369db"
+        ],
+        "additional_windows_helper": {
+          "name": "fn_00436670",
+          "address": "0x00436670",
+          "evidence": "CLFiles.c assertion and Files_GetFile direct call; frees/rebuilds per-index fileMap"
+        },
+        "strict_function_matches": 15,
+        "code_bytes": 1098,
+        "data_bytes": 104,
+        "objdiff_sections": {
+          ".text": 100,
+          ".data": 100
+        },
+        "new_behavior": [
+          "File allocation expanded to 0x8b4 and uses zero allocation",
+          "File_Free releases all three native handles and dependency storage",
+          "Files owns lazily rebuilt index map; insertion renumbers following files and invalidates map",
+          "VFile embeds native MemBuffer instead of old StorageHandle pointer"
+        ],
+        "helper_names": {
+          "xmalloc": "Mac symbols plus Windows allocator behavior",
+          "xcalloc": "Mac symbols plus Windows zero allocation behavior",
+          "xfree": "Mac symbols plus Windows allocation release behavior",
+          "Deps_Terminate": "Mac symbols and Windows function frees deps+8 allocation",
+          "FixTextHandle": "Mac symbols and Windows native-handle line-ending conversion"
+        },
+        "encoding": "CP932 encode succeeds; tools/check_sjis.py does not exist"
+      },
+      "functions": [
+        {
+          "name": "File_New",
+          "address": "0x436520",
+          "size": 13,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "File_Free",
+          "address": "0x436530",
+          "size": 114,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_Initialize",
+          "address": "0x4365b0",
+          "size": 57,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_Terminate",
+          "address": "0x4365f0",
+          "size": 84,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_AddFile",
+          "address": "0x436650",
+          "size": 21,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "fn_00436670",
+          "address": "0x436670",
+          "size": 104,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_InsertFile",
+          "address": "0x4366e0",
+          "size": 163,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_GetFile",
+          "address": "0x436790",
+          "size": 133,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_FindFile",
+          "address": "0x436820",
+          "size": 39,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "Files_Count",
+          "address": "0x436850",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFiles_Initialize",
+          "address": "0x436880",
+          "size": 13,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFiles_Terminate",
+          "address": "0x436890",
+          "size": 60,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFile_New",
+          "address": "0x4368d0",
+          "size": 176,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFiles_Add",
+          "address": "0x436980",
+          "size": 35,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        },
+        {
+          "name": "VFiles_Find",
+          "address": "0x4369b0",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+        }
+      ],
+      "data_evidence": [
+        {
+          "name": "@511",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00670e68",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@512",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00670e74",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@559",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00670e84",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@560",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x00670e90",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@599",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00670eb0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@620",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00670ec0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 1098,
+      "initialized_data_bytes": 104,
+      "bss_bytes": 0,
+      "status": "exact",
+      "membership_reviewed": true,
+      "source_sha256": "f542f122f1994cb172940c60a43625cd97dc03aba11ee4312fb0a359b230a92a",
+      "strict_exact_count": 15
     }
   },
   "ownership_review": {

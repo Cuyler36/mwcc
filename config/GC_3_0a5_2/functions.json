@@ -4394,54 +4394,175 @@
     }
   },
   {
-    "name": "CLFiles_InsertIndexedListLinkAtFirstIndex",
-    "address": "0x00436650",
+    "name": "File_New",
+    "address": "0x436520",
+    "size": 13,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "File_Free",
+    "address": "0x436530",
+    "size": 114,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_Initialize",
+    "address": "0x4365b0",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_Terminate",
+    "address": "0x4365f0",
+    "size": 84,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_AddFile",
+    "address": "0x436650",
     "size": 21,
-    "source": "src/driver/CLFiles.c",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
     "baseline_name": "CLFiles_InsertIndexedListLinkAtFirstIndex",
     "baseline_address": "0x004229d0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFiles_FindFileByIndex",
-    "address": "0x00436790",
+    "name": "fn_00436670",
+    "address": "0x436670",
+    "size": 104,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_InsertFile",
+    "address": "0x4366e0",
+    "size": 163,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_GetFile",
+    "address": "0x436790",
     "size": 133,
-    "source": "src/driver/CLFiles.c",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
     "baseline_name": "CLFiles_FindFileByIndex",
     "baseline_address": "0x00422a70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFiles_GetIndex",
-    "address": "0x00436850",
+    "name": "Files_FindFile",
+    "address": "0x436820",
+    "size": 39,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Files_Count",
+    "address": "0x436850",
     "size": 43,
-    "source": "src/driver/CLFiles.c",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
     "baseline_name": "CLFiles_GetIndex",
     "baseline_address": "0x00422af0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFiles_InitChain",
-    "address": "0x00436880",
+    "name": "VFiles_Initialize",
+    "address": "0x436880",
     "size": 13,
-    "source": "src/driver/CLFiles.c",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
     "baseline_name": "CLFiles_InitChain",
     "baseline_address": "0x00422b20",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "VFiles_Terminate",
+    "address": "0x436890",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "VFile_New",
+    "address": "0x4368d0",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "VFiles_Add",
+    "address": "0x436980",
+    "size": 35,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "VFiles_Find",
+    "address": "0x4369b0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c",
+    "identity_evidence": "CLFiles.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

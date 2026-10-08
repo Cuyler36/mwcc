@@ -730,5 +730,105 @@
   "HPrintF": {
     "name": "HPrintF",
     "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "File_New": {
+    "name": "File_New",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "File_Free": {
+    "name": "File_Free",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "Files_Initialize": {
+    "name": "Files_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "Files_Terminate": {
+    "name": "Files_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_InsertIndexedListLinkAtFirstIndex": {
+    "name": "Files_AddFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "fn_00436670": {
+    "name": "fn_00436670",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "Files_InsertFile": {
+    "name": "Files_InsertFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_FindFileByIndex": {
+    "name": "Files_GetFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "Files_FindFile": {
+    "name": "Files_FindFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_GetIndex": {
+    "name": "Files_Count",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_InitChain": {
+    "name": "VFiles_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "VFiles_Terminate": {
+    "name": "VFiles_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "VFile_New": {
+    "name": "VFile_New",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "VFiles_Add": {
+    "name": "VFiles_Add",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "VFiles_Find": {
+    "name": "VFiles_Find",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_AllocDropinFileRecord": {
+    "name": "File_New",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "free_allocation_record": {
+    "name": "File_Free",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_AssertNonNullIndexedListLink": {
+    "name": "Files_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_FreeAllocationRecords": {
+    "name": "Files_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_InsertIndexedListLink": {
+    "name": "Files_InsertFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_FindDropinFileRecord": {
+    "name": "Files_FindFile",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_FreeChainNodes": {
+    "name": "VFiles_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_CreateChainRecord": {
+    "name": "VFile_New",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_AppendChainRecord": {
+    "name": "VFiles_Add",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLFiles_FindChainRecord": {
+    "name": "VFiles_Find",
+    "source": "src/GC_3_0a5_2/driver/CLFiles.c"
   }
 }

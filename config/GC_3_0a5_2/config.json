@@ -49,7 +49,7 @@
     "src/driver/CLDropinCallbacks_V10.cpp",
     "src/GC_3_0a5_2/driver/CLErrors.c",
     "src/driver/CLFileOps.cpp",
-    "src/driver/CLFiles.c",
+    "src/GC_3_0a5_2/driver/CLFiles.c",
     "src/driver/CLIO.c",
     "src/GC_3_0a5_2/driver/CLLicenses.c",
     "src/driver/CLLoadAndCache.c",
@@ -1094,25 +1094,6 @@
       ]
     },
     "src/driver/CLFileOps.cpp": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLFiles.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3240,6 +3221,27 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLFiles.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3328,7 +3330,6 @@
     "src/driver/Utils/Utils_IsAlpha",
     "src/driver/Utils/Utils_FormatOptions",
     "src/driver/Utils/Utils_MatchStringSegments",
-    "src/driver/CLFiles/CLFiles_InitChain",
     "src/driver/CLOverlays/CLOverlays_AppendGroup",
     "src/driver/CLOverlays/CLOverlays_GetGroupByIndex",
     "src/driver/CLOverlays/CLOverlays_GetAllocationByGroupIndex",
@@ -3530,7 +3531,22 @@
     "src/GC_3_0a5_2/driver/StringUtils/c2pstrcpy",
     "src/GC_3_0a5_2/driver/StringUtils/p2cstrcpy",
     "src/GC_3_0a5_2/driver/StringUtils/mvprintf",
-    "src/GC_3_0a5_2/driver/StringUtils/mprintf"
+    "src/GC_3_0a5_2/driver/StringUtils/mprintf",
+    "src/GC_3_0a5_2/driver/CLFiles/File_New",
+    "src/GC_3_0a5_2/driver/CLFiles/File_Free",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_Initialize",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_Terminate",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_AddFile",
+    "src/GC_3_0a5_2/driver/CLFiles/fn_00436670",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_InsertFile",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_GetFile",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_FindFile",
+    "src/GC_3_0a5_2/driver/CLFiles/Files_Count",
+    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Initialize",
+    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Terminate",
+    "src/GC_3_0a5_2/driver/CLFiles/VFile_New",
+    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Add",
+    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Find"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3539,7 +3555,8 @@
     "src/GC_3_0a5_2/driver/ParserErrors.c",
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "src/GC_3_0a5_2/driver/CLLicenses.c",
-    "src/GC_3_0a5_2/driver/CLErrors.c"
+    "src/GC_3_0a5_2/driver/CLErrors.c",
+    "src/GC_3_0a5_2/driver/CLFiles.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3679,6 +3696,36 @@
       "_vsnprintf": "0x00407f50",
       "_pfbuf": "0x006d8fd0",
       "_mvprintf": "0x0042df80"
+    },
+    "src/GC_3_0a5_2/driver/CLFiles.c": {
+      "_xmalloc@8": "0x426300",
+      "_xcalloc@8": "0x426360",
+      "_xfree@4": "0x426490",
+      "_OS_FreeHandle@4": "0x411d40",
+      "_Deps_Terminate": "0x43cdd0",
+      "_OS_EqualSpec@8": "0x411380",
+      "_OS_NewHandle@8": "0x411c90",
+      "_MsDos_GetValidMemBufferPtr@4": "0x411d00",
+      "_OS_GetHandleSize@8": "0x411d80",
+      "_CLFileOps_AppendMemBuffer@12": "0x417fa0",
+      "_fn_004129c0@4": "0x411d30",
+      "_FixTextHandle": "0x49a7b0",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_File_New": "0x436520",
+      "_File_Free": "0x436530",
+      "_Files_Initialize": "0x4365b0",
+      "_Files_Terminate": "0x4365f0",
+      "_Files_AddFile": "0x436650",
+      "_fn_00436670": "0x436670",
+      "_Files_InsertFile": "0x4366e0",
+      "_Files_GetFile": "0x436790",
+      "_Files_FindFile": "0x436820",
+      "_Files_Count": "0x436850",
+      "_VFiles_Initialize": "0x436880",
+      "_VFiles_Terminate": "0x436890",
+      "_VFile_New": "0x4368d0",
+      "_VFiles_Add": "0x436980",
+      "_VFiles_Find": "0x4369b0"
     }
   }
 }

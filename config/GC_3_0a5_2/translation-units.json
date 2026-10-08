@@ -669,6 +669,86 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+      "original_filename": "BitVectors.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional"
+      ],
+      "windows_functions": [
+        {
+          "name": "bitvectorintersectionisempty",
+          "address": "0x63d1f0",
+          "size": 66,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "bitvectorunion",
+          "address": "0x63d240",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "bitvectorintersect",
+          "address": "0x63d280",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "bitvectorinitialize",
+          "address": "0x63d3b0",
+          "size": 37,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "bitvectorchanged",
+          "address": "0x63d3e0",
+          "size": 59,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "bitvectorcopy",
+          "address": "0x63d420",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_partial"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
       "original_filename": "ELF_Endian.c",
       "evidence": [
@@ -17158,19 +17238,6 @@
           ]
         }
       ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/backend/BitVectors.c",
-      "original_filename": "BitVectors.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional"
-      ],
-      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -49982,7 +50049,7 @@
       }
     },
     "src/backend/BitVectors.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -50111,7 +50178,8 @@
           "space-nointrinsics": "e75c2bd69b77c57495efed45b61bf4353ac783bcf6ae36535d60b4f335e75a21",
           "space-intrinsics": "25c4290d4fd48fdc418d1804215382c3b09297fa88eb67e97b6cf9d106d33188"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/backend/BitVectors.c"
     },
     "src/backend/CMachine.c": {
       "status": "unattempted",
@@ -80802,6 +80870,287 @@
       "data_complete": true,
       "canonical_callsite_names": {
         "fn_005794e0": "Registers_LoadStoreType"
+      }
+    },
+    "src/GC_3_0a5_2/backend/BitVectors.c": {
+      "status": "attempted_partial",
+      "membership_reviewed": false,
+      "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+      "source_sha256": "f6576b0421b9c66cecc6c335681941cfd9cad48a131647a3f2791cef14066085",
+      "mapped_function_count": 6,
+      "strict_exact_count": 6,
+      "data_complete": true,
+      "data_evidence": "No allocated data or BSS emitted; every body relocation-free.",
+      "functions": [
+        {
+          "name": "bitvectorcopy",
+          "address": "0x63d420",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "bitvectorchanged",
+          "address": "0x63d3e0",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "bitvectorinitialize",
+          "address": "0x63d3b0",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "bitvectorunion",
+          "address": "0x63d240",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "bitvectorintersect",
+          "address": "0x63d280",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "bitvectorintersectionisempty",
+          "address": "0x63d1f0",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        }
+      ],
+      "compiler_experiments": [
+        {
+          "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "compiler": "cw94",
+          "profile": "native-bitvectors-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-speed\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "src/GC_3_0a5_2/backend/BitVectors.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-speed\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 6,
+          "functions": [
+            {
+              "name": "bitvectorcopy",
+              "address": "0x63d420",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorchanged",
+              "address": "0x63d3e0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorinitialize",
+              "address": "0x63d3b0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorunion",
+              "address": "0x63d240",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorintersect",
+              "address": "0x63d280",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorintersectionisempty",
+              "address": "0x63d1f0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-speed\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj",
+          "source_sha256": "f6576b0421b9c66cecc6c335681941cfd9cad48a131647a3f2791cef14066085",
+          "source_stable": true,
+          "exact_count": 6,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+          "compiler": "cw94",
+          "profile": "native-bitvectors-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-space\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "src/GC_3_0a5_2/backend/BitVectors.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-space\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 6,
+          "functions": [
+            {
+              "name": "bitvectorcopy",
+              "address": "0x63d420",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorchanged",
+              "address": "0x63d3e0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorinitialize",
+              "address": "0x63d3b0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorunion",
+              "address": "0x63d240",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorintersect",
+              "address": "0x63d280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "bitvectorintersectionisempty",
+              "address": "0x63d1f0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\native-bitvectors-space\\src\\GC_3_0a5_2\\backend\\BitVectors.c\\compiled.obj",
+          "source_sha256": "f6576b0421b9c66cecc6c335681941cfd9cad48a131647a3f2791cef14066085",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        }
+      ],
+      "scope": "Six independently identified plain word-vector operations; no assertion filename or Mac SO proof of full original TU membership.",
+      "semantics": [
+        "Word count is signed arithmetic right shift of wrapping32-bit(bits+31). Zero count touches no arrays. Final partial word is copied/filled/combined whole, without masking unused bits.",
+        "changed copies every word and returns1 if any differs,0 otherwise. intersectionisempty returns0 on first nonzero wordwiseAND,1 if none.",
+        "copy, initialize, union and intersect preserve native write order and pointer increments. All six complete bodies match exactly with CW94 speed."
+      ],
+      "unmapped_mac_names": [
+        "bitvectordifference",
+        "bitvectorcomplement",
+        "bitvectorcount",
+        "bitvectorisempty"
+      ],
+      "ownership_limits": [
+        "Nearby sparse-vector allocator/state helpers remain unowned; do not assign by adjacency.",
+        "Supplied Mac ordinary symbol names establish operation identities, not explicit cross-platform source scope."
+      ],
+      "checks": [
+        "CW94 speed6/6 exact; space0/6.",
+        "Every emitted function mapped; no extra allocated data.",
+        "Strict CP932 encoding passed; repository checker absent."
+      ],
+      "objdiff_cli": {
+        "scope": "All six mapped and emitted bodies; no allocated data",
+        "text_bytes": 309,
+        "text_match_percent": 100.0,
+        "command": "build/tools/objdiff-cli.exe diff -p . -u src/GC_3_0a5_2/backend/BitVectors -o build/bitvectors-project-diff.json"
       }
     }
   },

@@ -16641,5 +16641,71 @@
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
     }
+  },
+  {
+    "name": "bitvectorintersectionisempty",
+    "address": "0x63d1f0",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "bitvectorunion",
+    "address": "0x63d240",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "bitvectorintersect",
+    "address": "0x63d280",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "bitvectorinitialize",
+    "address": "0x63d3b0",
+    "size": 37,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "bitvectorchanged",
+    "address": "0x63d3e0",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "bitvectorcopy",
+    "address": "0x63d420",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c",
+    "identity_evidence": "Canonical ordinary Mac bitvector symbol and corresponding native word operation. Exact body bytes, no relocations; filename ownership remains provisional.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entry and complete native straight-line/loop CFG to final RET before NOP padding",
+      "unresolved_indirect_flow": false
+    }
   }
 ]

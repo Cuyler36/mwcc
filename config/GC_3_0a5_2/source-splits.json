@@ -2158,5 +2158,13 @@
   "Registers_AllocateGPRPair": {
     "name": "assign_GPR_pair",
     "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
+  },
+  "CodeMotion_AllocateBits": {
+    "name": "bitvectorcopy",
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c"
+  },
+  "BitVectors_CopyAndCheckChanged": {
+    "name": "bitvectorchanged",
+    "source": "src/GC_3_0a5_2/backend/BitVectors.c"
   }
 }

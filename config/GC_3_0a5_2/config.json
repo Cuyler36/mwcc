@@ -4,7 +4,7 @@
   "sources": [
     "src/backend/BE_elf.c",
     "src/backend/BE_symbol.c",
-    "src/backend/BitVectors.c",
+    "src/GC_3_0a5_2/backend/BitVectors.c",
     "src/backend/CMachine.c",
     "src/backend/CodeGen.c",
     "src/backend/Coloring.c",
@@ -316,28 +316,6 @@
         "off",
         "-str",
         "noreadonly"
-      ]
-    },
-    "src/backend/BitVectors.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/backend",
-        "include/mwcc",
-        "include",
-        "include/libc"
       ]
     },
     "src/backend/CMachine.c": {
@@ -3442,6 +3420,25 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/BitVectors.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -3994,7 +3991,13 @@
     "src/GC_3_0a5_2/backend/RegisterInfo/retain_GPR_pair",
     "src/GC_3_0a5_2/backend/RegisterInfo/fn_005792c0",
     "src/GC_3_0a5_2/backend/RegisterInfo/fn_00578970",
-    "src/GC_3_0a5_2/backend/RegisterInfo/fn_005789b0"
+    "src/GC_3_0a5_2/backend/RegisterInfo/fn_005789b0",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorcopy",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorchanged",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorinitialize",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorunion",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorintersect",
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorintersectionisempty"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5234,7 +5237,8 @@
       "_load_store_register": "0x5954e0",
       "_add_immediate": "0x595890",
       "_Registers_LoadStoreType": "0x5794e0"
-    }
+    },
+    "src/GC_3_0a5_2/backend/BitVectors.c": {}
   },
   "original_source_units": {
     "MacSpecs.c": "src/GC_3_0a5_2/OSLib/MacSpecs.c",

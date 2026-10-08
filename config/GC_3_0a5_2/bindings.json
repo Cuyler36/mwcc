@@ -1414,5 +1414,7 @@
   "_OS_GetMilliseconds": "0x00411c40",
   "_OS_EqualSpec": "0x00411380",
   "_WriteObjectFile": "0x0043d590",
-  "_WriteBrowseData": "0x0043d660"
+  "_WriteBrowseData": "0x0043d660",
+  "_CodeMotion_AllocateBits": "0x63d420",
+  "_BitVectors_CopyAndCheckChanged": "0x63d3e0"
 }

@@ -181,6 +181,86 @@ class AnonymousDataTests(unittest.TestCase):
         self.assertEqual(target, [])
 
 
+class CommonDataTests(unittest.TestCase):
+    def run_fixture(self, bindings=None, global_bindings=None, referenced=False, ambiguous=False,
+                    size=16, category='.bss', overlap=False, fixups=()):
+        class CommonImage(Image):
+            def section_for_address(self, address):
+                if 0x2000 <= address < 0x2100:
+                    return SimpleNamespace(name=category, virtual_address=0x2000, virtual_size=0x100,
+                                           file_offset=0x2000, file_size=0 if category == '.bss' else 0x100,
+                                           characteristics=0xc0000080 if category == '.bss' else 0xc0000040)
+                raise ValueError('outside BSS')
+        pe = CommonImage(b'')
+        symbols = {0: dict(name='_buffer', section=0, value=size, storage=2, type=0)}
+        sections, rows = [], []
+        if referenced:
+            for i in range(2 if ambiguous else 1):
+                address = 0x1000 + i * 0x100
+                symbols[i + 1] = dict(name=f'_f{i}', section=i + 1, value=0, type=0x20, storage=2)
+                sections.append(dict(name='.text', data=b'\x68\0\0\0\0\xc3',
+                                     relocs=[(1, 0, 6)], code=True, flags=0x60000020))
+                pe.data[address:address + 6] = b'\x68' + struct.pack('<I', 0x2000 + i * 0x40) + b'\xc3'
+                rows.append(dict(symbol=f'_f{i}', address=address, size=6))
+        if overlap:
+            symbols[10] = dict(name='_overlap', section=0, value=16, storage=2, type=0)
+            bindings = dict(bindings or {}, _overlap='0x2008')
+        claims = []
+        def config_read(path, *args, **kwargs):
+            return '[]' if path.name == 'functions.json' else __import__('json').dumps(global_bindings or {})
+        with patch.object(Path, 'read_text', config_read), patch.object(Path, 'write_text'), \
+                patch.object(Path, 'mkdir'), patch('compare.version_config',
+                return_value={'source_bindings': {'source.c': bindings or {}}}), \
+                patch('compare.base_relocations', return_value=fixups):
+            target, base, complete = source_data('test', 'source.c', rows, symbols, sections, pe, claims)
+        return target, base, complete, claims
+
+    def test_common_size_becomes_allocated_bss_not_symbol_offset(self):
+        target, base, complete, claims = self.run_fixture(bindings={'_buffer': '0x2000'})
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000, 0x2010)])
+        self.assertEqual(target, base)
+        self.assertEqual(base[0]['symbols'], [('_buffer', 0, 16, False)])
+        self.assertEqual(base[0]['data'], bytes(16))
+
+    def test_common_address_can_come_from_bounded_original_operand(self):
+        _, _, complete, claims = self.run_fixture(referenced=True)
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000, 0x2010)])
+
+    def test_global_name_only_cannot_claim_common(self):
+        target, base, complete, claims = self.run_fixture(global_bindings={'_buffer': '0x2000'})
+        self.assertFalse(complete)
+        self.assertEqual(target, [])
+        self.assertEqual(claims, [])
+        self.assertEqual(len(base[0]['data']), 16)
+
+    def test_common_full_extent_must_fit_bss(self):
+        _, _, complete, claims = self.run_fixture(bindings={'_buffer': '0x20f8'})
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+
+    def test_common_cannot_claim_initialized_data(self):
+        _, _, complete, claims = self.run_fixture(bindings={'_buffer': '0x2000'}, category='.data')
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+
+    def test_both_overlapping_common_allocations_remain_unclaimed(self):
+        _, _, complete, claims = self.run_fixture(bindings={'_buffer': '0x2000'}, overlap=True)
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+
+    def test_conflicting_original_operands_cannot_establish_common_ownership(self):
+        _, _, complete, claims = self.run_fixture(referenced=True, ambiguous=True)
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+
+    def test_common_with_pe_fixup_is_rejected(self):
+        _, _, complete, claims = self.run_fixture(bindings={'_buffer': '0x2000'}, fixups=[0x2004])
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+
+
 class TranslationUnitTests(unittest.TestCase):
     def test_bss_ignores_nonzero_raw_pointer(self):
         Path('build').mkdir(exist_ok=True)

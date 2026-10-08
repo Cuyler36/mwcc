@@ -622,5 +622,45 @@
   "MemUtils_CallPluginEntry": {
     "name": "CallPlugin",
     "source": "src/driver/CLPluginRequests.cpp"
+  },
+  "allocate_license_slot": {
+    "name": "allocate_license_slot",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "find_license": {
+    "name": "find_license",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "get_license_slot_values": {
+    "name": "get_license_slot_values",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "delete_license": {
+    "name": "delete_license",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "CLLicenses_RequestLicense": {
+    "name": "CLLicenses_RequestLicense",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "release_negative_license_values": {
+    "name": "release_negative_license_values",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "get_license_slot_count": {
+    "name": "get_license_slot_count",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "fn_00417750": {
+    "name": "fn_00417750",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "CLLicenses_ReleaseLicenses": {
+    "name": "CLLicenses_ReleaseLicenses",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "CLLicenses_DeleteLicense": {
+    "name": "CLLicenses_DeleteLicense",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
   }
 }

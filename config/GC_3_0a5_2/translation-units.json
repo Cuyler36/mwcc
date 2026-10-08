@@ -1482,6 +1482,174 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+      "original_filename": "CLLicenses.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "allocate_license_slot",
+          "address": "0x00421830",
+          "size": 168,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "find_license",
+          "address": "0x004218e0",
+          "size": 92,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "get_license_slot_values",
+          "address": "0x00421940",
+          "size": 68,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "delete_license",
+          "address": "0x00421990",
+          "size": 112,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "get_license_slot_count",
+          "address": "0x421a00",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00417750",
+          "address": "0x421a10",
+          "size": 21,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLLicenses_ReleaseLicenses",
+          "address": "0x421a30",
+          "size": 121,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLLicenses_RequestLicense",
+          "address": "0x00421ab0",
+          "size": 835,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLLicenses_DeleteLicense",
+          "address": "0x421e00",
+          "size": 50,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "release_negative_license_values",
+          "address": "0x00421e40",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "License_Initialize",
+          "mac_address": "0x00011f64",
+          "linkage_names": [
+            "License_Initialize"
+          ]
+        },
+        {
+          "name": "License_Terminate",
+          "mac_address": "0x00011f68",
+          "linkage_names": [
+            "License_Terminate"
+          ]
+        },
+        {
+          "name": "License_Checkout",
+          "mac_address": "0x00011f6c",
+          "linkage_names": [
+            "License_Checkout"
+          ]
+        },
+        {
+          "name": "License_Refresh",
+          "mac_address": "0x00011f78",
+          "linkage_names": [
+            "License_Refresh"
+          ]
+        },
+        {
+          "name": "License_Checkin",
+          "mac_address": "0x00011f7c",
+          "linkage_names": [
+            "License_Checkin"
+          ]
+        },
+        {
+          "name": "License_AutoCheckin",
+          "mac_address": "0x00011f80",
+          "linkage_names": [
+            "License_AutoCheckin"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
       "original_filename": "CLWriteObjectFile.c",
       "evidence": [
@@ -16877,130 +17045,6 @@
           "mac_address": "0x0000d7a4",
           "linkage_names": [
             "CLStyledMessageDispatch"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLLicenses.c",
-      "original_filename": "CLLicenses.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "allocate_license_slot",
-          "address": "0x00421830",
-          "size": 168,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "find_license",
-          "address": "0x004218e0",
-          "size": 92,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "get_license_slot_values",
-          "address": "0x00421940",
-          "size": 68,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "delete_license",
-          "address": "0x00421990",
-          "size": 112,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLLicenses_RequestLicense",
-          "address": "0x00421ab0",
-          "size": 835,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "release_negative_license_values",
-          "address": "0x00421e40",
-          "size": 71,
-          "compiled_source": "src/driver/CLLicenses.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "License_Initialize",
-          "mac_address": "0x00011f64",
-          "linkage_names": [
-            "License_Initialize"
-          ]
-        },
-        {
-          "name": "License_Terminate",
-          "mac_address": "0x00011f68",
-          "linkage_names": [
-            "License_Terminate"
-          ]
-        },
-        {
-          "name": "License_Checkout",
-          "mac_address": "0x00011f6c",
-          "linkage_names": [
-            "License_Checkout"
-          ]
-        },
-        {
-          "name": "License_Refresh",
-          "mac_address": "0x00011f78",
-          "linkage_names": [
-            "License_Refresh"
-          ]
-        },
-        {
-          "name": "License_Checkin",
-          "mac_address": "0x00011f7c",
-          "linkage_names": [
-            "License_Checkin"
-          ]
-        },
-        {
-          "name": "License_AutoCheckin",
-          "mac_address": "0x00011f80",
-          "linkage_names": [
-            "License_AutoCheckin"
           ]
         }
       ],
@@ -41669,6 +41713,280 @@
       "status": "attempted_incomplete",
       "membership_reviewed": false,
       "ownership_review": "Moved CallPlugin from imported MemUtils.c; original source/name proven by STABS and Windows call/context behavior. Remaining plugin request functions still require porting."
+    },
+    "src/GC_3_0a5_2/driver/CLLicenses.c": {
+      "status": "exact",
+      "functions": [
+        {
+          "name": "allocate_license_slot",
+          "address": "0x00421830",
+          "size": 168,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "allocate_license_slot",
+          "baseline_address": "0x00417580",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "find_license",
+          "address": "0x004218e0",
+          "size": 92,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "find_license",
+          "baseline_address": "0x00417620",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "get_license_slot_values",
+          "address": "0x00421940",
+          "size": 68,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "get_license_slot_values",
+          "baseline_address": "0x00417680",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "delete_license",
+          "address": "0x00421990",
+          "size": 112,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "delete_license",
+          "baseline_address": "0x004176d0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLLicenses_RequestLicense",
+          "address": "0x00421ab0",
+          "size": 835,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "CLLicenses_RequestLicense",
+          "baseline_address": "0x004177e0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "release_negative_license_values",
+          "address": "0x00421e40",
+          "size": 71,
+          "source": "src/driver/CLLicenses.c",
+          "baseline_name": "release_negative_license_values",
+          "baseline_address": "0x00417a60",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "get_license_slot_count",
+          "address": "0x421a00",
+          "size": 6
+        },
+        {
+          "name": "fn_00417750",
+          "address": "0x421a10",
+          "size": 21
+        },
+        {
+          "name": "CLLicenses_ReleaseLicenses",
+          "address": "0x421a30",
+          "size": 121
+        },
+        {
+          "name": "CLLicenses_DeleteLicense",
+          "address": "0x421e00",
+          "size": 50
+        }
+      ],
+      "data_evidence": [
+        {
+          "name": "@525",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066da50",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@526",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066da24",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@602",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066da6c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@603",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066da7c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@604",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066da88",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@605",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066da94",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@606",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066dac4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@607",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066dad0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@641",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066da34",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@672",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066da0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_license_slots",
+          "section": ".bss",
+          "size": 256,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006d7d68",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_license_id_counter",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006d7d60",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_license_slot_count",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006d7d64",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_0057ef08",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006d7e68",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 1544,
+      "initialized_data_bytes": 204,
+      "bss_bytes": 268,
+      "semantic_changes": [
+        "Windows has ten license-table and checkout functions; six Mac License_* stubs are platform-specific.",
+        "636-byte Windows license state, 516-byte path specs, three fallback path checks, and cleared/freed state on cleanup."
+      ],
+      "original_name_limit": "Windows functions retain baseline aliases where Mac stub names cannot establish their original spelling.",
+      "membership_reviewed": true,
+      "source_sha256": "2035b07807baf4cb4ca724832e718ffcd74bb4bbeed8f3fee5c5993accc37d10",
+      "strict_exact_count": 10
     }
   },
   "ownership_review": {

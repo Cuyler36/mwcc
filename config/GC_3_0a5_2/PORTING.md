@@ -62,6 +62,20 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLLicenses.c: complete Windows unit
+
+All ten Windows functions match 1,544 code bytes, 204 initialized bytes, and
+268 BSS bytes with CW94 speed/intrinsic optimization. The Mac unit's six tiny
+License_* stubs do not describe this Windows licensing implementation. Four
+previously unmapped Windows functions are included. The port preserves the
+larger state, path-search fallbacks, checkout checks, and cleanup behavior.
+
+COFF common symbols are allocated BSS contributions even though their section
+index is zero. Comparison now accounts for their full size and rejects unknown
+addresses, non-BSS locations, nonzero data, fixups, bounds violations, and
+overlapping allocations. Twenty-one comparison regressions and the complete
+version build matrix pass.
+
 ## MemUtils.c: exact mapped code, provisional wrapper ownership
 
 The five symbol-named allocation functions and two adjacent Windows allocation

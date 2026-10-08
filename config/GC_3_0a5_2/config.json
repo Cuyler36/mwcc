@@ -51,7 +51,7 @@
     "src/driver/CLFileOps.cpp",
     "src/driver/CLFiles.c",
     "src/driver/CLIO.c",
-    "src/driver/CLLicenses.c",
+    "src/GC_3_0a5_2/driver/CLLicenses.c",
     "src/driver/CLLoadAndCache.c",
     "src/driver/CLMain.c",
     "src/driver/CLOverlays.c",
@@ -1167,27 +1167,6 @@
       ],
       "include_dirs": [
         "src/driver"
-      ]
-    },
-    "src/driver/CLLicenses.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver",
-        "include",
-        "include/libc"
       ]
     },
     "src/driver/CLLoadAndCache.c": {
@@ -3238,6 +3217,29 @@
         "src/driver",
         "include"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLLicenses.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
     }
   },
   "matching_functions": [
@@ -3297,7 +3299,6 @@
     "src/GC_3_0a5_2/driver/Targets/ParserToolHandlesPanels",
     "src/GC_3_0a5_2/driver/Targets/SetupParserToolOptions",
     "src/driver/CLSegs/free_if_not_null",
-    "src/driver/CLLicenses/get_license_slot_values",
     "src/driver/MacSpecs/find_or_create_spec_entry_negated",
     "src/driver/CLProj/CLProj_AppendString",
     "src/driver/CLProj/CLProj_CopyStringBounded",
@@ -3509,14 +3510,25 @@
     "src/GC_3_0a5_2/driver/MemUtils/xrealloc",
     "src/GC_3_0a5_2/driver/MemUtils/xstrdup",
     "src/GC_3_0a5_2/driver/MemUtils/xfree",
-    "src/driver/CLPluginRequests/CallPlugin"
+    "src/driver/CLPluginRequests/CallPlugin",
+    "src/GC_3_0a5_2/driver/CLLicenses/allocate_license_slot",
+    "src/GC_3_0a5_2/driver/CLLicenses/find_license",
+    "src/GC_3_0a5_2/driver/CLLicenses/get_license_slot_values",
+    "src/GC_3_0a5_2/driver/CLLicenses/delete_license",
+    "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_RequestLicense",
+    "src/GC_3_0a5_2/driver/CLLicenses/release_negative_license_values",
+    "src/GC_3_0a5_2/driver/CLLicenses/get_license_slot_count",
+    "src/GC_3_0a5_2/driver/CLLicenses/fn_00417750",
+    "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_ReleaseLicenses",
+    "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_DeleteLicense"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
     "src/msl/setjmp_x86.c",
     "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "src/GC_3_0a5_2/driver/ParserErrors.c",
-    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+    "src/GC_3_0a5_2/driver/CLLicenses.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3598,6 +3610,35 @@
       "_xrealloc@12": "0x4263e0",
       "_xstrdup@4": "0x426460",
       "_xfree@4": "0x426490"
+    },
+    "src/GC_3_0a5_2/driver/CLLicenses.c": {
+      "_license_id_counter": "0x6d7d60",
+      "_license_slot_count": "0x6d7d64",
+      "_license_slots": "0x6d7d68",
+      "_data_0057ef08": "0x6d7e68",
+      "_data_005871d8": "0x702d28",
+      "_license_path": "0x7100b0",
+      "_CLLicenses_HasAlternatePath": "0x703254",
+      "_CLLicenses_AlternatePath": "0x703256",
+      "_xcalloc@8": "0x426360",
+      "_xfree@4": "0x426490",
+      "_OS_MakeSpec@16": "0x410df0",
+      "_fn_004270ba": "0x4353d2",
+      "_fn_004270c0": "0x4353d8",
+      "_fn_004270c6": "0x4353de",
+      "_CLErrors_ReportInternalError": "0x414bb0",
+      "_fn_00412340@12": "0x4112a0",
+      "_OS_Status@4": "0x40fa80",
+      "_allocate_license_slot": "0x421830",
+      "_find_license": "0x4218e0",
+      "_get_license_slot_values": "0x421940",
+      "_delete_license": "0x421990",
+      "_CLLicenses_RequestLicense": "0x421ab0",
+      "_release_negative_license_values": "0x421e40",
+      "_get_license_slot_count": "0x421a00",
+      "_fn_00417750": "0x421a10",
+      "_CLLicenses_ReleaseLicenses": "0x421a30",
+      "_CLLicenses_DeleteLicense": "0x421e00"
     }
   }
 }

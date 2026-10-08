@@ -241,8 +241,17 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
                       for r in functions})
     addresses.update({r['name'] if r['name'].startswith('?') else '_' + r['name']: int(r['address'], 0)
                       for r in functions if r.get('source') == source})
-    addresses.update({name: int(value, 0) for name, value in
-                      version_config(version).get('source_bindings', {}).get(source, {}).items()})
+    scoped_bindings = {name: int(value, 0) for name, value in
+                       version_config(version).get('source_bindings', {}).get(source, {}).items()}
+    addresses.update(scoped_bindings)
+    commons = {i: s for i, s in symbols.items()
+               if s['section'] == 0 and s['storage'] == 2 and s['value'] > 0 and not s['type'] & 0x20}
+    # A common's value is its allocated size, not an offset or an address.
+    # Global name guesses cannot establish ownership of zero-filled storage.
+    for symbol in commons.values():
+        for name in (symbol['name'], c_symbol(symbol['name'])):
+            if name not in scoped_bindings:
+                addresses.pop(name, None)
     references = defaultdict(set)
     fixups = set(base_relocations(pe))
     for row in rows:
@@ -354,6 +363,61 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
                 entry['unresolved'] = str(error)
                 complete = False
             evidence.append(entry)
+    common_spans = []
+    for symbol_index, symbol in commons.items():
+        name, size = symbol['name'], symbol['value']
+        output = base.setdefault('.bss', dict(name='.bss', data=bytearray(), symbols=[], flags=0xc0000080))
+        output['symbols'].append((name, len(output['data']), size, False))
+        output['data'].extend(bytes(size))
+        entry = dict(name=name, section='.bss', size=size, coff_common=True)
+        location = scoped_bindings.get(name, scoped_bindings.get(c_symbol(name)))
+        entry['method'] = 'source-scoped common binding'
+        if location is None and len(references[symbol_index]) == 1:
+            location = next(iter(references[symbol_index]))
+            entry['method'] = 'resolved function reference (common)'
+        try:
+            if location is None:
+                raise ValueError('no unambiguous source-scoped common address')
+            section = pe.section_for_address(location)
+            if section.name != '.bss' or not section.characteristics & 0x80:
+                raise ValueError('common allocation is outside BSS')
+            if not section.virtual_address <= location < location + size <= section.virtual_address + section.virtual_size:
+                raise ValueError('common allocation crosses BSS bounds')
+            if read_memory(pe, location, size) != bytes(size):
+                raise ValueError('common allocation is not zero-filled')
+            if any(location <= fixup < location + size for fixup in fixups):
+                raise ValueError('common allocation contains a PE fixup')
+            entry['address'] = f'0x{location:08x}'
+            other_spans = [(int(e['address'], 0), int(e['address'], 0) + e['size'])
+                           for e in evidence if 'address' in e and 'unresolved' not in e]
+            if any(location < end and start < location + size for start, end in other_spans + common_spans):
+                raise ValueError('common allocation overlaps another TU data symbol')
+            entry.update(address=f'0x{location:08x}', bytes_exact=True, target_section='.bss',
+                         fixups_exact=True, relocations_resolved=True)
+            common_spans.append((location, location + size))
+        except ValueError as error:
+            entry['unresolved'] = str(error)
+            entry['relocations_resolved'] = False
+            complete = False
+        evidence.append(entry)
+    # Validate all candidates before publishing claims, including the first
+    # member of a pair of overlapping common declarations.
+    common_entries = [e for e in evidence if e.get('coff_common') and 'address' in e]
+    for entry in common_entries:
+        location, size = int(entry['address'], 0), entry['size']
+        if any(other is not entry and 'address' in other and other.get('coff_common')
+               and location < int(other['address'], 0) + other['size']
+               and int(other['address'], 0) < location + size for other in evidence):
+            entry['unresolved'] = 'common allocation overlaps another TU data symbol'
+            entry['relocations_resolved'] = False
+            complete = False
+        if 'unresolved' in entry:
+            continue
+        dest = target.setdefault('.bss', dict(name='.bss', data=bytearray(), symbols=[], flags=0xc0000080))
+        dest['symbols'].append((entry['name'], len(dest['data']), size, False))
+        dest['data'].extend(bytes(size))
+        if claims is not None:
+            claims.append((location, location + size))
     output_path = Path(f'build/{version}/unit-data/{source}.json')
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(evidence, indent=2) + '\n')
@@ -602,6 +666,16 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
                         f"unbound literal: {dest['name']} ({len(matches)} retail blocks, {len(hits)} strings)"
                     )
                 address = hits[0] - addend
+        elif (dest['section'] == 0 and dest['storage'] == 2 and dest['value'] > 0
+              and not dest['type'] & 0x20 and kind in (6, 7) and target_size
+              and local + 4 <= len(original)):
+            raw = struct.unpack_from('<I', original, local)[0]
+            address = (raw + (pe.image_base if kind == 7 else 0) - addend) & 0xffffffff
+            allocation = pe.section_for_address(address)
+            if (allocation.name != '.bss' or not allocation.characteristics & 0x80
+                    or address + dest['value'] > allocation.virtual_address + allocation.virtual_size
+                    or read_memory(pe, address, dest['value']) != bytes(dest['value'])):
+                raise ValueError(f'unbound common allocation: {dest["name"]}')
         elif dest["section"] == -1:
             address = dest["value"]
         else:

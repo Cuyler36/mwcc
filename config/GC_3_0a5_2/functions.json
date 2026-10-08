@@ -2790,12 +2790,12 @@
     "name": "allocate_license_slot",
     "address": "0x00421830",
     "size": 168,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "allocate_license_slot",
     "baseline_address": "0x00417580",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -2803,12 +2803,12 @@
     "name": "find_license",
     "address": "0x004218e0",
     "size": 92,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "find_license",
     "baseline_address": "0x00417620",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -2816,12 +2816,12 @@
     "name": "get_license_slot_values",
     "address": "0x00421940",
     "size": 68,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "get_license_slot_values",
     "baseline_address": "0x00417680",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -2829,12 +2829,45 @@
     "name": "delete_license",
     "address": "0x00421990",
     "size": 112,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "delete_license",
     "baseline_address": "0x004176d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "get_license_slot_count",
+    "address": "0x421a00",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00417750",
+    "address": "0x421a10",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CLLicenses_ReleaseLicenses",
+    "address": "0x421a30",
+    "size": 121,
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -2842,12 +2875,23 @@
     "name": "CLLicenses_RequestLicense",
     "address": "0x00421ab0",
     "size": 835,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "CLLicenses_RequestLicense",
     "baseline_address": "0x004177e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CLLicenses_DeleteLicense",
+    "address": "0x421e00",
+    "size": 50,
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -2855,12 +2899,12 @@
     "name": "release_negative_license_values",
     "address": "0x00421e40",
     "size": 71,
-    "source": "src/driver/CLLicenses.c",
+    "source": "src/GC_3_0a5_2/driver/CLLicenses.c",
     "baseline_name": "release_negative_license_values",
     "baseline_address": "0x00417a60",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLLicenses.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

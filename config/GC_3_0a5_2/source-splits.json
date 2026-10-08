@@ -2274,5 +2274,25 @@
   "fn_00449d60": {
     "name": "CError_ResetErrorSkip",
     "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "destroy_members": {
+    "name": "CABI_DestroyMembers",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c"
+  },
+  "CABI_GenClassFunction": {
+    "name": "CABI_MakeDefaultCopyConstructor",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c"
+  },
+  "CABI_GenerateClassFunction": {
+    "name": "CABI_MakeDefaultConstructor",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c"
+  },
+  "assign_vbase_ctor_offsets": {
+    "name": "CABI_InitVBaseCtorOffsets",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c"
+  },
+  "build_vbase_ptr_initializers": {
+    "name": "CABI_InitVBasePtr1",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c"
   }
 }

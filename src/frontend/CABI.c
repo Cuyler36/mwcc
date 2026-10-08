@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CABI.c"
 #include "compiler/common.h"
 #include "compiler/CABI.h"
@@ -109,6 +110,7 @@ MessageArgument *CABI_SplitNameIntoMessageArguments(HashNameNode *hname, char *f
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CABI_DestroyObject(Object *dtor, ENode *objexpr, UInt8 mode, Boolean flag1, Boolean flag2)
 {
     ENode *expr;
@@ -153,11 +155,14 @@ ENode *CABI_DestroyObject(Object *dtor, ENode *objexpr, UInt8 mode, Boolean flag
     list->node = intconstnode(TYPE(&stsignedshort), val);
     return expr;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Object *CABI_GetDestructorObject(Object *obj, UInt8 mode)
 {
     return obj;
 }
+#endif
 
 static void CABI_ApplyClassFlags(Object *obj, UInt8 flags)
 {
@@ -169,6 +174,7 @@ static void CABI_ApplyClassFlags(Object *obj, UInt8 flags)
         obj->flags |= OBJECT_EXPORT;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CABI_MakeDefaultDestructor(TypeClass *tclass, Object *func)
 {
     Boolean savedebuginfo;
@@ -196,7 +202,9 @@ void CABI_MakeDefaultDestructor(TypeClass *tclass, Object *func)
     CScope_RestoreScope(&savedscope);
     copts.filesyminfo = savedebuginfo;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 static SInt32 CABI_FindNVBase(TypeClass *tclass, TypeClass *baseclass, SInt32 offset)
 {
     ClassList *base;
@@ -210,9 +218,11 @@ static SInt32 CABI_FindNVBase(TypeClass *tclass, TypeClass *baseclass, SInt32 of
     }
     return -1;
 }
+#endif
 
 /* Label record linking a branch target to its statement. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CABI_TransDestructor(Object *destructor, Object *completeDestructor, Statement *stmt, TypeClass *tclass, int mode)
 {
     Statement *current;
@@ -343,6 +353,7 @@ void CABI_TransDestructor(Object *destructor, Object *completeDestructor, Statem
         current->expr.expression = node;
     }
 }
+#endif
 
 Statement *build_base_destruction_statements(Statement *node, VClassList *bl)
 {
@@ -436,6 +447,7 @@ static inline Statement *destroy_array(Statement *expr, ObjMemberVar *member, Ty
                                          intconstnode((Type *)&stsignedlong, member->type->size / type->size));
     return node;
 }
+#if VERSION != VERSION_GC_3_0A5_2
 Statement *destroy_members(Statement *expr, ObjMemberVar *member, TypeClass *cls)
 {
     Type *type;
@@ -482,6 +494,7 @@ Statement *destroy_members(Statement *expr, ObjMemberVar *member, TypeClass *cls
     }
     return expr;
 }
+#endif
 
 OffsetEntry *CABI_0050bf30(OffsetEntry *list, Type *type, SInt32 offset, Boolean flag)
 {
@@ -557,6 +570,7 @@ Object *CABI_ConstructorCallsNew(TypeClass *tclass)
     return NULL;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Statement *assign_vbase_ctor_offsets(Statement *list, TypeClass *cls)
 {
     VClassList *vb;
@@ -610,6 +624,7 @@ Statement *assign_vbase_ctor_offsets(Statement *list, TypeClass *cls)
     }
     return list;
 }
+#endif
 
 static inline ENode *CABI_SourceArg(TypeClass *tclass, Boolean flag)
 {
@@ -680,11 +695,13 @@ static Statement *CABI_InitVBasePtrs(Statement *stmt, TypeClass *tclass)
     return stmt;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 static Object *CABI_ThisArg(void)
 {
     CError_ASSERT(922, arguments && IS_TYPE_POINTER_ONLY(arguments->object.value->type));
     return arguments->object.value;
 }
+#endif
 
 static void CABI_RegisterVBaseDtor(Statement *stmt, VClassList *vbase)
 {
@@ -795,6 +812,7 @@ static Object *GetObj(void)
     return arguments->object.value;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CABI_MakeThisExpr(TypeClass *typeClass, int count)
 {
     ENode *type;
@@ -817,6 +835,7 @@ ENode *CABI_MakeThisExpr(TypeClass *typeClass, int count)
     }
     return type;
 }
+#endif
 
 Statement *make_baseclass_and_ivars_copy_statements(Statement *stmt, TypeClass *tclass, TypeClass *baseclass,
                                                     SInt32 offset, Boolean flag)
@@ -1673,6 +1692,7 @@ void layout_class_ivars(ClassLayoutInput *member, TypeClass *type)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CABI_ReverseBitField(TypeBitfield *tbitfield)
 {
     UInt32 bits;
@@ -1695,6 +1715,7 @@ void CABI_ReverseBitField(TypeBitfield *tbitfield)
     }
     tbitfield->offset = bits - tbitfield->offset - tbitfield->bitlength;
 }
+#endif
 
 SInt16 CABI_ComputeAlignmentPadding(Type *data, SInt32 mask)
 {
@@ -1714,11 +1735,14 @@ Type *CABI_GetPtrDiffTType(void)
     return (Type *)&stsignedlong;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Type *CABI_GetSizeTType(void)
 {
     return (Type *)&stunsignedlong;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CABI_GenClassFunction(TypeClass *tclass, Object *function)
 {
     CScopeSave scopeSave;
@@ -1761,6 +1785,7 @@ void CABI_GenClassFunction(TypeClass *tclass, Object *function)
     CScope_RestoreScope(&scopeSave);
     copts.filesyminfo = savedFileSymInfo;
 }
+#endif
 Statement *destroy_nonvirtual_bases(Statement *acc, ClassList *list)
 {
     Object *dtor;
@@ -1862,6 +1887,7 @@ int get_vtable_size_without_vbases(TypeClass *cl)
     }
     return result;
 }
+#if VERSION != VERSION_GC_3_0A5_2
 void CABI_GenerateClassFunction(TypeClass *cl, Object *func)
 {
     CScopeSave save;
@@ -1902,7 +1928,9 @@ void CABI_GenerateClassFunction(TypeClass *cl, Object *func)
     CScope_RestoreScope(&save);
     copts.filesyminfo = savesym;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *build_vbase_ptr_initializers(ENode *expr, TypeClass *func, TypeClass *cls, TypeClass *vbase, SInt32 offset)
 {
     ClassList *list;
@@ -1937,6 +1965,7 @@ ENode *build_vbase_ptr_initializers(ENode *expr, TypeClass *func, TypeClass *cls
     }
     return expr;
 }
+#endif
 Statement *assign_vtable_pointers(Statement *result, Object *obj, TypeClass *cls, TypeClass *base, SInt32 offset,
                                   SInt32 voffset)
 {

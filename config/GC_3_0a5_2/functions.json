@@ -13320,223 +13320,618 @@
     }
   },
   {
-    "name": "CABI_DestroyObject",
-    "address": "0x0054f6d0",
-    "size": 193,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_DestroyObject",
-    "baseline_address": "0x0050a260",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CABI_LayoutClass",
+    "address": "0x54ece0",
+    "size": 1098,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_AllocateMembers",
+    "address": "0x54f130",
+    "size": 877,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_BaseClassAllocConflict",
+    "address": "0x54f4a0",
+    "size": 158,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ClassAllocConflict",
+    "address": "0x54f540",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetBaseAllocationOrderList",
+    "address": "0x54f5e0",
+    "size": 230,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_DestroyObject",
+    "address": "0x54f6d0",
+    "size": 193,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_GetDestructorObject",
-    "address": "0x0054f7a0",
+    "address": "0x54f7a0",
     "size": 5,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_GetDestructorObject",
-    "baseline_address": "0x0050a340",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_MakeDefaultDestructor",
-    "address": "0x0054f7b0",
+    "address": "0x54f7b0",
     "size": 298,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_MakeDefaultDestructor",
-    "baseline_address": "0x0050a350",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_FinishDestructor",
+    "address": "0x54f8e0",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_TransDestructor",
-    "address": "0x0054f930",
+    "address": "0x54f930",
     "size": 1318,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_TransDestructor",
-    "baseline_address": "0x0050a440",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "build_base_destruction_statements",
-    "address": "0x0054fe60",
+    "name": "CABI_DestroyVBases",
+    "address": "0x54fe60",
     "size": 557,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "build_base_destruction_statements",
-    "baseline_address": "0x0050a890",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "destroy_nonvirtual_bases",
-    "address": "0x005500b0",
+    "name": "fn_00550090",
+    "address": "0x550090",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Unresolved identity; retained address alias; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_DestroyBases",
+    "address": "0x5500b0",
     "size": 387,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "destroy_nonvirtual_bases",
-    "baseline_address": "0x0050aa70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "destroy_members",
-    "address": "0x00550240",
+    "name": "CABI_DestroyMembers",
+    "address": "0x550240",
     "size": 851,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "destroy_members",
-    "baseline_address": "0x0050ab70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CABI_GenClassFunction",
-    "address": "0x00550970",
+    "name": "CABI_MakeDefaultAssignmentOperator",
+    "address": "0x5505a0",
+    "size": 966,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_MakeDefaultCopyConstructor",
+    "address": "0x550970",
     "size": 360,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_GenClassFunction",
-    "baseline_address": "0x0050b000",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CABI_GenerateClassFunction",
-    "address": "0x00551f10",
+    "name": "CABI_CopyAssignMembers",
+    "address": "0x550ae0",
+    "size": 3846,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_CopyAssignBase",
+    "address": "0x5519f0",
+    "size": 791,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ClassInitLoopCallBack",
+    "address": "0x551d10",
+    "size": 268,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_AppendCopyRegion",
+    "address": "0x551e20",
+    "size": 238,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_MakeDefaultConstructor",
+    "address": "0x551f10",
     "size": 360,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_GenerateClassFunction",
-    "baseline_address": "0x0050c010",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "assign_vtable_pointers",
-    "address": "0x005535e0",
+    "name": "CABI_FinishConstructor",
+    "address": "0x552080",
+    "size": 115,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_TransConstructor",
+    "address": "0x552100",
+    "size": 3830,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_IsSimpleCtorDtor",
+    "address": "0x553000",
+    "size": 104,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CABI_DefaultConstructorCall",
+    "address": "0x553070",
+    "size": 468,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetVBaseCTorArg",
+    "address": "0x553250",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_DummyDefaultConstructor",
+    "address": "0x553290",
+    "size": 422,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetFirstRealArgument",
+    "address": "0x553440",
+    "size": 147,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_DestructorReturnsThis",
+    "address": "0x5534e0",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ConstructorReturnsThis",
+    "address": "0x5534f0",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ConstructorCallsNew",
+    "address": "0x553500",
+    "size": 213,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_InitVTablePtrs",
+    "address": "0x5535e0",
     "size": 793,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "assign_vtable_pointers",
-    "baseline_address": "0x0050d180",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "assign_vbase_ctor_offsets",
-    "address": "0x00553900",
+    "name": "CABI_InitVBaseCtorOffsets",
+    "address": "0x553900",
     "size": 710,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "assign_vbase_ctor_offsets",
-    "baseline_address": "0x0050d3f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetCtorOffsetOffset",
+    "address": "0x553bd0",
+    "size": 128,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_FindNVBase",
-    "address": "0x00553c50",
+    "address": "0x553c50",
     "size": 339,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_FindNVBase",
-    "baseline_address": "0x0050d6e0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "build_vbase_ptr_initializers",
-    "address": "0x00553f60",
-    "size": 329,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "build_vbase_ptr_initializers",
-    "baseline_address": "0x0050d910",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CABI_GetVBasePath",
+    "address": "0x553db0",
+    "size": 202,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_InitVBasePtrs",
+    "address": "0x553e80",
+    "size": 214,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_InitVBasePtr1",
+    "address": "0x553f60",
+    "size": 329,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_MakeThisExpr",
-    "address": "0x005540b0",
+    "address": "0x5540b0",
     "size": 227,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_MakeThisExpr",
-    "baseline_address": "0x0050da50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_ThisArg",
-    "address": "0x005541a0",
+    "address": "0x5541a0",
     "size": 55,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_ThisArg",
-    "baseline_address": "0x0050db40",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_AllocateVTable",
+    "address": "0x5541e0",
+    "size": 553,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CABI_AllocateZeroVTablePointer",
+    "address": "0x554410",
+    "size": 281,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "Mac family behavior/call anchors; CSV retains FUN label; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_AddVTable",
+    "address": "0x554530",
+    "size": 30,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_FindSharedVTableMember",
+    "address": "0x554550",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetVTableOffset",
+    "address": "0x5545e0",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ComputeNewArrayPadding",
+    "address": "0x5545f0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_ReleaseGuardVariable",
+    "address": "0x554600",
+    "size": 48,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_AcquireGuardVariable",
+    "address": "0x554630",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_NewGuardVariable",
+    "address": "0x554650",
+    "size": 115,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_ReverseBitField",
-    "address": "0x005546d0",
+    "address": "0x5546d0",
     "size": 86,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_ReverseBitField",
-    "baseline_address": "0x0050e780",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_StructSizeAlignValue",
+    "address": "0x554730",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_PassedByReference",
+    "address": "0x554760",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetVTableHeaderInfo",
+    "address": "0x5547a0",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetPtrDiffTType",
+    "address": "0x5547c0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CABI_GetSizeTType",
-    "address": "0x005547d0",
+    "address": "0x5547d0",
     "size": 6,
-    "source": "src/frontend/CABI.c",
-    "baseline_name": "CABI_GetSizeTType",
-    "baseline_address": "0x0050e830",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CABI_GetStructResultArgumentIndex",
+    "address": "0x5547e0",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CABI.c",
+    "identity_evidence": "v10-applied address CSV corroborated by native behavior and Mac family symbols; CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof.",
+    "boundary_evidence": {
+      "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
       "unresolved_indirect_flow": false
     }
   },

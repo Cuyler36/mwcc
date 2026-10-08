@@ -9836,6 +9836,812 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/frontend/CABI.c",
+      "original_filename": "CABI.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "CABI_LayoutClass",
+          "address": "0x0054ece0",
+          "size": 1098,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0054edba",
+            "0x0054ee50",
+            "0x0054f0ea"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_AllocateMembers",
+          "address": "0x0054f130",
+          "size": 877,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0054f221",
+            "0x0054f37f",
+            "0x0054f3ea",
+            "0x0054f41a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_BaseClassAllocConflict",
+          "address": "0x54f4a0",
+          "size": 158,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_ClassAllocConflict",
+          "address": "0x54f540",
+          "size": 156,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetBaseAllocationOrderList",
+          "address": "0x54f5e0",
+          "size": 230,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_DestroyObject",
+          "address": "0x0054f6d0",
+          "size": 193,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0054f70e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_GetDestructorObject",
+          "address": "0x54f7a0",
+          "size": 5,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_MakeDefaultDestructor",
+          "address": "0x54f7b0",
+          "size": 298,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_FinishDestructor",
+          "address": "0x54f8e0",
+          "size": 69,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_TransDestructor",
+          "address": "0x0054f930",
+          "size": 1318,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0054f976",
+            "0x0054f9a6",
+            "0x0054faaa",
+            "0x0054fdd0",
+            "0x0054fdea",
+            "0x0054fe00",
+            "0x0054fe1a",
+            "0x0054fe30",
+            "0x0054fe4a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_DestroyVBases",
+          "address": "0x0054fe60",
+          "size": 557,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00550081"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "fn_00550090",
+          "address": "0x550090",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_DestroyBases",
+          "address": "0x005500b0",
+          "size": 387,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055022a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_DestroyMembers",
+          "address": "0x00550240",
+          "size": 851,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005504ca",
+            "0x0055051d",
+            "0x00550530",
+            "0x0055058a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_MakeDefaultAssignmentOperator",
+          "address": "0x005505a0",
+          "size": 966,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005506ee",
+            "0x0055087f",
+            "0x005508da",
+            "0x005508ed",
+            "0x0055090a",
+            "0x0055095a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_MakeDefaultCopyConstructor",
+          "address": "0x550970",
+          "size": 360,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_CopyAssignMembers",
+          "address": "0x00550ae0",
+          "size": 3846,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00550c44",
+            "0x00550c60",
+            "0x00550cd4",
+            "0x00550fc2",
+            "0x00550fda",
+            "0x005510ac",
+            "0x005510c8",
+            "0x0055133d",
+            "0x00551470",
+            "0x0055148c",
+            "0x0055153a",
+            "0x00551590",
+            "0x005515cf",
+            "0x0055162a",
+            "0x0055166a",
+            "0x00551680",
+            "0x0055169a",
+            "0x005516b0",
+            "0x005516fa",
+            "0x0055174c",
+            "0x00551762",
+            "0x005517ba",
+            "0x005517f1",
+            "0x0055180a",
+            "0x00551820",
+            "0x0055187a",
+            "0x00551890",
+            "0x005518aa",
+            "0x00551900",
+            "0x0055193e",
+            "0x00551980",
+            "0x005519da"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_CopyAssignBase",
+          "address": "0x005519f0",
+          "size": 791,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00551a6c",
+            "0x00551a88",
+            "0x00551baa",
+            "0x00551bc0",
+            "0x00551cab",
+            "0x00551cc1",
+            "0x00551cfb"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_ClassInitLoopCallBack",
+          "address": "0x00551d10",
+          "size": 268,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00551d30",
+            "0x00551e10"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_AppendCopyRegion",
+          "address": "0x551e20",
+          "size": 238,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_MakeDefaultConstructor",
+          "address": "0x551f10",
+          "size": 360,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_FinishConstructor",
+          "address": "0x00552080",
+          "size": 115,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005520ea"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_TransConstructor",
+          "address": "0x00552100",
+          "size": 3830,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055236b",
+            "0x00552381",
+            "0x0055239a",
+            "0x00552606",
+            "0x005528af",
+            "0x005528ca",
+            "0x005528ee",
+            "0x0055292a",
+            "0x0055294a",
+            "0x00552960",
+            "0x0055298a",
+            "0x005529d0",
+            "0x00552cee",
+            "0x00552d4a",
+            "0x00552d60",
+            "0x00552d7a",
+            "0x00552dcd",
+            "0x00552e3a",
+            "0x00552f6a",
+            "0x00552f80",
+            "0x00552f9a",
+            "0x00552fb0",
+            "0x00552fea"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_IsSimpleCtorDtor",
+          "address": "0x00553000",
+          "size": 104,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055303a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_DefaultConstructorCall",
+          "address": "0x00553070",
+          "size": 468,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055313f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_GetVBaseCTorArg",
+          "address": "0x553250",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_DummyDefaultConstructor",
+          "address": "0x00553290",
+          "size": 422,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055330a",
+            "0x0055338f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_GetFirstRealArgument",
+          "address": "0x00553440",
+          "size": 147,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055349a",
+            "0x005534ad",
+            "0x005534ca"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_DestructorReturnsThis",
+          "address": "0x5534e0",
+          "size": 3,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_ConstructorReturnsThis",
+          "address": "0x5534f0",
+          "size": 3,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_ConstructorCallsNew",
+          "address": "0x553500",
+          "size": 213,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_InitVTablePtrs",
+          "address": "0x005535e0",
+          "size": 793,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005537ba",
+            "0x0055380e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_InitVBaseCtorOffsets",
+          "address": "0x00553900",
+          "size": 710,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00553b6e",
+            "0x00553b8a",
+            "0x00553ba0",
+            "0x00553bba"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_GetCtorOffsetOffset",
+          "address": "0x00553bd0",
+          "size": 128,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00553c31"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_FindNVBase",
+          "address": "0x553c50",
+          "size": 339,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetVBasePath",
+          "address": "0x553db0",
+          "size": 202,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_InitVBasePtrs",
+          "address": "0x00553e80",
+          "size": 214,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00553f4a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_InitVBasePtr1",
+          "address": "0x00553f60",
+          "size": 329,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055408a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_MakeThisExpr",
+          "address": "0x005540b0",
+          "size": 227,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055411a",
+            "0x0055416a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_ThisArg",
+          "address": "0x005541a0",
+          "size": 55,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005541ce"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_AllocateVTable",
+          "address": "0x005541e0",
+          "size": 553,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": true
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005542ba",
+            "0x005542fa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_AllocateZeroVTablePointer",
+          "address": "0x00554410",
+          "size": 281,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0055448e",
+            "0x0055450d"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_AddVTable",
+          "address": "0x554530",
+          "size": 30,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_FindSharedVTableMember",
+          "address": "0x554550",
+          "size": 141,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetVTableOffset",
+          "address": "0x5545e0",
+          "size": 3,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_ComputeNewArrayPadding",
+          "address": "0x5545f0",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_ReleaseGuardVariable",
+          "address": "0x554600",
+          "size": 48,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_AcquireGuardVariable",
+          "address": "0x554630",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_NewGuardVariable",
+          "address": "0x00554650",
+          "size": 115,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005546ba"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_ReverseBitField",
+          "address": "0x005546d0",
+          "size": 86,
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00554711"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c"
+        },
+        {
+          "name": "CABI_StructSizeAlignValue",
+          "address": "0x554730",
+          "size": 46,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_PassedByReference",
+          "address": "0x554760",
+          "size": 52,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetVTableHeaderInfo",
+          "address": "0x5547a0",
+          "size": 29,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetPtrDiffTType",
+          "address": "0x5547c0",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetSizeTType",
+          "address": "0x5547d0",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CABI_GetStructResultArgumentIndex",
+          "address": "0x5547e0",
+          "size": 3,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
       "original_filename": "CCallGraph.c",
       "evidence": [
@@ -28276,545 +29082,11 @@
     },
     {
       "source": "src/frontend/CABI.c",
-      "original_filename": "CABI.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "FUN_0054ece0",
-          "address": "0x0054ece0",
-          "size": 1098,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0054edba",
-            "0x0054ee50",
-            "0x0054f0ea"
-          ]
-        },
-        {
-          "name": "FUN_0054f130",
-          "address": "0x0054f130",
-          "size": 877,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0054f221",
-            "0x0054f37f",
-            "0x0054f3ea",
-            "0x0054f41a"
-          ]
-        },
-        {
-          "name": "CABI_DestroyObject",
-          "address": "0x0054f6d0",
-          "size": 193,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0054f70e"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "CABI_GetDestructorObject",
-          "address": "0x0054f7a0",
-          "size": 5,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CABI_MakeDefaultDestructor",
-          "address": "0x0054f7b0",
-          "size": 298,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CABI_TransDestructor",
-          "address": "0x0054f930",
-          "size": 1318,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0054f976",
-            "0x0054f9a6",
-            "0x0054faaa",
-            "0x0054fdd0",
-            "0x0054fdea",
-            "0x0054fe00",
-            "0x0054fe1a",
-            "0x0054fe30",
-            "0x0054fe4a"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "build_base_destruction_statements",
-          "address": "0x0054fe60",
-          "size": 557,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00550081"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "destroy_nonvirtual_bases",
-          "address": "0x005500b0",
-          "size": 387,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055022a"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "destroy_members",
-          "address": "0x00550240",
-          "size": 851,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005504ca",
-            "0x0055051d",
-            "0x00550530",
-            "0x0055058a"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "FUN_005505a0",
-          "address": "0x005505a0",
-          "size": 966,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005506ee",
-            "0x0055087f",
-            "0x005508da",
-            "0x005508ed",
-            "0x0055090a",
-            "0x0055095a"
-          ]
-        },
-        {
-          "name": "CABI_GenClassFunction",
-          "address": "0x00550970",
-          "size": 360,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00550ae0",
-          "address": "0x00550ae0",
-          "size": 3846,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00550c44",
-            "0x00550c60",
-            "0x00550cd4",
-            "0x00550fc2",
-            "0x00550fda",
-            "0x005510ac",
-            "0x005510c8",
-            "0x0055133d",
-            "0x00551470",
-            "0x0055148c",
-            "0x0055153a",
-            "0x00551590",
-            "0x005515cf",
-            "0x0055162a",
-            "0x0055166a",
-            "0x00551680",
-            "0x0055169a",
-            "0x005516b0",
-            "0x005516fa",
-            "0x0055174c",
-            "0x00551762",
-            "0x005517ba",
-            "0x005517f1",
-            "0x0055180a",
-            "0x00551820",
-            "0x0055187a",
-            "0x00551890",
-            "0x005518aa",
-            "0x00551900",
-            "0x0055193e",
-            "0x00551980",
-            "0x005519da"
-          ]
-        },
-        {
-          "name": "FUN_005519f0",
-          "address": "0x005519f0",
-          "size": 791,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00551a6c",
-            "0x00551a88",
-            "0x00551baa",
-            "0x00551bc0",
-            "0x00551cab",
-            "0x00551cc1",
-            "0x00551cfb"
-          ]
-        },
-        {
-          "name": "FUN_00551d10",
-          "address": "0x00551d10",
-          "size": 268,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00551d30",
-            "0x00551e10"
-          ]
-        },
-        {
-          "name": "CABI_GenerateClassFunction",
-          "address": "0x00551f10",
-          "size": 360,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00552080",
-          "address": "0x00552080",
-          "size": 115,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005520ea"
-          ]
-        },
-        {
-          "name": "FUN_00552100",
-          "address": "0x00552100",
-          "size": 3830,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055236b",
-            "0x00552381",
-            "0x0055239a",
-            "0x00552606",
-            "0x005528af",
-            "0x005528ca",
-            "0x005528ee",
-            "0x0055292a",
-            "0x0055294a",
-            "0x00552960",
-            "0x0055298a",
-            "0x005529d0",
-            "0x00552cee",
-            "0x00552d4a",
-            "0x00552d60",
-            "0x00552d7a",
-            "0x00552dcd",
-            "0x00552e3a",
-            "0x00552f6a",
-            "0x00552f80",
-            "0x00552f9a",
-            "0x00552fb0",
-            "0x00552fea"
-          ]
-        },
-        {
-          "name": "FUN_00553000",
-          "address": "0x00553000",
-          "size": 104,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055303a"
-          ]
-        },
-        {
-          "name": "FUN_00553070",
-          "address": "0x00553070",
-          "size": 468,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055313f"
-          ]
-        },
-        {
-          "name": "FUN_00553290",
-          "address": "0x00553290",
-          "size": 422,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055330a",
-            "0x0055338f"
-          ]
-        },
-        {
-          "name": "FUN_00553440",
-          "address": "0x00553440",
-          "size": 147,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055349a",
-            "0x005534ad",
-            "0x005534ca"
-          ]
-        },
-        {
-          "name": "assign_vtable_pointers",
-          "address": "0x005535e0",
-          "size": 793,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005537ba",
-            "0x0055380e"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "assign_vbase_ctor_offsets",
-          "address": "0x00553900",
-          "size": 710,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00553b6e",
-            "0x00553b8a",
-            "0x00553ba0",
-            "0x00553bba"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "FUN_00553bd0",
-          "address": "0x00553bd0",
-          "size": 128,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00553c31"
-          ]
-        },
-        {
-          "name": "CABI_FindNVBase",
-          "address": "0x00553c50",
-          "size": 339,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00553e80",
-          "address": "0x00553e80",
-          "size": 214,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00553f4a"
-          ]
-        },
-        {
-          "name": "build_vbase_ptr_initializers",
-          "address": "0x00553f60",
-          "size": 329,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055408a"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "CABI_MakeThisExpr",
-          "address": "0x005540b0",
-          "size": 227,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055411a",
-            "0x0055416a"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "CABI_ThisArg",
-          "address": "0x005541a0",
-          "size": 55,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005541ce"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "FUN_005541e0",
-          "address": "0x005541e0",
-          "size": 553,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005542ba",
-            "0x005542fa"
-          ]
-        },
-        {
-          "name": "FUN_00554410",
-          "address": "0x00554410",
-          "size": 281,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0055448e",
-            "0x0055450d"
-          ]
-        },
-        {
-          "name": "FUN_00554650",
-          "address": "0x00554650",
-          "size": 115,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005546ba"
-          ]
-        },
-        {
-          "name": "CABI_ReverseBitField",
-          "address": "0x005546d0",
-          "size": 86,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00554711"
-          ],
-          "compiled_source": "src/frontend/CABI.c"
-        },
-        {
-          "name": "CABI_GetSizeTType",
-          "address": "0x005547d0",
-          "size": 6,
-          "compiled_source": "src/frontend/CABI.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -91972,6 +92244,1787 @@
           }
         ],
         "integration_rule": "Canonical source rows identify actual native functions independently of legacy aliases. Retain incompatible legacy helpers as provisional source where needed, or explicitly migrate callers/rename collisions. Do not treat address coincidence or identical stack slot count as compatibility evidence. Native canonical Warning/OverloadedFunctionError/GetQualifiedName collisions do not prove legacy callers are migrated."
+      }
+    },
+    "src/GC_3_0a5_2/frontend/CABI.c": {
+      "source": "src/GC_3_0a5_2/frontend/CABI.c",
+      "frozen": true,
+      "functions": [
+        {
+          "name": "CABI_LayoutClass",
+          "address": "0x54ece0",
+          "size": 1098,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 1031,
+          "semantic_review": "Clears type.size and saves global alignment. Builds base allocation order; places first shared vptr base at0 with assertions5492/5501. Empty class placement increments offset until conflict absent; ordinary placement uses member alignment/baseSize. Places nonvirtual bases, vbase pointers, zero-vptr member, members; stores baseSize; then remaining vbases plus optional unsigned-long ctor slots. Allocates vtable, asserts all entries occupied5585, computes class alignment, empty size1+flag1000 or struct padding, sets flag2, computes property bits, updates POD baseSize unless option70f1ef, restores alignment. Candidate1031 vs1098; private prefix layout and compatibility arithmetic retained.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54ece0.txt",
+          "csv_v10_label": "CABI_LayoutClass",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AllocateMembers",
+          "address": "0x54f130",
+          "size": 877,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 748,
+          "semantic_review": "Initial struct layout from class size/alignment/packed400000. Normal members invoke bitfield or ordinary layout, union mode resets/maxes offsets. Negative anonymous aliases require union context/assert5248, resolve same-name member/assert5141, always set subtype1. Aggregate subtype uses class union type/assert5256. Tracks zero-vptr offset, removes unnamed placeholders, renames anonymous alias with __anon, final union max or current size. Option70f1c9 reverses every bitfield through exact helper; native inlined reverse switch6508e0 is not emitted in this candidate. Candidate748 vs877.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54f130.txt",
+          "csv_v10_label": "CABI_AllocateMembers",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_BaseClassAllocConflict",
+          "address": "0x54f4a0",
+          "size": 158,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 158,
+          "semantic_review": "Checks each placed class with ClassAllocConflict, then recurses candidate nonvirtual bases and class members using SAME offset (native does not add candidate-relative offset). Strict158 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-54f4a0.txt",
+          "csv_v10_label": "CABI_BaseClassAllocConflict",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ClassAllocConflict",
+          "address": "0x54f540",
+          "size": 156,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 156,
+          "semantic_review": "Returns true identical type and identical offset. Recurse container nonvirtual bases adding relative offsets and class members adding member.offset. Otherwisefalse. Candidate156 matches native size but registers differ.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54f540.txt",
+          "csv_v10_label": "CABI_ClassAllocConflict",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetBaseAllocationOrderList",
+          "address": "0x54f5e0",
+          "size": 230,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 228,
+          "semantic_review": "Allocates14-byte nodes: all nonvirtual bases first, useZero only first nonvirtual with vtable; then all virtual bases with useZero0. Appends by linked scan, initializes occupied0. Second native argument unused. Candidate228 vs230.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54f5e0.txt",
+          "csv_v10_label": "CABI_GetBaseAllocationOrderList",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DestroyObject",
+          "address": "0x54f6d0",
+          "size": 193,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 193,
+          "semantic_review": "Mode2/3 flag chooses1 or-1, mode1 chooses-1, mode0 chooses0; other mode assertion4559. Builds call node39/cost200/type void, object-ref destructor, flag1 sets node.flags8, sets destructor.objectFlags1; two arguments this and signed-short flag. Strict193 bytes, switch table/fixups exact.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-54f6d0.txt",
+          "csv_v10_label": "CABI_DestroyObject",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetDestructorObject",
+          "address": "0x54f7a0",
+          "size": 5,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 5,
+          "semantic_review": "Returns argument unchanged. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-54f7a0.txt",
+          "csv_v10_label": "CABI_GetDestructorObject",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_MakeDefaultDestructor",
+          "address": "0x54f7b0",
+          "size": 298,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 298,
+          "semantic_review": "Skips existing errors/access3; copies class property bits to object flags. Pushes instance/scope, sets up body/args, disables filesyminfo, creates return statement, TransDestructor, cleanup+Gen, restores debug/scope/instance. Strict298 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-54f7b0.txt",
+          "csv_v10_label": "CABI_MakeDefaultDestructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_FinishDestructor",
+          "address": "0x54f8e0",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 69,
+          "semantic_review": "Four arguments; TransDestructor(func,func,stmt,class,0); optional ErrorCheck controlled fourth arg; DestructorCleanup, CodeCleanup, Gen in native order. Strict69 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-54f8e0.txt",
+          "csv_v10_label": "CABI_FinishDestructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_TransDestructor",
+          "address": "0x54f930",
+          "size": 1318,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 954,
+          "semantic_review": "Rewrites return8 to goto3 end, asserts return expr absent; drops terminal NULL return. Inserts this-null and flag checks, initializes vtables/ctor offsets by class flags, destroys members/bases/virtual bases in native order, optional rt_unreg_class, sized or unsized delete, labels and return-this. Maintains label fields and current statement linkage. Candidate954 vs1318; branch/call/memory review only, no native application execution.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54f930.txt",
+          "csv_v10_label": "CABI_TransDestructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DestroyVBases",
+          "address": "0x54fe60",
+          "size": 557,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 129,
+          "semantic_review": "Walk virtual list with destructors; recursively process later entries BEFORE access-check, then insert DestroyObject. Native recursive inlining vs candidate129/557; ordering preserved.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-54fe60.txt",
+          "csv_v10_label": "CABI_DestroyVBases",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "fn_00550090",
+          "address": "0x550090",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 18,
+          "semantic_review": "Calls create_objectrefnode(argument), then checkreference(result); identity remains unknown (CSV FUN_00550090). Strict18 bytes/fixups; not given invented canonical name.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-550090.txt",
+          "csv_v10_label": "FUN_00550090",
+          "canonical_identity": "Unresolved identity; retained address alias",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DestroyBases",
+          "address": "0x5500b0",
+          "size": 387,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 141,
+          "semantic_review": "Walk nonvirtual bases with destructors; access-check before recursively processing later bases, then insert kind4 DestroyObject(This(NULL,base.offset),mode0,flag1,unused0). Virtual/no-destructor skipped. Fifth flag unused but propagated. Native expands recursion, candidate141 vs387; same reverse destruction order.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-5500b0.txt",
+          "csv_v10_label": "CABI_DestroyBases",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DestroyMembers",
+          "address": "0x550240",
+          "size": 851,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 382,
+          "semantic_review": "Zero-size array returns current statement immediately. Unwrap arrays; class+dtor causes recursive following-member destruction first. Arrays insert destroyarray_func(this,dtorRef,size,count), mark dtor-reference flag8; scalar mode1 DestroyObject. Nonclass skipped. Native expanded recursion vs candidate382/851; retains native access-check arguments and early return.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-550240.txt",
+          "csv_v10_label": "CABI_DestroyMembers",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_MakeDefaultAssignmentOperator",
+          "address": "0x5505a0",
+          "size": 966,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 697,
+          "semantic_review": "Common scope/debug setup. Union or option70f22c+trivial assignment emits whole-object assignment only if size!=0. Otherwise virtual then nonvirtual CopyAssignBase calls and CopyAssignMembers. Appends return-this, CodeCleanup+Gen and restores state. Uses native current-statement710064 after setup. Candidate697 vs966.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-5505a0.txt",
+          "csv_v10_label": "CABI_MakeDefaultAssignmentOperator",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_MakeDefaultCopyConstructor",
+          "address": "0x550970",
+          "size": 360,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 330,
+          "semantic_review": "Same wrapper with TransConstructor copy1; preserves vbase implicit arg naming, errors/access checks, cleanup and scope/debug restoration. Candidate330 vs360.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-550970.txt",
+          "csv_v10_label": "CABI_MakeDefaultCopyConstructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_CopyAssignMembers",
+          "address": "0x550ae0",
+          "size": 3846,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 2115,
+          "semantic_review": "Skips vptr; checks const once (only assignment) and emits Error2893; zero-size arrays skipped, unwraps types, computes raw region flag from copy/assignment properties, appends/merges regions. For nonraw class scalar invokes copy+destructor registration or promoted assignment; arrays count>4 use GenerateLoop/callback with loop globals, smaller arrays expand element copies; destructor array registration retained. Raw arrays use opaque type(size,align), then raw assignment. Candidate2115 vs3846; original type switch650910 not emitted; source handles branches via scalar predicates/calls. Native registration/error order reviewed.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-550ae0.txt",
+          "csv_v10_label": "CABI_CopyAssignMembers",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_CopyAssignBase",
+          "address": "0x5519f0",
+          "size": 791,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 615,
+          "semantic_review": "Trivial class flags1000 may skip if no required copy constructor/assignment. SourceArg selects second/third depending construct/root-vbase flags with assertions1610/1611/1615/1617; DirectBasePointerCast. Construct path ConstructObject and selective access-check on resulting call; assignment operator promotion/access or raw indirect assignment. Candidate615 vs791; sixth mode propagated, native offset/root semantics preserved.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-5519f0.txt",
+          "csv_v10_label": "CABI_CopyAssignBase",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ClassInitLoopCallBack",
+          "address": "0x551d10",
+          "size": 268,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 265,
+          "semantic_review": "Asserts global loop class.kind6 at3245; dereferences source. Construct flag uses CopyClassObject. Assignment path looks up AssignmentOperator (CSV542720), validates second arg3135, access-checks and promotes source; absent operator emits raw dereference assignment30. Candidate265 vs268.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-551d10.txt",
+          "csv_v10_label": "CABI_ClassInitLoopCallBack",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AppendCopyRegion",
+          "address": "0x551e20",
+          "size": 238,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 238,
+          "semantic_review": "Unwraps bitfield type to base; end=offset+type.size. Raw region may merge/contain earlier ranges; fully contained later ranges become empty by end=start. Otherwise allocates/initializes18-byte node and appends. Strict238 bytes/fixups; does not discard zero/negative compatibility arithmetic.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-551e20.txt",
+          "csv_v10_label": "CABI_AppendCopyRegion",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_MakeDefaultConstructor",
+          "address": "0x551f10",
+          "size": 360,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 330,
+          "semantic_review": "Default constructor wrapper, same scope/debug setup as destructor; names vbase flag arg when needed, TransConstructor(current_class,copy0,mode0), destructor/code cleanup and Gen, restores. Candidate330 vs360 due shared/global helper vs native inline decisions.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-551f10.txt",
+          "csv_v10_label": "CABI_MakeDefaultConstructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_FinishConstructor",
+          "address": "0x552080",
+          "size": 115,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 115,
+          "semantic_review": "Six arguments; unused third retained. Asserts current_class at2993, TransConstructor with fourth copy and sixth mode; fifth controls ErrorCheck; DestructorCleanup, CodeCleanup, Gen. Strict115 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-552080.txt",
+          "csv_v10_label": "CABI_FinishConstructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_TransConstructor",
+          "address": "0x552100",
+          "size": 3830,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 2566,
+          "semantic_review": "Finds constructor-initializer marker statement4/node4f and clears statement kind; optional operator-new null/size/this logic and labels. hasTry scans for kind12/assert2714. Vbase flag gate: init pointers, copy or explicit/default vbase construction, assertions2761 and missing Error27e5, conditional destructor registration flag. Nonvirtual base construction follows with assertion2800. Initializes vtables and ctor slots by flags. Copy path CopyAssignMembers; otherwise explicit member init/assert2930 and scalar/array destructor registration; missing arrays use default/dummy ctor+ConstructClassArray, scalar default ctor; missing Error27e6, zero-size arrays skipped, assert element-size2944. Rewrites initial return8 expression to This(NULL), asserting old NULL2975. Candidate2566 vs3830; original two type tables650930/650950 not emitted; all recovered branches reviewed but no runtime semantic differential execution.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-552100.txt",
+          "csv_v10_label": "CABI_TransConstructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_IsSimpleCtorDtor",
+          "address": "0x553000",
+          "size": 104,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "error": "unbound literal: .sw$1222 (0 retail blocks, 0 strings)",
+          "compiled_size": 116,
+          "semantic_review": "Flag true returns0, NULL statements returns1. Kinds1,2,3,10,11 continue;4,5,6,7,15 call HasFuncCall even NULL;8 only calls for non-NULL expr;12,13,14,16 returns0;9/default assertion2559 then continue. Original16-entry table650970, emitted64-byte table unresolved because block layout differs. No manual generated-symbol mapping.",
+          "classification": "reviewed_nonmatch_unresolved_table",
+          "native_disassembly": "build/cabi-fn-553000.txt",
+          "csv_v10_label": "CABI_IsSimpleCtorDtor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DefaultConstructorCall",
+          "address": "0x553070",
+          "size": 468,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 412,
+          "semantic_review": "Seven args, sets outNotFound0 even if no constructor list. Filters default candidates, reports ambiguity; no candidate sets outNotFound1. Optional access-check, optional vbase signed-short flag argument. Asserts expr.type pointer-kind12 at2523, dereferences with class type, CExpr_CallFunction; node39/3a result retyped class pointer. Candidate412 vs468; preserves no-list vs no-viable distinction.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553070.txt",
+          "csv_v10_label": "CABI_DefaultConstructorCall",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetVBaseCTorArg",
+          "address": "0x553250",
+          "size": 51,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 51,
+          "semantic_review": "Class.flags20 produces signed-short boolean expression; otherwiseNULL. Second native argument unused. Strict51 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-553250.txt",
+          "csv_v10_label": "CABI_GetVBaseCTorArg",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DummyDefaultConstructor",
+          "address": "0x553290",
+          "size": 422,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 417,
+          "semantic_review": "Searches constructor-name overloads kind5/function7/not100000; asserts first real arg nonNULL2295, accepts defaults/ellipsis and native continuation if NULL after report. Ambiguous reports overload error then stops. None Error27db. Reuses __defctor namespace object asserting2322 or allocates44-byte function type, flags10, optional vbase arg, this arg, compiler function object qualifier80010, registers dummy constructor mapping. Candidate417 vs422.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553290.txt",
+          "csv_v10_label": "CABI_DummyDefaultConstructor",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetFirstRealArgument",
+          "address": "0x553440",
+          "size": 147,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 147,
+          "semantic_review": "Asserts function kind7 at2236. Flags10 and !explicitArgs skip implicit this with assertion2244; flags2000 returnsNULL; class.flags20 and function.flags1000 skip extra ctor flag with assertion2264. Strict147 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-553440.txt",
+          "csv_v10_label": "CABI_GetFirstRealArgument",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_DestructorReturnsThis",
+          "address": "0x5534e0",
+          "size": 3,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 3,
+          "semantic_review": "Returns1. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5534e0.txt",
+          "csv_v10_label": "CABI_DestructorReturnsThis",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ConstructorReturnsThis",
+          "address": "0x5534f0",
+          "size": 3,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 3,
+          "semantic_review": "Returns1. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5534f0.txt",
+          "csv_v10_label": "CABI_ConstructorReturnsThis",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ConstructorCallsNew",
+          "address": "0x553500",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 202,
+          "semantic_review": "Only class.flags bit1 searches operator155; validates function argument unsigned-long signature, selects own object/list candidate, otherwise newh_func. Classes without flag returnNULL. Candidate202 vs213; same first-match/fallback.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553500.txt",
+          "csv_v10_label": "CABI_ConstructorCallsNew",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_InitVTablePtrs",
+          "address": "0x5535e0",
+          "size": 793,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 595,
+          "semantic_review": "Uses30-byte descriptor root/class/baseReference/path/baseClass/offset/vOffset/direct/virtual. Emits each destination offset once, obtains root vtable object and vOffset adjustment; virtual indirect uses AccessPathCast(baseReference,...), others pointer offset. Recurses with child descriptors, parent.path=&child.path then clears it; virtual offsets from root virtual-base record, nonvirtual adds offsets, shared-vptr byte+12 suppresses emission. Candidate595 vs793, native recursive expansion. Descriptor initializers use baseReference=&info.path, not info.path=&info.path.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-5535e0.txt",
+          "csv_v10_label": "FUN_005535e0",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_InitVBaseCtorOffsets",
+          "address": "0x553900",
+          "size": 710,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 710,
+          "semantic_review": "For flagged virtual bases allocate temp once, compute root offset/ctor slot/path. Assert path1737 and expr1825, dereference/walk path; emit temp assignment then unsigned-long slot assignment of (This(NULL,baseOffset)-temp). Candidate710 matches native size but registers differ.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553900.txt",
+          "csv_v10_label": "FUN_00553900",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetCtorOffsetOffset",
+          "address": "0x553bd0",
+          "size": 128,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 128,
+          "semantic_review": "Starts from class.baseSize+26; optional subtraction of FindNVBase result with assertion1788; temporarily overrides global alignment from class.eflags f0, calls member alignment for unsigned long, restores alignment. Strict128 bytes/fixups. Does not use old type.size field.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-553bd0.txt",
+          "csv_v10_label": "CABI_GetCtorOffsetOffset",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_FindNVBase",
+          "address": "0x553c50",
+          "size": 339,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 90,
+          "semantic_review": "Depth-first search of nonvirtual bases, returns accumulated first nonnegative matching class offset, otherwise-1. Virtual bases skipped. Native inlines multiple recursion levels; candidate retains equivalent recursive calls under original acyclic class graph and valid offsets preconditions.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553c50.txt",
+          "csv_v10_label": "FUN_00553c50",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetVBasePath",
+          "address": "0x553db0",
+          "size": 202,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 203,
+          "semantic_review": "Direct matching virtual base allocates eight-byte offset path; recursive candidates choose shortest signed-short length incremented by virtual edge. Virtual edge prepends offset node, nonvirtual edge adds base offset to existing head. NULL if no path. Candidate203 vs202 bytes, valid class graph precondition preserved.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553db0.txt",
+          "csv_v10_label": "FUN_00553db0",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_InitVBasePtrs",
+          "address": "0x553e80",
+          "size": 214,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 200,
+          "semantic_review": "Clears trans_vtboffsets; each root virtual base builds ThisExpr(NULL,offset), calls InitVBasePtr1, inserts statement kind4 expression. Candidate200 vs214; list clearing and iteration reviewed.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553e80.txt",
+          "csv_v10_label": "FUN_00553e80",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_InitVBasePtr1",
+          "address": "0x553f60",
+          "size": 329,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 326,
+          "semantic_review": "Walks all bases. Matching virtual base builds assignment only when destination offset absent from trans_vtboffsets (flag0); records ten-byte list entry. Recurses with absolute virtual-base offset from root virtual list or accumulated nonvirtual offset. Candidate326 vs329; writes/call order reviewed.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-553f60.txt",
+          "csv_v10_label": "FUN_00553f60",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_MakeThisExpr",
+          "address": "0x5540b0",
+          "size": 227,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 227,
+          "semantic_review": "Creates ThisArg; non-NULL class sets class pointer type and optionally dereferences if class.flags bit1, NULL class sets void-pointer type. Nonzero offset adds unsigned-long constant with node op15. Native227-byte body and candidate same size but register scheduling differs.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-5540b0.txt",
+          "csv_v10_label": "CABI_MakeThisExpr",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ThisArg",
+          "address": "0x5541a0",
+          "size": 55,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 55,
+          "semantic_review": "Asserts arguments exists, then its object type.kind==12 at CABI.c:1539; returns object expression. Strict bytes/fixups, no added input guards.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5541a0.txt",
+          "csv_v10_label": "CABI_ThisArg",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AllocateVTable",
+          "address": "0x5541e0",
+          "size": 553,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "error": "unbound literal: .sw$689 (0 retail blocks, 0 strings)",
+          "compiled_size": 585,
+          "semantic_review": "Determines header from inherited first base or flags2010 and native scalar sizes. Assigns nonvirtual inherited vOffsets, scans layout entries asserting1486, subtype4 functions reuse shared slot or allocate4 bytes; records baseSize, then appends virtual tables. Allocates named opaque compiler object, class flags/storage/qualifier handling, updates object, stores total size. Candidate body cannot resolve anonymous four-byte switch table; all branches/writes reviewed. No generated-symbol binding.",
+          "classification": "reviewed_nonmatch_unresolved_table",
+          "native_disassembly": "build/cabi-fn-5541e0.txt",
+          "csv_v10_label": "FUN_005541e0",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AllocateZeroVTablePointer",
+          "address": "0x554410",
+          "size": 281,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 275,
+          "semantic_review": "Allocates/clears16-byte vtable if absent. Copies inherited zero-vptr offset for first useZero nonvirtual base with assertion1386, otherwise allocates24-byte vptr member. Backward scan starts from zero-extended UInt16(count-1), asserts NULL entries1418, inserts before first member if index<0 or after found member. Preserves unusual 65535 case rather than changing to signed -1. Candidate275 vs281.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-554410.txt",
+          "csv_v10_label": "FUN_00554410",
+          "canonical_identity": "Mac family behavior/call anchors; CSV retains FUN label",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AddVTable",
+          "address": "0x554530",
+          "size": 30,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 30,
+          "semantic_review": "Allocates16 bytes with galloc, writes pointer into class.vTable+1a, clears all16 bytes with memclrw. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-554530.txt",
+          "csv_v10_label": "CABI_AddVTable",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_FindSharedVTableMember",
+          "address": "0x554550",
+          "size": 141,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 141,
+          "semantic_review": "Searches own namespace first for matching name, object kind5, subtype4 and override-kind1; then recurses only nonvirtual bases at offset0/vOffset0 with vtables. Retains first-match ordering, NULL otherwise. Native and candidate both141 bytes but register allocation differs. CSV name supported by own-class search, unlike old zero-virtual-base-only interpretation.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-554550.txt",
+          "csv_v10_label": "CABI_FindSharedVTableMember",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetVTableOffset",
+          "address": "0x5545e0",
+          "size": 3,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 3,
+          "semantic_review": "Returns0. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5545e0.txt",
+          "csv_v10_label": "CABI_GetVTableOffset",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ComputeNewArrayPadding",
+          "address": "0x5545f0",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 6,
+          "semantic_review": "Returns16. CSV v10 canonical name supersedes earlier possible base-vtable-size interpretation. No GetBaseVTableSize alias. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5545f0.txt",
+          "csv_v10_label": "CABI_ComputeNewArrayPadding",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ReleaseGuardVariable",
+          "address": "0x554600",
+          "size": 48,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 48,
+          "semantic_review": "Returns assignment expression of guard reference to unsigned-char integer1. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-554600.txt",
+          "csv_v10_label": "CABI_ReleaseGuardVariable",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_AcquireGuardVariable",
+          "address": "0x554630",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 18,
+          "semantic_review": "Creates an object-reference expression for guard then checkreference. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-554630.txt",
+          "csv_v10_label": "CABI_AcquireGuardVariable",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_NewGuardVariable",
+          "address": "0x554650",
+          "size": 115,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 115,
+          "semantic_review": "Reports assertion344 if owner NULL, then allocates compiler data object; copies owner qualifier bits60000 and storage class18, sets unsigned-char type and unique name; updates object, sets guard name, declares type-sized data. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-554650.txt",
+          "csv_v10_label": "CABI_NewGuardVariable",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_ReverseBitField",
+          "address": "0x5546d0",
+          "size": 86,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 86,
+          "semantic_review": "Switch base type size 1/2/4/8 to 8/16/32/64 bits; unsupported size reports CABI.c:330 then retains native continuation. Writes offset=bits-width-oldOffset to byte+a. Native type.size+2, base pointer+6, width+b. Strict bytes, indirect table and PE fixups exact.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5546d0.txt",
+          "csv_v10_label": "CABI_ReverseBitField",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_StructSizeAlignValue",
+          "address": "0x554730",
+          "size": 46,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": false,
+          "compiled_size": 40,
+          "semantic_review": "Three cdecl arguments (type, mode, mask). Calls CMach_GetTypeAlign(type,mode), sign extends short; alignment<=1 returns0, otherwise (alignment-(mask&(alignment-1)))&(alignment-1). Candidate removes scheduling/padding differences. Legacy two-argument alignment wrapper cannot be aliased without caller adaptation.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/cabi-fn-554730.txt",
+          "csv_v10_label": "CABI_StructSizeAlignValue",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_PassedByReference",
+          "address": "0x554760",
+          "size": 52,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 52,
+          "semantic_review": "If type.kind6 and CClass_ReferenceArgument(type) true returns1; otherwise CMach_PassAddressOf(type) true returns1; else0. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-554760.txt",
+          "csv_v10_label": "CABI_PassedByReference",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetVTableHeaderInfo",
+          "address": "0x5547a0",
+          "size": 29,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 29,
+          "semantic_review": "Writes signed-long size+4 into result.size,0 into result.offset,4 into result.alignment; native three-int result record. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5547a0.txt",
+          "csv_v10_label": "CABI_GetVTableHeaderInfo",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetPtrDiffTType",
+          "address": "0x5547c0",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 6,
+          "semantic_review": "Returns address of native stsignedlong. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5547c0.txt",
+          "csv_v10_label": "CABI_GetPtrDiffTType",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetSizeTType",
+          "address": "0x5547d0",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 6,
+          "semantic_review": "Returns address of native stunsignedlong. Strict bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5547d0.txt",
+          "csv_v10_label": "CABI_GetSizeTType",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        },
+        {
+          "name": "CABI_GetStructResultArgumentIndex",
+          "address": "0x5547e0",
+          "size": 3,
+          "source": "src/GC_3_0a5_2/frontend/CABI.c",
+          "exact": true,
+          "compiled_size": 3,
+          "semantic_review": "Returns0. Strict bytes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/cabi-fn-5547e0.txt",
+          "csv_v10_label": "CABI_GetStructResultArgumentIndex",
+          "canonical_identity": "v10-applied address CSV corroborated by native behavior and Mac family symbols",
+          "ownership_evidence": "CABI assertion/call/data cluster between independently named CInline_Init54ecd0 and AppendSectionData5547f0; native ABI behavior and family names. Ordinary Mac symbols alone have no SO source scope proof."
+        }
+      ],
+      "summary": {
+        "strict_exact": 26,
+        "resolved_nonmatch": 28,
+        "unresolved_functions": [
+          {
+            "name": "CABI_AllocateVTable",
+            "address": "0x5541e0",
+            "size": 553,
+            "compiled_size": 585,
+            "error": "unbound literal: .sw$689 (0 retail blocks, 0 strings)"
+          },
+          {
+            "name": "CABI_IsSimpleCtorDtor",
+            "address": "0x553000",
+            "size": 104,
+            "compiled_size": 116,
+            "error": "unbound literal: .sw$1222 (0 retail blocks, 0 strings)"
+          }
+        ],
+        "objdiff_report": "build/cabi-cw94-objdiff.json",
+        "objdiff_exit_code": 0
+      },
+      "compiler": {
+        "path": "build/compilers/cw94/mwcc.exe",
+        "preferred_flags": [
+          "-c",
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly",
+          "-DVERSION=3",
+          "-Iinclude",
+          "-i-",
+          "-Iinclude/libc"
+        ],
+        "profile_variations": {
+          "o3speed": "-O3 -opt speed -opt intrinsics",
+          "o4nointrinsics": "-O4 -opt speed",
+          "o4space": "-O4 -opt space -opt intrinsics"
+        },
+        "invalid_profile_excluded": "-opt size warns even when compiler exits0; discarded, use space",
+        "experiment_counts": "Four valid whole-TU compiler profiles on final source; additional incremental native reconstruction probes and rejected inline/branch tuning were exploratory, not exhaustively counted."
+      },
+      "profiles": {
+        "cw94": {
+          "strict_exact": 26,
+          "resolved_nonmatch": 28,
+          "unresolved_functions": [
+            {
+              "name": "CABI_AllocateVTable",
+              "address": "0x5541e0",
+              "size": 553,
+              "compiled_size": 585,
+              "error": "unbound literal: .sw$689 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "CABI_IsSimpleCtorDtor",
+              "address": "0x553000",
+              "size": 104,
+              "compiled_size": 116,
+              "error": "unbound literal: .sw$1222 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_report": "build/cabi-cw94-objdiff.json",
+          "objdiff_exit_code": 0
+        },
+        "o3speed": {
+          "strict_exact": 24,
+          "resolved_nonmatch": 30,
+          "unresolved_functions": [
+            {
+              "name": "CABI_AllocateVTable",
+              "address": "0x5541e0",
+              "size": 553,
+              "compiled_size": 585,
+              "error": "unbound literal: .sw$689 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "CABI_IsSimpleCtorDtor",
+              "address": "0x553000",
+              "size": 104,
+              "compiled_size": 116,
+              "error": "unbound literal: .sw$1222 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_report": "build/cabi-o3speed-objdiff.json",
+          "objdiff_exit_code": 0
+        },
+        "o4nointrinsics": {
+          "strict_exact": 26,
+          "resolved_nonmatch": 28,
+          "unresolved_functions": [
+            {
+              "name": "CABI_AllocateVTable",
+              "address": "0x5541e0",
+              "size": 553,
+              "compiled_size": 585,
+              "error": "unbound literal: .sw$689 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "CABI_IsSimpleCtorDtor",
+              "address": "0x553000",
+              "size": 104,
+              "compiled_size": 116,
+              "error": "unbound literal: .sw$1222 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_report": "build/cabi-o4nointrinsics-objdiff.json",
+          "objdiff_exit_code": 0
+        },
+        "o4space": {
+          "strict_exact": 13,
+          "resolved_nonmatch": 43,
+          "unresolved_functions": [],
+          "objdiff_report": "build/cabi-o4space-objdiff.json",
+          "objdiff_exit_code": 0
+        }
+      },
+      "bindings": {},
+      "source_bindings": {
+        "src/GC_3_0a5_2/frontend/CABI.c": {
+          "_CABI_ReverseBitField": "0x5546d0",
+          "_CABI_StructSizeAlignValue": "0x554730",
+          "_CABI_PassedByReference": "0x554760",
+          "_CABI_GetVTableHeaderInfo": "0x5547a0",
+          "_CABI_GetPtrDiffTType": "0x5547c0",
+          "_CABI_GetSizeTType": "0x5547d0",
+          "_CABI_GetStructResultArgumentIndex": "0x5547e0",
+          "_CABI_NewGuardVariable": "0x554650",
+          "_CABI_AcquireGuardVariable": "0x554630",
+          "_CABI_ReleaseGuardVariable": "0x554600",
+          "_CABI_GetVTableOffset": "0x5545e0",
+          "_CABI_ComputeNewArrayPadding": "0x5545f0",
+          "_CABI_DestructorReturnsThis": "0x5534e0",
+          "_CABI_ConstructorReturnsThis": "0x5534f0",
+          "_CABI_GetDestructorObject": "0x54f7a0",
+          "_CABI_AddVTable": "0x554530",
+          "_CABI_FindSharedVTableMember": "0x554550",
+          "_CABI_ThisArg": "0x5541a0",
+          "_CABI_MakeThisExpr": "0x5540b0",
+          "_CABI_FindNVBase": "0x553c50",
+          "_CABI_DestroyObject": "0x54f6d0",
+          "_CABI_GetCtorOffsetOffset": "0x553bd0",
+          "_CABI_GetVBasePath": "0x553db0",
+          "_CABI_InitVBasePtr1": "0x553f60",
+          "_CABI_InitVBasePtrs": "0x553e80",
+          "_CABI_AppendCopyRegion": "0x551e20",
+          "_CABI_ConstructorCallsNew": "0x553500",
+          "_CABI_GetFirstRealArgument": "0x553440",
+          "_CABI_GetVBaseCTorArg": "0x553250",
+          "_fn_00550090": "0x550090",
+          "_CABI_AllocateZeroVTablePointer": "0x554410",
+          "_CABI_AllocateVTable": "0x5541e0",
+          "_CABI_MakeDefaultDestructor": "0x54f7b0",
+          "_CABI_FinishDestructor": "0x54f8e0",
+          "_CABI_MakeDefaultConstructor": "0x551f10",
+          "_CABI_MakeDefaultCopyConstructor": "0x550970",
+          "_CABI_FinishConstructor": "0x552080",
+          "_CABI_DestroyBases": "0x5500b0",
+          "_CABI_DestroyVBases": "0x54fe60",
+          "_CABI_DestroyMembers": "0x550240",
+          "_CABI_InitVBaseCtorOffsets": "0x553900",
+          "_CABI_InitVTablePtrs": "0x5535e0",
+          "_CABI_TransDestructor": "0x54f930",
+          "_CABI_IsSimpleCtorDtor": "0x553000",
+          "_CABI_ClassAllocConflict": "0x54f540",
+          "_CABI_BaseClassAllocConflict": "0x54f4a0",
+          "_CABI_GetBaseAllocationOrderList": "0x54f5e0",
+          "_CABI_DummyDefaultConstructor": "0x553290",
+          "_CABI_DefaultConstructorCall": "0x553070",
+          "_CABI_ClassInitLoopCallBack": "0x551d10",
+          "_CABI_CopyAssignBase": "0x5519f0",
+          "_CABI_LayoutClass": "0x54ece0",
+          "_CABI_AllocateMembers": "0x54f130",
+          "_CABI_MakeDefaultAssignmentOperator": "0x5505a0",
+          "_CABI_CopyAssignMembers": "0x550ae0",
+          "_CABI_TransConstructor": "0x552100",
+          "_stsignedlong": "0x699c64",
+          "_stunsignedlong": "0x699c6c",
+          "_stunsignedchar": "0x699c2c",
+          "_CError_Internal": "0x45a250",
+          "_CMach_GetTypeAlign": "0x4e2e00",
+          "_CClass_ReferenceArgument": "0x541f80",
+          "_CMach_PassAddressOf": "0x4e2420",
+          "_CParser_NewCompilerDefDataObject": "0x455570",
+          "_CParser_GetUniqueName": "0x455e00",
+          "_CParser_UpdateObject": "0x4556f0",
+          "_CMangler_SetupGuardVarName": "0x556910",
+          "_CInit_DeclareData": "0x52f040",
+          "_create_objectrefnode": "0x521ad0",
+          "_checkreference": "0x55b9f0",
+          "_intconstnode": "0x5242b0",
+          "_makediadicnode": "0x524130",
+          "_arguments": "0x710924",
+          "_void_ptr": "0x6771c8",
+          "_galloc": "0x46c6a0",
+          "_lalloc": "0x46c660",
+          "_memclrw": "0x46c400",
+          "_CScope_FindName": "0x4eb140",
+          "_CClass_GetOverrideKind": "0x542ac0",
+          "_makemonadicnode": "0x5241b0",
+          "_CExpr_NewENode": "0x5243b0",
+          "_CExpr_New_EOBJREF_Node": "0x521c20",
+          "_stvoid": "0x725d96",
+          "_stsignedshort": "0x699c44",
+          "_structure_alignment": "0x70f218",
+          "_CMach_MemberAlignValue": "0x4e2cc0",
+          "_trans_vtboffsets": "0x6e2dee",
+          "_CClass_FindVirtualBase": "0x541730",
+          "_CFunc_InsertStatement": "0x52e080",
+          "_CScope_FindClassMemberObject": "0x4e6a10",
+          "_CMangler_OperatorName": "0x558310",
+          "_newh_func": "0x71092c",
+          "_vptr_name": "0x715c64",
+          "_CMangler_VTableName": "0x558280",
+          "_CDecl_NewOpaqueType": "0x5445b0",
+          "_anyerrors": "0x725ecb",
+          "_filesyminfo": "0x70f287",
+          "_current_class": "0x710108",
+          "_CTemplTool_PushInstance": "0x53ea50",
+          "_CTemplTool_PopInstance": "0x53ea20",
+          "_CScope_SetFunctionScope": "0x4eb360",
+          "_CScope_RestoreScope": "0x4eb2d0",
+          "_CFunc_FuncGenSetup": "0x526590",
+          "_CFunc_SetupNewFuncArgs": "0x526ae0",
+          "_CFunc_ErrorCheck": "0x52cd70",
+          "_CFunc_DestructorCleanup": "0x52d300",
+          "_CFunc_CodeCleanup": "0x52df40",
+          "_CFunc_Gen": "0x5264b0",
+          "_CClass_Destructor": "0x5423e0",
+          "_CClass_NewAccessCheck": "0x53f5b0",
+          "_destroyarray_func": "0x711b80",
+          "_funccallexpr": "0x5a89a0",
+          "_CFunc_CreateTempObject": "0x52dfb0",
+          "_signedlong_ptr": "0x6771d6",
+          "_fn_00520110": "0x520110",
+          "_CClass_AccessPathCast": "0x5419f0",
+          "_newlabel": "0x52e130",
+          "_fn_0051f620": "0x51f620",
+          "_fn_0070f1e7": "0x70f1e7",
+          "_rt_unreg_class": "0x716c1c",
+          "_fn_004550c0": "0x4550c0",
+          "_CExpr_HasFuncCall": "0x55bbe0",
+          "_constructor_name": "0x711b28",
+          "_CError_OverloadedFunctionError": "0x45a580",
+          "_CError_Error": "0x45c480",
+          "_GetHashNameNodeExport": "0x46d1d0",
+          "_CDecl_SetFuncFlags": "0x514d50",
+          "_CDecl_AddArgument": "0x514980",
+          "_CDecl_AddThisPointerArgument": "0x5149b0",
+          "_CParser_NewCompilerDefFunctionObject": "0x4554b0",
+          "_CScope_AddObject": "0x4ea740",
+          "_CMid_RegisterDummyCtorFunction": "0x479cb0",
+          "_CExpr_CallFunction": "0x5a7480",
+          "_CDecl_NewPointerType": "0x544530",
+          "_cabi_loop_construct": "0x6e2de8",
+          "_cabi_loop_class": "0x6e2dea",
+          "_CClass_AssignmentOperator": "0x542720",
+          "_argumentpromotion": "0x5a8b60",
+          "_CExpr_CopyClassObject": "0x5a6b30",
+          "_CClass_HasCopyConstructor": "0x542530",
+          "_CClass_DirectBasePointerCast": "0x5417f0",
+          "_CExpr_ConstructObject": "0x5a6b70",
+          "_CMach_StructLayoutInitOffset": "0x4e2c60",
+          "_fn_004e2540": "0x4e2540",
+          "_fn_004e2b40": "0x4e2b40",
+          "_fn_004e2be0": "0x4e2be0",
+          "_unnamed_name": "0x710348",
+          "_CParser_AppendUniqueName": "0x455d40",
+          "_fn_0070f1c9": "0x70f1c9",
+          "_fn_0070f22c": "0x70f22c",
+          "_native_current_statement": "0x710064",
+          "_CClass_IsTrivialCopyAssignClass": "0x542340",
+          "_fn_004e3190": "0x4e3190",
+          "_CClass_ComputeClassPopertyBits": "0x542020",
+          "_CClass_IsPODClass": "0x542360",
+          "_fn_0070f1ef": "0x70f1ef",
+          "_CParser_IsConst": "0x453240",
+          "_canadd": "0x523160",
+          "_optimizecomm": "0x55a750",
+          "_fn_0049fd80": "0x49fd80",
+          "_fn_0049fd20": "0x49fd20",
+          "_CFunc_GenerateLoop": "0x529f80",
+          "_fn_0051ed90": "0x51ed90",
+          "_CClass_Constructor": "0x542420",
+          "_CClass_DefaultConstructor": "0x5427b0",
+          "_CInit_ConstructClassArray": "0x535e60",
+          "_nullnode": "0x5242f0"
+        }
+      },
+      "binding_policy": "All actual named emitted functions/externals/commons bound only within this source. No anonymous .sw$, @literal or generated-section aliases. Automatic source_data anchors retain independent provenance. Do not promote aliases to global bindings.",
+      "knownGlobals": [
+        {
+          "name": "trans_vtboffsets",
+          "address": "0x6e2dee",
+          "size": 4,
+          "section": ".bss"
+        },
+        {
+          "name": "cabi_loop_class",
+          "address": "0x6e2dea",
+          "size": 4,
+          "section": ".bss"
+        },
+        {
+          "name": "cabi_loop_construct",
+          "address": "0x6e2de8",
+          "size": 1,
+          "section": ".bss"
+        }
+      ],
+      "data_complete": false,
+      "data_evidence": [
+        {
+          "name": "@18",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0069ab14",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_4",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006509b4",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_25",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00650900",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_37",
+          "section": ".rdata",
+          "size": 4,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_50",
+          "section": ".rdata",
+          "size": 64,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "@1410",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0069ab24",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1696",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0069ab1c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_trans_vtboffsets",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e2dee",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_cabi_loop_class",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e2dea",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_cabi_loop_construct",
+          "section": ".bss",
+          "size": 1,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e2de8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "original_switch_tables": [
+        {
+          "owner": "CABI_AllocateMembers",
+          "address": "0x6508e0",
+          "size": 32,
+          "section": ".rdata",
+          "indirect_jump": "0x54f346",
+          "native_instruction": "jmp dword ptr [eax*4 + 0x6508e0]",
+          "entries": [
+            "0x54f34d",
+            "0x54f357",
+            "0x54f375",
+            "0x54f361",
+            "0x54f375",
+            "0x54f375",
+            "0x54f375",
+            "0x54f36b"
+          ],
+          "sha256": "e31676e826d544ada226521bbb300dec03431ddd3f30206d253f412515c46bc2",
+          "status": "original_inline_table_not_emitted_in_candidate",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_DestroyObject",
+          "address": "0x650900",
+          "size": 16,
+          "section": ".rdata",
+          "indirect_jump": "0x54f6e1",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x650900]",
+          "entries": [
+            "0x54f700",
+            "0x54f6fb",
+            "0x54f6e8",
+            "0x54f6e8"
+          ],
+          "sha256": "5d2a0315ebf1dbc404a3c33cff3b386b0ee90e82a61b7c44ee54baed1cf2a22a",
+          "status": "strict_exact_automatic_anchor",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_CopyAssignMembers",
+          "address": "0x650910",
+          "size": 32,
+          "section": ".rdata",
+          "indirect_jump": "0x550b30",
+          "native_instruction": "jmp dword ptr [ebx*4 + 0x650910]",
+          "entries": [
+            "0x550b53",
+            "0x550b80",
+            "0x550b80",
+            "0x550b80",
+            "0x550b80",
+            "0x550b80",
+            "0x550b80",
+            "0x550b37"
+          ],
+          "sha256": "51abacba8d96e72ba38f0d1615154b55a2670bf35ebce651838cacdc085b39eb",
+          "status": "original_inline_table_not_emitted_in_candidate",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_TransConstructor",
+          "address": "0x650930",
+          "size": 32,
+          "section": ".rdata",
+          "indirect_jump": "0x552e7e",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x650930]",
+          "entries": [
+            "0x552f15",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552e85"
+          ],
+          "sha256": "8fcee45a2318c8642411b1cdb5139342e9d70f28ce60d5e15a7ba10e228eeec6",
+          "status": "original_inline_table_not_emitted_in_candidate",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_TransConstructor",
+          "address": "0x650950",
+          "size": 32,
+          "section": ".rdata",
+          "indirect_jump": "0x552caa",
+          "native_instruction": "jmp dword ptr [eax*4 + 0x650950]",
+          "entries": [
+            "0x552b78",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552c88",
+            "0x552a05"
+          ],
+          "sha256": "e7194e765ad3fa1a1a133cf3094c07f331c696743bb2a9478547f97fadb1cb05",
+          "status": "original_inline_table_not_emitted_in_candidate",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_IsSimpleCtorDtor",
+          "address": "0x650970",
+          "size": 64,
+          "section": ".rdata",
+          "indirect_jump": "0x553024",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x650970]",
+          "entries": [
+            "0x553060",
+            "0x553060",
+            "0x553060",
+            "0x553049",
+            "0x553049",
+            "0x553049",
+            "0x553049",
+            "0x553043",
+            "0x553030",
+            "0x553060",
+            "0x553060",
+            "0x55305a",
+            "0x55305a",
+            "0x55305a",
+            "0x553049",
+            "0x55305a"
+          ],
+          "sha256": "6eed76e16b9f927870a42d5f4584c028c430a5c9c01b63c2f6b2076602e07fb5",
+          "status": "emitted_table_unresolved",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_AllocateVTable",
+          "address": "0x6509b0",
+          "size": 4,
+          "section": ".rdata",
+          "indirect_jump": "0x5543ad",
+          "native_instruction": "jmp dword ptr [eax*4 + 0x6509b0]",
+          "entries": [
+            "0x5543fa"
+          ],
+          "sha256": "9ddc61634a7423e068ca5f0a53b33b5e7adaa84d2d77d56d519d9e9b90b65264",
+          "status": "emitted_table_unresolved",
+          "manual_binding": false
+        },
+        {
+          "owner": "CABI_ReverseBitField",
+          "address": "0x6509b4",
+          "size": 32,
+          "section": ".rdata",
+          "indirect_jump": "0x5546e4",
+          "native_instruction": "jmp dword ptr [ecx*4 + 0x6509b4]",
+          "entries": [
+            "0x5546eb",
+            "0x5546f2",
+            "0x554707",
+            "0x5546f9",
+            "0x554707",
+            "0x554707",
+            "0x554707",
+            "0x554700"
+          ],
+          "sha256": "f25caf9d79d2d4fe63e0e710bff068fad469f0daff716a68625f99be73332b37",
+          "status": "strict_exact_automatic_anchor",
+          "manual_binding": false
+        }
+      ],
+      "unresolved_emitted_tables": [
+        {
+          "parent": "CABI_IsSimpleCtorDtor",
+          "symbol": ".sw$1222",
+          "object_section": 50,
+          "section_size": 64,
+          "parent_relocation_offset": "0x1f",
+          "kind": 6,
+          "retail_parent_indirect_jump": "0x553024",
+          "binding": null,
+          "reason": "Parent body nonmatching; compiler-generated label not an independently established binding. Kept unresolved."
+        },
+        {
+          "parent": "CABI_AllocateVTable",
+          "symbol": ".sw$689",
+          "object_section": 37,
+          "section_size": 4,
+          "parent_relocation_offset": "0x1ee",
+          "kind": 6,
+          "retail_parent_indirect_jump": "0x5543ad",
+          "binding": null,
+          "reason": "Parent body nonmatching; compiler-generated label not an independently established binding. Kept unresolved."
+        }
+      ],
+      "native_abi": {
+        "packing": "Private native records use pack(2); no shared header changes or ABI aliases to unported callers.",
+        "NativeType": "kind0,size signed32@2; six-byte prefix",
+        "NativeBitField": "base pointer6,offset byte+a,width byte+b;12 bytes",
+        "NativeObject": "name+c,type+10,qualifier flags+14,storage short+18,objectFlags+1a;28-byte prefix; kind/subtype/namespace read via native offsets",
+        "NativeClass": "type6,namespace6,bases+e,vBases+12,members+16,vTable+1a,flags+22,baseSize+26,alignment+2a,eflags+2c,mode+2e,state+2f;48 bytes",
+        "NativeBase": "next0,class4,offset8,vOffset+c,access+10,virtual+11;18-byte declared prefix only, shared-vptr byte+12 separately accessed; not full canonical sizeof",
+        "NativeVBase": "next0,class4,offset8;12-byte declared prefix only; native vOffset+c/override-byte+10 separately accessed; not full canonical sizeof",
+        "NativeMember": "kind0,access1,subtype2,next4,name8,type+c,qualifiers+10,offset+14;24 bytes",
+        "NativeNode": "kind0,cost1,type4,flags8,union+10,args+14,functionType+18;28-byte prefix",
+        "NativeStatement": "next0,kind4,expr+a,label+e,other+12;34-byte prefix",
+        "NativeVTableInit": "root0,class4,baseReference8,path+c,baseClass+10,offset+14,vOffset+18,direct+1c,virtual+1d;30 bytes",
+        "NativeLayoutBases": "next0,nonvirtual4,virtual8,useZero+c,occupied+d;14 bytes",
+        "NativeClassLayout": "entries0,zeroVPtr4,count8,zeroVPtrIndex+a,needsVTable+c;13-byte prefix",
+        "NativeVTable": "object0,size4,baseSize8,zeroVPtrOffset+c;16 bytes",
+        "other": "NodeList8,OffsetPath8,VTableOffset10,CopyRegion18,FuncArg24,TypeFunc44,ScopeResult48,PlacedClass12,CtorInit14; offsets documented directly in private source declarations."
+      },
+      "baseline_aliases": {
+        "build_base_destruction_statements": "CABI_DestroyVBases",
+        "destroy_nonvirtual_bases": "CABI_DestroyBases",
+        "destroy_members": "CABI_DestroyMembers",
+        "CABI_GenClassFunction": "CABI_MakeDefaultCopyConstructor",
+        "CABI_GenerateClassFunction": "CABI_MakeDefaultConstructor",
+        "assign_vtable_pointers": "CABI_InitVTablePtrs (descriptor ABI differs; adapt callers)",
+        "assign_vbase_ctor_offsets": "CABI_InitVBaseCtorOffsets",
+        "build_vbase_ptr_initializers": "CABI_InitVBasePtr1",
+        "CABI_ComputeAlignmentPadding": "CABI_StructSizeAlignValue (old2 vs native3 args; DO NOT blind-alias)"
+      },
+      "membership": {
+        "retained_windows_functions": 56,
+        "first": "0x54ece0",
+        "last": "0x5547e0",
+        "preceding_excluded": "CInline_Init0x54ecd0/11 (CSV plus behavior)",
+        "following_excluded": "AppendSectionData0x5547f0/31 (CSV plus behavior)",
+        "extent_policy": "Saved Ghidra entries bounded by next entry; trim terminal NOP padding only, retain cold assertion blocks after early returns. Nonoverlap verified.",
+        "native_assertion_source": "CABI.c at0x69ab14; LayoutClass and AllocateMembers missing from old17 imported rows recovered via assertion inventory.",
+        "mac_limits": "Ordinary Mac CABI family provides identities and architecture comparison but has no independent SO scope proof. Mac inline allocation/destruction helpers not all standalone in Windows; cabi_pathcur/cabi_pathroot data have no established Windows binding. Missing Mac member does not imply absence outside this bounded cluster.",
+        "unknown_identity": [
+          "fn_00550090 remains exact address alias; CSV label FUN_00550090"
+        ]
+      },
+      "provenance": {
+        "csv": "C:\\Users\\olsen\\Downloads\\mwcc.csv",
+        "csv_kind": "User-provided incomplete v10 address-name symbols applied to GC3; corroborated against native bodies/Mac symbols, not represented as original GC3 debug symbols.",
+        "csv_sha256": "328893e092c2946a9530b01d15007320d7c088a85347d2604a03d1d99ad0b5a5",
+        "csv_rows": "build/cabi-v10-symbols.json",
+        "own_rename_log": "build/cabi-csv-renames.json",
+        "external_rename_log": "build/cabi-external-csv-renames.json",
+        "mac_symbols": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "mac_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "disassembly": "build/cabi-retail.txt"
+      },
+      "validation": {
+        "source_sha256": "d7bc5d23780d181454499c04e0327742d8ddb2e78a1f10d155c7646bfddf0337",
+        "cp932": true,
+        "sjis_checker": "tools/check_sjis.py absent; source CP932 encoding checked directly",
+        "strict_definition": "Resolved entire function bytes equal retail body AND complete absolute relocation site set equals PE base relocation set. Matching size alone is not exact.",
+        "objdiff_scope": "CW94 partial code54/56 plus resolved emitted data8/10. Original inline tables not emitted also explicitly inventoried. O4space resolves all56 code but only13 strict and does not provide matching-table proof.",
+        "runtime_tests": "No execution of original application or differential semantic tests. Nonmatches statically reviewed against complete saved native bodies and call/data ABI; compiler inlining/order remains unmatched.",
+        "global_build": "Not run; parent owns configuration/build integration.",
+        "emitted_code_symbols": [
+          "_CABI_ReverseBitField",
+          "_CABI_StructSizeAlignValue",
+          "_CABI_PassedByReference",
+          "_CABI_GetVTableHeaderInfo",
+          "_CABI_GetPtrDiffTType",
+          "_CABI_GetSizeTType",
+          "_CABI_GetStructResultArgumentIndex",
+          "_CABI_NewGuardVariable",
+          "_CABI_AcquireGuardVariable",
+          "_CABI_ReleaseGuardVariable",
+          "_CABI_GetVTableOffset",
+          "_CABI_ComputeNewArrayPadding",
+          "_CABI_DestructorReturnsThis",
+          "_CABI_ConstructorReturnsThis",
+          "_CABI_GetDestructorObject",
+          "_CABI_AddVTable",
+          "_CABI_FindSharedVTableMember",
+          "_CABI_ThisArg",
+          "_CABI_MakeThisExpr",
+          "_CABI_FindNVBase",
+          "_CABI_DestroyObject",
+          "_CABI_GetCtorOffsetOffset",
+          "_CABI_GetVBasePath",
+          "_CABI_InitVBasePtr1",
+          "_CABI_InitVBasePtrs",
+          "_CABI_AppendCopyRegion",
+          "_CABI_ConstructorCallsNew",
+          "_CABI_GetFirstRealArgument",
+          "_CABI_GetVBaseCTorArg",
+          "_fn_00550090",
+          "_CABI_AllocateZeroVTablePointer",
+          "_CABI_AllocateVTable",
+          "_CABI_MakeDefaultDestructor",
+          "_CABI_FinishDestructor",
+          "_CABI_MakeDefaultConstructor",
+          "_CABI_MakeDefaultCopyConstructor",
+          "_CABI_FinishConstructor",
+          "_CABI_DestroyBases",
+          "_CABI_DestroyVBases",
+          "_CABI_DestroyMembers",
+          "_CABI_InitVBaseCtorOffsets",
+          "_CABI_InitVTablePtrs",
+          "_CABI_TransDestructor",
+          "_CABI_IsSimpleCtorDtor",
+          "_CABI_ClassAllocConflict",
+          "_CABI_BaseClassAllocConflict",
+          "_CABI_GetBaseAllocationOrderList",
+          "_CABI_DummyDefaultConstructor",
+          "_CABI_DefaultConstructorCall",
+          "_CABI_ClassInitLoopCallBack",
+          "_CABI_CopyAssignBase",
+          "_CABI_AllocateMembers",
+          "_CABI_MakeDefaultAssignmentOperator",
+          "_CABI_LayoutClass",
+          "_CABI_CopyAssignMembers",
+          "_CABI_TransConstructor"
+        ],
+        "extra_emitted_functions": []
+      },
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 56,
+      "strict_exact_count": 26,
+      "source_sha256": "d7bc5d23780d181454499c04e0327742d8ddb2e78a1f10d155c7646bfddf0337",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "baseline_abi_audit": [
+        {
+          "baseline": "CABI_GetSizeTType",
+          "native": "CABI_GetSizeTType",
+          "baseline_argument_count": 0,
+          "native_argument_count": 0,
+          "policy": "safe_scalar_replacement",
+          "reason": "Same unsigned-long Type prefix, pointer result; function itself no object layout access."
+        },
+        {
+          "baseline": "CABI_GetPtrDiffTType",
+          "native": "CABI_GetPtrDiffTType",
+          "baseline_argument_count": 0,
+          "native_argument_count": 0,
+          "policy": "safe_scalar_replacement",
+          "reason": "Same signed-long Type prefix; extra canonical-name collision outside old17 mapped rows."
+        },
+        {
+          "baseline": "CABI_GetDestructorObject",
+          "native": "CABI_GetDestructorObject",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "safe_identity_replacement",
+          "reason": "Returns obj unchanged; unused byte mode. Does not dereference native record."
+        },
+        {
+          "baseline": "CABI_ReverseBitField",
+          "native": "CABI_ReverseBitField",
+          "baseline_argument_count": 1,
+          "native_argument_count": 1,
+          "policy": "compatible_valid_domain",
+          "reason": "Used offsets+2/+6/+a/+b match baseline. Native offset/width UInt8 vs baseline char; valid bitfield values nonnegative. Unsupported-size assertion source/line changes; do not claim arbitrary invalid input compatibility."
+        },
+        {
+          "baseline": "CABI_DestroyObject",
+          "native": "CABI_DestroyObject",
+          "baseline_argument_count": 5,
+          "native_argument_count": 5,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_MakeDefaultDestructor",
+          "native": "CABI_MakeDefaultDestructor",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_TransDestructor",
+          "native": "CABI_TransDestructor",
+          "baseline_argument_count": 5,
+          "native_argument_count": 5,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_FindNVBase",
+          "native": "CABI_FindNVBase",
+          "baseline_argument_count": 3,
+          "native_argument_count": 3,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_MakeThisExpr",
+          "native": "CABI_MakeThisExpr",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_ThisArg",
+          "native": "CABI_ThisArg",
+          "baseline_argument_count": 0,
+          "native_argument_count": 0,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "destroy_members",
+          "native": "CABI_DestroyMembers",
+          "baseline_argument_count": 3,
+          "native_argument_count": 3,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "assign_vbase_ctor_offsets",
+          "native": "CABI_InitVBaseCtorOffsets",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "build_vbase_ptr_initializers",
+          "native": "CABI_InitVBasePtr1",
+          "baseline_argument_count": 5,
+          "native_argument_count": 5,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_GenClassFunction",
+          "native": "CABI_MakeDefaultCopyConstructor",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "CABI_GenerateClassFunction",
+          "native": "CABI_MakeDefaultConstructor",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "native_callers_only_no_blind_alias",
+          "reason": "Argument count matches but native Class/Object/ENode/Statement layouts and external helper ABIs differ. Guard old definition only when old unported callers retain explicit provisional source-scoped baseline binding or are migrated. Native TransDestructor last UInt8 differs from old int; native MakeThisExpr removes SOM branch."
+        },
+        {
+          "baseline": "build_base_destruction_statements",
+          "native": "CABI_DestroyVBases",
+          "baseline_argument_count": 2,
+          "native_argument_count": 3,
+          "policy": "must_not_alias",
+          "reason": "Adds func as first argument for access checking; old(stmt,list), native(func,stmt,list)."
+        },
+        {
+          "baseline": "destroy_nonvirtual_bases",
+          "native": "CABI_DestroyBases",
+          "baseline_argument_count": 2,
+          "native_argument_count": 4,
+          "policy": "must_not_alias",
+          "reason": "Adds func first and flag fourth; old(stmt,list), native(func,stmt,list,flag)."
+        },
+        {
+          "baseline": "assign_vtable_pointers",
+          "native": "CABI_InitVTablePtrs",
+          "baseline_argument_count": 6,
+          "native_argument_count": 4,
+          "policy": "must_not_alias",
+          "reason": "Old(stmt,obj,root,class,offset,vOffset), native(stmt,30-byte descriptor,flag,emit). Native access path and shared-vptr suppression depend on descriptor fields."
+        },
+        {
+          "baseline": "CABI_ComputeAlignmentPadding",
+          "native": "CABI_StructSizeAlignValue",
+          "baseline_argument_count": 2,
+          "native_argument_count": 3,
+          "policy": "must_not_alias",
+          "reason": "Native adds CMach_GetTypeAlign mode argument before mask. Keep old provisional helper until caller adaptation."
+        },
+        {
+          "baseline": "CABI_LayoutClass",
+          "native": "CABI_LayoutClass",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "public_collision_migrate_or_retain_provisional",
+          "reason": "Baseline returns int, native void. ClassLayout/Class/Member records and body semantics differ; no source-scoped redirect of unported callers."
+        },
+        {
+          "baseline": "CABI_GetVTableOffset",
+          "native": "CABI_GetVTableOffset",
+          "baseline_argument_count": 1,
+          "native_argument_count": 0,
+          "policy": "public_collision_migrate_or_retain_provisional",
+          "reason": "Native returns0 and reads no args; cdecl tolerates extra pushed word but baseline nonzero semantic/layout behavior is not equivalent."
+        },
+        {
+          "baseline": "CABI_MakeDefaultConstructor",
+          "native": "CABI_MakeDefaultConstructor",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "public_collision_native_callers_only",
+          "reason": "Same spelling/count outside old17 mapped aliases; native record fields/flags/behavior differ. Retain old provisional definition under distinct name/source-scoped binding for unported callers, or migrate callers."
+        },
+        {
+          "baseline": "CABI_ConstructorCallsNew",
+          "native": "CABI_ConstructorCallsNew",
+          "baseline_argument_count": 1,
+          "native_argument_count": 1,
+          "policy": "public_collision_native_callers_only",
+          "reason": "Same spelling/count outside old17 mapped aliases; native record fields/flags/behavior differ. Retain old provisional definition under distinct name/source-scoped binding for unported callers, or migrate callers."
+        },
+        {
+          "baseline": "CABI_GetCtorOffsetOffset",
+          "native": "CABI_GetCtorOffsetOffset",
+          "baseline_argument_count": 2,
+          "native_argument_count": 2,
+          "policy": "public_collision_native_callers_only",
+          "reason": "Same spelling/count outside old17 mapped aliases; native record fields/flags/behavior differ. Retain old provisional definition under distinct name/source-scoped binding for unported callers, or migrate callers."
+        },
+        {
+          "baseline": "CABI_AddVTable",
+          "native": "CABI_AddVTable",
+          "baseline_argument_count": 1,
+          "native_argument_count": 1,
+          "policy": "public_collision_native_callers_only",
+          "reason": "Same spelling/count outside old17 mapped aliases; native record fields/flags/behavior differ. Retain old provisional definition under distinct name/source-scoped binding for unported callers, or migrate callers."
+        },
+        {
+          "baseline": "CABI_InsertConstructorInitialization",
+          "native": "CABI_TransConstructor",
+          "baseline_argument_count": 5,
+          "native_argument_count": 5,
+          "policy": "must_not_alias",
+          "reason": "Old fourth parameter is callback; native fourth is UInt8 copy flag. Matching count does not provide matching domain or behavior."
+        }
+      ],
+      "retained_versions_validation": [
+        {
+          "version": "GC_1_2_5",
+          "normalized_object_sha256": "63fff3bd648ddbe870ed19215add76929e6365593ea457303bb773b48c757519",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_2_5n",
+          "normalized_object_sha256": "63fff3bd648ddbe870ed19215add76929e6365593ea457303bb773b48c757519",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_3",
+          "normalized_object_sha256": "55f722e6ca037e58e235fc458931f6b3d5be196ae5811c8123fb16b0d28f67a5",
+          "unchanged": true
+        }
+      ],
+      "legacy_alias_policy": "Changed-count helpers retain provisional baseline definitions and no global address aliases: build_base_destruction_statements, destroy_nonvirtual_bases, assign_vtable_pointers, CABI_ComputeAlignmentPadding. Same-count pointer aliases require GC3-native payloads; untouched baseline graphs/callers are not claimed compatible.",
+      "normal_project_validation": {
+        "build": "all_source progress passed",
+        "strict_exact": 26,
+        "objdiff_cli": "normal per-TU view processed successfully",
+        "data_complete": false,
+        "retained_versions": "Every symbol, section byte and relocation unchanged in the three retained CABI objects."
       }
     }
   },

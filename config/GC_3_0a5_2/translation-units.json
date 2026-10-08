@@ -2993,6 +2993,782 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLIO.c",
+      "original_filename": "CLIO.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "catchinterrupt@4",
+          "address": "0x4180e0",
+          "size": 69,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SetupConsoleInfo",
+          "address": "0x418130",
+          "size": 148,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Crash",
+          "address": "0x4181d0",
+          "size": 8,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SetupDebuggingTraps",
+          "address": "0x4181e0",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IO_Initialize",
+          "address": "0x4181f0",
+          "size": 121,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IO_Terminate",
+          "address": "0x00418270",
+          "size": 24,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IO_HelpTerminate",
+          "address": "0x418290",
+          "size": 10,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "emit_text",
+          "address": "0x4182a0",
+          "size": 355,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SendHandleToFile",
+          "address": "0x418410",
+          "size": 116,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ShowHandle",
+          "address": "0x418490",
+          "size": 129,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ShowFile",
+          "address": "0x418520",
+          "size": 256,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "WriteHandleToFile",
+          "address": "0x418620",
+          "size": 148,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "WriteBinaryHandleToFile",
+          "address": "0x004186c0",
+          "size": 135,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "AppendHandleToFile",
+          "address": "0x418750",
+          "size": 148,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "InitWorking",
+          "address": "0x4187f0",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ProgressFunction",
+          "address": "0x418800",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "TermWorking",
+          "address": "0x418810",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CheckForUserBreak",
+          "address": "0x418820",
+          "size": 14,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "StartLine",
+          "address": "0x00418830",
+          "size": 36,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "append_text",
+          "address": "0x00418860",
+          "size": 147,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "WrapText",
+          "address": "0x00418900",
+          "size": 282,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "append_prefix_separator",
+          "address": "0x00418a20",
+          "size": 35,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "append_byte",
+          "address": "0x00418a50",
+          "size": 110,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IO_VFormatText",
+          "address": "0x00418ac0",
+          "size": 455,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IO_FormatText",
+          "address": "0x00418c90",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLPrintDispatch",
+          "address": "0x00418cd0",
+          "size": 674,
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00418eb1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c"
+        },
+        {
+          "name": "GetFileInfo",
+          "address": "0x418f80",
+          "size": 291,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arrows",
+          "address": "0x4190b0",
+          "size": 128,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IsLikelyAnImporter",
+          "address": "0x00419130",
+          "size": 100,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "GuessTool",
+          "address": "0x004191a0",
+          "size": 167,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "GuessDoing",
+          "address": "0x00419250",
+          "size": 70,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "styledMessage_MPW",
+          "address": "0x004192a0",
+          "size": 366,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "styledMessage_Default",
+          "address": "0x00419410",
+          "size": 685,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "styledMessage_Terse",
+          "address": "0x004196c0",
+          "size": 615,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "styledMessage_IDE",
+          "address": "0x00419930",
+          "size": 241,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "styledMessage_Parseable",
+          "address": "0x00419a30",
+          "size": 250,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00419b30",
+          "address": "0x419b30",
+          "size": 493,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLPrintType",
+          "address": "0x00419d20",
+          "size": 107,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLPrint",
+          "address": "0x00419d90",
+          "size": 104,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLPrintErr",
+          "address": "0x00419e00",
+          "size": 104,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FixupMessageRef",
+          "address": "0x00419e70",
+          "size": 216,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLStyledMessageDispatch",
+          "address": "0x00419f50",
+          "size": 857,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLIO.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "catchinterrupt",
+          "mac_address": "0x0000af04",
+          "linkage_names": [
+            "catchinterrupt"
+          ]
+        },
+        {
+          "name": "SetupConsoleInfo",
+          "mac_address": "0x0000af30",
+          "linkage_names": [
+            "SetupConsoleInfo"
+          ]
+        },
+        {
+          "name": "Crash",
+          "mac_address": "0x0000b060",
+          "linkage_names": [
+            "Crash"
+          ]
+        },
+        {
+          "name": "SetupDebuggingTraps",
+          "mac_address": "0x0000b06c",
+          "linkage_names": [
+            "SetupDebuggingTraps"
+          ]
+        },
+        {
+          "name": "IO_Initialize",
+          "mac_address": "0x0000b0a0",
+          "linkage_names": [
+            "IO_Initialize"
+          ]
+        },
+        {
+          "name": "IO_Terminate",
+          "mac_address": "0x0000b168",
+          "linkage_names": [
+            "IO_Terminate"
+          ]
+        },
+        {
+          "name": "IO_HelpInitialize",
+          "mac_address": "0x0000b1a8",
+          "linkage_names": [
+            "IO_HelpInitialize"
+          ]
+        },
+        {
+          "name": "IO_HelpTerminate",
+          "mac_address": "0x0000b1d4",
+          "linkage_names": [
+            "IO_HelpTerminate"
+          ]
+        },
+        {
+          "name": "emit_text",
+          "mac_address": "0x0000b200",
+          "linkage_names": [
+            "emit_text"
+          ]
+        },
+        {
+          "name": "SendHandleToFile",
+          "mac_address": "0x0000b3cc",
+          "linkage_names": [
+            "SendHandleToFile"
+          ]
+        },
+        {
+          "name": "FixHandleForIDE",
+          "mac_address": "0x0000b480",
+          "linkage_names": [
+            "FixHandleForIDE"
+          ]
+        },
+        {
+          "name": "ShowHandle",
+          "mac_address": "0x0000b500",
+          "linkage_names": [
+            "ShowHandle"
+          ]
+        },
+        {
+          "name": "ShowFile",
+          "mac_address": "0x0000b5a4",
+          "linkage_names": [
+            "ShowFile"
+          ]
+        },
+        {
+          "name": "WriteHandleToFile",
+          "mac_address": "0x0000b6c0",
+          "linkage_names": [
+            "WriteHandleToFile"
+          ]
+        },
+        {
+          "name": "WriteBinaryHandleToFile",
+          "mac_address": "0x0000b760",
+          "linkage_names": [
+            "WriteBinaryHandleToFile"
+          ]
+        },
+        {
+          "name": "AppendHandleToFile",
+          "mac_address": "0x0000b808",
+          "linkage_names": [
+            "AppendHandleToFile"
+          ]
+        },
+        {
+          "name": "InitWorking",
+          "mac_address": "0x0000b8a8",
+          "linkage_names": [
+            "InitWorking"
+          ]
+        },
+        {
+          "name": "ShowWorking",
+          "mac_address": "0x0000b8ac",
+          "linkage_names": [
+            "ShowWorking"
+          ]
+        },
+        {
+          "name": "TermWorking",
+          "mac_address": "0x0000b8b0",
+          "linkage_names": [
+            "TermWorking"
+          ]
+        },
+        {
+          "name": "ProgressFunction",
+          "mac_address": "0x0000b8b4",
+          "linkage_names": [
+            "ProgressFunction"
+          ]
+        },
+        {
+          "name": "CheckForUserBreak",
+          "mac_address": "0x0000b8f8",
+          "linkage_names": [
+            "CheckForUserBreak"
+          ]
+        },
+        {
+          "name": "StartLine",
+          "mac_address": "0x0000b938",
+          "linkage_names": [
+            "StartLine"
+          ]
+        },
+        {
+          "name": "WrapText",
+          "mac_address": "0x0000ba64",
+          "linkage_names": [
+            "WrapText"
+          ]
+        },
+        {
+          "name": "IO_VFormatText",
+          "mac_address": "0x0000be18",
+          "linkage_names": [
+            "IO_VFormatText"
+          ]
+        },
+        {
+          "name": "IO_FormatText",
+          "mac_address": "0x0000c460",
+          "linkage_names": [
+            "IO_FormatText"
+          ]
+        },
+        {
+          "name": "CLPrintDispatch",
+          "mac_address": "0x0000c498",
+          "linkage_names": [
+            "CLPrintDispatch"
+          ]
+        },
+        {
+          "name": "GetFileInfo",
+          "mac_address": "0x0000c690",
+          "linkage_names": [
+            "GetFileInfo"
+          ]
+        },
+        {
+          "name": "Arrows",
+          "mac_address": "0x0000c7d8",
+          "linkage_names": [
+            "Arrows"
+          ]
+        },
+        {
+          "name": "IsLikelyAnImporter",
+          "mac_address": "0x0000c8b0",
+          "linkage_names": [
+            "IsLikelyAnImporter"
+          ]
+        },
+        {
+          "name": "GuessTool",
+          "mac_address": "0x0000c95c",
+          "linkage_names": [
+            "GuessTool"
+          ]
+        },
+        {
+          "name": "GuessDoing",
+          "mac_address": "0x0000ca84",
+          "linkage_names": [
+            "GuessDoing"
+          ]
+        },
+        {
+          "name": "styledMessage_MPW",
+          "mac_address": "0x0000cb28",
+          "linkage_names": [
+            "styledMessage_MPW"
+          ]
+        },
+        {
+          "name": "styledMessage_Default",
+          "mac_address": "0x0000ccc8",
+          "linkage_names": [
+            "styledMessage_Default"
+          ]
+        },
+        {
+          "name": "styledMessage_Terse",
+          "mac_address": "0x0000cfd4",
+          "linkage_names": [
+            "styledMessage_Terse"
+          ]
+        },
+        {
+          "name": "styledMessage_IDE",
+          "mac_address": "0x0000d228",
+          "linkage_names": [
+            "styledMessage_IDE"
+          ]
+        },
+        {
+          "name": "styledMessage_Parseable",
+          "mac_address": "0x0000d33c",
+          "linkage_names": [
+            "styledMessage_Parseable"
+          ]
+        },
+        {
+          "name": "CLPrintType",
+          "mac_address": "0x0000d450",
+          "linkage_names": [
+            "CLPrintType"
+          ]
+        },
+        {
+          "name": "CLPrint",
+          "mac_address": "0x0000d4d8",
+          "linkage_names": [
+            "CLPrint"
+          ]
+        },
+        {
+          "name": "CLPrintWarning",
+          "mac_address": "0x0000d558",
+          "linkage_names": [
+            "CLPrintWarning"
+          ]
+        },
+        {
+          "name": "CLPrintErr",
+          "mac_address": "0x0000d5d8",
+          "linkage_names": [
+            "CLPrintErr"
+          ]
+        },
+        {
+          "name": "FixupMessageRef",
+          "mac_address": "0x0000d658",
+          "linkage_names": [
+            "FixupMessageRef"
+          ]
+        },
+        {
+          "name": "CLStyledMessageDispatch",
+          "mac_address": "0x0000d7a4",
+          "linkage_names": [
+            "CLStyledMessageDispatch"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_incomplete"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLIncludeFileCache.c",
       "original_filename": "CLIncludeFileCache.c",
       "evidence": [
@@ -5033,6 +5809,132 @@
       "compiled": true,
       "membership_complete": true,
       "status": "exact"
+    },
+    {
+      "source": "src/GC_3_0a5_2/driver/TextUtils.c",
+      "original_filename": "TextUtils.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "c2pstr",
+          "address": "0x42f410",
+          "size": 60,
+          "compiled_source": "src/GC_3_0a5_2/driver/TextUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "p2cstr",
+          "address": "0x42f450",
+          "size": 34,
+          "compiled_source": "src/GC_3_0a5_2/driver/TextUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "GetIndString",
+          "address": "0x42f480",
+          "size": 423,
+          "compiled_source": "src/GC_3_0a5_2/driver/TextUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and neighboring original entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "c2pstr",
+          "mac_address": "0x00019ea8",
+          "linkage_names": [
+            "c2pstr"
+          ]
+        },
+        {
+          "name": "p2cstr",
+          "mac_address": "0x00019f04",
+          "linkage_names": [
+            "p2cstr"
+          ]
+        },
+        {
+          "name": "CharacterByteType",
+          "mac_address": "0x00019f50",
+          "linkage_names": [
+            "CharacterByteType"
+          ]
+        },
+        {
+          "name": "CharByte",
+          "mac_address": "0x00019f58",
+          "linkage_names": [
+            "CharByte"
+          ]
+        },
+        {
+          "name": "GetDateTime",
+          "mac_address": "0x00019f60",
+          "linkage_names": [
+            "GetDateTime"
+          ]
+        },
+        {
+          "name": "EqualString",
+          "mac_address": "0x00019f9c",
+          "linkage_names": [
+            "EqualString"
+          ]
+        },
+        {
+          "name": "GetIndString",
+          "mac_address": "0x0001a05c",
+          "linkage_names": [
+            "GetIndString"
+          ]
+        },
+        {
+          "name": "getindstring",
+          "mac_address": "0x0001a24c",
+          "linkage_names": [
+            "getindstring"
+          ]
+        },
+        {
+          "name": "NumToString",
+          "mac_address": "0x0001a280",
+          "linkage_names": [
+            "NumToString"
+          ]
+        },
+        {
+          "name": "StringToNum",
+          "mac_address": "0x0001a2cc",
+          "linkage_names": [
+            "StringToNum"
+          ]
+        },
+        {
+          "name": "StrLength",
+          "mac_address": "0x0001a330",
+          "linkage_names": [
+            "StrLength"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_incomplete"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/Alias.c",
@@ -18158,583 +19060,6 @@
         }
       ],
       "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLIO.c",
-      "original_filename": "CLIO.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "fn_00414e20",
-          "address": "0x00418270",
-          "size": 24,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "fn_00415090",
-          "address": "0x004186c0",
-          "size": 135,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "reset_column_and_append_prefix",
-          "address": "0x00418830",
-          "size": 36,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_text",
-          "address": "0x00418860",
-          "size": 147,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "wrap_line",
-          "address": "0x00418900",
-          "size": 282,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_prefix_separator",
-          "address": "0x00418a20",
-          "size": 35,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_byte",
-          "address": "0x00418a50",
-          "size": 110,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "format_prefixed_text",
-          "address": "0x00418ac0",
-          "size": 455,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "forward_format_arguments",
-          "address": "0x00418c90",
-          "size": 51,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_00418cd0",
-          "address": "0x00418cd0",
-          "size": 674,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00418eb1"
-          ]
-        },
-        {
-          "name": "nonmatching_plugin_with_clear_high_bit",
-          "address": "0x00419130",
-          "size": 100,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "get_plugin_type_name",
-          "address": "0x004191a0",
-          "size": 167,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "select_plugin_type_data",
-          "address": "0x00419250",
-          "size": 70,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "print_diagnostic",
-          "address": "0x004192a0",
-          "size": 366,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "emit_formatted_diagnostic",
-          "address": "0x00419410",
-          "size": 685,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "format_and_print_message",
-          "address": "0x004196c0",
-          "size": 615,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "print_diagnostic_with_details",
-          "address": "0x00419930",
-          "size": 241,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "print_pipe_delimited_diagnostic",
-          "address": "0x00419a30",
-          "size": 250,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "emit_formatted_message",
-          "address": "0x00419d20",
-          "size": 107,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLIO_FormatAndDispatchText",
-          "address": "0x00419d90",
-          "size": 104,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLIO_WriteFormattedText",
-          "address": "0x00419e00",
-          "size": 104,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "extract_diagnostic_source_line",
-          "address": "0x00419e70",
-          "size": 216,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLIO_ReportDiagnostic",
-          "address": "0x00419f50",
-          "size": 857,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLIO_ConvertPascalToCString",
-          "address": "0x0042f450",
-          "size": 34,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "catchinterrupt",
-          "mac_address": "0x0000af04",
-          "linkage_names": [
-            "catchinterrupt"
-          ]
-        },
-        {
-          "name": "SetupConsoleInfo",
-          "mac_address": "0x0000af30",
-          "linkage_names": [
-            "SetupConsoleInfo"
-          ]
-        },
-        {
-          "name": "Crash",
-          "mac_address": "0x0000b060",
-          "linkage_names": [
-            "Crash"
-          ]
-        },
-        {
-          "name": "SetupDebuggingTraps",
-          "mac_address": "0x0000b06c",
-          "linkage_names": [
-            "SetupDebuggingTraps"
-          ]
-        },
-        {
-          "name": "IO_Initialize",
-          "mac_address": "0x0000b0a0",
-          "linkage_names": [
-            "IO_Initialize"
-          ]
-        },
-        {
-          "name": "IO_Terminate",
-          "mac_address": "0x0000b168",
-          "linkage_names": [
-            "IO_Terminate"
-          ]
-        },
-        {
-          "name": "IO_HelpInitialize",
-          "mac_address": "0x0000b1a8",
-          "linkage_names": [
-            "IO_HelpInitialize"
-          ]
-        },
-        {
-          "name": "IO_HelpTerminate",
-          "mac_address": "0x0000b1d4",
-          "linkage_names": [
-            "IO_HelpTerminate"
-          ]
-        },
-        {
-          "name": "emit_text",
-          "mac_address": "0x0000b200",
-          "linkage_names": [
-            "emit_text"
-          ]
-        },
-        {
-          "name": "SendHandleToFile",
-          "mac_address": "0x0000b3cc",
-          "linkage_names": [
-            "SendHandleToFile"
-          ]
-        },
-        {
-          "name": "FixHandleForIDE",
-          "mac_address": "0x0000b480",
-          "linkage_names": [
-            "FixHandleForIDE"
-          ]
-        },
-        {
-          "name": "ShowHandle",
-          "mac_address": "0x0000b500",
-          "linkage_names": [
-            "ShowHandle"
-          ]
-        },
-        {
-          "name": "ShowFile",
-          "mac_address": "0x0000b5a4",
-          "linkage_names": [
-            "ShowFile"
-          ]
-        },
-        {
-          "name": "WriteHandleToFile",
-          "mac_address": "0x0000b6c0",
-          "linkage_names": [
-            "WriteHandleToFile"
-          ]
-        },
-        {
-          "name": "WriteBinaryHandleToFile",
-          "mac_address": "0x0000b760",
-          "linkage_names": [
-            "WriteBinaryHandleToFile"
-          ]
-        },
-        {
-          "name": "AppendHandleToFile",
-          "mac_address": "0x0000b808",
-          "linkage_names": [
-            "AppendHandleToFile"
-          ]
-        },
-        {
-          "name": "InitWorking",
-          "mac_address": "0x0000b8a8",
-          "linkage_names": [
-            "InitWorking"
-          ]
-        },
-        {
-          "name": "ShowWorking",
-          "mac_address": "0x0000b8ac",
-          "linkage_names": [
-            "ShowWorking"
-          ]
-        },
-        {
-          "name": "TermWorking",
-          "mac_address": "0x0000b8b0",
-          "linkage_names": [
-            "TermWorking"
-          ]
-        },
-        {
-          "name": "ProgressFunction",
-          "mac_address": "0x0000b8b4",
-          "linkage_names": [
-            "ProgressFunction"
-          ]
-        },
-        {
-          "name": "CheckForUserBreak",
-          "mac_address": "0x0000b8f8",
-          "linkage_names": [
-            "CheckForUserBreak"
-          ]
-        },
-        {
-          "name": "StartLine",
-          "mac_address": "0x0000b938",
-          "linkage_names": [
-            "StartLine"
-          ]
-        },
-        {
-          "name": "WrapText",
-          "mac_address": "0x0000ba64",
-          "linkage_names": [
-            "WrapText"
-          ]
-        },
-        {
-          "name": "IO_VFormatText",
-          "mac_address": "0x0000be18",
-          "linkage_names": [
-            "IO_VFormatText"
-          ]
-        },
-        {
-          "name": "IO_FormatText",
-          "mac_address": "0x0000c460",
-          "linkage_names": [
-            "IO_FormatText"
-          ]
-        },
-        {
-          "name": "CLPrintDispatch",
-          "mac_address": "0x0000c498",
-          "linkage_names": [
-            "CLPrintDispatch"
-          ]
-        },
-        {
-          "name": "GetFileInfo",
-          "mac_address": "0x0000c690",
-          "linkage_names": [
-            "GetFileInfo"
-          ]
-        },
-        {
-          "name": "Arrows",
-          "mac_address": "0x0000c7d8",
-          "linkage_names": [
-            "Arrows"
-          ]
-        },
-        {
-          "name": "IsLikelyAnImporter",
-          "mac_address": "0x0000c8b0",
-          "linkage_names": [
-            "IsLikelyAnImporter"
-          ]
-        },
-        {
-          "name": "GuessTool",
-          "mac_address": "0x0000c95c",
-          "linkage_names": [
-            "GuessTool"
-          ]
-        },
-        {
-          "name": "GuessDoing",
-          "mac_address": "0x0000ca84",
-          "linkage_names": [
-            "GuessDoing"
-          ]
-        },
-        {
-          "name": "styledMessage_MPW",
-          "mac_address": "0x0000cb28",
-          "linkage_names": [
-            "styledMessage_MPW"
-          ]
-        },
-        {
-          "name": "styledMessage_Default",
-          "mac_address": "0x0000ccc8",
-          "linkage_names": [
-            "styledMessage_Default"
-          ]
-        },
-        {
-          "name": "styledMessage_Terse",
-          "mac_address": "0x0000cfd4",
-          "linkage_names": [
-            "styledMessage_Terse"
-          ]
-        },
-        {
-          "name": "styledMessage_IDE",
-          "mac_address": "0x0000d228",
-          "linkage_names": [
-            "styledMessage_IDE"
-          ]
-        },
-        {
-          "name": "styledMessage_Parseable",
-          "mac_address": "0x0000d33c",
-          "linkage_names": [
-            "styledMessage_Parseable"
-          ]
-        },
-        {
-          "name": "CLPrintType",
-          "mac_address": "0x0000d450",
-          "linkage_names": [
-            "CLPrintType"
-          ]
-        },
-        {
-          "name": "CLPrint",
-          "mac_address": "0x0000d4d8",
-          "linkage_names": [
-            "CLPrint"
-          ]
-        },
-        {
-          "name": "CLPrintWarning",
-          "mac_address": "0x0000d558",
-          "linkage_names": [
-            "CLPrintWarning"
-          ]
-        },
-        {
-          "name": "CLPrintErr",
-          "mac_address": "0x0000d5d8",
-          "linkage_names": [
-            "CLPrintErr"
-          ]
-        },
-        {
-          "name": "FixupMessageRef",
-          "mac_address": "0x0000d658",
-          "linkage_names": [
-            "FixupMessageRef"
-          ]
-        },
-        {
-          "name": "CLStyledMessageDispatch",
-          "mac_address": "0x0000d7a4",
-          "linkage_names": [
-            "CLStyledMessageDispatch"
-          ]
-        }
-      ],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
@@ -37288,93 +37613,6 @@
       "baseline_same_filename": []
     },
     {
-      "source": "TextUtils.c",
-      "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/MacEmul/TextUtils.c",
-      "mac_address": "0x00019ea8",
-      "line": 12756,
-      "functions": [
-        {
-          "name": "c2pstr",
-          "mac_address": "0x00019ea8",
-          "linkage_names": [
-            "c2pstr"
-          ]
-        },
-        {
-          "name": "p2cstr",
-          "mac_address": "0x00019f04",
-          "linkage_names": [
-            "p2cstr"
-          ]
-        },
-        {
-          "name": "CharacterByteType",
-          "mac_address": "0x00019f50",
-          "linkage_names": [
-            "CharacterByteType"
-          ]
-        },
-        {
-          "name": "CharByte",
-          "mac_address": "0x00019f58",
-          "linkage_names": [
-            "CharByte"
-          ]
-        },
-        {
-          "name": "GetDateTime",
-          "mac_address": "0x00019f60",
-          "linkage_names": [
-            "GetDateTime"
-          ]
-        },
-        {
-          "name": "EqualString",
-          "mac_address": "0x00019f9c",
-          "linkage_names": [
-            "EqualString"
-          ]
-        },
-        {
-          "name": "GetIndString",
-          "mac_address": "0x0001a05c",
-          "linkage_names": [
-            "GetIndString"
-          ]
-        },
-        {
-          "name": "getindstring",
-          "mac_address": "0x0001a24c",
-          "linkage_names": [
-            "getindstring"
-          ]
-        },
-        {
-          "name": "NumToString",
-          "mac_address": "0x0001a280",
-          "linkage_names": [
-            "NumToString"
-          ]
-        },
-        {
-          "name": "StringToNum",
-          "mac_address": "0x0001a2cc",
-          "linkage_names": [
-            "StringToNum"
-          ]
-        },
-        {
-          "name": "StrLength",
-          "mac_address": "0x0001a330",
-          "linkage_names": [
-            "StrLength"
-          ]
-        }
-      ],
-      "data_symbols": [],
-      "baseline_same_filename": []
-    },
-    {
       "source": "FileHandles.c",
       "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/FileHandles.c",
       "mac_address": "0x00021918",
@@ -51169,7 +51407,7 @@
       }
     },
     "src/driver/CLIO.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -51298,7 +51536,13 @@
           "space-nointrinsics": "4b704cb218fe4e3e02e732c5021009a0d6ee5becc99d509ca05b929f14919056",
           "space-intrinsics": "c9cfb3b557a6cd906402644870eb98df58ca438e346a610d19e3802323a7e827"
         }
-      }
+      },
+      "superseded_by": [
+        "src/GC_3_0a5_2/driver/CLIO.c",
+        "src/GC_3_0a5_2/driver/TextUtils.c",
+        "src/GC_3_0a5_2/driver/StringExtras.c",
+        "src/GC_3_0a5_2/driver/CLPrefs.c"
+      ]
     },
     "src/driver/CLLoadAndCache.c": {
       "status": "superseded_import",
@@ -67978,6 +68222,1075 @@
       "status": "exact",
       "membership_reviewed": true,
       "strict_exact_count": 2
+    },
+    "src/GC_3_0a5_2/driver/TextUtils.c": {
+      "source": "src/GC_3_0a5_2/driver/TextUtils.c",
+      "sha256": "744dbb23dfc31e13061345e33cf73b948ca1dbd14333e30f7c4ac8f0af915ff1",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mac_functions": [
+        {
+          "name": "c2pstr",
+          "map_line": 12794
+        },
+        {
+          "name": "p2cstr",
+          "map_line": 12804
+        },
+        {
+          "name": "CharacterByteType",
+          "map_line": 12815
+        },
+        {
+          "name": "CharByte",
+          "map_line": 12819
+        },
+        {
+          "name": "GetDateTime",
+          "map_line": 12823
+        },
+        {
+          "name": "EqualString",
+          "map_line": 12831
+        },
+        {
+          "name": "GetIndString",
+          "map_line": 12850
+        },
+        {
+          "name": "getindstring",
+          "map_line": 12902
+        },
+        {
+          "name": "NumToString",
+          "map_line": 12911
+        },
+        {
+          "name": "StringToNum",
+          "map_line": 12919
+        },
+        {
+          "name": "StrLength",
+          "map_line": 12928
+        }
+      ],
+      "emitted_functions": [
+        {
+          "symbol": "_c2pstr@4",
+          "size": 60
+        },
+        {
+          "symbol": "_p2cstr@4",
+          "size": 34
+        },
+        {
+          "symbol": "_GetIndString@12",
+          "size": 423
+        },
+        {
+          "symbol": "_getindstring@12",
+          "size": 33
+        }
+      ],
+      "attempts": [
+        {
+          "name": "c2pstr@4",
+          "address": "0x42f410",
+          "size": 60,
+          "compiled_size": 60,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "p2cstr@4",
+          "address": "0x42f450",
+          "size": 34,
+          "compiled_size": 34,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "GetIndString@12",
+          "address": "0x42f480",
+          "size": 423,
+          "compiled_size": 423,
+          "bytes_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 99.338234
+        }
+      ],
+      "complete": false,
+      "sjis": "Source encodes to CP932; repository checker is unavailable",
+      "inventory": "c2pstr,p2cstr,GetIndString retained in42f410..42f627. Next42f630 and42f670 are stack-allocation runtime helpers. getindstring wrapper is emitted but no Windows mapping. Remaining7 Mac names unresolved, not proven absent.",
+      "data_complete": true,
+      "data_bytes": 44,
+      "data_address": "0x67059d",
+      "nonmatch_review": "GetIndString faithfully retains resource lookup/fallback, big-endian count, bounded Pascal-string scan, lock/unlock, character conversion and ellipsis expansion. Remaining code differences are register allocation and comparison form; no behavior gaps identified. Resources_GetHand private declaration is stdcall@8.",
+      "status": "attempted_incomplete",
+      "membership_reviewed": false,
+      "source_sha256": "744dbb23dfc31e13061345e33cf73b948ca1dbd14333e30f7c4ac8f0af915ff1",
+      "strict_exact_count": 2,
+      "source_bindings": {
+        "_Memory_GetHandleSize": "0x42e3a0",
+        "_Memory_GetHandleSize@4": "0x0042e3a0",
+        "_ResourceStrings_GetString": "0x40f770",
+        "__pstrcpy": "0x42de40",
+        "_fn_00413a00": "0x42e300",
+        "_fn_00413a50": "0x42e350",
+        "_memmove": "0x4047c0",
+        "_sprintf": "0x408000",
+        "_strcpy": "0x00404050",
+        "_Resources_GetHand@8": "0x414890"
+      }
+    },
+    "src/GC_3_0a5_2/driver/CLIO.c": {
+      "source": "src/GC_3_0a5_2/driver/CLIO.c",
+      "sha256": "5d221e01a92c66902a49ceaa79e09d846ecc8907227d0152eff65b4799a69c07",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mac_functions": [
+        {
+          "name": "catchinterrupt",
+          "map_line": 4757
+        },
+        {
+          "name": "SetupConsoleInfo",
+          "map_line": 4762
+        },
+        {
+          "name": "Crash",
+          "map_line": 4817
+        },
+        {
+          "name": "SetupDebuggingTraps",
+          "map_line": 4822
+        },
+        {
+          "name": "IO_Initialize",
+          "map_line": 4827
+        },
+        {
+          "name": "IO_Terminate",
+          "map_line": 4845
+        },
+        {
+          "name": "IO_HelpInitialize",
+          "map_line": 4852
+        },
+        {
+          "name": "IO_HelpTerminate",
+          "map_line": 4857
+        },
+        {
+          "name": "emit_text",
+          "map_line": 4862
+        },
+        {
+          "name": "SendHandleToFile",
+          "map_line": 4914
+        },
+        {
+          "name": "FixHandleForIDE",
+          "map_line": 4934
+        },
+        {
+          "name": "ShowHandle",
+          "map_line": 4952
+        },
+        {
+          "name": "ShowFile",
+          "map_line": 4968
+        },
+        {
+          "name": "WriteHandleToFile",
+          "map_line": 5002
+        },
+        {
+          "name": "WriteBinaryHandleToFile",
+          "map_line": 5020
+        },
+        {
+          "name": "AppendHandleToFile",
+          "map_line": 5037
+        },
+        {
+          "name": "InitWorking",
+          "map_line": 5055
+        },
+        {
+          "name": "ShowWorking",
+          "map_line": 5058
+        },
+        {
+          "name": "TermWorking",
+          "map_line": 5061
+        },
+        {
+          "name": "ProgressFunction",
+          "map_line": 5064
+        },
+        {
+          "name": "CheckForUserBreak",
+          "map_line": 5071
+        },
+        {
+          "name": "StartLine",
+          "map_line": 5076
+        },
+        {
+          "name": "WrapText",
+          "map_line": 5090
+        },
+        {
+          "name": "IO_VFormatText",
+          "map_line": 5113
+        },
+        {
+          "name": "IO_FormatText",
+          "map_line": 5176
+        },
+        {
+          "name": "CLPrintDispatch",
+          "map_line": 5188
+        },
+        {
+          "name": "GetFileInfo",
+          "map_line": 5227
+        },
+        {
+          "name": "Arrows",
+          "map_line": 5258
+        },
+        {
+          "name": "IsLikelyAnImporter",
+          "map_line": 5278
+        },
+        {
+          "name": "GuessTool",
+          "map_line": 5381
+        },
+        {
+          "name": "GuessDoing",
+          "map_line": 5404
+        },
+        {
+          "name": "styledMessage_MPW",
+          "map_line": 5416
+        },
+        {
+          "name": "styledMessage_Default",
+          "map_line": 5444
+        },
+        {
+          "name": "styledMessage_Terse",
+          "map_line": 5490
+        },
+        {
+          "name": "styledMessage_IDE",
+          "map_line": 5533
+        },
+        {
+          "name": "styledMessage_Parseable",
+          "map_line": 5559
+        },
+        {
+          "name": "CLPrintType",
+          "map_line": 5577
+        },
+        {
+          "name": "CLPrint",
+          "map_line": 5588
+        },
+        {
+          "name": "CLPrintWarning",
+          "map_line": 5598
+        },
+        {
+          "name": "CLPrintErr",
+          "map_line": 5608
+        },
+        {
+          "name": "FixupMessageRef",
+          "map_line": 5618
+        },
+        {
+          "name": "CLStyledMessageDispatch",
+          "map_line": 5645
+        }
+      ],
+      "emitted_functions": [
+        {
+          "symbol": "_catchinterrupt@4",
+          "size": 69
+        },
+        {
+          "symbol": "_SetupConsoleInfo",
+          "size": 148
+        },
+        {
+          "symbol": "_Crash",
+          "size": 8
+        },
+        {
+          "symbol": "_SetupDebuggingTraps",
+          "size": 15
+        },
+        {
+          "symbol": "_IO_Initialize",
+          "size": 121
+        },
+        {
+          "symbol": "_IO_Terminate",
+          "size": 24
+        },
+        {
+          "symbol": "_IO_HelpTerminate",
+          "size": 10
+        },
+        {
+          "symbol": "_emit_text",
+          "size": 355
+        },
+        {
+          "symbol": "_SendHandleToFile",
+          "size": 116
+        },
+        {
+          "symbol": "_ShowHandle",
+          "size": 129
+        },
+        {
+          "symbol": "_ShowFile",
+          "size": 256
+        },
+        {
+          "symbol": "_WriteHandleToFile",
+          "size": 148
+        },
+        {
+          "symbol": "_WriteBinaryHandleToFile",
+          "size": 135
+        },
+        {
+          "symbol": "_AppendHandleToFile",
+          "size": 148
+        },
+        {
+          "symbol": "_InitWorking",
+          "size": 1
+        },
+        {
+          "symbol": "_TermWorking",
+          "size": 1
+        },
+        {
+          "symbol": "_CheckForUserBreak",
+          "size": 14
+        },
+        {
+          "symbol": "_ProgressFunction",
+          "size": 1
+        },
+        {
+          "symbol": "_WrapText",
+          "size": 282
+        },
+        {
+          "symbol": "_IO_VFormatText",
+          "size": 453
+        },
+        {
+          "symbol": "_append_prefix_separator",
+          "size": 35
+        },
+        {
+          "symbol": "_StartLine",
+          "size": 36
+        },
+        {
+          "symbol": "_append_text",
+          "size": 147
+        },
+        {
+          "symbol": "_append_byte",
+          "size": 110
+        },
+        {
+          "symbol": "_IO_FormatText",
+          "size": 51
+        },
+        {
+          "symbol": "_CLPrintDispatch",
+          "size": 550
+        },
+        {
+          "symbol": "_GetFileInfo",
+          "size": 291
+        },
+        {
+          "symbol": "_styledMessage_Terse",
+          "size": 609
+        },
+        {
+          "symbol": "_CLPrint",
+          "size": 104
+        },
+        {
+          "symbol": "_CLPrintErr",
+          "size": 104
+        },
+        {
+          "symbol": "_FixupMessageRef",
+          "size": 210
+        },
+        {
+          "symbol": "_styledMessage_MPW",
+          "size": 366
+        },
+        {
+          "symbol": "_styledMessage_Default",
+          "size": 685
+        },
+        {
+          "symbol": "_Arrows",
+          "size": 128
+        },
+        {
+          "symbol": "_IsLikelyAnImporter",
+          "size": 100
+        },
+        {
+          "symbol": "_styledMessage_IDE",
+          "size": 241
+        },
+        {
+          "symbol": "_styledMessage_Parseable",
+          "size": 250
+        },
+        {
+          "symbol": "_CLPrintType",
+          "size": 120
+        },
+        {
+          "symbol": "_GuessTool",
+          "size": 167
+        },
+        {
+          "symbol": "_GuessDoing",
+          "size": 70
+        },
+        {
+          "symbol": "_fn_00419b30",
+          "size": 493
+        },
+        {
+          "symbol": "_CLStyledMessageDispatch",
+          "size": 889
+        }
+      ],
+      "attempts": [
+        {
+          "name": "fn_00414e20",
+          "address": "0x00418270",
+          "size": 24,
+          "target_size": 24,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "fn_00415090",
+          "address": "0x004186c0",
+          "size": 135,
+          "target_size": 135,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "reset_column_and_append_prefix",
+          "address": "0x00418830",
+          "size": 36,
+          "target_size": 36,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "append_text",
+          "address": "0x00418860",
+          "size": 147,
+          "target_size": 147,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "wrap_line",
+          "address": "0x00418900",
+          "size": 282,
+          "target_size": 282,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 96.02941
+        },
+        {
+          "name": "append_prefix_separator",
+          "address": "0x00418a20",
+          "size": 35,
+          "target_size": 35,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "append_byte",
+          "address": "0x00418a50",
+          "size": 110,
+          "target_size": 110,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "format_prefixed_text",
+          "address": "0x00418ac0",
+          "size": 453,
+          "target_size": 455,
+          "exact": false,
+          "fixups_exact": true,
+          "strict_exact": false,
+          "objdiff_percent": 95.27586
+        },
+        {
+          "name": "forward_format_arguments",
+          "address": "0x00418c90",
+          "size": 51,
+          "target_size": 51,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "nonmatching_plugin_with_clear_high_bit",
+          "address": "0x00419130",
+          "size": 100,
+          "target_size": 100,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 96.617645
+        },
+        {
+          "name": "get_plugin_type_name",
+          "address": "0x004191a0",
+          "size": 167,
+          "target_size": 167,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "select_plugin_type_data",
+          "address": "0x00419250",
+          "size": 70,
+          "target_size": 70,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "print_diagnostic",
+          "address": "0x004192a0",
+          "size": 366,
+          "target_size": 366,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "emit_formatted_diagnostic",
+          "address": "0x00419410",
+          "size": 685,
+          "target_size": 685,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "format_and_print_message",
+          "address": "0x004196c0",
+          "size": 609,
+          "target_size": 615,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 95.655365
+        },
+        {
+          "name": "print_diagnostic_with_details",
+          "address": "0x00419930",
+          "size": 241,
+          "target_size": 241,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "print_pipe_delimited_diagnostic",
+          "address": "0x00419a30",
+          "size": 250,
+          "target_size": 250,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "emit_formatted_message",
+          "address": "0x00419d20",
+          "size": 120,
+          "target_size": 107,
+          "exact": false,
+          "fixups_exact": true,
+          "strict_exact": false,
+          "objdiff_percent": 86.06061
+        },
+        {
+          "name": "CLIO_FormatAndDispatchText",
+          "address": "0x00419d90",
+          "size": 104,
+          "target_size": 104,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CLIO_WriteFormattedText",
+          "address": "0x00419e00",
+          "size": 104,
+          "target_size": 104,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "extract_diagnostic_source_line",
+          "address": "0x00419e70",
+          "size": 210,
+          "target_size": 216,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 85.84507
+        },
+        {
+          "name": "CLIO_ReportDiagnostic",
+          "address": "0x00419f50",
+          "size": 889,
+          "target_size": 857,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 0.0
+        },
+        {
+          "name": "catchinterrupt@4",
+          "address": "0x4180e0",
+          "size": 69,
+          "target_size": 69,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 94.166664
+        },
+        {
+          "name": "SetupConsoleInfo",
+          "address": "0x418130",
+          "size": 148,
+          "target_size": 148,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "Crash",
+          "address": "0x4181d0",
+          "size": 8,
+          "target_size": 8,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "SetupDebuggingTraps",
+          "address": "0x4181e0",
+          "size": 15,
+          "target_size": 15,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "IO_Initialize",
+          "address": "0x4181f0",
+          "size": 121,
+          "target_size": 121,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "IO_HelpTerminate",
+          "address": "0x418290",
+          "size": 10,
+          "target_size": 10,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "emit_text",
+          "address": "0x4182a0",
+          "size": 355,
+          "target_size": 355,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "SendHandleToFile",
+          "address": "0x418410",
+          "size": 116,
+          "target_size": 116,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "ShowHandle",
+          "address": "0x418490",
+          "size": 129,
+          "target_size": 129,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "ShowFile",
+          "address": "0x418520",
+          "size": 256,
+          "target_size": 256,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 86.175674
+        },
+        {
+          "name": "WriteHandleToFile",
+          "address": "0x418620",
+          "size": 148,
+          "target_size": 148,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "AppendHandleToFile",
+          "address": "0x418750",
+          "size": 148,
+          "target_size": 148,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "InitWorking",
+          "address": "0x4187f0",
+          "size": 1,
+          "target_size": 1,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "ProgressFunction",
+          "address": "0x418800",
+          "size": 1,
+          "target_size": 1,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "TermWorking",
+          "address": "0x418810",
+          "size": 1,
+          "target_size": 1,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CheckForUserBreak",
+          "address": "0x418820",
+          "size": 14,
+          "target_size": 14,
+          "exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CLPrintDispatch",
+          "address": "0x418cd0",
+          "error": "unbound literal: @2108 (0 retail blocks, 0 strings)"
+        },
+        {
+          "name": "GetFileInfo",
+          "address": "0x418f80",
+          "size": 291,
+          "target_size": 291,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 87.6
+        },
+        {
+          "name": "Arrows",
+          "address": "0x4190b0",
+          "size": 128,
+          "target_size": 128,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 77.76923
+        },
+        {
+          "name": "fn_00419b30",
+          "address": "0x419b30",
+          "size": 493,
+          "target_size": 493,
+          "exact": false,
+          "fixups_exact": false,
+          "strict_exact": false,
+          "objdiff_percent": 88.31159
+        }
+      ],
+      "complete": false,
+      "sjis": "Source encodes to CP932; repository checker is unavailable",
+      "inventory": "All42 emitted bodies map to primary CLIO cluster4180e0..41a2a9. Mac IO_HelpInitialize,FixHandleForIDE,ShowWorking,CLPrintWarning remain unmapped; helpers append_text/append_byte/append_prefix_separator and new fn_00419b30 are additionally retained.",
+      "data_complete": true,
+      "data_bytes": 800,
+      "bss_bytes": 1300,
+      "unresolved_data": "Table-derived literals now independently verified by generic attribution. Dispatcher empty-string code operand remains ambiguous; no strict match claimed for CLPrintDispatch.",
+      "nonmatch_review": "Source bodies were compared against Capstone control flow. Remaining differences are instruction scheduling/register allocation, varargs pointer arithmetic generation and branch block layout. CLPrintDispatch was ported for IDE output callback11arguments, file-status/path handling, logging, stream choice, assertion line958, CR/LF normalization and stdout flush control. CLStyledMessageDispatch was ported to additional style5 formatter; strict equivalence remains a static-review conclusion without dynamic fullTU tests.",
+      "exact_count": 29,
+      "status": "attempted_incomplete",
+      "membership_reviewed": false,
+      "source_sha256": "5d221e01a92c66902a49ceaa79e09d846ecc8907227d0152eff65b4799a69c07",
+      "strict_exact_count": 29,
+      "source_bindings": {
+        "_CLErrors_ForwardMessage": "0x414a60",
+        "_CLErrors_ReportFormattedOSError": "0x414b20",
+        "_CLErrors_ReportOSError": "0x414a90",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_CLPlugins_FindMatchingTargetPlugin": "0x4169e0",
+        "_CLPlugins_GetObjectFlags": "0x415680",
+        "_CLPlugins_GetPluginDesc": "0x4153f0",
+        "_CLPlugins_GetType": "0x415470",
+        "_CLProj_MakeRelativePath": "0x4179f0",
+        "_DAT_00541b3e": "0x717454",
+        "_MsDos_GetValidMemBufferPtr": "0x411d00",
+        "_MsDos_GetValidMemBufferPtr@4": "0x411d00",
+        "_OS_Close": "0x40fe40",
+        "_OS_GetHandleSize": "0x411d80",
+        "_OS_GetHandleSize@8": "0x411d80",
+        "_OS_Open": "0x40fc10",
+        "_OS_Read": "0x40fdb0",
+        "_OS_SpecToString": "0x4111f0",
+        "_OS_SpecToString@12": "0x4111f0",
+        "_OS_Status": "0x40fa80",
+        "___files": "0x65a5e4",
+        "_append_byte": "0x418a50",
+        "_append_prefix_separator": "0x418a20",
+        "_append_text": "0x418860",
+        "_compiling_plugin_type": "0x66b150",
+        "_data_0054bab8": "0x66b15c",
+        "_data_0054bac0": "0x66b164",
+        "_fn_004129c0": "0x411d30",
+        "_fn_004129c0@4": "0x411d30",
+        "_fprintf": "0x407e30",
+        "_memcpy": "0x404850",
+        "_mprintf": "0x42e070",
+        "_mvprintf": "0x42df80",
+        "_plugin_type_strings": "0x66b148",
+        "_sprintf": "0x408000",
+        "_strcat": "0x4040b0",
+        "_strncpy": "0x404070",
+        "_strstr": "0x404400",
+        "_xmalloc": "0x426300",
+        "_xrealloc": "0x4263e0",
+        "_xmalloc@8": "0x426300",
+        "_xfree@4": "0x426490",
+        "_exit": "0x402e70",
+        "_OS_EqualSpec": "0x411380",
+        "_TargetOptimizer_ppc_eabi_InitOperationRecord@16": "0x42fc70",
+        "_TargetOptimizer_ppc_eabi_UnloadOperationRecord@4": "0x42fd90",
+        "_fn_00421d30@12": "0x42fa00",
+        "_xrealloc@12": "0x4263e0",
+        "_no_wrap": "0x710250",
+        "_data_00541b3a": "0x717450",
+        "_default_target": "0x71099c",
+        "_data_005871d0": "0x702d20",
+        "_plugin_type": "0x702d1c",
+        "_program_name": "0x702f2c",
+        "_CLProj_MakeRelativePath@16": "0x4179f0",
+        "_data_00587326": "0x702f36",
+        "_diagnostic_limit_count": "0x702f32",
+        "_diagnosticReported": "0x702f37",
+        "_data_00541b43": "0x71039b",
+        "_diagnostic_limit": "0x71024c",
+        "_diagnostic_count": "0x702f30",
+        "_data_00541b2c": "0x710248",
+        "_data_00541b2d": "0x710249",
+        "_data_00541b36": "0x710252",
+        "_data_00587325": "0x702f35",
+        "_fn_00419b30": "0x419b30",
+        "_data_005880e0": "0x716d9c",
+        "_diagnostic_count_limit": "0x71024a",
+        "_data_00541b32": "0x71024e",
+        "_msgnames_gcc": "0x66b268",
+        "_srcSpec": "0x6d69ec",
+        "_errSpec": "0x6d67e8",
+        "_IO_Terminate": "0x418270",
+        "_WriteBinaryHandleToFile": "0x4186c0",
+        "_StartLine": "0x418830",
+        "_WrapText": "0x418900",
+        "_IO_VFormatText": "0x418ac0",
+        "_IO_FormatText": "0x418c90",
+        "_IsLikelyAnImporter": "0x419130",
+        "_GuessTool": "0x4191a0",
+        "_GuessDoing": "0x419250",
+        "_styledMessage_MPW": "0x4192a0",
+        "_styledMessage_Default": "0x419410",
+        "_styledMessage_Terse": "0x4196c0",
+        "_styledMessage_IDE": "0x419930",
+        "_styledMessage_Parseable": "0x419a30",
+        "_CLPrintType": "0x419d20",
+        "_CLPrint": "0x419d90",
+        "_CLPrintErr": "0x419e00",
+        "_FixupMessageRef": "0x419e70",
+        "_CLStyledMessageDispatch": "0x419f50",
+        "_GetFileInfo": "0x418f80",
+        "_Arrows": "0x4190b0",
+        "_IO_HelpTerminate": "0x418290",
+        "_TermWorking": "0x418810",
+        "_catchinterrupt@4": "0x4180e0",
+        "_SetupConsoleInfo": "0x418130",
+        "_Crash": "0x4181d0",
+        "_SetupDebuggingTraps": "0x4181e0",
+        "_IO_Initialize": "0x4181f0",
+        "_emit_text": "0x4182a0",
+        "_SendHandleToFile": "0x418410",
+        "_ShowHandle": "0x418490",
+        "_ShowFile": "0x418520",
+        "_WriteHandleToFile": "0x418620",
+        "_AppendHandleToFile": "0x418750",
+        "_InitWorking": "0x4187f0",
+        "_ProgressFunction": "0x418800",
+        "_CheckForUserBreak": "0x418820",
+        "_CLPrintDispatch": "0x418cd0",
+        "_consoleFiles_00705ac8": "0x705ac8",
+        "_outputFile_00711b88": "0x711b88",
+        "_handleBorder_0066b084": "0x66b084",
+        "_fileBorder_0066b088": "0x66b088",
+        "__GetThreadLocalData": "0x403ff0",
+        "_OS_Open@12": "0x40fc10",
+        "_OS_Read@12": "0x40fdb0",
+        "_OS_Close@4": "0x40fe40",
+        "__imp__GetStdHandle@4": "0x6d4284",
+        "__imp__SetConsoleCtrlHandler@8": "0x6d436c",
+        "__imp__GetConsoleScreenBufferInfo@8": "0x6d4370",
+        "_exchange_indexed_value": "0x42faa0",
+        "_consoleBufferHeight": "0x717452",
+        "_setvbuf": "0x40f050",
+        "_fwrite": "0x41b8a0",
+        "_fflush": "0x40f2b0",
+        "_fopen": "0x40f3b0",
+        "_fclose": "0x40f230",
+        "_data_00541b35": "0x710251",
+        "_ideOutputEnabled_00710210": "0x710210",
+        "_flushMode_00710244": "0x710244",
+        "_ideContext_007101d0": "0x7101d0",
+        "_idePrint_00669c64": "0x669c64",
+        "_OS_Status@4": "0x40fa80",
+        "_ioLineNum": "0x6d66e0",
+        "_printedAnything": "0x6d66e4",
+        "_arrowBuf": "0x6d66e5",
+        "_newErr": "0x6d67e5",
+        "_newSrc": "0x6d67e6",
+        "_srcIsErr": "0x6d67e7",
+        "_validErr": "0x6d6bf0",
+        "_validSrc": "0x6d6bf1",
+        "_ioInHelp": "0x6d6bf8",
+        "_ioPiping": "0x6d6bf9",
+        "_msgnames": "0x66b0f4"
+      }
     }
   },
   "ownership_review": {

@@ -57,7 +57,7 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-The current inventory has 263 source views: 215 compiled files and 48
+The current inventory has 264 source views: 216 compiled files and 48
 original-only units. All twenty direct assertion ownership conflicts are now
 split physically. CFunc.cpp and CException.cpp retain provisional C language
 mode while imported pointer conversions are ported. CMiddleLayer.c,
@@ -74,6 +74,28 @@ span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## CLIO.c and TextUtils.c: reviewed native diagnostic and string ports
+
+CLIO.c now has all 42 emitted Windows cluster bodies mapped and reviewed,
+including console setup/cancellation, handle/file output, text wrapping,
+formatter variants and diagnostic dispatch. Twenty-nine functions pass strict
+byte and loader-fixup checks. The private diagnostic source layout has native
+516-byte specs, sourceLine at 0x408, line at 0x40c and column at 0x410.
+The IDE callback takes eleven arguments; dispatch retains original logging,
+severity limits, style-five formatting, CR/LF normalization and flush behavior.
+Its 8,283 original code bytes compare at 80.67977%; all 800 initialized data
+bytes and 1,300 BSS bytes match, including table-only severity strings.
+CLPrintDispatch's empty-string code operand remains ambiguous, and four Mac
+members lack Windows mappings. Completion is deliberately false.
+
+TextUtils.c separately owns c2pstr and p2cstr, both strict exact, and the
+reviewed equivalent GetIndString instruction nonmatch. The three mapped bodies
+total 517 original bytes at 99.45856%; all 44 data bytes match. The additional
+getindstring wrapper is emitted but has no established Windows body, and seven
+other Mac members remain unresolved. This TU also remains incomplete. Original
+severity names distinguish CLPrint and CLPrintErr; CLPrintWarning has no
+retained mapping in the reviewed cluster.
 
 ## CLProj.c and OSLib/Generic.c: restored original ownership
 

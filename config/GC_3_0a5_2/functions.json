@@ -1717,41 +1717,217 @@
     }
   },
   {
-    "name": "fn_00414e20",
+    "name": "catchinterrupt@4",
+    "address": "0x4180e0",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "SetupConsoleInfo",
+    "address": "0x418130",
+    "size": 148,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Crash",
+    "address": "0x4181d0",
+    "size": 8,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "SetupDebuggingTraps",
+    "address": "0x4181e0",
+    "size": 15,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IO_Initialize",
+    "address": "0x4181f0",
+    "size": 121,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IO_Terminate",
     "address": "0x00418270",
     "size": 24,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "fn_00414e20",
     "baseline_address": "0x00414e20",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_00415090",
+    "name": "IO_HelpTerminate",
+    "address": "0x418290",
+    "size": 10,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "emit_text",
+    "address": "0x4182a0",
+    "size": 355,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "SendHandleToFile",
+    "address": "0x418410",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ShowHandle",
+    "address": "0x418490",
+    "size": 129,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ShowFile",
+    "address": "0x418520",
+    "size": 256,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "WriteHandleToFile",
+    "address": "0x418620",
+    "size": 148,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "WriteBinaryHandleToFile",
     "address": "0x004186c0",
     "size": 135,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "fn_00415090",
     "baseline_address": "0x00415090",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "reset_column_and_append_prefix",
+    "name": "AppendHandleToFile",
+    "address": "0x418750",
+    "size": 148,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InitWorking",
+    "address": "0x4187f0",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "ProgressFunction",
+    "address": "0x418800",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "TermWorking",
+    "address": "0x418810",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CheckForUserBreak",
+    "address": "0x418820",
+    "size": 14,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "StartLine",
     "address": "0x00418830",
     "size": 36,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "reset_column_and_append_prefix",
     "baseline_address": "0x00415200",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -1759,25 +1935,25 @@
     "name": "append_text",
     "address": "0x00418860",
     "size": 147,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "append_text",
     "baseline_address": "0x00415230",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "wrap_line",
+    "name": "WrapText",
     "address": "0x00418900",
     "size": 282,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "wrap_line",
     "baseline_address": "0x004152d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -1785,12 +1961,12 @@
     "name": "append_prefix_separator",
     "address": "0x00418a20",
     "size": 35,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "append_prefix_separator",
     "baseline_address": "0x004153f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -1798,207 +1974,251 @@
     "name": "append_byte",
     "address": "0x00418a50",
     "size": 110,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "append_byte",
     "baseline_address": "0x00415420",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "format_prefixed_text",
+    "name": "IO_VFormatText",
     "address": "0x00418ac0",
     "size": 455,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "format_prefixed_text",
     "baseline_address": "0x00415490",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "forward_format_arguments",
+    "name": "IO_FormatText",
     "address": "0x00418c90",
     "size": 51,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "forward_format_arguments",
     "baseline_address": "0x00415630",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "nonmatching_plugin_with_clear_high_bit",
+    "name": "CLPrintDispatch",
+    "address": "0x418cd0",
+    "size": 674,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GetFileInfo",
+    "address": "0x418f80",
+    "size": 291,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arrows",
+    "address": "0x4190b0",
+    "size": 128,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsLikelyAnImporter",
     "address": "0x00419130",
     "size": 100,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "nonmatching_plugin_with_clear_high_bit",
     "baseline_address": "0x004158b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_plugin_type_name",
+    "name": "GuessTool",
     "address": "0x004191a0",
     "size": 167,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "get_plugin_type_name",
     "baseline_address": "0x00415910",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "select_plugin_type_data",
+    "name": "GuessDoing",
     "address": "0x00419250",
     "size": 70,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "select_plugin_type_data",
     "baseline_address": "0x004159b0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "print_diagnostic",
+    "name": "styledMessage_MPW",
     "address": "0x004192a0",
     "size": 366,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "print_diagnostic",
     "baseline_address": "0x00415a00",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "emit_formatted_diagnostic",
+    "name": "styledMessage_Default",
     "address": "0x00419410",
     "size": 685,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "emit_formatted_diagnostic",
     "baseline_address": "0x00415b60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "format_and_print_message",
+    "name": "styledMessage_Terse",
     "address": "0x004196c0",
     "size": 615,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "format_and_print_message",
     "baseline_address": "0x00415dc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "print_diagnostic_with_details",
+    "name": "styledMessage_IDE",
     "address": "0x00419930",
     "size": 241,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "print_diagnostic_with_details",
     "baseline_address": "0x00415f40",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "print_pipe_delimited_diagnostic",
+    "name": "styledMessage_Parseable",
     "address": "0x00419a30",
     "size": 250,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "print_pipe_delimited_diagnostic",
     "baseline_address": "0x00416040",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "emit_formatted_message",
+    "name": "fn_00419b30",
+    "address": "0x419b30",
+    "size": 493,
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CLPrintType",
     "address": "0x00419d20",
     "size": 107,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "emit_formatted_message",
     "baseline_address": "0x00416140",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLIO_FormatAndDispatchText",
+    "name": "CLPrint",
     "address": "0x00419d90",
     "size": 104,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "CLIO_FormatAndDispatchText",
     "baseline_address": "0x004161c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLIO_WriteFormattedText",
+    "name": "CLPrintErr",
     "address": "0x00419e00",
     "size": 104,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "CLIO_WriteFormattedText",
     "baseline_address": "0x00416240",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "extract_diagnostic_source_line",
+    "name": "FixupMessageRef",
     "address": "0x00419e70",
     "size": 216,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "extract_diagnostic_source_line",
     "baseline_address": "0x004162c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLIO_ReportDiagnostic",
+    "name": "CLStyledMessageDispatch",
     "address": "0x00419f50",
     "size": 857,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c",
     "baseline_name": "CLIO_ReportDiagnostic",
     "baseline_address": "0x004163a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLIO.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -4083,15 +4303,37 @@
     }
   },
   {
-    "name": "CLIO_ConvertPascalToCString",
-    "address": "0x0042f450",
+    "name": "c2pstr",
+    "address": "0x42f410",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c",
+    "identity_evidence": "TextUtils.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "p2cstr",
+    "address": "0x42f450",
     "size": 34,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c",
     "baseline_name": "CLIO_ConvertPascalToCString",
     "baseline_address": "0x00414b00",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "TextUtils.c explicit Mac source members and reviewed native Windows body/call roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and neighboring original entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GetIndString",
+    "address": "0x42f480",
+    "size": 423,
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c",
+    "identity_evidence": "TextUtils.c explicit Mac source members and reviewed native Windows body/call roles.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and neighboring original entries",
       "unresolved_indirect_flow": false
     }
   },

@@ -1274,5 +1274,121 @@
   "CLProj_FreeTargets": {
     "name": "Proj_Terminate",
     "source": "src/GC_3_0a5_2/driver/CLProj.c"
+  },
+  "CLIO_ConvertPascalToCString": {
+    "name": "p2cstr",
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c"
+  },
+  "CLIO_GetResourceString": {
+    "name": "GetIndString",
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c"
+  },
+  "CLIO_GetResourceCString": {
+    "name": "getindstring",
+    "source": "src/GC_3_0a5_2/driver/TextUtils.c"
+  },
+  "fn_00414e20": {
+    "name": "IO_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "fn_00415090": {
+    "name": "WriteBinaryHandleToFile",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "reset_column_and_append_prefix": {
+    "name": "StartLine",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "append_text": {
+    "name": "append_text",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "wrap_line": {
+    "name": "WrapText",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "append_prefix_separator": {
+    "name": "append_prefix_separator",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "append_byte": {
+    "name": "append_byte",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "format_prefixed_text": {
+    "name": "IO_VFormatText",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "forward_format_arguments": {
+    "name": "IO_FormatText",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "nonmatching_plugin_with_clear_high_bit": {
+    "name": "IsLikelyAnImporter",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "get_plugin_type_name": {
+    "name": "GuessTool",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "select_plugin_type_data": {
+    "name": "GuessDoing",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "print_diagnostic": {
+    "name": "styledMessage_MPW",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "emit_formatted_diagnostic": {
+    "name": "styledMessage_Default",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "format_and_print_message": {
+    "name": "styledMessage_Terse",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "print_diagnostic_with_details": {
+    "name": "styledMessage_IDE",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "print_pipe_delimited_diagnostic": {
+    "name": "styledMessage_Parseable",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "emit_formatted_message": {
+    "name": "CLPrintType",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "CLIO_FormatAndDispatchText": {
+    "name": "CLPrint",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "CLIO_WriteFormattedText": {
+    "name": "CLPrintErr",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "extract_diagnostic_source_line": {
+    "name": "FixupMessageRef",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "CLIO_ReportDiagnostic": {
+    "name": "CLStyledMessageDispatch",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "update_cached_specs": {
+    "name": "GetFileInfo",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "make_source_position_carets": {
+    "name": "Arrows",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "clear_global_byte": {
+    "name": "IO_HelpTerminate",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "fn_004151e0": {
+    "name": "TermWorking",
+    "source": "src/GC_3_0a5_2/driver/CLIO.c"
   }
 }

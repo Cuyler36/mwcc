@@ -853,6 +853,24 @@ Unmapped units remain discovery tasks, and no compiler-profile result alone
 establishes semantic equivalence, original membership, or complete TU data.
 Partial refreshes also cover new source paths after physical TU replacements.
 
+### Commit and push policy for TU attempts
+
+Only push a TU after its full identified membership has been reviewed and every
+member has received the best reconstruction and matching attempt available.
+Audit the complete symbol maps, assertion references, call targets, and native
+boundaries, including possible members outside the main contiguous cluster.
+Account for new functions, obsolete imported helpers, and unlocated Mac names;
+an unexplored source-member candidate prevents calling the attempt finished.
+Record this coverage review and the disposition of every candidate in the TU
+attempt ledger before pushing. A compiler-profile sweep alone is insufficient.
+
+An exhausted matching attempt may retain reviewed nonmatches. Record their
+remaining differences and any unresolved semantics explicitly. This push gate
+does not relax `complete_sources`: that separate flag still requires established
+membership, complete code and data coverage, and strict whole-TU matching.
+Never treat a successful build, a high objdiff percentage, or a mapped address
+as proof of functional equivalence.
+
 To reproduce the initial compiler-selection import:
 
 ```sh

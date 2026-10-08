@@ -4150,7 +4150,8 @@
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetVTableHeaderInfo",
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetPtrDiffTType",
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetSizeTType",
-    "src/GC_3_0a5_2/frontend/CABI/CABI_GetStructResultArgumentIndex"
+    "src/GC_3_0a5_2/frontend/CABI/CABI_GetStructResultArgumentIndex",
+    "src/GC_3_0a5_2/frontend/CError/CError_InfoString"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5632,7 +5633,9 @@
       "_CError_SetErrorSourceRef": "0x462e40",
       "_CError_BeginErrorCheckMode": "0x462f00",
       "_CError_Init": "0x462f20",
-      "_CError_BufferAppendString": "0x462d30"
+      "_CError_BufferAppendString": "0x462d30",
+      "_CError_InfoString": "0x459f10",
+      "_fn_00459380": "0x459380"
     },
     "src/GC_3_0a5_2/frontend/CABI.c": {
       "_CABI_ReverseBitField": "0x5546d0",

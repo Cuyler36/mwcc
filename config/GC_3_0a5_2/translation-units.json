@@ -10745,6 +10745,17 @@
       ],
       "windows_functions": [
         {
+          "name": "CError_InfoString",
+          "address": "0x00459f10",
+          "size": 252,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CError.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full native CFG to45a00b;45a00c..45a00f NOP padding before next entry45a010",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "CError_QualifierCheck",
           "address": "0x0045a010",
           "size": 464,
@@ -83572,8 +83583,8 @@
     "src/GC_3_0a5_2/frontend/CError.c": {
       "status": "attempted_equivalent",
       "source": "src/GC_3_0a5_2/frontend/CError.c",
-      "candidate_native_bodies": 56,
-      "reconstructed_bodies": 56,
+      "candidate_native_bodies": 57,
+      "reconstructed_bodies": 57,
       "strict_exact": 24,
       "pending": [],
       "compiler": "CW9.4 mwcc.exe",
@@ -83591,7 +83602,7 @@
         "noreadonly"
       ],
       "membership_limits": [
-        "The 56 native candidate entries span 45a010..462f68. Full text direct call destinations and aligned padding/prologue seams were inspected, including zero-padding 45e7d0 and two-NOP 45bff0. Mac ordinary symbols have no per-function source membership in this region; CError.c assertions and coherent formatter/token globals support this cluster. Further CError functions outside this cluster or inlined/platform changes remain possible.",
+        "57 native candidate entries459f10..462f68; source-specific assertions plus complete CSV name/state-reference audit. Mac ordinary symbols do not independently prove exhaustive original object membership.",
         "52 ordinary Mac CError symbols are individually recorded; unmapped names are not asserted absent. Newly supplied v10-to-GC3 CSV canonical names were corroborated against native semantics. Placeholder CSV names do not override Mac evidence. FormatMessageVA/ErrorMessageVA and BufferAppendNameSpace2/BufferAppendNameSpace remain recorded cross-version naming conflicts.",
         "44e000 resource-string helper and 462f70 IRONode allocator are outside this cluster. Existing provisional CompilerTools and CError imported extras outside the 56 rows retain their bodies and provisional ownership.",
         "Native body sizes exclude interfunction NOP padding; corrected examples include 45a230=19,45d380=570,461e80=657,461930=804,45da00=1365,45ab40=4003,45f060=6983."
@@ -83640,11 +83651,11 @@
         "path": "C:\\Users\\olsen\\Downloads\\mwcc.csv",
         "sha256": "328893e092c2946a9530b01d15007320d7c088a85347d2604a03d1d99ad0b5a5"
       },
-      "source_sha256": "e9d3b288e6cff0c4fb46900c12f77c79d1535edcdf7628e79d4363dfa811291c",
+      "source_sha256": "d86fc04a54c6bacdd3505eff7e463be409c067e5cdb8e94bf2b42697161dbd3a",
       "source_cp932": true,
       "membership_reviewed": false,
-      "mapped_function_count": 56,
-      "strict_exact_count": 24,
+      "mapped_function_count": 57,
+      "strict_exact_count": 25,
       "mapped_members": [
         {
           "name": "CError_BufferAppendType",
@@ -84093,6 +84104,15 @@
           "compiled_size": 120,
           "strict_exact": true,
           "objdiff_percent": 100.0
+        },
+        {
+          "name": "CError_InfoString",
+          "address": "0x459f10",
+          "size": 252,
+          "compiled_size": 252,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Select locked/current error token, suppress position for sentinel/cancel, use prior-token fallback and formatter, emit informational variadic message through seven-argument459380 wrapper. Does not reset lock token."
         }
       ],
       "owned_data": [
@@ -89025,7 +89045,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1569",
+          "name": "@1606",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89036,7 +89056,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1570",
+          "name": "@1607",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89047,7 +89067,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1571",
+          "name": "@1608",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89058,7 +89078,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1572",
+          "name": "@1609",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89069,7 +89089,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1573",
+          "name": "@1610",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89080,7 +89100,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1574",
+          "name": "@1611",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89091,7 +89111,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1575",
+          "name": "@1612",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89102,7 +89122,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1576",
+          "name": "@1613",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89113,7 +89133,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1577",
+          "name": "@1614",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89124,7 +89144,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1647",
+          "name": "@1684",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89135,7 +89155,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1721",
+          "name": "@1758",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89146,7 +89166,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_491",
+          "name": "__anonymous_section_492",
           "section": ".rdata",
           "size": 12,
           "method": "resolved function reference (anonymous section)",
@@ -89157,7 +89177,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1905",
+          "name": "@1942",
           "section": ".data",
           "size": 28,
           "method": "resolved function reference",
@@ -89168,7 +89188,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1906",
+          "name": "@1943",
           "section": ".data",
           "size": 20,
           "method": "resolved function reference",
@@ -89179,7 +89199,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1907",
+          "name": "@1944",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89190,7 +89210,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1908",
+          "name": "@1945",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89201,7 +89221,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1982",
+          "name": "@2019",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89212,7 +89232,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1983",
+          "name": "@2020",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89223,7 +89243,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@1984",
+          "name": "@2021",
           "section": ".data",
           "size": 28,
           "method": "resolved function reference",
@@ -89234,7 +89254,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2089",
+          "name": "@2126",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89245,7 +89265,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2090",
+          "name": "@2127",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89256,7 +89276,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2091",
+          "name": "@2128",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89267,7 +89287,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2092",
+          "name": "@2129",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89278,7 +89298,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_511",
+          "name": "__anonymous_section_512",
           "section": ".rdata",
           "size": 8,
           "method": "resolved function reference (anonymous section)",
@@ -89289,7 +89309,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_512",
+          "name": "__anonymous_section_513",
           "section": ".rdata",
           "size": 8,
           "method": "resolved function reference (anonymous section)",
@@ -89300,7 +89320,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_513",
+          "name": "__anonymous_section_514",
           "section": ".rdata",
           "size": 8,
           "method": "resolved function reference (anonymous section)",
@@ -89311,7 +89331,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2208",
+          "name": "@2245",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89322,7 +89342,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2265",
+          "name": "@2302",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89333,7 +89353,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2266",
+          "name": "@2303",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89344,7 +89364,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2483",
+          "name": "@2520",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89355,7 +89375,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2619",
+          "name": "@2656",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89366,7 +89386,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2687",
+          "name": "@2724",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89377,7 +89397,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2764",
+          "name": "@2801",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89388,7 +89408,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2765",
+          "name": "@2802",
           "section": ".data",
           "size": 36,
           "method": "resolved function reference",
@@ -89399,7 +89419,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_534",
+          "name": "__anonymous_section_535",
           "section": ".rdata",
           "size": 12,
           "method": "resolved function reference (anonymous section)",
@@ -89410,7 +89430,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2947",
+          "name": "@2984",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89421,7 +89441,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2948",
+          "name": "@2985",
           "section": ".data",
           "size": 20,
           "method": "resolved function reference",
@@ -89432,7 +89452,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2949",
+          "name": "@2986",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89443,7 +89463,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2950",
+          "name": "@2987",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89454,7 +89474,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@2951",
+          "name": "@2988",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89465,7 +89485,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_541",
+          "name": "__anonymous_section_542",
           "section": ".rdata",
           "size": 48,
           "method": "resolved function reference (anonymous section)",
@@ -89476,7 +89496,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3156",
+          "name": "@3193",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89487,7 +89507,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3157",
+          "name": "@3194",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89498,7 +89518,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3159",
+          "name": "@3196",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89509,7 +89529,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_546",
+          "name": "__anonymous_section_547",
           "section": ".rdata",
           "size": 8,
           "method": "resolved function reference (anonymous section)",
@@ -89520,7 +89540,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_547",
+          "name": "__anonymous_section_548",
           "section": ".rdata",
           "size": 16,
           "method": "resolved function reference (anonymous section)",
@@ -89531,7 +89551,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_548",
+          "name": "__anonymous_section_549",
           "section": ".rdata",
           "size": 20,
           "method": "resolved function reference (anonymous section)",
@@ -89542,7 +89562,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_549",
+          "name": "__anonymous_section_550",
           "section": ".rdata",
           "size": 124,
           "method": "resolved function reference (anonymous section)",
@@ -89553,7 +89573,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3378",
+          "name": "@3415",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89564,7 +89584,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3709",
+          "name": "@3746",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89575,7 +89595,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3710",
+          "name": "@3747",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89586,7 +89606,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3711",
+          "name": "@3748",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89597,7 +89617,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3712",
+          "name": "@3749",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89608,7 +89628,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3713",
+          "name": "@3750",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89619,7 +89639,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3714",
+          "name": "@3751",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89630,7 +89650,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3715",
+          "name": "@3752",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89641,7 +89661,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3716",
+          "name": "@3753",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89652,7 +89672,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@3717",
+          "name": "@3754",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89663,7 +89683,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4468",
+          "name": "@4505",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89674,7 +89694,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4469",
+          "name": "@4506",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89685,7 +89705,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4471",
+          "name": "@4508",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89696,7 +89716,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4472",
+          "name": "@4509",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89707,7 +89727,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4473",
+          "name": "@4510",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89718,7 +89738,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4474",
+          "name": "@4511",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89729,7 +89749,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4475",
+          "name": "@4512",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89740,7 +89760,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4476",
+          "name": "@4513",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89751,7 +89771,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4477",
+          "name": "@4514",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89762,7 +89782,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4478",
+          "name": "@4515",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89773,7 +89793,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4479",
+          "name": "@4516",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89784,7 +89804,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4480",
+          "name": "@4517",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89795,7 +89815,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4481",
+          "name": "@4518",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89806,7 +89826,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4482",
+          "name": "@4519",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89817,7 +89837,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4483",
+          "name": "@4520",
           "section": ".data",
           "size": 20,
           "method": "resolved function reference",
@@ -89828,7 +89848,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4484",
+          "name": "@4521",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89839,7 +89859,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4485",
+          "name": "@4522",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89850,7 +89870,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4486",
+          "name": "@4523",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89861,7 +89881,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4487",
+          "name": "@4524",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89872,7 +89892,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4488",
+          "name": "@4525",
           "section": ".data",
           "size": 20,
           "method": "resolved function reference",
@@ -89883,7 +89903,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4489",
+          "name": "@4526",
           "section": ".data",
           "size": 20,
           "method": "resolved function reference",
@@ -89894,7 +89914,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4490",
+          "name": "@4527",
           "section": ".data",
           "size": 24,
           "method": "resolved function reference",
@@ -89905,7 +89925,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4491",
+          "name": "@4528",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89916,7 +89936,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4492",
+          "name": "@4529",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -89927,7 +89947,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4493",
+          "name": "@4530",
           "section": ".data",
           "size": 24,
           "method": "resolved function reference",
@@ -89938,7 +89958,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4495",
+          "name": "@4532",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89949,7 +89969,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4496",
+          "name": "@4533",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89960,7 +89980,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4499",
+          "name": "@4536",
           "section": ".data",
           "size": 12,
           "method": "resolved function reference",
@@ -89971,7 +89991,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4500",
+          "name": "@4537",
           "section": ".data",
           "size": 4,
           "method": "resolved function reference",
@@ -89982,7 +90002,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4501",
+          "name": "@4538",
           "section": ".data",
           "size": 8,
           "method": "resolved function reference",
@@ -89993,7 +90013,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4502",
+          "name": "@4539",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -90004,7 +90024,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "@4503",
+          "name": "@4540",
           "section": ".data",
           "size": 16,
           "method": "resolved function reference",
@@ -90015,7 +90035,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_596",
+          "name": "__anonymous_section_597",
           "section": ".rdata",
           "size": 28,
           "method": "resolved function reference (anonymous section)",
@@ -90026,7 +90046,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_597",
+          "name": "__anonymous_section_598",
           "section": ".rdata",
           "size": 8,
           "method": "resolved function reference (anonymous section)",
@@ -90037,7 +90057,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_598",
+          "name": "__anonymous_section_599",
           "section": ".rdata",
           "size": 64,
           "method": "resolved function reference (anonymous section)",
@@ -90048,7 +90068,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_599",
+          "name": "__anonymous_section_600",
           "section": ".rdata",
           "size": 104,
           "method": "resolved function reference (anonymous section)",
@@ -90059,7 +90079,7 @@
           "relocations_resolved": true
         },
         {
-          "name": "__anonymous_section_600",
+          "name": "__anonymous_section_601",
           "section": ".rdata",
           "size": 72,
           "method": "resolved function reference (anonymous section)",
@@ -92244,7 +92264,1248 @@
           }
         ],
         "integration_rule": "Canonical source rows identify actual native functions independently of legacy aliases. Retain incompatible legacy helpers as provisional source where needed, or explicitly migrate callers/rename collisions. Do not treat address coincidence or identical stack slot count as compatibility evidence. Native canonical Warning/OverloadedFunctionError/GetQualifiedName collisions do not prove legacy callers are migrated."
-      }
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 57,
+        "attempted_members": 57,
+        "unexplored_windows_candidates": [],
+        "whole_image_checks": [
+          "All28 executable CSV CError_ names intersect57 native rows after adding InfoString.",
+          "All CError.c assertion callers are within the attempted inventory.",
+          "Full executable Capstone scan of handling/check-mode/line/token globals; additional references are large consumer bodies saving/restoring diagnostic tokens, not newly identified CError helpers.",
+          "Preceding459ef0/459f00 have distinct MsgUtils cleanup/setup behavior; following462f70 begins IRONode allocation.",
+          "52 ordinary Mac names individually reviewed;15 without standalone assignments remain documented as inlined or unlocated after name/state/assertion search, without claiming platform absence."
+        ],
+        "limits": "This is best-available identified-member coverage, not independent debug-record proof of original object membership. Unlocated Mac names remain search evidence, not invented Windows functions.",
+        "push_ready": true
+      },
+      "whole_image_state_references": [
+        {
+          "instruction": "0x4507ef",
+          "entry": "0x4507c0",
+          "target": "0x715c3c",
+          "asm": "mov ebp, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x450804",
+          "entry": "0x4507c0",
+          "target": "0x715c40",
+          "asm": "mov ebp, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x45081e",
+          "entry": "0x4507c0",
+          "target": "0x715c44",
+          "asm": "mov ebp, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x4508bd",
+          "entry": "0x4507c0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], edx"
+        },
+        {
+          "instruction": "0x4508c7",
+          "entry": "0x4507c0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], edx"
+        },
+        {
+          "instruction": "0x4508d9",
+          "entry": "0x4507c0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], edx"
+        },
+        {
+          "instruction": "0x45095d",
+          "entry": "0x4507c0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], ebp"
+        },
+        {
+          "instruction": "0x450967",
+          "entry": "0x4507c0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], ebp"
+        },
+        {
+          "instruction": "0x450975",
+          "entry": "0x4507c0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], ebp"
+        },
+        {
+          "instruction": "0x4536e8",
+          "entry": "0x453610",
+          "target": "0x715c3c",
+          "asm": "mov eax, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x4536f4",
+          "entry": "0x453610",
+          "target": "0x715c40",
+          "asm": "mov eax, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x45371b",
+          "entry": "0x453610",
+          "target": "0x715c44",
+          "asm": "mov eax, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x4537a2",
+          "entry": "0x453610",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], eax"
+        },
+        {
+          "instruction": "0x4537ae",
+          "entry": "0x453610",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], eax"
+        },
+        {
+          "instruction": "0x4537cf",
+          "entry": "0x453610",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], eax"
+        },
+        {
+          "instruction": "0x4538f9",
+          "entry": "0x4538b0",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x453906",
+          "entry": "0x4538b0",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x45392d",
+          "entry": "0x4538b0",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x453a12",
+          "entry": "0x4538b0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], eax"
+        },
+        {
+          "instruction": "0x453a1e",
+          "entry": "0x4538b0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], eax"
+        },
+        {
+          "instruction": "0x453a2a",
+          "entry": "0x4538b0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], eax"
+        },
+        {
+          "instruction": "0x453ab2",
+          "entry": "0x4538b0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], edx"
+        },
+        {
+          "instruction": "0x453abf",
+          "entry": "0x4538b0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], edx"
+        },
+        {
+          "instruction": "0x453acc",
+          "entry": "0x4538b0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], edx"
+        },
+        {
+          "instruction": "0x453b52",
+          "entry": "0x4538b0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], ebx"
+        },
+        {
+          "instruction": "0x453b5f",
+          "entry": "0x4538b0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], ebx"
+        },
+        {
+          "instruction": "0x453b6c",
+          "entry": "0x4538b0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], ebx"
+        },
+        {
+          "instruction": "0x453bf8",
+          "entry": "0x4538b0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], eax"
+        },
+        {
+          "instruction": "0x453c04",
+          "entry": "0x4538b0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], eax"
+        },
+        {
+          "instruction": "0x453c10",
+          "entry": "0x4538b0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], eax"
+        },
+        {
+          "instruction": "0x453fd8",
+          "entry": "0x453f50",
+          "target": "0x715c3c",
+          "asm": "mov edx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x453fe5",
+          "entry": "0x453f50",
+          "target": "0x715c40",
+          "asm": "mov edx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x45400c",
+          "entry": "0x453f50",
+          "target": "0x715c44",
+          "asm": "mov edx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x454099",
+          "entry": "0x453f50",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], edx"
+        },
+        {
+          "instruction": "0x4540a6",
+          "entry": "0x453f50",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], edx"
+        },
+        {
+          "instruction": "0x4540c3",
+          "entry": "0x453f50",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], edx"
+        },
+        {
+          "instruction": "0x459f17",
+          "entry": "0x459f10",
+          "target": "0x6daa6a",
+          "asm": "cmp dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x459f20",
+          "entry": "0x459f10",
+          "target": "0x6daa6a",
+          "asm": "mov eax, 0x6daa6a"
+        },
+        {
+          "instruction": "0x459f80",
+          "entry": "0x459f10",
+          "target": "0x715c3c",
+          "asm": "cmp dword ptr [0x715c3c], 0"
+        },
+        {
+          "instruction": "0x459f89",
+          "entry": "0x459f10",
+          "target": "0x715c3c",
+          "asm": "mov eax, 0x715c3c"
+        },
+        {
+          "instruction": "0x45a258",
+          "entry": "0x45a250",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45a270",
+          "entry": "0x45a250",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45a3d0",
+          "entry": "0x45a320",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45a3e5",
+          "entry": "0x45a320",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45a4fe",
+          "entry": "0x45a4d0",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], 0xffffffff"
+        },
+        {
+          "instruction": "0x45a515",
+          "entry": "0x45a4d0",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], 0xffffffff"
+        },
+        {
+          "instruction": "0x45a531",
+          "entry": "0x45a4d0",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], edx"
+        },
+        {
+          "instruction": "0x45a53a",
+          "entry": "0x45a4d0",
+          "target": "0x6daa6e",
+          "asm": "mov dword ptr [0x6daa6e], edx"
+        },
+        {
+          "instruction": "0x45a543",
+          "entry": "0x45a4d0",
+          "target": "0x6daa72",
+          "asm": "mov dword ptr [0x6daa72], edx"
+        },
+        {
+          "instruction": "0x45abf8",
+          "entry": "0x45ab40",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45ac10",
+          "entry": "0x45ab40",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45bbe0",
+          "entry": "0x45baf0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45bbf5",
+          "entry": "0x45baf0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45bd50",
+          "entry": "0x45bca0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45bd65",
+          "entry": "0x45bca0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45c0e0",
+          "entry": "0x45bff0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45c0f5",
+          "entry": "0x45bff0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45c200",
+          "entry": "0x45c1a0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45c215",
+          "entry": "0x45c1a0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45c380",
+          "entry": "0x45c2c0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45c395",
+          "entry": "0x45c2c0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45c540",
+          "entry": "0x45c480",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45c555",
+          "entry": "0x45c480",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45c9e6",
+          "entry": "0x45c650",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45ccd7",
+          "entry": "0x45c650",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45d3aa",
+          "entry": "0x45d380",
+          "target": "0x6daa6a",
+          "asm": "cmp dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x45d3ba",
+          "entry": "0x45d380",
+          "target": "0x6daa6a",
+          "asm": "mov esi, 0x6daa6a"
+        },
+        {
+          "instruction": "0x45d4b0",
+          "entry": "0x45d380",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x45d4d3",
+          "entry": "0x45d380",
+          "target": "0x715c3c",
+          "asm": "cmp dword ptr [0x715c3c], 0"
+        },
+        {
+          "instruction": "0x45d4dc",
+          "entry": "0x45d380",
+          "target": "0x715c3c",
+          "asm": "mov esi, 0x715c3c"
+        },
+        {
+          "instruction": "0x45d708",
+          "entry": "0x45d5c0",
+          "target": "0x6daa62",
+          "asm": "cmp byte ptr [0x6daa62], 0"
+        },
+        {
+          "instruction": "0x45d71f",
+          "entry": "0x45d5c0",
+          "target": "0x6daa5a",
+          "asm": "cmp dword ptr [0x6daa5a], 0"
+        },
+        {
+          "instruction": "0x45d728",
+          "entry": "0x45d5c0",
+          "target": "0x6daa5a",
+          "asm": "cmp dword ptr [0x6daa5a], ebx"
+        },
+        {
+          "instruction": "0x45d735",
+          "entry": "0x45d5c0",
+          "target": "0x6daa64",
+          "asm": "cmp dword ptr [0x6daa64], eax"
+        },
+        {
+          "instruction": "0x45d770",
+          "entry": "0x45d5c0",
+          "target": "0x6daa5e",
+          "asm": "add dword ptr [0x6daa5e], 1"
+        },
+        {
+          "instruction": "0x45d777",
+          "entry": "0x45d5c0",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x45d786",
+          "entry": "0x45d5c0",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], eax"
+        },
+        {
+          "instruction": "0x45d7b5",
+          "entry": "0x45d5c0",
+          "target": "0x6daa64",
+          "asm": "cmp dword ptr [0x6daa64], eax"
+        },
+        {
+          "instruction": "0x45d7c1",
+          "entry": "0x45d5c0",
+          "target": "0x6daa68",
+          "asm": "movzx edx, word ptr [0x6daa68]"
+        },
+        {
+          "instruction": "0x45d7c8",
+          "entry": "0x45d5c0",
+          "target": "0x6daa68",
+          "asm": "add word ptr [0x6daa68], 1"
+        },
+        {
+          "instruction": "0x45d7d6",
+          "entry": "0x45d5c0",
+          "target": "0x6daa68",
+          "asm": "cmp word ptr [0x6daa68], 0x3c"
+        },
+        {
+          "instruction": "0x45d7fb",
+          "entry": "0x45d5c0",
+          "target": "0x6daa68",
+          "asm": "mov word ptr [0x6daa68], 0"
+        },
+        {
+          "instruction": "0x45d84a",
+          "entry": "0x45d5c0",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x45d85a",
+          "entry": "0x45d5c0",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], eax"
+        },
+        {
+          "instruction": "0x45d85f",
+          "entry": "0x45d5c0",
+          "target": "0x6daa68",
+          "asm": "mov word ptr [0x6daa68], 0"
+        },
+        {
+          "instruction": "0x45da74",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45da90",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45db50",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45db65",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45dc30",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45dc45",
+          "entry": "0x45da00",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45e926",
+          "entry": "0x45e7d0",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45e9c0",
+          "entry": "0x45e7d0",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x45fb22",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x45fc7a",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x460240",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x460260",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x4603e0",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x460b00",
+          "entry": "0x45f060",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x4615e2",
+          "entry": "0x461150",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x461883",
+          "entry": "0x461150",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x461f02",
+          "entry": "0x461e80",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x461ff0",
+          "entry": "0x461e80",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x462348",
+          "entry": "0x462120",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x462690",
+          "entry": "0x462120",
+          "target": "0x6daa58",
+          "asm": "cmp byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x4626a5",
+          "entry": "0x462120",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x4627a0",
+          "entry": "0x462120",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 1"
+        },
+        {
+          "instruction": "0x462db0",
+          "entry": "0x462db0",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], 0xffffffff"
+        },
+        {
+          "instruction": "0x462dc6",
+          "entry": "0x462dc0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], eax"
+        },
+        {
+          "instruction": "0x462dce",
+          "entry": "0x462dc0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], eax"
+        },
+        {
+          "instruction": "0x462dd6",
+          "entry": "0x462dc0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], eax"
+        },
+        {
+          "instruction": "0x462de5",
+          "entry": "0x462de0",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x462df1",
+          "entry": "0x462de0",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x462dfa",
+          "entry": "0x462de0",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x462e12",
+          "entry": "0x462de0",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], eax"
+        },
+        {
+          "instruction": "0x462e1a",
+          "entry": "0x462de0",
+          "target": "0x715c40",
+          "asm": "mov dword ptr [0x715c40], eax"
+        },
+        {
+          "instruction": "0x462e22",
+          "entry": "0x462de0",
+          "target": "0x715c44",
+          "asm": "mov dword ptr [0x715c44], eax"
+        },
+        {
+          "instruction": "0x462e30",
+          "entry": "0x462e30",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], 0xffffffff"
+        },
+        {
+          "instruction": "0x462e53",
+          "entry": "0x462e40",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], eax"
+        },
+        {
+          "instruction": "0x462e5b",
+          "entry": "0x462e40",
+          "target": "0x6daa6e",
+          "asm": "mov dword ptr [0x6daa6e], eax"
+        },
+        {
+          "instruction": "0x462e63",
+          "entry": "0x462e40",
+          "target": "0x6daa72",
+          "asm": "mov dword ptr [0x6daa72], eax"
+        },
+        {
+          "instruction": "0x462e75",
+          "entry": "0x462e40",
+          "target": "0x6daa5a",
+          "asm": "push dword ptr [0x6daa5a]"
+        },
+        {
+          "instruction": "0x462e90",
+          "entry": "0x462e40",
+          "target": "0x6daa62",
+          "asm": "mov byte ptr [0x6daa62], 0"
+        },
+        {
+          "instruction": "0x462ec4",
+          "entry": "0x462e40",
+          "target": "0x6daa5e",
+          "asm": "cmp dword ptr [0x6daa5e], ebx"
+        },
+        {
+          "instruction": "0x462ee0",
+          "entry": "0x462e40",
+          "target": "0x6daa5e",
+          "asm": "cmp dword ptr [0x6daa5e], 0"
+        },
+        {
+          "instruction": "0x462f04",
+          "entry": "0x462e40",
+          "target": "0x6daa62",
+          "asm": "mov byte ptr [0x6daa62], 1"
+        },
+        {
+          "instruction": "0x462f0b",
+          "entry": "0x462e40",
+          "target": "0x6daa5e",
+          "asm": "mov dword ptr [0x6daa5e], 0"
+        },
+        {
+          "instruction": "0x462f15",
+          "entry": "0x462e40",
+          "target": "0x6daa5a",
+          "asm": "mov dword ptr [0x6daa5a], eax"
+        },
+        {
+          "instruction": "0x462f20",
+          "entry": "0x462f20",
+          "target": "0x6daa68",
+          "asm": "mov word ptr [0x6daa68], 0"
+        },
+        {
+          "instruction": "0x462f29",
+          "entry": "0x462f20",
+          "target": "0x6daa64",
+          "asm": "mov dword ptr [0x6daa64], 0xffffffff"
+        },
+        {
+          "instruction": "0x462f33",
+          "entry": "0x462f20",
+          "target": "0x6daa6a",
+          "asm": "mov dword ptr [0x6daa6a], 0"
+        },
+        {
+          "instruction": "0x462f3d",
+          "entry": "0x462f20",
+          "target": "0x715c3c",
+          "asm": "mov dword ptr [0x715c3c], 0"
+        },
+        {
+          "instruction": "0x462f47",
+          "entry": "0x462f20",
+          "target": "0x6daa62",
+          "asm": "mov byte ptr [0x6daa62], 0"
+        },
+        {
+          "instruction": "0x462f4e",
+          "entry": "0x462f20",
+          "target": "0x6daa58",
+          "asm": "mov byte ptr [0x6daa58], 0"
+        },
+        {
+          "instruction": "0x530297",
+          "entry": "0x52fd20",
+          "target": "0x715c3c",
+          "asm": "mov edx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5302a1",
+          "entry": "0x52fd20",
+          "target": "0x715c40",
+          "asm": "mov edx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5302ab",
+          "entry": "0x52fd20",
+          "target": "0x715c44",
+          "asm": "mov edx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x530771",
+          "entry": "0x52fd20",
+          "target": "0x715c3c",
+          "asm": "mov esi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53077b",
+          "entry": "0x52fd20",
+          "target": "0x715c40",
+          "asm": "mov esi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x530785",
+          "entry": "0x52fd20",
+          "target": "0x715c44",
+          "asm": "mov esi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5311f0",
+          "entry": "0x530a70",
+          "target": "0x715c3c",
+          "asm": "mov edx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5311fa",
+          "entry": "0x530a70",
+          "target": "0x715c40",
+          "asm": "mov edx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x531204",
+          "entry": "0x530a70",
+          "target": "0x715c44",
+          "asm": "mov edx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x531240",
+          "entry": "0x530a70",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53124a",
+          "entry": "0x530a70",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x531254",
+          "entry": "0x530a70",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5312b2",
+          "entry": "0x530a70",
+          "target": "0x715c3c",
+          "asm": "mov edi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5312bc",
+          "entry": "0x530a70",
+          "target": "0x715c40",
+          "asm": "mov edi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5312c6",
+          "entry": "0x530a70",
+          "target": "0x715c44",
+          "asm": "mov edi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x531878",
+          "entry": "0x531770",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x531881",
+          "entry": "0x531770",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x53188b",
+          "entry": "0x531770",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x531948",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov edi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x531952",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov edi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x53195c",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov edi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x532211",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov edi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53221b",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov edi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x532225",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov edi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5322b2",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov esi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5322bc",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov esi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5322c6",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov esi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x532550",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov ebp, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53255a",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov ebp, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x532564",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov ebp, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x532610",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov esi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x532619",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov esi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x532623",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov esi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5326d0",
+          "entry": "0x5318e0",
+          "target": "0x715c3c",
+          "asm": "mov edi, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5326da",
+          "entry": "0x5318e0",
+          "target": "0x715c40",
+          "asm": "mov edi, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5326e4",
+          "entry": "0x5318e0",
+          "target": "0x715c44",
+          "asm": "mov edi, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x532794",
+          "entry": "0x532760",
+          "target": "0x715c3c",
+          "asm": "mov edx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53279e",
+          "entry": "0x532760",
+          "target": "0x715c40",
+          "asm": "mov edx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5327a8",
+          "entry": "0x532760",
+          "target": "0x715c44",
+          "asm": "mov edx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x533200",
+          "entry": "0x532760",
+          "target": "0x715c3c",
+          "asm": "mov eax, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x533209",
+          "entry": "0x532760",
+          "target": "0x715c40",
+          "asm": "mov eax, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x533212",
+          "entry": "0x532760",
+          "target": "0x715c44",
+          "asm": "mov eax, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x533537",
+          "entry": "0x533500",
+          "target": "0x715c3c",
+          "asm": "mov edx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x533540",
+          "entry": "0x533500",
+          "target": "0x715c40",
+          "asm": "mov edx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x53354a",
+          "entry": "0x533500",
+          "target": "0x715c44",
+          "asm": "mov edx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x533780",
+          "entry": "0x533500",
+          "target": "0x715c3c",
+          "asm": "mov eax, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x533789",
+          "entry": "0x533500",
+          "target": "0x715c40",
+          "asm": "mov eax, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x533792",
+          "entry": "0x533500",
+          "target": "0x715c44",
+          "asm": "mov eax, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x533981",
+          "entry": "0x533500",
+          "target": "0x715c3c",
+          "asm": "mov eax, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53398a",
+          "entry": "0x533500",
+          "target": "0x715c40",
+          "asm": "mov eax, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x533993",
+          "entry": "0x533500",
+          "target": "0x715c44",
+          "asm": "mov eax, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x533a65",
+          "entry": "0x533a30",
+          "target": "0x715c3c",
+          "asm": "mov ebp, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x533a6f",
+          "entry": "0x533a30",
+          "target": "0x715c40",
+          "asm": "mov ebp, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x533a79",
+          "entry": "0x533a30",
+          "target": "0x715c44",
+          "asm": "mov ebp, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5341f0",
+          "entry": "0x533a30",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5341fa",
+          "entry": "0x533a30",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x534204",
+          "entry": "0x533a30",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x5346d0",
+          "entry": "0x5346a0",
+          "target": "0x715c3c",
+          "asm": "mov eax, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x5346d8",
+          "entry": "0x5346a0",
+          "target": "0x715c40",
+          "asm": "mov eax, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x5346e1",
+          "entry": "0x5346a0",
+          "target": "0x715c44",
+          "asm": "mov eax, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x534b86",
+          "entry": "0x5346a0",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x534b90",
+          "entry": "0x5346a0",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x534b9a",
+          "entry": "0x5346a0",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x534c45",
+          "entry": "0x534c10",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x534c4f",
+          "entry": "0x534c10",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x534c59",
+          "entry": "0x534c10",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        },
+        {
+          "instruction": "0x53eb27",
+          "entry": "0x53eae0",
+          "target": "0x715c3c",
+          "asm": "cmp dword ptr [0x715c3c], 0"
+        },
+        {
+          "instruction": "0x53eb30",
+          "entry": "0x53eae0",
+          "target": "0x715c3c",
+          "asm": "mov ecx, dword ptr [0x715c3c]"
+        },
+        {
+          "instruction": "0x53eb39",
+          "entry": "0x53eae0",
+          "target": "0x715c40",
+          "asm": "mov ecx, dword ptr [0x715c40]"
+        },
+        {
+          "instruction": "0x53eb42",
+          "entry": "0x53eae0",
+          "target": "0x715c44",
+          "asm": "mov ecx, dword ptr [0x715c44]"
+        }
+      ]
     },
     "src/GC_3_0a5_2/frontend/CABI.c": {
       "source": "src/GC_3_0a5_2/frontend/CABI.c",

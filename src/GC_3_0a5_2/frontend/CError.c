@@ -963,6 +963,39 @@ extern void fn_00459200(void *, SInt32, void *, char *, SInt32, ...);
 extern void fn_0045d5c0(SInt32);
 extern char *data_00710814, *data_00715c68;
 extern struct GC3ErrorToken data_0070ffcc;
+extern void fn_00459380(void *, SInt16, void *, char *, SInt32, const char *, char *);
+
+void CError_InfoString(const char *format, ...)
+{
+    char position[276], text[128];
+    struct GC3ErrorToken *token;
+    void *where;
+    char *args;
+    if (!cerror_locktoken.words[0]) goto unlocked;
+    token = &cerror_locktoken;
+selected:
+    if (token && token->words[0] == -1) {
+        where = 0;
+        text[0] = 0;
+    } else {
+        where = 0;
+        text[0] = 0;
+        if (!data_00725e6c) {
+            if (token && !token->words[0]) token = 0;
+            if (!token && data_00710814 < data_00715c68)
+                token = (struct GC3ErrorToken *)(data_00715c68 - 14);
+            if (!token) token = &data_0070ffcc;
+            if (fn_004d5e80(position, text, 128, token, 0, 0, 0)) where = position;
+        }
+    }
+    GC3_VA_START(args, format);
+    fn_00459380(data_0071079c, 0, where, text, 0, format, args);
+    return;
+unlocked:
+    if (cerror_token.words[0]) token = &cerror_token;
+    else token = 0;
+    goto selected;
+}
 
 void CError_ErrorMessage(SInt32 code, const char *message, UInt8 force, UInt8 warning)
 {

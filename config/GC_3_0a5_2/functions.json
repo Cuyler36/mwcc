@@ -7305,6 +7305,17 @@
     }
   },
   {
+    "name": "CError_InfoString",
+    "address": "0x00459f10",
+    "size": 252,
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Shared CSV name corroborated by native informational variadic message, CError token globals and adjacent CError cluster.",
+    "boundary_evidence": {
+      "method": "Full native CFG to45a00b;45a00c..45a00f NOP padding before next entry45a010",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CError_QualifierCheck",
     "size": 464,
     "address": "0x0045a010",

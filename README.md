@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 226 source files build, 1,469 candidate functions are
-mapped, and 625 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 226 source files build, 1,470 candidate functions are
+mapped, and 626 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -56,10 +56,11 @@ graph helpers; 12 match exactly. The native flag setter takes one 64-bit value.
 Incorrect imported flag-setter and predecessor-builder mappings were removed;
 their old bodies remain provisional. Original state-data ownership is still open.
 
-CError has all 56 identified native bodies reconstructed, with 24 exact matches.
+CError has all 57 identified native bodies reconstructed, with 25 exact matches.
 Its diagnostic table, strings, rodata, and BSS match with relocations. The shared
 CSV clarifies canonical names, including CError_NoMem and the error-skipping
-routines; version-specific naming conflicts remain recorded. The other 32
+routines. A whole-image audit also recovered an exact CError_InfoString.
+Version-specific naming conflicts remain recorded. The other 32
 bodies retain code generation differences after static control-flow review.
 
 CABI has all 56 identified native bodies reconstructed, with 26 exact matches.

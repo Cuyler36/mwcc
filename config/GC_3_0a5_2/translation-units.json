@@ -669,6 +669,108 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+      "original_filename": "ELF_Endian.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional"
+      ],
+      "windows_functions": [
+        {
+          "name": "swap_tagged_records",
+          "address": "0x499ef0",
+          "size": 517,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "swap_tagged_record_data",
+          "address": "0x49a100",
+          "size": 838,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "read_double",
+          "address": "0x49a450",
+          "size": 235,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "swap_conversion_blocks",
+          "address": "0x49a540",
+          "size": 181,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ELF_Endian_ConvertThreeWords",
+          "address": "0x49a600",
+          "size": 41,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ELF_Endian_ConvertSymbolRecord",
+          "address": "0x49a630",
+          "size": 56,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ELF_Endian_SwapElf32Section",
+          "address": "0x49a670",
+          "size": 125,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ELF_Endian_SwapElf32Header",
+          "address": "0x49a6f0",
+          "size": 187,
+          "compiled_source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG and saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/PPCError.c",
       "original_filename": "PPCError.c",
       "evidence": [
@@ -16450,97 +16552,6 @@
           "size": 1213,
           "compiled_source": "src/backend/DumpIR.c",
           "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/backend/ELF_Endian.c",
-      "original_filename": "ELF_Endian.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional"
-      ],
-      "windows_functions": [
-        {
-          "name": "swap_tagged_records",
-          "address": "0x00499ef0",
-          "size": 517,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "swap_tagged_record_data",
-          "address": "0x0049a100",
-          "size": 838,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "read_double",
-          "address": "0x0049a450",
-          "size": 235,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ELF_Endian_ConvertThreeWords",
-          "address": "0x0049a600",
-          "size": 41,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ELF_Endian_ConvertSymbolRecord",
-          "address": "0x0049a630",
-          "size": 56,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ELF_Endian_SwapElf32Section",
-          "address": "0x0049a670",
-          "size": 125,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ELF_Endian_SwapElf32Header",
-          "address": "0x0049a6f0",
-          "size": 187,
-          "compiled_source": "src/backend/ELF_Endian.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
           "boundary_evidence": {
             "method": "Reachable x86 control flow bounded by Ghidra entries",
             "unresolved_indirect_flow": false
@@ -47007,7 +47018,7 @@
       }
     },
     "src/backend/ELF_Endian.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -47136,7 +47147,8 @@
           "space-nointrinsics": "10aa4765e644783592cfd830a2ce2c74f5f6cd6b749eb79fa90b0a4fe5ebda99",
           "space-intrinsics": "a699557d507b03379a38b526a8f8d83cf0ca77115f10eacfc823ab58ef19cf83"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/backend/ELF_Endian.c"
     },
     "src/backend/Exceptions.c": {
       "status": "unattempted",
@@ -73670,6 +73682,335 @@
       "remaining_ownership": [
         "Imported global save/restore and class-type update helpers remain provisional in old source. They are not assigned to this original TU by adjacency."
       ]
+    },
+    "src/GC_3_0a5_2/backend/ELF_Endian.c": {
+      "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+      "status": "attempted_equivalent",
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mappings": {
+        "functions": [
+          {
+            "name": "swap_tagged_records",
+            "address": "0x499ef0",
+            "size": 517,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "swap_tagged_record_data",
+            "address": "0x49a100",
+            "size": 838,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "read_double",
+            "address": "0x49a450",
+            "size": 235,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "ELF_Endian_ConvertThreeWords",
+            "address": "0x49a600",
+            "size": 41,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "ELF_Endian_ConvertSymbolRecord",
+            "address": "0x49a630",
+            "size": 56,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "ELF_Endian_SwapElf32Section",
+            "address": "0x49a670",
+            "size": 125,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "ELF_Endian_SwapElf32Header",
+            "address": "0x49a6f0",
+            "size": 187,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          },
+          {
+            "name": "swap_conversion_blocks",
+            "address": "0x49a540",
+            "size": 181,
+            "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+          }
+        ],
+        "source_bindings": {
+          "_DAT_005805e0": "0x6dc190",
+          "_swap_tagged_records": "0x499ef0",
+          "_swap_tagged_record_data": "0x49a100",
+          "_read_double": "0x49a450",
+          "_ELF_Endian_ConvertThreeWords": "0x49a600",
+          "_ELF_Endian_ConvertSymbolRecord": "0x49a630",
+          "_ELF_Endian_SwapElf32Section": "0x49a670",
+          "_ELF_Endian_SwapElf32Header": "0x49a6f0",
+          "_swap_conversion_blocks": "0x49a540"
+        }
+      },
+      "functions": [
+        {
+          "name": "swap_tagged_records",
+          "address": "0x499ef0",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true
+        },
+        {
+          "name": "swap_tagged_record_data",
+          "address": "0x49a100",
+          "exact": false,
+          "unresolved": "unbound literal: .sw$616 (0 retail blocks, 0 strings)"
+        },
+        {
+          "name": "read_double",
+          "address": "0x49a450",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "ELF_Endian_ConvertThreeWords",
+          "address": "0x49a600",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "ELF_Endian_ConvertSymbolRecord",
+          "address": "0x49a630",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "ELF_Endian_SwapElf32Section",
+          "address": "0x49a670",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "ELF_Endian_SwapElf32Header",
+          "address": "0x49a6f0",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "swap_conversion_blocks",
+          "address": "0x49a540",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true
+        }
+      ],
+      "strict_exact_count": 6,
+      "functions_attempted": 8,
+      "code_bytes_target": 2180,
+      "code_bytes_compiled": 2182,
+      "data_bytes": {
+        "data": 16,
+        "bss": 4,
+        "rdata": 68
+      },
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": 2180,
+          "match_percent": 96.43411
+        },
+        {
+          "name": ".data",
+          "size": 16,
+          "match_percent": 100.0
+        },
+        {
+          "name": ".bss",
+          "size": 4,
+          "match_percent": 100.0
+        },
+        {
+          "name": ".rdata",
+          "size": 68,
+          "match_percent": 88.2353
+        }
+      ],
+      "newly_discovered_member": {
+        "name": "swap_conversion_blocks",
+        "address": "0x49a540",
+        "size": 181,
+        "exact": true,
+        "evidence": "SavedGhidraFUN0049a540 plus localCapstone, source1.2.5same-rolebody, identical callbackBSS andswapcall anchors; GC3validationadded beforeentryloop."
+      },
+      "mac_inventory": {
+        "explicit_SO_found": false,
+        "members_found": false,
+        "search": "Full supplied mwccppc_pro8_syms searched for ELF_Endian,swap_tagged,read_double; none found. NoMacmemberchecklist available; do not invent symbol-map identities."
+      },
+      "membership": {
+        "original_filename": "ELF_Endian.c",
+        "source_literal": "0x694dbc",
+        "direct_reference": "0x499f55",
+        "first_body": "0x499ef0",
+        "last_body_end": "0x49a7ab",
+        "windows_entry_inventory": [
+          "0x499ef0",
+          "0x49a100",
+          "0x49a450",
+          "0x49a600",
+          "0x49a630",
+          "0x49a670",
+          "0x49a6f0",
+          "0x49a540"
+        ],
+        "predecessor": "499ed0 is unrelated timing calculation calling411c40;499e10 preferences/handle reader; neither assignedELF.",
+        "successor": "49a7b0 exactFixTextHandle is independently ownedCLLoadAndCache.c.",
+        "limit": "Eightmemberlocalcluster andall eight1.2.5sourcefunctions accounted for; noMacSOproof ofglobal completeness."
+      },
+      "baseline_aliases": {
+        "swap_tagged_records": "swap_tagged_records",
+        "swap_tagged_record_data": "swap_tagged_record_data",
+        "read_double": "read_double",
+        "ELF_Endian_ConvertThreeWords": "ELF_Endian_ConvertThreeWords",
+        "ELF_Endian_ConvertSymbolRecord": "ELF_Endian_ConvertSymbolRecord",
+        "ELF_Endian_SwapElf32Section": "ELF_Endian_SwapElf32Section",
+        "ELF_Endian_SwapElf32Header": "ELF_Endian_SwapElf32Header",
+        "swap_conversion_blocks": "swap_conversion_blocks"
+      },
+      "canonical_name_limit": "Allfunctionnames retainedfrombaseline; no strongerMacsymbolnames available. DAT_005805e0 remainsprovisionalcallbackname.",
+      "changes_from_125": [
+        "Errorcallbackline509 replaces387.",
+        "Structured-datakind0x2343 added.",
+        "Structuredopcode0x93 skipsonebyte.",
+        "Conversionblocks returns early forzero size or unsigned(blockSize-8)%10nonzero.",
+        "Native unsignedbyteflags/unsigned16kind arguments produce originalzeroextension.",
+        "read_double localrepresentation uses4bytealignment to match originalstackABI. Original &bytes swap target ispreserved, not changed tobytes."
+      ],
+      "semantics": {
+        "swap_tagged_records": [
+          "Original signed record length check; callback ELF_Endian.c line509 for nonpositive short records; original unsigned outer buffer offset comparison.",
+          "Unsigned16 count andtag; count0 skips record remainder; nonzero count sets signed record boundary.",
+          "Tags1/2/6 swap32 andadvance4; tag5 swaps16 andadvance2; tag3 recursively processes data; tag7 callsread_double anddiscardsx87result; tag8 consumesNULterminatedstring.",
+          "Tag4 swapslength; exacttag0xf4 processes repeated32bitword+NULterminatedname sequence until length0.",
+          "Remaining differences: stackreservation8vs4 with adjustedparamaccess, temporaryregisterselection, equivalentlengthsubtract/boundaryupdate instruction forms; switchtable32bytepayload is exact."
+        ],
+        "swap_tagged_record_data": [
+          "Original signed16 length/remaining loop; original five structured-data kinds plus GC3sixth0x2343.",
+          "Structured tag1/2/4/80/81 and3/e0 swap32; tags5/6/7 consume no additionalpayload; GC3tag93 consumesoneadditionalbyte.",
+          "Kinds83 and63 swap32/16 atoffset-1 onlywhen remaining<4/<2 respectively.",
+          "Kinda3 tag8 loadsnewkind, handles55short,63/83recursive,72word; tag0 swaps16+32+32; tag1 swaps16+32 thenrecursive23; tag2 swaps16 thenrecursive23 then32; tag3 swaps16 then two recursive23; tags4..7 clearflag/resetkind.",
+          "Remaining differences: ESI/EDI/EBP registerpermutation, SIB addressing lengths, scheduling and labeloffsets. Original838bytes,compiled840. Allswitchcase roles reviewed; no byteexactclaim. Normalresolver rejects differing36byte table; diagnosticanchorusedonlyforfullobjdiff."
+        ]
+      },
+      "data_review": [
+        {
+          "name": "@462",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00694dbc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_4",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x0064a480",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_6",
+          "section": ".rdata",
+          "size": 36,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "_DAT_005805e0",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006dc190",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "switch_tables": [
+        {
+          "name": "swap_tagged_records_switch",
+          "address": 6595712,
+          "size": 32,
+          "bytes_exact": true,
+          "fixups_exact": true
+        },
+        {
+          "name": "swap_tagged_record_data_switch",
+          "address": 6595744,
+          "size": 36,
+          "bytes_exact": false,
+          "fixups_exact": true
+        }
+      ],
+      "diagnostic_bindings": {
+        ".sw$463": "0x64a480",
+        ".sw$616": "0x64a4a0"
+      },
+      "diagnostic_binding_policy": "Do not add generated .sw names to production scopedbindings to force exactness. Fullreview usesoriginaljmpoperand-establishedtablelocations fordisplay only; differingpayload remainsnonmatch.",
+      "unresolved": [
+        "swap_tagged_record_data generated switchtable payload differs;normalresolver cannot establishidenticaloriginalallocation.",
+        "Twofunctions remaincodegen nonmatches.",
+        "Mac originalmembernames/completeness unavailable."
+      ],
+      "complete_source_recommendation": false,
+      "source_owned_callback": {
+        "symbol": "_DAT_005805e0",
+        "address": "0x6dc190",
+        "size": 4,
+        "proof": "Both original top-level conversion functions storecallback here; tagged-recordroutine reads/callsit. Source-scoped bounded BSSallocation verifies all4bytes andfixups."
+      },
+      "cp932": true,
+      "original_application_executed": false,
+      "evidence": [
+        "original.asm",
+        "predecessors.asm",
+        "references.json",
+        "source-inventory.json",
+        "experiments.json",
+        "mappings.json",
+        "*-diff.txt",
+        "full-unit.json",
+        "full-objdiff.json"
+      ],
+      "membership_reviewed": false,
+      "source_sha256": "e62a0f15037867f6f8a2005a4b4dc7d0d0e1c308e9aa0c9a7263deab7e27e6f7"
     }
   },
   "ownership_review": {

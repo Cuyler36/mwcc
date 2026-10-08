@@ -8385,92 +8385,103 @@
   },
   {
     "name": "swap_tagged_records",
-    "address": "0x00499ef0",
+    "address": "0x499ef0",
     "size": 517,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "swap_tagged_records",
     "baseline_address": "0x004434e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "swap_tagged_record_data",
-    "address": "0x0049a100",
+    "address": "0x49a100",
     "size": 838,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "swap_tagged_record_data",
     "baseline_address": "0x00443770",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "read_double",
-    "address": "0x0049a450",
+    "address": "0x49a450",
     "size": 235,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "read_double",
     "baseline_address": "0x00443c00",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "swap_conversion_blocks",
+    "address": "0x49a540",
+    "size": 181,
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "ELF_Endian_ConvertThreeWords",
-    "address": "0x0049a600",
+    "address": "0x49a600",
     "size": 41,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "ELF_Endian_ConvertThreeWords",
     "baseline_address": "0x00443d50",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "ELF_Endian_ConvertSymbolRecord",
-    "address": "0x0049a630",
+    "address": "0x49a630",
     "size": 56,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "ELF_Endian_ConvertSymbolRecord",
     "baseline_address": "0x00443d80",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "ELF_Endian_SwapElf32Section",
-    "address": "0x0049a670",
+    "address": "0x49a670",
     "size": 125,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "ELF_Endian_SwapElf32Section",
     "baseline_address": "0x00443dc0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "ELF_Endian_SwapElf32Header",
-    "address": "0x0049a6f0",
+    "address": "0x49a6f0",
     "size": 187,
-    "source": "src/backend/ELF_Endian.c",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "baseline_name": "ELF_Endian_SwapElf32Header",
     "baseline_address": "0x00443e50",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "ELF_Endian.c Windows diagnostics and native conversion behavior reviewed against1.2.5. No canonical function symbols present in supplied Mac map; retain baseline aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },

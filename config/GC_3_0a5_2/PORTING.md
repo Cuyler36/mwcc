@@ -32,6 +32,17 @@ The private native layout does not change shared headers for unported callers.
 This is explicitly a partial pass: nine other assertion-proven members and
 additional undiscovered members require work before the TU can be complete.
 
+ELF_Endian.c replaces its imported source with all eight evidenced Windows
+members. Six are strict byte/fixup matches, including the recovered conversion
+block routine at 0x0049a540. The two tagged-record routines retain reviewed
+codegen differences. GC3's callback line509, additional data kind0x2343,
+opcode0x93 byte skip, and malformed block-size rejection are reconstructed.
+Initialized data16 and callback BSS4 bytes match. One switch table32 matches;
+the other36 differs and remains unresolved in normal comparison. Diagnostic
+table anchors used for isolated inspection are not added to production bindings.
+The supplied Mac map contains no ELF_Endian member names, so baseline aliases
+remain provisional and whole-TU completeness is not asserted.
+
 `translation-units.json` is the source checklist and per-TU attempt ledger.
 Its initial inventory contains 262 units: 209 imported compiled sources and 53
 original-only Windows source views. It records 1,984 known Windows functions,

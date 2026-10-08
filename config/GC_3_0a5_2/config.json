@@ -10,7 +10,7 @@
     "src/backend/Coloring.c",
     "src/backend/DWARF.c",
     "src/backend/DumpIR.c",
-    "src/backend/ELF_Endian.c",
+    "src/GC_3_0a5_2/backend/ELF_Endian.c",
     "src/backend/Exceptions.c",
     "src/backend/FuncLevelAsmPPC.c",
     "src/backend/InlineAsm.c",
@@ -414,25 +414,6 @@
       ]
     },
     "src/backend/DumpIR.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/backend"
-      ]
-    },
-    "src/backend/ELF_Endian.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3378,6 +3359,27 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/ELF_Endian.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -3480,10 +3482,6 @@
     "src/frontend/CPrec/write_serialized_buckets",
     "src/frontend/CPrec/patch_hash_name_reference",
     "src/frontend/CompilerTools/CompilerTools_DispatchMessageBufferByMode",
-    "src/backend/ELF_Endian/ELF_Endian_ConvertThreeWords",
-    "src/backend/ELF_Endian/ELF_Endian_ConvertSymbolRecord",
-    "src/backend/ELF_Endian/ELF_Endian_SwapElf32Section",
-    "src/backend/ELF_Endian/ELF_Endian_SwapElf32Header",
     "src/msl/time_g/time_g_clear_tm",
     "src/GC_3_0a5_2/frontend/CException/append_namespace_names",
     "src/GC_3_0a5_2/frontend/CException/CExcept_Setup",
@@ -3843,7 +3841,13 @@
     "src/GC_3_0a5_2/backend/PPCError/PPCError_Message",
     "src/GC_3_0a5_2/backend/PPCError/PPCError_Warning",
     "src/GC_3_0a5_2/backend/PPCError/PPCError_Error",
-    "src/GC_3_0a5_2/backend/RegisterInfo/Registers_GetVarInfo"
+    "src/GC_3_0a5_2/backend/RegisterInfo/Registers_GetVarInfo",
+    "src/GC_3_0a5_2/backend/ELF_Endian/read_double",
+    "src/GC_3_0a5_2/backend/ELF_Endian/ELF_Endian_ConvertThreeWords",
+    "src/GC_3_0a5_2/backend/ELF_Endian/ELF_Endian_ConvertSymbolRecord",
+    "src/GC_3_0a5_2/backend/ELF_Endian/ELF_Endian_SwapElf32Section",
+    "src/GC_3_0a5_2/backend/ELF_Endian/ELF_Endian_SwapElf32Header",
+    "src/GC_3_0a5_2/backend/ELF_Endian/swap_conversion_blocks"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4710,6 +4714,17 @@
       "_memclrw": "0x46c400",
       "_CError_Internal": "0x45a250",
       "_Registers_GetVarInfo": "0x579790"
+    },
+    "src/GC_3_0a5_2/backend/ELF_Endian.c": {
+      "_DAT_005805e0": "0x6dc190",
+      "_swap_tagged_records": "0x499ef0",
+      "_swap_tagged_record_data": "0x49a100",
+      "_read_double": "0x49a450",
+      "_ELF_Endian_ConvertThreeWords": "0x49a600",
+      "_ELF_Endian_ConvertSymbolRecord": "0x49a630",
+      "_ELF_Endian_SwapElf32Section": "0x49a670",
+      "_ELF_Endian_SwapElf32Header": "0x49a6f0",
+      "_swap_conversion_blocks": "0x49a540"
     }
   },
   "original_source_units": {

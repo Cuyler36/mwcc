@@ -1786,5 +1786,37 @@
   "PPCError_ReportError": {
     "name": "PPCError_Error",
     "source": "src/GC_3_0a5_2/backend/PPCError.c"
+  },
+  "swap_tagged_records": {
+    "name": "swap_tagged_records",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "swap_tagged_record_data": {
+    "name": "swap_tagged_record_data",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "read_double": {
+    "name": "read_double",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "ELF_Endian_ConvertThreeWords": {
+    "name": "ELF_Endian_ConvertThreeWords",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "ELF_Endian_ConvertSymbolRecord": {
+    "name": "ELF_Endian_ConvertSymbolRecord",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "ELF_Endian_SwapElf32Section": {
+    "name": "ELF_Endian_SwapElf32Section",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "ELF_Endian_SwapElf32Header": {
+    "name": "ELF_Endian_SwapElf32Header",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "swap_conversion_blocks": {
+    "name": "swap_conversion_blocks",
+    "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
   }
 }

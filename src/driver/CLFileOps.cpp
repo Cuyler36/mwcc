@@ -154,6 +154,7 @@ unsigned int setup_file_request(DropinFileRecord *context)
     return 1U;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int __stdcall CLFileOps_CopyMemBuffer(MemBuffer *source, MemBuffer *destination)
 {
     unsigned int err;
@@ -176,6 +177,7 @@ unsigned int __stdcall CLFileOps_CopyMemBuffer(MemBuffer *source, MemBuffer *des
     OS_FreeHandle(destination);
     return err;
 }
+#endif
 
 unsigned int __stdcall add_or_copy_pref_panel_storage(unsigned int unused, char *name, StorageHandle *data)
 {
@@ -524,6 +526,7 @@ int setup_compile_file_request(DropinFileRecord *file)
     return result;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 DWORD __stdcall CLFileOps_AppendMemBuffer(void *handle, const void *source, unsigned int size)
 {
     DWORD result;
@@ -544,6 +547,7 @@ DWORD __stdcall CLFileOps_AppendMemBuffer(void *handle, const void *source, unsi
     }
     return result;
 }
+#endif
 
 __stdcall int append_file_to_overlay(int unused, const char *fileID, int overlayID, unsigned int *result)
 {

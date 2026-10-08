@@ -1218,5 +1218,61 @@
   "fn_004050e0": {
     "name": "ustrncmp",
     "source": "src/GC_3_0a5_2/driver/StringExtras.c"
+  },
+  "match_wildcard_pattern": {
+    "name": "WildCardMatch",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_FindNextMatchingEntry": {
+    "name": "OS_MatchPath",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_GetFileName": {
+    "name": "OS_GetFileNamePtr",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_MakeOSSpecFromDirectoryAndFilename": {
+    "name": "OS_MakeSpec2",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_MakeOSSpecFromPath": {
+    "name": "OS_MakeSpecWithPath",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_SetFileExtension": {
+    "name": "OS_NameSpecChangeExtension",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_ChangeFileExtension": {
+    "name": "OS_NameSpecSetExtension",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_MakeRelativePath": {
+    "name": "OS_SpecToStringRelative",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_FindFileInSearchPath": {
+    "name": "OS_FindFileInPath",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLFileOps_FindExecutable": {
+    "name": "OS_FindProgram",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLFileOps_CopyMemBuffer": {
+    "name": "OS_CopyHandle",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLFileOps_AppendMemBuffer": {
+    "name": "OS_AppendHandle",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+  },
+  "CLProj_InitializeCWD": {
+    "name": "Proj_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLProj.c"
+  },
+  "CLProj_FreeTargets": {
+    "name": "Proj_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLProj.c"
   }
 }

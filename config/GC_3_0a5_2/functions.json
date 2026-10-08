@@ -1539,158 +1539,180 @@
     }
   },
   {
-    "name": "match_wildcard_pattern",
-    "address": "0x00417250",
+    "name": "WildCardMatch",
+    "address": "0x417250",
     "size": 314,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "match_wildcard_pattern",
     "baseline_address": "0x00418440",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_FindNextMatchingEntry",
-    "address": "0x00417390",
+    "name": "OS_MatchPath",
+    "address": "0x417390",
     "size": 359,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_FindNextMatchingEntry",
     "baseline_address": "0x00418570",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_GetFileName",
-    "address": "0x00417500",
+    "name": "OS_GetFileNamePtr",
+    "address": "0x417500",
     "size": 36,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_GetFileName",
     "baseline_address": "0x004186a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_MakeOSSpecFromDirectoryAndFilename",
-    "address": "0x004175c0",
+    "name": "OS_GetDirName",
+    "address": "0x417530",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_MakeSpec2",
+    "address": "0x4175c0",
     "size": 175,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_MakeOSSpecFromDirectoryAndFilename",
     "baseline_address": "0x004186c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_MakeOSSpecFromPath",
-    "address": "0x00417670",
+    "name": "OS_MakeSpecWithPath",
+    "address": "0x417670",
     "size": 374,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_MakeOSSpecFromPath",
     "baseline_address": "0x00418780",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_SetFileExtension",
-    "address": "0x004177f0",
+    "name": "OS_NameSpecChangeExtension",
+    "address": "0x4177f0",
     "size": 231,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_SetFileExtension",
     "baseline_address": "0x004188e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_ChangeFileExtension",
-    "address": "0x004178e0",
+    "name": "OS_NameSpecSetExtension",
+    "address": "0x4178e0",
     "size": 268,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_ChangeFileExtension",
     "baseline_address": "0x004189c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_MakeRelativePath",
-    "address": "0x004179f0",
+    "name": "OS_SpecToStringRelative",
+    "address": "0x4179f0",
     "size": 624,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_MakeRelativePath",
     "baseline_address": "0x00418ac0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLProj_FindFileInSearchPath",
-    "address": "0x00417c60",
+    "name": "OS_FindFileInPath",
+    "address": "0x417c60",
     "size": 249,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLProj_FindFileInSearchPath",
     "baseline_address": "0x00418cf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFileOps_FindExecutable",
-    "address": "0x00417d60",
+    "name": "OS_FindProgram",
+    "address": "0x417d60",
     "size": 434,
-    "source": "src/driver/CLFileOps.cpp",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLFileOps_FindExecutable",
     "baseline_address": "0x00418de0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFileOps_CopyMemBuffer",
-    "address": "0x00417f20",
+    "name": "OS_CopyHandle",
+    "address": "0x417f20",
     "size": 113,
-    "source": "src/driver/CLFileOps.cpp",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLFileOps_CopyMemBuffer",
     "baseline_address": "0x00418f50",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLFileOps_AppendMemBuffer",
-    "address": "0x00417fa0",
+    "name": "OS_AppendHandle",
+    "address": "0x417fa0",
     "size": 111,
-    "source": "src/driver/CLFileOps.cpp",
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
     "baseline_name": "CLFileOps_AppendMemBuffer",
     "baseline_address": "0x00418fd0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00418010",
+    "address": "0x418010",
+    "size": 194,
+    "source": "src/GC_3_0a5_2/OSLib/Generic.c",
+    "identity_evidence": "Generic.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },
@@ -3240,6 +3262,28 @@
     "identity_evidence": "CLPrefs.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
       "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Proj_Initialize",
+    "address": "0x4262b0",
+    "size": 27,
+    "source": "src/GC_3_0a5_2/driver/CLProj.c",
+    "identity_evidence": "CLProj.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Proj_Terminate",
+    "address": "0x4262d0",
+    "size": 45,
+    "source": "src/GC_3_0a5_2/driver/CLProj.c",
+    "identity_evidence": "CLProj.c explicit Mac source/member signatures, Windows cluster/call roles and native ABI review.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows CFG and bounded neighboring functions",
       "unresolved_indirect_flow": false
     }
   },

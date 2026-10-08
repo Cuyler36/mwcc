@@ -57,7 +57,7 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-The current inventory has 262 source views: 214 compiled files and 48
+The current inventory has 263 source views: 215 compiled files and 48
 original-only units. All twenty direct assertion ownership conflicts are now
 split physically. CFunc.cpp and CException.cpp retain provisional C language
 mode while imported pointer conversions are ported. CMiddleLayer.c,
@@ -74,6 +74,23 @@ span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## CLProj.c and OSLib/Generic.c: restored original ownership
+
+CLProj.c contains only Proj_Initialize and Proj_Terminate, as established by
+the explicit Mac unit and adjacent Windows bodies. Both match exactly; its
+72 code bytes and 40 initialized data bytes pass objdiff-cli. Initialization
+uses the native 516-byte Project.mcp file spec.
+
+Nine imported CLProj path helpers belong to OSLib/Generic.c. They are now
+preserved there alongside OS_GetDirName, OS_FindProgram, OS_CopyHandle and
+OS_AppendHandle, all 13 strict exact. The handle helpers were previously
+grouped into CLFileOps.cpp; their old bodies are excluded for GC3. The final
+Windows path-splitting helper retains an unknown-name address alias and a
+reviewed register-allocation nonmatch. Generic.c has 3,623 code bytes at
+99.92298%, 44 initialized data bytes and 1,299 BSS bytes at 100%. Its Mac
+OS_CompactPaths has no recovered standalone Windows body, so membership
+remains incomplete and no replacement stub is invented.
 
 ## StringExtras.c: complete Windows unit
 

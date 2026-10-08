@@ -58,7 +58,7 @@
     "src/driver/CLPluginRequests.cpp",
     "src/driver/CLPlugins.c",
     "src/GC_3_0a5_2/driver/CLPrefs.c",
-    "src/driver/CLProj.c",
+    "src/GC_3_0a5_2/driver/CLProj.c",
     "src/GC_3_0a5_2/driver/CLSegs.c",
     "src/driver/CLStaticMain.c",
     "src/driver/CLStaticPlugins.c",
@@ -215,7 +215,8 @@
     "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
     "src/GC_3_0a5_2/backend/RegisterInfo.c",
     "src/GC_3_0a5_2/backend/StackFrame.c",
-    "src/GC_3_0a5_2/driver/StringExtras.c"
+    "src/GC_3_0a5_2/driver/StringExtras.c",
+    "src/GC_3_0a5_2/OSLib/Generic.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -1149,27 +1150,6 @@
       ],
       "include_dirs": [
         "src/driver"
-      ]
-    },
-    "src/driver/CLProj.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver",
-        "include",
-        "include/libc"
       ]
     },
     "src/driver/CLStaticMain.c": {
@@ -3268,6 +3248,52 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/OSLib/Generic.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/GC_3_0a5_2/driver/CLProj.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
     }
   },
   "matching_functions": [
@@ -3305,11 +3331,6 @@
     "src/driver/Resources/count_types",
     "src/driver/Resources/count_entries",
     "src/driver/CLPlugins/CLPlugins_CallEntry",
-    "src/driver/CLProj/match_wildcard_pattern",
-    "src/driver/CLProj/CLProj_GetFileName",
-    "src/driver/CLProj/CLProj_MakeOSSpecFromDirectoryAndFilename",
-    "src/driver/CLFileOps/CLFileOps_CopyMemBuffer",
-    "src/driver/CLFileOps/CLFileOps_AppendMemBuffer",
     "src/driver/CLIO/reset_column_and_append_prefix",
     "src/driver/CLIO/forward_format_arguments",
     "src/driver/CLIO/select_plugin_type_data",
@@ -3637,7 +3658,22 @@
     "src/GC_3_0a5_2/driver/StringExtras/strcatn",
     "src/GC_3_0a5_2/driver/StringExtras/strcpyn",
     "src/GC_3_0a5_2/driver/StringExtras/ustrcmp",
-    "src/GC_3_0a5_2/driver/StringExtras/ustrncmp"
+    "src/GC_3_0a5_2/driver/StringExtras/ustrncmp",
+    "src/GC_3_0a5_2/OSLib/Generic/WildCardMatch",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_MatchPath",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_GetFileNamePtr",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_MakeSpec2",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_MakeSpecWithPath",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_NameSpecChangeExtension",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_NameSpecSetExtension",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_SpecToStringRelative",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_FindFileInPath",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_GetDirName",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_FindProgram",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_CopyHandle",
+    "src/GC_3_0a5_2/OSLib/Generic/OS_AppendHandle",
+    "src/GC_3_0a5_2/driver/CLProj/Proj_Initialize",
+    "src/GC_3_0a5_2/driver/CLProj/Proj_Terminate"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3653,7 +3689,8 @@
     "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
     "src/GC_3_0a5_2/driver/CLPrefs.c",
     "src/GC_3_0a5_2/driver/CLAccessPaths.c",
-    "src/GC_3_0a5_2/driver/StringExtras.c"
+    "src/GC_3_0a5_2/driver/StringExtras.c",
+    "src/GC_3_0a5_2/driver/CLProj.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -4018,6 +4055,67 @@
     },
     "src/GC_3_0a5_2/driver/StringExtras.c": {
       "_tolower": "0x42ce00"
+    },
+    "src/GC_3_0a5_2/OSLib/Generic.c": {
+      "_strcpyn@16": "0x424b10",
+      "_strcatn@12": "0x424ac0",
+      "_ustrcmp@8": "0x424b60",
+      "_wildname": "0x6d61c8",
+      "_wilddir": "0x6d62c7",
+      "_wilddirref": "0x6d63cc",
+      "_wildmatch": "0x6d64d8",
+      "_STSbuf": "0x716d9c",
+      "_OS_MakePathSpec@12": "0x411140",
+      "_OS_MakeNameSpec@8": "0x411160",
+      "_OS_OpenDir@8": "0x4118c0",
+      "_OS_ReadDir@16": "0x411990",
+      "_OS_CloseDir@4": "0x411bf0",
+      "_OS_GetCWD@4": "0x4100a0",
+      "_MsDos_IsAbsolutePath@4": "0x4106f0",
+      "_OS_MakeSpec@12": "0x410dd0",
+      "_OS_MakeFileSpec@8": "0x410e40",
+      "_OS_Status@4": "0x40fa80",
+      "_OS_SpecToString@12": "0x4111f0",
+      "_OS_PathSpecToString@12": "0x4112a0",
+      "_OS_NameSpecToString@12": "0x411310",
+      "_strrchr": "0x4041d0",
+      "_strpbrk": "0x404220",
+      "_strcpy": "0x404050",
+      "_strncpy": "0x404070",
+      "_strchr": "0x4041a0",
+      "_memcpy": "0x404850",
+      "_OS_GetHandleSize@8": "0x411d80",
+      "_OS_NewHandle@8": "0x411c90",
+      "_OS_ResizeHandle@8": "0x411cc0",
+      "_OS_FreeHandle@4": "0x411d40",
+      "_OS_LockHandle@4": "0x411d00",
+      "_OS_UnlockHandle@4": "0x411d30",
+      "__imp__GetSystemDirectoryA@8": "0x6d4364",
+      "__imp__GetWindowsDirectoryA@8": "0x6d4368",
+      "_getenv": "0x403730",
+      "_sprintf": "0x408000",
+      "_fn_004263c0@4": "0x4263c0",
+      "_WildCardMatch": "0x417250",
+      "_OS_MatchPath": "0x417390",
+      "_OS_GetFileNamePtr": "0x417500",
+      "_OS_MakeSpec2": "0x4175c0",
+      "_OS_MakeSpecWithPath": "0x417670",
+      "_OS_NameSpecChangeExtension": "0x4177f0",
+      "_OS_NameSpecSetExtension": "0x4178e0",
+      "_OS_SpecToStringRelative": "0x4179f0",
+      "_OS_FindFileInPath": "0x417c60",
+      "_OS_GetDirName": "0x417530",
+      "_OS_FindProgram": "0x417d60",
+      "_OS_CopyHandle": "0x417f20",
+      "_OS_AppendHandle": "0x417fa0",
+      "_fn_00418010": "0x418010"
+    },
+    "src/GC_3_0a5_2/driver/CLProj.c": {
+      "_OS_MakeFileSpec@8": "0x410e40",
+      "_Targets_Term": "0x427120",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_Proj_Initialize": "0x4262b0",
+      "_Proj_Terminate": "0x4262d0"
     }
   }
 }

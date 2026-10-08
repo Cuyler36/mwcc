@@ -17,6 +17,274 @@
   ],
   "units": [
     {
+      "source": "src/GC_3_0a5_2/OSLib/Generic.c",
+      "original_filename": "Generic.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "WildCardMatch",
+          "address": "0x417250",
+          "size": 314,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_MatchPath",
+          "address": "0x417390",
+          "size": 359,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_GetFileNamePtr",
+          "address": "0x417500",
+          "size": 36,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_GetDirName",
+          "address": "0x417530",
+          "size": 141,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_MakeSpec2",
+          "address": "0x4175c0",
+          "size": 175,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_MakeSpecWithPath",
+          "address": "0x417670",
+          "size": 374,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_NameSpecChangeExtension",
+          "address": "0x4177f0",
+          "size": 231,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_NameSpecSetExtension",
+          "address": "0x4178e0",
+          "size": 268,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_SpecToStringRelative",
+          "address": "0x4179f0",
+          "size": 624,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_FindFileInPath",
+          "address": "0x417c60",
+          "size": 249,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_FindProgram",
+          "address": "0x417d60",
+          "size": 434,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_CopyHandle",
+          "address": "0x417f20",
+          "size": 113,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_AppendHandle",
+          "address": "0x417fa0",
+          "size": 111,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00418010",
+          "address": "0x418010",
+          "size": 194,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/Generic.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "WildCardMatch",
+          "mac_address": "0x00010fe0",
+          "linkage_names": [
+            "WildCardMatch"
+          ]
+        },
+        {
+          "name": "OS_MatchPath",
+          "mac_address": "0x00011104",
+          "linkage_names": [
+            "OS_MatchPath"
+          ]
+        },
+        {
+          "name": "OS_GetFileNamePtr",
+          "mac_address": "0x00011284",
+          "linkage_names": [
+            "OS_GetFileNamePtr"
+          ]
+        },
+        {
+          "name": "OS_GetDirName",
+          "mac_address": "0x000112c8",
+          "linkage_names": [
+            "OS_GetDirName"
+          ]
+        },
+        {
+          "name": "OS_MakeSpec2",
+          "mac_address": "0x000113b4",
+          "linkage_names": [
+            "OS_MakeSpec2"
+          ]
+        },
+        {
+          "name": "OS_MakeSpecWithPath",
+          "mac_address": "0x00011484",
+          "linkage_names": [
+            "OS_MakeSpecWithPath"
+          ]
+        },
+        {
+          "name": "OS_NameSpecChangeExtension",
+          "mac_address": "0x000115e4",
+          "linkage_names": [
+            "OS_NameSpecChangeExtension"
+          ]
+        },
+        {
+          "name": "OS_NameSpecSetExtension",
+          "mac_address": "0x000116dc",
+          "linkage_names": [
+            "OS_NameSpecSetExtension"
+          ]
+        },
+        {
+          "name": "OS_CompactPaths",
+          "mac_address": "0x000117f0",
+          "linkage_names": [
+            "OS_CompactPaths"
+          ]
+        },
+        {
+          "name": "OS_SpecToStringRelative",
+          "mac_address": "0x00011988",
+          "linkage_names": [
+            "OS_SpecToStringRelative"
+          ]
+        },
+        {
+          "name": "OS_FindFileInPath",
+          "mac_address": "0x00011ba0",
+          "linkage_names": [
+            "OS_FindFileInPath"
+          ]
+        },
+        {
+          "name": "OS_FindProgram",
+          "mac_address": "0x00011cb0",
+          "linkage_names": [
+            "OS_FindProgram"
+          ]
+        },
+        {
+          "name": "OS_CopyHandle",
+          "mac_address": "0x00011d5c",
+          "linkage_names": [
+            "OS_CopyHandle"
+          ]
+        },
+        {
+          "name": "OS_AppendHandle",
+          "mac_address": "0x00011e00",
+          "linkage_names": [
+            "OS_AppendHandle"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
       "original_filename": "RegisterInfo.c",
       "evidence": [
@@ -3649,6 +3917,62 @@
           "mac_address": "0x00016844",
           "linkage_names": [
             "Prefs_FindPanel"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
+      "source": "src/GC_3_0a5_2/driver/CLProj.c",
+      "original_filename": "CLProj.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Proj_Initialize",
+          "address": "0x4262b0",
+          "size": 27,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLProj.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Proj_Terminate",
+          "address": "0x004262d0",
+          "size": 45,
+          "boundary_evidence": {
+            "method": "Reviewed Windows CFG and bounded neighboring functions",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004262f3"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLProj.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Proj_Initialize",
+          "mac_address": "0x00011ea8",
+          "linkage_names": [
+            "Proj_Initialize"
+          ]
+        },
+        {
+          "name": "Proj_Terminate",
+          "mac_address": "0x00011f04",
+          "linkage_names": [
+            "Proj_Terminate"
           ]
         }
       ],
@@ -17822,39 +18146,6 @@
       ],
       "windows_functions": [
         {
-          "name": "CLFileOps_FindExecutable",
-          "address": "0x00417d60",
-          "size": 434,
-          "compiled_source": "src/driver/CLFileOps.cpp",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLFileOps_CopyMemBuffer",
-          "address": "0x00417f20",
-          "size": 113,
-          "compiled_source": "src/driver/CLFileOps.cpp",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLFileOps_AppendMemBuffer",
-          "address": "0x00417fa0",
-          "size": 111,
-          "compiled_source": "src/driver/CLFileOps.cpp",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
           "name": "set_bytes",
           "address": "0x0042a060",
           "size": 21,
@@ -19605,149 +19896,6 @@
           "mac_address": "0x0000a57c",
           "linkage_names": [
             "Plugin_Call"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLProj.c",
-      "original_filename": "CLProj.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "match_wildcard_pattern",
-          "address": "0x00417250",
-          "size": 314,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_FindNextMatchingEntry",
-          "address": "0x00417390",
-          "size": 359,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_GetFileName",
-          "address": "0x00417500",
-          "size": 36,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_MakeOSSpecFromDirectoryAndFilename",
-          "address": "0x004175c0",
-          "size": 175,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_MakeOSSpecFromPath",
-          "address": "0x00417670",
-          "size": 374,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_SetFileExtension",
-          "address": "0x004177f0",
-          "size": 231,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_ChangeFileExtension",
-          "address": "0x004178e0",
-          "size": 268,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_MakeRelativePath",
-          "address": "0x004179f0",
-          "size": 624,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_FindFileInSearchPath",
-          "address": "0x00417c60",
-          "size": 249,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FUN_004262d0",
-          "address": "0x004262d0",
-          "size": 45,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004262f3"
-          ]
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Proj_Initialize",
-          "mac_address": "0x00011ea8",
-          "linkage_names": [
-            "Proj_Initialize"
-          ]
-        },
-        {
-          "name": "Proj_Terminate",
-          "mac_address": "0x00011f04",
-          "linkage_names": [
-            "Proj_Terminate"
           ]
         }
       ],
@@ -37094,150 +37242,6 @@
       "baseline_same_filename": []
     },
     {
-      "source": "Generic.c",
-      "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/Generic.c",
-      "mac_address": "0x00010fe0",
-      "line": 7485,
-      "functions": [
-        {
-          "name": "WildCardMatch",
-          "mac_address": "0x00010fe0",
-          "linkage_names": [
-            "WildCardMatch"
-          ]
-        },
-        {
-          "name": "OS_MatchPath",
-          "mac_address": "0x00011104",
-          "linkage_names": [
-            "OS_MatchPath"
-          ]
-        },
-        {
-          "name": "OS_GetFileNamePtr",
-          "mac_address": "0x00011284",
-          "linkage_names": [
-            "OS_GetFileNamePtr"
-          ]
-        },
-        {
-          "name": "OS_GetDirName",
-          "mac_address": "0x000112c8",
-          "linkage_names": [
-            "OS_GetDirName"
-          ]
-        },
-        {
-          "name": "OS_MakeSpec2",
-          "mac_address": "0x000113b4",
-          "linkage_names": [
-            "OS_MakeSpec2"
-          ]
-        },
-        {
-          "name": "OS_MakeSpecWithPath",
-          "mac_address": "0x00011484",
-          "linkage_names": [
-            "OS_MakeSpecWithPath"
-          ]
-        },
-        {
-          "name": "OS_NameSpecChangeExtension",
-          "mac_address": "0x000115e4",
-          "linkage_names": [
-            "OS_NameSpecChangeExtension"
-          ]
-        },
-        {
-          "name": "OS_NameSpecSetExtension",
-          "mac_address": "0x000116dc",
-          "linkage_names": [
-            "OS_NameSpecSetExtension"
-          ]
-        },
-        {
-          "name": "OS_CompactPaths",
-          "mac_address": "0x000117f0",
-          "linkage_names": [
-            "OS_CompactPaths"
-          ]
-        },
-        {
-          "name": "OS_SpecToStringRelative",
-          "mac_address": "0x00011988",
-          "linkage_names": [
-            "OS_SpecToStringRelative"
-          ]
-        },
-        {
-          "name": "OS_FindFileInPath",
-          "mac_address": "0x00011ba0",
-          "linkage_names": [
-            "OS_FindFileInPath"
-          ]
-        },
-        {
-          "name": "OS_FindProgram",
-          "mac_address": "0x00011cb0",
-          "linkage_names": [
-            "OS_FindProgram"
-          ]
-        },
-        {
-          "name": "OS_CopyHandle",
-          "mac_address": "0x00011d5c",
-          "linkage_names": [
-            "OS_CopyHandle"
-          ]
-        },
-        {
-          "name": "OS_AppendHandle",
-          "mac_address": "0x00011e00",
-          "linkage_names": [
-            "OS_AppendHandle"
-          ]
-        }
-      ],
-      "data_symbols": [
-        {
-          "name": "wildname",
-          "address": "0x002224b0",
-          "kind": "LCSYM",
-          "line": 7875,
-          "descriptor": "wildname:S(0,60)=ar(0,1);0;62;(0,2)"
-        },
-        {
-          "name": "wilddir",
-          "address": "0x002224f0",
-          "kind": "LCSYM",
-          "line": 7876,
-          "descriptor": "wilddir:S(0,61)=ar(0,1);0;254;(0,2)"
-        },
-        {
-          "name": "wilddirref",
-          "address": "0x002225f0",
-          "kind": "LCSYM",
-          "line": 7878,
-          "descriptor": "wilddirref:S(0,62)"
-        },
-        {
-          "name": "wildmatch",
-          "address": "0x002226f8",
-          "kind": "LCSYM",
-          "line": 7879,
-          "descriptor": "wildmatch:S(0,40)"
-        },
-        {
-          "name": "STSbuf",
-          "address": "0x00000000",
-          "kind": "GSYM",
-          "line": 7880,
-          "descriptor": "STSbuf:G(0,63)=ar(0,1);0;255;(0,2)"
-        }
-      ],
-      "baseline_same_filename": []
-    },
-    {
       "source": "LowMem.c",
       "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/MacEmul/LowMem.c",
       "mac_address": "0x000137e4",
@@ -51960,7 +51964,7 @@
       "superseded_by": "src/GC_3_0a5_2/driver/CLPrefs.c"
     },
     "src/driver/CLProj.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -52089,7 +52093,12 @@
           "space-nointrinsics": "efd5dbe97f474e3a4a348c17185c8dfb32d23353de8bd518701e36fab2f5cc99",
           "space-intrinsics": "1f13f53821cf0077c950e4aff42b27bc0e0d24bab2328d4f916db9ec6972adc3"
         }
-      }
+      },
+      "superseded_by": [
+        "src/GC_3_0a5_2/driver/CLProj.c",
+        "src/GC_3_0a5_2/OSLib/Generic.c",
+        "src/GC_3_0a5_2/driver/StringExtras.c"
+      ]
     },
     "src/driver/CLSegs.c": {
       "status": "superseded_import",
@@ -67338,6 +67347,637 @@
       "membership_reviewed": true,
       "strict_exact_count": 4,
       "source_sha256": "c48458162acc1a3763c0f6a2935ad0c0e4fe21fe70511170714ae0e47ebb7fb6"
+    },
+    "src/GC_3_0a5_2/OSLib/Generic.c": {
+      "functions": [
+        {
+          "name": "WildCardMatch",
+          "address": "0x417250",
+          "size": 314,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_MatchPath",
+          "address": "0x417390",
+          "size": 359,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_GetFileNamePtr",
+          "address": "0x417500",
+          "size": 36,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_MakeSpec2",
+          "address": "0x4175c0",
+          "size": 175,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_MakeSpecWithPath",
+          "address": "0x417670",
+          "size": 374,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_NameSpecChangeExtension",
+          "address": "0x4177f0",
+          "size": 231,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_NameSpecSetExtension",
+          "address": "0x4178e0",
+          "size": 268,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_SpecToStringRelative",
+          "address": "0x4179f0",
+          "size": 624,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_FindFileInPath",
+          "address": "0x417c60",
+          "size": 249,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_GetDirName",
+          "address": "0x417530",
+          "size": 141,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_FindProgram",
+          "address": "0x417d60",
+          "size": 434,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_CopyHandle",
+          "address": "0x417f20",
+          "size": 113,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "OS_AppendHandle",
+          "address": "0x417fa0",
+          "size": 111,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        },
+        {
+          "name": "fn_00418010",
+          "address": "0x418010",
+          "size": 194,
+          "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+        }
+      ],
+      "source_bindings": {
+        "_strcpyn@16": "0x424b10",
+        "_strcatn@12": "0x424ac0",
+        "_ustrcmp@8": "0x424b60",
+        "_wildname": "0x6d61c8",
+        "_wilddir": "0x6d62c7",
+        "_wilddirref": "0x6d63cc",
+        "_wildmatch": "0x6d64d8",
+        "_STSbuf": "0x716d9c",
+        "_OS_MakePathSpec@12": "0x411140",
+        "_OS_MakeNameSpec@8": "0x411160",
+        "_OS_OpenDir@8": "0x4118c0",
+        "_OS_ReadDir@16": "0x411990",
+        "_OS_CloseDir@4": "0x411bf0",
+        "_OS_GetCWD@4": "0x4100a0",
+        "_MsDos_IsAbsolutePath@4": "0x4106f0",
+        "_OS_MakeSpec@12": "0x410dd0",
+        "_OS_MakeFileSpec@8": "0x410e40",
+        "_OS_Status@4": "0x40fa80",
+        "_OS_SpecToString@12": "0x4111f0",
+        "_OS_PathSpecToString@12": "0x4112a0",
+        "_OS_NameSpecToString@12": "0x411310",
+        "_strrchr": "0x4041d0",
+        "_strpbrk": "0x404220",
+        "_strcpy": "0x404050",
+        "_strncpy": "0x404070",
+        "_strchr": "0x4041a0",
+        "_memcpy": "0x404850",
+        "_OS_GetHandleSize@8": "0x411d80",
+        "_OS_NewHandle@8": "0x411c90",
+        "_OS_ResizeHandle@8": "0x411cc0",
+        "_OS_FreeHandle@4": "0x411d40",
+        "_OS_LockHandle@4": "0x411d00",
+        "_OS_UnlockHandle@4": "0x411d30",
+        "__imp__GetSystemDirectoryA@8": "0x6d4364",
+        "__imp__GetWindowsDirectoryA@8": "0x6d4368",
+        "_getenv": "0x403730",
+        "_sprintf": "0x408000",
+        "_fn_004263c0@4": "0x4263c0",
+        "_WildCardMatch": "0x417250",
+        "_OS_MatchPath": "0x417390",
+        "_OS_GetFileNamePtr": "0x417500",
+        "_OS_MakeSpec2": "0x4175c0",
+        "_OS_MakeSpecWithPath": "0x417670",
+        "_OS_NameSpecChangeExtension": "0x4177f0",
+        "_OS_NameSpecSetExtension": "0x4178e0",
+        "_OS_SpecToStringRelative": "0x4179f0",
+        "_OS_FindFileInPath": "0x417c60",
+        "_OS_GetDirName": "0x417530",
+        "_OS_FindProgram": "0x417d60",
+        "_OS_CopyHandle": "0x417f20",
+        "_OS_AppendHandle": "0x417fa0",
+        "_fn_00418010": "0x418010"
+      },
+      "recommended_flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "baseline_aliases": {
+        "match_wildcard_pattern": {
+          "name": "WildCardMatch",
+          "address": "0x417250",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_FindNextMatchingEntry": {
+          "name": "OS_MatchPath",
+          "address": "0x417390",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_GetFileName": {
+          "name": "OS_GetFileNamePtr",
+          "address": "0x417500",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_MakeOSSpecFromDirectoryAndFilename": {
+          "name": "OS_MakeSpec2",
+          "address": "0x4175c0",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_MakeOSSpecFromPath": {
+          "name": "OS_MakeSpecWithPath",
+          "address": "0x417670",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_SetFileExtension": {
+          "name": "OS_NameSpecChangeExtension",
+          "address": "0x4177f0",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_ChangeFileExtension": {
+          "name": "OS_NameSpecSetExtension",
+          "address": "0x4178e0",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_MakeRelativePath": {
+          "name": "OS_SpecToStringRelative",
+          "address": "0x4179f0",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLProj_FindFileInSearchPath": {
+          "name": "OS_FindFileInPath",
+          "address": "0x417c60",
+          "baseline_source": "src/driver/CLProj.c"
+        },
+        "CLFileOps_CopyMemBuffer": {
+          "name": "OS_CopyHandle",
+          "address": "0x417f20"
+        },
+        "CLFileOps_AppendMemBuffer": {
+          "name": "OS_AppendHandle",
+          "address": "0x417fa0"
+        }
+      },
+      "mac_checklist": [
+        {
+          "name": "WildCardMatch",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "WildCardMatch",
+            "address": "0x417250",
+            "size": 314,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_MatchPath",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_MatchPath",
+            "address": "0x417390",
+            "size": 359,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_GetFileNamePtr",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_GetFileNamePtr",
+            "address": "0x417500",
+            "size": 36,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_GetDirName",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_GetDirName",
+            "address": "0x417530",
+            "size": 141,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_MakeSpec2",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_MakeSpec2",
+            "address": "0x4175c0",
+            "size": 175,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_MakeSpecWithPath",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_MakeSpecWithPath",
+            "address": "0x417670",
+            "size": 374,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_NameSpecChangeExtension",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_NameSpecChangeExtension",
+            "address": "0x4177f0",
+            "size": 231,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_NameSpecSetExtension",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_NameSpecSetExtension",
+            "address": "0x4178e0",
+            "size": 268,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_CompactPaths",
+          "status": "no standalone body in reviewed Windows cluster",
+          "evidence": "OS_NameSpecSetExtension ends4179ec; OS_SpecToStringRelative begins4179f0. Entire Generic cluster417250..4180d2 accounts for all14 Windows bodies. Buffer-prefix/tail concatenation is inline in OS_MakeSpecWithPath; no separate full OS_CompactPaths equivalence claim."
+        },
+        {
+          "name": "OS_SpecToStringRelative",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_SpecToStringRelative",
+            "address": "0x4179f0",
+            "size": 624,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_FindFileInPath",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_FindFileInPath",
+            "address": "0x417c60",
+            "size": 249,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_FindProgram",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_FindProgram",
+            "address": "0x417d60",
+            "size": 434,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_CopyHandle",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_CopyHandle",
+            "address": "0x417f20",
+            "size": 113,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        },
+        {
+          "name": "OS_AppendHandle",
+          "status": "strict exact Windows body",
+          "windows": {
+            "name": "OS_AppendHandle",
+            "address": "0x417fa0",
+            "size": 111,
+            "source": "src/GC_3_0a5_2/OSLib/Generic.c"
+          }
+        }
+      ],
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/Generic.c",
+        "mac_functions": 14,
+        "windows_functions": 14,
+        "windows_region": [
+          "0x00417250",
+          "0x004180d2"
+        ],
+        "evidence": "13 Windows bodies reproduce explicit Mac Generic.c roles in order, with native516-byte spec, file/handle ABI and shared wild* state. Intervening boundaries leave no unassigned bodies. Windows-only tail418010 parses slash/backslash directory and filename into native spec. Next4180e0 is console break handler using User break literals66b034/66b050, matching CLIO catchinterrupt; previous library cluster ends beforeWildCardMatch.",
+        "unknown_windows_function": {
+          "name": "fn_00418010",
+          "address": "0x418010",
+          "size": 194,
+          "behavior": "Split path into native directory/name with original259-byte bounds",
+          "match_status": "Reviewed equivalent instructions/control flow, different EDI/EBP allocation; no exact byte claim",
+          "original_name": "unresolved"
+        },
+        "native_layouts": {
+          "OSSpec": 516,
+          "OSPathSpec": 260,
+          "OSNameSpec": 256,
+          "OSHandle_MemBuffer": 8,
+          "DirectorySearch": 268
+        },
+        "owned_globals": {
+          "wildname": "0x6d61c8/255",
+          "wilddir": "0x6d62c7/260",
+          "wilddirref": "0x6d63cc/268",
+          "wildmatch": "0x6d64d8/516"
+        },
+        "external_data_ownership": {
+          "STSbuf": "Used at716d9c; Mac GSYM is declaration evidence only; no local allocation claimed"
+        },
+        "unknown_helpers": {
+          "fn_004263c0@4": "Windows one-argument allocation wrapper4263c0; not ordinarycdecl malloc. Original name unresolved."
+        },
+        "imports": {
+          "__imp__GetSystemDirectoryA@8": "0x6d4364, decoded original PE import name",
+          "__imp__GetWindowsDirectoryA@8": "0x6d4368, decoded original PE import name"
+        }
+      },
+      "verification": {
+        "strict_exact_functions": 13,
+        "attempted_functions": 14,
+        "all_nine_original_CLProj_helpers_exact": true,
+        "code_bytes": 3623,
+        "data_bytes": 1343,
+        "all_data_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "3623",
+            "match_percent": 99.92298
+          },
+          ".data": {
+            "bytes": "44",
+            "match_percent": 100.0
+          },
+          ".bss": {
+            "bytes": "1299",
+            "match_percent": 100.0
+          }
+        },
+        "complete": false,
+        "remaining": "fn_00418010 register allocation nonmatch; Mac OS_CompactPaths has no standalone recovered Windows counterpart; preserve Mac checklist status, do not invent function.",
+        "encoding": "CP932 encoding succeeds; tools/check_sjis.py absent",
+        "source_sha256": "bdeeb1df52af3bbf7a8c9965c2453cfbd4d3b65f86c8a6d3a51fde3f4844e5ed"
+      },
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "strict_exact_count": 13
+    },
+    "src/GC_3_0a5_2/driver/CLProj.c": {
+      "functions": [
+        {
+          "name": "Proj_Initialize",
+          "address": "0x4262b0",
+          "size": 27,
+          "source": "src/GC_3_0a5_2/driver/CLProj.c"
+        },
+        {
+          "name": "Proj_Terminate",
+          "address": "0x4262d0",
+          "size": 45,
+          "source": "src/GC_3_0a5_2/driver/CLProj.c"
+        }
+      ],
+      "source_bindings": {
+        "_OS_MakeFileSpec@8": "0x410e40",
+        "_Targets_Term": "0x427120",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_Proj_Initialize": "0x4262b0",
+        "_Proj_Terminate": "0x4262d0"
+      },
+      "recommended_flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "baseline_aliases": {
+        "CLProj_InitializeCWD": {
+          "name": "Proj_Initialize",
+          "address": "0x4262b0",
+          "behavior_change": "Windows uses OS_MakeFileSpec(\"Project.mcp\", projectfile) rather than empty current-directory spec."
+        },
+        "CLProj_FreeTargets": {
+          "name": "Proj_Terminate",
+          "address": "0x4262d0"
+        }
+      },
+      "imported_helpers_audit": [
+        {
+          "baseline_name": "CLProj_AppendString",
+          "canonical_name": "strcatn",
+          "address": "0x424ac0",
+          "actual_source": "StringExtras.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_CopyStringBounded",
+          "canonical_name": "strcpyn",
+          "address": "0x424b10",
+          "actual_source": "StringExtras.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "match_wildcard_pattern",
+          "canonical_name": "WildCardMatch",
+          "address": "0x417250",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_FindNextMatchingEntry",
+          "canonical_name": "OS_MatchPath",
+          "address": "0x417390",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_GetFileName",
+          "canonical_name": "OS_GetFileNamePtr",
+          "address": "0x417500",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_MakeOSSpecFromDirectoryAndFilename",
+          "canonical_name": "OS_MakeSpec2",
+          "address": "0x4175c0",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_MakeOSSpecFromPath",
+          "canonical_name": "OS_MakeSpecWithPath",
+          "address": "0x417670",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_SetFileExtension",
+          "canonical_name": "OS_NameSpecChangeExtension",
+          "address": "0x4177f0",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_ChangeFileExtension",
+          "canonical_name": "OS_NameSpecSetExtension",
+          "address": "0x4178e0",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_MakeRelativePath",
+          "canonical_name": "OS_SpecToStringRelative",
+          "address": "0x4179f0",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "CLProj_FindFileInSearchPath",
+          "canonical_name": "OS_FindFileInPath",
+          "address": "0x417c60",
+          "actual_source": "Generic.c",
+          "evidence": "Explicit Mac source/function/parameter roles and reviewed baseline/Windows semantic sequence; existing Windows address mapping retained.",
+          "action": "Preserve baseline body for older versions; move/port Windows emission to actual source. Do not silently drop mapped function."
+        },
+        {
+          "baseline_name": "applyClassTypes",
+          "source_status": "Unused static inline appended to baseline CLProj source; no configured standalone mapping",
+          "actual_source": "Unresolved; body calls CLPlugins_GetObjectFlags and dispatch_output_storage_by_mask, likely file-output logic",
+          "action": "Excluded from actual CLProj emission; preserve untouched baseline for older versions; no invented standalone mapping."
+        }
+      ],
+      "generic_followup": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/Generic.c",
+        "mac_functions": [
+          "WildCardMatch",
+          "OS_MatchPath",
+          "OS_GetFileNamePtr",
+          "OS_GetDirName",
+          "OS_MakeSpec2",
+          "OS_MakeSpecWithPath",
+          "OS_NameSpecChangeExtension",
+          "OS_NameSpecSetExtension",
+          "OS_CompactPaths",
+          "OS_SpecToStringRelative",
+          "OS_FindFileInPath",
+          "OS_FindProgram",
+          "OS_CopyHandle",
+          "OS_AppendHandle"
+        ],
+        "known_other_candidates": {
+          "OS_GetDirName": "0x417530 (between known file-name and MakeSpec2 functions; needs bounded body/semantics review)",
+          "OS_CopyHandle": "0x417f20 (known CLFileOps_CopyMemBuffer binding; reviewed native handle source/destination helper)",
+          "OS_AppendHandle": "0x417fa0 (known CLFileOps_AppendMemBuffer binding; reviewed native append helper)"
+        },
+        "unresolved_members": [
+          "OS_CompactPaths standalone missing between OS_NameSpecSetExtension and OS_SpecToStringRelative; may be inlined/removed, not proven",
+          "OS_FindProgram candidate after OS_FindFileInPath and before OS_CopyHandle; must discover actual boundary/semantics"
+        ],
+        "warning": "Generic followup candidates are ownership/discovery evidence, not additional matching or completed TU claims."
+      },
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/Project/CLProj.c",
+        "mac_functions": [
+          "Proj_Initialize",
+          "Proj_Terminate"
+        ],
+        "windows_functions": 2,
+        "windows_region": [
+          "0x004262b0",
+          "0x004262fd"
+        ],
+        "evidence": "Two adjacent functions after complete CLPrefs cluster and before xmalloc426300. Proj_Terminate literal source CLProj.c at66dff8 and assertion this != NULL at66e004; Proj_Initialize owns Project.mcp string at66dfec. Exact bytes and matching Mac roles support membership.",
+        "layout": "Project targets pointer0 and 516-byte Windows file spec4",
+        "callee_identity": "Targets_Term from explicit Mac CLTarg.c list teardown role; Windows original call427120."
+      },
+      "verification": {
+        "strict_exact_functions": 2,
+        "attempted_functions": 2,
+        "code_bytes": 72,
+        "data_bytes": 40,
+        "all_data_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "72",
+            "match_percent": 100.0
+          },
+          ".data": {
+            "bytes": "40",
+            "match_percent": 100.0
+          }
+        },
+        "complete": true,
+        "encoding": "CP932 encoding succeeds; tools/check_sjis.py absent",
+        "source_sha256": "2dd50c6f54ef068bc8fa50dae109153f8f512bdca124f64ec88384e039da0d39"
+      },
+      "status": "exact",
+      "membership_reviewed": true,
+      "strict_exact_count": 2
     }
   },
   "ownership_review": {

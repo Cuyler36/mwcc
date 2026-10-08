@@ -397,15 +397,26 @@ three code nonmatches prevent marking this TU exact.
 
 ## CInt64: partial arithmetic unit
 
-The CInt64 attempt now matches 24 of 26 mapped Windows functions. Equivalent
+The CInt64 attempt now matches 32 of 36 mapped Windows functions. Equivalent
 comparison control flow, helper placement, and local declaration order recover
 the signed comparisons and arithmetic right shift. Mul and MulU remain
 nonmatches after compiler/code-shape experiments; instruction/dataflow review
 and 564 bounded cases per original/compiled body agree on modulo-2^64 products.
 This is not exhaustive proof. Four constants contribute 32 verified data bytes;
 the unreferenced zero constant was removed because its Windows address is
-unproven. The Mac ordinary-symbol list has 51 CInt64 names, with 25 still lacking
-Windows mappings. The TU is explicitly incomplete despite the 24 exact bodies.
+unproven. Eight numeric helpers formerly grouped in CExpr2.c now move physically
+into the GC3 arithmetic source, with canonical ConvertInt/UInt8/16/32, Or, and
+Xor names. The native ConvertInt32 returns void; every current caller discards
+the imported function's unsupported integer result.
+
+IsInRange and DivMod are additionally mapped and reviewed. Signed width bounds
+and the unsigned division algorithm agree with the original; two IsInRange
+switch tables remain unresolved. DivMod has register/spill differences, and
+800 bounded instruction checks per original/compiled body cover unsigned
+quotient/remainder, zero divisors, and all optional-output combinations. Its Add
+calls use an exact arithmetic model; this is not exhaustive equivalence proof.
+The Mac ordinary-symbol list has 51 CInt64 names, with 15 still lacking Windows
+mappings. The TU is explicitly incomplete despite the 32 exact bodies.
 
 ## ParserErrors.c: complete Windows unit
 

@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 219 source files build, 1,237 candidate functions are
-mapped, and 465 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 219 source files build, 1,239 candidate functions are
+mapped, and 466 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -31,6 +31,11 @@ and object offsets cannot be reused. Other members of that TU remain unported.
 ELF_Endian.c has all eight known Windows members ported and reviewed, including
 the recovered conversion-block routine. Six functions match exactly; two code
 nonmatches and one differing switch table remain. Its data and BSS match.
+
+CInt64.c now has 36 mapped members reviewed and 32 exact matches. Eight numeric
+helpers move out of the imported CExpr2 grouping under their canonical names.
+The division helper also passes 800 bounded instruction checks per original
+and compiled body, covering zero divisors and optional outputs.
 
 Arguments.c has all 27 retained Windows functions reviewed: 24 exact and three
 equivalent instruction nonmatches. Its initialized data, switch table, and BSS
@@ -128,7 +133,7 @@ remain NonMatching until their complete bytes and relocations pass verification.
 Use the portable CLI for individual comparisons, for example:
 
 ```sh
-build/tools/objdiff-cli.exe diff -p . -u src/frontend/CInt64 -o build/CInt64.diff.json
+build/tools/objdiff-cli.exe diff -p . -u src/GC_3_0a5_2/frontend/CInt64 -o build/CInt64.diff.json
 ```
 
 See [the port notes](config/GC_3_0a5_2/PORTING.md) for compiler choices,

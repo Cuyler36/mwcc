@@ -1818,5 +1818,37 @@
   "swap_conversion_blocks": {
     "name": "swap_conversion_blocks",
     "source": "src/GC_3_0a5_2/backend/ELF_Endian.c"
+  },
+  "CExpr2_ConvertCInt64ToUInt8": {
+    "name": "CInt64_ConvertUInt8",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_SignExtendSignedChar": {
+    "name": "CInt64_ConvertInt8",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ConvertCInt64ToUnsignedShort": {
+    "name": "CInt64_ConvertUInt16",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_SignExtendShort": {
+    "name": "CInt64_ConvertInt16",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_ClearCInt64Hi": {
+    "name": "CInt64_ConvertUInt32",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_SignExtendCInt64": {
+    "name": "CInt64_ConvertInt32",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CExpr2_BitwiseOrCInt64": {
+    "name": "CInt64_Or",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "xor_64": {
+    "name": "CInt64_Xor",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   }
 }

@@ -9273,106 +9273,106 @@
     }
   },
   {
-    "name": "CExpr2_ConvertCInt64ToUInt8",
-    "address": "0x004d9030",
+    "name": "CInt64_ConvertUInt8",
+    "address": "0x4d9030",
     "size": 18,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_ConvertCInt64ToUInt8",
     "baseline_address": "0x00474d20",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_SignExtendSignedChar",
-    "address": "0x004d9050",
+    "name": "CInt64_ConvertInt8",
+    "address": "0x4d9050",
     "size": 37,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_SignExtendSignedChar",
     "baseline_address": "0x00474d40",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_ConvertCInt64ToUnsignedShort",
-    "address": "0x004d9080",
+    "name": "CInt64_ConvertUInt16",
+    "address": "0x4d9080",
     "size": 18,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_ConvertCInt64ToUnsignedShort",
     "baseline_address": "0x00474d70",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_SignExtendShort",
-    "address": "0x004d90a0",
+    "name": "CInt64_ConvertInt16",
+    "address": "0x4d90a0",
     "size": 37,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_SignExtendShort",
     "baseline_address": "0x00474d90",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_ClearCInt64Hi",
-    "address": "0x004d90d0",
+    "name": "CInt64_ConvertUInt32",
+    "address": "0x4d90d0",
     "size": 11,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_ClearCInt64Hi",
     "baseline_address": "0x00474dc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_SignExtendCInt64",
-    "address": "0x004d90e0",
+    "name": "CInt64_ConvertInt32",
+    "address": "0x4d90e0",
     "size": 23,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_SignExtendCInt64",
     "baseline_address": "0x00474dd0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CExpr2_BitwiseOrCInt64",
-    "address": "0x004d9100",
+    "name": "CInt64_Or",
+    "address": "0x4d9100",
     "size": 25,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CExpr2_BitwiseOrCInt64",
     "baseline_address": "0x00474df0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "xor_64",
-    "address": "0x004d9120",
+    "name": "CInt64_Xor",
+    "address": "0x4d9120",
     "size": 25,
-    "source": "src/frontend/CExpr2.c",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "xor_64",
     "baseline_address": "0x00474e10",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9383,9 +9383,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_And",
     "baseline_address": "0x00474e30",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9396,9 +9396,20 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_IsInURange",
     "baseline_address": "0x00474e50",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CInt64_IsInRange",
+    "address": "0x4d91c0",
+    "size": 597,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9409,9 +9420,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_NotEqual",
     "baseline_address": "0x004750c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9422,9 +9433,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Equal",
     "baseline_address": "0x004750f0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9435,9 +9446,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_GreaterEqualU",
     "baseline_address": "0x00475110",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9448,9 +9459,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_GreaterEqual",
     "baseline_address": "0x00475170",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9461,9 +9472,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_LessEqualU",
     "baseline_address": "0x00475210",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9474,9 +9485,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_LessEqual",
     "baseline_address": "0x00475270",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9487,9 +9498,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_GreaterU",
     "baseline_address": "0x00475310",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9500,9 +9511,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Greater",
     "baseline_address": "0x00475370",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9513,9 +9524,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_LessU",
     "baseline_address": "0x00475410",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9526,9 +9537,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Less",
     "baseline_address": "0x00475470",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9539,9 +9550,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_ShrU",
     "baseline_address": "0x00475560",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9552,9 +9563,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Shr",
     "baseline_address": "0x004755c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9565,9 +9576,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Shl",
     "baseline_address": "0x00475650",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9578,9 +9589,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_ModU",
     "baseline_address": "0x004756b0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9591,9 +9602,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Mod",
     "baseline_address": "0x004756e0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9604,9 +9615,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_DivU",
     "baseline_address": "0x00475890",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9617,9 +9628,20 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Div",
     "baseline_address": "0x004758c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CInt64_DivMod",
+    "address": "0x4d9e90",
+    "size": 343,
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9630,9 +9652,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Mul",
     "baseline_address": "0x00475ca0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9643,9 +9665,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_MulU",
     "baseline_address": "0x00475f30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9656,9 +9678,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Sub",
     "baseline_address": "0x00475fe0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9669,12 +9691,11 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Inv",
     "baseline_address": "0x00476040",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
-    },
-    "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff."
+    }
   },
   {
     "name": "CInt64_Add",
@@ -9683,9 +9704,9 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CInt64_Add",
     "baseline_address": "0x00476090",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
     }
   },
@@ -9696,12 +9717,11 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CFunc_BitwiseNot",
     "baseline_address": "0x00476100",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
-    },
-    "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff."
+    }
   },
   {
     "name": "CInt64_Not",
@@ -9710,12 +9730,11 @@
     "source": "src/GC_3_0a5_2/frontend/CInt64.c",
     "baseline_name": "CFunc_LogicalNotCInt64",
     "baseline_address": "0x00476130",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "Canonical Mac CInt64 ordinary symbol and reviewed Windows arithmetic/ABI; ownership is numeric-family association without explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
       "unresolved_indirect_flow": false
-    },
-    "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff."
+    }
   },
   {
     "name": "setup_return_operand",

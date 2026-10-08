@@ -10555,13 +10555,101 @@
       ],
       "windows_functions": [
         {
+          "name": "CInt64_ConvertUInt8",
+          "address": "0x4d9030",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_ConvertInt8",
+          "address": "0x4d9050",
+          "size": 37,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_ConvertUInt16",
+          "address": "0x4d9080",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_ConvertInt16",
+          "address": "0x4d90a0",
+          "size": 37,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_ConvertUInt32",
+          "address": "0x4d90d0",
+          "size": 11,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_ConvertInt32",
+          "address": "0x4d90e0",
+          "size": 23,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_Or",
+          "address": "0x4d9100",
+          "size": 25,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_Xor",
+          "address": "0x4d9120",
+          "size": 25,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
           "name": "CInt64_And",
           "address": "0x004d9140",
           "size": 25,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10570,9 +10658,20 @@
           "address": "0x004d9160",
           "size": 83,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_IsInRange",
+          "address": "0x4d91c0",
+          "size": 597,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10581,9 +10680,9 @@
           "address": "0x004d9420",
           "size": 31,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10592,9 +10691,9 @@
           "address": "0x004d9440",
           "size": 31,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10603,9 +10702,9 @@
           "address": "0x004d9460",
           "size": 74,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10614,9 +10713,9 @@
           "address": "0x004d94b0",
           "size": 213,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10625,9 +10724,9 @@
           "address": "0x004d9590",
           "size": 74,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10636,9 +10735,9 @@
           "address": "0x004d95e0",
           "size": 213,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10647,9 +10746,9 @@
           "address": "0x004d96c0",
           "size": 74,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10658,9 +10757,9 @@
           "address": "0x004d9710",
           "size": 213,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10669,9 +10768,9 @@
           "address": "0x004d97f0",
           "size": 74,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10680,9 +10779,9 @@
           "address": "0x004d9840",
           "size": 213,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10691,9 +10790,9 @@
           "address": "0x004d9920",
           "size": 98,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10702,9 +10801,9 @@
           "address": "0x004d9990",
           "size": 122,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10713,9 +10812,9 @@
           "address": "0x004d9a10",
           "size": 88,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10724,9 +10823,9 @@
           "address": "0x004d9a70",
           "size": 38,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10735,9 +10834,9 @@
           "address": "0x004d9aa0",
           "size": 377,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10746,9 +10845,9 @@
           "address": "0x004d9c20",
           "size": 39,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10757,9 +10856,20 @@
           "address": "0x004d9c50",
           "size": 570,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CInt64_DivMod",
+          "address": "0x4d9e90",
+          "size": 343,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10768,9 +10878,9 @@
           "address": "0x004d9ff0",
           "size": 559,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10779,9 +10889,9 @@
           "address": "0x004da220",
           "size": 162,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10790,9 +10900,9 @@
           "address": "0x004da2d0",
           "size": 82,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10801,9 +10911,9 @@
           "address": "0x004da330",
           "size": 60,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10812,9 +10922,9 @@
           "address": "0x004da370",
           "size": 86,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10823,9 +10933,9 @@
           "address": "0x004da3d0",
           "size": 28,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         },
@@ -10834,9 +10944,9 @@
           "address": "0x004da3f0",
           "size": 53,
           "compiled_source": "src/GC_3_0a5_2/frontend/CInt64.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed x86 CFG bounded by saved Ghidra entries",
             "unresolved_indirect_flow": false
           }
         }
@@ -10845,7 +10955,7 @@
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "attempted_incomplete"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
@@ -28686,94 +28796,6 @@
           }
         },
         {
-          "name": "CExpr2_ConvertCInt64ToUInt8",
-          "address": "0x004d9030",
-          "size": 18,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_SignExtendSignedChar",
-          "address": "0x004d9050",
-          "size": 37,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_ConvertCInt64ToUnsignedShort",
-          "address": "0x004d9080",
-          "size": 18,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_SignExtendShort",
-          "address": "0x004d90a0",
-          "size": 37,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_ClearCInt64Hi",
-          "address": "0x004d90d0",
-          "size": 11,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_SignExtendCInt64",
-          "address": "0x004d90e0",
-          "size": 23,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CExpr2_BitwiseOrCInt64",
-          "address": "0x004d9100",
-          "size": 25,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "xor_64",
-          "address": "0x004d9120",
-          "size": 25,
-          "compiled_source": "src/frontend/CExpr2.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
           "name": "create_objectrefnode",
           "address": "0x00521ad0",
           "size": 334,
@@ -40938,8 +40960,8 @@
     },
     "src/GC_3_0a5_2/frontend/CInt64.c": {
       "source": "src/GC_3_0a5_2/frontend/CInt64.c",
-      "status": "attempted_incomplete",
-      "source_sha256": "ae2f60ad0cd2847242764e2cdde1aca5cb9170c36befec7487182bf7d6f91c29",
+      "status": "attempted_equivalent",
+      "source_sha256": "64715c8f3219d280b92d557aabf187a5710677ab8a7cfbc1300d9912b35267d5",
       "compiler": "CW 9.4 Windows x86 3.2.5 build 428",
       "flags": [
         "-O4",
@@ -40954,268 +40976,480 @@
         "-str",
         "noreadonly"
       ],
-      "strict_exact_count": 24,
-      "mapped_function_count": 26,
+      "strict_exact_count": 32,
+      "mapped_function_count": 36,
       "functions": [
         {
           "name": "CInt64_And",
           "address": "0x004d9140",
-          "target_size": 25,
-          "compiled_size": 25,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_And",
+          "baseline_address": "0x00474e30",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 25
         },
         {
           "name": "CInt64_IsInURange",
           "address": "0x004d9160",
-          "target_size": 83,
-          "compiled_size": 83,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 83,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_IsInURange",
+          "baseline_address": "0x00474e50",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 83
         },
         {
           "name": "CInt64_NotEqual",
           "address": "0x004d9420",
-          "target_size": 31,
-          "compiled_size": 31,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 31,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_NotEqual",
+          "baseline_address": "0x004750c0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 31
         },
         {
           "name": "CInt64_Equal",
           "address": "0x004d9440",
-          "target_size": 31,
-          "compiled_size": 31,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 31,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Equal",
+          "baseline_address": "0x004750f0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 31
         },
         {
           "name": "CInt64_GreaterEqualU",
           "address": "0x004d9460",
-          "target_size": 74,
-          "compiled_size": 74,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterEqualU",
+          "baseline_address": "0x00475110",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 74
         },
         {
           "name": "CInt64_GreaterEqual",
           "address": "0x004d94b0",
-          "target_size": 213,
-          "compiled_size": 213,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterEqual",
+          "baseline_address": "0x00475170",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 213
         },
         {
           "name": "CInt64_LessEqualU",
           "address": "0x004d9590",
-          "target_size": 74,
-          "compiled_size": 74,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessEqualU",
+          "baseline_address": "0x00475210",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 74
         },
         {
           "name": "CInt64_LessEqual",
           "address": "0x004d95e0",
-          "target_size": 213,
-          "compiled_size": 213,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessEqual",
+          "baseline_address": "0x00475270",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 213
         },
         {
           "name": "CInt64_GreaterU",
           "address": "0x004d96c0",
-          "target_size": 74,
-          "compiled_size": 74,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_GreaterU",
+          "baseline_address": "0x00475310",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 74
         },
         {
           "name": "CInt64_Greater",
           "address": "0x004d9710",
-          "target_size": 213,
-          "compiled_size": 213,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Greater",
+          "baseline_address": "0x00475370",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 213
         },
         {
           "name": "CInt64_LessU",
           "address": "0x004d97f0",
-          "target_size": 74,
-          "compiled_size": 74,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 74,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_LessU",
+          "baseline_address": "0x00475410",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 74
         },
         {
           "name": "CInt64_Less",
           "address": "0x004d9840",
-          "target_size": 213,
-          "compiled_size": 213,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 213,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Less",
+          "baseline_address": "0x00475470",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 213
         },
         {
           "name": "CInt64_ShrU",
           "address": "0x004d9920",
-          "target_size": 98,
-          "compiled_size": 98,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 98,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_ShrU",
+          "baseline_address": "0x00475560",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 98
         },
         {
           "name": "CInt64_Shr",
           "address": "0x004d9990",
-          "target_size": 122,
-          "compiled_size": 122,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 122,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Shr",
+          "baseline_address": "0x004755c0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 122
         },
         {
           "name": "CInt64_Shl",
           "address": "0x004d9a10",
-          "target_size": 88,
-          "compiled_size": 88,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 88,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Shl",
+          "baseline_address": "0x00475650",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 88
         },
         {
           "name": "CInt64_ModU",
           "address": "0x004d9a70",
-          "target_size": 38,
-          "compiled_size": 38,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 38,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_ModU",
+          "baseline_address": "0x004756b0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 38
         },
         {
           "name": "CInt64_Mod",
           "address": "0x004d9aa0",
-          "target_size": 377,
-          "compiled_size": 377,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 377,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Mod",
+          "baseline_address": "0x004756e0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 377
         },
         {
           "name": "CInt64_DivU",
           "address": "0x004d9c20",
-          "target_size": 39,
-          "compiled_size": 39,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 39,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_DivU",
+          "baseline_address": "0x00475890",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 39
         },
         {
           "name": "CInt64_Div",
           "address": "0x004d9c50",
-          "target_size": 570,
-          "compiled_size": 570,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 570,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Div",
+          "baseline_address": "0x004758c0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 570
         },
         {
           "name": "CInt64_Mul",
           "address": "0x004d9ff0",
-          "target_size": 559,
-          "compiled_size": 559,
-          "bytes_exact": false,
-          "fixups_exact": true,
-          "strict_exact": false,
-          "objdiff_percent": 99.94326
+          "size": 559,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Mul",
+          "baseline_address": "0x00475ca0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": false,
+          "compiled_size": 559
         },
         {
           "name": "CInt64_MulU",
           "address": "0x004da220",
-          "target_size": 162,
-          "compiled_size": 162,
-          "bytes_exact": false,
-          "fixups_exact": true,
-          "strict_exact": false,
-          "objdiff_percent": 88.92857
+          "size": 162,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_MulU",
+          "baseline_address": "0x00475f30",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": false,
+          "compiled_size": 162
         },
         {
           "name": "CInt64_Sub",
           "address": "0x004da2d0",
-          "target_size": 82,
-          "compiled_size": 82,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 82,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Sub",
+          "baseline_address": "0x00475fe0",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 82
         },
         {
           "name": "CInt64_Neg",
           "address": "0x004da330",
-          "target_size": 60,
-          "compiled_size": 60,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 60,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Inv",
+          "baseline_address": "0x00476040",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
+          "exact": true,
+          "compiled_size": 60
         },
         {
           "name": "CInt64_Add",
           "address": "0x004da370",
-          "target_size": 86,
-          "compiled_size": 86,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 86,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CInt64_Add",
+          "baseline_address": "0x00476090",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 86
         },
         {
           "name": "CInt64_Inv",
           "address": "0x004da3d0",
-          "target_size": 28,
-          "compiled_size": 28,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 28,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CFunc_BitwiseNot",
+          "baseline_address": "0x00476100",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
+          "exact": true,
+          "compiled_size": 28
         },
         {
           "name": "CInt64_Not",
           "address": "0x004da3f0",
-          "target_size": 53,
-          "compiled_size": 53,
-          "bytes_exact": true,
-          "fixups_exact": true,
-          "strict_exact": true,
-          "objdiff_percent": 100.0
+          "size": 53,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "baseline_name": "CFunc_LogicalNotCInt64",
+          "baseline_address": "0x00476130",
+          "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "identity_evidence": "Mac ordinary symbol names and reviewed two-word arithmetic semantics; strict bytes/objdiff.",
+          "exact": true,
+          "compiled_size": 53
+        },
+        {
+          "name": "CInt64_ConvertUInt8",
+          "address": "0x4d9030",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 18
+        },
+        {
+          "name": "CInt64_ConvertInt8",
+          "address": "0x4d9050",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 37
+        },
+        {
+          "name": "CInt64_ConvertUInt16",
+          "address": "0x4d9080",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 18
+        },
+        {
+          "name": "CInt64_ConvertInt16",
+          "address": "0x4d90a0",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 37
+        },
+        {
+          "name": "CInt64_ConvertUInt32",
+          "address": "0x4d90d0",
+          "size": 11,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 11
+        },
+        {
+          "name": "CInt64_ConvertInt32",
+          "address": "0x4d90e0",
+          "size": 23,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 23
+        },
+        {
+          "name": "CInt64_Or",
+          "address": "0x4d9100",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 25
+        },
+        {
+          "name": "CInt64_Xor",
+          "address": "0x4d9120",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": true,
+          "compiled_size": 25
+        },
+        {
+          "name": "CInt64_IsInRange",
+          "address": "0x4d91c0",
+          "size": 597,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "error": "unbound literal: .sw$310 (0 retail blocks, 0 strings)"
+        },
+        {
+          "name": "CInt64_DivMod",
+          "address": "0x4d9e90",
+          "size": 343,
+          "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+          "exact": false,
+          "compiled_size": 347
         }
       ],
       "owned_constants": [
@@ -41248,19 +41482,10 @@
       "mac_symbol_family_count": 51,
       "mac_symbols_without_windows_mapping": [
         "CInt64_ConvertFromLongDouble",
-        "CInt64_ConvertInt16",
-        "CInt64_ConvertInt32",
-        "CInt64_ConvertInt8",
         "CInt64_ConvertToLongDouble",
         "CInt64_ConvertUFromLongDouble",
-        "CInt64_ConvertUInt16",
-        "CInt64_ConvertUInt32",
-        "CInt64_ConvertUInt8",
         "CInt64_ConvertUToLongDouble",
-        "CInt64_DivMod",
         "CInt64_Init",
-        "CInt64_IsInRange",
-        "CInt64_Or",
         "CInt64_PrintBin",
         "CInt64_PrintDec",
         "CInt64_PrintHex",
@@ -41270,12 +41495,13 @@
         "CInt64_ScanHexString",
         "CInt64_ScanOctString",
         "CInt64_SignedCompare",
-        "CInt64_UnsignedCompare",
-        "CInt64_Xor"
+        "CInt64_UnsignedCompare"
       ],
       "nonmatching_review": {
         "CInt64_Mul": "Same instruction operations and call order; differing nonoverlapping stack temporary slots. All sign cases yield modulo-2**64 multiplication.",
-        "CInt64_MulU": "Same shift-and-add algorithm. Registers and scheduling differ. First loop adds rhs shifted by lhs low-word bits; second adds high-word cross product modulo 2**32."
+        "CInt64_MulU": "Same shift-and-add algorithm. Registers and scheduling differ. First loop adds rhs shifted by lhs low-word bits; second adds high-word cross product modulo 2**32.",
+        "CInt64_IsInRange": "Same signed bounds for widths1/2/4/8, invalid widths return false. Both operands XOR the high sign bit before unsigned comparison; negative values compare >=signed lower bound, nonnegative <=signed upper bound. Stack allocation and inline comparison scheduling differ. Two switch tables unresolved; no exact claim.",
+        "CInt64_DivMod": "Native64-step restoring unsigned division. Zero divisor returns without writing outputs; optional quotient/remainder outputs respected. Same carry shifts, unsigned >=test and modular subtraction through Add plus complemented divisor+1. Register permutation ECX/EDX and one extra spill/reload remain; no exact claim."
       },
       "bounded_validation": [
         {
@@ -41297,18 +41523,30 @@
           ],
           "result": "all equal to modulo-2**64 product",
           "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence."
+        },
+        {
+          "name": "CInt64_DivMod",
+          "cases_per_body": 800,
+          "bodies": [
+            "original",
+            "compiled"
+          ],
+          "result": "Unsigned quotient/remainder and zero-divisor/optional-output behavior agree in all cases.",
+          "limitation": "Bounded observed-instruction interpreter with exact Add call model; not exhaustive equivalence."
         }
       ],
       "limitations": [
         "Mac symbol presence does not prove a Windows out-of-line body.",
         "No complete-TU claim: additional symbol-family members need Windows ownership and porting.",
-        "Bounded arithmetic interpreter checks supplement instruction dataflow review; they are not exhaustive formal verification."
+        "Bounded arithmetic interpreter checks supplement instruction dataflow review; they are not exhaustive formal verification.",
+        "Two IsInRange switch tables remain unresolved; normal comparison does not substitute diagnostic table addresses.",
+        "ConvertInt32 native ABI returns void: imported integer return was unsupported; every current caller discards the return."
       ],
       "cp932_compatible": true,
       "membership_reviewed": false,
-      "scope": "All 26 currently mapped Windows functions reviewed; 51 Mac ordinary names are candidates, not proof of retained Windows bodies or TU membership.",
+      "scope": "All36 mapped Windows numeric-family members reviewed; canonical names from ordinary Mac symbols, not full original TU ownership proof.",
       "compiler_experiments": {
-        "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
+        "scope": "Historical compiler-profile evidence for prior26-member source; not refreshed for current expanded source.",
         "source_sha256": "ae2f60ad0cd2847242764e2cdde1aca5cb9170c36befec7487182bf7d6f91c29",
         "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
         "mapped_functions": 26,
@@ -41434,6 +41672,88 @@
           "space-nointrinsics": "1d76a10ab48a3126efc61553b09ee9ecabb94154febd673b604805b3f21c374f",
           "space-intrinsics": "e0e67ae6b3d3d24b3d8008b4bce9eb1f8ed8d38dd737b8a64b34b95e775aebb7"
         }
+      },
+      "data_evidence": [
+        {
+          "name": "_cint64_negone",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x00699b6e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_cint64_one",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x00699b76",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_cint64_max",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x00699b7e",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_cint64_min",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x00699b86",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_20",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x0064bca4",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_22",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_23",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        }
+      ],
+      "data_complete": false,
+      "expanded_members": {
+        "CExpr2_ConvertCInt64ToUInt8": "CInt64_ConvertUInt8",
+        "CExpr2_SignExtendSignedChar": "CInt64_ConvertInt8",
+        "CExpr2_ConvertCInt64ToUnsignedShort": "CInt64_ConvertUInt16",
+        "CExpr2_SignExtendShort": "CInt64_ConvertInt16",
+        "CExpr2_ClearCInt64Hi": "CInt64_ConvertUInt32",
+        "CExpr2_SignExtendCInt64": "CInt64_ConvertInt32",
+        "CExpr2_BitwiseOrCInt64": "CInt64_Or",
+        "xor_64": "CInt64_Xor"
       }
     },
     "src/GC_3_0a5_2/driver/ParserErrors.c": {

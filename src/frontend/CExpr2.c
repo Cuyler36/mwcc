@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CExpr2.c"
 #include "compiler/common.h"
 #include "compiler/CExpr2.h"
@@ -5826,12 +5827,15 @@ void CExpr2_ConvertDoubleToUnsignedCInt64(CInt64 *result, double value)
     result->lo = lo;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertCInt64ToUInt8(CInt64 *value)
 {
     value->lo = (UInt8)value->lo;
     value->hi = 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_SignExtendSignedChar(CInt64 *value)
 {
     SInt32 high;
@@ -5844,6 +5848,7 @@ void CExpr2_SignExtendSignedChar(CInt64 *value)
     }
     value->hi = high;
 }
+#endif
 
 UInt8 *CExpr2_ParseDecimalCInt64(CInt64 *v, char *s, Boolean *ovf)
 {
@@ -5896,12 +5901,15 @@ UInt8 *CExpr2_ParseDecimalCInt64(CInt64 *v, char *s, Boolean *ovf)
     return (UInt8 *)s;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ConvertCInt64ToUnsignedShort(CInt64 *value)
 {
     value->lo = (unsigned short)value->lo;
     value->hi = 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_SignExtendShort(register CInt64 *value)
 {
     UInt32 high;
@@ -5914,12 +5922,16 @@ void CExpr2_SignExtendShort(register CInt64 *value)
     }
     value->hi = high;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CExpr2_ClearCInt64Hi(CInt64 *value)
 {
     value->hi = 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CExpr2_SignExtendCInt64(CInt64 *value)
 {
     int highWord;
@@ -5933,17 +5945,22 @@ int CExpr2_SignExtendCInt64(CInt64 *value)
     value->hi = highWord;
     return highWord;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 CExpr2_BitwiseOrCInt64(CInt64 left, CInt64 right)
 {
     left.hi |= right.hi;
     left.lo |= right.lo;
     return left;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 xor_64(CInt64 left, CInt64 right)
 {
     left.hi ^= right.hi;
     left.lo ^= right.lo;
     return left;
 }
+#endif

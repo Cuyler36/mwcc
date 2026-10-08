@@ -1,6 +1,70 @@
 #define CERROR_FILE "unknown.c"
 #include "compiler/common.h"
 #include "GC_3_0a5_2/compiler/CInt64.h"
+
+void CInt64_ConvertUInt8(CInt64 *value)
+{
+    value->lo = (UInt8)value->lo;
+    value->hi = 0;
+}
+
+void CInt64_ConvertInt8(CInt64 *value)
+{
+    SInt32 high;
+    value->lo = (signed char)value->lo;
+    if (value->lo & 0x80000000)
+        high = -1;
+    else
+        high = 0;
+    value->hi = high;
+}
+
+void CInt64_ConvertUInt16(CInt64 *value)
+{
+    value->lo = (UInt16)value->lo;
+    value->hi = 0;
+}
+
+void CInt64_ConvertInt16(CInt64 *value)
+{
+    SInt32 high;
+    value->lo = (SInt16)value->lo;
+    if (value->lo & 0x80000000)
+        high = -1;
+    else
+        high = 0;
+    value->hi = high;
+}
+
+void CInt64_ConvertUInt32(CInt64 *value)
+{
+    value->hi = 0;
+}
+
+void CInt64_ConvertInt32(CInt64 *value)
+{
+    SInt32 high;
+    if (value->lo & 0x80000000)
+        high = -1;
+    else
+        high = 0;
+    value->hi = high;
+}
+
+CInt64 CInt64_Or(CInt64 left, CInt64 right)
+{
+    left.hi |= right.hi;
+    left.lo |= right.lo;
+    return left;
+}
+
+CInt64 CInt64_Xor(CInt64 left, CInt64 right)
+{
+    left.hi ^= right.hi;
+    left.lo ^= right.lo;
+    return left;
+}
+
 /* Static constants retained under their names in the GC3 symbols. */
 static const CInt64 cint64_negone = {-1, 0xffffffff};
 static const CInt64 cint64_one = {0, 1};

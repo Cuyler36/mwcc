@@ -4886,7 +4886,7 @@
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "attempted_unresolved"
+      "status": "attempted_incomplete"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
@@ -39295,9 +39295,10 @@
       "binding_policy": "Local BSS addresses derive from bounded original data operands; no generated-name global binding."
     },
     "src/GC_3_0a5_2/frontend/CInt64.c": {
-      "status": "attempted_unresolved",
-      "membership_reviewed": false,
-      "compiler": "cw94",
+      "source": "src/GC_3_0a5_2/frontend/CInt64.c",
+      "status": "attempted_incomplete",
+      "source_sha256": "ae2f60ad0cd2847242764e2cdde1aca5cb9170c36befec7487182bf7d6f91c29",
+      "compiler": "CW 9.4 Windows x86 3.2.5 build 428",
       "flags": [
         "-O4",
         "-opt",
@@ -39311,21 +39312,359 @@
         "-str",
         "noreadonly"
       ],
-      "known_original_functions": 26,
-      "exact_functions": 17,
-      "nonmatching_functions": 9,
-      "unresolved_functions": 0,
-      "semantic_changes": [
-        "Correct GC3 Neg/Inv/Not identities from symbols and bodies.",
-        "Keep baseline callers of misnamed Inv routed to Neg through VERSION3 compatibility alias."
+      "strict_exact_count": 24,
+      "mapped_function_count": 26,
+      "functions": [
+        {
+          "name": "CInt64_And",
+          "address": "0x004d9140",
+          "target_size": 25,
+          "compiled_size": 25,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_IsInURange",
+          "address": "0x004d9160",
+          "target_size": 83,
+          "compiled_size": 83,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_NotEqual",
+          "address": "0x004d9420",
+          "target_size": 31,
+          "compiled_size": 31,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Equal",
+          "address": "0x004d9440",
+          "target_size": 31,
+          "compiled_size": 31,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterEqualU",
+          "address": "0x004d9460",
+          "target_size": 74,
+          "compiled_size": 74,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterEqual",
+          "address": "0x004d94b0",
+          "target_size": 213,
+          "compiled_size": 213,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessEqualU",
+          "address": "0x004d9590",
+          "target_size": 74,
+          "compiled_size": 74,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessEqual",
+          "address": "0x004d95e0",
+          "target_size": 213,
+          "compiled_size": 213,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_GreaterU",
+          "address": "0x004d96c0",
+          "target_size": 74,
+          "compiled_size": 74,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Greater",
+          "address": "0x004d9710",
+          "target_size": 213,
+          "compiled_size": 213,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_LessU",
+          "address": "0x004d97f0",
+          "target_size": 74,
+          "compiled_size": 74,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Less",
+          "address": "0x004d9840",
+          "target_size": 213,
+          "compiled_size": 213,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ShrU",
+          "address": "0x004d9920",
+          "target_size": 98,
+          "compiled_size": 98,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Shr",
+          "address": "0x004d9990",
+          "target_size": 122,
+          "compiled_size": 122,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Shl",
+          "address": "0x004d9a10",
+          "target_size": 88,
+          "compiled_size": 88,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_ModU",
+          "address": "0x004d9a70",
+          "target_size": 38,
+          "compiled_size": 38,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Mod",
+          "address": "0x004d9aa0",
+          "target_size": 377,
+          "compiled_size": 377,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_DivU",
+          "address": "0x004d9c20",
+          "target_size": 39,
+          "compiled_size": 39,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Div",
+          "address": "0x004d9c50",
+          "target_size": 570,
+          "compiled_size": 570,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Mul",
+          "address": "0x004d9ff0",
+          "target_size": 559,
+          "compiled_size": 559,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "strict_exact": false,
+          "objdiff_percent": 99.94326
+        },
+        {
+          "name": "CInt64_MulU",
+          "address": "0x004da220",
+          "target_size": 162,
+          "compiled_size": 162,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "strict_exact": false,
+          "objdiff_percent": 88.92857
+        },
+        {
+          "name": "CInt64_Sub",
+          "address": "0x004da2d0",
+          "target_size": 82,
+          "compiled_size": 82,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Neg",
+          "address": "0x004da330",
+          "target_size": 60,
+          "compiled_size": 60,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Add",
+          "address": "0x004da370",
+          "target_size": 86,
+          "compiled_size": 86,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Inv",
+          "address": "0x004da3d0",
+          "target_size": 28,
+          "compiled_size": 28,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CInt64_Not",
+          "address": "0x004da3f0",
+          "target_size": 53,
+          "compiled_size": 53,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        }
       ],
-      "unresolved": [
-        "Nine functions require GC3 semantic/code-shape review.",
-        "Remaining original TU membership/data completeness not established."
+      "owned_constants": [
+        {
+          "name": "cint64_negone",
+          "address": "0x699b6e",
+          "size": 8,
+          "bytes_exact": true
+        },
+        {
+          "name": "cint64_one",
+          "address": "0x699b76",
+          "size": 8,
+          "bytes_exact": true
+        },
+        {
+          "name": "cint64_max",
+          "address": "0x699b7e",
+          "size": 8,
+          "bytes_exact": true
+        },
+        {
+          "name": "cint64_min",
+          "address": "0x699b86",
+          "size": 8,
+          "bytes_exact": true
+        }
       ],
-      "reference_resolution": {
-        "_cint64_min": "0x00699b86: original loads and 80000000/00000000 words verified"
-      }
+      "unproven_constant_omitted": "cint64_zero: no verified Windows address",
+      "mac_symbol_family_count": 51,
+      "mac_symbols_without_windows_mapping": [
+        "CInt64_ConvertFromLongDouble",
+        "CInt64_ConvertInt16",
+        "CInt64_ConvertInt32",
+        "CInt64_ConvertInt8",
+        "CInt64_ConvertToLongDouble",
+        "CInt64_ConvertUFromLongDouble",
+        "CInt64_ConvertUInt16",
+        "CInt64_ConvertUInt32",
+        "CInt64_ConvertUInt8",
+        "CInt64_ConvertUToLongDouble",
+        "CInt64_DivMod",
+        "CInt64_Init",
+        "CInt64_IsInRange",
+        "CInt64_Or",
+        "CInt64_PrintBin",
+        "CInt64_PrintDec",
+        "CInt64_PrintHex",
+        "CInt64_ScanAsmNumber",
+        "CInt64_ScanBinString",
+        "CInt64_ScanDecString",
+        "CInt64_ScanHexString",
+        "CInt64_ScanOctString",
+        "CInt64_SignedCompare",
+        "CInt64_UnsignedCompare",
+        "CInt64_Xor"
+      ],
+      "nonmatching_review": {
+        "CInt64_Mul": "Same instruction operations and call order; differing nonoverlapping stack temporary slots. All sign cases yield modulo-2**64 multiplication.",
+        "CInt64_MulU": "Same shift-and-add algorithm. Registers and scheduling differ. First loop adds rhs shifted by lhs low-word bits; second adds high-word cross product modulo 2**32."
+      },
+      "bounded_validation": [
+        {
+          "name": "CInt64_Mul",
+          "cases_per_body": 564,
+          "bodies": [
+            "original",
+            "compiled"
+          ],
+          "result": "all equal to modulo-2**64 product",
+          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence."
+        },
+        {
+          "name": "CInt64_MulU",
+          "cases_per_body": 564,
+          "bodies": [
+            "original",
+            "compiled"
+          ],
+          "result": "all equal to modulo-2**64 product",
+          "limitation": "Bounded observed-instruction interpreter with exact Add/MulU call models; not exhaustive formal equivalence."
+        }
+      ],
+      "limitations": [
+        "Mac symbol presence does not prove a Windows out-of-line body.",
+        "No complete-TU claim: additional symbol-family members need Windows ownership and porting.",
+        "Bounded arithmetic interpreter checks supplement instruction dataflow review; they are not exhaustive formal verification."
+      ],
+      "cp932_compatible": true,
+      "membership_reviewed": false,
+      "scope": "All 26 currently mapped Windows functions reviewed; 51 Mac ordinary names are candidates, not proof of retained Windows bodies or TU membership."
     },
     "src/GC_3_0a5_2/driver/ParserErrors.c": {
       "status": "exact",

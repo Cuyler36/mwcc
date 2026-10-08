@@ -64,6 +64,16 @@ source file to avoid contaminating unrelated file-local names.
 
 ## ParserErrors.c: complete Windows unit
 
+The CInt64 attempt now matches 24 of 26 mapped Windows functions. Equivalent
+comparison control flow, helper placement, and local declaration order recover
+the signed comparisons and arithmetic right shift. Mul and MulU remain
+nonmatches after compiler/code-shape experiments; instruction/dataflow review
+and 564 bounded cases per original/compiled body agree on modulo-2^64 products.
+This is not exhaustive proof. Four constants contribute 32 verified data bytes;
+the unreferenced zero constant was removed because its Windows address is
+unproven. The Mac ordinary-symbol list has 51 CInt64 names, with 25 still lacking
+Windows mappings. The TU is explicitly incomplete despite the 24 exact bodies.
+
 All 11 retained Windows functions match under CW94 with space and intrinsic
 optimization: 654 code bytes, 24 literal bytes, and 1024 BSS bytes. The original
 static `errorbuf` belongs to this TU. Resource IDs are signed shorts; resource

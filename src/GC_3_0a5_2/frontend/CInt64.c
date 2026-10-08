@@ -1,8 +1,11 @@
 #define CERROR_FILE "unknown.c"
 #include "compiler/common.h"
 #include "GC_3_0a5_2/compiler/CInt64.h"
-#include "compiler/IroLoop.h"
-#include "compiler/IroRangePropagation.h"
+/* Static constants retained under their names in the GC3 symbols. */
+static const CInt64 cint64_negone = {-1, 0xffffffff};
+static const CInt64 cint64_one = {0, 1};
+static const CInt64 cint64_max = {0x7fffffff, 0xffffffff};
+static const CInt64 cint64_min = {0x80000000, 0};
 static CInt64 mask_xor(CInt64 v, CInt64 m)
 {
     v.hi ^= m.hi;
@@ -139,44 +142,69 @@ unsigned char CInt64_Equal(CInt64 left, CInt64 right)
     return left.hi == right.hi && left.lo == right.lo;
 }
 
-Boolean CInt64_GreaterEqualU(CInt64 a, CInt64 b)
+SInt32 CInt64_UnsignedCompare(CInt64 *a, CInt64 *b)
 {
-    SInt32 cmp;
-    do {
-        if (a.hi == b.hi) {
-            if (a.lo < b.lo) {
-                cmp = -1;
-                break;
-            }
-            if (a.lo <= b.lo) {
-                cmp = 0;
-                break;
-            }
-        } else if ((UInt32)a.hi < (UInt32)b.hi) {
-            cmp = -1;
-            break;
-        }
-        cmp = 1;
-    } while (0);
-    return cmp >= 0;
+    if (a->hi == b->hi) {
+        if (a->lo < b->lo)
+            return -1;
+        if (a->lo > b->lo)
+            return 1;
+        return 0;
+    }
+    if ((UInt32)a->hi < (UInt32)b->hi)
+        return -1;
+    return 1;
+}
+
+Boolean CInt64_GreaterEqualU(CInt64 x, CInt64 y)
+{
+    int comparison;
+
+    if (x.hi == y.hi) {
+        if (x.lo < y.lo)
+            comparison = -1;
+        else if (x.lo > y.lo)
+            comparison = 1;
+        else
+            comparison = 0;
+    } else if ((UInt32)x.hi < (UInt32)y.hi)
+        comparison = -1;
+    else
+        comparison = 1;
+
+    return comparison >= 0;
 }
 
 Boolean CInt64_GreaterEqual(CInt64 a, CInt64 b)
 {
-    CInt64 y, x;
+    CInt64 x, y;
     x = xor64(a, cint64_min);
     y = xor64(b, cint64_min);
     return CInt64_UnsignedCompare(&x, &y) >= 0;
 }
 
-Boolean CInt64_LessEqualU(CInt64 a, CInt64 b)
+Boolean CInt64_LessEqualU(CInt64 x, CInt64 y)
 {
-    return compare_u64(a.hi, a.lo, b.hi, b.lo) <= 0;
+    int comparison;
+
+    if (x.hi == y.hi) {
+        if (x.lo < y.lo)
+            comparison = -1;
+        else if (x.lo > y.lo)
+            comparison = 1;
+        else
+            comparison = 0;
+    } else if ((UInt32)x.hi < (UInt32)y.hi)
+        comparison = -1;
+    else
+        comparison = 1;
+
+    return comparison <= 0;
 }
 
 Boolean CInt64_LessEqual(CInt64 a, CInt64 b)
 {
-    CInt64 y, x;
+    CInt64 x, y;
     x = xor64(a, cint64_min);
     y = xor64(b, cint64_min);
     return CInt64_UnsignedCompare(&x, &y) <= 0;
@@ -203,16 +231,12 @@ Boolean CInt64_GreaterU(CInt64 x, CInt64 y)
 
 Boolean CInt64_Greater(CInt64 a, CInt64 b)
 {
-    CInt64 y;
     CInt64 x;
+    CInt64 y;
 
     x = xor_key(a, cint64_min);
     y = xor_key(b, cint64_min);
-    {
-        CInt64 *xp = &x;
-        CInt64 *yp = &y;
-        return CInt64_UnsignedCompare(xp, yp) > 0;
-    }
+    return CInt64_UnsignedCompare(&x, &y) > 0;
 }
 
 Boolean CInt64_LessU(CInt64 a, CInt64 b)
@@ -237,25 +261,11 @@ Boolean CInt64_LessU(CInt64 a, CInt64 b)
 
 Boolean CInt64_Less(CInt64 a, CInt64 b)
 {
-    CInt64 y;
     CInt64 x;
+    CInt64 y;
     x = unmask(a, cint64_min);
     y = unmask(b, cint64_min);
     return CInt64_UnsignedCompare(&x, &y) < 0;
-}
-
-SInt32 CInt64_UnsignedCompare(CInt64 *a, CInt64 *b)
-{
-    if (a->hi == b->hi) {
-        if (a->lo < b->lo)
-            return -1;
-        if (a->lo > b->lo)
-            return 1;
-        return 0;
-    }
-    if ((UInt32)a->hi < (UInt32)b->hi)
-        return -1;
-    return 1;
 }
 
 CInt64 CInt64_ShrU(CInt64 value, CInt64 count)
@@ -285,8 +295,8 @@ CInt64 CInt64_ShrU(CInt64 value, CInt64 count)
 CInt64 CInt64_Shr(CInt64 value, CInt64 count)
 {
     if (count.hi == 0 && count.lo < 64) {
-        UInt32 lo;
         SInt32 hi;
+        UInt32 lo;
         UInt32 n;
         hi = value.hi;
         lo = value.lo;

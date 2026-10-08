@@ -2406,5 +2406,17 @@
   "optimize_branches": {
     "name": "optimizefinalbranches",
     "source": "src/GC_3_0a5_2/backend/PCodeAssembly.c"
+  },
+  "CDecl_NewPointerType": {
+    "name": "CDecl_NewPointerType",
+    "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+  },
+  "CDecl_NewArrayType": {
+    "name": "CDecl_NewArrayType",
+    "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+  },
+  "CDecl_NewTemplDepType": {
+    "name": "CDecl_NewTemplDepType",
+    "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
   }
 }

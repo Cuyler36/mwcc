@@ -16176,106 +16176,378 @@
       "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
       "original_filename": "CTypeTools.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_00544710",
+          "name": "fn_00544300",
+          "address": "0x544300",
+          "size": 249,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CDecl_NewTemplDepType",
+          "address": "0x544400",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544430",
+          "address": "0x544430",
+          "size": 131,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005444c0",
+          "address": "0x5444c0",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_CopyTypePointer",
+          "address": "0x544500",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CDecl_NewPointerType",
+          "address": "0x544530",
+          "size": 42,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CDecl_NewArrayType",
+          "address": "0x544560",
+          "size": 69,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CDecl_NewOpaqueType",
+          "address": "0x5445b0",
+          "size": 47,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005445e0",
+          "address": "0x5445e0",
+          "size": 55,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544620",
+          "address": "0x544620",
+          "size": 80,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_DataObjectTypeCompare",
+          "address": "0x544670",
+          "size": 147,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544710",
           "address": "0x00544710",
           "size": 878,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": true
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00544890"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_00544d00",
+          "name": "fn_00544a80",
+          "address": "0x544a80",
+          "size": 267,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544b90",
+          "address": "0x544b90",
+          "size": 105,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_CanCreateTypeInstance",
+          "address": "0x544c00",
+          "size": 244,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": true
+          }
+        },
+        {
+          "name": "fn_00544d00",
           "address": "0x00544d00",
           "size": 501,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": true
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00544dfa"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_00545210",
+          "name": "fn_00544f00",
+          "address": "0x544f00",
+          "size": 81,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00544f60",
+          "address": "0x544f60",
+          "size": 81,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_CheckLocalType",
+          "address": "0x544fc0",
+          "size": 81,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00545020",
+          "address": "0x545020",
+          "size": 17,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00545040",
+          "address": "0x545040",
+          "size": 105,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_CombineQuals",
+          "address": "0x5450b0",
+          "size": 173,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_CombineAlignmentQuals",
+          "address": "0x545160",
+          "size": 171,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00545210",
           "address": "0x00545210",
           "size": 266,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00545310"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_00545400",
+          "name": "fn_00545320",
+          "address": "0x545320",
+          "size": 222,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00545400",
           "address": "0x00545400",
           "size": 151,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x0054543e"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_005454a0",
+          "name": "fn_005454a0",
           "address": "0x005454a0",
           "size": 17,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005454a7"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_005454c0",
+          "name": "fn_005454c0",
           "address": "0x005454c0",
           "size": 17,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005454c7"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
         },
         {
-          "name": "FUN_005454e0",
+          "name": "fn_005454e0",
           "address": "0x005454e0",
           "size": 114,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00545549"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+        },
+        {
+          "name": "CTTool_Cleanup",
+          "address": "0x545560",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTTool_Setup",
+          "address": "0x545570",
+          "size": 1,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed full native CFG and full-image call/prologue/filename-fixup audit recorded in TU ledger",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
@@ -30746,28 +31018,6 @@
           "call_addresses": [
             "0x00514de7"
           ]
-        },
-        {
-          "name": "CDecl_NewPointerType",
-          "address": "0x00544530",
-          "size": 42,
-          "compiled_source": "src/frontend/CDecl.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CDecl_NewArrayType",
-          "address": "0x00544560",
-          "size": 69,
-          "compiled_source": "src/frontend/CDecl.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
         }
       ],
       "mac_functions": [],
@@ -101020,7 +101270,7 @@
       },
       "membership_audit": "build/pcodeassembly-membership-audit.json",
       "membership": {
-        "windows_bound": "0x5830b0..0x585517, seven entries; prior initpcode582fc0 belongs PCode; next585520 begins intrinsic family",
+        "windows_bound": "0x5830b0..0x585517, seven entries; prior initpcode582fc0 belongs PCode; next585520 begins StackFrame.c compute/sizing family",
         "mac_members": [
           "pcode_update_mem_labeldiff_imm",
           "assemblepcode",
@@ -102043,6 +102293,1355 @@
         {
           "version": "GC_1_3",
           "normalized_object_sha256": "d20ca307c5df2306954ffe3cbb5310ac31352e9e273bef91b120d4977d28fb5e",
+          "unchanged": true
+        }
+      ]
+    },
+    "src/GC_3_0a5_2/frontend/CTypeTools.c": {
+      "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+      "source_sha256": "ab661bc0653f3f853ea61db4bb373c5d8bc91fea05764b9ab85f9d3f2fe3dd99",
+      "frozen": true,
+      "compiler": "CodeWarrior Windows9.4",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "function_count": 31,
+      "strict_exact": 25,
+      "all_identified_members_best_attempted": true,
+      "nonmatches": {
+        "fn_00544300": "Reviewed all native branches: accepted integral/enum kinds; four option gates and long-long-size restriction; fallback unsigned-long type; signed width checks with optional zero; packed12B result writes kind8,size,element+6,width+11. Nonmatch is branch merging/instruction scheduling; packed fields corrected and verified from disassembly.",
+        "CTTool_DataObjectTypeCompare": "Reviewed qualifier mask0xb, array-count paths, native is_typesame signed16 return, zero-size replacement and Boolean success. Remaining mismatch is block ordering and use of existing type pointer register versus reload.",
+        "fn_00544710": "Reviewed all14 switch slots and packed list fields: scalar unequal-address returnfalse; pointer qualifier mask200023 and tail recursion; array count+14/unknown+18; function result+10/qualifiers+14/args+6; member-function pointer result+14/owner+18/flags+22/attributes+26; enum next2/name6/value14+18; record next0/type4/a8/b12/c16; class next4/type12/a8/b16/c20 with matchingtag42/flag200000. Independent static review, no execution harness; original case addresses recorded. Nonexact local labels prevent safe switch-table binding, so no CLI score or data completeness claim.",
+        "fn_00544a80": "Reviewed reference unwrapping, unknown-type diagnostic, full-ID qualifier diagnostic maske0cfff7c, statebyte46 and options, unwrapping arrays, default-constructor/destructor checks, constructor object kind5/type+16/function flags+22. Native permits no null-check before dereferencing object type; preserved. Nonmatch block ordering/duplicated epilogues.",
+        "CTTool_CanCreateTypeInstance": "Reviewed original8 table slots, array-unwrapping; void/function rejection; record size-or-bit0at17; class completed-or-instantiated flags then freshly reread abstract/constructor state, diagnostics278e/2798/27cf; default checks original rather than unwrapped type size and arrayunknown18. Independent static review; no unsafe switch binding, no CLI score.",
+        "fn_00544d00": "Reviewed all17 switch slots with signedkind offset-2: report-only incomplete-array warning; accepted -2,-1,1,2,3,4,10,11,14; void/function rejection; record bit0at17; class completion/instantiation and refreshedflags; arrays unknown18/size; referencesqual20 rejected with27d4 only when reporting; defaults assertline494. Diagnostics preserve native full IDs and variadic argument counts. Independent static review; no unsafe switch binding, no CLI score."
+      },
+      "membership_evidence": [
+        "All8 whole-image CSV CTTool_* entries occur in544500..545570 and are emitted/mapped.",
+        "All7 filename assertions occur within544710..54554e and are emitted/mapped.",
+        "Full executable direct calls and padded-prologue scan found no unidentified entry inside544300..545580.",
+        "Full executable PE fixup references to CTypeTools.c13B filename have no out-of-cluster references.",
+        "Cluster begins with native bitfield construction after5442b0 unrelated hash-table initialization; ends CTTool_Cleanup/Setup before545580 inline-function processing.",
+        "Mac8map contains no CTTool_ ordinary names or CTypeTools source name: this is a new split relative to1.2.5; no platform-absence claims."
+      ],
+      "membership_limits": [
+        "No source debug records in Windows; source extent inferred from assertion/canonical-name cluster and semantic seams, not proved by linker unit metadata.",
+        "Address names retained for all unsupported native identities; no guessed CTTool names."
+      ],
+      "data": {
+        "allocated_data_bytes": 13,
+        "allocated_rdata_bytes": 180,
+        "bss_bytes": 0,
+        "data_complete": false,
+        "exact": [
+          "filename69aaec/13",
+          "fn_005454e0 switch64f27c/24"
+        ],
+        "unresolved": [
+          "fn_00544710 switch56B",
+          "CTTool_CanCreateTypeInstance switch32B",
+          "fn_00544d00 switch68B"
+        ],
+        "no_manual_anonymous_bindings": true
+      },
+      "baseline_integration": {
+        "move_existing_rows": [
+          "CDecl_NewPointerType544530",
+          "CDecl_NewArrayType544560"
+        ],
+        "guard_old_definitions": [
+          "CDecl_NewPointerType",
+          "CDecl_NewArrayType",
+          "CDecl_NewTemplDepType"
+        ],
+        "warnings": [
+          "Native CDecl_NewArrayType has SAME2argument ABI but20B TypeArray with calculatedcount14 andunknown18; baseline14Bheader/callers not automatically migrated.",
+          "CDecl_NewOpaqueType resembles oldNewStructType but different canonical identity: no alias asserted.",
+          "New constructorreturn layouts must be respected by unmigrated callers."
+        ]
+      },
+      "encoding": "CP932 encodable (ASCII)",
+      "evidence": [
+        "build/CTypeTools-member-checklist.json",
+        "build/CTypeTools-native-switch-tables.json",
+        "build/CTypeTools-owned-data.json",
+        "build/CTypeTools-full-image-audit.json",
+        "build/CTypeTools-emitted-inventory.json",
+        "build/CTypeTools-reviewed-rows.json",
+        "build/CTypeTools-probe-bindings.json",
+        "build/CTypeTools-diff.txt",
+        "build/CTypeTools-retail.txt"
+      ],
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 31,
+      "strict_exact_count": 25,
+      "mapped_members": [
+        {
+          "name": "fn_00544300",
+          "address": "0x544300",
+          "size": 249,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 248,
+          "strict_exact": false,
+          "objdiff_percent": 84.35065,
+          "semantic_review": "Reviewed all native branches: accepted integral/enum kinds; four option gates and long-long-size restriction; fallback unsigned-long type; signed width checks with optional zero; packed12B result writes kind8,size,element+6,width+11. Nonmatch is branch merging/instruction scheduling; packed fields corrected and verified from disassembly.",
+          "best_attempt": true
+        },
+        {
+          "name": "CDecl_NewTemplDepType",
+          "address": "0x544400",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 43,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544430",
+          "address": "0x544430",
+          "size": 131,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 131,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_005444c0",
+          "address": "0x5444c0",
+          "size": 49,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 49,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_CopyTypePointer",
+          "address": "0x544500",
+          "size": 39,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 39,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CDecl_NewPointerType",
+          "address": "0x544530",
+          "size": 42,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 42,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CDecl_NewArrayType",
+          "address": "0x544560",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 69,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CDecl_NewOpaqueType",
+          "address": "0x5445b0",
+          "size": 47,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 47,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_005445e0",
+          "address": "0x5445e0",
+          "size": 55,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 55,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544620",
+          "address": "0x544620",
+          "size": 80,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 80,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_DataObjectTypeCompare",
+          "address": "0x544670",
+          "size": 147,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 142,
+          "strict_exact": false,
+          "objdiff_percent": 91.38461,
+          "semantic_review": "Reviewed qualifier mask0xb, array-count paths, native is_typesame signed16 return, zero-size replacement and Boolean success. Remaining mismatch is block ordering and use of existing type pointer register versus reload.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544710",
+          "address": "0x544710",
+          "size": 878,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "error": "unbound literal: .sw$269 (0 retail blocks, 0 strings)",
+          "semantic_review": "Reviewed all14 switch slots and packed list fields: scalar unequal-address returnfalse; pointer qualifier mask200023 and tail recursion; array count+14/unknown+18; function result+10/qualifiers+14/args+6; member-function pointer result+14/owner+18/flags+22/attributes+26; enum next2/name6/value14+18; record next0/type4/a8/b12/c16; class next4/type12/a8/b16/c20 with matchingtag42/flag200000. Independent static review, no execution harness; original case addresses recorded. Nonexact local labels prevent safe switch-table binding, so no CLI score or data completeness claim.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544a80",
+          "address": "0x544a80",
+          "size": 267,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 267,
+          "strict_exact": false,
+          "objdiff_percent": 81.8617,
+          "semantic_review": "Reviewed reference unwrapping, unknown-type diagnostic, full-ID qualifier diagnostic maske0cfff7c, statebyte46 and options, unwrapping arrays, default-constructor/destructor checks, constructor object kind5/type+16/function flags+22. Native permits no null-check before dereferencing object type; preserved. Nonmatch block ordering/duplicated epilogues.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544b90",
+          "address": "0x544b90",
+          "size": 105,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 105,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_CanCreateTypeInstance",
+          "address": "0x544c00",
+          "size": 244,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "error": "unbound literal: .sw$385 (0 retail blocks, 0 strings)",
+          "semantic_review": "Reviewed original8 table slots, array-unwrapping; void/function rejection; record size-or-bit0at17; class completed-or-instantiated flags then freshly reread abstract/constructor state, diagnostics278e/2798/27cf; default checks original rather than unwrapped type size and arrayunknown18. Independent static review; no unsafe switch binding, no CLI score.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544d00",
+          "address": "0x544d00",
+          "size": 501,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "error": "unbound literal: .sw$457 (0 retail blocks, 0 strings)",
+          "semantic_review": "Reviewed all17 switch slots with signedkind offset-2: report-only incomplete-array warning; accepted -2,-1,1,2,3,4,10,11,14; void/function rejection; record bit0at17; class completion/instantiation and refreshedflags; arrays unknown18/size; referencesqual20 rejected with27d4 only when reporting; defaults assertline494. Diagnostics preserve native full IDs and variadic argument counts. Independent static review; no unsafe switch binding, no CLI score.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544f00",
+          "address": "0x544f00",
+          "size": 81,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 81,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00544f60",
+          "address": "0x544f60",
+          "size": 81,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 81,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_CheckLocalType",
+          "address": "0x544fc0",
+          "size": 81,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 81,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00545020",
+          "address": "0x545020",
+          "size": 17,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 17,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00545040",
+          "address": "0x545040",
+          "size": 105,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 105,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_CombineQuals",
+          "address": "0x5450b0",
+          "size": 173,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 173,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_CombineAlignmentQuals",
+          "address": "0x545160",
+          "size": 171,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 171,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00545210",
+          "address": "0x545210",
+          "size": 266,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 266,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00545320",
+          "address": "0x545320",
+          "size": 222,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 222,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_00545400",
+          "address": "0x545400",
+          "size": 151,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 151,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_005454a0",
+          "address": "0x5454a0",
+          "size": 17,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 17,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_005454c0",
+          "address": "0x5454c0",
+          "size": 17,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 17,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "fn_005454e0",
+          "address": "0x5454e0",
+          "size": 114,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 114,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_Cleanup",
+          "address": "0x545560",
+          "size": 1,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 1,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        },
+        {
+          "name": "CTTool_Setup",
+          "address": "0x545570",
+          "size": 1,
+          "source": "src/GC_3_0a5_2/frontend/CTypeTools.c",
+          "compiled_size": 1,
+          "strict_exact": true,
+          "objdiff_percent": 100.0,
+          "semantic_review": "Strict resolved code bytes and complete PE loader-fixup set exactly equal; source ABI and native field accesses reviewed.",
+          "best_attempt": true
+        }
+      ],
+      "owned_data": [
+        {
+          "name": "_filename",
+          "section": ".data",
+          "size": 13,
+          "method": "named binding",
+          "address": "0x0069aaec",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_15",
+          "section": ".rdata",
+          "size": 56,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_19",
+          "section": ".rdata",
+          "size": 32,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_21",
+          "section": ".rdata",
+          "size": 68,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_35",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x0064f27c",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "whole_image_audit": {
+        "cluster": [
+          "0x544300",
+          "0x545580"
+        ],
+        "named_entries": [
+          {
+            "name": "fn_00544300",
+            "address": "0x544300",
+            "size": 249,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CDecl_NewTemplDepType",
+            "address": "0x544400",
+            "size": 43,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544430",
+            "address": "0x544430",
+            "size": 131,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_005444c0",
+            "address": "0x5444c0",
+            "size": 49,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_CopyTypePointer",
+            "address": "0x544500",
+            "size": 39,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CDecl_NewPointerType",
+            "address": "0x544530",
+            "size": 42,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CDecl_NewArrayType",
+            "address": "0x544560",
+            "size": 69,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CDecl_NewOpaqueType",
+            "address": "0x5445b0",
+            "size": 47,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_005445e0",
+            "address": "0x5445e0",
+            "size": 55,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544620",
+            "address": "0x544620",
+            "size": 80,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_DataObjectTypeCompare",
+            "address": "0x544670",
+            "size": 147,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544710",
+            "address": "0x544710",
+            "size": 878,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544a80",
+            "address": "0x544a80",
+            "size": 267,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544b90",
+            "address": "0x544b90",
+            "size": 105,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_CanCreateTypeInstance",
+            "address": "0x544c00",
+            "size": 244,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544d00",
+            "address": "0x544d00",
+            "size": 501,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544f00",
+            "address": "0x544f00",
+            "size": 81,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00544f60",
+            "address": "0x544f60",
+            "size": 81,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_CheckLocalType",
+            "address": "0x544fc0",
+            "size": 81,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00545020",
+            "address": "0x545020",
+            "size": 17,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00545040",
+            "address": "0x545040",
+            "size": 105,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_CombineQuals",
+            "address": "0x5450b0",
+            "size": 173,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_CombineAlignmentQuals",
+            "address": "0x545160",
+            "size": 171,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00545210",
+            "address": "0x545210",
+            "size": 266,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00545320",
+            "address": "0x545320",
+            "size": 222,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_00545400",
+            "address": "0x545400",
+            "size": 151,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_005454a0",
+            "address": "0x5454a0",
+            "size": 17,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_005454c0",
+            "address": "0x5454c0",
+            "size": 17,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "fn_005454e0",
+            "address": "0x5454e0",
+            "size": 114,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_Cleanup",
+            "address": "0x545560",
+            "size": 1,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          },
+          {
+            "name": "CTTool_Setup",
+            "address": "0x545570",
+            "size": 1,
+            "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+          }
+        ],
+        "direct_call_targets": {
+          "0x544400": [
+            "0x45189a",
+            "0x4e8fcc",
+            "0x4e9038",
+            "0x4e9094",
+            "0x4e9107",
+            "0x4e9130",
+            "0x4ef36c",
+            "0x50eee8",
+            "0x50f7c2",
+            "0x50f802",
+            "0x514243",
+            "0x5145ed",
+            "0x52baa0",
+            "0x52bfd4",
+            "0x539762",
+            "0x539da7",
+            "0x53d1fe",
+            "0x53e24d",
+            "0x53e2d6",
+            "0x53e34b",
+            "0x53e444",
+            "0x53e462",
+            "0x5a67ca",
+            "0x5dc33c",
+            "0x5dc354"
+          ],
+          "0x545320": [
+            "0x4519c0",
+            "0x452026",
+            "0x54510b",
+            "0x545149",
+            "0x5451b7",
+            "0x5451f2"
+          ],
+          "0x544500": [
+            "0x4529c7",
+            "0x453482",
+            "0x453546",
+            "0x538591",
+            "0x538823",
+            "0x5388b0",
+            "0x538923",
+            "0x53f14d",
+            "0x53f19c",
+            "0x53f1ee",
+            "0x5413b0",
+            "0x5b7d5f",
+            "0x5de131",
+            "0x5e0ec7",
+            "0x5e22d4"
+          ],
+          "0x545560": [
+            "0x4576f5"
+          ],
+          "0x545570": [
+            "0x4577ad"
+          ],
+          "0x545210": [
+            "0x462b14",
+            "0x509fd3",
+            "0x50e327",
+            "0x5450f5",
+            "0x5450fe",
+            "0x545121",
+            "0x545138",
+            "0x5451a1",
+            "0x5451aa",
+            "0x5451c7",
+            "0x5451e1"
+          ],
+          "0x544530": [
+            "0x49c3f2",
+            "0x49e827",
+            "0x49ea74",
+            "0x49eb35",
+            "0x49eb3c",
+            "0x49eb54",
+            "0x4a5b14",
+            "0x4a5e23",
+            "0x4aec43",
+            "0x4b32a4",
+            "0x4b5123",
+            "0x4efff2",
+            "0x4f0002",
+            "0x50b14c",
+            "0x50b335",
+            "0x50b557",
+            "0x50b6d0",
+            "0x5114b1",
+            "0x511834",
+            "0x5118d5",
+            "0x5131b2",
+            "0x5149ba",
+            "0x51813d",
+            "0x5181ae",
+            "0x520e33",
+            "0x521b47",
+            "0x521c4b",
+            "0x52549b",
+            "0x526919",
+            "0x526ca3",
+            "0x526d3b",
+            "0x526f14",
+            "0x526f39",
+            "0x52c178",
+            "0x52eb6b",
+            "0x52eb79",
+            "0x52ebc3",
+            "0x535c3c",
+            "0x535f46",
+            "0x536049",
+            "0x538cba",
+            "0x53ef05",
+            "0x53f497",
+            "0x53f4af",
+            "0x54125c",
+            "0x541ad1",
+            "0x541ad8",
+            "0x54409c",
+            "0x545e16",
+            "0x546cf6",
+            "0x55150f",
+            "0x553236",
+            "0x5591c0",
+            "0x55946f",
+            "0x559b71",
+            "0x559bbf",
+            "0x559e34",
+            "0x559eaa",
+            "0x55a053",
+            "0x55a155",
+            "0x55a1d5",
+            "0x55a2f1",
+            "0x55b7d7",
+            "0x55b88b",
+            "0x55b9c7",
+            "0x57e6b4",
+            "0x5a537c",
+            "0x5a5872",
+            "0x5a5ab3",
+            "0x5a5af9",
+            "0x5a65e4",
+            "0x5a6e14",
+            "0x5a7e76",
+            "0x5a8068",
+            "0x5a8892",
+            "0x5a8b26",
+            "0x5b9b8b",
+            "0x5dd468",
+            "0x5e31e2",
+            "0x5e4003",
+            "0x5e441b",
+            "0x5e4cde",
+            "0x5e5123",
+            "0x5e5bc1",
+            "0x5e8727",
+            "0x5e873b",
+            "0x5e9129",
+            "0x5e960d",
+            "0x5e9617",
+            "0x60abcd"
+          ],
+          "0x544fc0": [
+            "0x49e839",
+            "0x49f17f",
+            "0x52bbed"
+          ],
+          "0x544560": [
+            "0x4aec31",
+            "0x514473",
+            "0x5145b3",
+            "0x514640",
+            "0x517b87",
+            "0x517c47",
+            "0x525b46",
+            "0x525bb0",
+            "0x525c21",
+            "0x52f087",
+            "0x52f127",
+            "0x52f307",
+            "0x52f367",
+            "0x52f5c7",
+            "0x52f8ad",
+            "0x52fafa",
+            "0x52fbbd",
+            "0x539750",
+            "0x5397da",
+            "0x58127b",
+            "0x5815b2",
+            "0x5816ff",
+            "0x5817e6",
+            "0x581858",
+            "0x5818be",
+            "0x586a70",
+            "0x5a67fb"
+          ],
+          "0x544670": [
+            "0x4eed72",
+            "0x510ac3",
+            "0x52b659",
+            "0x52b799"
+          ],
+          "0x5444c0": [
+            "0x50b306",
+            "0x50b328",
+            "0x50b541",
+            "0x5dcde0",
+            "0x5e66ff",
+            "0x5e676c"
+          ],
+          "0x545040": [
+            "0x50bc67",
+            "0x50c76d",
+            "0x50d6f3",
+            "0x50e7ff",
+            "0x544d18"
+          ],
+          "0x544a80": [
+            "0x50d5ed",
+            "0x5d94ea",
+            "0x5d9e6d"
+          ],
+          "0x544f60": [
+            "0x50e836"
+          ],
+          "0x544300": [
+            "0x50f024",
+            "0x539648"
+          ],
+          "0x545020": [
+            "0x5108f4"
+          ],
+          "0x544d00": [
+            "0x513eb3",
+            "0x513f53",
+            "0x514232",
+            "0x5145d4",
+            "0x53971e",
+            "0x539737"
+          ],
+          "0x544620": [
+            "0x51462e"
+          ],
+          "0x5445e0": [
+            "0x514636"
+          ],
+          "0x545400": [
+            "0x51cb47",
+            "0x52309c",
+            "0x5237d5",
+            "0x523ce9"
+          ],
+          "0x5454e0": [
+            "0x5212bd",
+            "0x5237e9",
+            "0x523cff",
+            "0x536c9d",
+            "0x545420",
+            "0x545460",
+            "0x54548b",
+            "0x55adb9",
+            "0x55aeb2",
+            "0x55afa5",
+            "0x5e2a4b",
+            "0x5e2ae0",
+            "0x5e2b51"
+          ],
+          "0x5454a0": [
+            "0x523c47",
+            "0x55adde",
+            "0x55ae83",
+            "0x55aec8",
+            "0x55af6a",
+            "0x55aff4",
+            "0x55b036"
+          ],
+          "0x544c00": [
+            "0x524ea3",
+            "0x525795",
+            "0x52677d",
+            "0x526b27",
+            "0x52b9c0",
+            "0x52c0bc",
+            "0x52fc1d",
+            "0x533be4",
+            "0x537eb1",
+            "0x544bf1",
+            "0x5a2bf8",
+            "0x5a2d68",
+            "0x5a67ae",
+            "0x5d9502",
+            "0x5d9e5d"
+          ],
+          "0x544f00": [
+            "0x52e549",
+            "0x538d07"
+          ],
+          "0x5445b0": [
+            "0x535dac",
+            "0x536235",
+            "0x53661d",
+            "0x536727",
+            "0x551961",
+            "0x554386",
+            "0x5e9871",
+            "0x5e9902",
+            "0x5e9b8a",
+            "0x610dae"
+          ],
+          "0x544430": [
+            "0x5388cc",
+            "0x538a35"
+          ],
+          "0x5450b0": [
+            "0x53f06e",
+            "0x53f07e",
+            "0x53f0a5"
+          ],
+          "0x545160": [
+            "0x55a70a"
+          ],
+          "0x5454c0": [
+            "0x55ae06",
+            "0x55ae5c",
+            "0x55aef3",
+            "0x55af48",
+            "0x55afd3",
+            "0x55b01a"
+          ],
+          "0x544b90": [
+            "0x5a52fd",
+            "0x5a5b06"
+          ],
+          "0x544710": [
+            "0x5ca99c",
+            "0x5caf24",
+            "0x5cb3d4",
+            "0x5e2eca",
+            "0x5e2eea",
+            "0x5e3082",
+            "0x5e30e2",
+            "0x5e3131",
+            "0x5e317d"
+          ]
+        },
+        "unknown_interior_call_targets": [],
+        "allocated_data_fixup_references": {
+          "0x69aaec": [
+            "0x54488c",
+            "0x544df6",
+            "0x54530c",
+            "0x54543a",
+            "0x5454a3",
+            "0x5454c3",
+            "0x545545"
+          ]
+        },
+        "assertion_string_pushes": [
+          "0x54488b",
+          "0x544df5",
+          "0x54530b",
+          "0x545439",
+          "0x5454a2",
+          "0x5454c2",
+          "0x545544"
+        ],
+        "unmapped_padding_prologue_candidates": []
+      },
+      "emitted_inventory": [
+        {
+          "name": "_fn_00544300",
+          "section": 3,
+          "value": 0
+        },
+        {
+          "name": "_CDecl_NewTemplDepType",
+          "section": 4,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544430",
+          "section": 5,
+          "value": 0
+        },
+        {
+          "name": "_fn_005444c0",
+          "section": 6,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_CopyTypePointer",
+          "section": 7,
+          "value": 0
+        },
+        {
+          "name": "_CDecl_NewPointerType",
+          "section": 8,
+          "value": 0
+        },
+        {
+          "name": "_CDecl_NewArrayType",
+          "section": 9,
+          "value": 0
+        },
+        {
+          "name": "_CDecl_NewOpaqueType",
+          "section": 10,
+          "value": 0
+        },
+        {
+          "name": "_fn_005445e0",
+          "section": 11,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544620",
+          "section": 12,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_DataObjectTypeCompare",
+          "section": 13,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544710",
+          "section": 14,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544a80",
+          "section": 16,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544b90",
+          "section": 17,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_CanCreateTypeInstance",
+          "section": 18,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544d00",
+          "section": 20,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544f00",
+          "section": 22,
+          "value": 0
+        },
+        {
+          "name": "_fn_00544f60",
+          "section": 23,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_CheckLocalType",
+          "section": 24,
+          "value": 0
+        },
+        {
+          "name": "_fn_00545020",
+          "section": 25,
+          "value": 0
+        },
+        {
+          "name": "_fn_00545040",
+          "section": 26,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_CombineQuals",
+          "section": 27,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_CombineAlignmentQuals",
+          "section": 28,
+          "value": 0
+        },
+        {
+          "name": "_fn_00545210",
+          "section": 29,
+          "value": 0
+        },
+        {
+          "name": "_fn_00545320",
+          "section": 30,
+          "value": 0
+        },
+        {
+          "name": "_fn_00545400",
+          "section": 31,
+          "value": 0
+        },
+        {
+          "name": "_fn_005454a0",
+          "section": 32,
+          "value": 0
+        },
+        {
+          "name": "_fn_005454c0",
+          "section": 33,
+          "value": 0
+        },
+        {
+          "name": "_fn_005454e0",
+          "section": 34,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_Cleanup",
+          "section": 36,
+          "value": 0
+        },
+        {
+          "name": "_CTTool_Setup",
+          "section": 37,
+          "value": 0
+        }
+      ],
+      "native_switch_tables": [
+        {
+          "address": "0x64f1e0",
+          "size": 56,
+          "function": "fn_00544710",
+          "entries": [
+            "0x54475c",
+            "0x54475c",
+            "0x54475c",
+            "0x54475c",
+            "0x544847",
+            "0x54485c",
+            "0x544871",
+            "0x5447e7",
+            "0x544886",
+            "0x544886",
+            "0x544886",
+            "0x5447b1",
+            "0x544763",
+            "0x544784"
+          ],
+          "pe_fixups": [
+            "0x64f1e0",
+            "0x64f1e4",
+            "0x64f1e8",
+            "0x64f1ec",
+            "0x64f1f0",
+            "0x64f1f4",
+            "0x64f1f8",
+            "0x64f1fc",
+            "0x64f200",
+            "0x64f204",
+            "0x64f208",
+            "0x64f20c",
+            "0x64f210",
+            "0x64f214"
+          ],
+          "binding_added": false
+        },
+        {
+          "address": "0x64f218",
+          "size": 32,
+          "function": "CTTool_CanCreateTypeInstance",
+          "entries": [
+            "0x544c27",
+            "0x544c82",
+            "0x544c82",
+            "0x544c82",
+            "0x544c82",
+            "0x544c3b",
+            "0x544c62",
+            "0x544c27"
+          ],
+          "pe_fixups": [
+            "0x64f218",
+            "0x64f21c",
+            "0x64f220",
+            "0x64f224",
+            "0x64f228",
+            "0x64f22c",
+            "0x64f230",
+            "0x64f234"
+          ],
+          "binding_added": false
+        },
+        {
+          "address": "0x64f238",
+          "size": 68,
+          "function": "fn_00544d00",
+          "entries": [
+            "0x544d46",
+            "0x544d46",
+            "0x544d4b",
+            "0x544d46",
+            "0x544d46",
+            "0x544d46",
+            "0x544d46",
+            "0x544d58",
+            "0x544d80",
+            "0x544d4b",
+            "0x544df0",
+            "0x544df0",
+            "0x544d46",
+            "0x544d46",
+            "0x544dc7",
+            "0x544da6",
+            "0x544d46"
+          ],
+          "pe_fixups": [
+            "0x64f238",
+            "0x64f23c",
+            "0x64f240",
+            "0x64f244",
+            "0x64f248",
+            "0x64f24c",
+            "0x64f250",
+            "0x64f254",
+            "0x64f258",
+            "0x64f25c",
+            "0x64f260",
+            "0x64f264",
+            "0x64f268",
+            "0x64f26c",
+            "0x64f270",
+            "0x64f274",
+            "0x64f278"
+          ],
+          "binding_added": false
+        },
+        {
+          "address": "0x64f27c",
+          "size": 24,
+          "function": "fn_005454e0",
+          "entries": [
+            "0x545500",
+            "0x54550b",
+            "0x545516",
+            "0x545521",
+            "0x54552c",
+            "0x545537"
+          ],
+          "pe_fixups": [
+            "0x64f27c",
+            "0x64f280",
+            "0x64f284",
+            "0x64f288",
+            "0x64f28c",
+            "0x64f290"
+          ],
+          "binding_added": false
+        }
+      ],
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 31,
+        "attempted_members": 31,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All native bodies attempted after full-image identity/assertion/fixup/call/prologue and seam audit; native constructor layout changes documented."
+      },
+      "retained_versions_validation": [
+        {
+          "version": "GC_1_2_5",
+          "normalized_object_sha256": "db595235e2f97224d4c2258d373baef8ab0a9766a7c2ec4ecbab5c32864e9530",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_2_5n",
+          "normalized_object_sha256": "db595235e2f97224d4c2258d373baef8ab0a9766a7c2ec4ecbab5c32864e9530",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_3",
+          "normalized_object_sha256": "dc4587b89f55dc82620a07ac97e5a4f94b1c95510bbf7a661502c200263961b2",
           "unchanged": true
         }
       ]

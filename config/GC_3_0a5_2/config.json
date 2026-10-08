@@ -230,7 +230,8 @@
     "src/GC_3_0a5_2/frontend/CABI.c",
     "src/GC_3_0a5_2/frontend/CCallGraph.c",
     "src/GC_3_0a5_2/frontend/CBrowse.c",
-    "src/GC_3_0a5_2/backend/PCodeAssembly.c"
+    "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "src/GC_3_0a5_2/frontend/CTypeTools.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3583,6 +3584,25 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/CTypeTools.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
     }
   },
   "matching_functions": [
@@ -4247,7 +4267,32 @@
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_ConvertFromLongDouble",
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_ConvertUFromLongDouble",
     "src/GC_3_0a5_2/frontend/CInt64/CInt64_Init",
-    "src/GC_3_0a5_2/backend/PCodeAssembly/invertybit"
+    "src/GC_3_0a5_2/backend/PCodeAssembly/invertybit",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CDecl_NewTemplDepType",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00544430",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_005444c0",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_CopyTypePointer",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CDecl_NewPointerType",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CDecl_NewArrayType",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CDecl_NewOpaqueType",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_005445e0",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00544620",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00544b90",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00544f00",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00544f60",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_CheckLocalType",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00545020",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00545040",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_CombineQuals",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_CombineAlignmentQuals",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00545210",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00545320",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_00545400",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_005454a0",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_005454c0",
+    "src/GC_3_0a5_2/frontend/CTypeTools/fn_005454e0",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_Cleanup",
+    "src/GC_3_0a5_2/frontend/CTypeTools/CTTool_Setup"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -6115,6 +6160,44 @@
       "_fn_004c07d0": "0x4c07d0",
       "_fn_0070f05a": "0x70f05a",
       "_fn_0070f063": "0x70f063"
+    },
+    "src/GC_3_0a5_2/frontend/CTypeTools.c": {
+      "_filename": "0x69aaec",
+      "_galloc": "0x46c6a0",
+      "_memclrw": "0x46c400",
+      "_CError_Internal": "0x45a250",
+      "_is_typesame": "0x454430",
+      "_CInt64_NotEqual": "0x4d9420",
+      "_stsignedchar": "0x699c1c",
+      "_stlong": "0x699c54",
+      "_stunsignedlong": "0x699c5c",
+      "_stlonglong": "0x699c74",
+      "_stfloat": "0x699c84",
+      "_stdouble": "0x699c94",
+      "_stlongdouble": "0x699c9c",
+      "_type_00725d96": "0x725d96",
+      "_option_0070f1af": "0x70f1af",
+      "_option_0070f1a8": "0x70f1a8",
+      "_option_0070f1ca": "0x70f1ca",
+      "_option_0070f22d": "0x70f22d",
+      "_option_0070f1ee": "0x70f1ee",
+      "_option_0070f212": "0x70f212",
+      "_option_0070f1b3": "0x70f1b3",
+      "_option_0070f1da": "0x70f1da",
+      "_fn_0045c480": "0x45c480",
+      "_fn_0045c2c0": "0x45c2c0",
+      "_fn_0045a320": "0x45a320",
+      "_fn_0045a490": "0x45a490",
+      "_fn_0045a010": "0x45a010",
+      "_fn_004533f0": "0x4533f0",
+      "_fn_00454e40": "0x454e40",
+      "_fn_00454700": "0x454700",
+      "_fn_005d87a0": "0x5d87a0",
+      "_fn_00542350": "0x542350",
+      "_fn_00542340": "0x542340",
+      "_fn_00542420": "0x542420",
+      "_type_00699c64": "0x699c64",
+      "_CInt64_GreaterU": "0x4d96c0"
     }
   },
   "original_source_units": {
@@ -6128,6 +6211,7 @@
     "CABI.c": "src/GC_3_0a5_2/frontend/CABI.c",
     "CCallGraph.c": "src/GC_3_0a5_2/frontend/CCallGraph.c",
     "CBrowse.c": "src/GC_3_0a5_2/frontend/CBrowse.c",
-    "PCodeAssembly.c": "src/GC_3_0a5_2/backend/PCodeAssembly.c"
+    "PCodeAssembly.c": "src/GC_3_0a5_2/backend/PCodeAssembly.c",
+    "CTypeTools.c": "src/GC_3_0a5_2/frontend/CTypeTools.c"
   }
 }

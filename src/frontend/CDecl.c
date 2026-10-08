@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CDecl.c"
 #include "compiler/common.h"
 #include "compiler/CDecl.h"
@@ -5475,6 +5476,7 @@ void CDecl_NewConvFuncType(DeclInfo *state)
     state->storage = 0U;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 TypeTemplDep *CDecl_NewTemplDepType(UInt8 templateKind)
 {
     TypeTemplDep *templateType;
@@ -5486,6 +5488,7 @@ TypeTemplDep *CDecl_NewTemplDepType(UInt8 templateKind)
     templateType->kind = templateKind;
     return templateType;
 }
+#endif
 
 static Type *FindNamedPointerType(char *name, Boolean required)
 {
@@ -5525,6 +5528,7 @@ static CRec *FindProtocol(HashNameNode *name)
     return p;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Type *CDecl_NewPointerType(Type *targetType)
 {
     TypePointer *pointerType;
@@ -5536,7 +5540,9 @@ Type *CDecl_NewPointerType(Type *targetType)
     pointerType->target = targetType;
     return (Type *)pointerType;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Type *CDecl_NewArrayType(Type *elementType, SInt32 size)
 {
     TypePointer *arrayType;
@@ -5548,6 +5554,7 @@ Type *CDecl_NewArrayType(Type *elementType, SInt32 size)
     arrayType->qual = 0;
     return (Type *)arrayType;
 }
+#endif
 
 Type *CDecl_NewStructType(SInt32 size, SInt16 align)
 {

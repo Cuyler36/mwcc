@@ -4567,132 +4567,209 @@
     }
   },
   {
-    "name": "CLOverlays_Init",
-    "address": "0x004369e0",
+    "name": "Overlays_Initialize",
+    "address": "0x4369e0",
     "size": 232,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_Init",
     "baseline_address": "0x00422c30",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_AppendGroup",
-    "address": "0x00436b30",
+    "name": "Overlays_Terminate",
+    "address": "0x436ad0",
+    "size": 84,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Overlays_AddOvlGroup",
+    "address": "0x436b30",
     "size": 112,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_AppendGroup",
     "baseline_address": "0x00422d60",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_GetGroupByIndex",
-    "address": "0x00436ba0",
+    "name": "Overlays_GetOvlGroup",
+    "address": "0x436ba0",
     "size": 78,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_GetGroupByIndex",
     "baseline_address": "0x00422dd0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_GetAllocationByGroupIndex",
-    "address": "0x00436c40",
+    "name": "Overlays_CountGroups",
+    "address": "0x436bf0",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Overlays_GetOverlayInGroup",
+    "address": "0x436c40",
     "size": 70,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_GetAllocationByGroupIndex",
     "baseline_address": "0x00422e60",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_GetAllocationValueByGroupIndex",
-    "address": "0x00436c90",
+    "name": "Overlays_GetFileInOverlay",
+    "address": "0x436c90",
     "size": 85,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_GetAllocationValueByGroupIndex",
     "baseline_address": "0x00422eb0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_AppendOverlay",
-    "address": "0x00436e10",
+    "name": "OvlGroup_New",
+    "address": "0x436cf0",
+    "size": 177,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OvlGroup_Delete",
+    "address": "0x436db0",
+    "size": 94,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OvlGroup_AddOverlay",
+    "address": "0x436e10",
     "size": 136,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_AppendOverlay",
     "baseline_address": "0x00423020",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_GetOverlayAtIndex",
-    "address": "0x00436ea0",
+    "name": "OvlGroup_GetOverlay",
+    "address": "0x436ea0",
     "size": 94,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_GetOverlayAtIndex",
     "baseline_address": "0x004230a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_AppendEntry",
-    "address": "0x00437020",
+    "name": "OvlGroup_CountOverlays",
+    "address": "0x436f00",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Overlay_New",
+    "address": "0x436f50",
+    "size": 126,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Overlay_Delete",
+    "address": "0x436fd0",
+    "size": 75,
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Overlay_AddFile",
+    "address": "0x437020",
     "size": 157,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_AppendEntry",
     "baseline_address": "0x004231f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_allocation_value",
-    "address": "0x004370c0",
+    "name": "Overlay_GetFile",
+    "address": "0x4370c0",
     "size": 70,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "get_allocation_value",
     "baseline_address": "0x00423280",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLOverlays_GetValueCount",
-    "address": "0x00437110",
+    "name": "Overlay_CountFiles",
+    "address": "0x437110",
     "size": 44,
-    "source": "src/driver/CLOverlays.c",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
     "baseline_name": "CLOverlays_GetValueCount",
     "baseline_address": "0x004232d0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLOverlays.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

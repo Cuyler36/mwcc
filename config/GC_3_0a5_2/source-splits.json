@@ -830,5 +830,73 @@
   "CLFiles_FindChainRecord": {
     "name": "VFiles_Find",
     "source": "src/GC_3_0a5_2/driver/CLFiles.c"
+  },
+  "CLOverlays_Init": {
+    "name": "Overlays_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "Overlays_Terminate": {
+    "name": "Overlays_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_AppendGroup": {
+    "name": "Overlays_AddOvlGroup",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_GetGroupByIndex": {
+    "name": "Overlays_GetOvlGroup",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "Overlays_CountGroups": {
+    "name": "Overlays_CountGroups",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_GetAllocationByGroupIndex": {
+    "name": "Overlays_GetOverlayInGroup",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_GetAllocationValueByGroupIndex": {
+    "name": "Overlays_GetFileInOverlay",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "OvlGroup_New": {
+    "name": "OvlGroup_New",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "OvlGroup_Delete": {
+    "name": "OvlGroup_Delete",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_AppendOverlay": {
+    "name": "OvlGroup_AddOverlay",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_GetOverlayAtIndex": {
+    "name": "OvlGroup_GetOverlay",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "OvlGroup_CountOverlays": {
+    "name": "OvlGroup_CountOverlays",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "Overlay_New": {
+    "name": "Overlay_New",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "Overlay_Delete": {
+    "name": "Overlay_Delete",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_AppendEntry": {
+    "name": "Overlay_AddFile",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "get_allocation_value": {
+    "name": "Overlay_GetFile",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+  },
+  "CLOverlays_GetValueCount": {
+    "name": "Overlay_CountFiles",
+    "source": "src/GC_3_0a5_2/driver/CLOverlays.c"
   }
 }

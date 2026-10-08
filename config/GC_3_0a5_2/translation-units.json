@@ -2128,6 +2128,388 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+      "original_filename": "CLOverlays.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Overlays_Initialize",
+          "address": "0x004369e0",
+          "size": 232,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436a5c",
+            "0x00436a90",
+            "0x00436abe"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_Terminate",
+          "address": "0x00436ad0",
+          "size": 84,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436b0e"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_AddOvlGroup",
+          "address": "0x00436b30",
+          "size": 112,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436b7e",
+            "0x00436b96"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_GetOvlGroup",
+          "address": "0x00436ba0",
+          "size": 78,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436bd4"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_CountGroups",
+          "address": "0x00436bf0",
+          "size": 69,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436c1f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_GetOverlayInGroup",
+          "address": "0x00436c40",
+          "size": 70,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436c78"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlays_GetFileInOverlay",
+          "address": "0x00436c90",
+          "size": 85,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436cd1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "OvlGroup_New",
+          "address": "0x00436cf0",
+          "size": 177,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436d76"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "OvlGroup_Delete",
+          "address": "0x00436db0",
+          "size": 94,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436df1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "OvlGroup_AddOverlay",
+          "address": "0x00436e10",
+          "size": 136,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436e67",
+            "0x00436e82"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "OvlGroup_GetOverlay",
+          "address": "0x00436ea0",
+          "size": 94,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436ee1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "OvlGroup_CountOverlays",
+          "address": "0x00436f00",
+          "size": 69,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00436f36"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlay_New",
+          "address": "0x436f50",
+          "size": 126,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Overlay_Delete",
+          "address": "0x00436fd0",
+          "size": 75,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00437011"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlay_AddFile",
+          "address": "0x00437020",
+          "size": 157,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00437081"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlay_GetFile",
+          "address": "0x004370c0",
+          "size": 70,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004370f3"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        },
+        {
+          "name": "Overlay_CountFiles",
+          "address": "0x00437110",
+          "size": 44,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00437132"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLOverlays.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Overlays_Initialize",
+          "mac_address": "0x0001c79c",
+          "linkage_names": [
+            "Overlays_Initialize"
+          ]
+        },
+        {
+          "name": "Overlays_Terminate",
+          "mac_address": "0x0001c8c8",
+          "linkage_names": [
+            "Overlays_Terminate"
+          ]
+        },
+        {
+          "name": "Overlays_AddOvlGroup",
+          "mac_address": "0x0001c960",
+          "linkage_names": [
+            "Overlays_AddOvlGroup"
+          ]
+        },
+        {
+          "name": "Overlays_GetOvlGroup",
+          "mac_address": "0x0001ca38",
+          "linkage_names": [
+            "Overlays_GetOvlGroup"
+          ]
+        },
+        {
+          "name": "Overlays_CountGroups",
+          "mac_address": "0x0001cad4",
+          "linkage_names": [
+            "Overlays_CountGroups"
+          ]
+        },
+        {
+          "name": "Overlays_AddFileToOverlay",
+          "mac_address": "0x0001cb50",
+          "linkage_names": [
+            "Overlays_AddFileToOverlay"
+          ]
+        },
+        {
+          "name": "Overlays_GetOverlayInGroup",
+          "mac_address": "0x0001cbf4",
+          "linkage_names": [
+            "Overlays_GetOverlayInGroup"
+          ]
+        },
+        {
+          "name": "Overlays_GetFileInOverlay",
+          "mac_address": "0x0001cc84",
+          "linkage_names": [
+            "Overlays_GetFileInOverlay"
+          ]
+        },
+        {
+          "name": "OvlGroup_New",
+          "mac_address": "0x0001cd24",
+          "linkage_names": [
+            "OvlGroup_New"
+          ]
+        },
+        {
+          "name": "OvlGroup_Delete",
+          "mac_address": "0x0001ce00",
+          "linkage_names": [
+            "OvlGroup_Delete"
+          ]
+        },
+        {
+          "name": "OvlGroup_AddOverlay",
+          "mac_address": "0x0001ce94",
+          "linkage_names": [
+            "OvlGroup_AddOverlay"
+          ]
+        },
+        {
+          "name": "OvlGroup_GetOverlay",
+          "mac_address": "0x0001cf68",
+          "linkage_names": [
+            "OvlGroup_GetOverlay"
+          ]
+        },
+        {
+          "name": "OvlGroup_CountOverlays",
+          "mac_address": "0x0001d004",
+          "linkage_names": [
+            "OvlGroup_CountOverlays"
+          ]
+        },
+        {
+          "name": "Overlay_New",
+          "mac_address": "0x0001d080",
+          "linkage_names": [
+            "Overlay_New"
+          ]
+        },
+        {
+          "name": "Overlay_Delete",
+          "mac_address": "0x0001d120",
+          "linkage_names": [
+            "Overlay_Delete"
+          ]
+        },
+        {
+          "name": "Overlay_AddFile",
+          "mac_address": "0x0001d18c",
+          "linkage_names": [
+            "Overlay_AddFile"
+          ]
+        },
+        {
+          "name": "Overlay_GetFile",
+          "mac_address": "0x0001d260",
+          "linkage_names": [
+            "Overlay_GetFile"
+          ]
+        },
+        {
+          "name": "Overlay_CountFiles",
+          "mac_address": "0x0001d2e0",
+          "linkage_names": [
+            "Overlay_CountFiles"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
       "original_filename": "CLWriteObjectFile.c",
       "evidence": [
@@ -17651,371 +18033,6 @@
           "mac_address": "0x00004060",
           "linkage_names": [
             "Main_Driver"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLOverlays.c",
-      "original_filename": "CLOverlays.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "CLOverlays_Init",
-          "address": "0x004369e0",
-          "size": 232,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436a5c",
-            "0x00436a90",
-            "0x00436abe"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "FUN_00436ad0",
-          "address": "0x00436ad0",
-          "size": 84,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436b0e"
-          ]
-        },
-        {
-          "name": "CLOverlays_AppendGroup",
-          "address": "0x00436b30",
-          "size": 112,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436b7e",
-            "0x00436b96"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "CLOverlays_GetGroupByIndex",
-          "address": "0x00436ba0",
-          "size": 78,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436bd4"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "FUN_00436bf0",
-          "address": "0x00436bf0",
-          "size": 69,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436c1f"
-          ]
-        },
-        {
-          "name": "CLOverlays_GetAllocationByGroupIndex",
-          "address": "0x00436c40",
-          "size": 70,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436c78"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "CLOverlays_GetAllocationValueByGroupIndex",
-          "address": "0x00436c90",
-          "size": 85,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436cd1"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "FUN_00436cf0",
-          "address": "0x00436cf0",
-          "size": 177,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436d76"
-          ]
-        },
-        {
-          "name": "FUN_00436db0",
-          "address": "0x00436db0",
-          "size": 94,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436df1"
-          ]
-        },
-        {
-          "name": "CLOverlays_AppendOverlay",
-          "address": "0x00436e10",
-          "size": 136,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436e67",
-            "0x00436e82"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "CLOverlays_GetOverlayAtIndex",
-          "address": "0x00436ea0",
-          "size": 94,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436ee1"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "FUN_00436f00",
-          "address": "0x00436f00",
-          "size": 69,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00436f36"
-          ]
-        },
-        {
-          "name": "FUN_00436fd0",
-          "address": "0x00436fd0",
-          "size": 75,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00437011"
-          ]
-        },
-        {
-          "name": "CLOverlays_AppendEntry",
-          "address": "0x00437020",
-          "size": 157,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00437081"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "get_allocation_value",
-          "address": "0x004370c0",
-          "size": 70,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004370f3"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        },
-        {
-          "name": "CLOverlays_GetValueCount",
-          "address": "0x00437110",
-          "size": 44,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00437132"
-          ],
-          "compiled_source": "src/driver/CLOverlays.c"
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Overlays_Initialize",
-          "mac_address": "0x0001c79c",
-          "linkage_names": [
-            "Overlays_Initialize"
-          ]
-        },
-        {
-          "name": "Overlays_Terminate",
-          "mac_address": "0x0001c8c8",
-          "linkage_names": [
-            "Overlays_Terminate"
-          ]
-        },
-        {
-          "name": "Overlays_AddOvlGroup",
-          "mac_address": "0x0001c960",
-          "linkage_names": [
-            "Overlays_AddOvlGroup"
-          ]
-        },
-        {
-          "name": "Overlays_GetOvlGroup",
-          "mac_address": "0x0001ca38",
-          "linkage_names": [
-            "Overlays_GetOvlGroup"
-          ]
-        },
-        {
-          "name": "Overlays_CountGroups",
-          "mac_address": "0x0001cad4",
-          "linkage_names": [
-            "Overlays_CountGroups"
-          ]
-        },
-        {
-          "name": "Overlays_AddFileToOverlay",
-          "mac_address": "0x0001cb50",
-          "linkage_names": [
-            "Overlays_AddFileToOverlay"
-          ]
-        },
-        {
-          "name": "Overlays_GetOverlayInGroup",
-          "mac_address": "0x0001cbf4",
-          "linkage_names": [
-            "Overlays_GetOverlayInGroup"
-          ]
-        },
-        {
-          "name": "Overlays_GetFileInOverlay",
-          "mac_address": "0x0001cc84",
-          "linkage_names": [
-            "Overlays_GetFileInOverlay"
-          ]
-        },
-        {
-          "name": "OvlGroup_New",
-          "mac_address": "0x0001cd24",
-          "linkage_names": [
-            "OvlGroup_New"
-          ]
-        },
-        {
-          "name": "OvlGroup_Delete",
-          "mac_address": "0x0001ce00",
-          "linkage_names": [
-            "OvlGroup_Delete"
-          ]
-        },
-        {
-          "name": "OvlGroup_AddOverlay",
-          "mac_address": "0x0001ce94",
-          "linkage_names": [
-            "OvlGroup_AddOverlay"
-          ]
-        },
-        {
-          "name": "OvlGroup_GetOverlay",
-          "mac_address": "0x0001cf68",
-          "linkage_names": [
-            "OvlGroup_GetOverlay"
-          ]
-        },
-        {
-          "name": "OvlGroup_CountOverlays",
-          "mac_address": "0x0001d004",
-          "linkage_names": [
-            "OvlGroup_CountOverlays"
-          ]
-        },
-        {
-          "name": "Overlay_New",
-          "mac_address": "0x0001d080",
-          "linkage_names": [
-            "Overlay_New"
-          ]
-        },
-        {
-          "name": "Overlay_Delete",
-          "mac_address": "0x0001d120",
-          "linkage_names": [
-            "Overlay_Delete"
-          ]
-        },
-        {
-          "name": "Overlay_AddFile",
-          "mac_address": "0x0001d18c",
-          "linkage_names": [
-            "Overlay_AddFile"
-          ]
-        },
-        {
-          "name": "Overlay_GetFile",
-          "mac_address": "0x0001d260",
-          "linkage_names": [
-            "Overlay_GetFile"
-          ]
-        },
-        {
-          "name": "Overlay_CountFiles",
-          "mac_address": "0x0001d2e0",
-          "linkage_names": [
-            "Overlay_CountFiles"
           ]
         }
       ],
@@ -51151,7 +51168,7 @@
       }
     },
     "src/driver/CLOverlays.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -51280,7 +51297,8 @@
           "space-nointrinsics": "75334666ba5481ff6e721d9fcb0dd14ebfd354047a3ae3df983b67de2d5da3df",
           "space-intrinsics": "73c54e09184c197d6b00763b6983eeff627ab8953f7d51ed3f28abd684c388f7"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLOverlays.c"
     },
     "src/driver/CLPlugins.c": {
       "status": "unattempted",
@@ -64931,6 +64949,406 @@
           "configured": "efb7ff524887bf13e9915cc2e2708e206f3fbe543e2c5a2004121227c72cf0ff"
         }
       }
+    },
+    "src/GC_3_0a5_2/driver/CLOverlays.c": {
+      "source": "src\\GC_3_0a5_2\\driver\\CLOverlays.c",
+      "source_sha256": "616d8dc0cfd731d20bf0d6696b68660f39ceeb6b5f356725221b5588abcb0797",
+      "status": "exact",
+      "compiler": "CodeWarrior Windows 9.4 build/compilers/cw94/mwcc.exe",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "experiments": {
+        "compiler_profiles": 1,
+        "successful_source_iterations": 5,
+        "failed_intermediate_declaration_compile": 1,
+        "initial_exact": 15,
+        "remaining_two_resolution": "STABS num is signed int; ordinary while traversal instead of baseline if/do yields matching cold assertion/return layout."
+      },
+      "functions": [
+        {
+          "name": "Overlays_Initialize",
+          "address": "0x4369e0",
+          "size": 232,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 232
+        },
+        {
+          "name": "Overlays_Terminate",
+          "address": "0x436ad0",
+          "size": 84,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 84
+        },
+        {
+          "name": "Overlays_AddOvlGroup",
+          "address": "0x436b30",
+          "size": 112,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 112
+        },
+        {
+          "name": "Overlays_GetOvlGroup",
+          "address": "0x436ba0",
+          "size": 78,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 78
+        },
+        {
+          "name": "Overlays_CountGroups",
+          "address": "0x436bf0",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 69
+        },
+        {
+          "name": "Overlays_GetOverlayInGroup",
+          "address": "0x436c40",
+          "size": 70,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 70
+        },
+        {
+          "name": "Overlays_GetFileInOverlay",
+          "address": "0x436c90",
+          "size": 85,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 85
+        },
+        {
+          "name": "OvlGroup_New",
+          "address": "0x436cf0",
+          "size": 177,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 177
+        },
+        {
+          "name": "OvlGroup_Delete",
+          "address": "0x436db0",
+          "size": 94,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 94
+        },
+        {
+          "name": "OvlGroup_AddOverlay",
+          "address": "0x436e10",
+          "size": 136,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 136
+        },
+        {
+          "name": "OvlGroup_GetOverlay",
+          "address": "0x436ea0",
+          "size": 94,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 94
+        },
+        {
+          "name": "OvlGroup_CountOverlays",
+          "address": "0x436f00",
+          "size": 69,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 69
+        },
+        {
+          "name": "Overlay_New",
+          "address": "0x436f50",
+          "size": 126,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 126
+        },
+        {
+          "name": "Overlay_Delete",
+          "address": "0x436fd0",
+          "size": 75,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 75
+        },
+        {
+          "name": "Overlay_AddFile",
+          "address": "0x437020",
+          "size": 157,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 157
+        },
+        {
+          "name": "Overlay_GetFile",
+          "address": "0x4370c0",
+          "size": 70,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 70
+        },
+        {
+          "name": "Overlay_CountFiles",
+          "address": "0x437110",
+          "size": 44,
+          "source": "src/GC_3_0a5_2/driver/CLOverlays.c",
+          "exact": true,
+          "compiled_size": 44
+        }
+      ],
+      "source_bindings": {
+        "_xmalloc@8": "0x426300",
+        "_xrealloc@12": "0x4263e0",
+        "_xfree@4": "0x426490",
+        "_CLInternalError": "0x414bb0",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_Overlays_Initialize": "0x4369e0",
+        "_Overlays_Terminate": "0x436ad0",
+        "_Overlays_AddOvlGroup": "0x436b30",
+        "_Overlays_GetOvlGroup": "0x436ba0",
+        "_Overlays_CountGroups": "0x436bf0",
+        "_Overlays_GetOverlayInGroup": "0x436c40",
+        "_Overlays_GetFileInOverlay": "0x436c90",
+        "_OvlGroup_New": "0x436cf0",
+        "_OvlGroup_Delete": "0x436db0",
+        "_OvlGroup_AddOverlay": "0x436e10",
+        "_OvlGroup_GetOverlay": "0x436ea0",
+        "_OvlGroup_CountOverlays": "0x436f00",
+        "_Overlay_New": "0x436f50",
+        "_Overlay_Delete": "0x436fd0",
+        "_Overlay_AddFile": "0x437020",
+        "_Overlay_GetFile": "0x4370c0",
+        "_Overlay_CountFiles": "0x437110"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@124",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00670ed0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@125",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00670ee4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@126",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00670eec",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@127",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00670efc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@128",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00670f04",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@150",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00670f40",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@259",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00670f44",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@260",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x00670f28",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@287",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00670f0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@360",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00670f10",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@361",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00670f18",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@379",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00670f4c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "1772",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "144",
+          "match_percent": 100.0
+        }
+      ],
+      "membership": {
+        "Mac_explicit_STABS_functions": 18,
+        "Windows_functions": 17,
+        "missing_from_assert_inventory": "Overlay_New, 436f50/126 is assertion-free, called by Overlays_Initialize and logs CLOverlays.c on allocation failure.",
+        "Mac_absent_Windows": "Overlays_AddFileToOverlay between CountGroups and GetOverlayInGroup on Mac has no separate body in continuous Windows cluster.",
+        "excluded_baseline_contamination": "CLOverlays_ConvertTimestampTo1904EpochSeconds and CLOverlays_ConvertSecondsToTimestamp are ANSI_To_Mac_GMT_Time/Mac_To_ANSI_Time owned by CLDropinCallbacks_V10.cpp in symbol map.",
+        "data": "12 referenced literal objects totaling 144 bytes writable .data; no emitted BSS/rodata, no named static variables in STABS block. Data addresses recovered from resolved original instructions.",
+        "Windows_extent": "4369e0 through43713c; 17 ordered functions. Reachable CFG extents omit interfunction NOP alignment; Overlay_New last cold branch ends436fce and nextfunc436fd0."
+      },
+      "record_ABI": {
+        "OvlAddr": {
+          "size": 8,
+          "lo": 0,
+          "hi": 4
+        },
+        "Overlay": {
+          "size": 272,
+          "name": 0,
+          "list": 256,
+          "cnt": 260,
+          "max": 264,
+          "next": 268
+        },
+        "OvlGroup": {
+          "size": 280,
+          "name": 0,
+          "addr": 256,
+          "olys": 264,
+          "lastoly": 268,
+          "olycnt": 272,
+          "next": 276
+        },
+        "Overlays": {
+          "size": 12,
+          "groups": 0,
+          "lastgrp": 4,
+          "grpcnt": 8
+        },
+        "OSSpec_File": "This TU never accesses either record; no 516-byte spec or File layout adaptation needed."
+      },
+      "semantic_review": {
+        "initialize": "Zeroes table, creates main_application group at zero address and MAIN overlay, asserts each inserted index is zero; allocation failure returns false without rollback, matching original.",
+        "terminate_and_delete": "Walks saved next links; child Delete frees contents, caller frees node through xfree@4. Only head is reset; tail/count remain stale just as original.",
+        "append": "Appends to head/tail, optional index receives prior count, then increments. No additional argument validation or unlinking.",
+        "get_group_and_overlay": "Signed index comparison; negative index returns null because count zero differs. Returns null for index beyond chain. Assertions preserve file/line and expression literals.",
+        "new_records": "xmalloc@8 null-label 280/272 bytes; copies 256 name bytes and forces name[255]=0; initializes only observed fields. Failure calls canonical CLInternalError with exact line188/281 and labels.",
+        "add_file": "Signed count>=max grows by16, calls xrealloc@12 with label overlay file list and byte size max<<2; writes list[cnt], optional output index, increments count.",
+        "get_file": "Signed index<cnt then list[index], otherwise-1. No lower-bound check is added; original accepts negative indices into list, same compatibility behavior.",
+        "count": "Traverses links for group/overlay counts rather than trusting stored counters; file count returns stored cnt.",
+        "proof": "All branch displacements, memory writes, call targets, stack cleanup, literals, body sizes and PE relocation-site sets exact across all17 functions."
+      },
+      "evidence_provenance": {
+        "binary": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+        "binary_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "symbolmap": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "symbolmap_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "disasm": "build/overlays-retail.txt, original PE Capstone and Ghidra saved function boundaries",
+        "Ghidra_live": "unavailable; not claimed used live"
+      },
+      "encoding": "CP932 encoding succeeds; tools/check_sjis.py absent from this checkout.",
+      "code_bytes": 1772,
+      "initialized_data_bytes": 144,
+      "bss_bytes": 0,
+      "membership_reviewed": true,
+      "strict_exact_count": 17
     }
   },
   "ownership_review": {

@@ -62,6 +62,17 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLOverlays.c: complete Windows unit
+
+All seventeen Windows functions match 1,772 code bytes and 144 initialized
+bytes under CW94 speed/intrinsic settings. Original Overlays_, OvlGroup_, and
+Overlay_ names and record fields are restored. The assertion-free Overlay_New
+was missing from the initial inventory; the Mac-only Overlays_AddFileToOverlay
+has no standalone Windows body in the reviewed cluster. Negative-index and
+allocation-failure behavior is preserved. The baseline's unrelated timestamp
+conversion helpers belong to CLDropinCallbacks_V10.cpp and are excluded from
+this physical TU. Full-TU objdiff and strict fixup checks pass.
+
 ## CLFiles.c: complete Windows unit
 
 All fifteen Windows functions match 1,098 code bytes and 104 initialized

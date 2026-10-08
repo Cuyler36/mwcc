@@ -10,10 +10,10 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 213 source files build, 1,119 candidate functions are
-mapped, and 302 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 213 source files build, 1,126 candidate functions are
+mapped, and 311 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
-CLErrors.c, CLFiles.c, and the setjmp runtime unit are
+CLErrors.c, CLFiles.c, CLOverlays.c, and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
 

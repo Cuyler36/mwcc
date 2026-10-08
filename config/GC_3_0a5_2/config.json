@@ -54,7 +54,7 @@
     "src/GC_3_0a5_2/driver/CLLicenses.c",
     "src/driver/CLLoadAndCache.c",
     "src/driver/CLMain.c",
-    "src/driver/CLOverlays.c",
+    "src/GC_3_0a5_2/driver/CLOverlays.c",
     "src/driver/CLPluginRequests.cpp",
     "src/driver/CLPlugins.c",
     "src/driver/CLPrefs.c",
@@ -1151,25 +1151,6 @@
       ]
     },
     "src/driver/CLMain.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLOverlays.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3242,6 +3223,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLOverlays.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3330,14 +3330,6 @@
     "src/driver/Utils/Utils_IsAlpha",
     "src/driver/Utils/Utils_FormatOptions",
     "src/driver/Utils/Utils_MatchStringSegments",
-    "src/driver/CLOverlays/CLOverlays_AppendGroup",
-    "src/driver/CLOverlays/CLOverlays_GetGroupByIndex",
-    "src/driver/CLOverlays/CLOverlays_GetAllocationByGroupIndex",
-    "src/driver/CLOverlays/CLOverlays_GetAllocationValueByGroupIndex",
-    "src/driver/CLOverlays/CLOverlays_AppendOverlay",
-    "src/driver/CLOverlays/CLOverlays_GetOverlayAtIndex",
-    "src/driver/CLOverlays/get_allocation_value",
-    "src/driver/CLOverlays/CLOverlays_GetValueCount",
     "src/driver/CLDropinCallbacks_V10/emit_alert_messages",
     "src/driver/CLDropinCallbacks_V10/report_message_detail",
     "src/driver/CLSegs/CLSegs_AddValue",
@@ -3546,7 +3538,24 @@
     "src/GC_3_0a5_2/driver/CLFiles/VFiles_Terminate",
     "src/GC_3_0a5_2/driver/CLFiles/VFile_New",
     "src/GC_3_0a5_2/driver/CLFiles/VFiles_Add",
-    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Find"
+    "src/GC_3_0a5_2/driver/CLFiles/VFiles_Find",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_Initialize",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_Terminate",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_AddOvlGroup",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_GetOvlGroup",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_CountGroups",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_GetOverlayInGroup",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlays_GetFileInOverlay",
+    "src/GC_3_0a5_2/driver/CLOverlays/OvlGroup_New",
+    "src/GC_3_0a5_2/driver/CLOverlays/OvlGroup_Delete",
+    "src/GC_3_0a5_2/driver/CLOverlays/OvlGroup_AddOverlay",
+    "src/GC_3_0a5_2/driver/CLOverlays/OvlGroup_GetOverlay",
+    "src/GC_3_0a5_2/driver/CLOverlays/OvlGroup_CountOverlays",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlay_New",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlay_Delete",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlay_AddFile",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlay_GetFile",
+    "src/GC_3_0a5_2/driver/CLOverlays/Overlay_CountFiles"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3556,7 +3565,8 @@
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "src/GC_3_0a5_2/driver/CLLicenses.c",
     "src/GC_3_0a5_2/driver/CLErrors.c",
-    "src/GC_3_0a5_2/driver/CLFiles.c"
+    "src/GC_3_0a5_2/driver/CLFiles.c",
+    "src/GC_3_0a5_2/driver/CLOverlays.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3726,6 +3736,30 @@
       "_VFile_New": "0x4368d0",
       "_VFiles_Add": "0x436980",
       "_VFiles_Find": "0x4369b0"
+    },
+    "src/GC_3_0a5_2/driver/CLOverlays.c": {
+      "_xmalloc@8": "0x426300",
+      "_xrealloc@12": "0x4263e0",
+      "_xfree@4": "0x426490",
+      "_CLInternalError": "0x414bb0",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_Overlays_Initialize": "0x4369e0",
+      "_Overlays_Terminate": "0x436ad0",
+      "_Overlays_AddOvlGroup": "0x436b30",
+      "_Overlays_GetOvlGroup": "0x436ba0",
+      "_Overlays_CountGroups": "0x436bf0",
+      "_Overlays_GetOverlayInGroup": "0x436c40",
+      "_Overlays_GetFileInOverlay": "0x436c90",
+      "_OvlGroup_New": "0x436cf0",
+      "_OvlGroup_Delete": "0x436db0",
+      "_OvlGroup_AddOverlay": "0x436e10",
+      "_OvlGroup_GetOverlay": "0x436ea0",
+      "_OvlGroup_CountOverlays": "0x436f00",
+      "_Overlay_New": "0x436f50",
+      "_Overlay_Delete": "0x436fd0",
+      "_Overlay_AddFile": "0x437020",
+      "_Overlay_GetFile": "0x4370c0",
+      "_Overlay_CountFiles": "0x437110"
     }
   }
 }

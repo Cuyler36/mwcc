@@ -75,6 +75,18 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLTarg.c: native target-list port
+
+The four canonical Mac members Target_New, Target_Free, Targets_Term and
+Target_Add all match exactly. Two additional Windows cache helpers remain
+address-named: initialization matches; cleanup has a reviewed EBX/EBP register
+swap. The native target is 0x1440 bytes, with 997 cache buckets at 0x4a8 and
+next at 0x143c; TargetInfo is 820 bytes. Initialization invokes all component
+initializers unconditionally, and termination also frees TargetInfo. All six
+bodies total 551 original code bytes at 99.80604%; all 20 initialized data
+bytes match. Helper original names and exact source-membership proof remain
+limited, so the TU is recorded as a reviewed attempt rather than complete.
+
 ## CLToolExec.c: reviewed linker-driver equivalent nonmatch
 
 All seven Mac-named Windows functions are reconstructed. Six pass strict byte

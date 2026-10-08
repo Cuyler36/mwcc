@@ -4950,6 +4950,116 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+      "original_filename": "CLTarg.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Target_New",
+          "address": "0x426f30",
+          "size": 269,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Target_Free",
+          "address": "0x427040",
+          "size": 111,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_004270b0",
+          "address": "0x4270b0",
+          "size": 22,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_004270d0",
+          "address": "0x4270d0",
+          "size": 76,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Targets_Term",
+          "address": "0x427120",
+          "size": 37,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Target_Add",
+          "address": "0x427150",
+          "size": 36,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Target_New",
+          "mac_address": "0x000168ac",
+          "linkage_names": [
+            "Target_New"
+          ]
+        },
+        {
+          "name": "Target_Free",
+          "mac_address": "0x00016a20",
+          "linkage_names": [
+            "Target_Free"
+          ]
+        },
+        {
+          "name": "Targets_Term",
+          "mac_address": "0x00016a90",
+          "linkage_names": [
+            "Targets_Term"
+          ]
+        },
+        {
+          "name": "Target_Add",
+          "mac_address": "0x00016acc",
+          "linkage_names": [
+            "Target_Add"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
       "original_filename": "CLToolExec.c",
       "evidence": [
@@ -20420,49 +20530,6 @@
       ],
       "windows_functions": [],
       "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLTarg.c",
-      "original_filename": "CLTarg.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [],
-      "mac_functions": [
-        {
-          "name": "Target_New",
-          "mac_address": "0x000168ac",
-          "linkage_names": [
-            "Target_New"
-          ]
-        },
-        {
-          "name": "Target_Free",
-          "mac_address": "0x00016a20",
-          "linkage_names": [
-            "Target_Free"
-          ]
-        },
-        {
-          "name": "Targets_Term",
-          "mac_address": "0x00016a90",
-          "linkage_names": [
-            "Targets_Term"
-          ]
-        },
-        {
-          "name": "Target_Add",
-          "mac_address": "0x00016acc",
-          "linkage_names": [
-            "Target_Add"
-          ]
-        }
-      ],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
@@ -52742,7 +52809,7 @@
       }
     },
     "src/driver/CLTarg.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -52871,7 +52938,8 @@
           "space-nointrinsics": "89698c9395759785194e265af7fe158e7dafc3fff239a175e9fc3309b1def49a",
           "space-intrinsics": "81f1d42edc9e384b73377aa395ec963ab390e10e301fd966951f12f3f27caa17"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLTarg.c"
     },
     "src/driver/CLToolExec.c": {
       "status": "superseded_import",
@@ -69915,6 +69983,296 @@
       "encoding": "CP932 succeeds; tools/check_sjis.py absent from checkout.",
       "membership_reviewed": true,
       "strict_exact_count": 6
+    },
+    "src/GC_3_0a5_2/driver/CLTarg.c": {
+      "source": "src\\GC_3_0a5_2\\driver\\CLTarg.c",
+      "source_sha256": "bf1014f5eb3045e0d1e75950d3ec147014ce3f02719ba9af53462a5636fd97f2",
+      "status": "attempted_equivalent",
+      "functions": [
+        {
+          "name": "Target_New",
+          "address": "0x426f30",
+          "size": 269,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": true,
+          "compiled_size": 269
+        },
+        {
+          "name": "Target_Free",
+          "address": "0x427040",
+          "size": 111,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": true,
+          "compiled_size": 111
+        },
+        {
+          "name": "fn_004270b0",
+          "address": "0x4270b0",
+          "size": 22,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": true,
+          "compiled_size": 22
+        },
+        {
+          "name": "fn_004270d0",
+          "address": "0x4270d0",
+          "size": 76,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": false,
+          "compiled_size": 76
+        },
+        {
+          "name": "Targets_Term",
+          "address": "0x427120",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": true,
+          "compiled_size": 37
+        },
+        {
+          "name": "Target_Add",
+          "address": "0x427150",
+          "size": 36,
+          "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+          "exact": true,
+          "compiled_size": 36
+        }
+      ],
+      "baseline_aliases": {
+        "CLTarg_CreateTarget": "Target_New",
+        "free_target": "Target_Free",
+        "CLTarg_FreeTargets": "Targets_Term",
+        "CLTarg_AppendEntry": "Target_Add"
+      },
+      "source_bindings": {
+        "_xcalloc@8": "0x426360",
+        "_xfree@4": "0x426490",
+        "_OS_GetCWD@4": "0x4100a0",
+        "_Segments_Initialize": "0x43c520",
+        "_Segments_Terminate": "0x43c5f0",
+        "_Overlays_Initialize": "0x4369e0",
+        "_Overlays_Terminate": "0x436ad0",
+        "_Files_Initialize": "0x4365b0",
+        "_Files_Terminate": "0x4365f0",
+        "_VFiles_Initialize": "0x436880",
+        "_VFiles_Terminate": "0x436890",
+        "_Paths_Initialize": "0x426590",
+        "_Paths_Terminate": "0x4265d0",
+        "_Incls_Initialize": "0x43c7a0",
+        "_Incls_Terminate": "0x43c800",
+        "_Target_New": "0x426f30",
+        "_Target_Free": "0x427040",
+        "_fn_004270b0": "0x4270b0",
+        "_fn_004270d0": "0x4270d0",
+        "_Targets_Term": "0x427120",
+        "_Target_Add": "0x427150"
+      },
+      "binding_policy": "Bindings are source-scoped. Historical baseline aliases identify callers; preserve unknown helper address names instead of inventing canonical names.",
+      "compiler": "build/compilers/cw94/mwcc.exe",
+      "flags": "-c -O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+      "compiler_experiments": {
+        "profiles": 1,
+        "initial_source_compile": 1,
+        "loop_variants": [
+          {
+            "name": "register_index",
+            "size": 76,
+            "exact": false
+          },
+          {
+            "name": "inner_for",
+            "size": 76,
+            "exact": false
+          },
+          {
+            "name": "if_do",
+            "size": 76,
+            "exact": false
+          }
+        ],
+        "final_source_recompile": 1,
+        "result": "No strict match for cleanup; all loop variants retained76B. Final source keeps straightforward original while traversal."
+      },
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "551",
+          "match_percent": 99.80604
+        },
+        {
+          "name": ".data",
+          "size": "20",
+          "match_percent": 100.0
+        }
+      ],
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@53",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066e0e0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@54",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066e0e8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "native_ABI": {
+        "Target": {
+          "size": "0x1440",
+          "info": "0x0",
+          "targetinfo_pointer": "0x10",
+          "linkage.segs": "0x14",
+          "linkage.overlays": "0x1c",
+          "linkmodel": "0x28",
+          "files": "0x2c",
+          "pchs": "0x38",
+          "incls": "0x44",
+          "sysPaths": "0x64",
+          "userPaths": "0x6c",
+          "lang": "0x74",
+          "cpu": "0x78",
+          "os": "0x7c",
+          "targetName256": "0x80",
+          "preLinker": "0x180",
+          "linker": "0x184",
+          "postLinker": "0x188",
+          "preLinkerDropinFlags": "0x18c",
+          "linkerDropinFlags": "0x190",
+          "postLinkerDropinFlags": "0x194",
+          "outputDirectory260": "0x198",
+          "workingDirectory260": "0x29c",
+          "unknown260": "0x3a0",
+          "virtualFiles": "0x4a4",
+          "cache997pointers": "0x4a8",
+          "next": "0x143c",
+          "field_provenance": "Canonical fields from Mac STABS mapped to Windows call/access offsets. workingDirectory/cache/descriptive cache fields are inferred Windows names, not claimed original symbol names. Unused unknown3a0 field deliberately opaque."
+        },
+        "CLTargetInfo": {
+          "size": "0x820",
+          "targetCPU": 0,
+          "targetOS": 4,
+          "outputType": 8,
+          "linkType": 10,
+          "canRun": 12,
+          "canDebug": 13,
+          "outfile516": 14,
+          "symfile516": 530,
+          "runfile516": 1046,
+          "linkAgainstFile516": 1562,
+          "evidence": "Mac record has same header and four platform-sized specs; Windows Target_New explicitly allocates2080B. Only targetinfo pointer/allocation size are used by this TU."
+        },
+        "Files": {
+          "size": 12,
+          "fileList": 0,
+          "fileCount": 4,
+          "fileMap": 8
+        },
+        "Incls": {
+          "size": 32,
+          "targ": 0,
+          "numincls": 4,
+          "maxincls": 8,
+          "files": 12,
+          "buflen": 16,
+          "bufpos": 20,
+          "buffer": 24,
+          "allPaths": 28
+        },
+        "TargetCacheEntry": {
+          "minimum_used_size": 8,
+          "next": 0,
+          "value": 4,
+          "unknown": "Original record/type names and additional unused fields are not proven."
+        }
+      },
+      "semantic_review": {
+        "Target_New": {
+          "status": "strict exact",
+          "behavior": "xcalloc@8(target,0x1440), strncpy256 into targetName80 without an added forced terminator, xcalloc@8(target info,0x820), stores cpu78/os7c/lang74. OS_GetCWD@4 writes path198; raw260B copy goes to29c. Calls cache zero helper, Segments_Initialize14, Overlays_Initialize1c, Files_Initialize2c and38, VFiles_Initialize4a4, Paths_Initialize64 and6c, Incls_Initialize44 with target itself. Every initializer is called unconditionally and return values are ignored; baseline assertions/short-circuit chain are removed because absent in Windows. Returns allocated target pointer. No allocation failure checks are introduced."
+        },
+        "Target_Free": {
+          "status": "strict exact",
+          "behavior": "No NULL guard. Terminates segments14 and overlays1c, frees cache chains, terminates sys/user paths64/6c, files2c/pchs38, virtual files4a4, Incls44. Then xfree@4(targetinfo10) and xfree@4(target). Added targetinfo free is original Windows behavior. Call order and stack cleanup exact."
+        },
+        "fn_004270b0": {
+          "status": "strict exact",
+          "behavior": "memset997 pointer buckets at target+4a8 to0; emitted repstosd ECX3e5, no other writes. Called only after allocation/cwd copy by Target_New in this cluster. Original function name is unavailable."
+        },
+        "fn_004270d0": {
+          "status": "reviewed equivalent nonmatch",
+          "original_size": 76,
+          "compiled_size": 76,
+          "differences": "Only EBX and EBP exchange roles: retail EBX outer bucket index/EBP saved next; candidate EBP index/EBX saved next. Prologue saves and epilogue restores both. Instruction order, conditions, call targets, immediate constants, field offsets and branch destinations otherwise identical.",
+          "branches_and_memory": "For signed int index0..996, load target+4a8+index*4. If headNULL skip bucket. Otherwise load entry.value4 and entry.next0 before freeing; if value nonNULL xfree@4(value), always xfree@4(entry); continue from saved next untilNULL. Does not write or clear bucket heads, so freed pointers remain dangling in target until target itself is freed. No NULL target check.",
+          "compatibility_cases": [
+            "All997 buckets empty: no free calls.",
+            "NULL payload: node alone freed.",
+            "NonNULL payload: payload freed before node.",
+            "Multi-node chain: saved next survives both free calls.",
+            "Boundary bucket996 processed,997 not accessed."
+          ],
+          "review_basis": "Original Capstone instructions build/cltarg-retail.txt and final resolved body build/cltarg-diff.txt, with identical relocation-site set and same branch/call structure."
+        },
+        "Targets_Term": {
+          "status": "strict exact",
+          "behavior": "NULL list does nothing. Otherwise loads next143c before Target_Free, iterates untilNULL. Does not mutate caller head pointer."
+        },
+        "Target_Add": {
+          "status": "strict exact",
+          "behavior": "Walks pointer-to-pointer chain using next143c untilNULL, writes supplied targ there. No guard forNULL list pointer, no implicit clearing of targ->next, no cycle check. Empty list and nonempty list behavior exact."
+        }
+      },
+      "membership": {
+        "Mac_explicit_STABS": 4,
+        "Windows_functions": 6,
+        "canonical": "Target_New,Target_Free,Targets_Term,Target_Add from explicit CLTarg.c SO/FUN block. Distinct from parser plugin Targets.c.",
+        "unknown_helpers": [
+          "fn_004270b0",
+          "fn_004270d0"
+        ],
+        "unknown_helper_ownership": "Provisional but strong: interleaved between Target_Free and Targets_Term; Target_New/Free directly call them; both exclusively operate target embedded997-bucket storage which determines observed Target size/next offset. No filename assertion or original name is available for these2; uncertainty remains explicit.",
+        "call_anchors": "Proj_Terminate calls Targets_Term427120; Target_New initializes known Files/Paths/Segments/Overlays/Incls members at matching offsets. Targets_Term directly calls Target_Free427040.",
+        "cluster": "426f30..427174. Next427180 scans project overlay/file data, which is a different caller cluster and is not assigned to CLTarg here.",
+        "boundary_method": "Saved Ghidra entries plus Capstone reachable CFG, alignmentNOPs excluded. All6 compiled extents match recorded original sizes.",
+        "data": "Two literal objects20B writable.data: target at66e0e0 and target info66e0e8. All bytes/fixups exact; no emitted BSS/rodata/private named data."
+      },
+      "limits": {
+        "unported_known_behavior": [],
+        "strict_nonmatches": [
+          "fn_004270d0"
+        ],
+        "unresolved_names": [
+          "Windows997-bucket cache initializer and terminator helper canonical names.",
+          "Original cache entry and extra target field names."
+        ],
+        "execution_testing": "No original compiler application executed; proof is isolated compilation, objdiff and static review."
+      },
+      "provenance": {
+        "binary": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+        "binary_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "symbolmap": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "symbolmap_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "symbol_snapshot": "build/cltarg-stabs.txt",
+        "disasm": "build/cltarg-retail.txt",
+        "Ghidra_live": "Unavailable; saved entries and original PE Capstone used."
+      },
+      "encoding": "CP932 succeeds; repository tools/check_sjis.py absent.",
+      "membership_reviewed": false,
+      "strict_exact_count": 5
     }
   },
   "ownership_review": {

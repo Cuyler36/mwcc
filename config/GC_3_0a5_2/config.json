@@ -62,7 +62,7 @@
     "src/GC_3_0a5_2/driver/CLSegs.c",
     "src/driver/CLStaticMain.c",
     "src/driver/CLStaticPlugins.c",
-    "src/driver/CLTarg.c",
+    "src/GC_3_0a5_2/driver/CLTarg.c",
     "src/GC_3_0a5_2/driver/CLToolExec.c",
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "src/driver/CWParserPluginsPrivate.c",
@@ -1154,25 +1154,6 @@
       ]
     },
     "src/driver/CLStaticPlugins.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLTarg.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3314,6 +3295,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLTarg.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3726,7 +3726,12 @@
     "src/GC_3_0a5_2/driver/CLToolExec/FreeArgumentList",
     "src/GC_3_0a5_2/driver/CLToolExec/SetupLinkerCommandLine",
     "src/GC_3_0a5_2/driver/CLToolExec/SetupTemporaries",
-    "src/GC_3_0a5_2/driver/CLToolExec/DeleteTemporaries"
+    "src/GC_3_0a5_2/driver/CLToolExec/DeleteTemporaries",
+    "src/GC_3_0a5_2/driver/CLTarg/Target_New",
+    "src/GC_3_0a5_2/driver/CLTarg/Target_Free",
+    "src/GC_3_0a5_2/driver/CLTarg/fn_004270b0",
+    "src/GC_3_0a5_2/driver/CLTarg/Targets_Term",
+    "src/GC_3_0a5_2/driver/CLTarg/Target_Add"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4371,6 +4376,29 @@
       "_SetupTemporaries": "0x423ab0",
       "_DeleteTemporaries": "0x423b50",
       "_ExecuteLinker": "0x423c30"
+    },
+    "src/GC_3_0a5_2/driver/CLTarg.c": {
+      "_xcalloc@8": "0x426360",
+      "_xfree@4": "0x426490",
+      "_OS_GetCWD@4": "0x4100a0",
+      "_Segments_Initialize": "0x43c520",
+      "_Segments_Terminate": "0x43c5f0",
+      "_Overlays_Initialize": "0x4369e0",
+      "_Overlays_Terminate": "0x436ad0",
+      "_Files_Initialize": "0x4365b0",
+      "_Files_Terminate": "0x4365f0",
+      "_VFiles_Initialize": "0x436880",
+      "_VFiles_Terminate": "0x436890",
+      "_Paths_Initialize": "0x426590",
+      "_Paths_Terminate": "0x4265d0",
+      "_Incls_Initialize": "0x43c7a0",
+      "_Incls_Terminate": "0x43c800",
+      "_Target_New": "0x426f30",
+      "_Target_Free": "0x427040",
+      "_fn_004270b0": "0x4270b0",
+      "_fn_004270d0": "0x4270d0",
+      "_Targets_Term": "0x427120",
+      "_Target_Add": "0x427150"
     }
   }
 }

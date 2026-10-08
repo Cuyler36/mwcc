@@ -1418,5 +1418,45 @@
   "CLToolExec_ExecuteLinker": {
     "name": "ExecuteLinker",
     "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "Target_New": {
+    "name": "Target_New",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "Target_Free": {
+    "name": "Target_Free",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "fn_004270b0": {
+    "name": "fn_004270b0",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "fn_004270d0": {
+    "name": "fn_004270d0",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "Targets_Term": {
+    "name": "Targets_Term",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "Target_Add": {
+    "name": "Target_Add",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "CLTarg_CreateTarget": {
+    "name": "Target_New",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "free_target": {
+    "name": "Target_Free",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "CLTarg_FreeTargets": {
+    "name": "Targets_Term",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "CLTarg_AppendEntry": {
+    "name": "Target_Add",
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c"
   }
 }

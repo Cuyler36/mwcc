@@ -3809,6 +3809,72 @@
     }
   },
   {
+    "name": "Target_New",
+    "address": "0x426f30",
+    "size": 269,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Target_Free",
+    "address": "0x427040",
+    "size": 111,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004270b0",
+    "address": "0x4270b0",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004270d0",
+    "address": "0x4270d0",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Targets_Term",
+    "address": "0x427120",
+    "size": 37,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Target_Add",
+    "address": "0x427150",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/driver/CLTarg.c",
+    "identity_evidence": "CLTarg.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "set_bytes",
     "address": "0x0042a060",
     "size": 21,

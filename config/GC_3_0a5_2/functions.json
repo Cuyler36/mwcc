@@ -7305,236 +7305,618 @@
     }
   },
   {
-    "name": "CError_ReportIllegalFlags",
-    "address": "0x0045a010",
+    "name": "CError_QualifierCheck",
     "size": 464,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_ReportIllegalFlags",
-    "baseline_address": "0x004454b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045a010",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CError_LongJump",
-    "address": "0x0045a230",
-    "size": 32,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_LongJump",
-    "baseline_address": "0x00445760",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CError_UserBreak",
+    "size": 73,
+    "address": "0x0045a1e0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_NoMem",
+    "size": 19,
+    "address": "0x0045a230",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CError_Internal",
-    "address": "0x0045a250",
     "size": 199,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_Internal",
-    "baseline_address": "0x00445780",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045a250",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CError_Warning",
-    "address": "0x0045a320",
     "size": 360,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_Warning",
-    "baseline_address": "0x004457e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045a320",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_AbstractClassError",
+    "size": 50,
+    "address": "0x0045a490",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ObjectRedeclared",
+    "size": 170,
+    "address": "0x0045a4d0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CError_OverloadedFunctionError",
-    "address": "0x0045a580",
     "size": 1373,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_OverloadedFunctionError",
-    "baseline_address": "0x00445960",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045a580",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CError_ReportErrorAndUpdateToken",
-    "address": "0x0045bca0",
+    "name": "fn_0045aae0",
+    "size": 83,
+    "address": "0x0045aae0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorFuncCall",
+    "size": 4003,
+    "address": "0x0045ab40",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorSkipStmt",
+    "size": 424,
+    "address": "0x0045baf0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorSkipExpr",
     "size": 360,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_ReportErrorAndUpdateToken",
-    "baseline_address": "0x004461e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045bca0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CError_FatalError",
-    "address": "0x0045c1a0",
+    "name": "fn_0045be10",
+    "size": 42,
+    "address": "0x0045be10",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045be40",
+    "size": 430,
+    "address": "0x0045be40",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorSkip",
+    "size": 424,
+    "address": "0x0045bff0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorTerm",
     "size": 279,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_FatalError",
-    "baseline_address": "0x00446320",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045c1a0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CError_ReportError",
-    "address": "0x0045c480",
+    "name": "CError_ErrorSemantic",
     "size": 376,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_ReportError",
-    "baseline_address": "0x004463d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045c2c0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_instantiation_stack",
-    "address": "0x0045d010",
+    "name": "CError_ErrorLTExp",
+    "size": 61,
+    "address": "0x0045c440",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_Error",
+    "size": 376,
+    "address": "0x0045c480",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_VAErrorMessage",
+    "size": 76,
+    "address": "0x0045c600",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ErrorMessageVA",
+    "size": 2493,
+    "address": "0x0045c650",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendTemplateStack",
     "size": 875,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_instantiation_stack",
-    "baseline_address": "0x004469c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045d010",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "report_diagnostic",
+    "name": "CError_ErrorMessage",
+    "size": 570,
     "address": "0x0045d380",
-    "size": 576,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "report_diagnostic",
-    "baseline_address": "0x00446bc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045d5c0",
+    "size": 313,
+    "address": "0x0045d5c0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045d700",
+    "size": 365,
+    "address": "0x0045d700",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045d870",
+    "size": 360,
+    "address": "0x0045d870",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045d9e0",
+    "size": 21,
+    "address": "0x0045d9e0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045da00",
+    "size": 1365,
+    "address": "0x0045da00",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_GetObjectName",
+    "size": 261,
+    "address": "0x0045df60",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_GetFunctionName",
+    "size": 280,
+    "address": "0x0045e070",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CError_GetQualifiedName",
-    "address": "0x0045e190",
     "size": 437,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_GetQualifiedName",
-    "baseline_address": "0x00447010",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045e190",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_type",
-    "address": "0x0045f060",
+    "name": "CError_AppendObjectName",
+    "size": 582,
+    "address": "0x0045e350",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_AppendFunctionName",
+    "size": 560,
+    "address": "0x0045e5a0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0045e7d0",
+    "size": 731,
+    "address": "0x0045e7d0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_AppendUnqualFunctionName",
+    "size": 806,
+    "address": "0x0045eab0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_GetTypeName",
+    "size": 316,
+    "address": "0x0045ede0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_GetNameString",
+    "size": 316,
+    "address": "0x0045ef20",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendType",
     "size": 6983,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_type",
-    "baseline_address": "0x004478a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x0045f060",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_function_args",
-    "address": "0x00460d70",
+    "name": "fn_00460bb0",
+    "size": 447,
+    "address": "0x00460bb0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendFuncArgs",
     "size": 577,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_function_args",
-    "baseline_address": "0x00448b80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00460d70",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_templdep",
-    "address": "0x00461150",
+    "name": "fn_00460fc0",
+    "size": 386,
+    "address": "0x00460fc0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendTemplDepType",
     "size": 2007,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_templdep",
-    "baseline_address": "0x00448dc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00461150",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_pointer_declarator",
-    "address": "0x00461930",
+    "name": "CError_BufferAppendPType",
     "size": 804,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_pointer_declarator",
-    "baseline_address": "0x004491e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00461930",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_namespace_qualification",
-    "address": "0x00461c60",
+    "name": "CError_BufferAppendNameSpace",
     "size": 537,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "append_namespace_qualification",
-    "baseline_address": "0x00449510",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00461c60",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_00449d60",
-    "address": "0x00462db0",
+    "name": "CError_BufferAppendTemplArgs",
+    "size": 657,
+    "address": "0x00461e80",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendTemplArgExpr",
+    "size": 1930,
+    "address": "0x00462120",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendQualifier",
+    "size": 1146,
+    "address": "0x004628b0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BufferAppendString",
+    "size": 120,
+    "address": "0x00462d30",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_ResetErrorSkip",
     "size": 11,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "fn_00449d60",
-    "baseline_address": "0x00449d60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00462db0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CError_SetWrittenEntry",
-    "address": "0x00462dc0",
+    "name": "CError_SetErrorToken",
     "size": 28,
-    "source": "src/frontend/CError.c",
-    "baseline_name": "CError_SetWrittenEntry",
-    "baseline_address": "0x00449d70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x00462dc0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00462de0",
+    "size": 73,
+    "address": "0x00462de0",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_SetNullErrorSourceRef",
+    "size": 11,
+    "address": "0x00462e30",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_SetErrorSourceRef",
+    "size": 41,
+    "address": "0x00462e40",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_EndErrorCheckMode",
+    "size": 134,
+    "address": "0x00462e70",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_BeginErrorCheckMode",
+    "size": 27,
+    "address": "0x00462f00",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CError_Init",
+    "size": 72,
+    "address": "0x00462f20",
+    "source": "src/GC_3_0a5_2/frontend/CError.c",
+    "identity_evidence": "Native CError.c assertion cluster; supplied Mac map and CSV candidates corroborated against native behavior, with cross-version naming conflicts preserved in TU ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed full native CFG and corrected padding/prologue seams; adjacent resource/IR helpers excluded",
       "unresolved_indirect_flow": false
     }
   },

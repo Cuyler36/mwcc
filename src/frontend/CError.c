@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CError.c"
 #include "compiler/common.h"
 #include "compiler/CError.h"
@@ -145,6 +146,7 @@ unsigned int __stdcall CError_GetErrorString(short errorCode, char *errorString)
     return (unsigned int)errorString;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CError_ReportIllegalFlags(UInt32 flags)
 {
     if (flags != 0) {
@@ -231,6 +233,7 @@ void CError_ReportIllegalFlags(UInt32 flags)
         }
     }
 }
+#endif
 
 void CError_DispatchAndLongJump(void)
 {
@@ -252,6 +255,7 @@ void CError_Longjmp(void)
     return;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CError_LongJump(void)
 
 {
@@ -259,7 +263,9 @@ void CError_LongJump(void)
     longjmp(error_jmp_buf, 1);
     return;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CError_Internal(const char *file, int line)
 {
     char message[128];
@@ -269,7 +275,9 @@ int CError_Internal(const char *file, int line)
     longjmp(error_jmp_buf, 1);
     ++data_0058715c;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CError_Warning(SInt32 diagnosticCode, ...)
 {
     char format[256];
@@ -296,6 +304,7 @@ void CError_Warning(SInt32 diagnosticCode, ...)
     CompilerTools_GetResourceCString(format, 10000, errorCode - 99);
     CError_FormatAndReportDiagnostic(diagnosticID + 10000, format, args, 0, 1);
 }
+#endif
 /* 0x404c30, memcpy */
 /* 0x441fa0, lalloc */
 
@@ -311,11 +320,13 @@ static void CError_BufferGrow(StrBuf *eb, UInt32 amount)
     eb->avail += amount;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void fn_00449d60(void)
 {
     data_005805ee = 4294967295U;
     return;
 }
+#endif
 
 void CError_SetWrittenEntry(int *entry)
 {
@@ -380,6 +391,7 @@ static void CErrBuf_Append(StrBuf *b, const char *s)
     b->avail -= n;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CError_OverloadedFunctionError(Object *name, struct MatchLink *names)
 {
     StrBuf message;
@@ -408,6 +420,7 @@ void CError_OverloadedFunctionError(Object *name, struct MatchLink *names)
     append_instantiation_stack(&message);
     report_diagnostic(0x27d7, message.start, 0, 0);
 }
+#endif
 /* 0x403c50, sprintf-like */
 /* 0x404c30, memcpy */
 
@@ -708,6 +721,7 @@ void CError_FormatAndReportDiagnostic(int errorCode, const char *format, char *a
 /* 0x5519f4, the 17-byte string */
 /* 0x551a08, the 2-byte string */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void append_instantiation_stack(StrBuf *buf)
 {
     SInt32 j;
@@ -741,10 +755,12 @@ void append_instantiation_stack(StrBuf *buf)
     *buf->cursor = 0;
     buf->avail = 0;
 }
+#endif
 
 /* Context assembled for CWPluginsPrivate_InvokeMessageCallback. */
 
 #pragma opt_lifetimes off
+#if VERSION != VERSION_GC_3_0A5_2
 void report_diagnostic(int message, char *argument, char force, char mode)
 {
     struct DispatchObject_0041b830 **context;
@@ -807,6 +823,7 @@ void report_diagnostic(int message, char *argument, char force, char mode)
     }
     buffered_token = 0;
 }
+#endif
 #pragma opt_lifetimes reset
 
 char *CError_GetQualifiedHashName(NameSpace *nspace, HashNameNode *nameRef)
@@ -869,6 +886,7 @@ char *CError_BuildNameSpaceNameTypeString(NameSpace *nspace, HashNameNode *name,
     return strcpy(p, s.start);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *CError_GetQualifiedName(NameSpace *nameSpace, HashNameNode *name)
 {
     StrBuf sb;
@@ -897,6 +915,7 @@ char *CError_GetQualifiedName(NameSpace *nameSpace, HashNameNode *name)
     newdata = (char *)CompilerTools_AllocatePool(sb.size + 1);
     return strcpy(newdata, sb.start);
 }
+#endif
 
 void append_func_type_info(StrBuf *buf, MethRec *func)
 {
@@ -1009,6 +1028,7 @@ char *CError_GetTypeString(Type *type, int qualifiers, char useAlternateAllocato
     return (char *)strcpy(text, ctx.start);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void append_type(StrBuf *buf, Type *type, UInt32 qualifiers)
 {
     CTStateElem *templateArgs;
@@ -1239,7 +1259,9 @@ void append_type(StrBuf *buf, Type *type, UInt32 qualifiers)
             return;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void append_function_args(StrBuf *buf, TypeMemberFunc *type, char skip)
 {
     FuncArg *arg;
@@ -1277,7 +1299,9 @@ void append_function_args(StrBuf *buf, TypeMemberFunc *type, char skip)
         append_qualifiers(buf, qual);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void append_templdep(StrBuf *buf, TypeTemplDep *node)
 {
     char tmp[64];
@@ -1326,9 +1350,11 @@ void append_templdep(StrBuf *buf, TypeTemplDep *node)
             break;
     }
 }
+#endif
 
 #pragma inline_depth(4)
 
+#if VERSION != VERSION_GC_3_0A5_2
 void append_pointer_declarator(StrBuf *buf, Type *type)
 {
     switch ((signed char)type->type) {
@@ -1348,6 +1374,7 @@ void append_pointer_declarator(StrBuf *buf, Type *type)
             return;
     }
 }
+#endif
 
 void append_ctstate_list(StrBuf *buf, CTStateElem *node)
 {

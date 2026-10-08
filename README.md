@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 224 source files build, 1,392 candidate functions are
-mapped, and 578 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 225 source files build, 1,430 candidate functions are
+mapped, and 602 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -55,6 +55,12 @@ PCode has 26 native bodies reconstructed, including the generic emitters and
 graph helpers; 12 match exactly. The native flag setter takes one 64-bit value.
 Incorrect imported flag-setter and predecessor-builder mappings were removed;
 their old bodies remain provisional. Original state-data ownership is still open.
+
+CError has all 56 identified native bodies reconstructed, with 24 exact matches.
+Its diagnostic table, strings, rodata, and BSS match with relocations. The shared
+CSV clarifies canonical names, including CError_NoMem and the error-skipping
+routines; version-specific naming conflicts remain recorded. The other 32
+bodies retain code generation differences after static control-flow review.
 
 The shared `mwcc.csv` is preserved as normalized name candidates in
 [symbol-hints.json](config/GC_3_0a5_2/symbol-hints.json), with its input hash

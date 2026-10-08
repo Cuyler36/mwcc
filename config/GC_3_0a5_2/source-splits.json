@@ -2226,5 +2226,53 @@
   "create_pcode_instruction": {
     "name": "vformatpcode",
     "source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+  },
+  "CError_ReportIllegalFlags": {
+    "name": "CError_QualifierCheck",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "CError_LongJump": {
+    "name": "CError_NoMem",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "CError_Internal": {
+    "name": "CError_Internal",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "CError_OverloadedFunctionError": {
+    "name": "CError_OverloadedFunctionError",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "append_instantiation_stack": {
+    "name": "CError_BufferAppendTemplateStack",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "report_diagnostic": {
+    "name": "CError_ErrorMessage",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "CError_GetQualifiedName": {
+    "name": "CError_GetQualifiedName",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "append_type": {
+    "name": "CError_BufferAppendType",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "append_function_args": {
+    "name": "CError_BufferAppendFuncArgs",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "append_templdep": {
+    "name": "CError_BufferAppendTemplDepType",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "append_pointer_declarator": {
+    "name": "CError_BufferAppendPType",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
+  },
+  "fn_00449d60": {
+    "name": "CError_ResetErrorSkip",
+    "source": "src/GC_3_0a5_2/frontend/CError.c"
   }
 }

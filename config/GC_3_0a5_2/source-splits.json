@@ -2418,5 +2418,121 @@
   "CDecl_NewTemplDepType": {
     "name": "CDecl_NewTemplDepType",
     "source": "src/GC_3_0a5_2/frontend/CTypeTools.c"
+  },
+  "initialize_hash_name_globals": {
+    "name": "CMach_ReInitRuntimeObjects",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatReciprocal": {
+    "name": "CMach_FloatReciprocal",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "Type_RequiresMemoryReturn": {
+    "name": "CMach_PassResultInHiddenArg",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMachine_FunctionRequiresMemoryReturn": {
+    "name": "CMach_GetFunctionResultClass",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_StructLayoutBitfield": {
+    "name": "CMach_StructLayoutBitfield",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_InitFloatMem": {
+    "name": "CMach_InitFloatMem",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMachine_RoundFloatToType": {
+    "name": "CMach_CalcFloatConvert",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_InitIntMem": {
+    "name": "CMach_InitIntMem",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcIntMonadic": {
+    "name": "CMach_CalcIntMonadic",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcIntDiadic": {
+    "name": "CMach_CalcIntDiadic",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_GetClassAlign": {
+    "name": "CMach_GetClassAlign",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatIsZero": {
+    "name": "CMach_FloatIsZero",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcFloatDiadicBool": {
+    "name": "CMach_CalcFloatDiadicBool",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_StructLayoutInitOffset": {
+    "name": "CMach_StructLayoutInitOffset",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcFloatDiadic": {
+    "name": "CMach_CalcFloatDiadic",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_GetQUALalign": {
+    "name": "CMach_GetQUALalign",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatIsPowerOf2": {
+    "name": "CMach_FloatIsPowerOf2",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcFloatConvertFromInt": {
+    "name": "CMach_CalcFloatConvertFromInt",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_PragmaParams": {
+    "name": "CMach_PragmaParams",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatIsNegOne": {
+    "name": "CMach_FloatIsNegOne",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_StructLayoutGetCurSize": {
+    "name": "CMach_StructLayoutGetCurSize",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatScan": {
+    "name": "CMach_FloatScan",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_FloatIsOne": {
+    "name": "CMach_FloatIsOne",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcFloatMonadic": {
+    "name": "CMach_CalcFloatMonadic",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcFloatConvert": {
+    "name": "CMach_CalcFloatConvert",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_StructLayoutGetOffset": {
+    "name": "CMach_StructLayoutGetOffset",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_CalcIntConvertFromFloat": {
+    "name": "CMach_CalcIntConvertFromFloat",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_PassResultInHiddenArg": {
+    "name": "CMach_PassResultInHiddenArg",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
+  },
+  "CMach_MemberAlignValue": {
+    "name": "CMach_MemberAlignValue",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c"
   }
 }

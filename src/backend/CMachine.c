@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CMachine.c"
 #include "compiler/common.h"
 #include "compiler/CMachine.h"
@@ -41,6 +42,7 @@
 
 /* Declarations gathered from the merged files. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void initialize_hash_name_globals(void)
 {
     HashNameNode *nameHash1;
@@ -169,13 +171,17 @@ void initialize_hash_name_globals(void)
     data_0055faac = nameHash3;
     data_0055fa98 = nameHash4;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Float CMach_FloatReciprocal(Float value)
 {
     value.data.value = 1.0L / value.data.value;
     return value;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CMach_PassResultInHiddenArg(Type *type)
 {
     switch ((char)type->type) {
@@ -194,6 +200,8 @@ Boolean CMach_PassResultInHiddenArg(Type *type)
             return 0;
     }
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean Type_RequiresMemoryReturn(Type *type)
 {
     SInt32 structKind;
@@ -219,7 +227,9 @@ Boolean Type_RequiresMemoryReturn(Type *type)
             return 0;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CMachine_FunctionRequiresMemoryReturn(TypeFunc *functype)
 {
     SInt8 type = functype->functype->type;
@@ -240,6 +250,7 @@ Boolean CMachine_FunctionRequiresMemoryReturn(TypeFunc *functype)
             return 0;
     }
 }
+#endif
 
 const char *CMach_GetCPU(void)
 {
@@ -304,6 +315,7 @@ static double data_0055fd50 = 4.0;
 static double data_0055fd58 = -4.0;
 static double data_0055fd60 = 8.0;
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CMach_FloatIsPowerOf2(Float f)
 {
     return f.data.value == data_0055fd18 || f.data.value == double_four || f.data.value == data_0055fd28 ||
@@ -311,7 +323,9 @@ Boolean CMach_FloatIsPowerOf2(Float f)
            f.data.value == data_0055fd48 || f.data.value == data_0055fd50 || f.data.value == data_0055fd58 ||
            f.data.value == data_0055fd60;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 long CMach_StructLayoutBitfield(TypeBitfield *field, int alignmentKind)
 {
     short requestedAlignment;
@@ -404,7 +418,9 @@ long CMach_StructLayoutBitfield(TypeBitfield *field, int alignmentKind)
     data_00580fa0 += field->bitlength;
     return data_00580fa4;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 long CMach_StructLayoutGetOffset(Type *type, int flags)
 {
     int unusedBits;
@@ -434,7 +450,9 @@ long CMach_StructLayoutGetOffset(Type *type, int flags)
     structLayoutOffset = offset + type->size;
     return offset;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CMach_StructLayoutInitOffset(unsigned int offset)
 {
     structLayoutOffset = offset;
@@ -442,6 +460,7 @@ void CMach_StructLayoutInitOffset(unsigned int offset)
     bitfield_storage_size = 0;
     data_00580fa4 = 0;
 }
+#endif
 
 void CMachine_ResetMaximumAlignment(void)
 {
@@ -623,6 +642,7 @@ UInt16 fn_004a8400(TypeStruct *str)
     maximumAlignment = 0;
     return lift_value_0;
 }
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 CMach_MemberAlignValue(Type *type, SInt32 offset)
 {
     SInt16 alignment = get_type_align(type);
@@ -630,7 +650,9 @@ SInt16 CMach_MemberAlignValue(Type *type, SInt32 offset)
         return 0;
     return (alignment - (offset & (alignment - 1U))) & (alignment - 1U);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CMach_StructLayoutGetCurSize(void)
 {
     int alignment = 0;
@@ -657,6 +679,7 @@ int CMach_StructLayoutGetCurSize(void)
     }
     return structLayoutOffset;
 }
+#endif
 
 SInt16 get_type_align(Type *type)
 {
@@ -692,6 +715,7 @@ SInt16 get_type_align(Type *type)
 
 /* Records and links used by the maximum-value scan. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 short CMach_GetClassAlign(TypeClass *list)
 {
     int maximum;
@@ -709,7 +733,9 @@ short CMach_GetClassAlign(TypeClass *list)
     }
     return maximum;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CMach_PragmaParams(void)
 {
     if (copts.f9f != 0) {
@@ -719,6 +745,7 @@ void CMach_PragmaParams(void)
         CPrepTokenizer_GetNextToken();
     }
 }
+#endif
 
 void CMach_PrintFloat(char *output, Float value)
 {
@@ -749,6 +776,7 @@ void CMach_PrintFloat(char *output, Float value)
     sprintf(output, float_format, (long double)buffer.value);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CMach_InitFloatMem(Type *type, Float value, unsigned char *dest)
 {
     if (type->type == TYPEFLOAT) {
@@ -769,21 +797,29 @@ void CMach_InitFloatMem(Type *type, Float value, unsigned char *dest)
     }
     CError_FATAL(779);
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 UInt8 CMach_FloatIsNegOne(double value)
 {
     return value == negative_one;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned char CMach_FloatIsOne(double value)
 {
     return value == DAT_0055fff0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned char CMach_FloatIsZero(double value)
 {
     return value == float_zero;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Float CMachine_RoundFloatToType(Type *type, Float value)
 {
     switch (type->size) {
@@ -802,9 +838,11 @@ Float CMachine_RoundFloatToType(Type *type, Float value)
     }
     return value;
 }
+#endif
 /* 0x474a30, signed 64 -> double */
 /* 0x474ab0, unsigned 64 -> double */
 
+#if VERSION != VERSION_GC_3_0A5_2
 Float CMach_CalcFloatConvertFromInt(Type *type, CInt64 value)
 {
     Float f;
@@ -821,7 +859,9 @@ Float CMach_CalcFloatConvertFromInt(Type *type, CInt64 value)
     }
     return f;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *CMach_FloatScan(char *text, Float *result, char *flag)
 {
     union {
@@ -839,6 +879,7 @@ void *CMach_FloatScan(char *text, Float *result, char *flag)
         *result = val.integer;
     return end;
 }
+#endif
 
 /* Four-word operands compared by the machine operation. */
 
@@ -860,6 +901,7 @@ unsigned char CMach_CalcVectorDiadicBool(unsigned int context, const union MWVec
 
 /* 0x55ff24, string "CMachine.c" */
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CMach_CalcFloatDiadicBool(Type *self, volatile double a, SInt16 op, volatile double b)
 {
     int dead_1;
@@ -882,7 +924,9 @@ Boolean CMach_CalcFloatDiadicBool(Type *self, volatile double a, SInt16 op, vola
             return 0;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Float CMach_CalcFloatMonadic(Type *type, short op, double value)
 {
     Float result;
@@ -906,7 +950,9 @@ Float CMach_CalcFloatMonadic(Type *type, short op, double value)
     }
     return result;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 static Float CMach_CalcFloatConvert(Type *type, Float value)
 {
     switch (type->size) {
@@ -924,7 +970,9 @@ static Float CMach_CalcFloatConvert(Type *type, Float value)
     }
     return value;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 Float CMach_CalcFloatDiadic(Type *type, Float left, short op, Float right)
 {
     switch (op) {
@@ -945,6 +993,7 @@ Float CMach_CalcFloatDiadic(Type *type, Float left, short op, Float right)
     }
     return CMach_CalcFloatConvert(type, left);
 }
+#endif
 
 void CMachine_InitVectorMem(Type *type, MWVector128 val, void *mem)
 {
@@ -1010,6 +1059,7 @@ void CMachine_InitVectorMem(Type *type, MWVector128 val, void *mem)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CMach_InitIntMem(Type *type, CInt64 val, void *mem)
 {
     UInt8 ch;
@@ -1043,7 +1093,9 @@ void CMach_InitIntMem(Type *type, CInt64 val, void *mem)
             CError_FATAL(486);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 CMach_CalcIntConvertFromFloat(Type *type, double value)
 {
     CInt64 result;
@@ -1063,7 +1115,9 @@ CInt64 CMach_CalcIntConvertFromFloat(Type *type, double value)
     }
     return result;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 CMach_CalcIntMonadic(Type *type, SInt16 op, CInt64 val)
 {
     if (Type_IsUnsigned(type)) {
@@ -1153,9 +1207,11 @@ CInt64 CMach_CalcIntMonadic(Type *type, SInt16 op, CInt64 val)
     }
     return val;
 }
+#endif
 
 #define ISZERO64(v) ((Boolean)(((v).hi == 0) && ((v).lo == 0)))
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 CMach_CalcIntDiadic(Type *type, CInt64 a, SInt16 op, CInt64 b)
 {
     if (Type_IsUnsigned(type)) {
@@ -1396,7 +1452,9 @@ CInt64 CMach_CalcIntDiadic(Type *type, CInt64 a, SInt16 op, CInt64 b)
     }
     return a;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CMach_GetQUALalign(int qualifiers)
 {
     int alignment = 0;
@@ -1436,3 +1494,4 @@ int CMach_GetQUALalign(int qualifiers)
     }
     return alignment;
 }
+#endif

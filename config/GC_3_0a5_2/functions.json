@@ -10749,210 +10749,563 @@
     }
   },
   {
-    "name": "initialize_hash_name_globals",
-    "address": "0x004e1e40",
-    "size": 964,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "initialize_hash_name_globals",
-    "baseline_address": "0x004a7480",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "name": "fn_004e0df0",
+    "address": "0x4e0df0",
+    "size": 1581,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_GetBackEndOptions",
+    "address": "0x4e1420",
+    "size": 1581,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e1a50",
+    "address": "0x4e1a50",
+    "size": 994,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_ReInitRuntimeObjects",
+    "address": "0x4e1e40",
+    "size": 964,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_RoundedSizeOf",
+    "address": "0x4e2210",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMach_FloatReciprocal",
-    "address": "0x004e2250",
+    "address": "0x4e2250",
     "size": 19,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_FloatReciprocal",
-    "baseline_address": "0x004a7850",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "Type_RequiresMemoryReturn",
-    "address": "0x004e2470",
-    "size": 119,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "Type_RequiresMemoryReturn",
-    "baseline_address": "0x004a7af0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMach_CustomIntConvert",
+    "address": "0x4e2270",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMachine_FunctionRequiresMemoryReturn",
-    "address": "0x004e24f0",
+    "name": "fn_004e2290",
+    "address": "0x4e2290",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e22c0",
+    "address": "0x4e22c0",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_IsUnsignedType",
+    "address": "0x4e2300",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_FloatIsPowerOf2",
+    "address": "0x4e2340",
+    "size": 219,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_PassAddressOf",
+    "address": "0x4e2420",
     "size": 70,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMachine_FunctionRequiresMemoryReturn",
-    "baseline_address": "0x004a7b80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_PassResultInHiddenArg",
+    "address": "0x4e2470",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_GetFunctionResultClass",
+    "address": "0x4e24f0",
+    "size": 70,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
     }
   },
   {
     "name": "CMach_StructLayoutBitfield",
-    "address": "0x004e2540",
+    "address": "0x4e2540",
     "size": 555,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_StructLayoutBitfield",
-    "baseline_address": "0x004a7be0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_004e2770",
+    "address": "0x4e2770",
+    "size": 970,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMachine_GetTypeAlignment",
-    "address": "0x004e2e30",
+    "name": "CMach_StructLayoutGetOffset",
+    "address": "0x4e2b40",
+    "size": 154,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_StructLayoutGetCurSize",
+    "address": "0x4e2be0",
+    "size": 115,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_StructLayoutInitOffset",
+    "address": "0x4e2c60",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_MemberAlignValue",
+    "address": "0x4e2cc0",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e2cf0",
+    "address": "0x4e2cf0",
+    "size": 263,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_GetTypeAlign",
+    "address": "0x4e2e00",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_GetQualifiedTypeAlign",
+    "address": "0x4e2e30",
     "size": 853,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMachine_GetTypeAlignment",
-    "baseline_address": "0x004a80a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_GetClassAlign",
+    "address": "0x4e3190",
+    "size": 14,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMach_PrintFloat",
-    "address": "0x004e3780",
-    "size": 171,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_PrintFloat",
-    "baseline_address": "0x004a8440",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMach_GetQualifiedClassAlign",
+    "address": "0x4e31a0",
+    "size": 727,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_GetStructAlign",
+    "address": "0x4e3480",
+    "size": 14,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_GetQualifiedStructAlign",
+    "address": "0x4e3490",
+    "size": 645,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_004e3720",
+    "address": "0x4e3720",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_PragmaParams",
+    "address": "0x4e3740",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e3780",
+    "address": "0x4e3780",
+    "size": 171,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
     }
   },
   {
     "name": "CMach_InitFloatMem",
-    "address": "0x004e3830",
+    "address": "0x4e3830",
     "size": 133,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_InitFloatMem",
-    "baseline_address": "0x004a8500",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMachine_RoundFloatToType",
-    "address": "0x004e3920",
+    "name": "CMach_FloatIsNegOne",
+    "address": "0x4e38c0",
+    "size": 26,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_FloatIsOne",
+    "address": "0x4e38e0",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_FloatIsZero",
+    "address": "0x4e3900",
+    "size": 22,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_CalcFloatConvert",
+    "address": "0x4e3920",
     "size": 77,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMachine_RoundFloatToType",
-    "baseline_address": "0x004a85f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMach_CalcVectorDiadicBool",
-    "address": "0x004e3a60",
-    "size": 228,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_CalcVectorDiadicBool",
-    "baseline_address": "0x004a8730",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMach_CalcFloatConvertFromInt",
+    "address": "0x4e3970",
+    "size": 123,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_FloatScan",
+    "address": "0x4e39f0",
+    "size": 99,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMach_CalcFloatDiadicBool",
-    "address": "0x004e3b50",
-    "size": 131,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_CalcFloatDiadicBool",
-    "baseline_address": "0x004a8800",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x4e3a60",
+    "size": 228,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMach_CalcFloatMonadic",
-    "address": "0x004e3be0",
-    "size": 179,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_CalcFloatMonadic",
-    "baseline_address": "0x004a88f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x4e3b50",
+    "size": 131,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMachine_InitVectorMem",
-    "address": "0x004e3fc0",
-    "size": 268,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMachine_InitVectorMem",
-    "baseline_address": "0x004a8a70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMach_CalcFloatDiadic",
+    "address": "0x4e3be0",
+    "size": 179,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_InitVectorMem",
+    "address": "0x4e3ca0",
+    "size": 792,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_004e3fc0",
+    "address": "0x4e3fc0",
+    "size": 268,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
     }
   },
   {
     "name": "CMach_InitIntMem",
-    "address": "0x004e40d0",
+    "address": "0x4e40d0",
     "size": 185,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_InitIntMem",
-    "baseline_address": "0x004a8be0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CMach_CalcIntMonadic",
-    "address": "0x004e4480",
-    "size": 556,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_CalcIntMonadic",
-    "baseline_address": "0x004a8db0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMach_CalcIntConvertFromFloat",
+    "address": "0x4e4190",
+    "size": 749,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CMach_CalcIntMonadic",
+    "address": "0x4e4480",
+    "size": 556,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMach_CalcIntDiadic",
-    "address": "0x004e46b0",
+    "address": "0x4e46b0",
     "size": 2768,
-    "source": "src/backend/CMachine.c",
-    "baseline_name": "CMach_CalcIntDiadic",
-    "baseline_address": "0x004a9020",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004e5180",
+    "address": "0x4e5180",
+    "size": 223,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_AllocationAlignment",
+    "address": "0x4e5260",
+    "size": 414,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_ArgumentAlignment",
+    "address": "0x4e5400",
+    "size": 111,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_GetQUALalign",
+    "address": "0x4e5470",
+    "size": 268,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMach_Configure",
+    "address": "0x4e5580",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/backend/CMachine.c",
+    "identity_evidence": "CMachine.c assertion/name cluster, full image identity/global/call audit, native behavior; anonymous identities retain address names.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG and membership audit recorded in TU ledger",
       "unresolved_indirect_flow": false
     }
   },

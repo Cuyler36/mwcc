@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 237 source files build, 1,689 candidate functions are
-mapped, and 777 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 238 source files build, 1,721 candidate functions are
+mapped, and 789 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -51,6 +51,12 @@ matches. Each body passed 500 bounded instruction comparisons using modeled
 helpers. Its seven BSS definitions total 248 exact bytes; target-specific arrays
 remain external until their source ownership is established. Five additional Mac
 helper names remain unlocated, so original object membership remains unproven.
+
+InlineAsmPPC has all 35 supported main-cluster functions reconstructed, with
+twelve exact matches. Three additional prefix candidates were attempted and
+preserved separately because their physical source ownership is unproven.
+Legacy helpers with changed signatures or layouts remain provisional. Generated
+switch data still has unresolved addresses; these bodies remain nonmatching.
 
 Six native bit-vector operations match exactly: copy, copy-and-change detection,
 initialize, union, intersection, and empty-intersection testing. Their names use

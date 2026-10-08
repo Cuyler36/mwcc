@@ -2894,5 +2894,25 @@
   "fn_005948a0": {
     "name": "init_registers",
     "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "InlineAsmPPC_ParseInstruction": {
+    "name": "InlineAsm_ScanAssemblyInstruction",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
+  },
+  "InlineAsmPPC_ParseDirectiveIdentifier": {
+    "name": "InlineAsm_ScanAssemblyDirective",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
+  },
+  "InlineAsmPPC_Init": {
+    "name": "InlineAsm_Initialize",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
+  },
+  "InlineAsmPPC_Initialize": {
+    "name": "InlineAsm_InitializePPC",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
+  },
+  "check_register_value_range": {
+    "name": "fn_00575330",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c"
   }
 }

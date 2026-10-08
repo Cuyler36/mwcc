@@ -15819,41 +15819,387 @@
     }
   },
   {
-    "name": "InlineAsmPPC_00462d70",
-    "address": "0x0056fcf0",
+    "name": "CodeGen_CopyAsmStat",
+    "address": "0x56fbb0",
+    "size": 117,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CodeGen_PropagateIntoAsm",
+    "address": "0x56fc30",
+    "size": 190,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CodeGen_GetAsmEffects",
+    "address": "0x56fcf0",
     "size": 1295,
-    "source": "src/backend/InlineAsmPPC.c",
-    "baseline_name": "InlineAsmPPC_00462d70",
-    "baseline_address": "0x00462d70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
     }
   },
   {
-    "name": "InlineAsmPPC_004631f0",
-    "address": "0x00570200",
+    "name": "InlineAsm_OpcodeSize",
+    "address": "0x570200",
     "size": 742,
-    "source": "src/backend/InlineAsmPPC.c",
-    "baseline_name": "InlineAsmPPC_004631f0",
-    "baseline_address": "0x004631f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "InlineAsm_GetMnemonic",
+    "address": "0x5704f0",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "InlineAsmPPC_ParseInstruction",
-    "address": "0x00571280",
-    "size": 857,
-    "source": "src/backend/InlineAsmPPC.c",
-    "baseline_name": "InlineAsmPPC_ParseInstruction",
-    "baseline_address": "0x00463bb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "InlineAsm_TranslateIRtoPCode",
+    "address": "0x570510",
+    "size": 1116,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "InlineAsm_TranslateIRtoPCodePPC",
+    "address": "0x570970",
+    "size": 2313,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "InlineAsm_ScanAssemblyInstruction",
+    "address": "0x571280",
+    "size": 857,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005715e0",
+    "address": "0x5715e0",
+    "size": 634,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_ScanAssemblyDirective",
+    "address": "0x571860",
+    "size": 50,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_ProcessDirective",
+    "address": "0x5718a0",
+    "size": 1792,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "InlineAsm_IsDirective",
+    "address": "0x571fa0",
+    "size": 507,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005721a0",
+    "address": "0x5721a0",
+    "size": 245,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_CreateEntryPoint",
+    "address": "0x5722a0",
+    "size": 362,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00572410",
+    "address": "0x572410",
+    "size": 167,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_Initialize",
+    "address": "0x5724c0",
+    "size": 245,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_InitializePPC",
+    "address": "0x5725c0",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_ScanAssemblyOperands",
+    "address": "0x572660",
+    "size": 6393,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_00573f60",
+    "address": "0x573f60",
+    "size": 1109,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_005743c0",
+    "address": "0x5743c0",
+    "size": 640,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00574640",
+    "address": "0x574640",
+    "size": 1323,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00574b70",
+    "address": "0x574b70",
+    "size": 197,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00574c40",
+    "address": "0x574c40",
+    "size": 1402,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_005751c0",
+    "address": "0x5751c0",
+    "size": 183,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575280",
+    "address": "0x575280",
+    "size": 174,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575330",
+    "address": "0x575330",
+    "size": 37,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "InlineAsm_ExpressionPPC",
+    "address": "0x575360",
+    "size": 400,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_005754f0",
+    "address": "0x5754f0",
+    "size": 242,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005755f0",
+    "address": "0x5755f0",
+    "size": 149,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575690",
+    "address": "0x575690",
+    "size": 197,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575760",
+    "address": "0x575760",
+    "size": 191,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575820",
+    "address": "0x575820",
+    "size": 824,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00575b60",
+    "address": "0x575b60",
+    "size": 5629,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "InlineAsm_ConstantExpressionPPC",
+    "address": "0x577160",
+    "size": 63,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005771a0",
+    "address": "0x5771a0",
+    "size": 389,
+    "source": "src/GC_3_0a5_2/backend/InlineAsmPPC.c",
+    "identity_evidence": "Native InlineAsmPPC.c assertions/main cluster plus supplied Mac candidates and complete CFG/diagnostic review; unproved ordinary names retain addresses.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and saved entry seams; unresolved switch relocation remains explicit",
       "unresolved_indirect_flow": false
     }
   },

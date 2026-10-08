@@ -1774,5 +1774,17 @@
   "fn_0040a610": {
     "name": "Plugin_AddFileTypeMappings",
     "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "PPCError_FatalError": {
+    "name": "PPCError_ErrorTerm",
+    "source": "src/GC_3_0a5_2/backend/PPCError.c"
+  },
+  "PPCError_ReportDiagnostic": {
+    "name": "PPCError_Warning",
+    "source": "src/GC_3_0a5_2/backend/PPCError.c"
+  },
+  "PPCError_ReportError": {
+    "name": "PPCError_Error",
+    "source": "src/GC_3_0a5_2/backend/PPCError.c"
   }
 }

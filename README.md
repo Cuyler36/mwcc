@@ -10,14 +10,19 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 218 source files build, 1,234 candidate functions are
-mapped, and 458 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 219 source files build, 1,236 candidate functions are
+mapped, and 462 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+Backend PPCError.c has four retained Windows diagnostic entry points exact in
+objdiff, including its filename data and PE relocations. Their canonical names
+come from the supplied GC3 symbols. The original TU's full membership remains
+under review; imported helper ownership is preserved separately.
 
 Arguments.c has all 27 retained Windows functions reviewed: 24 exact and three
 equivalent instruction nonmatches. Its initialized data, switch table, and BSS

@@ -219,7 +219,8 @@
     "src/GC_3_0a5_2/OSLib/Generic.c",
     "src/GC_3_0a5_2/driver/TextUtils.c",
     "src/GC_3_0a5_2/OSLib/FileHandles.c",
-    "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+    "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "src/GC_3_0a5_2/backend/PPCError.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3358,6 +3359,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/backend/PPCError.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -3818,7 +3838,11 @@
     "src/GC_3_0a5_2/driver/CLPlugins/Plugins_GetDisassembler",
     "src/GC_3_0a5_2/driver/CLPlugins/Plugin_Call",
     "src/GC_3_0a5_2/driver/CLPlugins/fn_00417220",
-    "src/GC_3_0a5_2/driver/CLPlugins/Plugin_GetToolVersionInfo"
+    "src/GC_3_0a5_2/driver/CLPlugins/Plugin_GetToolVersionInfo",
+    "src/GC_3_0a5_2/backend/PPCError/PPCError_ErrorTerm",
+    "src/GC_3_0a5_2/backend/PPCError/PPCError_Message",
+    "src/GC_3_0a5_2/backend/PPCError/PPCError_Warning",
+    "src/GC_3_0a5_2/backend/PPCError/PPCError_Error"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4664,9 +4688,25 @@
       "_fn_00417220": "0x417220",
       "_GetToolVersionInfo": "0x414d00",
       "_Plugin_GetToolVersionInfo": "0x414ff0"
+    },
+    "src/GC_3_0a5_2/backend/PPCError.c": {
+      "_data_0071035c": "0x71035c",
+      "_data_00725f3f": "0x725f3f",
+      "_data_0070f094": "0x70f094",
+      "_error_jmp_buf": "0x704910",
+      "_longjmp": "0x404940",
+      "_CError_Internal": "0x45a250",
+      "_InlineAsm_LongJump": "0x55eba0",
+      "_fn_0044e000": "0x44e000",
+      "_fn_0045c600": "0x45c600",
+      "_PPCError_ErrorTerm": "0x56ec90",
+      "_PPCError_Message": "0x56ed50",
+      "_PPCError_Warning": "0x56ed90",
+      "_PPCError_Error": "0x56ee40"
     }
   },
   "original_source_units": {
-    "MacSpecs.c": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+    "MacSpecs.c": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
+    "PPCError.c": "src/GC_3_0a5_2/backend/PPCError.c"
   }
 }

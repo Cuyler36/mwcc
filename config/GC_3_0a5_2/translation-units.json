@@ -669,6 +669,74 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/PPCError.c",
+      "original_filename": "PPCError.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "PPCError_ErrorTerm",
+          "address": "0x0056ec90",
+          "size": 192,
+          "boundary_evidence": {
+            "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0056ed47"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PPCError.c"
+        },
+        {
+          "name": "PPCError_Message",
+          "address": "0x56ed50",
+          "size": 64,
+          "compiled_source": "src/GC_3_0a5_2/backend/PPCError.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PPCError_Warning",
+          "address": "0x0056ed90",
+          "size": 176,
+          "boundary_evidence": {
+            "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0056ee37"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PPCError.c"
+        },
+        {
+          "name": "PPCError_Error",
+          "address": "0x0056ee40",
+          "size": 184,
+          "boundary_evidence": {
+            "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0056eee8"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PPCError.c"
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/RegisterInfo.c",
       "original_filename": "RegisterInfo.c",
       "evidence": [
@@ -19328,59 +19396,16 @@
     },
     {
       "source": "src/backend/PPCError.c",
-      "original_filename": "PPCError.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "PPCError_FatalError",
-          "address": "0x0056ec90",
-          "size": 192,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0056ed47"
-          ],
-          "compiled_source": "src/backend/PPCError.c"
-        },
-        {
-          "name": "FUN_0056ed90",
-          "address": "0x0056ed90",
-          "size": 176,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0056ee37"
-          ]
-        },
-        {
-          "name": "PPCError_ReportError",
-          "address": "0x0056ee40",
-          "size": 184,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0056eee8"
-          ],
-          "compiled_source": "src/backend/PPCError.c"
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "ownership_prepared"
     },
     {
       "source": "src/backend/Peephole.c",
@@ -49947,7 +49972,7 @@
       }
     },
     "src/backend/PPCError.c": {
-      "status": "unattempted",
+      "status": "ownership_prepared",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -50076,7 +50101,10 @@
           "space-nointrinsics": "53b2cc365fa04a9f8b7e97b79458148030135ba9f29649910e10c3a293f1874d",
           "space-intrinsics": "235a78103734b46ec5e072e3bdbe3018786db0266fd5d780f5a17d98b2a07dfc"
         }
-      }
+      },
+      "ownership_notes": [
+        "Imported global save/restore and class-type update helpers remain provisional in old source. They are not assigned to this original TU by adjacency."
+      ]
     },
     "src/backend/Peephole.c": {
       "status": "unattempted",
@@ -73612,6 +73640,97 @@
       "binding_policy": "Everybindingprovidedissource-scoped;staticprivatecanonicalnamesincludepluginlist,retdf,fakeversion,faketl,fakepnl,fakeel,fake,DropInFlagsSize,toolVersionInfo/toolVersion/useToolVersion. Unknownfallbackglobaldata006d6168retainsaddressname. Noanonymousliteraloverride/no globalaliasadded. RootmustupdatebaselinePluginlayout/callbacktableandaliasesbeforeotherTUsuseGC3record.",
       "membership_reviewed": false,
       "strict_exact_count": 25
+    },
+    "src/GC_3_0a5_2/backend/PPCError.c": {
+      "functions": [
+        {
+          "name": "PPCError_ErrorTerm",
+          "address": "0x56ec90",
+          "size": 192,
+          "source": "src/GC_3_0a5_2/backend/PPCError.c",
+          "exact": true,
+          "compiled_size": 192
+        },
+        {
+          "name": "PPCError_Message",
+          "address": "0x56ed50",
+          "size": 64,
+          "source": "src/GC_3_0a5_2/backend/PPCError.c",
+          "exact": true,
+          "compiled_size": 64
+        },
+        {
+          "name": "PPCError_Warning",
+          "address": "0x56ed90",
+          "size": 176,
+          "source": "src/GC_3_0a5_2/backend/PPCError.c",
+          "exact": true,
+          "compiled_size": 176
+        },
+        {
+          "name": "PPCError_Error",
+          "address": "0x56ee40",
+          "size": 184,
+          "source": "src/GC_3_0a5_2/backend/PPCError.c",
+          "exact": true,
+          "compiled_size": 184
+        }
+      ],
+      "source_bindings": {
+        "_data_0071035c": "0x71035c",
+        "_data_00725f3f": "0x725f3f",
+        "_data_0070f094": "0x70f094",
+        "_error_jmp_buf": "0x704910",
+        "_longjmp": "0x404940",
+        "_CError_Internal": "0x45a250",
+        "_InlineAsm_LongJump": "0x55eba0",
+        "_fn_0044e000": "0x44e000",
+        "_fn_0045c600": "0x45c600",
+        "_PPCError_ErrorTerm": "0x56ec90",
+        "_PPCError_Message": "0x56ed50",
+        "_PPCError_Warning": "0x56ed90",
+        "_PPCError_Error": "0x56ee40"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@34",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x006a2b0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "strict_exact_count": 4,
+      "code_bytes": 616,
+      "initialized_data_bytes": 12,
+      "source_sha256": "8400357297d3cc3078cea4fff443ece2284fbb81fbecc5662615cefb3bdf1b90",
+      "mac_symbol_names": [
+        "PPCError_GetErrorString",
+        "PPCError_VAErrorMessage",
+        "PPCError_Error",
+        "PPCError_Warning",
+        "PPCError_Message",
+        "PPCError_ErrorTerm"
+      ],
+      "membership_proof": [
+        "Three Windows wrappers refer to PPCError.c line52. Message shares the exact diagnostic escape state and formatter, with fixed33166 code; semantic association does not prove whole original membership.",
+        "Mac ordinary symbols provide names but no explicit SO/FUN records for PPCError.c. GetErrorString is inlined in Windows wrappers; no separate VAErrorMessage body identified."
+      ],
+      "semantics": [
+        "Diagnostics1..165 valid; GetErrorString resource10001 index(code+1000), formatter code(code+33000). Prior1.2.5 range100..177 and index(code-99) is obsolete.",
+        "ErrorTerm longjmps on speculative escape and after reporting; Error escapes speculation, reports and optionally exits inline asm. Warning suppressed during speculative escape or byte70f094. Message suppressed during escape and reports code33166.",
+        "Native varargs arithmetic retained, including short ErrorTerm parameter. Non-returning longjmp and common variadic address temporaries reproduce all four bodies."
+      ],
+      "remaining_ownership": [
+        "Imported global save/restore and class-type update helpers remain provisional in old source. They are not assigned to this original TU by adjacency."
+      ]
     }
   },
   "ownership_review": {

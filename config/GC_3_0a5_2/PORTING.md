@@ -7,6 +7,22 @@ Its executable path identifies the 3.0a5.2 compiler. Use this explicit program p
 
 ## TU inventory and matching order
 
+Frontend and backend matching now takes priority. The first backend pass ports
+PPCError's four retained Windows wrappers: PPCError_ErrorTerm at 0x0056ec90,
+PPCError_Message at 0x0056ed50, PPCError_Warning at 0x0056ed90, and PPCError_Error
+at 0x0056ee40. All 616 code bytes, their PE fixups, and 12 filename-data bytes
+match in objdiff-cli. The supplied Mac ordinary symbols recover these names,
+while three native assertions independently name PPCError.c at line 52.
+
+GC3 accepts diagnostics 1 through 165, loads resource 10001 at index code+1000,
+and passes code+33000 to the shared formatter. This differs from the imported
+1.2.5 range and resource offsets. The warning suppression byte, speculative
+escape jump buffer, inline-assembly escape, and native variadic argument setup
+are preserved. The old imported global/class-update helpers retain provisional
+ownership in their separate view. No complete-TU claim is made: this Mac map
+has no explicit PPCError.c SO/FUN membership, and separate Windows bodies for
+PPCError_GetErrorString and PPCError_VAErrorMessage remain unproved.
+
 `translation-units.json` is the source checklist and per-TU attempt ledger.
 Its initial inventory contains 262 units: 209 imported compiled sources and 53
 original-only Windows source views. It records 1,984 known Windows functions,

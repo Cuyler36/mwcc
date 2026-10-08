@@ -13542,28 +13542,50 @@
     }
   },
   {
-    "name": "PPCError_FatalError",
-    "address": "0x0056ec90",
+    "name": "PPCError_ErrorTerm",
+    "address": "0x56ec90",
     "size": 192,
-    "source": "src/backend/PPCError.c",
+    "source": "src/GC_3_0a5_2/backend/PPCError.c",
     "baseline_name": "PPCError_FatalError",
     "baseline_address": "0x0047cbd0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Windows diagnostic behavior and PPCError.c assertion references at line52; canonical names from Mac ordinary symbols, not STABS membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PPCError_ReportError",
-    "address": "0x0056ee40",
+    "name": "PPCError_Message",
+    "address": "0x56ed50",
+    "size": 64,
+    "source": "src/GC_3_0a5_2/backend/PPCError.c",
+    "identity_evidence": "Windows diagnostic behavior and PPCError.c assertion references at line52; canonical names from Mac ordinary symbols, not STABS membership.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PPCError_Warning",
+    "address": "0x56ed90",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/backend/PPCError.c",
+    "identity_evidence": "Windows diagnostic behavior and PPCError.c assertion references at line52; canonical names from Mac ordinary symbols, not STABS membership.",
+    "boundary_evidence": {
+      "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PPCError_Error",
+    "address": "0x56ee40",
     "size": 184,
-    "source": "src/backend/PPCError.c",
+    "source": "src/GC_3_0a5_2/backend/PPCError.c",
     "baseline_name": "PPCError_ReportError",
     "baseline_address": "0x0047cd70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Windows diagnostic behavior and PPCError.c assertion references at line52; canonical names from Mac ordinary symbols, not STABS membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed reachable x86 CFG; all 616 emitted bytes and original PE fixups exact",
       "unresolved_indirect_flow": false
     }
   },

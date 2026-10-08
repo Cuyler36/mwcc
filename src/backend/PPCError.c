@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "PPCError.c"
 #include "compiler/common.h"
 #include "compiler/PPCError.h"
@@ -71,6 +72,7 @@ struct SavedGlobalValues *fn_0047cb60(void)
     return node;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PPCError_FatalError(short diagnostic, ...)
 {
     char buffer[256];
@@ -95,6 +97,7 @@ void PPCError_FatalError(short diagnostic, ...)
         InlineAsm_LongJump();
     longjmp(error_jmp_buf, 1);
 }
+#endif
 
 static inline void PPCError_CheckDiagnosticCode(SInt16 diagnosticId)
 {
@@ -103,6 +106,7 @@ static inline void PPCError_CheckDiagnosticCode(SInt16 diagnosticId)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PPCError_ReportDiagnostic(SInt32 diagnosticId, ...)
 {
     char buf[256];
@@ -120,6 +124,8 @@ void PPCError_ReportDiagnostic(SInt32 diagnosticId, ...)
     CompilerTools_GetResourceCString(buf, 10001, errorCode - 99);
     CError_FormatAndReportDiagnostic(diagnosticCode + 10001, buf, args, 0, 1);
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 void PPCError_ReportError(SInt32 error, ...)
 {
     char buffer[256];
@@ -141,6 +147,7 @@ void PPCError_ReportError(SInt32 error, ...)
     if (data_005884fd != 0)
         InlineAsm_LongJump();
 }
+#endif
 
 void PPCError_UpdateClassTypeOperands(void)
 {

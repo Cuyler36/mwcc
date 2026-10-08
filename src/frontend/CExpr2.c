@@ -4499,6 +4499,7 @@ ENode *CExpr_LValue(ENode *expr, Boolean checkConst, Boolean reportError)
     return expr;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 Boolean CExpr_IsLValue(ENode *expr)
 {
     Boolean flag = copts.cplusplus;
@@ -4551,6 +4552,7 @@ Boolean CExpr_IsLValue(ENode *expr)
     }
     return 1;
 }
+#endif
 
 /* 0x4463d0; one int arg */
 /* stbool 0x55f5a8, stsignedlong 0x55f5f0 declared in the headers */
@@ -4796,6 +4798,7 @@ static inline CInt64 convert_integer_constant(Type *type, Type *oldtype, CInt64 
     return CMach_CalcIntDiadic(type, value, 0x2b, qval_zero);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CExpr2_00473720(ENode *expr, Type *type)
 {
     if (expr->type == EINTCONST) {
@@ -4834,13 +4837,16 @@ ENode *CExpr2_00473720(ENode *expr, Type *type)
         return node;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 CInt64 CExpr_IntConstConvert(Type *type, Type *otherType, CInt64 value)
 {
     if (type == (Type *)&stbool)
         return CMach_CalcIntDiadic(otherType, value, 0x169, qval_zero);
     return CMach_CalcIntDiadic(type, value, 0x2b, qval_zero);
 }
+#endif
 
 ENode *forceintegral(ENode *node)
 {
@@ -5000,6 +5006,7 @@ UInt8 CExpr_IsOne(ENode *expr)
     return 0;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 isnotzero(ENode *node)
 {
     int b;
@@ -5041,6 +5048,7 @@ SInt16 isnotzero(ENode *node)
             return FALSE;
     }
 }
+#endif
 
 SInt16 CExpr2_IsZero(ENode *node)
 {

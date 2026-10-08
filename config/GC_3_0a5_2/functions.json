@@ -17027,15 +17027,508 @@
     }
   },
   {
-    "name": "CExpr2_00473720",
-    "address": "0x0055b2d0",
-    "size": 400,
-    "source": "src/frontend/CExpr2.c",
-    "baseline_name": "CExpr2_00473720",
-    "baseline_address": "0x00473720",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_00559240",
+    "address": "0x559240",
+    "size": 1077,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_IsLValue",
+    "address": "0x559680",
+    "size": 331,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005597d0",
+    "address": "0x5597d0",
+    "size": 891,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00559b50",
+    "address": "0x559b50",
+    "size": 589,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00559da0",
+    "address": "0x559da0",
+    "size": 589,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00559ff0",
+    "address": "0x559ff0",
+    "size": 326,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a140",
+    "address": "0x55a140",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a1c0",
+    "address": "0x55a1c0",
+    "size": 212,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a2a0",
+    "address": "0x55a2a0",
+    "size": 58,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_NewETEMPNode",
+    "address": "0x55a2e0",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a320",
+    "address": "0x55a320",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a3b0",
+    "address": "0x55a3b0",
+    "size": 62,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "isnotzero",
+    "address": "0x55a3f0",
+    "size": 197,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "iszero",
+    "address": "0x55a4c0",
+    "size": 67,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a510",
+    "address": "0x55a510",
+    "size": 73,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a560",
+    "address": "0x55a560",
+    "size": 73,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a5b0",
+    "address": "0x55a5b0",
+    "size": 73,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a600",
+    "address": "0x55a600",
+    "size": 27,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a620",
+    "address": "0x55a620",
+    "size": 27,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a640",
+    "address": "0x55a640",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_CombineQuals",
+    "address": "0x55a6e0",
+    "size": 80,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055a730",
+    "address": "0x55a730",
+    "size": 28,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "optimizecomm",
+    "address": "0x55a750",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_DoExplicitConversion",
+    "address": "0x55a7b0",
+    "size": 400,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_ConvertToCondition",
+    "address": "0x55a940",
+    "size": 182,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055aa00",
+    "address": "0x55aa00",
+    "size": 26,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055aa20",
+    "address": "0x55aa20",
+    "size": 118,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055aaa0",
+    "address": "0x55aaa0",
+    "size": 80,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055aaf0",
+    "address": "0x55aaf0",
+    "size": 647,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055ad80",
+    "address": "0x55ad80",
+    "size": 1272,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b280",
+    "address": "0x55b280",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b2d0",
+    "address": "0x55b2d0",
+    "size": 400,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_IntConstConvert",
+    "address": "0x55b460",
+    "size": 126,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "integralpromote",
+    "address": "0x55b4e0",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b580",
+    "address": "0x55b580",
+    "size": 232,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b670",
+    "address": "0x55b670",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b6a0",
+    "address": "0x55b6a0",
+    "size": 329,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pointer_generation",
+    "address": "0x55b7f0",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055b810",
+    "address": "0x55b810",
+    "size": 466,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "checkreference",
+    "address": "0x55b9f0",
+    "size": 104,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055ba60",
+    "address": "0x55ba60",
+    "size": 377,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_HasFuncCall",
+    "address": "0x55bbe0",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055bc00",
+    "address": "0x55bc00",
+    "size": 25,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_IRTreeWalk",
+    "address": "0x55bc20",
+    "size": 80,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_ENodeTreeWalk",
+    "address": "0x55bc70",
+    "size": 756,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0055bf70",
+    "address": "0x55bf70",
+    "size": 1069,
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
+    "identity_evidence": "CExprTools.c native assertion cluster, supplied address names where corroborated, 1.2.5 expression algorithms and complete native ABI/control-flow review.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit and recovered callback entry",
       "unresolved_indirect_flow": false
     }
   },

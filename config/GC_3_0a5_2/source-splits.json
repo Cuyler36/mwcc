@@ -3622,5 +3622,193 @@
   "fn_005a4360": {
     "name": "sourcetext_get_line_offset",
     "source": "src/GC_3_0a5_2/frontend/SourceText.c"
+  },
+  "fn_00559240": {
+    "name": "fn_00559240",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_00559680": {
+    "name": "CExpr_IsLValue",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_005597d0": {
+    "name": "fn_005597d0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_00559b50": {
+    "name": "fn_00559b50",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_00559da0": {
+    "name": "fn_00559da0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_00559ff0": {
+    "name": "fn_00559ff0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a140": {
+    "name": "fn_0055a140",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a1c0": {
+    "name": "fn_0055a1c0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a2a0": {
+    "name": "fn_0055a2a0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a2e0": {
+    "name": "CExpr_NewETEMPNode",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a320": {
+    "name": "fn_0055a320",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a3b0": {
+    "name": "fn_0055a3b0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a3f0": {
+    "name": "isnotzero",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a4c0": {
+    "name": "iszero",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a510": {
+    "name": "fn_0055a510",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a560": {
+    "name": "fn_0055a560",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a5b0": {
+    "name": "fn_0055a5b0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a600": {
+    "name": "fn_0055a600",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a620": {
+    "name": "fn_0055a620",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a640": {
+    "name": "fn_0055a640",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a6e0": {
+    "name": "CExpr_CombineQuals",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a730": {
+    "name": "fn_0055a730",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a750": {
+    "name": "optimizecomm",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a7b0": {
+    "name": "CExpr_DoExplicitConversion",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055a940": {
+    "name": "CExpr_ConvertToCondition",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055aa00": {
+    "name": "fn_0055aa00",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055aa20": {
+    "name": "fn_0055aa20",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055aaa0": {
+    "name": "fn_0055aaa0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055aaf0": {
+    "name": "fn_0055aaf0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055ad80": {
+    "name": "fn_0055ad80",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b280": {
+    "name": "fn_0055b280",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b2d0": {
+    "name": "fn_0055b2d0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b460": {
+    "name": "CExpr_IntConstConvert",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b4e0": {
+    "name": "integralpromote",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b580": {
+    "name": "fn_0055b580",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b670": {
+    "name": "fn_0055b670",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b6a0": {
+    "name": "fn_0055b6a0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b7f0": {
+    "name": "pointer_generation",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b810": {
+    "name": "fn_0055b810",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055b9f0": {
+    "name": "checkreference",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055ba60": {
+    "name": "fn_0055ba60",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055bbe0": {
+    "name": "CExpr_HasFuncCall",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055bc00": {
+    "name": "fn_0055bc00",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055bc20": {
+    "name": "CExpr_IRTreeWalk",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055bc70": {
+    "name": "CExpr_ENodeTreeWalk",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_0055bf70": {
+    "name": "fn_0055bf70",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "CExpr2_00473720": {
+    "name": "fn_0055b2d0",
+    "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
   }
 }

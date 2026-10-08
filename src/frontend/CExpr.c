@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CExpr.c"
 #include "compiler/common.h"
 #include "compiler/CExpr.h"
@@ -4548,6 +4549,7 @@ ENode *scan_explicit_conversion(Type *type, SInt32 qualifiers)
     return result;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CExpr_DoExplicitConversion(Type *classType, unsigned long qualifiers, ENodeList *arguments)
 {
     ENode *node;
@@ -4568,6 +4570,7 @@ ENode *CExpr_DoExplicitConversion(Type *classType, unsigned long qualifiers, ENo
     CDecl_CheckObjectType(classType);
     return CExpr_ConstructObject(classType, create_temp_node(classType), arguments, 1, 1, 1, 1, 1);
 }
+#endif
 
 /* Argument expressions passed to call construction. */
 
@@ -5184,6 +5187,7 @@ ENode *CExpr_PointerGeneration(ENode *node)
     return node;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *pointer_generation(ENode *node)
 {
     ENode *result;
@@ -5215,6 +5219,7 @@ ENode *pointer_generation(ENode *node)
     }
     return node;
 }
+#endif
 
 ENode *CExpr_New_ESUB_Node(ENode *left, ENode *right)
 {
@@ -5685,6 +5690,7 @@ void CExpr_004fb400(ENode *e)
     CError_ReportError(ERR_ILLEGAL_OPERAND);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void optimizecomm(ENode *expression)
 {
     ENode *operand;
@@ -5708,6 +5714,7 @@ void optimizecomm(ENode *expression)
     }
     goto swap;
 }
+#endif
 
 unsigned char get_binary_operator_info(short token, unsigned char *operatorInfo)
 {
@@ -5952,6 +5959,7 @@ SInt32 scansizeof(void)
     return node->data.intval.lo;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *checkreference(ENode *e)
 {
     if (!(IS_TYPE_POINTER_ONLY(e->rtype) && (TYPE_POINTER(e->rtype)->qual & Q_REFERENCE)))
@@ -5960,6 +5968,7 @@ ENode *checkreference(ENode *e)
     e->rtype = TPTR_TARGET(e->rtype);
     return e;
 }
+#endif
 
 ENode *CExpr_RewriteConst(ENode *enode)
 {

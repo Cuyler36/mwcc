@@ -1546,5 +1546,233 @@
   "parse_value_and_offset": {
     "name": "OS_OSPathSpec_To_VolDir",
     "source": "src/GC_3_0a5_2/OSLib/MacSpecs.c"
+  },
+  "Plugin_GetDisplayName": {
+    "name": "Plugin_GetDisplayName",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_GetDropInName": {
+    "name": "Plugin_GetDropInName",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_GetVersionInfo": {
+    "name": "Plugin_GetVersionInfo",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_00415170": {
+    "name": "fn_00415170",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_004151d0": {
+    "name": "fn_004151d0",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_GetVersionInfoASCII": {
+    "name": "Plugin_GetVersionInfoASCII",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_GetPluginDesc": {
+    "name": "Plugin_GetDropInFlags",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_GetType": {
+    "name": "Plugin_GetPluginType",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "get_target_info": {
+    "name": "Plugin_CL_GetTargetList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "get_plugin_directory_list": {
+    "name": "Plugin_GetPanelList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "get_file_map": {
+    "name": "Plugin_CL_GetExtMapList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_GetFileTypeMappingList": {
+    "name": "Plugin_GetFileTypeMappingList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_GetObjectFlags": {
+    "name": "Plugin_CL_GetObjectFlags",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_MatchesName": {
+    "name": "Plugin_MatchesName",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_MatchTarget": {
+    "name": "Plugin_CL_MatchesTarget",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "file_map_matches": {
+    "name": "CL_MatchesExtMapping",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "plugin_file_map_matches": {
+    "name": "Plugin_CL_MatchesFileType",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "matches_plugin_type_lang": {
+    "name": "Plugin_MatchesType",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "call_query_callback": {
+    "name": "Plugin_Pr_MatchesPlugin",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "query_plugin": {
+    "name": "Plugin_Pr_MatchesPanels",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_WriteObjectFile": {
+    "name": "Plugin_CL_WriteObjectFile",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindFileMapValue": {
+    "name": "Plugin_CL_GetCompilerMapping",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "validate_plugin": {
+    "name": "SupportedPlugin",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "VerifyPanels": {
+    "name": "VerifyPanels",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_New": {
+    "name": "Plugin_New",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_Free": {
+    "name": "Plugin_Free",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_VerifyPanels": {
+    "name": "Plugin_VerifyPanels",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugins_Init": {
+    "name": "Plugins_Init",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugins_Term": {
+    "name": "Plugins_Term",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_AddPlugin": {
+    "name": "Plugins_Add",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindMatchingTargetPlugin": {
+    "name": "Plugins_CL_MatchTarget",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindTargetPluginBySelectorOptionName": {
+    "name": "Plugins_GetPluginForFile",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindLinkerPlugin": {
+    "name": "Plugins_GetLinker",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindLinkPluginForTarget": {
+    "name": "Plugins_GetPreLinker",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FindMatchingLinkPlugin": {
+    "name": "Plugins_GetPostLinker",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugins_GetDisassembler": {
+    "name": "Plugins_GetDisassembler",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_SelectPluginByRequestsAndValues": {
+    "name": "Plugins_GetParserForPlugin",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_BuildPluginRequests": {
+    "name": "Plugins_GetPluginList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugins_GetPrefPanelUnion": {
+    "name": "Plugins_GetPrefPanelUnion",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_AddFileTypeMappings": {
+    "name": "Plugin_AddFileTypeMappings",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_DispatchArgumentToPlugins": {
+    "name": "Plugins_AddFileTypeMappingsForTarget",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_CallEntry": {
+    "name": "Plugin_Call",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_00417220": {
+    "name": "fn_00417220",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "GetToolVersionInfo": {
+    "name": "GetToolVersionInfo",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "Plugin_GetToolVersionInfo": {
+    "name": "Plugin_GetToolVersionInfo",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_GetName": {
+    "name": "Plugin_GetDropInName",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "get_plugin_result": {
+    "name": "Plugin_GetVersionInfo",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "get_callback_result": {
+    "name": "Plugin_GetFileTypeMappingList",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "plugin_name_matches": {
+    "name": "Plugin_MatchesName",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_00409700": {
+    "name": "VerifyPanels",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_CreatePluginDataCopy": {
+    "name": "Plugin_New",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "free_plugin": {
+    "name": "Plugin_Free",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_004098a0": {
+    "name": "Plugin_VerifyPanels",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_004098d0": {
+    "name": "Plugins_Init",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_FreePlugins": {
+    "name": "Plugins_Term",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "CLPlugins_GetUniquePluginNames": {
+    "name": "Plugins_GetPrefPanelUnion",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+  },
+  "fn_0040a610": {
+    "name": "Plugin_AddFileTypeMappings",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c"
   }
 }

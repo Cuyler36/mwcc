@@ -1214,327 +1214,547 @@
     }
   },
   {
-    "name": "CLPlugins_GetPluginDesc",
-    "address": "0x004153f0",
+    "name": "GetToolVersionInfo",
+    "address": "0x414d00",
+    "size": 737,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetToolVersionInfo",
+    "address": "0x414ff0",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetDisplayName",
+    "address": "0x415010",
+    "size": 124,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetDropInName",
+    "address": "0x415090",
+    "size": 124,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetVersionInfo",
+    "address": "0x415110",
+    "size": 90,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00415170",
+    "address": "0x415170",
+    "size": 90,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004151d0",
+    "address": "0x4151d0",
+    "size": 195,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetVersionInfoASCII",
+    "address": "0x4152a0",
+    "size": 335,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_GetDropInFlags",
+    "address": "0x4153f0",
     "size": 120,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_GetPluginDesc",
     "baseline_address": "0x00408dc0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_GetType",
-    "address": "0x00415470",
+    "name": "Plugin_GetPluginType",
+    "address": "0x415470",
     "size": 71,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_GetType",
     "baseline_address": "0x00408e30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_target_info",
-    "address": "0x004154c0",
+    "name": "Plugin_CL_GetTargetList",
+    "address": "0x4154c0",
     "size": 122,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "get_target_info",
     "baseline_address": "0x00408e70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_plugin_directory_list",
-    "address": "0x00415540",
+    "name": "Plugin_GetPanelList",
+    "address": "0x415540",
     "size": 90,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "get_plugin_directory_list",
     "baseline_address": "0x00408ee0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_file_map",
-    "address": "0x004155a0",
+    "name": "Plugin_CL_GetExtMapList",
+    "address": "0x4155a0",
     "size": 122,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "get_file_map",
     "baseline_address": "0x00408f30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_GetObjectFlags",
-    "address": "0x00415680",
+    "name": "Plugin_GetFileTypeMappingList",
+    "address": "0x415620",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_CL_GetObjectFlags",
+    "address": "0x415680",
     "size": 147,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_GetObjectFlags",
     "baseline_address": "0x00408ff0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_MatchTarget",
-    "address": "0x00415740",
+    "name": "Plugin_MatchesName",
+    "address": "0x415720",
+    "size": 28,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_CL_MatchesTarget",
+    "address": "0x415740",
     "size": 142,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_MatchTarget",
     "baseline_address": "0x004090b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "file_map_matches",
-    "address": "0x004157d0",
+    "name": "CL_MatchesExtMapping",
+    "address": "0x4157d0",
     "size": 134,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "file_map_matches",
     "baseline_address": "0x00409140",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "plugin_file_map_matches",
-    "address": "0x00415860",
+    "name": "Plugin_CL_MatchesFileType",
+    "address": "0x415860",
     "size": 88,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "plugin_file_map_matches",
     "baseline_address": "0x004091b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "matches_plugin_type_lang",
-    "address": "0x004158c0",
+    "name": "Plugin_MatchesType",
+    "address": "0x4158c0",
     "size": 73,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "matches_plugin_type_lang",
     "baseline_address": "0x00409210",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "call_query_callback",
-    "address": "0x00415910",
+    "name": "Plugin_Pr_MatchesPlugin",
+    "address": "0x415910",
     "size": 103,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "call_query_callback",
     "baseline_address": "0x00409260",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "query_plugin",
-    "address": "0x00415980",
+    "name": "Plugin_Pr_MatchesPanels",
+    "address": "0x415980",
     "size": 89,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "query_plugin",
     "baseline_address": "0x004092c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_WriteObjectFile",
-    "address": "0x004159e0",
+    "name": "Plugin_CL_WriteObjectFile",
+    "address": "0x4159e0",
     "size": 354,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_WriteObjectFile",
     "baseline_address": "0x004093d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindFileMapValue",
-    "address": "0x00415b50",
+    "name": "Plugin_CL_GetCompilerMapping",
+    "address": "0x415b50",
     "size": 161,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindFileMapValue",
     "baseline_address": "0x004094c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "validate_plugin",
-    "address": "0x00415c00",
+    "name": "SupportedPlugin",
+    "address": "0x415c00",
     "size": 409,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "validate_plugin",
     "baseline_address": "0x00409560",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_AddPlugin",
-    "address": "0x00416120",
+    "name": "VerifyPanels",
+    "address": "0x415da0",
+    "size": 125,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_New",
+    "address": "0x415e20",
+    "size": 473,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_Free",
+    "address": "0x416000",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_VerifyPanels",
+    "address": "0x416050",
+    "size": 41,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugins_Init",
+    "address": "0x416080",
+    "size": 16,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugins_Term",
+    "address": "0x416090",
+    "size": 131,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugins_Add",
+    "address": "0x416120",
     "size": 2228,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_AddPlugin",
     "baseline_address": "0x00409910",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindMatchingTargetPlugin",
-    "address": "0x004169e0",
+    "name": "Plugins_CL_MatchTarget",
+    "address": "0x4169e0",
     "size": 142,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindMatchingTargetPlugin",
     "baseline_address": "0x00409f20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindTargetPluginBySelectorOptionName",
-    "address": "0x00416a70",
+    "name": "Plugins_GetPluginForFile",
+    "address": "0x416a70",
     "size": 209,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindTargetPluginBySelectorOptionName",
     "baseline_address": "0x00409fb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindLinkerPlugin",
-    "address": "0x00416b50",
+    "name": "Plugins_GetLinker",
+    "address": "0x416b50",
     "size": 139,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindLinkerPlugin",
     "baseline_address": "0x0040a060",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindLinkPluginForTarget",
-    "address": "0x00416be0",
+    "name": "Plugins_GetPreLinker",
+    "address": "0x416be0",
     "size": 139,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindLinkPluginForTarget",
     "baseline_address": "0x0040a0f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_FindMatchingLinkPlugin",
-    "address": "0x00416c70",
+    "name": "Plugins_GetPostLinker",
+    "address": "0x416c70",
     "size": 139,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_FindMatchingLinkPlugin",
     "baseline_address": "0x0040a180",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_SelectPluginByRequestsAndValues",
-    "address": "0x00416d90",
+    "name": "Plugins_GetDisassembler",
+    "address": "0x416d00",
+    "size": 139,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugins_GetParserForPlugin",
+    "address": "0x416d90",
     "size": 353,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_SelectPluginByRequestsAndValues",
     "baseline_address": "0x0040a210",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_BuildPluginRequests",
-    "address": "0x00416f00",
+    "name": "Plugins_GetPluginList",
+    "address": "0x416f00",
     "size": 318,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_BuildPluginRequests",
     "baseline_address": "0x0040a390",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_DispatchArgumentToPlugins",
-    "address": "0x004171a0",
+    "name": "Plugins_GetPrefPanelUnion",
+    "address": "0x417040",
+    "size": 293,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugin_AddFileTypeMappings",
+    "address": "0x417170",
+    "size": 38,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Plugins_AddFileTypeMappingsForTarget",
+    "address": "0x4171a0",
     "size": 86,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_DispatchArgumentToPlugins",
     "baseline_address": "0x0040a640",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLPlugins_CallEntry",
-    "address": "0x00417200",
+    "name": "Plugin_Call",
+    "address": "0x417200",
     "size": 28,
-    "source": "src/driver/CLPlugins.c",
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
     "baseline_name": "CLPlugins_CallEntry",
     "baseline_address": "0x0040a6a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00417220",
+    "address": "0x417220",
+    "size": 44,
+    "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+    "identity_evidence": "CLPlugins.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

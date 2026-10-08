@@ -4933,6 +4933,890 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+      "original_filename": "CLPlugins.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "GetToolVersionInfo",
+          "address": "0x414d00",
+          "size": 737,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_GetToolVersionInfo",
+          "address": "0x414ff0",
+          "size": 19,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_GetDisplayName",
+          "address": "0x00415010",
+          "size": 124,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415054"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_GetDropInName",
+          "address": "0x00415090",
+          "size": 124,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004150d4"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_GetVersionInfo",
+          "address": "0x00415110",
+          "size": 90,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415151"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "fn_00415170",
+          "address": "0x00415170",
+          "size": 90,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004151b3"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "fn_004151d0",
+          "address": "0x4151d0",
+          "size": 195,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_GetVersionInfoASCII",
+          "address": "0x4152a0",
+          "size": 335,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_GetDropInFlags",
+          "address": "0x004153f0",
+          "size": 120,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415452"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_GetPluginType",
+          "address": "0x00415470",
+          "size": 71,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004154a1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_CL_GetTargetList",
+          "address": "0x004154c0",
+          "size": 122,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415501",
+            "0x00415521"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_GetPanelList",
+          "address": "0x00415540",
+          "size": 90,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415581"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_CL_GetExtMapList",
+          "address": "0x004155a0",
+          "size": 122,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004155e2",
+            "0x00415601"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_GetFileTypeMappingList",
+          "address": "0x00415620",
+          "size": 87,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415661"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_CL_GetObjectFlags",
+          "address": "0x00415680",
+          "size": 147,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004156c4",
+            "0x004156e1"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_MatchesName",
+          "address": "0x415720",
+          "size": 28,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_CL_MatchesTarget",
+          "address": "0x415740",
+          "size": 142,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CL_MatchesExtMapping",
+          "address": "0x4157d0",
+          "size": 134,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_CL_MatchesFileType",
+          "address": "0x415860",
+          "size": 88,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_MatchesType",
+          "address": "0x4158c0",
+          "size": 73,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_Pr_MatchesPlugin",
+          "address": "0x00415910",
+          "size": 103,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415961"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_Pr_MatchesPanels",
+          "address": "0x00415980",
+          "size": 89,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004159c8"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_CL_WriteObjectFile",
+          "address": "0x004159e0",
+          "size": 354,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00415af7",
+            "0x00415b15"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugin_CL_GetCompilerMapping",
+          "address": "0x415b50",
+          "size": 161,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SupportedPlugin",
+          "address": "0x415c00",
+          "size": 409,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "VerifyPanels",
+          "address": "0x415da0",
+          "size": 125,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_New",
+          "address": "0x415e20",
+          "size": 473,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_Free",
+          "address": "0x416000",
+          "size": 66,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_VerifyPanels",
+          "address": "0x416050",
+          "size": 41,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_Init",
+          "address": "0x416080",
+          "size": 16,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_Term",
+          "address": "0x416090",
+          "size": 131,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_Add",
+          "address": "0x416120",
+          "size": 2228,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_CL_MatchTarget",
+          "address": "0x4169e0",
+          "size": 142,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetPluginForFile",
+          "address": "0x416a70",
+          "size": 209,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetLinker",
+          "address": "0x416b50",
+          "size": 139,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetPreLinker",
+          "address": "0x416be0",
+          "size": 139,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetPostLinker",
+          "address": "0x416c70",
+          "size": 139,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetDisassembler",
+          "address": "0x416d00",
+          "size": 139,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetParserForPlugin",
+          "address": "0x416d90",
+          "size": 353,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_GetPluginList",
+          "address": "0x00416f00",
+          "size": 318,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00417011",
+            "0x00417031"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c"
+        },
+        {
+          "name": "Plugins_GetPrefPanelUnion",
+          "address": "0x417040",
+          "size": 293,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_AddFileTypeMappings",
+          "address": "0x417170",
+          "size": 38,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugins_AddFileTypeMappingsForTarget",
+          "address": "0x4171a0",
+          "size": 86,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Plugin_Call",
+          "address": "0x417200",
+          "size": 28,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00417220",
+          "address": "0x417220",
+          "size": 44,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "GetToolVersionInfo",
+          "mac_address": "0x00007b6c",
+          "linkage_names": [
+            "GetToolVersionInfo"
+          ]
+        },
+        {
+          "name": "Plugin_GetToolVersionInfo",
+          "mac_address": "0x00007b94",
+          "linkage_names": [
+            "Plugin_GetToolVersionInfo"
+          ]
+        },
+        {
+          "name": "Plugin_GetDisplayName",
+          "mac_address": "0x00007bd0",
+          "linkage_names": [
+            "Plugin_GetDisplayName"
+          ]
+        },
+        {
+          "name": "Plugin_GetDropInName",
+          "mac_address": "0x00007c60",
+          "linkage_names": [
+            "Plugin_GetDropInName"
+          ]
+        },
+        {
+          "name": "Plugin_GetVersionInfo",
+          "mac_address": "0x00007cf0",
+          "linkage_names": [
+            "Plugin_GetVersionInfo"
+          ]
+        },
+        {
+          "name": "Plugin_GetVersionInfoASCII",
+          "mac_address": "0x00007d80",
+          "linkage_names": [
+            "Plugin_GetVersionInfoASCII"
+          ]
+        },
+        {
+          "name": "Plugin_GetDropInFlags",
+          "mac_address": "0x00007ecc",
+          "linkage_names": [
+            "Plugin_GetDropInFlags"
+          ]
+        },
+        {
+          "name": "Plugin_GetPluginType",
+          "mac_address": "0x00007f88",
+          "linkage_names": [
+            "Plugin_GetPluginType"
+          ]
+        },
+        {
+          "name": "Plugin_CL_GetTargetList",
+          "mac_address": "0x00007ffc",
+          "linkage_names": [
+            "Plugin_CL_GetTargetList"
+          ]
+        },
+        {
+          "name": "Plugin_GetPanelList",
+          "mac_address": "0x000080b4",
+          "linkage_names": [
+            "Plugin_GetPanelList"
+          ]
+        },
+        {
+          "name": "Plugin_CL_GetExtMapList",
+          "mac_address": "0x00008144",
+          "linkage_names": [
+            "Plugin_CL_GetExtMapList"
+          ]
+        },
+        {
+          "name": "Plugin_GetFileTypeMappingList",
+          "mac_address": "0x000081fc",
+          "linkage_names": [
+            "Plugin_GetFileTypeMappingList"
+          ]
+        },
+        {
+          "name": "Plugin_CL_GetObjectFlags",
+          "mac_address": "0x00008280",
+          "linkage_names": [
+            "Plugin_CL_GetObjectFlags"
+          ]
+        },
+        {
+          "name": "Plugin_MatchesName",
+          "mac_address": "0x00008358",
+          "linkage_names": [
+            "Plugin_MatchesName"
+          ]
+        },
+        {
+          "name": "Plugin_CL_MatchesTarget",
+          "mac_address": "0x00008394",
+          "linkage_names": [
+            "Plugin_CL_MatchesTarget"
+          ]
+        },
+        {
+          "name": "Plugins_CL_HaveMatchingTargets",
+          "mac_address": "0x00008484",
+          "linkage_names": [
+            "Plugins_CL_HaveMatchingTargets"
+          ]
+        },
+        {
+          "name": "CL_MatchesExtMapping",
+          "mac_address": "0x000085cc",
+          "linkage_names": [
+            "CL_MatchesExtMapping"
+          ]
+        },
+        {
+          "name": "Plugin_CL_MatchesFileType",
+          "mac_address": "0x000086d0",
+          "linkage_names": [
+            "Plugin_CL_MatchesFileType"
+          ]
+        },
+        {
+          "name": "Plugin_MatchesType",
+          "mac_address": "0x00008754",
+          "linkage_names": [
+            "Plugin_MatchesType"
+          ]
+        },
+        {
+          "name": "Plugin_Pr_MatchesPlugin",
+          "mac_address": "0x000087e8",
+          "linkage_names": [
+            "Plugin_Pr_MatchesPlugin"
+          ]
+        },
+        {
+          "name": "Plugin_Pr_MatchesPanels",
+          "mac_address": "0x000088a0",
+          "linkage_names": [
+            "Plugin_Pr_MatchesPanels"
+          ]
+        },
+        {
+          "name": "Plugin_CL_WriteObjectFile",
+          "mac_address": "0x00008948",
+          "linkage_names": [
+            "Plugin_CL_WriteObjectFile"
+          ]
+        },
+        {
+          "name": "Plugin_CL_GetCompilerMapping",
+          "mac_address": "0x00008a98",
+          "linkage_names": [
+            "Plugin_CL_GetCompilerMapping"
+          ]
+        },
+        {
+          "name": "SupportedPlugin",
+          "mac_address": "0x00008b68",
+          "linkage_names": [
+            "SupportedPlugin"
+          ]
+        },
+        {
+          "name": "VerifyPanels",
+          "mac_address": "0x00008dcc",
+          "linkage_names": [
+            "VerifyPanels"
+          ]
+        },
+        {
+          "name": "Plugin_New",
+          "mac_address": "0x00008e84",
+          "linkage_names": [
+            "Plugin_New"
+          ]
+        },
+        {
+          "name": "Plugin_Free",
+          "mac_address": "0x00008ff8",
+          "linkage_names": [
+            "Plugin_Free"
+          ]
+        },
+        {
+          "name": "Plugin_VerifyPanels",
+          "mac_address": "0x0000905c",
+          "linkage_names": [
+            "Plugin_VerifyPanels"
+          ]
+        },
+        {
+          "name": "Plugins_Init",
+          "mac_address": "0x000090b0",
+          "linkage_names": [
+            "Plugins_Init"
+          ]
+        },
+        {
+          "name": "Plugins_Term",
+          "mac_address": "0x000090e4",
+          "linkage_names": [
+            "Plugins_Term"
+          ]
+        },
+        {
+          "name": "Plugins_Add",
+          "mac_address": "0x000091c4",
+          "linkage_names": [
+            "Plugins_Add"
+          ]
+        },
+        {
+          "name": "Plugins_MatchName",
+          "mac_address": "0x00009890",
+          "linkage_names": [
+            "Plugins_MatchName"
+          ]
+        },
+        {
+          "name": "Plugins_CL_MatchTarget",
+          "mac_address": "0x00009908",
+          "linkage_names": [
+            "Plugins_CL_MatchTarget"
+          ]
+        },
+        {
+          "name": "Plugins_CL_MatchFileType",
+          "mac_address": "0x000099f4",
+          "linkage_names": [
+            "Plugins_CL_MatchFileType"
+          ]
+        },
+        {
+          "name": "Plugins_GetPluginForFile",
+          "mac_address": "0x00009a8c",
+          "linkage_names": [
+            "Plugins_GetPluginForFile"
+          ]
+        },
+        {
+          "name": "Plugins_GetLinker",
+          "mac_address": "0x00009b9c",
+          "linkage_names": [
+            "Plugins_GetLinker"
+          ]
+        },
+        {
+          "name": "Plugins_GetPreLinker",
+          "mac_address": "0x00009c74",
+          "linkage_names": [
+            "Plugins_GetPreLinker"
+          ]
+        },
+        {
+          "name": "Plugins_GetPostLinker",
+          "mac_address": "0x00009d4c",
+          "linkage_names": [
+            "Plugins_GetPostLinker"
+          ]
+        },
+        {
+          "name": "Plugins_GetDisassembler",
+          "mac_address": "0x00009e24",
+          "linkage_names": [
+            "Plugins_GetDisassembler"
+          ]
+        },
+        {
+          "name": "Plugins_GetParserForPlugin",
+          "mac_address": "0x00009efc",
+          "linkage_names": [
+            "Plugins_GetParserForPlugin"
+          ]
+        },
+        {
+          "name": "Plugins_GetCompilerForLinker",
+          "mac_address": "0x0000a0b8",
+          "linkage_names": [
+            "Plugins_GetCompilerForLinker"
+          ]
+        },
+        {
+          "name": "Plugins_GetPluginList",
+          "mac_address": "0x0000a1b0",
+          "linkage_names": [
+            "Plugins_GetPluginList"
+          ]
+        },
+        {
+          "name": "Plugins_GetPrefPanelUnion",
+          "mac_address": "0x0000a318",
+          "linkage_names": [
+            "Plugins_GetPrefPanelUnion"
+          ]
+        },
+        {
+          "name": "Plugin_AddFileTypeMappings",
+          "mac_address": "0x0000a490",
+          "linkage_names": [
+            "Plugin_AddFileTypeMappings"
+          ]
+        },
+        {
+          "name": "Plugins_AddFileTypeMappingsForTarget",
+          "mac_address": "0x0000a4d0",
+          "linkage_names": [
+            "Plugins_AddFileTypeMappingsForTarget"
+          ]
+        },
+        {
+          "name": "Plugin_Call",
+          "mac_address": "0x0000a57c",
+          "linkage_names": [
+            "Plugin_Call"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLPrefs.c",
       "original_filename": "CLPrefs.c",
       "evidence": [
@@ -20292,720 +21176,6 @@
       "compiled": true,
       "membership_complete": false,
       "status": "attempted_incomplete"
-    },
-    {
-      "source": "src/driver/CLPlugins.c",
-      "original_filename": "CLPlugins.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_00415010",
-          "address": "0x00415010",
-          "size": 124,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415054"
-          ]
-        },
-        {
-          "name": "FUN_00415090",
-          "address": "0x00415090",
-          "size": 124,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004150d4"
-          ]
-        },
-        {
-          "name": "FUN_00415110",
-          "address": "0x00415110",
-          "size": 90,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415151"
-          ]
-        },
-        {
-          "name": "FUN_00415170",
-          "address": "0x00415170",
-          "size": 90,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004151b3"
-          ]
-        },
-        {
-          "name": "CLPlugins_GetPluginDesc",
-          "address": "0x004153f0",
-          "size": 120,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415452"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "CLPlugins_GetType",
-          "address": "0x00415470",
-          "size": 71,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004154a1"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "get_target_info",
-          "address": "0x004154c0",
-          "size": 122,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415501",
-            "0x00415521"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "get_plugin_directory_list",
-          "address": "0x00415540",
-          "size": 90,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415581"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "get_file_map",
-          "address": "0x004155a0",
-          "size": 122,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004155e2",
-            "0x00415601"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "FUN_00415620",
-          "address": "0x00415620",
-          "size": 87,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415661"
-          ]
-        },
-        {
-          "name": "CLPlugins_GetObjectFlags",
-          "address": "0x00415680",
-          "size": 147,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004156c4",
-            "0x004156e1"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "CLPlugins_MatchTarget",
-          "address": "0x00415740",
-          "size": 142,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "file_map_matches",
-          "address": "0x004157d0",
-          "size": 134,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "plugin_file_map_matches",
-          "address": "0x00415860",
-          "size": 88,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "matches_plugin_type_lang",
-          "address": "0x004158c0",
-          "size": 73,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "call_query_callback",
-          "address": "0x00415910",
-          "size": 103,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415961"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "query_plugin",
-          "address": "0x00415980",
-          "size": 89,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004159c8"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "CLPlugins_WriteObjectFile",
-          "address": "0x004159e0",
-          "size": 354,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00415af7",
-            "0x00415b15"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "CLPlugins_FindFileMapValue",
-          "address": "0x00415b50",
-          "size": 161,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "validate_plugin",
-          "address": "0x00415c00",
-          "size": 409,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_AddPlugin",
-          "address": "0x00416120",
-          "size": 2228,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_FindMatchingTargetPlugin",
-          "address": "0x004169e0",
-          "size": 142,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_FindTargetPluginBySelectorOptionName",
-          "address": "0x00416a70",
-          "size": 209,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_FindLinkerPlugin",
-          "address": "0x00416b50",
-          "size": 139,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_FindLinkPluginForTarget",
-          "address": "0x00416be0",
-          "size": 139,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_FindMatchingLinkPlugin",
-          "address": "0x00416c70",
-          "size": 139,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_SelectPluginByRequestsAndValues",
-          "address": "0x00416d90",
-          "size": 353,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_BuildPluginRequests",
-          "address": "0x00416f00",
-          "size": 318,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00417011",
-            "0x00417031"
-          ],
-          "compiled_source": "src/driver/CLPlugins.c"
-        },
-        {
-          "name": "CLPlugins_DispatchArgumentToPlugins",
-          "address": "0x004171a0",
-          "size": 86,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLPlugins_CallEntry",
-          "address": "0x00417200",
-          "size": 28,
-          "compiled_source": "src/driver/CLPlugins.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "GetToolVersionInfo",
-          "mac_address": "0x00007b6c",
-          "linkage_names": [
-            "GetToolVersionInfo"
-          ]
-        },
-        {
-          "name": "Plugin_GetToolVersionInfo",
-          "mac_address": "0x00007b94",
-          "linkage_names": [
-            "Plugin_GetToolVersionInfo"
-          ]
-        },
-        {
-          "name": "Plugin_GetDisplayName",
-          "mac_address": "0x00007bd0",
-          "linkage_names": [
-            "Plugin_GetDisplayName"
-          ]
-        },
-        {
-          "name": "Plugin_GetDropInName",
-          "mac_address": "0x00007c60",
-          "linkage_names": [
-            "Plugin_GetDropInName"
-          ]
-        },
-        {
-          "name": "Plugin_GetVersionInfo",
-          "mac_address": "0x00007cf0",
-          "linkage_names": [
-            "Plugin_GetVersionInfo"
-          ]
-        },
-        {
-          "name": "Plugin_GetVersionInfoASCII",
-          "mac_address": "0x00007d80",
-          "linkage_names": [
-            "Plugin_GetVersionInfoASCII"
-          ]
-        },
-        {
-          "name": "Plugin_GetDropInFlags",
-          "mac_address": "0x00007ecc",
-          "linkage_names": [
-            "Plugin_GetDropInFlags"
-          ]
-        },
-        {
-          "name": "Plugin_GetPluginType",
-          "mac_address": "0x00007f88",
-          "linkage_names": [
-            "Plugin_GetPluginType"
-          ]
-        },
-        {
-          "name": "Plugin_CL_GetTargetList",
-          "mac_address": "0x00007ffc",
-          "linkage_names": [
-            "Plugin_CL_GetTargetList"
-          ]
-        },
-        {
-          "name": "Plugin_GetPanelList",
-          "mac_address": "0x000080b4",
-          "linkage_names": [
-            "Plugin_GetPanelList"
-          ]
-        },
-        {
-          "name": "Plugin_CL_GetExtMapList",
-          "mac_address": "0x00008144",
-          "linkage_names": [
-            "Plugin_CL_GetExtMapList"
-          ]
-        },
-        {
-          "name": "Plugin_GetFileTypeMappingList",
-          "mac_address": "0x000081fc",
-          "linkage_names": [
-            "Plugin_GetFileTypeMappingList"
-          ]
-        },
-        {
-          "name": "Plugin_CL_GetObjectFlags",
-          "mac_address": "0x00008280",
-          "linkage_names": [
-            "Plugin_CL_GetObjectFlags"
-          ]
-        },
-        {
-          "name": "Plugin_MatchesName",
-          "mac_address": "0x00008358",
-          "linkage_names": [
-            "Plugin_MatchesName"
-          ]
-        },
-        {
-          "name": "Plugin_CL_MatchesTarget",
-          "mac_address": "0x00008394",
-          "linkage_names": [
-            "Plugin_CL_MatchesTarget"
-          ]
-        },
-        {
-          "name": "Plugins_CL_HaveMatchingTargets",
-          "mac_address": "0x00008484",
-          "linkage_names": [
-            "Plugins_CL_HaveMatchingTargets"
-          ]
-        },
-        {
-          "name": "CL_MatchesExtMapping",
-          "mac_address": "0x000085cc",
-          "linkage_names": [
-            "CL_MatchesExtMapping"
-          ]
-        },
-        {
-          "name": "Plugin_CL_MatchesFileType",
-          "mac_address": "0x000086d0",
-          "linkage_names": [
-            "Plugin_CL_MatchesFileType"
-          ]
-        },
-        {
-          "name": "Plugin_MatchesType",
-          "mac_address": "0x00008754",
-          "linkage_names": [
-            "Plugin_MatchesType"
-          ]
-        },
-        {
-          "name": "Plugin_Pr_MatchesPlugin",
-          "mac_address": "0x000087e8",
-          "linkage_names": [
-            "Plugin_Pr_MatchesPlugin"
-          ]
-        },
-        {
-          "name": "Plugin_Pr_MatchesPanels",
-          "mac_address": "0x000088a0",
-          "linkage_names": [
-            "Plugin_Pr_MatchesPanels"
-          ]
-        },
-        {
-          "name": "Plugin_CL_WriteObjectFile",
-          "mac_address": "0x00008948",
-          "linkage_names": [
-            "Plugin_CL_WriteObjectFile"
-          ]
-        },
-        {
-          "name": "Plugin_CL_GetCompilerMapping",
-          "mac_address": "0x00008a98",
-          "linkage_names": [
-            "Plugin_CL_GetCompilerMapping"
-          ]
-        },
-        {
-          "name": "SupportedPlugin",
-          "mac_address": "0x00008b68",
-          "linkage_names": [
-            "SupportedPlugin"
-          ]
-        },
-        {
-          "name": "VerifyPanels",
-          "mac_address": "0x00008dcc",
-          "linkage_names": [
-            "VerifyPanels"
-          ]
-        },
-        {
-          "name": "Plugin_New",
-          "mac_address": "0x00008e84",
-          "linkage_names": [
-            "Plugin_New"
-          ]
-        },
-        {
-          "name": "Plugin_Free",
-          "mac_address": "0x00008ff8",
-          "linkage_names": [
-            "Plugin_Free"
-          ]
-        },
-        {
-          "name": "Plugin_VerifyPanels",
-          "mac_address": "0x0000905c",
-          "linkage_names": [
-            "Plugin_VerifyPanels"
-          ]
-        },
-        {
-          "name": "Plugins_Init",
-          "mac_address": "0x000090b0",
-          "linkage_names": [
-            "Plugins_Init"
-          ]
-        },
-        {
-          "name": "Plugins_Term",
-          "mac_address": "0x000090e4",
-          "linkage_names": [
-            "Plugins_Term"
-          ]
-        },
-        {
-          "name": "Plugins_Add",
-          "mac_address": "0x000091c4",
-          "linkage_names": [
-            "Plugins_Add"
-          ]
-        },
-        {
-          "name": "Plugins_MatchName",
-          "mac_address": "0x00009890",
-          "linkage_names": [
-            "Plugins_MatchName"
-          ]
-        },
-        {
-          "name": "Plugins_CL_MatchTarget",
-          "mac_address": "0x00009908",
-          "linkage_names": [
-            "Plugins_CL_MatchTarget"
-          ]
-        },
-        {
-          "name": "Plugins_CL_MatchFileType",
-          "mac_address": "0x000099f4",
-          "linkage_names": [
-            "Plugins_CL_MatchFileType"
-          ]
-        },
-        {
-          "name": "Plugins_GetPluginForFile",
-          "mac_address": "0x00009a8c",
-          "linkage_names": [
-            "Plugins_GetPluginForFile"
-          ]
-        },
-        {
-          "name": "Plugins_GetLinker",
-          "mac_address": "0x00009b9c",
-          "linkage_names": [
-            "Plugins_GetLinker"
-          ]
-        },
-        {
-          "name": "Plugins_GetPreLinker",
-          "mac_address": "0x00009c74",
-          "linkage_names": [
-            "Plugins_GetPreLinker"
-          ]
-        },
-        {
-          "name": "Plugins_GetPostLinker",
-          "mac_address": "0x00009d4c",
-          "linkage_names": [
-            "Plugins_GetPostLinker"
-          ]
-        },
-        {
-          "name": "Plugins_GetDisassembler",
-          "mac_address": "0x00009e24",
-          "linkage_names": [
-            "Plugins_GetDisassembler"
-          ]
-        },
-        {
-          "name": "Plugins_GetParserForPlugin",
-          "mac_address": "0x00009efc",
-          "linkage_names": [
-            "Plugins_GetParserForPlugin"
-          ]
-        },
-        {
-          "name": "Plugins_GetCompilerForLinker",
-          "mac_address": "0x0000a0b8",
-          "linkage_names": [
-            "Plugins_GetCompilerForLinker"
-          ]
-        },
-        {
-          "name": "Plugins_GetPluginList",
-          "mac_address": "0x0000a1b0",
-          "linkage_names": [
-            "Plugins_GetPluginList"
-          ]
-        },
-        {
-          "name": "Plugins_GetPrefPanelUnion",
-          "mac_address": "0x0000a318",
-          "linkage_names": [
-            "Plugins_GetPrefPanelUnion"
-          ]
-        },
-        {
-          "name": "Plugin_AddFileTypeMappings",
-          "mac_address": "0x0000a490",
-          "linkage_names": [
-            "Plugin_AddFileTypeMappings"
-          ]
-        },
-        {
-          "name": "Plugins_AddFileTypeMappingsForTarget",
-          "mac_address": "0x0000a4d0",
-          "linkage_names": [
-            "Plugins_AddFileTypeMappingsForTarget"
-          ]
-        },
-        {
-          "name": "Plugin_Call",
-          "mac_address": "0x0000a57c",
-          "linkage_names": [
-            "Plugin_Call"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
     },
     {
       "source": "src/driver/CLStaticMain.c",
@@ -52163,7 +52333,7 @@
       "superseded_by": "src/GC_3_0a5_2/driver/CLOverlays.c"
     },
     "src/driver/CLPlugins.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -52292,7 +52462,8 @@
           "space-nointrinsics": "c7f6876ac20838e5023a2fe5602fcd13dc2868763f8b763d8a7e8fab0dd82761",
           "space-intrinsics": "8bbedf2dfdd69dcf774fc2a27d6c98e3c5703383ead67c67094fe349bfaf9323"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLPlugins.c"
     },
     "src/driver/CLPrefs.c": {
       "status": "superseded_import",
@@ -71673,6 +71844,1774 @@
       "membership_reviewed": false,
       "strict_exact_count": 11,
       "source_sha256": "b281554ce439205fa2079d23254f0a7a6d5234af791bc7e3d89b1a5eccd8e2ce"
+    },
+    "src/GC_3_0a5_2/driver/CLPlugins.c": {
+      "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+      "source_sha256": "bb46bdbc63dad43f35c554b39a858ba3170583467b2f3bfc1c3f34ba0a0c91d6",
+      "status": "attempted_equivalent",
+      "functions": [
+        {
+          "name": "Plugin_GetDisplayName",
+          "address": "0x415010",
+          "size": 124,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 124,
+          "semantic_review": "NULL plugin assertion pl/CLPlugins.c/257, then new callback slot36 returning extended info; successful callback with non-NULL tool@10 returns that string. Otherwise old display-name callback slot8, zero signed16 result returns supplied pointer; absent/error returns(no name found). No NULL check on successful extended-record pointer, as original. Same124B; only scratch/status register choices differ.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_GetDropInName",
+          "address": "0x415090",
+          "size": 124,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 124,
+          "semantic_review": "Same fallback sequence as display-name with assertion276, product@6 preferred and old drop-in-name callback slot12. Same124B; register choices differ.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_GetVersionInfo",
+          "address": "0x415110",
+          "size": 90,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 90,
+          "semantic_review": "NULL assertion294; slot28 signed16 status0 returns VersionInfo8 pointer; absent/error returns static zero fakeversion6d6160. Same90B, scratch/status registers differ.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "fn_00415170",
+          "address": "0x415170",
+          "size": 90,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 90,
+          "semantic_review": "Windows-only callback accessor, original name unavailable. NULL plugin assertion313; callback slot36 status0 and signed16 recordversion==2 returns callback record; otherwise static zero fallback6d6168. Strict90B. Do not conflate with no-argument canonical Plugin_GetToolVersionInfo.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "fn_004151d0",
+          "address": "0x4151d0",
+          "size": 195,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 195,
+          "semantic_review": "Windows-only original formatter name unavailable. Stack64B buffer; bounded snprintf major, minor always, patch only nonzero, build only nonzero. All appends reduce capacity by current cursor offset. Allocates64B tagged version info and formats Version %s, returns heap string. Strict195B. Preserves unsigned parameter formatting and omission of zero patch/build.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_GetVersionInfoASCII",
+          "address": "0x4152a0",
+          "size": 335,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 335,
+          "semantic_review": "NULL plugin plus enabled toolversion formats global four UInt16 numbers; NULL plugin without flag returns NULL. Non-NULL plugin returns existing cached_ascii_version@16. Otherwise queries fn415170 and Plugin_GetVersionInfo; non-NULL versionASCII@30 containing dot is xstrdup-cached immediately. Otherwise extended nonzero numeric version preferred, then ordinary nonzero version; four-field condition preserves original major|minor|patch|(build!=0) precedence. All-zero returns NULL without writing cache. Formats/caches new string, ownership released Plugin_Free. Same335B with changed scratch/register/cache-load scheduling.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_GetDropInFlags",
+          "address": "0x4153f0",
+          "size": 120,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 120,
+          "semantic_review": "NULL assertion394; callback slot4 obtains data pointer and byte count; status0 zeroes18-byte static retdf then memcpy copies callback size unchanged (no new clamp, original potential oversized copy retained); returns static address. Missing/error NULL. Strict120B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_GetPluginType",
+          "address": "0x415470",
+          "size": 71,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 71,
+          "semantic_review": "NULL assertion410; resolves descriptor and returns dropintype@2, else NONE FourCC. Strict71B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_CL_GetTargetList",
+          "address": "0x4154c0",
+          "size": 122,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 122,
+          "semantic_review": "NULL assertion423; NULL cl_cb assertion424; callback slot0 zero signed16 status returns pointer, absent/error static faketl{version1,count0,pointers0}. Same122B, scratch/status register differences only.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_GetPanelList",
+          "address": "0x415540",
+          "size": 90,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 90,
+          "semantic_review": "NULL assertion446; base callback slot16 status0 returns panel list; absent/error static fakepnl{version1,count0,NULL}. Same90B, register-only differences.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_CL_GetExtMapList",
+          "address": "0x4155a0",
+          "size": 122,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 122,
+          "semantic_review": "NULL assertion466; NULL cl_cb assertion467; slot4 signed16 status0 returns map list, else fakeel{version2,count0,NULL}. Strict122B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_GetFileTypeMappingList",
+          "address": "0x415620",
+          "size": 87,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 87,
+          "semantic_review": "NULL assertion487; base callback slot32 returns pointer on signed16 status0, elseNULL. Same87B, scratch/status registers differ.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_CL_GetObjectFlags",
+          "address": "0x415680",
+          "size": 147,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 147,
+          "semantic_review": "NULL assertion499; NULL cl_cb assertion500; slot16 status0 returns flags. Otherwise DropInFlags compiler typeComp returnsNULL, other types return static fake object flags version2/flags0/six empty-string pointers/zero creators-types. Strict147B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_MatchesName",
+          "address": "0x415720",
+          "size": 28,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 28,
+          "semantic_review": "Gets canonical drop-in name and strcmp==0 (case sensitive), returnsUInt8Boolean. Strict28B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_CL_MatchesTarget",
+          "address": "0x415740",
+          "size": 142,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 171,
+          "semantic_review": "Gets native target list. Signed count loops CPU thenOS, preserving first matching pair. Each requested **** wildcard matches, exact value matches; wildcard in provider matches only when exact low byte==0. Returns1 for a CPU andOS pair, else0. No writes or error calls except getter assertions. Native142B versus171B; spilled loop indexes and cached counts instead of register traversal. Same signed count/index bounds, wildcard tests and nested edges.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "CL_MatchesExtMapping",
+          "address": "0x4157d0",
+          "size": 134,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 134,
+          "semantic_review": "New Windows early exact-match rule: exact flag nonzero, requested type nonzero, mapping type nonzero and equal succeeds regardless of extension. Then legacy empty-extension/type-equality, loose zero-type/extension match, or exact extension+type match rules in order, using stdcall ustrcmp. Preserves repeated comparison calls. Strict134B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_CL_MatchesFileType",
+          "address": "0x415860",
+          "size": 88,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 88,
+          "semantic_review": "Gets map list; signed count loop scans native72B records, calls CL_MatchesExtMapping with UInt8 option, first success1, exhausted0. Strict88B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_MatchesType",
+          "address": "0x4158c0",
+          "size": 73,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 73,
+          "semantic_review": "DropInFlags resolves plugin type/language: requested type**** or exacttype; requestedlanguage**** or exactlanguage, or providerlanguage**** when exactlowbyte0. Strict73B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_Pr_MatchesPlugin",
+          "address": "0x415910",
+          "size": 103,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 103,
+          "semantic_review": "Asserts pr_cb non-NULL line631; callbackslot0(pluginfo,cpu,os,&Booleanresult) signed16status0 returnsBoolean, absent/error0. Strict103B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_Pr_MatchesPanels",
+          "address": "0x415980",
+          "size": 89,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 89,
+          "semantic_review": "Asserts pr_cb non-NULL line643; callbackslot4(numPanels,panelNames,&Booleanresult) signed16status0 returns result, absent/error0. Same89B, scratchregister differences only.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_CL_WriteObjectFile",
+          "address": "0x4159e0",
+          "size": 354,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 337,
+          "semantic_review": "Asserts cl_cb non-NULL655 and data&&src&&out656. If write callbackslot20 exists, raw-copies each516B native spec to separate stack records and calls callback(srcCopy,outCopy,creator,type,data); signed16status==0 returnsBoolean. Without callback directly calls fn4186c0(out,creator,type,data) and returns its Boolean. Original354B/compiled337B differs fallback block placement/copy loop scheduling; all copies, callback ABI, assertions, fallback args and result semantics preserved. fn4186c0 name not guessed; it is not three-argument CLWriteObjectFile.c WriteObjectFile.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_CL_GetCompilerMapping",
+          "address": "0x415b50",
+          "size": 161,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 161,
+          "semantic_review": "Scans signed count of72B mappings. Remembers every loose match, breaks first exact match; no match writes flags0 and returns0, otherwise writes recordvalue@36 and returns1. Strict161B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "SupportedPlugin",
+          "address": "0x415c00",
+          "size": 409,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 409,
+          "semantic_review": "Initial empty reason. Requires GetDropInFlags callback, status0; typeComp/Link/Pars/cldr; earliestAPI<=15. Warns via CLPrintErr when earliest>1,newest<15 and globalverbosity. Requires exact descriptor size using signed rsrcversion directly indexing{0,16,18}, no new bounds check. Executable flagsbit1 and entrypoint mutually exclusive. For cl_cb/compiler requires GetObjectFlags; checks version>=2 and no flags low30, rejects both topbitsset. All reason literals exact. Strict409B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "VerifyPanels",
+          "address": "0x415da0",
+          "size": 125,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 118,
+          "semantic_review": "If callbackslot16 exists and signed16status0, scans signed panel count and calls Prefs_FindPanel. Missing panels log CLReportWarning93 only if verbosity. Alwaysreturns1. Important GC3 change from baseline missing-panels failure. Nonmatch125/118B register/block scheduling; source retains each lookup and conditional warning, no cumulative errorflag.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_New",
+          "address": "0x415e20",
+          "size": 473,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 473,
+          "semantic_review": "Five native arguments cb,cl_cb,pr_cb,OSSpec*,module. xmallocNULL544; checks allocation then requiredcb, allocates/copies40B base callbacks, optional24B compiler/linker callbacks and8B parser callbacks with originalearlyNULLreturns and leak behavior. Native516B spec copied fromprovidedrecord or defaultglobal702d28. Storesmodule@24 and zeroscontext@12,cache@16,next@20. Strict473B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_Free",
+          "address": "0x416000",
+          "size": 66,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 66,
+          "semantic_review": "NULL does nothing; otherwise xfree base/cl/pr callbacks and cachedASCII unconditionally, optional module fn412270 stdcall4, then xfree plugin. Strict66B. Unknown module-release helper name retained.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugin_VerifyPanels",
+          "address": "0x416050",
+          "size": 41,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 41,
+          "semantic_review": "VerifyPanels true returns1, else CLReportError94 with drop-inname then0. Exact41B, even though current VerifyPanels normallytrue; failurebranch retained.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_Init",
+          "address": "0x416080",
+          "size": 16,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 16,
+          "semantic_review": "Zeros pluginlist then calls GetToolVersionInfo. Strict16B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_Term",
+          "address": "0x416090",
+          "size": 131,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 131,
+          "semantic_review": "Traverses pluginlist savingnext, calls fn425e20(plugin,0), Plugin_Free; then conditionally xfree allfive global tool strings. Does not reset dangling globals/listhead (original behavior). Strict131B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_Add",
+          "address": "0x416120",
+          "size": 2228,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 2227,
+          "semantic_review": "Gets drop-in name and prepares cachedASCII before validation; Unsupported emits CLReportError88(name,cachedversion,reason),returns0. Existing case-sensitive equal name emits91 andreturns0. Appends plugin before entry initialization; nonstub calls fn425e20(plugin,1),failureerror3+returns0 retaining insertednode. Compiler invalidmask0x340000/linker0x5824000 emiterror4 butcontinue. Verbosity prints name/cachedversion,type/language/API, native CPU/OS signed16 loops,72B filemapping records (nonzero type prints FourCC;zero prints<none>), panels and flags. All exact native flag masks/literals recovered from original branch targets, saved clplugins-flagprints.json; sourceincludesnewGC3 flags absentoldbaseline. Returns1.2228/2227B; data100%, register/byte-form differences only after semantic fixes. No false claim strict.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_CL_MatchTarget",
+          "address": "0x4169e0",
+          "size": 142,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 171,
+          "semantic_review": "Uses callerlist orregistry; skips no-cl_cb; loose CPU/OS and type/language match storescandidate; exact CPU/OS and type/language stops, else lastloosematch returned. No writesotherthanlocal candidate and noerrorcalls except getters.142/171B register/loop allocation differences; same four predicates/order.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_GetPluginForFile",
+          "address": "0x416a70",
+          "size": 209,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 209,
+          "semantic_review": "Strict209B after addedWindows Build Agent preference. Selects plugin matching requestedtype/language exact, withcl_cb, looseCPU/OS andtype/extension. Storeslastloosematch. ExactCPU/OS andfiletype onlybreak when global70324d false or displayname strstr Build Agent true; otherwise continuessearch. Existingcandidate retainediflaternomatch.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_GetLinker",
+          "address": "0x416b50",
+          "size": 139,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 139,
+          "semantic_review": "Linktype, anylanguage exact; excludes flags0x48000000; looseCPU/OS storeslastcandidate andexactstops. Strict139B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_GetPreLinker",
+          "address": "0x416be0",
+          "size": 139,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 139,
+          "semantic_review": "Linktype/anylanguage exact, requires0x08000000; looseCPU/OS candidate, exactstop. Same139B; cpuregisters swapped and load scheduling differs, same actual argument roles/flag condition.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_GetPostLinker",
+          "address": "0x416c70",
+          "size": 139,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 139,
+          "semantic_review": "Linktype/anylanguage exact, requires0x40000000; looseCPU/OS candidate, exactstop. Strict139B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_GetDisassembler",
+          "address": "0x416d00",
+          "size": 139,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 139,
+          "semantic_review": "Linktype/anylanguage exact, rejects0x80000000; looseCPU/OS candidate, exactstop. Strict139B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "Plugins_GetParserForPlugin",
+          "address": "0x416d90",
+          "size": 353,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 385,
+          "semantic_review": "Uses callerlist orregistry; alloca(value_count) byte results, noheapfree. Only Pars plugintype andrequestedstyle. For every18B request, excludes Pars/cldr andexecutableflag10, queriesremainingrequests withCPU/OS; anysuccess qualifiescandidate. Then queriespanels individually withnum1 and pointers into callerarray, ANDsBooleanresults, firstalltruecandidate stops. Lastpartialcandidate retained; ifselectedandpartial, CLReport5 andCLReport6 eachfailedpanel. Returnsselected. Original353/compiled385B has extra spilledparameters/framebytes; samealloca ABI, callbackorder/predicates, masks, resultarraywrites/errorcalls. Zero panelcount succeeds; no qualifiers avoidsreadinguninitializedall_succeeded because selectedNULL.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_GetPluginList",
+          "address": "0x416f00",
+          "size": 318,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 302,
+          "semantic_review": "Countsregistry/callerlist nodes; storescount andallocates count*18 viaxmallocNULL. NULLallocation0returnpreserved. For eachnode getsDropInFlags andVersionInfo andretainsassertions df line1522/vi1523; writes type,language,flags,cachedASCIIpointer@12, executableBoolean@16. This replaces baseline packedfour-byte numericversion. Native318/compiled302B usesdifferent localpointer/index allocation; same18B recordwrites andbranchconditions, reservedbyte17 untouched.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_GetPrefPanelUnion",
+          "address": "0x417040",
+          "size": 293,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 281,
+          "semantic_review": "Countsallpanels signed16 lists, xmalloc taggedplugin preference union count*4; noNULLguard asretail. Deduplicatesusing ustrcmp in first-seen order, copiespointers notstrings, xreallocsame tag tofinalcount*4; storesarray andcount, returns1. Native293/compiled281B loop/countregisterandblock differences; allocation/errorpolicy andallwrites identical. No baseline duplicateallocationleak orCRT realloc retained.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_AddFileTypeMappings",
+          "address": "0x417170",
+          "size": 38,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 34,
+          "semantic_review": "Getmappinglist callbackpointer; NULLreturns1;otherwise OS_AddFileTypeMappingList(NULL,pointer),returns1. SecondrefCon unused.38/34B epiloguescheduling difference; noerrorreturnsintroduced.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugins_AddFileTypeMappingsForTarget",
+          "address": "0x4171a0",
+          "size": 86,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 86,
+          "semantic_review": "Uses callerlist orregistry; no-cl_cb plugins alwaysaddmappings, otherwise looseCPU/OSmatch required. CallsPlugin_AddFileTypeMappings(node,refCon),ignoresresult; returns1. Same86B; scratchregister/Booleanargconversiondifference only.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_Call",
+          "address": "0x417200",
+          "size": 28,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 28,
+          "semantic_review": "Baseentrypresent callsstdcallentry(context) andpropagatessigned16; absentreturns2. Strict28B.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "fn_00417220",
+          "address": "0x417220",
+          "size": 44,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 44,
+          "semantic_review": "Windows-only registry iterator originalnameunknown; calls cdecl callback(plugin,refCon) in registryorder, firstnonzeroint returnsit, exhausted0. No listwrites. Strict44B. Membershipprovisionalfrom sharedprivatepluginlist and contiguousendcluster.",
+          "status": "strict_exact"
+        },
+        {
+          "name": "GetToolVersionInfo",
+          "address": "0x414d00",
+          "size": 737,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": false,
+          "compiled_size": 721,
+          "semantic_review": "Resets useToolVersion only, converts global executable spec to260B filename, GetFileVersionInfoSizeA size failure returns; allocates stack buffer via __alloca(size); GetFileVersionInfoA or root VerQueryValueA failure returns; success enables tool version and splits fixed FileVersionMS/LS into four UInt16 fields. Queries company/product/file-description and duplicates each returned string, NULL on query failure. Copyright query computes expanded byte count and replaces every unsigned0xa9 with three bytes(c), NUL terminates, NULL when missing. ProductVersion query skips digits/dots/spaces; suffix longer than two leading bytes formats current numeric version plus suffix in80B temporary, otherwise numeric version only; missing query stores literal Version %%s. Stores duplicated final format. Does not free prior values on reinit, as original. Nonmatch: saves two registers instead ofthree, stacklocals shifted4B, different format argument scheduling/block addresses; actual APIs/keys/globalwrites identical.",
+          "status": "attempted_equivalent"
+        },
+        {
+          "name": "Plugin_GetToolVersionInfo",
+          "address": "0x414ff0",
+          "size": 19,
+          "source": "src/GC_3_0a5_2/driver/CLPlugins.c",
+          "exact": true,
+          "compiled_size": 19,
+          "semantic_review": "No arguments. Returns address of20-byte global toolVersionInfo only when useToolVersion!=0, otherwise NULL. Strict19B. Distinct from Windows callback accessor fn415170.",
+          "status": "strict_exact"
+        }
+      ],
+      "source_bindings": {
+        "_xmalloc@8": "0x426300",
+        "_xrealloc@12": "0x4263e0",
+        "_xstrdup@4": "0x426460",
+        "_xfree@4": "0x426490",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_fn_00412270@4": "0x412270",
+        "_fn_00425e20": "0x425e20",
+        "_CLReportWarning": "0x414a30",
+        "_CLReportError": "0x414a00",
+        "_CLPrintErr": "0x419e00",
+        "_ustrcmp@8": "0x424b60",
+        "_Prefs_FindPanel": "0x4261f0",
+        "_fn_004186c0": "0x4186c0",
+        "_OS_AddFileTypeMappingList@8": "0x42f690",
+        "_data_00702f34": "0x702f34",
+        "_data_00702d28": "0x702d28",
+        "_pluginlist": "0x6d61a0",
+        "_toolVersionInfo": "0x6d61a4",
+        "_toolVersion": "0x6d61b8",
+        "_useToolVersion": "0x6d61c0",
+        "_fakeversion": "0x6d6160",
+        "_data_006d6168": "0x6d6168",
+        "_retdf": "0x6d618e",
+        "_faketl": "0x66a7bc",
+        "_fakepnl": "0x66a7de",
+        "_fakeel": "0x66a7e6",
+        "_fake": "0x66a7f2",
+        "_DropInFlagsSize": "0x66a878",
+        "_snprintf": "0x407fd0",
+        "_strcmp": "0x404120",
+        "_strchr": "0x4041a0",
+        "_memcpy": "0x404850",
+        "_data_0070324d": "0x70324d",
+        "_strstr": "0x404400",
+        "_CLPrint": "0x419d90",
+        "_CLReport": "0x414a60",
+        "_OS_SpecToString@12": "0x4111f0",
+        "_GetFileVersionInfoSizeA@8": "0x42f67c",
+        "_GetFileVersionInfoA@16": "0x42f682",
+        "_VerQueryValueA@16": "0x42f688",
+        "_Plugin_GetDisplayName": "0x415010",
+        "_Plugin_GetDropInName": "0x415090",
+        "_Plugin_GetVersionInfo": "0x415110",
+        "_fn_00415170": "0x415170",
+        "_fn_004151d0": "0x4151d0",
+        "_Plugin_GetVersionInfoASCII": "0x4152a0",
+        "_Plugin_GetDropInFlags": "0x4153f0",
+        "_Plugin_GetPluginType": "0x415470",
+        "_Plugin_CL_GetTargetList": "0x4154c0",
+        "_Plugin_GetPanelList": "0x415540",
+        "_Plugin_CL_GetExtMapList": "0x4155a0",
+        "_Plugin_GetFileTypeMappingList": "0x415620",
+        "_Plugin_CL_GetObjectFlags": "0x415680",
+        "_Plugin_MatchesName": "0x415720",
+        "_Plugin_CL_MatchesTarget": "0x415740",
+        "_CL_MatchesExtMapping": "0x4157d0",
+        "_Plugin_CL_MatchesFileType": "0x415860",
+        "_Plugin_MatchesType": "0x4158c0",
+        "_Plugin_Pr_MatchesPlugin": "0x415910",
+        "_Plugin_Pr_MatchesPanels": "0x415980",
+        "_Plugin_CL_WriteObjectFile": "0x4159e0",
+        "_Plugin_CL_GetCompilerMapping": "0x415b50",
+        "_SupportedPlugin": "0x415c00",
+        "_VerifyPanels": "0x415da0",
+        "_Plugin_New": "0x415e20",
+        "_Plugin_Free": "0x416000",
+        "_Plugin_VerifyPanels": "0x416050",
+        "_Plugins_Init": "0x416080",
+        "_Plugins_Term": "0x416090",
+        "_Plugins_Add": "0x416120",
+        "_Plugins_CL_MatchTarget": "0x4169e0",
+        "_Plugins_GetPluginForFile": "0x416a70",
+        "_Plugins_GetLinker": "0x416b50",
+        "_Plugins_GetPreLinker": "0x416be0",
+        "_Plugins_GetPostLinker": "0x416c70",
+        "_Plugins_GetDisassembler": "0x416d00",
+        "_Plugins_GetParserForPlugin": "0x416d90",
+        "_Plugins_GetPluginList": "0x416f00",
+        "_Plugins_GetPrefPanelUnion": "0x417040",
+        "_Plugin_AddFileTypeMappings": "0x417170",
+        "_Plugins_AddFileTypeMappingsForTarget": "0x4171a0",
+        "_Plugin_Call": "0x417200",
+        "_fn_00417220": "0x417220",
+        "_GetToolVersionInfo": "0x414d00",
+        "_Plugin_GetToolVersionInfo": "0x414ff0"
+      },
+      "baseline_aliases": {
+        "CLPlugins_GetName": "Plugin_GetDropInName",
+        "get_plugin_result": "Plugin_GetVersionInfo",
+        "CLPlugins_GetPluginDesc": "Plugin_GetDropInFlags",
+        "CLPlugins_GetType": "Plugin_GetPluginType",
+        "get_target_info": "Plugin_CL_GetTargetList",
+        "get_plugin_directory_list": "Plugin_GetPanelList",
+        "get_file_map": "Plugin_CL_GetExtMapList",
+        "get_callback_result": "Plugin_GetFileTypeMappingList",
+        "CLPlugins_GetObjectFlags": "Plugin_CL_GetObjectFlags",
+        "plugin_name_matches": "Plugin_MatchesName",
+        "CLPlugins_MatchTarget": "Plugin_CL_MatchesTarget",
+        "file_map_matches": "CL_MatchesExtMapping",
+        "plugin_file_map_matches": "Plugin_CL_MatchesFileType",
+        "matches_plugin_type_lang": "Plugin_MatchesType",
+        "call_query_callback": "Plugin_Pr_MatchesPlugin",
+        "query_plugin": "Plugin_Pr_MatchesPanels",
+        "CLPlugins_WriteObjectFile": "Plugin_CL_WriteObjectFile",
+        "CLPlugins_FindFileMapValue": "Plugin_CL_GetCompilerMapping",
+        "validate_plugin": "SupportedPlugin",
+        "fn_00409700": "VerifyPanels",
+        "CLPlugins_CreatePluginDataCopy": "Plugin_New",
+        "free_plugin": "Plugin_Free",
+        "fn_004098a0": "Plugin_VerifyPanels",
+        "fn_004098d0": "Plugins_Init",
+        "CLPlugins_FreePlugins": "Plugins_Term",
+        "CLPlugins_AddPlugin": "Plugins_Add",
+        "CLPlugins_FindMatchingTargetPlugin": "Plugins_CL_MatchTarget",
+        "CLPlugins_FindTargetPluginBySelectorOptionName": "Plugins_GetPluginForFile",
+        "CLPlugins_FindLinkerPlugin": "Plugins_GetLinker",
+        "CLPlugins_FindLinkPluginForTarget": "Plugins_GetPreLinker",
+        "CLPlugins_FindMatchingLinkPlugin": "Plugins_GetPostLinker",
+        "CLPlugins_SelectPluginByRequestsAndValues": "Plugins_GetParserForPlugin",
+        "CLPlugins_BuildPluginRequests": "Plugins_GetPluginList",
+        "CLPlugins_GetUniquePluginNames": "Plugins_GetPrefPanelUnion",
+        "fn_0040a610": "Plugin_AddFileTypeMappings",
+        "CLPlugins_DispatchArgumentToPlugins": "Plugins_AddFileTypeMappingsForTarget",
+        "CLPlugins_CallEntry": "Plugin_Call",
+        "CLPluginRequests_AppendMacFileTypesTable": "OS_AddFileTypeMappingList"
+      },
+      "compiler": {
+        "profile": "CW94speed",
+        "flags": "-O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+        "invocations": 10,
+        "successful": 8,
+        "compile_failures": 2,
+        "experiments": "Nativecallbackslots/statuspromotions,Windowsconstructorbranchcopy,fallbackwriterplacement,loopflagABI/declarations/staticvisibility; onlyCW94profile. Othercompilerprofilesnotattemptedhere. Failedduplicate-localcompilefollowedstaleprobeoutputwasdiscarded;finalobjectfreshcompiled."
+      },
+      "objdiff": {
+        "sections": [
+          [
+            ".text",
+            90.9227
+          ],
+          [
+            ".data",
+            100.0
+          ],
+          [
+            ".bss",
+            100.0
+          ]
+        ],
+        "report": "build/clplugins-full-diff.json"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "_faketl",
+          "section": ".data",
+          "size": 14,
+          "method": "named binding",
+          "address": "0x0066a7bc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_fakepnl",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x0066a7de",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_fakeel",
+          "section": ".data",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x0066a7e6",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@114",
+          "section": ".data",
+          "size": 4,
+          "method": "verified bound data table",
+          "address": "0x0066a7ee",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_fake",
+          "section": ".data",
+          "size": 70,
+          "method": "named binding",
+          "address": "0x0066a7f2",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_DropInFlagsSize",
+          "section": ".data",
+          "size": 12,
+          "method": "named binding",
+          "address": "0x0066a878",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@233",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066a76c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@234",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a778",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@235",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066a77c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@305",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066a7ca",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@543",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066a838",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@587",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066a84c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@684",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066a884",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@685",
+          "section": ".data",
+          "size": 36,
+          "method": "resolved function reference",
+          "address": "0x0066a8b4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@686",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066a8d8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@687",
+          "section": ".data",
+          "size": 72,
+          "method": "resolved function reference",
+          "address": "0x0066a8f8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@688",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066a940",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@689",
+          "section": ".data",
+          "size": 72,
+          "method": "resolved function reference",
+          "address": "0x0066a96c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@690",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066a9b4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@691",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066a9e4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@692",
+          "section": ".data",
+          "size": 56,
+          "method": "resolved function reference",
+          "address": "0x0066aa04",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@693",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066aa3c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1054",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066aa6c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1055",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066aa78",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1056",
+          "section": ".data",
+          "size": 36,
+          "method": "resolved function reference",
+          "address": "0x0066aa80",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1057",
+          "section": ".data",
+          "size": 56,
+          "method": "resolved function reference",
+          "address": "0x0066aaa4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1058",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066aadc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1059",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066aaec",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1060",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066aafc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1061",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066ab0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1062",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066ab10",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1063",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066ab20",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1064",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066ab4c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1065",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066ab74",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1066",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066ab8c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1067",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066ab94",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1068",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066aba4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1069",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066abcc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1070",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066abe8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1071",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066abfc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1072",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066ac10",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1073",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066ac28",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1074",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066ac3c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1075",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066ac50",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1076",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066ac60",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1077",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066ac70",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1078",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066ac84",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1079",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066aca4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1080",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066acc0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1081",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066acd8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1082",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066acf8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1083",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066ad18",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1084",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066ad40",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1085",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066ad68",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1086",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066ad94",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1087",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066adc0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1088",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066add4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1089",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066adfc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1090",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066ae24",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1091",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066ae44",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1092",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066ae60",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1093",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066ae7c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1094",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066ae94",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1095",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066aeac",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1096",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066aec0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1097",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066aed8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1098",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066aef0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1099",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066af0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1100",
+          "section": ".data",
+          "size": 36,
+          "method": "resolved function reference",
+          "address": "0x0066af3c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1101",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066af60",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1102",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066af90",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1103",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066afa4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1177",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066afcc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1401",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066afd8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1402",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066afe4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1476",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066aff0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1588",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a78c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1589",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a790",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1590",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066a794",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1591",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066a7a0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1592",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066a7b0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1766",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a684",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1767",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066a688",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1768",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066a6b0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1769",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x0066a6d8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1770",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066a704",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1771",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066a72c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1772",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066a754",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1773",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a75c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1774",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066a760",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_useToolVersion",
+          "section": ".bss",
+          "size": 2,
+          "method": "named binding",
+          "address": "0x006d61c0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_toolVersion",
+          "section": ".bss",
+          "size": 10,
+          "method": "named binding",
+          "address": "0x006d61b8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_toolVersionInfo",
+          "section": ".bss",
+          "size": 20,
+          "method": "named binding",
+          "address": "0x006d61a4",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_pluginlist",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d61a0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_retdf",
+          "section": ".bss",
+          "size": 18,
+          "method": "named binding",
+          "address": "0x006d618e",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_data_006d6168",
+          "section": ".bss",
+          "size": 38,
+          "method": "named binding",
+          "address": "0x006d6168",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_fakeversion",
+          "section": ".bss",
+          "size": 8,
+          "method": "named binding",
+          "address": "0x006d6160",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "membership": {
+        "explicit_mac_functions": [
+          "GetToolVersionInfo",
+          "Plugin_GetToolVersionInfo",
+          "Plugin_GetDisplayName",
+          "Plugin_GetDropInName",
+          "Plugin_GetVersionInfo",
+          "Plugin_GetVersionInfoASCII",
+          "Plugin_GetDropInFlags",
+          "Plugin_GetPluginType",
+          "Plugin_CL_GetTargetList",
+          "Plugin_GetPanelList",
+          "Plugin_CL_GetExtMapList",
+          "Plugin_GetFileTypeMappingList",
+          "Plugin_CL_GetObjectFlags",
+          "Plugin_MatchesName",
+          "Plugin_CL_MatchesTarget",
+          "Plugins_CL_HaveMatchingTargets",
+          "CL_MatchesExtMapping",
+          "Plugin_CL_MatchesFileType",
+          "Plugin_MatchesType",
+          "Plugin_Pr_MatchesPlugin",
+          "Plugin_Pr_MatchesPanels",
+          "Plugin_CL_WriteObjectFile",
+          "Plugin_CL_GetCompilerMapping",
+          "SupportedPlugin",
+          "VerifyPanels",
+          "Plugin_New",
+          "Plugin_Free",
+          "Plugin_VerifyPanels",
+          "Plugins_Init",
+          "Plugins_Term",
+          "Plugins_Add",
+          "Plugins_MatchName",
+          "Plugins_CL_MatchTarget",
+          "Plugins_CL_MatchFileType",
+          "Plugins_GetPluginForFile",
+          "Plugins_GetLinker",
+          "Plugins_GetPreLinker",
+          "Plugins_GetPostLinker",
+          "Plugins_GetDisassembler",
+          "Plugins_GetParserForPlugin",
+          "Plugins_GetCompilerForLinker",
+          "Plugins_GetPluginList",
+          "Plugins_GetPrefPanelUnion",
+          "Plugin_AddFileTypeMappings",
+          "Plugins_AddFileTypeMappingsForTarget",
+          "Plugin_Call"
+        ],
+        "mac_no_windows_body_identified": [
+          "Plugins_CL_HaveMatchingTargets",
+          "Plugins_MatchName",
+          "Plugins_CL_MatchFileType",
+          "Plugins_GetCompilerForLinker"
+        ],
+        "windows_cluster": "414d00..41724c,45 bodies; endpaddingexcluded. Initialinventory30wasincomplete.",
+        "evidence": "Explicit SO CLPlugins.c Mac46members, Windows assertions, interleaved callback/matching/registry operations, privateglobalreferences and directcallgraph. Capstone fullbodydisassembly clplugins-retail.txt andclplugins-preface.txt; no liveGhidra/targetexecution. Three Windows-only helper originalnamesunavailable retainedaddressaliases:fn415170,fn4151d0,fn417220. Lastiteratorownershipprovisionalbutstrongsameprivatepluginlist.",
+        "absence_limits": "Four Mac functions are unmapped in this Windows source cluster; do not claim exhaustiveabsenceofinlined/platformspecificequivalents.",
+        "bounds": "Originalbodyextents exclude trailingNOPpadding; include branch blocks afterearlierRET (notmerelyfirst/lastRET). Formatter195,ASCII335,initializer737 includeallreachabletailblocks."
+      },
+      "native_abi": {
+        "Plugin": "544B:cb0,cl_cb4,pr_cb8,context12,cachedASCII16,next20,module24,OSSpec28/516.",
+        "callback_tables": "Base40B (newextendedversioncallback36), compilerlinker24, parser8; entriesstdcall,signed16status; registryfunctions cdecl. ParserSupportsPlugin receives18B plugininfo,cpu,os,Boolean*.",
+        "records": "DropInFlags18packed2;TargetList14;PanelList8;ExtMapList8;WindowsExtMapping72(type0,extension4/32,value36,unknown32tail40);PluginInfo18(type0,lang4,flags8,ASCIIversionpointer12,stub16,reserved17);VersionInfo8UInt16;nativeOSSpec516.",
+        "extended_version_record": "Windowscallbackrecord minimum34B referenced:version16@0,company/product/tool/copyright/versionString pointers@2/6/10/14/18,UInt16numericversion@22/24/26/28,ASCIIpointer@30. Staticzerofallback6d6168 inferred38B untiladjacentretdf6d618e; last4B unreferencedmeaningunknown. ThisunreferencedtailinferenceexplicitlynotSTABSproof. GlobaltoolVersionInfois separate20B compact5stringpointers.",
+        "imports": "PEIATnamesconfirmed GetFileVersionInfoSizeA(6d43b0),GetFileVersionInfoA(6d43b4),VerQueryValueA(6d43b8); callsretailtrampolines42f67c/682/688. __alloca42f670 intrinsicEAX callingconvention. OS_SpecToString4111f0 stdcall12.",
+        "unknown_external_names": [
+          "fn_00412270@4 module release412270",
+          "fn_00425e20 plugin init/term425e20",
+          "fn_004186c0 native raw writer fallback4186c0"
+        ]
+      },
+      "validation": {
+        "strict": "Eachfunction compares resolvedretailaddressbytes and exactDIR32base-relocationpositions.25true/20false; objdiff-cli wholeTUalsoexecuted.",
+        "encoding": "SourceCP932valid;tools/check_sjis.pyabsent.",
+        "artifacts": [
+          "build/clplugins-stabs.txt",
+          "build/clplugins-retail.txt",
+          "build/clplugins-preface.txt",
+          "build/clplugins-functions.json",
+          "build/clplugins-flagprints.json",
+          "build/clplugins-probe.json",
+          "build/clplugins-diff.txt",
+          "build/clplugins-full-diff.json"
+        ]
+      },
+      "binding_policy": "Everybindingprovidedissource-scoped;staticprivatecanonicalnamesincludepluginlist,retdf,fakeversion,faketl,fakepnl,fakeel,fake,DropInFlagsSize,toolVersionInfo/toolVersion/useToolVersion. Unknownfallbackglobaldata006d6168retainsaddressname. Noanonymousliteraloverride/no globalaliasadded. RootmustupdatebaselinePluginlayout/callbacktableandaliasesbeforeotherTUsuseGC3record.",
+      "membership_reviewed": false,
+      "strict_exact_count": 25
     }
   },
   "ownership_review": {

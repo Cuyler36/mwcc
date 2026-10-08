@@ -88,6 +88,22 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLPlugins.c: reviewed native plugin unit
+
+All 45 recovered Windows bodies are ported and statically reviewed; 25 pass
+strict byte/fixup checks. The native Plugin is 544 bytes with a 516-byte spec
+at 0x1c, and base callbacks are 40 bytes with a tool-version callback at 0x24.
+GetToolVersionInfo reads native Windows version resources. The no-argument
+Plugin_GetToolVersionInfo is distinct from the Windows Plugin-argument accessor,
+which retains the address name fn_00415170.
+
+The 9,201 original code bytes compare at 90.92271%; all 2,436 initialized data
+bytes and 100 BSS bytes match. Twenty instruction nonmatches have per-function
+branch/write/error reviews in the ledger. Four Mac members remain unmapped;
+unknown Windows helper names and the static fallback record's unreferenced tail
+are explicit limits. Exact completion is false. Native layouts stay private
+to the port until the remaining imported callers are reconstructed.
+
 ## OSLib/MacSpecs.c: recovered canonical spec-conversion unit
 
 Thirteen canonical Windows functions are reconstructed; eleven pass strict

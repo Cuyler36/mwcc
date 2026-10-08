@@ -202913,7 +202913,7 @@
     "src/GC_3_0a5_2/optimizer/IroType.c": {
       "source_candidate": "build\\IroType-native.c",
       "intended_source": "src/GC_3_0a5_2/optimizer/IroType.c",
-      "sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2",
+      "sha256": "71aaa0979b3d6eed48e6a771c63b4c5e3b71fbd465e6326fc2abe36638c31be3",
       "frozen": true,
       "identified_native_functions": 21,
       "native_code_bytes": 9259,
@@ -203038,7 +203038,7 @@
         "basis": "All 21 supported bodies attempted and reviewed across eight compiling profiles and three additional aggregate-copy source formulations. All pass 6300 bounded native instruction comparisons, including 338 terminal assertions. Two formatting/dump neighbors separately attempted and held after 600 passing comparisons. Full normal build, strict match verification, objdiff-cli, image partition and CP932 checks passed. Remaining generated tables and original physical source membership unproved."
       },
       "source": "src/GC_3_0a5_2/optimizer/IroType.c",
-      "source_sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2",
+      "source_sha256": "71aaa0979b3d6eed48e6a771c63b4c5e3b71fbd465e6326fc2abe36638c31be3",
       "status": "attempted_equivalent",
       "membership_reviewed": false,
       "mapped_function_count": 21,
@@ -219263,7 +219263,8 @@
         },
         "normal_project": {
           "source": "src/GC_3_0a5_2/optimizer/IroType.c",
-          "source_sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2",
+          "source_sha256": "71aaa0979b3d6eed48e6a771c63b4c5e3b71fbd465e6326fc2abe36638c31be3",
+          "frozen_candidate_sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2",
           "candidate_project_sections_sha256": "406d669d1a16c6aafd8e7132b5a722aa13f2b65916c8bb6a4bdb0cd1aca2ec9e",
           "all_code_and_data_sections_equal": true,
           "common_symbols_equal": true,
@@ -220036,8 +220037,15 @@
           "inventory_partition": true,
           "ownership_conflicts": 0,
           "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        },
+        "formatting_only_source_change": {
+          "frozen_source_sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2",
+          "active_source_sha256": "71aaa0979b3d6eed48e6a771c63b4c5e3b71fbd465e6326fc2abe36638c31be3",
+          "change": "Strip trailing spaces and redundant terminal empty lines. No source tokens changed.",
+          "normal_object_equivalence_pending": false
         }
-      }
+      },
+      "frozen_candidate_sha256": "b4d087dcf63034bf84bd9f5b0789c51fc701c8daae8797801a1a0ef8523055b2"
     }
   },
   "ownership_review": {

@@ -178,7 +178,7 @@ void fn_005b5fb0(char *param_1, int param_2, char param_3)
   int iVar2;
   char uVar3;
   SInt64 lVar4;
-  
+
   if (param_3 != '\0') {
     fn_005b61f0();
   }
@@ -261,7 +261,7 @@ void fn_005b61f0(void)
   char *puVar5;
   char cVar6;
   char *puVar7;
-  
+
   for (puVar7 = DAT_00710170; puVar5 = DAT_00710170, puVar7 != (char *)0x0;
       puVar7 = *(char **)(puVar7 + 0x3e)) {
     *(UInt32 *)(puVar7 + 0x16) = *(UInt32 *)(puVar7 + 0x12);
@@ -369,7 +369,7 @@ void fn_005b6390(char *param_1)
   int iVar9;
   char *puVar10;
   char local_19;
-  
+
   pcVar1 = *(char **)(param_1 + 0x16);
   iVar9 = *(int *)(pcVar1 + 2);
   if (iVar9 == 1) {
@@ -582,7 +582,7 @@ char fn_005b6800(char *param_1, char *param_2, char param_3)
   char local_32;
   char local_31;
   bool local_19;
-  
+
   local_19 = false;
   iVar11 = *(int *)(param_1 + 2);
   if (iVar11 == 1) {
@@ -1048,7 +1048,7 @@ void fn_005b7230(int param_1, UInt32 param_2)
   UInt32 local_1c;
   UInt32 local_18;
   int local_14;
-  
+
   pcVar1 = *(char **)(param_1 + 0x2a);
   local_14 = 1;
   cVar2 = pcVar1[1];
@@ -1186,7 +1186,7 @@ void fn_005b7580(int param_1, UInt32 param_2)
   char local_19;
   int local_18;
   char *local_14;
-  
+
   cVar3 = is_unsigned((void*)(*(UInt32 *)(param_1 + 0x16)));
   local_19 = cVar3 == '\0';
   puVar1 = *(char **)(param_1 + 0x2a);
@@ -1337,7 +1337,7 @@ bool fn_005b7980(char *param_1, char *param_2)
   char cVar4;
   short sVar5;
   bool bVar6;
-  
+
   cVar4 = *param_1;
   if ((cVar4 == '\f') && (*param_2 == '\f')) {
     return true;
@@ -1501,7 +1501,7 @@ UInt32 * fn_005b7d30(UInt32 *param_1)
 {
   UInt32 *puVar1;
   UInt32 uVar2;
-  
+
   if (param_1 != (UInt32 *)0x0) {
     switch(*(char *)param_1) {
     case 0:
@@ -1569,5 +1569,3 @@ bool fn_005b7e20(char *left,char *right)
  if((UInt8)left[0]==12 && (UInt8)right[0]==12)return true;
  return fn_00454c20((void*)(left),(void*)(right))!=0;
 }
-
-

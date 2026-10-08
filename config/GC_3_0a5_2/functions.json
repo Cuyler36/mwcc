@@ -14734,93 +14734,409 @@
     }
   },
   {
-    "name": "PCodeUtilities_MakeInstructionWithObject",
-    "address": "0x00595770",
+    "name": "fn_005949a0",
+    "address": "0x5949a0",
+    "size": 439,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00594b60",
+    "address": "0x594b60",
+    "size": 103,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_vr_x",
+    "address": "0x594bd0",
+    "size": 32,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_vr",
+    "address": "0x594bf0",
+    "size": 34,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_fpr_x",
+    "address": "0x594c20",
+    "size": 311,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_fpr",
+    "address": "0x594d60",
+    "size": 133,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_gpr_x",
+    "address": "0x594df0",
+    "size": 195,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_gpr_u",
+    "address": "0x594ec0",
+    "size": 195,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "store_gpr",
+    "address": "0x594f90",
+    "size": 150,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_vr_x",
+    "address": "0x595030",
+    "size": 32,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_vr",
+    "address": "0x595050",
+    "size": 34,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_fpr_x",
+    "address": "0x595080",
+    "size": 311,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_fpr",
+    "address": "0x5951c0",
+    "size": 133,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_gpr_x",
+    "address": "0x595250",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_gpr_u",
+    "address": "0x5952e0",
+    "size": 134,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_gpr",
+    "address": "0x595370",
+    "size": 93,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "make_load_gpr",
+    "address": "0x5953d0",
+    "size": 91,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "opcode_for_load_gpr",
+    "address": "0x595430",
+    "size": 168,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "load_store_register",
+    "address": "0x5954e0",
+    "size": 655,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "op_absolute_ha",
+    "address": "0x595770",
     "size": 192,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_MakeInstructionWithObject",
-    "baseline_address": "0x004a1f60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_CreateInstructionWithObject",
-    "address": "0x00595830",
+    "name": "add_immediate_lo",
+    "address": "0x595830",
     "size": 86,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_CreateInstructionWithObject",
-    "baseline_address": "0x004a2000",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_EmitInstructionAndCreateBlock",
-    "address": "0x00595e10",
+    "name": "add_immediate",
+    "address": "0x595890",
+    "size": 33,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "add_immediate_before",
+    "address": "0x5958c0",
+    "size": 475,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "branch_subroutine_ctr",
+    "address": "0x595aa0",
+    "size": 227,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "branch_subroutine",
+    "address": "0x595b90",
+    "size": 332,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "branch_record_volatiles",
+    "address": "0x595ce0",
+    "size": 237,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "branch_count_volatiles",
+    "address": "0x595dd0",
+    "size": 53,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "branch_indirect",
+    "address": "0x595e10",
     "size": 22,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_EmitInstructionAndCreateBlock",
-    "baseline_address": "0x004a2380",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_EmitConditionalBranch",
-    "address": "0x00595e30",
+    "name": "branch_decrement_always",
+    "address": "0x595e30",
     "size": 83,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_EmitConditionalBranch",
-    "baseline_address": "0x004a23a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_EmitBranch",
-    "address": "0x00595e90",
+    "name": "branch_always",
+    "address": "0x595e90",
     "size": 39,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_EmitBranch",
-    "baseline_address": "0x004a23f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_EmitConditionBranch",
-    "address": "0x00595ec0",
+    "name": "branch_conditional",
+    "address": "0x595ec0",
     "size": 181,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_EmitConditionBranch",
-    "baseline_address": "0x004a2420",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_ResolveLabel",
-    "address": "0x00595f80",
+    "name": "branch_label",
+    "address": "0x595f80",
     "size": 51,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_ResolveLabel",
-    "baseline_address": "0x004a24e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcsetlinkbit",
+    "address": "0x595fc0",
+    "size": 207,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcsetsideeffects",
+    "address": "0x596090",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005960b0",
+    "address": "0x5960b0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcsetrecordbit",
+    "address": "0x5960e0",
+    "size": 403,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00596280",
+    "address": "0x596280",
+    "size": 370,
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "identity_evidence": "Windows PCodeUtilities.c assertion cluster, native helper/caller roles and ordinary Mac symbols; no explicit Mac SO membership.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG and bounded assertion cluster",
       "unresolved_indirect_flow": false
     }
   },

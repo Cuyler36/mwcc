@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 221 source files build, 1,292 candidate functions are
-mapped, and 515 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 222 source files build, 1,322 candidate functions are
+mapped, and 538 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -28,6 +28,11 @@ Backend Operands has 36 bounded Windows functions reconstructed and 13 exact
 matches. Its private types preserve GC3's native operand layout and calling
 conventions. Eleven members still have unresolved switch relocations; those
 remain nonmatching, with the other code generation differences recorded per body.
+
+PCodeUtilities has 37 reconstructed native members and 24 exact matches. Whole-TU
+objdiff reports 91.89% code similarity; all 444 bytes of rodata and 20 bytes of
+data match, including relocations. Operands calls now use the recovered canonical
+utility names. Generic PCode emitters remain assigned separately.
 
 Backend PPCError.c has four retained Windows diagnostic entry points exact in
 objdiff, including its filename data and PE relocations. Their canonical names

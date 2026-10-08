@@ -37,24 +37,24 @@ UInt32 one_point_zero[2]={0x3ff00000,0};
 extern void CError_FATAL(const char *, int);
 extern void CABI_ReverseBitField(TypeBitfield *);
 extern UInt8 Type_IsUnsigned(Type *);
-extern void *PCodeUtilities_EmitInstruction(SInt16, ...);
-extern void *PCodeUtilities_MakeInstruction(SInt16, ...);
+extern void *emitpcode(SInt16, ...);
+extern void *makepcode(SInt16, ...);
 extern void PCode_InsertAfter(void *, void *);
 extern void PCode_InsertBefore(void *, void *);
 extern void *GetEnodeInfo(ENode *);
 extern UInt8 CParserIsVolatileExpr(ENode *), CParserIsConstExpr(ENode *);
 extern void memclrw(void *, int);
 extern void *CodeGen_AllocateTemporaryObject(Type *);
-extern void fn_00595890(SInt16,SInt16,void *,SInt16);
-extern void fn_00595b90(void *,int,void *);
-extern void fn_00594d60(Type *,SInt16,SInt16,void *,SInt32);
-extern void fn_00595370(Type *,SInt16,SInt16,void *,SInt32);
-extern void fn_00594bf0(SInt16,SInt16,void *,SInt32);
-extern void fn_00594bd0(SInt16,SInt16,SInt16);
-extern void fn_00594c20(Type *,SInt16,SInt16,SInt16);
-extern void fn_00594f90(Type *,SInt16,SInt16,void *,SInt32);
-extern void fn_00594df0(Type *,SInt16,SInt16,SInt16);
-extern void fn_00582850(UInt64);
+extern void add_immediate(SInt16,SInt16,void *,SInt16);
+extern void branch_subroutine(void *,int,void *);
+extern void store_fpr(Type *,SInt16,SInt16,void *,SInt32);
+extern void load_gpr(Type *,SInt16,SInt16,void *,SInt32);
+extern void store_vr(SInt16,SInt16,void *,SInt32);
+extern void store_vr_x(SInt16,SInt16,SInt16);
+extern void store_fpr_x(Type *,SInt16,SInt16,SInt16);
+extern void store_gpr(Type *,SInt16,SInt16,void *,SInt32);
+extern void store_gpr_x(Type *,SInt16,SInt16,SInt16);
+extern void setpcodeflags(UInt64);
 extern void PPCError_FatalError(int);
 extern signed char fn_00579560(Type *);
 void coerce_to_addressable_before(void *,Operand *,SInt16);
@@ -67,11 +67,11 @@ void load_address(SInt16 reg, Operand *operand)
     case 9:
         if (operand->displacement == 0 && operand->object == 0) {
             if (reg != operand->reg)
-                PCodeUtilities_EmitInstruction(0x8b, reg, operand->reg);
-        } else fn_00595890(reg, operand->reg, operand->object, (SInt16)operand->displacement);
+                emitpcode(0x8b, reg, operand->reg);
+        } else add_immediate(reg, operand->reg, operand->object, (SInt16)operand->displacement);
         break;
     case 10:
-        PCodeUtilities_EmitInstruction(0x3c,reg,operand->reg,operand->secondary_reg);
+        emitpcode(0x3c,reg,operand->reg,operand->secondary_reg);
         break;
     default: CError_FATAL("Operands.c",0x953);
     }
@@ -83,7 +83,7 @@ void insert_bitfield(SInt16 reg, Operand *operand, TypeBitfield *record)
     if (nativeByteOrder) { copy=*record; record=&copy; CABI_ReverseBitField(record); }
     shift = 32 - record->bitfieldtype->size * 8 + record->offset;
     end = shift + width;
-    PCodeUtilities_EmitInstruction(0x69,operand->reg,reg,32-end,shift,end-1);
+    emitpcode(0x69,operand->reg,reg,32-end,shift,end-1);
 }
 void extract_bitfield(Operand *operand, TypeBitfield *record, SInt16 reg, Operand *result)
 {
@@ -93,23 +93,23 @@ void extract_bitfield(Operand *operand, TypeBitfield *record, SInt16 reg, Operan
     if (nativeByteOrder) { copy=*record; record=&copy; CABI_ReverseBitField(record); }
     shift=32-record->bitfieldtype->size*8+record->offset;
     if (Type_IsUnsigned(record->bitfieldtype))
-        PCodeUtilities_EmitInstruction(0x67,resultReg,operand->reg,(shift+width)&31,32-width,31);
+        emitpcode(0x67,resultReg,operand->reg,(shift+width)&31,32-width,31);
     else if (shift==0)
-        PCodeUtilities_EmitInstruction(0x6c,resultReg,operand->reg,32-width);
+        emitpcode(0x6c,resultReg,operand->reg,32-width);
     else {
         temp=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x67,temp,operand->reg,shift&31,0,width);
-        PCodeUtilities_EmitInstruction(0x6c,resultReg,temp,32-width);
+        emitpcode(0x67,temp,operand->reg,shift&31,0,width);
+        emitpcode(0x6c,resultReg,temp,32-width);
     }
     result->kind=0; result->reg=resultReg;
 }
 void convert_floating_to_unsigned(Operand *op, SInt16 unused)
 {
     int sourceReg=op->reg;
-    if(sourceReg!=1) PCodeUtilities_EmitInstruction(0x9e,1,sourceReg);
-    fn_00595b90(floating_unsigned_helper,0,data_006ad568);
+    if(sourceReg!=1) emitpcode(0x9e,1,sourceReg);
+    branch_subroutine(floating_unsigned_helper,0,data_006ad568);
     op->kind=0; {int reg=gUsedVirtualRegistersGPR++;op->reg=reg;}
-    PCodeUtilities_EmitInstruction(0x8b,op->reg,3);
+    emitpcode(0x8b,op->reg,3);
 }
 void convert_floating_to_integer(Operand *op, SInt16 requested)
 {
@@ -119,18 +119,18 @@ void convert_floating_to_integer(Operand *op, SInt16 requested)
     memclrw(&local,sizeof(local)); local.reg=-1; local.regHi=-1; local.kind=8; local.object=obj;
     coerce_to_addressable_before(0,&local,-1);
     freg=gUsedVirtualRegistersFPR++;
-    PCodeUtilities_EmitInstruction(0xb7,freg,op->reg);
-    fn_00594d60(&stdouble,(SInt16)freg,local.reg,local.object,0);
+    emitpcode(0xb7,freg,op->reg);
+    store_fpr(&stdouble,(SInt16)freg,local.reg,local.object,0);
     reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-    fn_00595370(&stsignedint,reg,local.reg,local.object,low_word_offset);
+    load_gpr(&stsignedint,reg,local.reg,local.object,low_word_offset);
     op->kind=0;op->reg=reg;
 }
 void store_v(SInt16 reg,Operand *op,Type *unused)
 {
     coerce_to_addressable_before(0,op,-1);
     switch(op->kind) {
-    case 9: fn_00594bf0(reg,op->reg,op->object,op->displacement); fn_00582850(op->flags);break;
-    case 10: fn_00594bd0(reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+    case 9: store_vr(reg,op->reg,op->object,op->displacement); setpcodeflags(op->flags);break;
+    case 10: store_vr_x(reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x5f4);
     }
 }
@@ -139,8 +139,8 @@ void store_fp(SInt16 reg,Operand *op,Type *type)
     if(operandsDebug && type->type==2 && type->integral<0x17) PPCError_FatalError(0x21);
     coerce_to_addressable_before(0,op,-1);
     switch(op->kind) {
-    case 9:fn_00594d60(type,reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
-    case 10:fn_00594c20(type,reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+    case 9:store_fpr(type,reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
+    case 10:store_fpr_x(type,reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x5dc);
     }
 }
@@ -153,15 +153,15 @@ void store_pair(SInt16 reg,SInt16 regHi,Operand *op,Type *type)
     coerce_to_addressable_before(0,op,-1);
     switch(op->kind) {
     case 9:
-        fn_00594f90(&stsignedint,reg,op->reg,op->object,op->displacement+low_word_offset);
-        fn_00582850(op->flags);
-        fn_00594f90(&stsignedint,regHi,op->reg,op->object,op->displacement+high_word_offset);
-        fn_00582850(op->flags);break;
+        store_gpr(&stsignedint,reg,op->reg,op->object,op->displacement+low_word_offset);
+        setpcodeflags(op->flags);
+        store_gpr(&stsignedint,regHi,op->reg,op->object,op->displacement+high_word_offset);
+        setpcodeflags(op->flags);break;
     case 10:
         temp=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x3c,(SInt16)temp,op->reg,op->secondary_reg);
-        fn_00594f90(&stsignedint,reg,(SInt16)temp,0,low_word_offset);fn_00582850(op->flags);
-        fn_00594f90(&stsignedint,regHi,(SInt16)temp,0,high_word_offset);fn_00582850(op->flags);break;
+        emitpcode(0x3c,(SInt16)temp,op->reg,op->secondary_reg);
+        store_gpr(&stsignedint,reg,(SInt16)temp,0,low_word_offset);setpcodeflags(op->flags);
+        store_gpr(&stsignedint,regHi,(SInt16)temp,0,high_word_offset);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x5c1);
     }
 }
@@ -177,10 +177,10 @@ void store(SInt16 reg,Operand *op,Type *type)
     switch(op->kind) {
     case 9:
         if(!scalar_store_type(type)) CError_FATAL("Operands.c",0x593);
-        fn_00594f90(type,reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
+        store_gpr(type,reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
     case 10:
         if(!scalar_store_type(type)) CError_FATAL("Operands.c",0x599);
-        fn_00594df0(type,reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+        store_gpr_x(type,reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x59e);
     }
 }
@@ -191,8 +191,8 @@ void fn_00590c30(SInt16 reg,Operand *op,Type *type)
     case 3:CError_FATAL("Operands.c",0x56a);break;
     case 4:
         switch(op->kind) {
-        case 9:fn_00594d60(type,reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
-        case 10:fn_00594c20(type,reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+        case 9:store_fpr(type,reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
+        case 10:store_fpr_x(type,reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
         default:CError_FATAL("Operands.c",0x57a);
         }break;
     default:CError_FATAL("Operands.c",0x582);
@@ -235,54 +235,54 @@ void set_op_flags(Operand *op,ENode *e)
 void fn_00592c30(int reg,SInt32 value)
 {
     int base=reg;
-    if(value==(SInt16)value) PCodeUtilities_EmitInstruction(0x89,(SInt16)reg,value);
+    if(value==(SInt16)value) emitpcode(0x89,(SInt16)reg,value);
     else {
         if(optimization_level>1 && (SInt16)value!=0) base=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,(SInt16)base,0,(SInt16)(value>>16));
-        if((SInt16)value!=0) PCodeUtilities_EmitInstruction(0x58,(SInt16)reg,(SInt16)base,(UInt16)value);
+        emitpcode(0x8a,(SInt16)base,0,(SInt16)(value>>16));
+        if((SInt16)value!=0) emitpcode(0x58,(SInt16)reg,(SInt16)base,(UInt16)value);
     }
 }
 void insert_add_immediate_after(void *pcode,int reg,SInt16 base,SInt32 value)
 {
     void *first;int temp=reg;
-    if(value==(SInt16)value) PCode_InsertAfter(pcode,PCodeUtilities_MakeInstruction(0x3f,(SInt16)reg,(SInt16)base,0,value));
+    if(value==(SInt16)value) PCode_InsertAfter(pcode,makepcode(0x3f,(SInt16)reg,(SInt16)base,0,value));
     else {
         if(optimization_level>1 && (SInt16)value!=0) temp=gUsedVirtualRegistersGPR++;
-        first=PCodeUtilities_MakeInstruction(0x42,(SInt16)temp,base,0,(SInt16)((value>>16)+((value>>15)&1)));
+        first=makepcode(0x42,(SInt16)temp,base,0,(SInt16)((value>>16)+((value>>15)&1)));
         PCode_InsertAfter(pcode,first);
-        if((SInt16)value!=0) PCode_InsertAfter(first,PCodeUtilities_MakeInstruction(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
+        if((SInt16)value!=0) PCode_InsertAfter(first,makepcode(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
     }
 }
 void insert_load_immediate_before(void *pcode,int reg,SInt32 value)
 {
     void *first;int temp=reg;
-    if(value==(SInt16)value) PCode_InsertBefore(pcode,PCodeUtilities_MakeInstruction(0x89,(SInt16)reg,value));
+    if(value==(SInt16)value) PCode_InsertBefore(pcode,makepcode(0x89,(SInt16)reg,value));
     else {
         if(optimization_level>1 && (SInt16)value!=0) temp=gUsedVirtualRegistersGPR++;
-        first=PCodeUtilities_MakeInstruction(0x8a,(SInt16)temp,0,(SInt16)((value>>16)+((value>>15)&1)));
+        first=makepcode(0x8a,(SInt16)temp,0,(SInt16)((value>>16)+((value>>15)&1)));
         PCode_InsertBefore(pcode,first);
-        if((SInt16)value!=0) PCode_InsertAfter(first,PCodeUtilities_MakeInstruction(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
+        if((SInt16)value!=0) PCode_InsertAfter(first,makepcode(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
     }
 }
 void insert_load_immediate_after(void *pcode,int reg,SInt32 value)
 {
     void *first;int temp=reg;
-    if(value==(SInt16)value) PCode_InsertAfter(pcode,PCodeUtilities_MakeInstruction(0x89,(SInt16)reg,value));
+    if(value==(SInt16)value) PCode_InsertAfter(pcode,makepcode(0x89,(SInt16)reg,value));
     else {
         if(optimization_level>1 && (SInt16)value!=0) temp=gUsedVirtualRegistersGPR++;
-        first=PCodeUtilities_MakeInstruction(0x8a,(SInt16)temp,0,(SInt16)((value>>16)+((value>>15)&1)));
+        first=makepcode(0x8a,(SInt16)temp,0,(SInt16)((value>>16)+((value>>15)&1)));
         PCode_InsertAfter(pcode,first);
-        if((SInt16)value!=0) PCode_InsertAfter(first,PCodeUtilities_MakeInstruction(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
+        if((SInt16)value!=0) PCode_InsertAfter(first,makepcode(0x3f,(SInt16)reg,(SInt16)temp,0,(SInt16)value));
     }
 }
 void load_immediate(int reg,SInt32 value)
 {
     int base=reg;
-    if(value==(SInt16)value) PCodeUtilities_EmitInstruction(0x89,(SInt16)reg,value);
+    if(value==(SInt16)value) emitpcode(0x89,(SInt16)reg,value);
     else {
         if(optimization_level>1 && (SInt16)value!=0) base=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
-        if((SInt16)value!=0) PCodeUtilities_EmitInstruction(0x3f,(SInt16)reg,(SInt16)base,0,(SInt16)value);
+        emitpcode(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
+        if((SInt16)value!=0) emitpcode(0x3f,(SInt16)reg,(SInt16)base,0,(SInt16)value);
     }
 }
 
@@ -294,10 +294,10 @@ UInt32 int_to_float_cc[2]={0x43300000,0x80000000};
 UInt32 uns_to_float_cc[2]={0x43300000,0};
 extern void *fn_0046b9c0(Type *);
 extern void *fn_00581920(Type *,void *);
-extern void fn_00595050(SInt16,SInt16,void *,SInt32);
-extern void fn_00595030(SInt16,SInt16,SInt16);
-extern void fn_005951c0(Type *,SInt16,SInt16,void *,SInt32);
-extern void fn_00595080(Type *,SInt16,SInt16,SInt16);
+extern void load_vr(SInt16,SInt16,void *,SInt32);
+extern void load_vr_x(SInt16,SInt16,SInt16);
+extern void load_fpr(Type *,SInt16,SInt16,void *,SInt32);
+extern void load_fpr_x(Type *,SInt16,SInt16,SInt16);
 void indirect(Operand *,ENode *);
 void Coerce_to_fp_register(Operand *,Type *,SInt16);
 void load_floating_constant(SInt16 reg,Type *type,void *value)
@@ -319,14 +319,14 @@ void fn_00590230(int count)
         memclrw(&op,sizeof(op));op.reg=-1;op.regHi=-1;op.kind=8;op.object=object;
         coerce_to_addressable_before(0,&op,-1);
         reg=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,reg,0,0x4330);
-        fn_00594f90(&stsignedint,(SInt16)reg,op.reg,op.object,high_word_offset);
+        emitpcode(0x8a,reg,0,0x4330);
+        store_gpr(&stsignedint,(SInt16)reg,op.reg,op.object,high_word_offset);
         object=fn_0046b9c0(&stdouble);conversion_slots[1]=object;
         memclrw(&op,sizeof(op));op.reg=-1;op.regHi=-1;op.kind=8;op.object=object;
         coerce_to_addressable_before(0,&op,-1);
         reg=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,reg,0,0x4330);
-        fn_00594f90(&stsignedint,(SInt16)reg,op.reg,op.object,high_word_offset);
+        emitpcode(0x8a,reg,0,0x4330);
+        store_gpr(&stsignedint,(SInt16)reg,op.reg,op.object,high_word_offset);
     }
 }
 void convert_unsigned_to_floating(Operand *op,char subtract,SInt16 requested)
@@ -341,16 +341,16 @@ void convert_unsigned_to_floating(Operand *op,char subtract,SInt16 requested)
     constant[0]=uns_to_float_cc[0];constant[1]=uns_to_float_cc[1];
     constantReg=gUsedVirtualRegistersFPR++;
     load_floating_constant((SInt16)constantReg,&stdouble,constant);
-    fn_00594f90(&stsignedint,op->reg,local.reg,local.object,low_word_offset);
+    store_gpr(&stsignedint,op->reg,local.reg,local.object,low_word_offset);
     if(!conversion_slots_enabled) {
         temp=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,temp,0,0x4330);
-        fn_00594f90(&stsignedint,(SInt16)temp,local.reg,local.object,high_word_offset);
+        emitpcode(0x8a,temp,0,0x4330);
+        store_gpr(&stsignedint,(SInt16)temp,local.reg,local.object,high_word_offset);
     }
     loadReg=gUsedVirtualRegistersFPR++;
-    fn_005951c0(&stdouble,(SInt16)loadReg,local.reg,local.object,0);
+    load_fpr(&stdouble,(SInt16)loadReg,local.reg,local.object,0);
     resultReg=requested!=-1?requested:gUsedVirtualRegistersFPR++;
-    PCodeUtilities_EmitInstruction((SInt16)(subtract?0xa5:0xa4),resultReg,loadReg,constantReg);
+    emitpcode((SInt16)(subtract?0xa5:0xa4),resultReg,loadReg,constantReg);
     op->kind=5;op->reg=resultReg;
 }
 void convert_integer_to_floating(Operand *op,char subtract,SInt16 requested)
@@ -366,17 +366,17 @@ void convert_integer_to_floating(Operand *op,char subtract,SInt16 requested)
     constantReg=gUsedVirtualRegistersFPR++;
     load_floating_constant((SInt16)constantReg,&stdouble,constant);
     temp=gUsedVirtualRegistersGPR++;
-    PCodeUtilities_EmitInstruction(0x5b,temp,op->reg,0x8000);
-    fn_00594f90(&stsignedint,(SInt16)temp,local.reg,local.object,low_word_offset);
+    emitpcode(0x5b,temp,op->reg,0x8000);
+    store_gpr(&stsignedint,(SInt16)temp,local.reg,local.object,low_word_offset);
     if(!conversion_slots_enabled) {
         temp=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8a,temp,0,0x4330);
-        fn_00594f90(&stsignedint,(SInt16)temp,local.reg,local.object,high_word_offset);
+        emitpcode(0x8a,temp,0,0x4330);
+        store_gpr(&stsignedint,(SInt16)temp,local.reg,local.object,high_word_offset);
     }
     loadReg=gUsedVirtualRegistersFPR++;
-    fn_005951c0(&stdouble,(SInt16)loadReg,local.reg,local.object,0);
+    load_fpr(&stdouble,(SInt16)loadReg,local.reg,local.object,0);
     resultReg=requested!=-1?requested:gUsedVirtualRegistersFPR++;
-    PCodeUtilities_EmitInstruction((SInt16)(subtract?0xa5:0xa4),resultReg,loadReg,constantReg);
+    emitpcode((SInt16)(subtract?0xa5:0xa4),resultReg,loadReg,constantReg);
     op->kind=5;op->reg=resultReg;
 }
 void extendpair(Operand *op,Type *type,SInt16 low,SInt16 high)
@@ -386,10 +386,10 @@ void extendpair(Operand *op,Type *type,SInt16 low,SInt16 high)
     hi=high!=-1?high:gUsedVirtualRegistersGPR++;
     if((SInt16)hi==op->reg) {
         lo=low!=-1?low:gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x8b,(SInt16)lo,op->reg);op->reg=lo;
+        emitpcode(0x8b,(SInt16)lo,op->reg);op->reg=lo;
     }
-    if(Type_IsUnsigned(type)) PCodeUtilities_EmitInstruction(0x89,(SInt16)hi,0);
-    else PCodeUtilities_EmitInstruction(0x6c,(SInt16)hi,op->reg,31);
+    if(Type_IsUnsigned(type)) emitpcode(0x89,(SInt16)hi,0);
+    else emitpcode(0x6c,(SInt16)hi,op->reg,31);
     op->kind=3;op->regHi=hi;
 }
 void Coerce_to_v_register(Operand *op,Type *type,SInt16 requested)
@@ -400,19 +400,19 @@ void Coerce_to_v_register(Operand *op,Type *type,SInt16 requested)
     case 6:reg=(UInt16)op->reg;break;
     case 9:
         reg=requested!=-1?requested:gUsedVirtualRegistersVR++;
-        fn_00595050((SInt16)reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
+        load_vr((SInt16)reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
     case 10:
         reg=requested!=-1?requested:gUsedVirtualRegistersVR++;
-        fn_00595030((SInt16)reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+        load_vr_x((SInt16)reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     case 4:
         reg=requested!=-1?requested:gUsedVirtualRegistersVR++;
         switch(*(signed char *)((UInt8 *)type+16)) {
-        case 4:case 5:case 6:PCodeUtilities_EmitInstruction(0x160,(SInt16)reg,op->immediate);break;
-        case 7:case 8:case 9:case 14:PCodeUtilities_EmitInstruction(0x161,(SInt16)reg,op->immediate);break;
-        case 10:case 11:case 12:case 13:PCodeUtilities_EmitInstruction(0x162,(SInt16)reg,op->immediate);break;
+        case 4:case 5:case 6:emitpcode(0x160,(SInt16)reg,op->immediate);break;
+        case 7:case 8:case 9:case 14:emitpcode(0x161,(SInt16)reg,op->immediate);break;
+        case 10:case 11:case 12:case 13:emitpcode(0x162,(SInt16)reg,op->immediate);break;
         default:CError_FATAL("Operands.c",0x53c);
         }
-        op->kind=6;op->reg=reg;fn_00582850(op->flags);break;
+        op->kind=6;op->reg=reg;setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x546);
     }
     op->kind=6;op->reg=reg;
@@ -426,10 +426,10 @@ void Coerce_to_fp_register(Operand *op,Type *type,SInt16 requested)
     case 5:reg=(UInt16)op->reg;break;
     case 9:
         reg=requested!=-1?requested:gUsedVirtualRegistersFPR++;
-        fn_005951c0(type,(SInt16)reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
+        load_fpr(type,(SInt16)reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
     case 10:
         reg=requested!=-1?requested:gUsedVirtualRegistersFPR++;
-        fn_00595080(type,(SInt16)reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+        load_fpr_x(type,(SInt16)reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x4fe);
     }
     op->kind=5;op->reg=reg;
@@ -445,14 +445,14 @@ typedef struct AddressCache {
 AddressCache *data_00710390;
 extern void *data_007101cc;
 extern void *lalloc(int);
-extern void *fn_00595770(SInt16,SInt16,void *,SInt16,char);
-extern void *fn_00595830(SInt16,SInt16,void *,SInt16,char);
+extern void *op_absolute_ha(SInt16,SInt16,void *,SInt16,char);
+extern void *add_immediate_lo(SInt16,SInt16,void *,SInt16,char);
 extern UInt8 fn_00587380(void *);
 extern SInt16 fn_00587230(void *);
 extern UInt8 fn_00581be0(void *);
 extern int fn_005ccff0(void *), fn_004c2b40(void *);
 extern UInt8 fn_004c3f60(void *);
-extern void fn_005958c0(void *,SInt16,SInt16,void *,SInt16);
+extern void add_immediate_before(void *,SInt16,SInt16,void *,SInt16);
 extern void fn_00582aa0(void *,void *);
 int fn_005924d0(void *before,SInt16 base,void *object)
 {
@@ -462,7 +462,7 @@ int fn_005924d0(void *before,SInt16 base,void *object)
         if(entry->object==object && *(void **)((UInt8 *)entry->load+8)==data_007101cc) {
             if(base!=entry->reg) CError_FATAL("Operands.c",0x1e7);
             if(!entry->derived_reg) {int reg=gUsedVirtualRegistersGPR++;entry->derived_reg=reg;}
-            entry->derived_load=fn_00595830((SInt16)entry->derived_reg,(SInt16)entry->reg,object,0,emit);
+            entry->derived_load=add_immediate_lo((SInt16)entry->derived_reg,(SInt16)entry->reg,object,0,emit);
             if(!emit) PCode_InsertBefore(before,entry->derived_load);
             return entry->derived_reg;
         }
@@ -477,7 +477,7 @@ int fn_00592590(void *before,void *object)
     void *load;
     while(entry) {
         if(entry->object==object && *(void **)((UInt8 *)entry->load+8)==data_007101cc) {
-            entry->load=fn_00595770((SInt16)entry->reg,0,object,0,emit);
+            entry->load=op_absolute_ha((SInt16)entry->reg,0,object,0,emit);
             if(!emit) PCode_InsertBefore(before,entry->load);
             return entry->reg;
         }
@@ -485,7 +485,7 @@ int fn_00592590(void *before,void *object)
     }
     entry=lalloc(sizeof(*entry));memclrw(entry,sizeof(*entry));
     entry->next=data_00710390;entry->object=object;{int reg=gUsedVirtualRegistersGPR++;entry->reg=reg;}
-    load=fn_00595770((SInt16)entry->reg,0,object,0,emit);
+    load=op_absolute_ha((SInt16)entry->reg,0,object,0,emit);
     if(!emit) PCode_InsertBefore(before,load);
     entry->load=load;data_00710390=entry;
     return entry->reg;
@@ -503,7 +503,7 @@ void coerce_to_addressable_before(void *before,Operand *op,SInt16 unused)
         if(*((UInt8 *)object+2)==1) {
             if(!fn_00587380(object)) {
                 frame=gUsedVirtualRegistersGPR++;
-                pc=fn_00595770((SInt16)frame,fn_00587230(object),object,0,emit);
+                pc=op_absolute_ha((SInt16)frame,fn_00587230(object),object,0,emit);
                 if(!emit) PCode_InsertBefore(before,pc);
                 op->kind=1;op->reg=frame;op->object=object;
             }else {op->kind=1;op->reg=fn_00587230(object);op->object=object;}
@@ -512,7 +512,7 @@ void coerce_to_addressable_before(void *before,Operand *op,SInt16 unused)
             if(address==(SInt16)address) {op->reg=0;op->displacement=address;}
             else {
                 op->reg=gUsedVirtualRegistersGPR++;
-                pc=PCodeUtilities_MakeInstruction(0x8a,op->reg,0,(SInt16)((address>>16)+((address>>15)&1)));
+                pc=makepcode(0x8a,op->reg,0,(SInt16)((address>>16)+((address>>15)&1)));
                 if(emit) fn_00582aa0(data_007101cc,pc);else PCode_InsertBefore(before,pc);
                 op->displacement=(SInt16)address;
             }
@@ -526,15 +526,15 @@ void coerce_to_addressable_before(void *before,Operand *op,SInt16 unused)
                     else {
                         addressReg=gUsedVirtualRegistersGPR++;
                         resultReg=gUsedVirtualRegistersGPR++;
-                        pc=fn_00595770((SInt16)addressReg,0,object,0,emit);
+                        pc=op_absolute_ha((SInt16)addressReg,0,object,0,emit);
                         if(!emit) PCode_InsertBefore(before,pc);
-                        pc=fn_00595830((SInt16)resultReg,(SInt16)addressReg,object,0,emit);
+                        pc=add_immediate_lo((SInt16)resultReg,(SInt16)addressReg,object,0,emit);
                         if(!emit) PCode_InsertBefore(before,pc);
                         frame=resultReg;op->object=0;
                     }
                 }else if((SInt16)frame==0) {
                     frame=gUsedVirtualRegistersGPR++;
-                    fn_005958c0(before,(SInt16)frame,0,object,0);op->object=0;
+                    add_immediate_before(before,(SInt16)frame,0,object,0);op->object=0;
                 }
             }
             op->kind=1;op->reg=frame;
@@ -569,22 +569,22 @@ void extendgpr(Operand *op,Type *type,SInt16 requested)
         if(Type_IsUnsigned(type)) {
             if(alreadyExtended || last_matches_rlwinm_or_exts(op,0x67,24,31))return;
             reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x67,reg,op->reg,0,24,31);
+            emitpcode(0x67,reg,op->reg,0,24,31);
         }else {
             reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
             if(last_matches_rlwinm_or_exts(op,0x64,0,0))return;
-            PCodeUtilities_EmitInstruction(0x64,reg,op->reg);
+            emitpcode(0x64,reg,op->reg);
         }break;
     case 2:
         if(alreadyExtended)return;
         if(Type_IsUnsigned(type)) {
             if(last_matches_rlwinm_or_exts(op,0x67,16,31))return;
             reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x67,reg,op->reg,0,16,31);
+            emitpcode(0x67,reg,op->reg,0,16,31);
         }else {
             if(last_matches_rlwinm_or_exts(op,0x65,0,0))return;
             reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x65,reg,op->reg);
+            emitpcode(0x65,reg,op->reg);
         }break;
     case 4:return;
     default:CError_FATAL("Operands.c",0x69a);
@@ -600,28 +600,28 @@ void fn_0058f300(SInt16 low,SInt16 high,Operand *op,TypeBitfield *record)
     if(!(((record->bitfieldtype->type==1 && record->bitfieldtype->integral<0x17)||record->bitfieldtype->type==4)&&record->bitfieldtype->size==8))
         CError_FATAL("Operands.c",0xa0d);
     start=record->offset;end=start+width;
-    if(end<=32) PCodeUtilities_EmitInstruction(0x69,op->regHi,low,32-end,start,end-1);
+    if(end<=32) emitpcode(0x69,op->regHi,low,32-end,start,end-1);
     else if(start<32 && end>32) {
         if(width>32) {
             tail=end-32;shift=32-tail;width-=32;
             if(end==64) {
                 if(shift!=0)CError_FATAL("Operands.c",0xa28);
-                PCodeUtilities_EmitInstruction(0x69,op->regHi,high,0,start,31);
-                PCodeUtilities_EmitInstruction(0x8b,op->reg,low);
+                emitpcode(0x69,op->regHi,high,0,start,31);
+                emitpcode(0x8b,op->reg,low);
             }else {
                 if(shift==0)CError_FATAL("Operands.c",0xa2d);
-                PCodeUtilities_EmitInstruction(0x69,op->regHi,high,32-shift,tail,start+width-1);
-                PCodeUtilities_EmitInstruction(0x69,op->regHi,low,shift,32-shift,31);
-                PCodeUtilities_EmitInstruction(0x69,op->reg,low,shift,0,tail-1);
+                emitpcode(0x69,op->regHi,high,32-shift,tail,start+width-1);
+                emitpcode(0x69,op->regHi,low,shift,32-shift,31);
+                emitpcode(0x69,op->reg,low,shift,0,tail-1);
             }
         }else {
             tail=width-(32-start);shift=32-tail;
-            PCodeUtilities_EmitInstruction(0x69,op->regHi,low,shift,start,31);
-            PCodeUtilities_EmitInstruction(0x69,op->reg,low,shift,0,tail-1);
+            emitpcode(0x69,op->regHi,low,shift,start,31);
+            emitpcode(0x69,op->reg,low,shift,0,tail-1);
         }
     }else {
         start-=32;end=start+width;
-        PCodeUtilities_EmitInstruction(0x69,op->reg,low,32-end,start,end-1);
+        emitpcode(0x69,op->reg,low,32-end,start,end-1);
     }
 }
 void fn_0058f550(Operand *op,TypeBitfield *record,SInt16 low,SInt16 high,Operand *result)
@@ -636,76 +636,76 @@ void fn_0058f550(Operand *op,TypeBitfield *record,SInt16 low,SInt16 high,Operand
     start=record->offset;end=start+width;
     if(end<=32) {
         if(Type_IsUnsigned(record->bitfieldtype)) {
-            PCodeUtilities_EmitInstruction(0x89,hi,0);
-            PCodeUtilities_EmitInstruction(0x67,lo,op->regHi,width&31,32-width,31);
+            emitpcode(0x89,hi,0);
+            emitpcode(0x67,lo,op->regHi,width&31,32-width,31);
         }else {
-            if(start==0)PCodeUtilities_EmitInstruction(0x6c,lo,op->regHi,32-width);
+            if(start==0)emitpcode(0x6c,lo,op->regHi,32-width);
             else {
                 temp=gUsedVirtualRegistersGPR++;
-                PCodeUtilities_EmitInstruction(0x67,temp,op->regHi,start&31,0,width);
-                PCodeUtilities_EmitInstruction(0x6c,lo,temp,32-width);
+                emitpcode(0x67,temp,op->regHi,start&31,0,width);
+                emitpcode(0x6c,lo,temp,32-width);
             }
-            PCodeUtilities_EmitInstruction(0x6c,hi,lo,31);
+            emitpcode(0x6c,hi,lo,31);
         }
     }else if(start<32 && end>32) {
         if(width>32) {
             shift=64-end;tail=width-32;width=32-shift;
             if(end==64) {
                 if(shift!=0)CError_FATAL("Operands.c",0x9c7);
-                if(Type_IsUnsigned(record->bitfieldtype))PCodeUtilities_EmitInstruction(0x67,hi,op->regHi,0,start,31);
+                if(Type_IsUnsigned(record->bitfieldtype))emitpcode(0x67,hi,op->regHi,0,start,31);
                 else {
                     temp=gUsedVirtualRegistersGPR++;
-                    PCodeUtilities_EmitInstruction(0x67,temp,op->regHi,start&31,0,tail);
-                    PCodeUtilities_EmitInstruction(0x6c,hi,temp,32-tail);
+                    emitpcode(0x67,temp,op->regHi,start&31,0,tail);
+                    emitpcode(0x6c,hi,temp,32-tail);
                 }
-                PCodeUtilities_EmitInstruction(0x8b,lo,op->reg);
+                emitpcode(0x8b,lo,op->reg);
             }else {
                 if(shift==0)CError_FATAL("Operands.c",0x9d3);
                 if(Type_IsUnsigned(record->bitfieldtype)) {
                     temp=(start+tail)&31;
-                    PCodeUtilities_EmitInstruction(0x67,hi,op->regHi,temp,32-tail,31);
-                    PCodeUtilities_EmitInstruction(0x67,lo,op->regHi,temp,0,shift);
+                    emitpcode(0x67,hi,op->regHi,temp,32-tail,31);
+                    emitpcode(0x67,lo,op->regHi,temp,0,shift);
                 }else {
                     temp=start&31;
-                    PCodeUtilities_EmitInstruction(0x67,hi,op->regHi,temp,0,tail);
-                    PCodeUtilities_EmitInstruction(0x6c,hi,hi,32-tail);
-                    PCodeUtilities_EmitInstruction(0x67,lo,op->regHi,(start+tail)&31,0,shift);
+                    emitpcode(0x67,hi,op->regHi,temp,0,tail);
+                    emitpcode(0x6c,hi,hi,32-tail);
+                    emitpcode(0x67,lo,op->regHi,(start+tail)&31,0,shift);
                 }
-                PCodeUtilities_EmitInstruction(0x69,lo,op->reg,width&31,shift,31);
+                emitpcode(0x69,lo,op->reg,width&31,shift,31);
             }
         }else {
             shift=32-start;tail=width-shift;
             if(Type_IsUnsigned(record->bitfieldtype)) {
-                PCodeUtilities_EmitInstruction(0x89,hi,0);
-                PCodeUtilities_EmitInstruction(0x67,lo,op->regHi,tail,32-width,31-tail);
-                PCodeUtilities_EmitInstruction(0x69,lo,op->reg,tail,32-tail,31);
+                emitpcode(0x89,hi,0);
+                emitpcode(0x67,lo,op->regHi,tail,32-width,31-tail);
+                emitpcode(0x69,lo,op->reg,tail,32-tail,31);
             }else {
                 temp=gUsedVirtualRegistersGPR++;
-                PCodeUtilities_EmitInstruction(0x67,temp,op->regHi,start&31,0,shift);
-                PCodeUtilities_EmitInstruction(0x6c,lo,temp,32-shift);
-                PCodeUtilities_EmitInstruction(0x6c,hi,lo,31);
+                emitpcode(0x67,temp,op->regHi,start&31,0,shift);
+                emitpcode(0x6c,lo,temp,32-shift);
+                emitpcode(0x6c,hi,lo,31);
             }
         }
     }else {
         shift=start-32;
         if(Type_IsUnsigned(record->bitfieldtype)) {
-            PCodeUtilities_EmitInstruction(0x89,hi,0);
-            PCodeUtilities_EmitInstruction(0x67,lo,op->reg,(shift+width)&31,32-width,31);
+            emitpcode(0x89,hi,0);
+            emitpcode(0x67,lo,op->reg,(shift+width)&31,32-width,31);
         }else {
-            if(start==0)PCodeUtilities_EmitInstruction(0x6c,lo,op->reg,32-width);
+            if(start==0)emitpcode(0x6c,lo,op->reg,32-width);
             else {
                 temp=gUsedVirtualRegistersGPR++;
-                PCodeUtilities_EmitInstruction(0x67,temp,op->reg,shift&31,0,width);
-                PCodeUtilities_EmitInstruction(0x6c,lo,temp,32-width);
+                emitpcode(0x67,temp,op->reg,shift&31,0,width);
+                emitpcode(0x6c,lo,temp,32-width);
             }
-            PCodeUtilities_EmitInstruction(0x6c,hi,lo,31);
+            emitpcode(0x6c,hi,lo,31);
         }
     }
     result->kind=3;result->reg=lo;result->regHi=hi;
 }
 
 extern Type void_ptr;
-extern void fn_00595250(Type *,SInt16,SInt16,SInt16);
+extern void load_gpr_x(Type *,SInt16,SInt16,SInt16);
 void coerce_to_register_pair(Operand *,Type *,SInt16,SInt16);
 void Coerce_to_register(Operand *op,Type *type,SInt16 requested)
 {
@@ -719,26 +719,26 @@ void Coerce_to_register(Operand *op,Type *type,SInt16 requested)
     case 0:case 3:return;
     case 1:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-        fn_00595890((SInt16)reg,op->reg,op->object,(SInt16)op->displacement);break;
+        add_immediate((SInt16)reg,op->reg,op->object,(SInt16)op->displacement);break;
     case 2:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x3c,(SInt16)reg,op->reg,op->secondary_reg);break;
+        emitpcode(0x3c,(SInt16)reg,op->reg,op->secondary_reg);break;
     case 4:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
         value=op->immediate;
-        if(value==(SInt16)value)PCodeUtilities_EmitInstruction(0x89,(SInt16)reg,value);
+        if(value==(SInt16)value)emitpcode(0x89,(SInt16)reg,value);
         else {
             base=reg;
             if(optimization_level>1 && (SInt16)value!=0)base=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
-            if((SInt16)value!=0)PCodeUtilities_EmitInstruction(0x3f,(SInt16)reg,(SInt16)base,0,(SInt16)value);
+            emitpcode(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
+            if((SInt16)value!=0)emitpcode(0x3f,(SInt16)reg,(SInt16)base,0,(SInt16)value);
         }break;
     case 9:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-        fn_00595370(type,(SInt16)reg,op->reg,op->object,op->displacement);fn_00582850(op->flags);break;
+        load_gpr(type,(SInt16)reg,op->reg,op->object,op->displacement);setpcodeflags(op->flags);break;
     case 10:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
-        fn_00595250(type,(SInt16)reg,op->reg,op->secondary_reg);fn_00582850(op->flags);break;
+        load_gpr_x(type,(SInt16)reg,op->reg,op->secondary_reg);setpcodeflags(op->flags);break;
     case 7:
         reg=requested!=-1?requested:gUsedVirtualRegistersGPR++;
         switch(op->secondary_reg) {
@@ -747,8 +747,8 @@ void Coerce_to_register(Operand *op,Type *type,SInt16 requested)
         case 0x15:invert=1;case 0x14:bit=1;break;
         default:CError_FATAL("Operands.c",0x431);
         }
-        PCodeUtilities_EmitInstruction(0x1ed,(SInt16)reg,op->reg,bit);
-        if(invert)PCodeUtilities_EmitInstruction(0x5a,(SInt16)reg,(SInt16)reg,1);
+        emitpcode(0x1ed,(SInt16)reg,op->reg,bit);
+        if(invert)emitpcode(0x5a,(SInt16)reg,(SInt16)reg,1);
         break;
     default:CError_FATAL("Operands.c",0x43a);
     }
@@ -768,7 +768,7 @@ void indirect(Operand *op,ENode *e)
         if(op->immediate==(SInt16)op->immediate) {op->reg=0;op->displacement=op->immediate;}
         else {
             op->reg=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x8a,op->reg,0,(SInt16)((op->immediate>>16)+((op->immediate>>15)&1)));
+            emitpcode(0x8a,op->reg,0,(SInt16)((op->immediate>>16)+((op->immediate>>15)&1)));
             op->displacement=(SInt16)op->immediate;
         }
         op->object=0;op->kind=9;set_op_flags(op,e);break;
@@ -797,20 +797,20 @@ void coerce_to_register_pair(Operand *op,Type *type,SInt16 first,SInt16 second)
             if(first!=op->reg) {
                 if(first==op->regHi) {
                     if(first==second)CError_FATAL("Operands.c",0x46f);
-                    PCodeUtilities_EmitInstruction(0x8b,second,op->regHi);
-                    PCodeUtilities_EmitInstruction(0x8b,first,op->reg);
+                    emitpcode(0x8b,second,op->regHi);
+                    emitpcode(0x8b,first,op->reg);
                 }else {
-                    PCodeUtilities_EmitInstruction(0x8b,first,op->reg);
-                    if(op->regHi!=second)PCodeUtilities_EmitInstruction(0x8b,second,op->regHi);
+                    emitpcode(0x8b,first,op->reg);
+                    if(op->regHi!=second)emitpcode(0x8b,second,op->regHi);
                 }
             }else if(second!=op->regHi) {
                 if(second==op->reg) {
                     if(first==second)CError_FATAL("Operands.c",0x47d);
-                    PCodeUtilities_EmitInstruction(0x8b,first,op->reg);
-                    PCodeUtilities_EmitInstruction(0x8b,second,op->regHi);
+                    emitpcode(0x8b,first,op->reg);
+                    emitpcode(0x8b,second,op->regHi);
                 }else {
-                    PCodeUtilities_EmitInstruction(0x8b,second,op->regHi);
-                    if(op->reg!=first)PCodeUtilities_EmitInstruction(0x8b,first,op->reg);
+                    emitpcode(0x8b,second,op->regHi);
+                    if(op->reg!=first)emitpcode(0x8b,first,op->reg);
                 }
             }
         }
@@ -821,35 +821,35 @@ void coerce_to_register_pair(Operand *op,Type *type,SInt16 first,SInt16 second)
     case 4:
         firstRegister=first!=-1?first:gUsedVirtualRegistersGPR++;
         value=op->immediate;
-        if(value==(SInt16)value)PCodeUtilities_EmitInstruction(0x89,(SInt16)firstRegister,value);
+        if(value==(SInt16)value)emitpcode(0x89,(SInt16)firstRegister,value);
         else {
             base=firstRegister;
             if(optimization_level>1 && (SInt16)value!=0)base=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
-            if((SInt16)value!=0)PCodeUtilities_EmitInstruction(0x3f,(SInt16)firstRegister,(SInt16)base,0,(SInt16)value);
+            emitpcode(0x8a,(SInt16)base,0,(SInt16)((value>>16)+((value>>15)&1)));
+            if((SInt16)value!=0)emitpcode(0x3f,(SInt16)firstRegister,(SInt16)base,0,(SInt16)value);
         }
         secondRegister=second!=-1?second:gUsedVirtualRegistersGPR++;
-        if(Type_IsUnsigned(type) || value>=0)PCodeUtilities_EmitInstruction(0x89,(SInt16)secondRegister,0);
-        else PCodeUtilities_EmitInstruction(0x89,(SInt16)secondRegister,-1);
+        if(Type_IsUnsigned(type) || value>=0)emitpcode(0x89,(SInt16)secondRegister,0);
+        else emitpcode(0x89,(SInt16)secondRegister,-1);
         break;
     case 9:
         firstRegister=first!=-1?first:gUsedVirtualRegistersGPR++;
         secondRegister=second!=-1?second:gUsedVirtualRegistersGPR++;
         if(op->reg==(SInt16)secondRegister) {
             if(op->reg==(SInt16)firstRegister){CError_FATAL("Operands.c",0x4b4);break;}
-            fn_00595370(&stsignedint,(SInt16)firstRegister,op->reg,op->object,op->displacement+low_word_offset);fn_00582850(op->flags);
-            fn_00595370(&stsignedint,(SInt16)secondRegister,op->reg,op->object,op->displacement+high_word_offset);fn_00582850(op->flags);
+            load_gpr(&stsignedint,(SInt16)firstRegister,op->reg,op->object,op->displacement+low_word_offset);setpcodeflags(op->flags);
+            load_gpr(&stsignedint,(SInt16)secondRegister,op->reg,op->object,op->displacement+high_word_offset);setpcodeflags(op->flags);
         }else {
-            fn_00595370(&stsignedint,(SInt16)secondRegister,op->reg,op->object,op->displacement+high_word_offset);fn_00582850(op->flags);
-            fn_00595370(&stsignedint,(SInt16)firstRegister,op->reg,op->object,op->displacement+low_word_offset);fn_00582850(op->flags);
+            load_gpr(&stsignedint,(SInt16)secondRegister,op->reg,op->object,op->displacement+high_word_offset);setpcodeflags(op->flags);
+            load_gpr(&stsignedint,(SInt16)firstRegister,op->reg,op->object,op->displacement+low_word_offset);setpcodeflags(op->flags);
         }break;
     case 10:
         base=gUsedVirtualRegistersGPR++;
         firstRegister=first!=-1?first:gUsedVirtualRegistersGPR++;
         secondRegister=second!=-1?second:gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x3c,base,op->reg,op->secondary_reg);
-        fn_00595370(&stsignedint,(SInt16)secondRegister,(SInt16)base,0,high_word_offset);fn_00582850(op->flags);
-        fn_00595370(&stsignedint,(SInt16)firstRegister,(SInt16)base,0,low_word_offset);fn_00582850(op->flags);break;
+        emitpcode(0x3c,base,op->reg,op->secondary_reg);
+        load_gpr(&stsignedint,(SInt16)secondRegister,(SInt16)base,0,high_word_offset);setpcodeflags(op->flags);
+        load_gpr(&stsignedint,(SInt16)firstRegister,(SInt16)base,0,low_word_offset);setpcodeflags(op->flags);break;
     default:CError_FATAL("Operands.c",0x4cf);
     }
     if((SInt16)secondRegister==-1)CError_FATAL("Operands.c",0x4d3);
@@ -876,23 +876,23 @@ void combine(Operand *left,Operand *right,SInt16 hint,Operand *dest)
         if(left->object==0 && sum==(SInt16)sum)right->displacement+=left->displacement;
         else {
             reg=NEWREG(hint,right->reg);
-            fn_00595890((SInt16)reg,left->reg,left->object,(SInt16)left->displacement);left->reg=reg;
+            add_immediate((SInt16)reg,left->reg,left->object,(SInt16)left->displacement);left->reg=reg;
         }
     case 1:swap=left;left=right;right=swap;
     case 11:
         if(left->reg==stack_base_reg || left->reg==frame_base_reg) {
             dest->kind=2;dest->reg=NEWREG(hint,right->reg);dest->secondary_reg=right->reg;
-            fn_00595890(dest->reg,left->reg,left->object,(SInt16)left->displacement);
+            add_immediate(dest->reg,left->reg,left->object,(SInt16)left->displacement);
         }else if(right->reg==stack_base_reg || right->reg==frame_base_reg) {
             dest->kind=2;dest->reg=NEWREG(hint,left->reg);dest->secondary_reg=left->reg;
-            fn_00595890(dest->reg,right->reg,left->object,(SInt16)left->displacement);
+            add_immediate(dest->reg,right->reg,left->object,(SInt16)left->displacement);
         }else if(left->object) {
             dest->kind=2;dest->reg=gUsedVirtualRegistersGPR++;dest->secondary_reg=right->reg;
-            fn_00595890(dest->reg,left->reg,left->object,(SInt16)left->displacement);
+            add_immediate(dest->reg,left->reg,left->object,(SInt16)left->displacement);
         }else {
             dest->kind=1;dest->reg=gUsedVirtualRegistersGPR++;
             dest->displacement=left->displacement;dest->object=left->object;
-            PCodeUtilities_EmitInstruction(0x3c,dest->reg,left->reg,right->reg);
+            emitpcode(0x3c,dest->reg,left->reg,right->reg);
         }break;
     case 2:swap=left;left=right;right=swap;
     case 22:
@@ -900,30 +900,30 @@ void combine(Operand *left,Operand *right,SInt16 hint,Operand *dest)
         if(!combine_optimization_disabled) pc=*(UInt8 **)((UInt8 *)data_007101cc+0x18);
         if(!combine_optimization_disabled && pc && pc[0x2c]==0 && pc[0x2d]==4 && left->reg==*(SInt16 *)(pc+0x30)) {
             dest->kind=2;dest->reg=left->reg;dest->secondary_reg=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x3c,dest->secondary_reg,right->reg,left->secondary_reg);
+            emitpcode(0x3c,dest->secondary_reg,right->reg,left->secondary_reg);
         }else if(!combine_optimization_disabled && pc && pc[0x2c]==0 && pc[0x2d]==4 && left->secondary_reg==*(SInt16 *)(pc+0x30)) {
             dest->kind=2;dest->reg=left->secondary_reg;dest->secondary_reg=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x3c,dest->secondary_reg,right->reg,left->reg);
+            emitpcode(0x3c,dest->secondary_reg,right->reg,left->reg);
         }else {
             dest->kind=2;dest->reg=right->reg;dest->secondary_reg=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x3c,dest->secondary_reg,left->reg,left->secondary_reg);
+            emitpcode(0x3c,dest->secondary_reg,left->reg,left->secondary_reg);
         }break;
     case 13:swap=left;left=right;right=swap;
     case 23:
         if(right->object) {
             dest->kind=2;dest->reg=NEWREG(hint,right->reg);dest->secondary_reg=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x3c,dest->reg,left->reg,left->secondary_reg);
-            fn_00595890(dest->secondary_reg,right->reg,right->object,(SInt16)right->displacement);
+            emitpcode(0x3c,dest->reg,left->reg,left->secondary_reg);
+            add_immediate(dest->secondary_reg,right->reg,right->object,(SInt16)right->displacement);
         }else {
             dest->kind=1;dest->displacement=right->displacement;dest->object=right->object;dest->reg=NEWREG(hint,right->reg);
             temp=gUsedVirtualRegistersGPR++;
-            PCodeUtilities_EmitInstruction(0x3c,temp,left->reg,left->secondary_reg);
-            PCodeUtilities_EmitInstruction(0x3c,dest->reg,temp,right->reg);
+            emitpcode(0x3c,temp,left->reg,left->secondary_reg);
+            emitpcode(0x3c,dest->reg,temp,right->reg);
         }break;
     case 24:
         dest->kind=2;dest->reg=gUsedVirtualRegistersGPR++;dest->secondary_reg=gUsedVirtualRegistersGPR++;
-        PCodeUtilities_EmitInstruction(0x3c,dest->reg,left->reg,left->secondary_reg);
-        PCodeUtilities_EmitInstruction(0x3c,dest->secondary_reg,right->reg,right->secondary_reg);break;
+        emitpcode(0x3c,dest->reg,left->reg,left->secondary_reg);
+        emitpcode(0x3c,dest->secondary_reg,right->reg,right->secondary_reg);break;
     case 15:swap=left;left=right;right=swap;
     case 45:
         if(right->object==0) {
@@ -932,16 +932,16 @@ void combine(Operand *left,Operand *right,SInt16 hint,Operand *dest)
             if(sum==(SInt16)sum)dest->displacement+=value;
             else {
                 dest->reg=NEWREG0(hint);high=(value>>16)+((value>>15)&1);
-                if(high==0)PCodeUtilities_EmitInstruction(0x3f,dest->reg,right->reg,0,(SInt16)value);
+                if(high==0)emitpcode(0x3f,dest->reg,right->reg,0,(SInt16)value);
                 else {
                     sum=dest->displacement+(SInt16)value;
                     if(sum==(SInt16)sum) {
-                        PCodeUtilities_EmitInstruction(0x42,dest->reg,right->reg,0,high);
+                        emitpcode(0x42,dest->reg,right->reg,0,high);
                         dest->displacement+=(SInt16)value;
                     }else {
                         temp=gUsedVirtualRegistersGPR++;
-                        PCodeUtilities_EmitInstruction(0x42,temp,right->reg,0,high);
-                        PCodeUtilities_EmitInstruction(0x3f,dest->reg,temp,0,(SInt16)value);
+                        emitpcode(0x42,temp,right->reg,0,high);
+                        emitpcode(0x3f,dest->reg,temp,0,(SInt16)value);
                     }
                 }
             }break;
@@ -955,7 +955,7 @@ void combine(Operand *left,Operand *right,SInt16 hint,Operand *dest)
         else dest->reg=-1;
         if(dest->reg==-1) {
             dest->reg=gUsedVirtualRegistersGPR++;
-            fn_00595890(dest->reg,right->reg,right->object,(SInt16)right->displacement);
+            add_immediate(dest->reg,right->reg,right->object,(SInt16)right->displacement);
         }
         right->kind=0;right->reg=dest->reg;
         swap=left;left=right;right=swap;
@@ -966,23 +966,23 @@ void combine(Operand *left,Operand *right,SInt16 hint,Operand *dest)
         if(left->immediate==(SInt16)left->immediate)dest->reg=right->reg;
         else {
             dest->reg=NEWREG0(hint);high=(left->immediate>>16)+((left->immediate>>15)&1);
-            PCodeUtilities_EmitInstruction(0x42,dest->reg,right->reg,0,high);
+            emitpcode(0x42,dest->reg,right->reg,0,high);
         }break;
     case 26:swap=left;left=right;right=swap;
     case 46:
         value=left->immediate;
         if(value==(SInt16)value) {
             dest->kind=1;dest->displacement=(SInt16)value;dest->reg=NEWREG(hint,right->reg);
-            PCodeUtilities_EmitInstruction(0x3c,dest->reg,right->reg,right->secondary_reg);
+            emitpcode(0x3c,dest->reg,right->reg,right->secondary_reg);
         }else {
             dest->kind=2;dest->reg=right->reg;dest->secondary_reg=NEWREG(hint,right->reg);
             high=(value>>16)+((value>>15)&1);
-            if(high==0)PCodeUtilities_EmitInstruction(0x3f,dest->secondary_reg,right->secondary_reg,0,(SInt16)value);
-            else if((SInt16)value==0)PCodeUtilities_EmitInstruction(0x42,dest->secondary_reg,right->secondary_reg,0,high);
+            if(high==0)emitpcode(0x3f,dest->secondary_reg,right->secondary_reg,0,(SInt16)value);
+            else if((SInt16)value==0)emitpcode(0x42,dest->secondary_reg,right->secondary_reg,0,high);
             else {
                 temp=gUsedVirtualRegistersGPR++;
-                PCodeUtilities_EmitInstruction(0x42,temp,right->secondary_reg,0,high);
-                PCodeUtilities_EmitInstruction(0x3f,dest->secondary_reg,temp,0,(SInt16)value);
+                emitpcode(0x42,temp,right->secondary_reg,0,high);
+                emitpcode(0x3f,dest->secondary_reg,temp,0,(SInt16)value);
             }
         }break;
     case 48:dest->kind=4;dest->immediate=left->immediate+right->immediate;break;

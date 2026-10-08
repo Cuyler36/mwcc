@@ -159,6 +159,7 @@ void emit_opcode_with_base_offset(short opcode, short dest_reg, short base_reg, 
 
 /* 0x55ebf8, file name string */
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCodeUtilities_MakeInstructionWithObject(short opcode, short operand, Object *object, short flags,
                                                            char appendToBlock)
 {
@@ -180,6 +181,7 @@ PCodeInstruction *PCodeUtilities_MakeInstructionWithObject(short opcode, short o
     }
     return result;
 }
+#endif
 #define CE_ASSERT(c, s)                                                                                                \
     do {                                                                                                               \
         if (c)                                                                                                         \
@@ -349,12 +351,15 @@ PCodeOperand *PCodeUtilities_004a2290(PCodeOperand *operand, UInt32 gprMask, UIn
     operand++;
     return operand;
 }
+#if VERSION != VERSION_GC_3_0A5_2
 void PCodeUtilities_EmitInstructionAndCreateBlock(Object *object)
 {
     PCodeUtilities_EmitInstruction(18, object, 0);
     PCode_CreateBlock();
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int PCodeUtilities_EmitConditionalBranch(unsigned int opcode, PCodeLabel *target)
 {
     PCodeLabel *fallthrough = PCode_NewLabel();
@@ -364,14 +369,18 @@ unsigned int PCodeUtilities_EmitConditionalBranch(unsigned int opcode, PCodeLabe
     PCode_CreateBlock();
     PCode_ResolveLabel(gCurrentBlock, fallthrough);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCodeUtilities_EmitBranch(PCodeLabel *target)
 {
     PCodeUtilities_EmitInstruction(0U, target);
     PCode_AddSuccessor(gCurrentBlock, target);
     PCode_CreateBlock();
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCodeUtilities_CreateInstructionWithObject(short operand1, short operand2, Object *operand3,
                                                              short operand4, unsigned char recordInstruction)
 {
@@ -393,9 +402,11 @@ PCodeInstruction *PCodeUtilities_CreateInstructionWithObject(short operand1, sho
     }
     return instruction;
 }
+#endif
 
 /* State record referenced by DAT_005880c4; only the trailing value is known. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCodeUtilities_EmitConditionBranch(SInt16 operand, SInt16 condition, SInt16 branchIfTrue, PCodeLabel *targetBlock)
 {
     PCodeLabel *fallthroughBlock;
@@ -425,6 +436,8 @@ void PCodeUtilities_EmitConditionBranch(SInt16 operand, SInt16 condition, SInt16
     PCode_CreateBlock();
     PCode_ResolveLabel((gCurrentBlock), (fallthroughBlock));
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 void PCodeUtilities_ResolveLabel(PCodeLabel *data)
 {
     if (gCurrentBlock->instruction_count != 0) {
@@ -433,6 +446,7 @@ void PCodeUtilities_ResolveLabel(PCodeLabel *data)
     }
     PCode_ResolveLabel((gCurrentBlock), data);
 }
+#endif
 
 void PCodeUtilities_MakeRecordForm(PCodeInstruction *o)
 {

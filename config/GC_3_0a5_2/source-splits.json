@@ -2118,5 +2118,33 @@
   "PCodeUtilities_LoadImmediate": {
     "name": "load_immediate",
     "source": "src/GC_3_0a5_2/backend/Operands.c"
+  },
+  "PCodeUtilities_MakeInstructionWithObject": {
+    "name": "op_absolute_ha",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_CreateInstructionWithObject": {
+    "name": "add_immediate_lo",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_EmitInstructionAndCreateBlock": {
+    "name": "branch_indirect",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_EmitConditionalBranch": {
+    "name": "branch_decrement_always",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_EmitBranch": {
+    "name": "branch_always",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_EmitConditionBranch": {
+    "name": "branch_conditional",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+  },
+  "PCodeUtilities_ResolveLabel": {
+    "name": "branch_label",
+    "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
   }
 }

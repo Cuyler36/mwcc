@@ -2407,9 +2407,31 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "append_coalesced_argument",
     "baseline_address": "0x0040eed5",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_Setup",
+    "address": "0x0041e931",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_SkipRespFileWS",
+    "address": "0x0041e95c",
+    "size": 224,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2420,9 +2442,31 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "initialize_file_token_cursor",
     "baseline_address": "0x0040f14b",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_CloseRespFile",
+    "address": "0x0041ead4",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_GetRespFileToken",
+    "address": "0x0041eae6",
+    "size": 229,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2433,9 +2477,20 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "get_next_arg",
     "baseline_address": "0x0040f29e",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_GotMore",
+    "address": "0x0041ecd1",
+    "size": 37,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2446,9 +2501,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "tokenize_arguments",
     "baseline_address": "0x0040f3f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2459,9 +2514,20 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_ParseArguments",
     "baseline_address": "0x0040f6dc",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_Terminate",
+    "address": "0x0041f1c7",
+    "size": 72,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2472,9 +2538,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "fn_0040f960",
     "baseline_address": "0x0040f960",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2485,9 +2551,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "fn_0040f969",
     "baseline_address": "0x0040f969",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2498,9 +2564,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_AdvanceArgument",
     "baseline_address": "0x0040f989",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2511,9 +2577,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_IsValueNullOrZero",
     "baseline_address": "0x0040f9a3",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2524,9 +2590,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_IncrementGlobalOnNonzeroResult",
     "baseline_address": "0x0040f9ba",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2534,7 +2600,12 @@
     "name": "Arg_UndoToken",
     "address": "0x0041f277",
     "size": 24,
-    "source": "src/GC_3_0a5_2/driver/Arguments.c"
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
   },
   {
     "name": "Arg_GetTokenName",
@@ -2543,9 +2614,9 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_GetTokenTextDescription",
     "baseline_address": "0x0040f9e2",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2556,9 +2627,53 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "Targets_CopyTokenText",
     "baseline_address": "0x0040fa68",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_GrowArgs",
+    "address": "0x0041f391",
+    "size": 71,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_GrowArg",
+    "address": "0x0041f3d8",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_InsertArg",
+    "address": "0x0041f43d",
+    "size": 97,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_InitToolArgs",
+    "address": "0x0041f49e",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },
@@ -2569,9 +2684,42 @@
     "source": "src/GC_3_0a5_2/driver/Arguments.c",
     "baseline_name": "fn_0040fbe1",
     "baseline_address": "0x0040fbe1",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_FinishToolArgs",
+    "address": "0x0041f55a",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_ToolArgsForPlugin",
+    "address": "0x0041f571",
+    "size": 40,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Arg_FreeToolArgs",
+    "address": "0x0041f599",
+    "size": 48,
+    "source": "src/GC_3_0a5_2/driver/Arguments.c",
+    "identity_evidence": "Mac source/function inventory and full Windows argument-parser control/dataflow review.",
+    "boundary_evidence": {
+      "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
       "unresolved_indirect_flow": false
     }
   },

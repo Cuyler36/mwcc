@@ -4,8 +4,9 @@ import unittest
 from tempfile import TemporaryDirectory
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 
-from compare import resolve_function, write_translation_unit, read_object, function_section
+from compare import resolve_function, source_data, write_translation_unit, read_object, function_section
 
 
 class Image:
@@ -84,6 +85,100 @@ class LiteralResolutionTests(unittest.TestCase):
     def test_unmapped_address_is_not_treated_as_zero_storage(self):
         with self.assertRaises(ValueError):
             self.resolve_zero_storage(0x4000)
+
+
+class AnonymousDataTests(unittest.TestCase):
+    def fixture(self, invalid=False, unreferenced=False, missing_fixup=False, writable=False,
+                switch_label=False):
+        class TableImage(Image):
+            def section_for_address(self, address):
+                if 0x2000 <= address < 0x3000:
+                    return SimpleNamespace(name='.data' if writable else '.rdata',
+                                           virtual_address=0x2000, virtual_size=0x1000,
+                                           file_offset=0x2000, file_size=0x1000,
+                                           characteristics=0xc0000040 if writable else 0x40000040)
+                raise ValueError('outside data')
+        pe = TableImage(b'')
+        symbols, sections, rows, fixups = {}, [], [], set()
+        for i in range(2):
+            address, table_address = 0x1000 + i * 0x100, 0x2000 + i * 0x100
+            function_index, text_index, table_index = i * 3, i * 3 + 1, i * 3 + 2
+            symbols[function_index] = dict(name=f'_f{i}', section=i+1, value=0, type=0x20, storage=2)
+            symbols[text_index] = dict(name='.text', section=i+1, value=0, type=0, storage=3)
+            symbols[table_index] = dict(name='.rdata', section=i+3, value=0, type=0, storage=3)
+            code = b'\x68\0\0\0\0\xc3' + bytes([0xc3])*6
+            sections.append(dict(name='.text', data=code, relocs=[(1, table_index, 6)], code=True, flags=0x60000020))
+            pe.data[address:address+len(code)] = b'\x68'+struct.pack('<I',table_address)+code[5:]
+            rows.append(dict(symbol=f'_f{i}', address=address, size=len(code)))
+            fixups.add(address+1)
+            for j in range(6):
+                struct.pack_into('<I', pe.data, table_address+j*4, address+6+j)
+                fixups.add(table_address+j*4)
+        for i in range(2):
+            sections.append(dict(name='.rdata', data=struct.pack('<6I', *range(6,12)),
+                                 relocs=[(j*4, i*3+1, 6) for j in range(6)], code=False, flags=0x40000040))
+        if invalid:
+            symbols[6] = dict(name='_unbound', section=0, value=0, type=0, storage=2)
+            sections[2]['relocs'][0] = (0, 6, 6)
+        if unreferenced:
+            sections.append(dict(name='.rdata', data=b'unclaimed', relocs=[], code=False, flags=0x40000040))
+        if missing_fixup:
+            fixups.remove(0x2000)
+        if switch_label:
+            for i in range(2):
+                symbols[6+i] = dict(name='.sw$1508', section=i+3, value=4, type=0, storage=3)
+                sections[i]['relocs'] = [(1, 6+i, 6)]
+                struct.pack_into('<I', pe.data, 0x1001+i*0x100, 0x2004+i*0x100)
+        return pe, symbols, sections, rows, fixups
+
+    def run_fixture(self, **options):
+        pe, symbols, sections, rows, fixups = self.fixture(**options)
+        claims = []
+        def config_read(path, *args, **kwargs):
+            return '[]' if path.name == 'functions.json' else '{}'
+        with patch.object(Path, 'read_text', config_read), patch.object(Path, 'write_text'), \
+                patch.object(Path, 'mkdir'), patch('compare.version_config', return_value={}), \
+                patch('compare.base_relocations', return_value=fixups):
+            target, base, complete = source_data('test', 'source.c', rows, symbols, sections, pe, claims)
+        return target, base, complete, claims, pe
+
+    def test_two_anonymous_tables_use_symbol_indices_and_local_code_labels(self):
+        target, base, complete, claims, pe = self.run_fixture()
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000,0x2018), (0x2100,0x2118)])
+        expected = pe.read(0x2000,24) + pe.read(0x2100,24)
+        self.assertEqual(bytes(target[0]['data']), expected)
+        self.assertEqual(bytes(base[0]['data']), expected)
+
+    def test_unbound_table_relocation_prevents_claim(self):
+        target, base, complete, claims, _ = self.run_fixture(invalid=True)
+        self.assertFalse(complete)
+        self.assertEqual(claims, [(0x2100,0x2118)])
+        self.assertEqual(len(target[0]['data']),24)
+        self.assertEqual(len(base[0]['data']),48)
+
+    def test_unreferenced_anonymous_section_remains_unassigned(self):
+        _, _, complete, claims, _ = self.run_fixture(unreferenced=True)
+        self.assertFalse(complete)
+        self.assertEqual(len(claims),2)
+
+    def test_table_fixup_mismatch_prevents_claim(self):
+        _, _, complete, claims, _ = self.run_fixture(missing_fixup=True)
+        self.assertFalse(complete)
+        self.assertEqual(claims, [(0x2100,0x2118)])
+
+    def test_anonymous_switch_label_recovers_section_base(self):
+        target, base, complete, claims, pe = self.run_fixture(switch_label=True)
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000,0x2018), (0x2100,0x2118)])
+        self.assertEqual(bytes(target[0]['data']), pe.read(0x2000,24)+pe.read(0x2100,24))
+        self.assertEqual(target[0]['data'], base[0]['data'])
+
+    def test_table_category_mismatch_prevents_claim(self):
+        target, _, complete, claims, _ = self.run_fixture(writable=True)
+        self.assertFalse(complete)
+        self.assertEqual(claims, [])
+        self.assertEqual(target, [])
 
 
 class TranslationUnitTests(unittest.TestCase):

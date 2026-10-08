@@ -1,34 +1,58 @@
-/* Baseline bodies ported under the source/function names in the 3.0 map. */
+/* GC 3.0 argument parser, retaining the baseline token and argument ABI. */
 #include "compiler/common.h"
-#include "GC_3_0a5_2/driver/ParserDriver.h"
 #include "compiler/objects.h"
-#include "compiler/scopes.h"
-#include "compiler/win32.h"
-#include "compiler/CError.h"
-#include "driver/CLFileOps.h"
-#include "driver/CLIO.h"
-#include "driver/CLMain.h"
-#include "driver/CLPluginRequests.h"
-#include "driver/CLToolExec.h"
-#include "driver/CWParserPluginsPrivate.h"
-#include "driver/CWPluginsPrivate.h"
-#include "driver/ClientGlue.h"
 #include "driver/Help.h"
-#include "driver/Memory.h"
-#include "driver/MsDos.h"
 #include "driver/Option.h"
+#include "driver/CWParserPluginsPrivate.h"
+#include "GC_3_0a5_2/driver/ParserDriver.h"
+#include "driver/CLFileOps.h"
 #include "driver/TargetOptimizer-ppc-eabi.h"
-#include "driver/ToolHelpers-cc.h"
-#include "driver/ToolHelpers.h"
 #include <stdio.h>
-#include <setjmp.h>
-#include <stdio.h>
-
-#define pTool driverTool
-
-#define va_start(ap, parm) ap = (char *)&parm + ((((char *)(&parm + 1) - (char *)&parm) + 3) / 4 * 4)
-
+#include <stdlib.h>
 #include <string.h>
+
+/* Private names from the GC 3.0 symbol map; Windows OSSpec is 516 bytes. */
+static int scantok;
+static int respfilesize;
+static char *respfilestart;
+static char *respfile;
+static struct {
+    unsigned char spec[0x204];
+    MemBuffer hand;
+    Boolean loaded;
+    Boolean changed;
+    Boolean writeable;
+} respfilehandle;
+static char **margv;
+static int margind;
+static int margc;
+static Boolean in_response_file;
+static int maxargtoks;
+static int numargtoks;
+static TokenText *argtoks;
+
+/* The Windows MSL runtime owns the active locale and 16-bit ctype table. */
+typedef struct ArgCTypeLocale {
+    unsigned char reserved[8];
+    unsigned short *ctype;
+} ArgCTypeLocale;
+typedef struct ArgRuntime {
+    unsigned char reserved[0x1bc];
+    ArgCTypeLocale *locale;
+} ArgRuntime;
+extern ArgRuntime *fn_00403ff0(int create);
+extern int __stdcall fn_004050e0(char *left, char *right, int count);
+extern void *__stdcall xmalloc(const char *what, unsigned int size);
+extern void *__stdcall xrealloc(const char *what, void *ptr, unsigned int size);
+extern char *__stdcall xstrdup(const char *text);
+extern void __stdcall xfree(void *ptr);
+extern void Arg_InsertArg(PtrList *list, char *text);
+extern void Arg_FreeToolArgs(PtrList *list);
+static inline int Arg_IsSpace(int c)
+{
+    return c < 0 || c >= 256 ? 0 : fn_00403ff0(1)->locale->ctype[c] & 0x100;
+}
+
 void Arg_AddToken(short kind, char *text)
 {
     long count;
@@ -37,8 +61,8 @@ void Arg_AddToken(short kind, char *text)
     TokenText *third;
     TokenText *fourth;
     TokenText *entry;
-    if (coalesced_argument_count > 0) {
-        last = token_texts + (coalesced_argument_count - 1);
+    if (numargtoks > 0) {
+        last = argtoks + (numargtoks - 1);
     } else {
         last = NULL;
     }
@@ -46,14 +70,14 @@ void Arg_AddToken(short kind, char *text)
         previous = NULL;
         third = NULL;
         fourth = NULL;
-        if (coalesced_argument_count > 3) {
-            fourth = token_texts + (coalesced_argument_count - 4);
+        if (numargtoks > 3) {
+            fourth = argtoks + (numargtoks - 4);
         }
-        if (coalesced_argument_count > 2) {
-            third = token_texts + (coalesced_argument_count - 3);
+        if (numargtoks > 2) {
+            third = argtoks + (numargtoks - 3);
         }
-        if (coalesced_argument_count > 1) {
-            previous = token_texts + (coalesced_argument_count - 2);
+        if (numargtoks > 1) {
+            previous = argtoks + (numargtoks - 2);
         }
         if (previous != NULL) {
             if (kind == 1 && (previous->kind == 5 || previous->kind == 4) && (third->kind != 2 || fourth->kind != 3)) {
@@ -62,7 +86,7 @@ void Arg_AddToken(short kind, char *text)
                 }
                 {
                     short previousKind = previous->kind;
-                    coalesced_argument_count -= 2;
+                    numargtoks -= 2;
                     kind = previousKind;
                 }
             } else if (previous->kind == 1) {
@@ -70,51 +94,51 @@ void Arg_AddToken(short kind, char *text)
                     if (data_00588519 != 0) {
                         printf("Coalescing args, removing '%s'\n", Arg_GetTokenName(previous));
                     }
-                    coalesced_argument_count -= 2;
+                    numargtoks -= 2;
                 }
             }
         }
     }
-    count = coalesced_argument_count;
-    if (count >= coalesced_argument_capacity) {
-        token_texts = ToolHelpers_ResizeBuffer("argument list", token_texts, coalesced_argument_capacity + 16 << 3);
-        coalesced_argument_capacity += 16;
+    count = numargtoks;
+    if (count >= maxargtoks) {
+        argtoks = xrealloc("argument list", argtoks, maxargtoks + 16 << 3);
+        maxargtoks += 16;
     }
-    entry = token_texts + coalesced_argument_count;
+    entry = argtoks + numargtoks;
     entry->kind = kind;
     if (text) {
-        entry->text = ClientGlue_DuplicateString(text);
+        entry->text = xstrdup(text);
     } else {
         entry->text = NULL;
     }
-    coalesced_argument_count += 1;
+    numargtoks++;
 }
 
 void Arg_Setup(unsigned int value, char **otherValue)
 {
-    data_0057e06c = 0;
-    token_cursor = NULL;
-    data_0057e070 = value;
-    data_0057e078 = (char **)otherValue;
-    arg_index = 1;
+    in_response_file = 0;
+    respfile = NULL;
+    margc = value;
+    margv = (char **)otherValue;
+    margind = 1;
 }
 
 void Arg_SkipRespFileWS(void)
 {
     for (;;) {
-        while (*token_cursor && (__ctype_map[(unsigned char)*token_cursor] & 6))
-            token_cursor++;
-        if (*token_cursor == 0x1a)
-            token_cursor = data_0057e1d0 + data_0057e1d4 - 1;
-        if (token_cursor[0] == '\\' && token_cursor[1] == '#') {
-            token_cursor++;
+        while (*respfile && Arg_IsSpace(*respfile))
+            respfile++;
+        if (*respfile == 0x1a)
+            respfile = respfilestart + respfilesize - 1;
+        if (respfile[0] == '\\' && respfile[1] == '#') {
+            respfile++;
             return;
         }
-        if (*token_cursor == '#' && (token_cursor > data_0057e1d0 ? token_cursor[-1] != '\\' : 1)) {
-            while (*token_cursor && *token_cursor != '\n' && *token_cursor != '\r')
-                token_cursor++;
-            while (*token_cursor == '\r' || *token_cursor == '\n')
-                token_cursor++;
+        if (*respfile == '#' && (respfile > respfilestart ? respfile[-1] != '\\' : 1)) {
+            while (*respfile && *respfile != '\n' && *respfile != '\r')
+                respfile++;
+            while (*respfile == '\r' || *respfile == '\n')
+                respfile++;
         } else
             return;
     }
@@ -122,22 +146,22 @@ void Arg_SkipRespFileWS(void)
 
 Boolean Arg_OpenRespFile(char *name)
 {
-    char buffer[0x144];
+    char buffer[0x204];
     unsigned int error;
     Boolean result;
 
     if ((error = OS_MakeFileSpec(name, (OSSpec *)buffer)) != 0 ||
         (error = TargetOptimizer_ppc_eabi_InitOperationRecord((OSSpec *)buffer, NULL, 0,
-                                                              (OperationRecord *)&operation_record)) != 0 ||
-        (error = CLFileOps_AppendMemBuffer(&data_0057e1c0, &empty_string, 1)) != 0 ||
-        (error = TargetOptimizer_ppc_eabi_GetMemBufferPtrAndSize((unsigned char *)&operation_record, &token_cursor,
-                                                                 &data_0057e1d4)) != 0) {
-        CLPOSAlert(0x4a, error, name);
+                                                              (OperationRecord *)&respfilehandle)) != 0 ||
+        (error = CLFileOps_AppendMemBuffer(&respfilehandle.hand, &empty_string, 1)) != 0 ||
+        (error = TargetOptimizer_ppc_eabi_GetMemBufferPtrAndSize((unsigned char *)&respfilehandle, &respfile,
+                                                                 &respfilesize)) != 0) {
+        CLPOSAlert(0x4a, error, "response ", name);
         result = 0;
     } else {
-        data_0057e1d0 = token_cursor;
+        respfilestart = respfile;
         Arg_SkipRespFileWS();
-        data_0057e06c = 1;
+        in_response_file = 1;
         result = 1;
     }
     return result;
@@ -145,8 +169,8 @@ Boolean Arg_OpenRespFile(char *name)
 
 unsigned int Arg_CloseRespFile(void)
 {
-    data_0057e06c = (unsigned char)(0U);
-    TargetOptimizer_ppc_eabi_UnloadOperationRecord((struct OperationRecord *)operation_record);
+    in_response_file = (unsigned char)(0U);
+    TargetOptimizer_ppc_eabi_UnloadOperationRecord((struct OperationRecord *)&respfilehandle);
 }
 
 char *Arg_GetRespFileToken(void)
@@ -154,22 +178,22 @@ char *Arg_GetRespFileToken(void)
     int quoted = 0;
     char *start;
     char *d;
-    if (!*token_cursor)
+    if (!*respfile)
         return NULL;
-    start = d = token_cursor;
-    while (*token_cursor) {
-        if (!quoted && (__ctype_map[(unsigned char)*token_cursor] & 6))
+    start = d = respfile;
+    while (*respfile) {
+        if (!quoted && Arg_IsSpace(*respfile))
             break;
-        if (*token_cursor == '"') {
+        if (*respfile == '"') {
             quoted = !quoted;
-            token_cursor++;
-        } else if (token_cursor[0] == '\\' && token_cursor[1] == '"') {
-            *d++ = '"';
-            token_cursor += 2;
+            respfile++;
+        } else if (respfile[0] == '\\' && strchr("\" \r\n", respfile[1])) {
+            *d++ = respfile[1];
+            respfile += 2;
         } else
-            *d++ = *token_cursor++;
+            *d++ = *respfile++;
     }
-    if (*token_cursor)
+    if (*respfile)
         Arg_SkipRespFileWS();
     *d = 0;
     return start;
@@ -180,11 +204,11 @@ char *Arg_GetNext(Boolean expand)
     char *arg;
     int len;
     for (;;) {
-        if (!data_0057e06c) {
+        if (!in_response_file) {
             char *p;
             len = 1;
             p = NULL;
-            arg = data_0057e078[arg_index++];
+            arg = margv[margind++];
             if ((p = strrchr(arg, '\r')) && p[1] == 0)
                 *p = 0;
             if (arg[0] == '\\' && arg[1] == data_0058852c) {
@@ -204,8 +228,7 @@ char *Arg_GetNext(Boolean expand)
             }
             if ((p = strchr(arg + len, '=')))
                 len = p + 1 - arg;
-            arg += len;
-            if (Arg_OpenRespFile(arg))
+            if (Arg_OpenRespFile(arg + len))
                 continue;
             arg = NULL;
             break;
@@ -222,11 +245,11 @@ char *Arg_GetNext(Boolean expand)
 
 unsigned char Arg_GotMore(void)
 {
-    if (!data_0057e06c)
-        return arg_index < data_0057e070;
-    if (*token_cursor)
+    if (!in_response_file)
+        return margind < margc;
+    if (*respfile)
         return 1;
-    return arg_index < data_0057e070;
+    return margind < margc;
 }
 
 void Arg_Parse(void)
@@ -238,7 +261,7 @@ void Arg_Parse(void)
     char *src;
     char *dst;
     char ch;
-    unsigned char kind;
+    short kind;
     int i;
     int eq;
 
@@ -269,13 +292,13 @@ void Arg_Parse(void)
             if (ch == 0x5c && (src[1] == argument_space || src[1] == argument_space_char || src[1] == data_00588505)) {
                 src++;
                 ch = *src;
-                ch = ch | 0x80;
+                ch |= 0x80;
             } else if (data_0054aa78 == 1 && ch == 0x3a && src[1] == 0x5c) {
-                ch = ch | 0x80;
+                ch |= 0x80;
             }
             if (ch != argument_space && ch != argument_space_char && ch != data_00588505) {
                 if ((ch & 0x7f) == argument_space || (ch & 0x7f) == argument_space_char || (ch & 0x7f) == data_00588505)
-                    ch = ch & 0x7f;
+                    ch &= 0x7f;
                 *dst = ch;
                 dst++;
                 if (dst >= buf + 0x1000)
@@ -310,7 +333,7 @@ void Arg_Parse(void)
             i = 0;
             if (flagB && strchr(data_00587eec, buf[0]) != NULL)
                 i = 1;
-            Arg_AddToken(2, buf + i + 1);
+            Arg_AddToken(2, buf + 1 + i);
         } else {
             Arg_AddToken(2, buf);
             Arg_AddToken(1, NULL);
@@ -325,18 +348,19 @@ void Arg_Init(int argc, char **argv)
 {
     int argumentIndex;
     int resultIndex;
+    int compatibility;
 
-    coalesced_argument_capacity = 0;
-    coalesced_argument_count = 0;
+    numargtoks = maxargtoks = 0;
     data_00588519 = 0;
     if (argc > 1) {
         if (memcmp(argv[1], "--parser-debug", 15) == 0) {
             data_00588519 = 1;
-            fn_00404ba0((argv + 1), (argv + 2), (argc - 1) * sizeof(*argv));
+            memmove(argv + 1, argv + 2, (argc - 1) * sizeof(*argv));
             argc--;
         }
     }
-    if (data_0054aa78 == 0) {
+    compatibility = data_0054aa78;
+    if (compatibility == 0) {
         data_00587eec = "-";
         data_005876ac = (int)"=";
         help_option_separator = " ";
@@ -345,7 +369,7 @@ void Arg_Init(int argc, char **argv)
         data_00588505 = '=';
         data_0058852c = '@';
         data_00587eb0 = empty_string;
-    } else if (data_0054aa78 == 1) {
+    } else if (compatibility == 1) {
         data_00587eec = "/-";
         data_005876ac = (int)":";
         help_option_separator = ":";
@@ -354,7 +378,7 @@ void Arg_Init(int argc, char **argv)
         data_00588505 = ':';
         data_0058852c = '@';
         data_00587eb0 = empty_string;
-    } else if (data_0054aa78 == 2) {
+    } else if (compatibility == 2) {
         if (data_00587eec == NULL)
             data_00587eec = "-";
         if (data_005876ac == 0)
@@ -367,25 +391,25 @@ void Arg_Init(int argc, char **argv)
             argument_space_char = '=';
         if (data_00588505 == 0)
             data_00588505 = '=';
-        if (data_0058852c == 0)
+        if (data_0058852c == 0 && data_00587eb0 == NULL)
             data_0058852c = '@';
         if (data_00587eb0 == NULL)
             data_00587eb0 = empty_string;
     } else {
-        CLPFatalError("Unknown parser compatibility type (%d)\n", data_0054aa78);
+        CLPFatalError("Unknown parser compatibility type (%d)\n", compatibility);
     }
     if (data_00588519 != 0) {
-        fn_00403ae0("Incoming arguments: \n");
+        printf("Incoming arguments: \n");
         for (argumentIndex = 0; argumentIndex < argc; argumentIndex++)
-            fn_00403ae0("[%s] ", argv[argumentIndex]);
-        fn_00403ae0("\n");
+            printf("[%s] ", argv[argumentIndex]);
+        printf("\n");
     }
     Arg_Setup(argc, argv);
     Arg_Parse();
     Arg_Reset();
     if (data_00588519 != 0) {
-        for (resultIndex = 0; resultIndex < coalesced_argument_count; resultIndex++) {
-            fn_00403ae0("TOKEN:  '%s'\n", Arg_GetTokenName(token_texts + resultIndex));
+        for (resultIndex = 0; resultIndex < numargtoks; resultIndex++) {
+            printf("TOKEN:  '%s'\n", Arg_GetTokenName(argtoks + resultIndex));
         }
     }
 }
@@ -394,36 +418,36 @@ void Arg_Terminate(void)
 {
     struct TokenText *p;
 
-    while (coalesced_argument_count > 0) {
-        p = token_texts + --coalesced_argument_count;
+    while (numargtoks > 0) {
+        p = argtoks + --numargtoks;
         if (p->text != NULL)
-            free(p->text);
+            xfree(p->text);
     }
-    if (coalesced_argument_capacity != 0)
-        free(token_texts);
-    coalesced_argument_capacity = 0;
+    if (maxargtoks != 0)
+        xfree(argtoks);
+    maxargtoks = 0;
 }
 
 void Arg_Reset(void)
 {
-    data_0057e1d8 = 0;
+    scantok = 0;
     return;
 }
 
 unsigned int Arg_PeekToken(void)
 {
-    int i = data_0057e1d8;
-    if (i >= coalesced_argument_count) {
+    int i = scantok;
+    if (i >= numargtoks) {
         return 0U;
     }
-    return (unsigned int)(token_texts + data_0057e1d8);
+    return (unsigned int)(argtoks + scantok);
 }
 
 TokenText *Arg_UsedToken(void)
 {
     int c;
-    if ((c = data_0057e1d8) < coalesced_argument_count)
-        data_0057e1d8++;
+    if ((c = scantok) < numargtoks)
+        scantok++;
     return (TokenText *)Arg_PeekToken();
 }
 
@@ -436,17 +460,17 @@ int Arg_IsEmpty(void)
 int Arg_GetToken(void)
 
 {
-    int result = Arg_PeekToken();
+    unsigned int result = Arg_PeekToken();
     if (result != 0) {
-        data_0057e1d8 = data_0057e1d8 + 1;
+        scantok++;
     }
     return result;
 }
 
 TokenText *Arg_UndoToken(void)
 {
-    if (data_0057e1d8 > 0) {
-        --data_0057e1d8;
+    if (scantok > 0) {
+        --scantok;
         return (TokenText *)Arg_PeekToken();
     }
     return NULL;
@@ -456,23 +480,26 @@ char *Arg_GetTokenName(TokenText *token)
 {
     char *result;
     int matchesKind;
-    if (token->kind == 2)
+    int kind = token->kind;
+    int compatibility;
+    if (kind == 2)
         return token->text;
-    if (token->kind == 3)
+    if (kind == 3)
         result = "option";
-    else if (token->kind == 5)
+    else if (kind == 5)
         result = "comma";
     else {
-        matchesKind = (data_0054aa78 == 1) && (token->kind == 4);
+        compatibility = data_0054aa78;
+        matchesKind = (compatibility == 1) && (kind == 4);
         if (matchesKind)
             result = "colon or equals";
         else {
-            matchesKind = (data_0054aa78 != 1) && (token->kind == 4);
+            matchesKind = (compatibility != 1) && (kind == 4);
             if (matchesKind)
                 result = "equals";
-            else if (token->kind == 1)
+            else if (kind == 1)
                 result = "end of argument";
-            else if (token->kind == 0)
+            else if (kind == 0)
                 result = "end of command line";
             else
                 result = "<error>";
@@ -486,7 +513,8 @@ char *Arg_GetTokenText(TokenText *arg, char *buffer, int maxlen, Boolean warn)
     char *d = buffer;
     int n = 0;
     char *s;
-    if (arg->kind == 2 || arg->kind == 3)
+    int kind = arg->kind;
+    if (kind == 2 || kind == 3)
         s = arg->text;
     else
         s = Arg_GetTokenName(arg);
@@ -508,7 +536,7 @@ void Arg_GrowArgs(PtrList *list)
     if (!list->items || list->count + 1 >= list->size) {
         i = list->size;
         list->size += 16;
-        list->items = ToolHelpers_ResizeBuffer("argument list", list->items, (list->size + 1) * 4);
+        list->items = xrealloc("argument list", list->items, (list->size + 1) * 4);
         for (; i <= list->size; i++)
             list->items[i] = NULL;
     }
@@ -517,14 +545,14 @@ void Arg_GrowArgs(PtrList *list)
 
 void Arg_GrowArg(struct PtrList *list, char *text)
 {
-    char *value = text;
     char **slot = &list->items[list->count];
+    int len;
     if (!*slot) {
-        *slot = ClientGlue_DuplicateString(value);
+        *slot = xstrdup(text);
     } else {
-        char *string = value;
-        *slot = ToolHelpers_ResizeBuffer("command line", *slot, strlen(*slot) + strlen(string) + 1);
-        strcpy(*slot + strlen(*slot), string);
+        len = strlen(*slot);
+        *slot = xrealloc("command line", *slot, len + strlen(text) + 1);
+        strcpy(*slot + len, text);
     }
 }
 
@@ -538,19 +566,34 @@ void Arg_InitToolArgs(PtrList *state)
 
 void Arg_AddToToolArgs(PtrList *list, short kind, char *text)
 {
-    if (kind == 0)
+    int insert = (kind & 0x8000) != 0;
+    kind &= ~0x8000;
+    switch (kind) {
+    case 0:
         Arg_FinishToolArgs(list);
-    else if (kind == 1) {
+        break;
+    case 1:
         if (list->items && list->items[list->count])
             Arg_GrowArgs(list);
-    } else if (kind == 2)
-        Arg_GrowArg(list, text);
-    else if (kind == 3)
+        break;
+    case 2:
+        if (insert)
+            Arg_InsertArg(list, text);
+        else
+            Arg_GrowArg(list, text);
+        break;
+    case 3:
         Arg_GrowArg(list, "-");
-    else if (kind == 4)
+        break;
+    case 4:
         Arg_GrowArg(list, "=");
-    else if (kind == 5)
+        break;
+    case 5:
         Arg_GrowArg(list, ",");
+        break;
+    default:
+        CLPFatalError("Arguments.c", 0x31f, "Unknown token (%d)", kind);
+    }
 }
 
 void Arg_FinishToolArgs(PtrList *list)
@@ -570,4 +613,24 @@ void Arg_ToolArgsForPlugin(PtrList *source, IntegerSequenceResult *result)
     value = 0;
     result->value = value;
     return;
+}
+
+/* Insert a tool argument before the first accumulated argument. */
+void Arg_InsertArg(PtrList *list, char *text)
+{
+    Arg_GrowArgs(list);
+    memmove(list->items + 2, list->items + 1, (list->size - 1) * sizeof(*list->items));
+    list->items[1] = xmalloc("command line", strlen(text) + 1);
+    strcpy(list->items[1], text);
+}
+
+void Arg_FreeToolArgs(PtrList *list)
+{
+    int i;
+    if (list->items) {
+        for (i = 1; i < list->count; i++)
+            if (list->items[i])
+                xfree(list->items[i]);
+        xfree(list->items);
+    }
 }

@@ -13,7 +13,7 @@ original-only Windows source views. It records 1,984 known Windows functions,
 including 905 not yet implemented, and keeps the Mac-only source checklist
 separate. The original's remaining code and data stay in unknown section views.
 The inventory is incomplete: assertions name callers, not every function in a
-file, and 20 existing mappings conflict with their recovered filenames.
+file. The twenty initially conflicting filename mappings have since been split.
 Seven mixed-source and 48 header-only diagnostic callers remain ambiguous.
 Missing mappings do not prove that an imported TU is obsolete.
 
@@ -62,7 +62,22 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 imports still need the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
-## ParserErrors.c: complete Windows unit
+## Arguments.c: reviewed equivalent nonmatches
+
+All 27 retained Windows functions are mapped and reviewed; 24 match exactly
+with CW94 space/intrinsic optimization. Arg_AddToken, Arg_Parse, and
+Arg_GetTokenName remain instruction nonmatches after compiler and source-shape
+experiments. The ledger records their branch, memory, error and input behavior
+reviews. The Windows cluster adds Arg_InsertArg and Arg_FreeToolArgs; the Mac
+Arg_Stop has no retained body between Arg_Reset and Arg_PeekToken. Arg_Terminate
+is one 72-byte function despite a false Ghidra entry in its loop.
+
+The full-TU CLI reports 98.64162% code similarity over 3,602 original bytes.
+All 384 initialized bytes, the 24-byte read-only switch table, and 572 BSS bytes
+match, including loader fixups. Private bindings remain source scoped. The
+three code nonmatches prevent marking this TU exact.
+
+## CInt64: partial arithmetic unit
 
 The CInt64 attempt now matches 24 of 26 mapped Windows functions. Equivalent
 comparison control flow, helper placement, and local declaration order recover
@@ -73,6 +88,8 @@ This is not exhaustive proof. Four constants contribute 32 verified data bytes;
 the unreferenced zero constant was removed because its Windows address is
 unproven. The Mac ordinary-symbol list has 51 CInt64 names, with 25 still lacking
 Windows mappings. The TU is explicitly incomplete despite the 24 exact bodies.
+
+## ParserErrors.c: complete Windows unit
 
 All 11 retained Windows functions match under CW94 with space and intrinsic
 optimization: 654 code bytes, 24 literal bytes, and 1024 BSS bytes. The original

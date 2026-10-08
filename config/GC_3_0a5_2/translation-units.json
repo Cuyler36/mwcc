@@ -446,9 +446,31 @@
           "address": "0x0041e7b7",
           "size": 378,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_Setup",
+          "address": "0x0041e931",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_SkipRespFileWS",
+          "address": "0x0041e95c",
+          "size": 224,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -457,9 +479,31 @@
           "address": "0x0041ea3c",
           "size": 152,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_CloseRespFile",
+          "address": "0x0041ead4",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_GetRespFileToken",
+          "address": "0x0041eae6",
+          "size": 229,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -468,9 +512,20 @@
           "address": "0x0041ebcb",
           "size": 262,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_GotMore",
+          "address": "0x0041ecd1",
+          "size": 37,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -479,9 +534,9 @@
           "address": "0x0041ecf6",
           "size": 695,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -490,9 +545,20 @@
           "address": "0x0041efad",
           "size": 538,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_Terminate",
+          "address": "0x0041f1c7",
+          "size": 72,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -501,9 +567,9 @@
           "address": "0x0041f20f",
           "size": 8,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -512,9 +578,9 @@
           "address": "0x0041f217",
           "size": 31,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -523,9 +589,9 @@
           "address": "0x0041f236",
           "size": 25,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -534,9 +600,9 @@
           "address": "0x0041f24f",
           "size": 24,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -545,9 +611,9 @@
           "address": "0x0041f267",
           "size": 16,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -557,16 +623,19 @@
           "size": 24,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
           "evidence": "Manually verified mapping",
-          "boundary_evidence": null
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
         },
         {
           "name": "Arg_GetTokenName",
           "address": "0x0041f28f",
           "size": 119,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -575,9 +644,53 @@
           "address": "0x0041f306",
           "size": 139,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_GrowArgs",
+          "address": "0x0041f391",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_GrowArg",
+          "address": "0x0041f3d8",
+          "size": 101,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_InsertArg",
+          "address": "0x0041f43d",
+          "size": 97,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_InitToolArgs",
+          "address": "0x0041f49e",
+          "size": 23,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         },
@@ -586,9 +699,42 @@
           "address": "0x0041f4b5",
           "size": 165,
           "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "evidence": "Manually verified mapping",
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_FinishToolArgs",
+          "address": "0x0041f55a",
+          "size": 23,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_ToolArgsForPlugin",
+          "address": "0x0041f571",
+          "size": 40,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Arg_FreeToolArgs",
+          "address": "0x0041f599",
+          "size": 48,
+          "compiled_source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed contiguous Windows parser CFG; Arg_Terminate includes its backward-loop block",
             "unresolved_indirect_flow": false
           }
         }
@@ -793,8 +939,8 @@
       ],
       "ownership_conflicts": [],
       "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
+      "membership_complete": true,
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/driver/CLBrowser.c",
@@ -40117,6 +40263,1088 @@
         "Imported object writer and browser writer require the GC3 record/file-spec ABI; not declared equivalent."
       ],
       "identity_evidence": "Explicit Mac STABS source membership, three parameter names and browse serialization/write semantics."
+    },
+    "src/GC_3_0a5_2/driver/Arguments.c": {
+      "status": "attempted_equivalent",
+      "membership_reviewed": true,
+      "functions": [
+        {
+          "name": "Arg_AddToken",
+          "address": "0x41e7b7",
+          "size": 378,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": false,
+          "review_status": "manually_reviewed_functionally_equivalent_nonmatching",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_Setup",
+          "address": "0x41e931",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_SkipRespFileWS",
+          "address": "0x41e95c",
+          "size": 224,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_OpenRespFile",
+          "address": "0x41ea3c",
+          "size": 152,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_CloseRespFile",
+          "address": "0x41ead4",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GetRespFileToken",
+          "address": "0x41eae6",
+          "size": 229,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GetNext",
+          "address": "0x41ebcb",
+          "size": 262,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GotMore",
+          "address": "0x41ecd1",
+          "size": 37,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_Parse",
+          "address": "0x41ecf6",
+          "size": 695,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": false,
+          "review_status": "manually_reviewed_functionally_equivalent_nonmatching",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_Init",
+          "address": "0x41efad",
+          "size": 538,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_Terminate",
+          "address": "0x41f1c7",
+          "size": 72,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Manual CFG extent 0x0041f1c7..0x0041f20f: entry jumps to 0x0041f1ea; test branches backward to loop body 0x0041f1c9; actual return 0x0041f20e. Ghidra erroneously creates two entries, not two functions."
+        },
+        {
+          "name": "Arg_Reset",
+          "address": "0x41f20f",
+          "size": 8,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_PeekToken",
+          "address": "0x41f217",
+          "size": 31,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_UsedToken",
+          "address": "0x41f236",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_IsEmpty",
+          "address": "0x41f24f",
+          "size": 24,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GetToken",
+          "address": "0x41f267",
+          "size": 16,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_UndoToken",
+          "address": "0x41f277",
+          "size": 24,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GetTokenName",
+          "address": "0x41f28f",
+          "size": 119,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": false,
+          "review_status": "manually_reviewed_functionally_equivalent_nonmatching",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GetTokenText",
+          "address": "0x41f306",
+          "size": 139,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GrowArgs",
+          "address": "0x41f391",
+          "size": 71,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_GrowArg",
+          "address": "0x41f3d8",
+          "size": 101,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_InsertArg",
+          "address": "0x41f43d",
+          "size": 97,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_InitToolArgs",
+          "address": "0x41f49e",
+          "size": 23,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_AddToToolArgs",
+          "address": "0x41f4b5",
+          "size": 165,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_FinishToolArgs",
+          "address": "0x41f55a",
+          "size": 23,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_ToolArgsForPlugin",
+          "address": "0x41f571",
+          "size": 40,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        },
+        {
+          "name": "Arg_FreeToolArgs",
+          "address": "0x41f599",
+          "size": 48,
+          "source": "src/GC_3_0a5_2/driver/Arguments.c",
+          "exact": true,
+          "review_status": "strict_exact",
+          "boundary_evidence": "Contiguous decoded Windows function cluster in original executable; checked against call targets and exported Ghidra entry inventory."
+        }
+      ],
+      "known_original_functions": 27,
+      "strict_exact_count": 24,
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "compiler_profiles_attempted": 16,
+      "initialized_data_bytes": 384,
+      "bss_bytes": 572,
+      "anonymous_switch_table_bytes": 24,
+      "semantic_changes": [
+        "Locale-aware 16-bit ctype lookup.",
+        "516-byte Windows file spec in response-file state.",
+        "Updated quote/space/CR/LF escaping and format-based CLPOSAlert.",
+        "Port Arg_InsertArg,Arg_FreeToolArgs and high-bit insertion flag; fatal handling of invalid kind.",
+        "Recover twelve original private/global data names."
+      ],
+      "nonmatching_functions": [
+        "Arg_AddToken",
+        "Arg_Parse",
+        "Arg_GetTokenName"
+      ],
+      "platform_inventory": {
+        "Mac_debug_functions": 28,
+        "Windows_cluster_functions": 27,
+        "Mac_only_in_this_cluster": "Arg_Stop",
+        "evidence": "Mac STABS Arg_Stop begins 0x001b06e4 after Arg_Reset and before Arg_PeekToken. Windows Arg_Reset ends 0x0041f217, where Arg_PeekToken immediately starts; the full Windows cluster accounts for baseline25 plus Arg_InsertArg/Arg_FreeToolArgs."
+      },
+      "boundary_review": "Arg_Terminate is one 72-byte function starting0041f1c7; Ghidra false entry0041f1ea belongs to the same backward loop.",
+      "unresolved": [
+        "Arg_AddToken, Arg_Parse and Arg_GetTokenName remain reviewed equivalent instruction nonmatches."
+      ],
+      "source": "src/GC_3_0a5_2/driver/Arguments.c",
+      "source_sha256": "1238dd4e94a7db60ea2e1a1729db75c52ab193d1770185187edb81efe89acee1",
+      "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+      "symbol_map_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+      "function_count": 27,
+      "reviewed_nonmatching_count": 3,
+      "nonmatching_semantic_reviews": {
+        "Arg_AddToken": {
+          "target_address": "0x0041e7b7",
+          "target_size": 378,
+          "compiled_size": 386,
+          "objdiff_percent": 91.71429,
+          "branch_conditions": [
+            "Select last token only when numargtoks > 0; enter coalescing only if last exists, last.kind == 2, and last.text[0] == 0.",
+            "Compute fourth/third/previous pointers only for counts > 3, > 2, > 1 respectively; continue only if previous exists.",
+            "If incoming kind == 1, previous.kind in {4,5}, and (third.kind != 2 || fourth.kind != 3), optionally log, subtract two from numargtoks, and replace incoming kind with previous.kind.",
+            "Otherwise, if previous.kind == 1 and incoming kind in {4,5}, optionally log and subtract two from numargtoks.",
+            "If numargtoks >= maxargtoks, grow allocation by sixteen records; initialize the next record and increment numargtoks."
+          ],
+          "memory_writes": [
+            "xrealloc(\"argument list\", argtoks, (maxargtoks + 16) << 3); store returned pointer; maxargtoks += 16.",
+            "Write 16-bit entry.kind; store xstrdup(text) if non-null, otherwise NULL; numargtoks++.",
+            "The coalescing paths overwrite prior slots by moving the count backward, retaining the original behavior and ownership semantics."
+          ],
+          "calls_and_errors": [
+            "Arg_GetTokenName(previous), printf with the original two coalescing messages, gated by parserDebug alias data_00588519.",
+            "Allocation and duplication retain original xrealloc/xstrdup stdcall ABI and failure behavior; no added error calls."
+          ],
+          "input_cases": [
+            "Empty and non-empty token lists; last kind other than 2; empty versus non-empty last text.",
+            "Incoming kinds 1,4,5 and other signed short values; previous kinds 1,4,5 and other values; third/fourth exclusion pair.",
+            "Debug flag zero/nonzero; allocation below/at capacity; input text NULL/non-NULL."
+          ],
+          "remaining_codegen_differences": "Register allocation and signed-word promotion/range-check lowering; shared decrement versus duplicate decrement paths. The observable branches, calls, stores, and return are preserved.",
+          "limits": "Review assumes the original parser invariants and defined inputs. The original conditional accesses of third/fourth and last.text are preserved; this port does not claim to repair invalid token state."
+        },
+        "Arg_Parse": {
+          "target_address": "0x0041ecf6",
+          "target_size": 695,
+          "compiled_size": 692,
+          "objdiff_percent": 99.545456,
+          "branch_conditions": [
+            "Loop while Arg_GotMore(); obtain Arg_GetNext(1); stop if it returns NULL.",
+            "Recognize a leading option prefix only if the argument has at least two characters and its first character is in FIRSTARGCHAR alias data_00587eec. Preserve pending end-of-argument emission and option flag transitions.",
+            "For backslash followed by any of the three configured separator bytes, consume the next character and set its high bit. In compatibility mode 1 only, protect a colon immediately followed by backslash by setting the high bit.",
+            "For a non-separator character, clear the high bit when its low seven bits equal a configured separator, append to the buffer, and report overflow when the output pointer reaches buffer + 0x1000.",
+            "For a separator, emit an option token when the option flag is set, then text token, then kind 5 for comma, kind 4 for equals/SEP3, otherwise kind 0. Reset the buffer and option flag as in the original.",
+            "At argument end, emit option/text slices with the same optional prefix skip when flagA and nonempty buffer; otherwise emit text and end-of-argument tokens. Emit a final end-of-argument when flagA or flagB remains, then kind 0."
+          ],
+          "memory_writes": [
+            "Local 4096-byte buffer and its terminators; local option/separator flags and source/output cursors.",
+            "Persistent token state changes only through the same Arg_AddToken calls, with the same kind and text arguments."
+          ],
+          "calls_and_errors": [
+            "Arg_GotMore, Arg_GetNext(1), strchr for configured option prefixes, Arg_AddToken in the same semantic order.",
+            "CLPReportError(2, tok, tok + strlen(tok) - 15, 0x1000) at the same buffer threshold; retains original behavior if the reporter returns."
+          ],
+          "input_cases": [
+            "Empty argument, one-character argument, option prefix with/without following text, option slices with or without a second prefix.",
+            "Each separator byte, comma/equals distinctions, escaped separators, ordinary backslashes, mode-1 drive-colon followed by backslash, and modes other than 1.",
+            "NULL next argument, exhausted input, buffer contents below/at overflow threshold, pending option and separator flags."
+          ],
+          "remaining_codegen_differences": "Equivalent byte OR/AND assignments use common-subexpression elimination and different branch sharing; buf + 1 + i versus an equivalent buffer slice expression changes address arithmetic. Signed char conversions and short token-kind calls were checked against original instructions.",
+          "limits": "No dynamic execution equivalence test was performed. Manual review covers decoded control flow and data flow; original overflow-reporting semantics are retained."
+        },
+        "Arg_GetTokenName": {
+          "target_address": "0x0041f28f",
+          "target_size": 119,
+          "compiled_size": 110,
+          "objdiff_percent": 87.85714,
+          "branch_conditions": [
+            "Kind 2 returns token.text directly; kind 3 returns \"option\"; kind 5 returns \"comma\".",
+            "Kind 4 returns \"colon or equals\" for compatibility == 1, otherwise \"equals\".",
+            "Kind 1 returns \"end of argument\"; kind 0 returns \"end of command line\"; all remaining signed short kinds return \"<error>\"."
+          ],
+          "memory_writes": [],
+          "calls_and_errors": [],
+          "input_cases": [
+            "All 65536 signed-short token-kind bit patterns partition into 0,1,2,3,4,5,other.",
+            "All compatibility-byte values partition into exactly 1 versus all others; the compatibility byte is loaded once only on the relevant branch.",
+            "Kind 2 may return NULL text unchanged; token pointer validity follows the original precondition."
+          ],
+          "remaining_codegen_differences": "The target materializes the first compound boolean in EDX and then tests it; the candidate branches directly on the same predicates. Return strings and the direct text pointer are identical.",
+          "limits": "Manual exhaustive predicate partition review; no writes or error paths exist."
+        }
+      },
+      "compiler_experiments": {
+        "count": 16,
+        "stage": "After initial functional port, before final source-level tuning and private-data renaming. Counts describe that intermediate snapshot, not sixteen recompilations of the frozen source.",
+        "profiles": [
+          {
+            "compiler": "cw94",
+            "optimization": "O1",
+            "mode": "space",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 3
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O1",
+            "mode": "space",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 1
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O1",
+            "mode": "speed",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 0
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O1",
+            "mode": "speed",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 0
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O2",
+            "mode": "space",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 10
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O2",
+            "mode": "space",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 5
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O2",
+            "mode": "speed",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 0
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O2",
+            "mode": "speed",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 0
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O3",
+            "mode": "space",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 20
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O3",
+            "mode": "space",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 13
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O3",
+            "mode": "speed",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 2
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O3",
+            "mode": "speed",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 1
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O4",
+            "mode": "space",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 21
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O4",
+            "mode": "space",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 14
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O4",
+            "mode": "speed",
+            "inline_auto": false,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 2
+          },
+          {
+            "compiler": "cw94",
+            "optimization": "O4",
+            "mode": "speed",
+            "inline_auto": true,
+            "intrinsics": true,
+            "exact_functions_at_experiment_stage": 1
+          }
+        ],
+        "selected_flags": "-O4 -opt space -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly",
+        "final_selected_profile_exact_functions": 24
+      },
+      "boundary_overrides": [
+        {
+          "name": "Arg_Terminate",
+          "address": "0x0041f1c7",
+          "size": 72,
+          "end_exclusive": "0x0041f20f",
+          "reject_as_separate_entry": "0x0041f1ea",
+          "reason": "Manual CFG extent 0x0041f1c7..0x0041f20f: entry jumps to 0x0041f1ea; test branches backward to loop body 0x0041f1c9; actual return 0x0041f20e. Ghidra erroneously creates two entries, not two functions."
+        }
+      ],
+      "private_binding_policy": {
+        "scope": "source_bindings only for src/GC_3_0a5_2/driver/Arguments.c",
+        "bindings": {
+          "_coalesced_argument_count": "0x6d794c",
+          "_coalesced_argument_capacity": "0x6d7948",
+          "_token_texts": "0x6d7950",
+          "_data_00588519": "0x725dfc",
+          "_data_0057e06c": "0x6d7944",
+          "_token_cursor": "0x6d7724",
+          "_data_0057e070": "0x6d7940",
+          "_data_0057e078": "0x6d7938",
+          "_arg_index": "0x6d793c",
+          "_data_0057e1d0": "0x6d7720",
+          "_data_0057e1d4": "0x6d771c",
+          "_operation_record": "0x6d7728",
+          "_data_0057e1c0": "0x6d792c",
+          "_empty_string": "0x66c7dc",
+          "_data_0058852c": "0x725eca",
+          "_data_00587eb0": "0x71022c",
+          "_data_0054aa78": "0x725fa2",
+          "_argument_space": "0x725e63",
+          "_argument_space_char": "0x725e64",
+          "_data_00588505": "0x725e65",
+          "_help_option_separator": "0x71096c",
+          "_data_005876ac": "0x710718",
+          "_fn_00403ff0": "0x403ff0",
+          "_xrealloc@12": "0x4263e0",
+          "_xstrdup@4": "0x426460",
+          "_fn_004050e0@12": "0x424bb0",
+          "_printf": "0x407dc0",
+          "_OS_MakeFileSpec@8": "0x410e40",
+          "_TargetOptimizer_ppc_eabi_InitOperationRecord@16": "0x42fc70",
+          "_CLFileOps_AppendMemBuffer@12": "0x417fa0",
+          "_TargetOptimizer_ppc_eabi_GetMemBufferPtrAndSize@12": "0x42fd30",
+          "_TargetOptimizer_ppc_eabi_UnloadOperationRecord@4": "0x42fd90",
+          "_numargtoks": "0x6d794c",
+          "_maxargtoks": "0x6d7948",
+          "_argtoks": "0x6d7950",
+          "_in_response_file": "0x6d7944",
+          "_respfile": "0x6d7724",
+          "_margc": "0x6d7940",
+          "_margv": "0x6d7938",
+          "_margind": "0x6d793c",
+          "_respfilestart": "0x6d7720",
+          "_respfilesize": "0x6d771c",
+          "_respfilehandle": "0x6d7728"
+        },
+        "canonical_private_globals": [
+          "_scantok",
+          "_respfilesize",
+          "_respfilestart",
+          "_respfile",
+          "_respfilehandle",
+          "_margv",
+          "_margind",
+          "_margc",
+          "_in_response_file",
+          "_maxargtoks",
+          "_numargtoks",
+          "_argtoks"
+        ],
+        "rationale": "Private STABS names and baseline numeric aliases must not establish global cross-TU identity. Source-scoping all probe bindings also prevents short literals and legacy decompiled aliases from contaminating other source units. Do not add generated local @NNN bindings; resolve those from this object and original operand evidence.",
+        "source_names_provenance": "Symbol-map STABS LCSYM entries at lines36007..36025. Windows private globals occupy 0x006d7718..0x006d7954 (572 bytes); respfilehandle is528 bytes including516-byte spec,8-byte handle,3 flags,1 alignment byte."
+      },
+      "objdiff_artifact": "build/arguments-full-diff.json",
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "3602",
+          "match_percent": 98.64162
+        },
+        {
+          "name": ".data",
+          "size": "384",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".rdata",
+          "size": "24",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".bss",
+          "size": "572",
+          "match_percent": 100.0
+        }
+      ],
+      "data_limit": "All allocated source contributions represented: 384 initialized bytes, 24 read-only switch-table bytes, and 572 BSS bytes. Payloads, categories and loader fixups verified.",
+      "verification": {
+        "strict_match_definition": "Resolved emitted bytes equal original function bytes, and emitted absolute-address relocations equal original PE loader-fixup addresses in each function.",
+        "objdiff_cli": true,
+        "cp932_encoding": "passes Python cp932 encode; repository tools/check_sjis.py absent",
+        "ghidra_availability": "No live instance during this attempt; used saved Ghidra function inventory and local original PE disassembly with Capstone."
+      },
+      "data_evidence": [
+        {
+          "name": "@951",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066c790",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@952",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066c7ac",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@953",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c7cc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1039",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066c7e0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1089",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c7ec",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1141",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c7f4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1142",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c7fc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1304",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c80c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1305",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c81c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1306",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c820",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1307",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c824",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1308",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c828",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1309",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c82c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1310",
+          "section": ".data",
+          "size": 40,
+          "method": "resolved function reference",
+          "address": "0x0066c830",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1311",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066c858",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1312",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c870",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1313",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c878",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1314",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c87c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1405",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c88c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1406",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c894",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1407",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c89c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1408",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c8ac",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1409",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c8b4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1410",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066c8c4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1411",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066c8d8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1474",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066c8e0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1509",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066c8f0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1510",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066c8f4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1511",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066c908",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_54",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00646e64",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_argtoks",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7950",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_numargtoks",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d794c",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_maxargtoks",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7948",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_in_response_file",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7944",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_margc",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7940",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_margind",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d793c",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_margv",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7938",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_respfilehandle",
+          "section": ".bss",
+          "size": 528,
+          "method": "named binding",
+          "address": "0x006d7728",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_respfile",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7724",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_respfilestart",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d7720",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_respfilesize",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d771c",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_scantok",
+          "section": ".bss",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006d7718",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 3602
     }
   },
   "ownership_review": {

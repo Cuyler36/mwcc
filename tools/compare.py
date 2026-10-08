@@ -252,7 +252,15 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
         except ValueError:
             continue
         for resolution in resolutions:
-            references[resolution["symbol"]].add(resolution["address"])
+            references[resolution["symbol_index"]].add(resolution["address"])
+    code_ranges = []
+    for row in rows:
+        try:
+            code_section, begin, end = function_section(symbols, sections, row['symbol'])
+            section_index = next(i for i, sec in enumerate(sections, 1) if sec is code_section)
+            code_ranges.append((section_index, begin, end, row['address']))
+        except ValueError:
+            continue
     base, target, evidence = {}, {}, []
     complete = True
     for index, section in enumerate(sections, 1):
@@ -270,17 +278,34 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
             name = reference["name"]
             generated_local = reference['section'] > 0 and re.fullmatch(r'_?@\d+', name)
             location = None if generated_local else addresses.get(name, addresses.get(c_symbol(name)))
-            if location is None and len(references[name]) == 1:
-                location = next(iter(references[name]))
+            if location is None and len(references[symbol_index]) == 1:
+                location = next(iter(references[symbol_index]))
+            addend = struct.unpack_from('<I', body, offset)[0] if offset + 4 <= len(body) else 0
+            if location is None:
+                candidates = {address + reference['value'] - begin
+                              for sec, begin, end, address in code_ranges
+                              if reference['section'] == sec and begin <= reference['value'] + addend < end}
+                if len(candidates) == 1:
+                    location = candidates.pop()
             if location is None or kind not in (6, 7) or offset + 4 > len(body):
                 unresolved_relocations.add(offset)
                 continue
-            addend = struct.unpack_from('<I', body, offset)[0]
             struct.pack_into('<I', body, offset, (location + addend - (pe.image_base if kind == 7 else 0)) & 0xffffffff)
         output["data"].extend(body)
-        definitions = sorted((s for s in symbols.values() if s["section"] == index
+        definitions = sorted((dict(s, symbol_index=i) for i, s in symbols.items() if s["section"] == index
                               and not s["name"].startswith('.') and s["storage"] in (2, 3)),
                              key=lambda s: s["value"])
+        anonymous = not definitions
+        if anonymous and body:
+            section_symbols = [(i, s) for i, s in symbols.items()
+                               if s['section'] == index and s['name'].startswith('.')
+                               and s['storage'] == 3 and 0 <= s['value'] < len(body)]
+            # CW94 refers to switch tables through .sw$ labels rather than the
+            # section symbol. Both are anonymous COFF-local evidence; subtract
+            # the label's offset to recover the allocated section's base.
+            locations = {a - s['value'] for i, s in section_symbols for a in references[i]}
+            definitions = [dict(name=f'__anonymous_section_{index}', value=0,
+                                symbol_index=None, anonymous_location=next(iter(locations)) if len(locations) == 1 else None)]
         offsets = sorted({s["value"] for s in definitions} | {len(body)})
         if body and (not definitions or definitions[0]["value"] != 0):
             complete = False
@@ -289,10 +314,14 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
             end = next((o for o in offsets if o > begin), len(body))
             payload = bytes(body[begin:end])
             output["symbols"].append((name, start + begin, len(payload), False))
-            location = None if re.fullmatch(r'_?@\d+', name) else addresses.get(name)
+            symbol_index = symbol['symbol_index']
+            location = symbol.get('anonymous_location') if anonymous else (
+                None if re.fullmatch(r'_?@\d+', name) else addresses.get(name))
             method = 'named binding'
-            if location is None and len(references[name]) == 1:
-                location = next(iter(references[name]))
+            if anonymous:
+                method = 'resolved function reference (anonymous section)'
+            elif location is None and len(references[symbol_index]) == 1:
+                location = next(iter(references[symbol_index]))
                 method = 'resolved function reference'
             entry = dict(name=name, section=category, size=len(payload), method=method)
             try:
@@ -312,6 +341,9 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
                              target_section=target_category,
                              fixups_exact=relocation_fixups == {f for f in fixups if location <= f < location + len(payload)},
                              relocations_resolved=not any(begin <= o < end for o in unresolved_relocations))
+                if anonymous and not (entry['bytes_exact'] and entry['fixups_exact']
+                                      and entry['relocations_resolved'] and category == target_category):
+                    raise ValueError('anonymous section payload, fixups, or category not verified')
                 dest = target.setdefault(target_category, dict(name=target_category, data=bytearray(), symbols=[], flags=target_flags))
                 dest["symbols"].append((name, len(dest["data"]), len(retail), False))
                 dest["data"].extend(retail)
@@ -588,6 +620,7 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
             dict(
                 offset=local,
                 symbol=dest["name"],
+                symbol_index=index,
                 address=address,
                 kind=kind,
                 addend=addend,

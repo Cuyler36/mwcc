@@ -2329,6 +2329,198 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/StringUtils.c",
+      "original_filename": "StringUtils.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "_pstrcpy",
+          "address": "0x0042de40",
+          "size": 30,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pstrcmp",
+          "address": "0x0042de60",
+          "size": 101,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pstrchr",
+          "address": "0x0042ded0",
+          "size": 62,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "c2pstrcpy",
+          "address": "0x0042df10",
+          "size": 62,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "p2cstrcpy",
+          "address": "0x0042df50",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "mvprintf",
+          "address": "0x0042df80",
+          "size": 231,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0042dff2"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c"
+        },
+        {
+          "name": "mprintf",
+          "address": "0x0042e070",
+          "size": 47,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "HPrintF",
+          "address": "0x0042e0a0",
+          "size": 134,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "_pstrcpy",
+          "mac_address": "0x00017650",
+          "linkage_names": [
+            "_pstrcpy"
+          ]
+        },
+        {
+          "name": "_pstrcat",
+          "mac_address": "0x00017688",
+          "linkage_names": [
+            "_pstrcat"
+          ]
+        },
+        {
+          "name": "_pstrcharcat",
+          "mac_address": "0x000176e8",
+          "linkage_names": [
+            "_pstrcharcat"
+          ]
+        },
+        {
+          "name": "pstrncpy",
+          "mac_address": "0x00017708",
+          "linkage_names": [
+            "pstrncpy"
+          ]
+        },
+        {
+          "name": "pstrncat",
+          "mac_address": "0x00017740",
+          "linkage_names": [
+            "pstrncat"
+          ]
+        },
+        {
+          "name": "pstrcmp",
+          "mac_address": "0x000177a4",
+          "linkage_names": [
+            "pstrcmp"
+          ]
+        },
+        {
+          "name": "pstrchr",
+          "mac_address": "0x000177fc",
+          "linkage_names": [
+            "pstrchr"
+          ]
+        },
+        {
+          "name": "c2pstrcpy",
+          "mac_address": "0x00017838",
+          "linkage_names": [
+            "c2pstrcpy"
+          ]
+        },
+        {
+          "name": "p2cstrcpy",
+          "mac_address": "0x000178a0",
+          "linkage_names": [
+            "p2cstrcpy"
+          ]
+        },
+        {
+          "name": "mvprintf",
+          "mac_address": "0x000178ec",
+          "linkage_names": [
+            "mvprintf"
+          ]
+        },
+        {
+          "name": "mprintf",
+          "mac_address": "0x00017a10",
+          "linkage_names": [
+            "mprintf"
+          ]
+        },
+        {
+          "name": "HPrintF",
+          "mac_address": "0x00017a4c",
+          "linkage_names": [
+            "HPrintF"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_incomplete"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/Targets.c",
       "original_filename": "Targets.c",
       "evidence": [
@@ -23852,198 +24044,6 @@
       "status": "unattempted"
     },
     {
-      "source": "src/driver/StringUtils.c",
-      "original_filename": "StringUtils.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "_pstrcpy",
-          "address": "0x0042de40",
-          "size": 30,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "pstrcmp",
-          "address": "0x0042de60",
-          "size": 101,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "pstrchr",
-          "address": "0x0042ded0",
-          "size": 62,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "c2pstrcpy",
-          "address": "0x0042df10",
-          "size": 62,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "p2cstrcpy",
-          "address": "0x0042df50",
-          "size": 39,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "mvprintf",
-          "address": "0x0042df80",
-          "size": 231,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0042dff2"
-          ],
-          "compiled_source": "src/driver/StringUtils.c"
-        },
-        {
-          "name": "mprintf",
-          "address": "0x0042e070",
-          "size": 47,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "HPrintF",
-          "address": "0x0042e0a0",
-          "size": 134,
-          "compiled_source": "src/driver/StringUtils.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "_pstrcpy",
-          "mac_address": "0x00017650",
-          "linkage_names": [
-            "_pstrcpy"
-          ]
-        },
-        {
-          "name": "_pstrcat",
-          "mac_address": "0x00017688",
-          "linkage_names": [
-            "_pstrcat"
-          ]
-        },
-        {
-          "name": "_pstrcharcat",
-          "mac_address": "0x000176e8",
-          "linkage_names": [
-            "_pstrcharcat"
-          ]
-        },
-        {
-          "name": "pstrncpy",
-          "mac_address": "0x00017708",
-          "linkage_names": [
-            "pstrncpy"
-          ]
-        },
-        {
-          "name": "pstrncat",
-          "mac_address": "0x00017740",
-          "linkage_names": [
-            "pstrncat"
-          ]
-        },
-        {
-          "name": "pstrcmp",
-          "mac_address": "0x000177a4",
-          "linkage_names": [
-            "pstrcmp"
-          ]
-        },
-        {
-          "name": "pstrchr",
-          "mac_address": "0x000177fc",
-          "linkage_names": [
-            "pstrchr"
-          ]
-        },
-        {
-          "name": "c2pstrcpy",
-          "mac_address": "0x00017838",
-          "linkage_names": [
-            "c2pstrcpy"
-          ]
-        },
-        {
-          "name": "p2cstrcpy",
-          "mac_address": "0x000178a0",
-          "linkage_names": [
-            "p2cstrcpy"
-          ]
-        },
-        {
-          "name": "mvprintf",
-          "mac_address": "0x000178ec",
-          "linkage_names": [
-            "mvprintf"
-          ]
-        },
-        {
-          "name": "mprintf",
-          "mac_address": "0x00017a10",
-          "linkage_names": [
-            "mprintf"
-          ]
-        },
-        {
-          "name": "HPrintF",
-          "mac_address": "0x00017a4c",
-          "linkage_names": [
-            "HPrintF"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
       "source": "src/driver/TargetOptimizer-ppc-eabi.c",
       "original_filename": "TargetOptimizer-ppc-eabi.c",
       "evidence": [
@@ -42243,6 +42243,166 @@
       "initialized_data_bytes": 56,
       "bss_bytes": 512,
       "membership_reviewed": true
+    },
+    "src/GC_3_0a5_2/driver/StringUtils.c": {
+      "source": "src/GC_3_0a5_2/driver/StringUtils.c",
+      "source_sha256": "81bda09213f6a44b79502a73fe067d55fd5fd4be78ae8199b334381090288b97",
+      "status": "attempted_incomplete",
+      "functions": [
+        {
+          "name": "_pstrcpy",
+          "size": 30,
+          "target_size": 30,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "pstrcmp",
+          "size": 101,
+          "target_size": 101,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "pstrchr",
+          "size": 62,
+          "target_size": 62,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "c2pstrcpy",
+          "size": 62,
+          "target_size": 62,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "p2cstrcpy",
+          "size": 39,
+          "target_size": 39,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "mvprintf",
+          "size": 231,
+          "target_size": 231,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "mprintf",
+          "size": 47,
+          "target_size": 47,
+          "exact": true,
+          "objdiff_percent": 100.0,
+          "fixups_exact": true,
+          "strict_exact": true
+        },
+        {
+          "name": "HPrintF",
+          "size": 125,
+          "target_size": 134,
+          "exact": false,
+          "objdiff_percent": 95.67308,
+          "fixups_exact": false,
+          "strict_exact": false
+        }
+      ],
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "source_bindings": {
+        "_fn_004263c0@4": "0x004263c0",
+        "_xfree@4": "0x00426490",
+        "_vsnprintf": "0x00407f50",
+        "_pfbuf": "0x006d8fd0",
+        "_mvprintf": "0x0042df80"
+      },
+      "data_complete": true,
+      "data": [
+        {
+          "name": "@757",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0067054c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@758",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0067055c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@759",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0067056c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_pfbuf",
+          "section": ".bss",
+          "size": 256,
+          "method": "named binding",
+          "address": "0x006d8fd0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "unmapped_mac_functions": [
+        "_pstrcat",
+        "_pstrcharcat",
+        "pstrncpy",
+        "pstrncat"
+      ],
+      "membership": "Eight Windows functions occupy contiguous 0042de40..0042e126 with alignment-only gaps; no space for the additional four Mac bodies within this range. Their Windows existence/ownership remains unresolved.",
+      "HPrintF_review": "Compared original and compiled full instruction streams: same varargs expression, two strlen calls, append operation, error branch, conditional free and return length. Remaining differences are va_list temporary register and signed16 zero-test expansion; short sign-extension followed by test and test ax have identical zero/nonzero outcomes.",
+      "cp932_compatible": true,
+      "code_bytes": 706,
+      "initialized_data_bytes": 48,
+      "bss_bytes": 256,
+      "membership_reviewed": false,
+      "strict_exact_count": 7
     }
   },
   "ownership_review": {

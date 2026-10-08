@@ -698,5 +698,37 @@
   "CLErrors_FatalError": {
     "name": "CLFatalError",
     "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "_pstrcpy": {
+    "name": "_pstrcpy",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "pstrcmp": {
+    "name": "pstrcmp",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "pstrchr": {
+    "name": "pstrchr",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "c2pstrcpy": {
+    "name": "c2pstrcpy",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "p2cstrcpy": {
+    "name": "p2cstrcpy",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "mvprintf": {
+    "name": "mvprintf",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "mprintf": {
+    "name": "mprintf",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
+  },
+  "HPrintF": {
+    "name": "HPrintF",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c"
   }
 }

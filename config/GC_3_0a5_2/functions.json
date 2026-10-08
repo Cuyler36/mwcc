@@ -3292,12 +3292,12 @@
     "name": "_pstrcpy",
     "address": "0x0042de40",
     "size": 30,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "_pstrcpy",
     "baseline_address": "0x0040e8a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3305,12 +3305,12 @@
     "name": "pstrcmp",
     "address": "0x0042de60",
     "size": 101,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "pstrcmp",
     "baseline_address": "0x0040e8c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3318,12 +3318,12 @@
     "name": "pstrchr",
     "address": "0x0042ded0",
     "size": 62,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "pstrchr",
     "baseline_address": "0x0040e910",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3331,12 +3331,12 @@
     "name": "c2pstrcpy",
     "address": "0x0042df10",
     "size": 62,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "c2pstrcpy",
     "baseline_address": "0x0040e940",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3344,12 +3344,12 @@
     "name": "p2cstrcpy",
     "address": "0x0042df50",
     "size": 39,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "p2cstrcpy",
     "baseline_address": "0x0040e980",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3357,12 +3357,12 @@
     "name": "mvprintf",
     "address": "0x0042df80",
     "size": 231,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "mvprintf",
     "baseline_address": "0x0040e9b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3370,12 +3370,12 @@
     "name": "mprintf",
     "address": "0x0042e070",
     "size": 47,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "mprintf",
     "baseline_address": "0x0040ea90",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
@@ -3383,12 +3383,12 @@
     "name": "HPrintF",
     "address": "0x0042e0a0",
     "size": 134,
-    "source": "src/driver/StringUtils.c",
+    "source": "src/GC_3_0a5_2/driver/StringUtils.c",
     "baseline_name": "HPrintF",
     "baseline_address": "0x0040eae0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "StringUtils.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

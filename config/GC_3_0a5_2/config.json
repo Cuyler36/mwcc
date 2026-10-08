@@ -86,7 +86,7 @@
     "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "src/driver/Resources.c",
     "src/driver/StaticParserGlue.c",
-    "src/driver/StringUtils.c",
+    "src/GC_3_0a5_2/driver/StringUtils.c",
     "src/driver/TargetOptimizer-ppc-eabi.c",
     "src/driver/TargetPanels-eabi-ppc.c",
     "src/driver/ToolHelpers-cc.c",
@@ -1743,25 +1743,6 @@
         "src/driver"
       ]
     },
-    "src/driver/StringUtils.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
     "src/driver/TargetOptimizer-ppc-eabi.c": {
       "compiler": "cw94",
       "flags": [
@@ -3240,6 +3221,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/StringUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3304,12 +3304,6 @@
     "src/driver/CLProj/CLProj_CopyStringBounded",
     "src/driver/CLFileOps/set_bytes",
     "src/msl/misc_io/clearerr",
-    "src/driver/StringUtils/_pstrcpy",
-    "src/driver/StringUtils/pstrcmp",
-    "src/driver/StringUtils/pstrchr",
-    "src/driver/StringUtils/c2pstrcpy",
-    "src/driver/StringUtils/p2cstrcpy",
-    "src/driver/StringUtils/mprintf",
     "src/driver/Memory/set_storage_handle_data",
     "src/driver/CLIO/CLIO_ConvertPascalToCString",
     "src/driver/Option/push_option",
@@ -3529,7 +3523,14 @@
     "src/GC_3_0a5_2/driver/CLErrors/CLReportOSError",
     "src/GC_3_0a5_2/driver/CLErrors/CLReportCError",
     "src/GC_3_0a5_2/driver/CLErrors/CLInternalError",
-    "src/GC_3_0a5_2/driver/CLErrors/CLFatalError"
+    "src/GC_3_0a5_2/driver/CLErrors/CLFatalError",
+    "src/GC_3_0a5_2/driver/StringUtils/_pstrcpy",
+    "src/GC_3_0a5_2/driver/StringUtils/pstrcmp",
+    "src/GC_3_0a5_2/driver/StringUtils/pstrchr",
+    "src/GC_3_0a5_2/driver/StringUtils/c2pstrcpy",
+    "src/GC_3_0a5_2/driver/StringUtils/p2cstrcpy",
+    "src/GC_3_0a5_2/driver/StringUtils/mvprintf",
+    "src/GC_3_0a5_2/driver/StringUtils/mprintf"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3671,6 +3672,13 @@
       "_CLReportCError": "0x414b20",
       "_CLInternalError": "0x414bb0",
       "_CLFatalError": "0x414c60"
+    },
+    "src/GC_3_0a5_2/driver/StringUtils.c": {
+      "_fn_004263c0@4": "0x004263c0",
+      "_xfree@4": "0x00426490",
+      "_vsnprintf": "0x00407f50",
+      "_pfbuf": "0x006d8fd0",
+      "_mvprintf": "0x0042df80"
     }
   }
 }

@@ -11,7 +11,7 @@ This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstructi
 to GC 3.0a5.2 while retaining the earlier versions.
 
 Current GC 3.0a5.2 status: 213 source files build, 1,108 candidate functions are
-mapped, and 287 functions pass full-byte and relocation checks. Targets.c,
+mapped, and 288 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, and the setjmp runtime unit are
 complete reconstructed translation units. The remaining

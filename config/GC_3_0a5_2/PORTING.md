@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## StringUtils.c: reviewed mapped functions, incomplete membership
+
+Seven of eight Windows functions match exactly. HPrintF is equivalent after
+review of its varargs, append/error, conditional-free, and return paths; its
+remaining register and zero-test differences score 95.67308%. Full-TU code
+similarity is 99.17875%. All 48 initialized bytes and the 256-byte original
+pfbuf match. The Mac map additionally names _pstrcat, _pstrcharcat, pstrncpy,
+and pstrncat. Their Windows existence remains unresolved beyond this contiguous
+eight-function cluster, so the unit remains incomplete.
+
 ## CLErrors.c: complete Windows unit
 
 All nine functions use their original CLGetErrorString, CLMessageReporter,

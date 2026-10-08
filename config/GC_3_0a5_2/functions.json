@@ -9565,223 +9565,233 @@
     }
   },
   {
-    "name": "CBrowse_RecordClassLocation",
-    "address": "0x004c5a60",
+    "name": "CBrowse_NewTemplateFunc",
+    "size": 352,
+    "address": "0x004c5900",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CBrowse_NewTemplateClass",
     "size": 283,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_RecordClassLocation",
-    "baseline_address": "0x004d4130",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c5a60",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_ForwardObjectFileRange",
-    "address": "0x004c5e90",
+    "name": "CBrowse_NewMacro",
+    "size": 278,
+    "address": "0x004c5b80",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CBrowse_NewData",
+    "size": 496,
+    "address": "0x004c5ca0",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CBrowse_NewFunction",
     "size": 97,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_ForwardObjectFileRange",
-    "baseline_address": "0x004d4500",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c5e90",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_function_browse_record",
-    "address": "0x004c5f00",
+    "name": "RecordFunction",
     "size": 665,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "write_function_browse_record",
-    "baseline_address": "0x004d4570",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c5f00",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_WriteRelatedRecord",
-    "address": "0x004c61a0",
+    "name": "CBrowse_NewEnumConstant",
     "size": 345,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_WriteRelatedRecord",
-    "baseline_address": "0x004d48a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c61a0",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_RecordNameRange",
+    "name": "CBrowse_NewEnum",
+    "size": 326,
     "address": "0x004c6300",
-    "size": 326,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_RecordNameRange",
-    "baseline_address": "0x004d49f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_WriteNameLineRange",
+    "name": "CBrowse_NewTypedef",
+    "size": 326,
     "address": "0x004c6450",
-    "size": 326,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_WriteNameLineRange",
-    "baseline_address": "0x004d4b30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_FlushAndRestoreMemberList",
-    "address": "0x004c65a0",
+    "name": "CBrowse_EndStruct",
     "size": 190,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_FlushAndRestoreMemberList",
-    "baseline_address": "0x004d4c70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c65a0",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_WriteStructMember",
-    "address": "0x004c6660",
+    "name": "CBrowse_AddStructMember",
     "size": 263,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_WriteStructMember",
-    "baseline_address": "0x004d4d20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6660",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_BuildTypeStructBrowseInfo",
-    "address": "0x004c6770",
+    "name": "CBrowse_BeginStruct",
     "size": 498,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_BuildTypeStructBrowseInfo",
-    "baseline_address": "0x004d4df0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6770",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_RestoreScope",
-    "address": "0x004c6970",
+    "name": "CBrowse_EndClass",
     "size": 240,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_RestoreScope",
-    "baseline_address": "0x004d4f60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6970",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_RecordDataObject",
-    "address": "0x004c6a60",
+    "name": "CBrowse_AddClassMemberData",
     "size": 316,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_RecordDataObject",
-    "baseline_address": "0x004d5010",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6a60",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_RecordFunction",
-    "address": "0x004c6ba0",
+    "name": "CBrowse_AddClassMemberFunction",
     "size": 353,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_RecordFunction",
-    "baseline_address": "0x004d5100",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6ba0",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_WriteObjMemberVar",
-    "address": "0x004c6d10",
+    "name": "CBrowse_AddClassMemberVar",
     "size": 300,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_WriteObjMemberVar",
-    "baseline_address": "0x004d5270",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6d10",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_GenerateClassRecord",
-    "address": "0x004c6e40",
+    "name": "CBrowse_BeginClass",
     "size": 764,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_GenerateClassRecord",
-    "baseline_address": "0x004d5360",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c6e40",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_text_or_name_id",
-    "address": "0x004c7140",
+    "name": "RecordName",
     "size": 267,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "write_text_or_name_id",
-    "baseline_address": "0x004d5640",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c7140",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_FreeLists",
-    "address": "0x004c7250",
+    "name": "CBrowse_Cleanup",
     "size": 34,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_FreeLists",
-    "baseline_address": "0x004d5710",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c7250",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CBrowse_StoreBrowseData",
-    "address": "0x004c7280",
+    "name": "CBrowse_Finish",
     "size": 177,
-    "source": "src/frontend/CBrowse.c",
-    "baseline_name": "CBrowse_StoreBrowseData",
-    "baseline_address": "0x004d5740",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "address": "0x004c7280",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CBrowse_Setup",
+    "size": 227,
+    "address": "0x004c7340",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+    "identity_evidence": "Whole-image CSV/Mac/assertion/data/direct-call/seam review; canonical browser roles and native packed payloads corroborated.",
+    "boundary_evidence": {
+      "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
       "unresolved_indirect_flow": false
     }
   },

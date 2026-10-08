@@ -228,7 +228,8 @@
     "src/GC_3_0a5_2/backend/PCodeInfo.c",
     "src/GC_3_0a5_2/frontend/CError.c",
     "src/GC_3_0a5_2/frontend/CABI.c",
-    "src/GC_3_0a5_2/frontend/CCallGraph.c"
+    "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "src/GC_3_0a5_2/frontend/CBrowse.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3543,6 +3544,25 @@
       "include_dirs": [
         "src/frontend"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/CBrowse.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
     }
   },
   "matching_functions": [
@@ -4182,7 +4202,25 @@
     "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1760",
     "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1780",
     "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_Cleanup",
-    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_Setup"
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_Setup",
+    "src/GC_3_0a5_2/frontend/CBrowse/RecordName",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_Cleanup",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_Finish",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_Setup",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewTemplateFunc",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewTemplateClass",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewMacro",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewFunction",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_EndStruct",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_EndClass",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewEnumConstant",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewEnum",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_NewTypedef",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_AddStructMember",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_AddClassMemberData",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_AddClassMemberFunction",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_AddClassMemberVar",
+    "src/GC_3_0a5_2/frontend/CBrowse/CBrowse_BeginClass"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5876,6 +5914,68 @@
       "_Dump_CloseToFile": "0x4ebf30",
       "_Dump_CloseToWindow": "0x4ebc80",
       "_Dump_FreeHandle": "0x4ec680"
+    },
+    "src/GC_3_0a5_2/frontend/CBrowse.c": {
+      "_AppendGListByte": "0x46d820",
+      "_AppendGListLong": "0x46d6c0",
+      "_AppendGListNoData": "0x46d880",
+      "_AppendGListWord": "0x46d7c0",
+      "_CError_GetQualifiedName": "0x45e190",
+      "_CError_Internal": "0x45a250",
+      "_FreeGList": "0x46d970",
+      "_GetHashNameNode": "0x46d1d0",
+      "_InitGList": "0x46d9a0",
+      "_memclrw": "0x46c400",
+      "_memcpy": "0x404850",
+      "_strcmp": "0x404120",
+      "_strncpy": "0x404070",
+      "_gNextMemberFuncID": "0x6dcbe8",
+      "_gMemberFuncList": "0x6dcbec",
+      "_gClassData": "0x6dcbfc",
+      "_gBrowseData": "0x6dcc0c",
+      "_use_name_ids": "0x725edd",
+      "_data_0070f1a8": "0x70f1a8",
+      "_data_00710144": "0x710144",
+      "_CError_NoMem": "0x45a230",
+      "_AppendGListData": "0x46d8d0",
+      "_fn_0044d040": "0x44d040",
+      "_fn_0044d0a0": "0x44d0a0",
+      "_fn_00432620": "0x432620",
+      "_fn_004c5f00": "0x4c5f00",
+      "_CHash": "0x46d4e0",
+      "_fn_004531a0": "0x4531a0",
+      "_data_00717466": "0x717466",
+      "_data_0070ffc8": "0x70ffc8",
+      "_CError_GetObjectName": "0x45df60",
+      "_CError_GetTypeName": "0x45ede0",
+      "_IsTempName": "0x455a50",
+      "_CParser_IsDataObject": "0x452f10",
+      "_fn_00558760": "0x558760",
+      "_CTemplTool_Class2TemplClassInst": "0x53ed70",
+      "_CTemplTool_Template2TemplClass": "0x53ee70",
+      "_data_00725d9e": "0x725d9e",
+      "_gFromAccessType": "0x699608",
+      "_RecordName": "0x4c7140",
+      "_CBrowse_Cleanup": "0x4c7250",
+      "_CBrowse_Finish": "0x4c7280",
+      "_CBrowse_Setup": "0x4c7340",
+      "_CBrowse_NewTemplateFunc": "0x4c5900",
+      "_CBrowse_NewTemplateClass": "0x4c5a60",
+      "_CBrowse_NewMacro": "0x4c5b80",
+      "_CBrowse_NewData": "0x4c5ca0",
+      "_CBrowse_NewFunction": "0x4c5e90",
+      "_CBrowse_EndStruct": "0x4c65a0",
+      "_CBrowse_EndClass": "0x4c6970",
+      "_RecordFunction": "0x4c5f00",
+      "_CBrowse_NewEnumConstant": "0x4c61a0",
+      "_CBrowse_NewEnum": "0x4c6300",
+      "_CBrowse_NewTypedef": "0x4c6450",
+      "_CBrowse_AddStructMember": "0x4c6660",
+      "_CBrowse_BeginStruct": "0x4c6770",
+      "_CBrowse_AddClassMemberData": "0x4c6a60",
+      "_CBrowse_AddClassMemberFunction": "0x4c6ba0",
+      "_CBrowse_AddClassMemberVar": "0x4c6d10",
+      "_CBrowse_BeginClass": "0x4c6e40"
     }
   },
   "original_source_units": {
@@ -5887,6 +5987,7 @@
     "PCode.c": "src/GC_3_0a5_2/backend/PCode.c",
     "CError.c": "src/GC_3_0a5_2/frontend/CError.c",
     "CABI.c": "src/GC_3_0a5_2/frontend/CABI.c",
-    "CCallGraph.c": "src/GC_3_0a5_2/frontend/CCallGraph.c"
+    "CCallGraph.c": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "CBrowse.c": "src/GC_3_0a5_2/frontend/CBrowse.c"
   }
 }

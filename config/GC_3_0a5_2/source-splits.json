@@ -2294,5 +2294,73 @@
   "build_vbase_ptr_initializers": {
     "name": "CABI_InitVBasePtr1",
     "source": "src/GC_3_0a5_2/frontend/CABI.c"
+  },
+  "CBrowse_RecordClassLocation": {
+    "name": "CBrowse_NewTemplateClass",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_ForwardObjectFileRange": {
+    "name": "CBrowse_NewFunction",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "write_function_browse_record": {
+    "name": "RecordFunction",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_WriteRelatedRecord": {
+    "name": "CBrowse_NewEnumConstant",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_RecordNameRange": {
+    "name": "CBrowse_NewEnum",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_WriteNameLineRange": {
+    "name": "CBrowse_NewTypedef",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_FlushAndRestoreMemberList": {
+    "name": "CBrowse_EndStruct",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_WriteStructMember": {
+    "name": "CBrowse_AddStructMember",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_BuildTypeStructBrowseInfo": {
+    "name": "CBrowse_BeginStruct",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_RestoreScope": {
+    "name": "CBrowse_EndClass",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_RecordDataObject": {
+    "name": "CBrowse_AddClassMemberData",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_RecordFunction": {
+    "name": "CBrowse_AddClassMemberFunction",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_WriteObjMemberVar": {
+    "name": "CBrowse_AddClassMemberVar",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_GenerateClassRecord": {
+    "name": "CBrowse_BeginClass",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "write_text_or_name_id": {
+    "name": "RecordName",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_FreeLists": {
+    "name": "CBrowse_Cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+  },
+  "CBrowse_StoreBrowseData": {
+    "name": "CBrowse_Finish",
+    "source": "src/GC_3_0a5_2/frontend/CBrowse.c"
   }
 }

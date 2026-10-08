@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "CBrowse.c"
 #include "compiler/common.h"
 #include "compiler/CBrowse.h"
@@ -87,6 +88,7 @@ void write_template_function_browse_record(TemplateFunction *info)
 
 /* Browse record metadata. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_RecordClassLocation(struct TypeClass *type, PFile *location, int first_line, int last_line)
 {
     short file_id;
@@ -114,6 +116,7 @@ void CBrowse_RecordClassLocation(struct TypeClass *type, PFile *location, int fi
         }
     }
 }
+#endif
 
 /* Browse output records; opaque bytes retain the surrounding record data. */
 
@@ -202,6 +205,7 @@ void CBrowse_WriteObjectBrowseInfo(Object *object, PFile *metadata, PFile *endMe
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_ForwardObjectFileRange(Object *object, PFile *browseFile, PFile *sourceFile, SInt32 startOffset,
                                     SInt32 endOffset)
 {
@@ -210,7 +214,9 @@ void CBrowse_ForwardObjectFileRange(Object *object, PFile *browseFile, PFile *so
     if (sourceFile != NULL && sourceFile->fileID != 0 && startOffset > 0 && endOffset + 1 >= startOffset)
         write_function_browse_record(object, browseFile->fileID, sourceFile->fileID, startOffset, endOffset + 1);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void write_function_browse_record(Object *obj, SInt32 fileNumber, SInt32 scopeNumber, SInt32 startLine, SInt32 endLine)
 {
     SInt32 flags;
@@ -328,7 +334,9 @@ void write_function_browse_record(Object *obj, SInt32 fileNumber, SInt32 scopeNu
     }
     AppendGListLong(&data_00581ba8.buffer, functionId);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_WriteRelatedRecord(NameSpace *nameSpace, HashNameNode *name, PFile *record, PFile *relatedRecord,
                                 SInt32 first, SInt32 last)
 {
@@ -359,9 +367,11 @@ void CBrowse_WriteRelatedRecord(NameSpace *nameSpace, HashNameNode *name, PFile 
             AppendGListWord(&data_00581ba8.buffer, 0);
     }
 }
+#endif
 
 /* Record metadata used by browse references. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_RecordNameRange(NameSpace *nameSpace, HashNameNode *hn, PFile *startRecord, PFile *endRecord, SInt32 start,
                              SInt32 end)
 {
@@ -394,6 +404,8 @@ void CBrowse_RecordNameRange(NameSpace *nameSpace, HashNameNode *hn, PFile *star
         }
     }
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_WriteStructMember(StructMember *param0, SInt32 param1, SInt32 param2)
 {
     SInt16 len;
@@ -411,6 +423,7 @@ void CBrowse_WriteStructMember(StructMember *param0, SInt32 param1, SInt32 param
         CompilerTools_AppendGListData(&browse_member_list, param0->name->name, len + 1);
     }
 }
+#endif
 /* Global 16-byte browse/line state at 0x581bb8 (four dwords). */
 
 /* Sub-record reached through obj->f50 / obj->f54. */
@@ -423,6 +436,7 @@ void CBrowse_WriteStructMember(StructMember *param0, SInt32 param1, SInt32 param
 
 /* Input to a browse record. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_BuildTypeStructBrowseInfo(DeclInfo *obj, TypeStruct *info, GList *out)
 {
     HashNameNode *name;
@@ -451,8 +465,10 @@ void CBrowse_BuildTypeStructBrowseInfo(DeclInfo *obj, TypeStruct *info, GList *o
     AppendGListLong(&browse_member_list, 0);
     AppendGListByte(&browse_member_list, 0);
 }
+#endif
 /* 0x563344; table sits 4 bytes before it */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_RecordDataObject(Object *obj, SInt32 param2, SInt32 param3)
 {
     SInt16 len;
@@ -473,7 +489,9 @@ void CBrowse_RecordDataObject(Object *obj, SInt32 param2, SInt32 param3)
         CompilerTools_AppendGListData(&browse_member_list, obj->name->name, len + 1);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_RecordFunction(Object *obj, SInt32 start, SInt32 end)
 {
     UInt32 flags;
@@ -514,6 +532,8 @@ void CBrowse_RecordFunction(Object *obj, SInt32 start, SInt32 end)
         }
     }
 }
+#endif
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_WriteObjMemberVar(ObjMemberVar *rec, SInt32 start, SInt32 end)
 {
     SInt16 len;
@@ -533,11 +553,13 @@ void CBrowse_WriteObjMemberVar(ObjMemberVar *rec, SInt32 start, SInt32 end)
         CompilerTools_AppendGListData(&browse_member_list, rec->name->name, len + 1);
     }
 }
+#endif
 
 /* Entries referenced by a class browse record. */
 
 /* Class data and entry references collected for browse output. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_GenerateClassRecord(DeclInfo *record, GList *out)
 {
     HashNameNode *name;
@@ -607,7 +629,9 @@ void CBrowse_GenerateClassRecord(DeclInfo *record, GList *out)
         write_text_or_name_id(&browse_member_list, baseName, baseNameID);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void write_text_or_name_id(GList *output, char *text, int index)
 {
     HashNameNode *entry;
@@ -635,14 +659,18 @@ void write_text_or_name_id(GList *output, char *text, int index)
             CompilerTools_AppendGListData(output, text, length + 1U);
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_FreeLists(struct CPrepCU *cu)
 {
     FreeGList(&data_00581ba8.buffer);
     FreeGList(&browse_member_list);
     FreeGList(&browse_function_buffer.buffer);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_FlushAndRestoreMemberList(SInt32 value, GList *state)
 {
     unsigned int offset;
@@ -661,7 +689,9 @@ void CBrowse_FlushAndRestoreMemberList(SInt32 value, GList *state)
     }
     browse_member_list = *state;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_RestoreScope(SInt32 statementOffset, GList *savedScope)
 {
     UInt32 outputOffset;
@@ -682,6 +712,7 @@ void CBrowse_RestoreScope(SInt32 statementOffset, GList *savedScope)
     }
     browse_member_list = *savedScope;
 }
+#endif
 /* Source file metadata used by browser records. */
 
 static inline void writeBrowseLine(GList *stream, unsigned int line)
@@ -699,6 +730,7 @@ static inline void writeBrowseRecordKind(GList *stream, SInt8 kind)
     AppendGListByte(stream, kind);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_WriteNameLineRange(NameSpace *names, HashNameNode *name, PFile *file, PFile *endFile, int firstLine,
                                 int lastLine)
 {
@@ -731,9 +763,11 @@ void CBrowse_WriteNameLineRange(NameSpace *names, HashNameNode *name, PFile *fil
             AppendGListWord(&data_00581ba8.buffer, 0);
     }
 }
+#endif
 
 /* Arguments and result for the browse-data callback. */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CBrowse_StoreBrowseData(CPrepCU *arguments)
 {
     Object **objects;
@@ -760,6 +794,7 @@ void CBrowse_StoreBrowseData(CPrepCU *arguments)
         }
     }
 }
+#endif
 /* Fixed-size browse stream header. */
 
 void CBrowse_InitBrowseData(CPrepCU *classes)

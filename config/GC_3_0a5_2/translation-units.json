@@ -10642,6 +10642,311 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+      "original_filename": "CBrowse.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "CBrowse_NewTemplateFunc",
+          "address": "0x004c5900",
+          "size": 352,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c5a3d"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewTemplateClass",
+          "address": "0x004c5a60",
+          "size": 283,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c5ae0"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewMacro",
+          "address": "0x004c5b80",
+          "size": 278,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c5c8a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewData",
+          "address": "0x004c5ca0",
+          "size": 496,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c5e5a",
+            "0x004c5e70"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewFunction",
+          "address": "0x004c5e90",
+          "size": 97,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "RecordFunction",
+          "address": "0x004c5f00",
+          "size": 665,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c5f4a",
+            "0x004c617a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewEnumConstant",
+          "address": "0x004c61a0",
+          "size": 345,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6247"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewEnum",
+          "address": "0x004c6300",
+          "size": 326,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6394"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_NewTypedef",
+          "address": "0x004c6450",
+          "size": 326,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c64e4"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_EndStruct",
+          "address": "0x004c65a0",
+          "size": 190,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6652"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_AddStructMember",
+          "address": "0x004c6660",
+          "size": 263,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CBrowse_BeginStruct",
+          "address": "0x004c6770",
+          "size": 498,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c68b5",
+            "0x004c692c"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_EndClass",
+          "address": "0x004c6970",
+          "size": 240,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6a4a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_AddClassMemberData",
+          "address": "0x004c6a60",
+          "size": 316,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6b5a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_AddClassMemberFunction",
+          "address": "0x004c6ba0",
+          "size": 353,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6caa",
+            "0x004c6cc0"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_AddClassMemberVar",
+          "address": "0x004c6d10",
+          "size": 300,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6dfa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_BeginClass",
+          "address": "0x004c6e40",
+          "size": 764,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c6f7d",
+            "0x004c702a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "RecordName",
+          "address": "0x004c7140",
+          "size": 267,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c7190"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_Cleanup",
+          "address": "0x004c7250",
+          "size": 34,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CBrowse_Finish",
+          "address": "0x004c7280",
+          "size": 177,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c72aa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        },
+        {
+          "name": "CBrowse_Setup",
+          "address": "0x004c7340",
+          "size": 227,
+          "boundary_evidence": {
+            "method": "Full reviewed native CFG with terminal NOP padding excluded;21-member full-image inventory",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004c7417"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CBrowse.c"
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
       "original_filename": "CCallGraph.c",
       "evidence": [
@@ -29212,299 +29517,11 @@
     },
     {
       "source": "src/frontend/CBrowse.c",
-      "original_filename": "CBrowse.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "FUN_004c5900",
-          "address": "0x004c5900",
-          "size": 352,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c5a3d"
-          ]
-        },
-        {
-          "name": "CBrowse_RecordClassLocation",
-          "address": "0x004c5a60",
-          "size": 283,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c5ae0"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "FUN_004c5b80",
-          "address": "0x004c5b80",
-          "size": 278,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c5c8a"
-          ]
-        },
-        {
-          "name": "FUN_004c5ca0",
-          "address": "0x004c5ca0",
-          "size": 496,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c5e5a",
-            "0x004c5e70"
-          ]
-        },
-        {
-          "name": "CBrowse_ForwardObjectFileRange",
-          "address": "0x004c5e90",
-          "size": 97,
-          "compiled_source": "src/frontend/CBrowse.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "write_function_browse_record",
-          "address": "0x004c5f00",
-          "size": 665,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c5f4a",
-            "0x004c617a"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_WriteRelatedRecord",
-          "address": "0x004c61a0",
-          "size": 345,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6247"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_RecordNameRange",
-          "address": "0x004c6300",
-          "size": 326,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6394"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_WriteNameLineRange",
-          "address": "0x004c6450",
-          "size": 326,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c64e4"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_FlushAndRestoreMemberList",
-          "address": "0x004c65a0",
-          "size": 190,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6652"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_WriteStructMember",
-          "address": "0x004c6660",
-          "size": 263,
-          "compiled_source": "src/frontend/CBrowse.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CBrowse_BuildTypeStructBrowseInfo",
-          "address": "0x004c6770",
-          "size": 498,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c68b5",
-            "0x004c692c"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_RestoreScope",
-          "address": "0x004c6970",
-          "size": 240,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6a4a"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_RecordDataObject",
-          "address": "0x004c6a60",
-          "size": 316,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6b5a"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_RecordFunction",
-          "address": "0x004c6ba0",
-          "size": 353,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6caa",
-            "0x004c6cc0"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_WriteObjMemberVar",
-          "address": "0x004c6d10",
-          "size": 300,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6dfa"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_GenerateClassRecord",
-          "address": "0x004c6e40",
-          "size": 764,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c6f7d",
-            "0x004c702a"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "write_text_or_name_id",
-          "address": "0x004c7140",
-          "size": 267,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c7190"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "CBrowse_FreeLists",
-          "address": "0x004c7250",
-          "size": 34,
-          "compiled_source": "src/frontend/CBrowse.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CBrowse_StoreBrowseData",
-          "address": "0x004c7280",
-          "size": 177,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c72aa"
-          ],
-          "compiled_source": "src/frontend/CBrowse.c"
-        },
-        {
-          "name": "FUN_004c7340",
-          "address": "0x004c7340",
-          "size": 227,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004c7417"
-          ]
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -96703,6 +96720,1128 @@
         "objdiff_cli": "normal per-TU view processed successfully",
         "data_complete": false,
         "matching_limit": "Four emitted tables remain unresolved; descriptor/graph code differences not claimed strict matches."
+      }
+    },
+    "src/GC_3_0a5_2/frontend/CBrowse.c": {
+      "source": "src/GC_3_0a5_2/frontend/CBrowse.c",
+      "source_sha256": "11403a4ab9a9fc153faa8b84ed421c62a0359b53c46cd022df203584721ca63e",
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "identified_native_functions": 21,
+      "strict_exact": 18,
+      "all_identified_native_members_attempted": true,
+      "all_emitted_mapped": true,
+      "universal_TU_completeness": false,
+      "completeness_limit": "Full-image CSV prefix/name search, assertion literal and owned data PE-fixup references, direct CALL targets and padded prologues identify21 native cluster entries. CBrowse_GetLinkName and Mac private EmitStandardData remain separately unlocated; cannot prove all platform omissions/inline identities from symbol-only Mac evidence.",
+      "data_complete": true,
+      "data_sections": {
+        ".data": 16,
+        ".bss": 53
+      },
+      "data_ownership": {
+        "gFromAccessType": "699608 four bytes04010200; Mac canonical ordinary symbol",
+        "assert_filename": "69960c12bytes via resolved code reference",
+        "gNextMemberFuncID": "6dcbe8 size4",
+        "gMemberFuncList": "6dcbec size16",
+        "gClassData": "6dcbfc size16",
+        "gBrowseData": "6dcc0c size16",
+        "use_name_ids": "725edd size1; provisional name, exact Setup/RecordName references",
+        "data_00725d9e": "EXTERNAL; Setup resets it, other native TUs reference it; no local allocation or speculative canonical name"
+      },
+      "nonmatches": {
+        "CBrowse_NewData": "Native object+12 name,+16 type,+24 storage; static classifier4531a0 runs before null assertion; semicolon adds token length70ffc8; file kind/bit/IDs/range guarded. Snapshots qualified name/id and both file IDs before record emit; static/nonstatic kind6/1, optional qualified name and nonstatic storage flag2 preserved. Nonmatch is registers/stack allocation/branch placement; no known behavior gap under native packed-layout ABI.",
+        "RecordFunction": "Native type kind7 and flags22+ template skip rule; ctor/dtor/operator/temp-name selection reviewed including bounded255-byte destructor spelling. Full qualified names, qualifiers16/8/4 =>128/256/512, storage0x102=>2, memberfuncflag16=>8. Positive member ID allocation/update preserved. Remaining register choices differ; no known behavior gap under native packed-layout ABI.",
+        "CBrowse_BeginStruct": "Saves complete GList plus source file in20-byte state; native context offsets132/136/140 and struct name+6. Both normal-file IDs, browse flag, positive start and non-temp name checked. Invalid cases zero new GList without freeing saved list. Emits exact header fields, assert size9, name and terminating metadata. Remaining register/load scheduling differs; no known behavior gap under native packed-layout ABI."
+      },
+      "abi_notes": [
+        "Native object/PFile/type/context payloads differ from shared1.2.5 headers. New source deliberately uses verified packed offsets. Baseline address aliases are native-payload mappings, not proof that unmigrated callers allocate GC3-compatible structs.",
+        "CBrowse_Cleanup takes no arguments natively; cdecl old ignored CU pointer is harmless but native prototype retained.",
+        "CBrowse_BeginStruct and BeginClass saved state has20bytes; EndClass reads saved+16. Old header exposing GList-only storage is insufficient.",
+        "EndClass and EndStruct value parameters are volatile to retain proven native stack-based accesses. Finish member-list slots are volatile to preserve proven reload before RecordFunction."
+      ],
+      "checks": [
+        "objdiff-cli per function",
+        "strict resolved code bytes and complete in-function PE fixup set",
+        "source_data full allocated payload/category/fixup validation with no anonymous or section-name bindings",
+        "CP932 encode passed"
+      ],
+      "evidence": [
+        "build/CBrowse-attempt.json",
+        "build/CBrowse-owned-data.json",
+        "build/CBrowse-full-image-audit.json",
+        "build/CBrowse-Mac-checklist.json",
+        "build/CBrowse-emitted-inventory.json",
+        "build/CBrowse-baseline-aliases.json",
+        "build/CBrowse-scoped-bindings.json",
+        "build/CBrowse-reviewed-rows.json",
+        "build/CBrowse-retail.txt"
+      ],
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 21,
+      "strict_exact_count": 18,
+      "mapped_members": [
+        {
+          "name": "RecordName",
+          "address": "0x4c7140",
+          "size": 267,
+          "compiled_size": 267,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_Cleanup",
+          "address": "0x4c7250",
+          "size": 34,
+          "compiled_size": 34,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_Finish",
+          "address": "0x4c7280",
+          "size": 177,
+          "compiled_size": 177,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_Setup",
+          "address": "0x4c7340",
+          "size": 227,
+          "compiled_size": 227,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewTemplateFunc",
+          "address": "0x4c5900",
+          "size": 352,
+          "compiled_size": 352,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewTemplateClass",
+          "address": "0x4c5a60",
+          "size": 283,
+          "compiled_size": 283,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewMacro",
+          "address": "0x4c5b80",
+          "size": 278,
+          "compiled_size": 278,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewData",
+          "address": "0x4c5ca0",
+          "size": 496,
+          "compiled_size": 480,
+          "strict_exact": false,
+          "objdiff_percent": 94.59333
+        },
+        {
+          "name": "CBrowse_NewFunction",
+          "address": "0x4c5e90",
+          "size": 97,
+          "compiled_size": 97,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_EndStruct",
+          "address": "0x4c65a0",
+          "size": 190,
+          "compiled_size": 190,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_EndClass",
+          "address": "0x4c6970",
+          "size": 240,
+          "compiled_size": 240,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "RecordFunction",
+          "address": "0x4c5f00",
+          "size": 665,
+          "compiled_size": 665,
+          "strict_exact": false,
+          "objdiff_percent": 98.8601
+        },
+        {
+          "name": "CBrowse_NewEnumConstant",
+          "address": "0x4c61a0",
+          "size": 345,
+          "compiled_size": 345,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewEnum",
+          "address": "0x4c6300",
+          "size": 326,
+          "compiled_size": 326,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_NewTypedef",
+          "address": "0x4c6450",
+          "size": 326,
+          "compiled_size": 326,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_AddStructMember",
+          "address": "0x4c6660",
+          "size": 263,
+          "compiled_size": 263,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_BeginStruct",
+          "address": "0x4c6770",
+          "size": 498,
+          "compiled_size": 498,
+          "strict_exact": false,
+          "objdiff_percent": 93.23179
+        },
+        {
+          "name": "CBrowse_AddClassMemberData",
+          "address": "0x4c6a60",
+          "size": 316,
+          "compiled_size": 316,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_AddClassMemberFunction",
+          "address": "0x4c6ba0",
+          "size": 353,
+          "compiled_size": 353,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_AddClassMemberVar",
+          "address": "0x4c6d10",
+          "size": 300,
+          "compiled_size": 300,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "CBrowse_BeginClass",
+          "address": "0x4c6e40",
+          "size": 764,
+          "compiled_size": 764,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        }
+      ],
+      "owned_data": [
+        {
+          "name": "@391",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0069960c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_gFromAccessType",
+          "section": ".data",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x00699608",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_gNextMemberFuncID",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006dcbe8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_gMemberFuncList",
+          "section": ".bss",
+          "size": 16,
+          "method": "named binding",
+          "address": "0x006dcbec",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_gClassData",
+          "section": ".bss",
+          "size": 16,
+          "method": "named binding",
+          "address": "0x006dcbfc",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_gBrowseData",
+          "section": ".bss",
+          "size": 16,
+          "method": "named binding",
+          "address": "0x006dcc0c",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_use_name_ids",
+          "section": ".bss",
+          "size": 1,
+          "method": "named binding",
+          "address": "0x00725edd",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "mac_members": [
+        {
+          "address": "00125fa0",
+          "name": "_CBrowse_GetLinkName",
+          "disposition": "unlocated separate Windows body; no absence or inline identity claimed"
+        },
+        {
+          "address": "00124c30",
+          "name": "_CBrowse_Setup",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00124d48",
+          "name": "_CBrowse_Finish",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00124dd0",
+          "name": "_CBrowse_Cleanup",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "0012639c",
+          "name": "_CBrowse_NewMacro",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "001261bc",
+          "name": "_CBrowse_NewFunction",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00126544",
+          "name": "_CBrowse_NewTemplateFunc",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125d3c",
+          "name": "_CBrowse_NewTypedef",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "001255f8",
+          "name": "_CBrowse_AddClassMemberData",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00126258",
+          "name": "_CBrowse_NewData",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125ec4",
+          "name": "_CBrowse_NewEnumConstant",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125e00",
+          "name": "_CBrowse_NewEnum",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125a38",
+          "name": "_CBrowse_AddStructMember",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125830",
+          "name": "_CBrowse_BeginStruct",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125b4c",
+          "name": "_CBrowse_EndStruct",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125454",
+          "name": "_CBrowse_AddClassMemberFunction",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "0012531c",
+          "name": "_CBrowse_AddClassMemberVar",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00124fb0",
+          "name": "_CBrowse_BeginClass",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00125740",
+          "name": "_CBrowse_EndClass",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "address": "00126470",
+          "name": "_CBrowse_NewTemplateClass",
+          "disposition": "native mapped and attempted"
+        },
+        {
+          "name": "AppendGList",
+          "disposition": "Mac private helper: reserve/copy behavior appears inline in both native EndStruct and EndClass; no separate Windows body identified"
+        },
+        {
+          "name": "RecordName",
+          "disposition": "native mapped 4c7140 and strict exact"
+        },
+        {
+          "name": "EmitStandardData",
+          "disposition": "Mac private helper remains separately unlocated; native record header/string emission reviewed within all relevant mapped functions, without asserting helper identity"
+        },
+        {
+          "name": "RecordFunction",
+          "disposition": "native mapped 4c5f00 and attempted"
+        },
+        {
+          "name": "RecordUndefinedMemberFunctions",
+          "disposition": "Mac private helper behavior is represented by native Finish member-list traversal; no separate Windows body identified"
+        }
+      ],
+      "whole_image_audit": {
+        "cluster": [
+          "0x4c5900",
+          "0x4c7430"
+        ],
+        "named_entries": [
+          {
+            "name": "RecordName",
+            "address": "0x4c7140",
+            "size": 267
+          },
+          {
+            "name": "CBrowse_Cleanup",
+            "address": "0x4c7250",
+            "size": 34
+          },
+          {
+            "name": "CBrowse_Finish",
+            "address": "0x4c7280",
+            "size": 177
+          },
+          {
+            "name": "CBrowse_Setup",
+            "address": "0x4c7340",
+            "size": 227
+          },
+          {
+            "name": "CBrowse_NewTemplateFunc",
+            "address": "0x4c5900",
+            "size": 352
+          },
+          {
+            "name": "CBrowse_NewTemplateClass",
+            "address": "0x4c5a60",
+            "size": 283
+          },
+          {
+            "name": "CBrowse_NewMacro",
+            "address": "0x4c5b80",
+            "size": 278
+          },
+          {
+            "name": "CBrowse_NewData",
+            "address": "0x4c5ca0",
+            "size": 496
+          },
+          {
+            "name": "CBrowse_NewFunction",
+            "address": "0x4c5e90",
+            "size": 97
+          },
+          {
+            "name": "CBrowse_EndStruct",
+            "address": "0x4c65a0",
+            "size": 190
+          },
+          {
+            "name": "CBrowse_EndClass",
+            "address": "0x4c6970",
+            "size": 240
+          },
+          {
+            "name": "RecordFunction",
+            "address": "0x4c5f00",
+            "size": 665
+          },
+          {
+            "name": "CBrowse_NewEnumConstant",
+            "address": "0x4c61a0",
+            "size": 345
+          },
+          {
+            "name": "CBrowse_NewEnum",
+            "address": "0x4c6300",
+            "size": 326
+          },
+          {
+            "name": "CBrowse_NewTypedef",
+            "address": "0x4c6450",
+            "size": 326
+          },
+          {
+            "name": "CBrowse_AddStructMember",
+            "address": "0x4c6660",
+            "size": 263
+          },
+          {
+            "name": "CBrowse_BeginStruct",
+            "address": "0x4c6770",
+            "size": 498
+          },
+          {
+            "name": "CBrowse_AddClassMemberData",
+            "address": "0x4c6a60",
+            "size": 316
+          },
+          {
+            "name": "CBrowse_AddClassMemberFunction",
+            "address": "0x4c6ba0",
+            "size": 353
+          },
+          {
+            "name": "CBrowse_AddClassMemberVar",
+            "address": "0x4c6d10",
+            "size": 300
+          },
+          {
+            "name": "CBrowse_BeginClass",
+            "address": "0x4c6e40",
+            "size": 764
+          }
+        ],
+        "direct_call_targets": {
+          "0x4c7340": [
+            "0x440f35",
+            "0x4411ac",
+            "0x4415c7",
+            "0x441732"
+          ],
+          "0x4c7250": [
+            "0x441153",
+            "0x44152b"
+          ],
+          "0x4c7280": [
+            "0x441656",
+            "0x441673"
+          ],
+          "0x4c5b80": [
+            "0x4428b6"
+          ],
+          "0x4c7140": [
+            "0x4c59f3",
+            "0x4c5a15",
+            "0x4c5b4f",
+            "0x4c5c5e",
+            "0x4c5dfc",
+            "0x4c5e1c",
+            "0x4c6037",
+            "0x4c6069",
+            "0x4c62be",
+            "0x4c62d9",
+            "0x4c640b",
+            "0x4c6426",
+            "0x4c655b",
+            "0x4c6576",
+            "0x4c68ec",
+            "0x4c6fb9",
+            "0x4c6fee",
+            "0x4c7127"
+          ],
+          "0x4c5f00": [
+            "0x4c5ee6",
+            "0x4c72f3"
+          ],
+          "0x4c5900": [
+            "0x4eeb08"
+          ],
+          "0x4c5e90": [
+            "0x4ef057",
+            "0x4ef0c7",
+            "0x50e149",
+            "0x5107c5",
+            "0x5a221f"
+          ],
+          "0x4c6e40": [
+            "0x50a78f"
+          ],
+          "0x4c6970": [
+            "0x50a837"
+          ],
+          "0x4c6d10": [
+            "0x50d6e0"
+          ],
+          "0x4c6ba0": [
+            "0x50e096"
+          ],
+          "0x4c6770": [
+            "0x50e5e6"
+          ],
+          "0x4c65a0": [
+            "0x50e63d"
+          ],
+          "0x4c6660": [
+            "0x50ea60"
+          ],
+          "0x4c6300": [
+            "0x50f1d4"
+          ],
+          "0x4c61a0": [
+            "0x50f97d"
+          ],
+          "0x4c5ca0": [
+            "0x510cb1"
+          ],
+          "0x4c6a60": [
+            "0x510ff3"
+          ],
+          "0x4c6450": [
+            "0x51136a"
+          ],
+          "0x4c5a60": [
+            "0x5dafdb",
+            "0x5db7b6"
+          ]
+        },
+        "unknown_interior_call_targets": [],
+        "allocated_data_fixup_references": {
+          "0x725d9e": [
+            "0x44371f",
+            "0x4c73a2",
+            "0x4eeab1",
+            "0x4eeab8",
+            "0x4eeac4",
+            "0x4ef01c",
+            "0x4ef023",
+            "0x4ef02f",
+            "0x4ef084",
+            "0x4ef08b",
+            "0x4ef097",
+            "0x5a1dfd",
+            "0x5a1e09",
+            "0x5a1f52"
+          ],
+          "0x6dcc0c": [
+            "0x4c598c",
+            "0x4c599c",
+            "0x4c59ac",
+            "0x4c59bf",
+            "0x4c59d3",
+            "0x4c59e1",
+            "0x4c59ef",
+            "0x4c5a11",
+            "0x4c5a20",
+            "0x4c5a53",
+            "0x4c5aea",
+            "0x4c5afa",
+            "0x4c5b0a",
+            "0x4c5b1a",
+            "0x4c5b2a",
+            "0x4c5b38",
+            "0x4c5b4b",
+            "0x4c5b5a",
+            "0x4c5b68",
+            "0x4c5bfc",
+            "0x4c5c0c",
+            "0x4c5c1c",
+            "0x4c5c2c",
+            "0x4c5c3c",
+            "0x4c5c4a",
+            "0x4c5c5a",
+            "0x4c5c69",
+            "0x4c5d8f",
+            "0x4c5d9f",
+            "0x4c5db1",
+            "0x4c5dc5",
+            "0x4c5dd9",
+            "0x4c5de7",
+            "0x4c5df8",
+            "0x4c5e18",
+            "0x4c5e3d",
+            "0x4c5e83",
+            "0x4c5fbf",
+            "0x4c5fd4",
+            "0x4c5fe9",
+            "0x4c6000",
+            "0x4c6017",
+            "0x4c6025",
+            "0x4c6033",
+            "0x4c6065",
+            "0x4c60b9",
+            "0x4c60e8",
+            "0x4c6189",
+            "0x4c6251",
+            "0x4c6261",
+            "0x4c6271",
+            "0x4c6285",
+            "0x4c6299",
+            "0x4c62a7",
+            "0x4c62ba",
+            "0x4c62d5",
+            "0x4c62e6",
+            "0x4c639e",
+            "0x4c63ae",
+            "0x4c63be",
+            "0x4c63d2",
+            "0x4c63e6",
+            "0x4c63f4",
+            "0x4c6407",
+            "0x4c6422",
+            "0x4c6433",
+            "0x4c64ee",
+            "0x4c64fe",
+            "0x4c650e",
+            "0x4c6522",
+            "0x4c6536",
+            "0x4c6544",
+            "0x4c6557",
+            "0x4c6572",
+            "0x4c6583",
+            "0x4c65dc",
+            "0x4c65f2",
+            "0x4c6610",
+            "0x4c69cd",
+            "0x4c69e3",
+            "0x4c6a01",
+            "0x4c7251",
+            "0x4c7314",
+            "0x4c7320",
+            "0x4c735d",
+            "0x4c73fe"
+          ],
+          "0x69960c": [
+            "0x4c5a39",
+            "0x4c5adc",
+            "0x4c5c86",
+            "0x4c5e56",
+            "0x4c5e6c",
+            "0x4c5f46",
+            "0x4c6176",
+            "0x4c6243",
+            "0x4c6390",
+            "0x4c64e0",
+            "0x4c664e",
+            "0x4c68b1",
+            "0x4c6928",
+            "0x4c6a46",
+            "0x4c6b56",
+            "0x4c6ca6",
+            "0x4c6cbc",
+            "0x4c6df6",
+            "0x4c6f79",
+            "0x4c7026",
+            "0x4c718c",
+            "0x4c72a6",
+            "0x4c7413"
+          ],
+          "0x6dcbe8": [
+            "0x4c60d8",
+            "0x4c60de",
+            "0x4c6cdf",
+            "0x4c6ce5",
+            "0x4c7398"
+          ],
+          "0x6dcbfc": [
+            "0x4c65b0",
+            "0x4c65c8",
+            "0x4c65ec",
+            "0x4c661c",
+            "0x4c6629",
+            "0x4c667e",
+            "0x4c66a4",
+            "0x4c66b2",
+            "0x4c66c0",
+            "0x4c66d0",
+            "0x4c66e0",
+            "0x4c670e",
+            "0x4c6723",
+            "0x4c6737",
+            "0x4c6749",
+            "0x4c6758",
+            "0x4c6791",
+            "0x4c683a",
+            "0x4c6853",
+            "0x4c686a",
+            "0x4c6881",
+            "0x4c6897",
+            "0x4c68c7",
+            "0x4c68d5",
+            "0x4c68e8",
+            "0x4c68f7",
+            "0x4c6905",
+            "0x4c6913",
+            "0x4c693b",
+            "0x4c6953",
+            "0x4c6980",
+            "0x4c69b9",
+            "0x4c69dd",
+            "0x4c6a0d",
+            "0x4c6a1a",
+            "0x4c6a79",
+            "0x4c6ab3",
+            "0x4c6acb",
+            "0x4c6ad9",
+            "0x4c6ae9",
+            "0x4c6af9",
+            "0x4c6b27",
+            "0x4c6b3c",
+            "0x4c6b6c",
+            "0x4c6b7e",
+            "0x4c6b8d",
+            "0x4c6bb6",
+            "0x4c6c36",
+            "0x4c6c4e",
+            "0x4c6c5b",
+            "0x4c6c6f",
+            "0x4c6c7f",
+            "0x4c6c8f",
+            "0x4c6d29",
+            "0x4c6d54",
+            "0x4c6d6c",
+            "0x4c6d7a",
+            "0x4c6d8a",
+            "0x4c6d9a",
+            "0x4c6dc8",
+            "0x4c6ddd",
+            "0x4c6e0c",
+            "0x4c6e1e",
+            "0x4c6e2d",
+            "0x4c6e64",
+            "0x4c6f03",
+            "0x4c6f1b",
+            "0x4c6f32",
+            "0x4c6f49",
+            "0x4c6f5f",
+            "0x4c6f8f",
+            "0x4c6f9d",
+            "0x4c6fb5",
+            "0x4c6fea",
+            "0x4c6ff9",
+            "0x4c7039",
+            "0x4c704a",
+            "0x4c705b",
+            "0x4c706d",
+            "0x4c7092",
+            "0x4c70a3",
+            "0x4c7123",
+            "0x4c725c"
+          ],
+          "0x6dcc00": [
+            "0x4c65c0",
+            "0x4c65d7",
+            "0x4c65fa",
+            "0x4c6631",
+            "0x4c6799",
+            "0x4c68a3",
+            "0x4c698d",
+            "0x4c69c8",
+            "0x4c69eb",
+            "0x4c6a22",
+            "0x4c6e6b",
+            "0x4c6f6b"
+          ],
+          "0x6dcc10": [
+            "0x4c65e2",
+            "0x4c69d3",
+            "0x4c728e"
+          ],
+          "0x6dcc04": [
+            "0x4c6639",
+            "0x4c67a2",
+            "0x4c6a2a",
+            "0x4c6e73"
+          ],
+          "0x6dcc08": [
+            "0x4c6643",
+            "0x4c67ab",
+            "0x4c6a34",
+            "0x4c6e7b"
+          ],
+          "0x699608": [
+            "0x4c6ac5",
+            "0x4c6c48",
+            "0x4c6d66",
+            "0x4c708c"
+          ],
+          "0x6dcbec": [
+            "0x4c6cf4",
+            "0x4c7267",
+            "0x4c72b5",
+            "0x4c72c6",
+            "0x4c7307",
+            "0x4c7378"
+          ],
+          "0x725edd": [
+            "0x4c7167",
+            "0x4c71a2",
+            "0x4c73aa",
+            "0x4c73e8"
+          ],
+          "0x6dcbf0": [
+            "0x4c72c0"
+          ]
+        },
+        "assertion_string_pushes": [
+          "0x4c5a38",
+          "0x4c5adb",
+          "0x4c5c85",
+          "0x4c5e55",
+          "0x4c5e6b",
+          "0x4c5f45",
+          "0x4c6175",
+          "0x4c6242",
+          "0x4c638f",
+          "0x4c64df",
+          "0x4c664d",
+          "0x4c68b0",
+          "0x4c6927",
+          "0x4c6a45",
+          "0x4c6b55",
+          "0x4c6ca5",
+          "0x4c6cbb",
+          "0x4c6df5",
+          "0x4c6f78",
+          "0x4c7025",
+          "0x4c718b",
+          "0x4c72a5",
+          "0x4c7412"
+        ],
+        "unmapped_padding_prologue_candidates": []
+      },
+      "baseline_alias_abi_review": [
+        {
+          "address": "0x4c5a60",
+          "baseline_name": "CBrowse_RecordClassLocation",
+          "name": "CBrowse_NewTemplateClass",
+          "symbol": "_CBrowse_NewTemplateClass",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c5e90",
+          "baseline_name": "CBrowse_ForwardObjectFileRange",
+          "name": "CBrowse_NewFunction",
+          "symbol": "_CBrowse_NewFunction",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c5f00",
+          "baseline_name": "write_function_browse_record",
+          "name": "RecordFunction",
+          "symbol": "_RecordFunction",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c61a0",
+          "baseline_name": "CBrowse_WriteRelatedRecord",
+          "name": "CBrowse_NewEnumConstant",
+          "symbol": "_CBrowse_NewEnumConstant",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6300",
+          "baseline_name": "CBrowse_RecordNameRange",
+          "name": "CBrowse_NewEnum",
+          "symbol": "_CBrowse_NewEnum",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6450",
+          "baseline_name": "CBrowse_WriteNameLineRange",
+          "name": "CBrowse_NewTypedef",
+          "symbol": "_CBrowse_NewTypedef",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c65a0",
+          "baseline_name": "CBrowse_FlushAndRestoreMemberList",
+          "name": "CBrowse_EndStruct",
+          "symbol": "_CBrowse_EndStruct",
+          "abi": "cdecl scalar/GList payload compatible",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6660",
+          "baseline_name": "CBrowse_WriteStructMember",
+          "name": "CBrowse_AddStructMember",
+          "symbol": "_CBrowse_AddStructMember",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6770",
+          "baseline_name": "CBrowse_BuildTypeStructBrowseInfo",
+          "name": "CBrowse_BeginStruct",
+          "symbol": "_CBrowse_BeginStruct",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6970",
+          "baseline_name": "CBrowse_RestoreScope",
+          "name": "CBrowse_EndClass",
+          "symbol": "_CBrowse_EndClass",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6a60",
+          "baseline_name": "CBrowse_RecordDataObject",
+          "name": "CBrowse_AddClassMemberData",
+          "symbol": "_CBrowse_AddClassMemberData",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6ba0",
+          "baseline_name": "CBrowse_RecordFunction",
+          "name": "CBrowse_AddClassMemberFunction",
+          "symbol": "_CBrowse_AddClassMemberFunction",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6d10",
+          "baseline_name": "CBrowse_WriteObjMemberVar",
+          "name": "CBrowse_AddClassMemberVar",
+          "symbol": "_CBrowse_AddClassMemberVar",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c6e40",
+          "baseline_name": "CBrowse_GenerateClassRecord",
+          "name": "CBrowse_BeginClass",
+          "symbol": "_CBrowse_BeginClass",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c7140",
+          "baseline_name": "write_text_or_name_id",
+          "name": "RecordName",
+          "symbol": "_RecordName",
+          "abi": "cdecl scalar/GList payload compatible",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c7250",
+          "baseline_name": "CBrowse_FreeLists",
+          "name": "CBrowse_Cleanup",
+          "symbol": "_CBrowse_Cleanup",
+          "abi": "cdecl same scalar arguments; extra ignored old Cleanup CU argument",
+          "scope": "GC3 source split only; preserve other versions"
+        },
+        {
+          "address": "0x4c7280",
+          "baseline_name": "CBrowse_StoreBrowseData",
+          "name": "CBrowse_Finish",
+          "symbol": "_CBrowse_Finish",
+          "abi": "cdecl argument count preserved; native GC3 pointer payload/layout required",
+          "scope": "GC3 source split only; preserve other versions"
+        }
+      ],
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 21,
+        "attempted_members": 21,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All CSV browser names, assertion string references, owned-data PE fixup references, direct call targets and padded prologues audited;21 emitted bodies all reviewed. Unlocated Mac names explicitly retained as search limits."
+      },
+      "retained_versions_validation": [
+        {
+          "version": "GC_1_2_5",
+          "normalized_object_sha256": "01f6d06a90de15b6667a6e8bfb84a15f5dd0779a6ac31e43bc38fa761139c9d5",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_2_5n",
+          "normalized_object_sha256": "01f6d06a90de15b6667a6e8bfb84a15f5dd0779a6ac31e43bc38fa761139c9d5",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_3",
+          "normalized_object_sha256": "823cb79cf6ecfc9f4c01073c41b3dd52469440bfd1a410b88d4b67a492b6f8a2",
+          "unchanged": true
+        }
+      ],
+      "normal_project_validation": {
+        "build": "all_source progress passed",
+        "strict_exact": 18,
+        "objdiff_cli": "normal per-TU view processed successfully",
+        "data_complete": true,
+        "retained_versions": "Every symbol, section byte and relocation unchanged in all three retained CBrowse objects."
       }
     }
   },

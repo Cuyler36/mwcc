@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 227 source files build, 1,485 candidate functions are
-mapped, and 637 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 228 source files build, 1,489 candidate functions are
+mapped, and 655 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -73,6 +73,12 @@ CCallGraph has all 15 identified members attempted, including its graph and IR
 helpers, with 11 exact matches. Two bodies retain reviewed code differences;
 two other bodies and four emitted switch tables remain unresolved. A whole-image
 membership audit distinguishes graph consumers in other source families.
+
+CBrowse has all 21 identified native members attempted, with 18 exact matches.
+The three remaining bodies have complete native control-flow reviews; data and
+BSS match. Native saved browser state is 20 bytes, so untouched callers using
+the old 16-byte GList storage still need migration. Separate Mac helper names
+without Windows bodies remain documented search limits.
 
 The shared `mwcc.csv` is preserved as normalized name candidates in
 [symbol-hints.json](config/GC_3_0a5_2/symbol-hints.json), with its input hash

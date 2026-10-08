@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 246 source files build, 1,962 candidate functions are
-mapped, and 890 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 246 source files build, 1,976 candidate functions are
+mapped, and 897 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -149,6 +149,13 @@ instruction comparisons. Its filename and 64 switch-table bytes match; 368
 generated switch bytes remain unclaimed. Two neighboring formatting helpers
 were separately attempted and held. The incompatible legacy DumpIR formatter
 mapping is removed.
+
+StructMoves has all 17 supported structure-copy helpers attempted, with seven
+exact matches. Eleven compiler profiles build, and all bodies pass 5,100 bounded
+native instruction comparisons. Both filename allocations and a 44-byte switch
+table match; 464 generated switch bytes remain unresolved. Native operands use
+28-byte records, and the pair-copy loop takes four arguments. An exact neighboring
+register scan stays separate until its source ownership is supported.
 
 PCodeInfo has all 21 identified native bodies reconstructed, including the
 41-terminal instruction formatter, with ten exact matches. Four switch-table

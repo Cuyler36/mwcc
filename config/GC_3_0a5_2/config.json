@@ -194,7 +194,6 @@
     "src/optimizer/LoopDetection.c",
     "src/optimizer/LoopOptimization.c",
     "src/optimizer/StrengthReduction.c",
-    "src/optimizer/StructMoves.c",
     "src/optimizer/ValueNumbering.c",
     "src/optimizer/VectorArraysToRegs.c",
     "src/runtime/ExceptionTables.c",
@@ -247,7 +246,8 @@
     "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
     "src/GC_3_0a5_2/frontend/SourceText.c",
     "src/GC_3_0a5_2/frontend/CExprTools.c",
-    "src/GC_3_0a5_2/optimizer/IroType.c"
+    "src/GC_3_0a5_2/optimizer/IroType.c",
+    "src/GC_3_0a5_2/backend/StructMoves.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -2654,25 +2654,6 @@
         "src/optimizer"
       ]
     },
-    "src/optimizer/StructMoves.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/optimizer"
-      ]
-    },
     "src/optimizer/ValueNumbering.c": {
       "compiler": "cw94",
       "flags": [
@@ -3934,6 +3915,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/StructMoves.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4826,7 +4825,14 @@
     "src/GC_3_0a5_2/optimizer/IroType/fn_005b5820",
     "src/GC_3_0a5_2/optimizer/IroType/fn_005b5a50",
     "src/GC_3_0a5_2/optimizer/IroType/fn_005b7af0",
-    "src/GC_3_0a5_2/optimizer/IroType/fn_005b7e20"
+    "src/GC_3_0a5_2/optimizer/IroType/fn_005b7e20",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059ce20",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059d5f0",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059d6b0",
+    "src/GC_3_0a5_2/backend/StructMoves/StructMoves_EmitCopy",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059f7f0",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059f8e0",
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059f950"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8422,6 +8428,67 @@
       "_is_unsigned": "0x454260",
       "_CTTool_CopyTypePointer": "0x544500",
       "_filename": "0x6ada04"
+    },
+    "src/GC_3_0a5_2/backend/StructMoves.c": {
+      "_load_address": "0x58fae0",
+      "_load_immediate": "0x592f00",
+      "_coerce_to_addressable_before": "0x591910",
+      "_gUsedVirtualRegistersGPR": "0x716eb0",
+      "_gUsedVirtualRegistersFPR": "0x716eac",
+      "_fn_00587380": "0x587380",
+      "_fn_00581be0": "0x581be0",
+      "_fn_004c3f60": "0x4c3f60",
+      "_emitpcode": "0x582ec0",
+      "_add_immediate": "0x595890",
+      "_store_fpr": "0x594d60",
+      "_load_gpr": "0x595370",
+      "_store_fpr_x": "0x594c20",
+      "_store_gpr": "0x594f90",
+      "_store_gpr_x": "0x594df0",
+      "_setpcodeflags": "0x582850",
+      "_load_fpr": "0x5951c0",
+      "_load_fpr_x": "0x595080",
+      "_load_gpr_x": "0x595250",
+      "_makepclabel": "0x582d80",
+      "_CError_Internal": "0x45a250",
+      "_branch_decrement_always": "0x595e30",
+      "_branch_label": "0x595f80",
+      "_store_gpr_u": "0x594ec0",
+      "_load_gpr_u": "0x5952e0",
+      "_StructMoves_EmitCopy": "0x59e780",
+      "_emit_pair_copy_loop": "0x59e8c0",
+      "_emit_unrolled_copy": "0x59ec40",
+      "_emit_load_store_copy": "0x59f2a0",
+      "_fn_0059f7f0": "0x59f7f0",
+      "_fn_0059f8e0": "0x59f8e0",
+      "_fn_0059f950": "0x59f950",
+      "_nativeStrictAlignment": "0x70f04e",
+      "_nativeDisableFPU": "0x70f06d",
+      "_nativeUseFPU": "0x70f018",
+      "_nativeOperandsDebug": "0x70f019",
+      "_nativeLimitUnroll": "0x70f231",
+      "_nativeByteType": "0x699c34",
+      "_nativeHalfType": "0x699c4c",
+      "_nativeWordType": "0x699c5c",
+      "_nativeLongType": "0x699c7c",
+      "_nativeDoubleType": "0x699c94",
+      "_nativeErrorType": "0x725d96",
+      "_filename": "0x6ad600",
+      "_widthFilename": "0x6ad610",
+      "_fn_0059ce20": "0x59ce20",
+      "_fn_0059cef0": "0x59cef0",
+      "_fn_0059d1e0": "0x59d1e0",
+      "_fn_0059d390": "0x59d390",
+      "_fn_0059d5f0": "0x59d5f0",
+      "_fn_0059d6b0": "0x59d6b0",
+      "_fn_0059d730": "0x59d730",
+      "_fn_0059db10": "0x59db10",
+      "_fn_0059e030": "0x59e030",
+      "_fn_0059e250": "0x59e250",
+      "_nativeScheduleLevel": "0x70f230",
+      "_nativeHighWordOffset": "0x717462",
+      "_nativeLowWordOffset": "0x716ed0",
+      "_is_unsigned": "0x454260"
     }
   },
   "original_source_units": {
@@ -8453,6 +8520,7 @@
     "IroNonRegLoopAccesses.c": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
     "SourceText.c": "src/GC_3_0a5_2/frontend/SourceText.c",
     "CExprTools.c": "src/GC_3_0a5_2/frontend/CExprTools.c",
-    "IroType.c": "src/GC_3_0a5_2/optimizer/IroType.c"
+    "IroType.c": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "StructMoves.c": "src/GC_3_0a5_2/backend/StructMoves.c"
   }
 }

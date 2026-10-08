@@ -3894,5 +3894,85 @@
   "fn_005b7e20": {
     "name": "fn_005b7e20",
     "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_0059ce20": {
+    "name": "fn_0059ce20",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059cef0": {
+    "name": "fn_0059cef0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059d1e0": {
+    "name": "fn_0059d1e0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059d390": {
+    "name": "fn_0059d390",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059d5f0": {
+    "name": "fn_0059d5f0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059d6b0": {
+    "name": "fn_0059d6b0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059d730": {
+    "name": "fn_0059d730",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059db10": {
+    "name": "fn_0059db10",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059e030": {
+    "name": "fn_0059e030",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059e250": {
+    "name": "fn_0059e250",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059e780": {
+    "name": "StructMoves_EmitCopy",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059e8c0": {
+    "name": "emit_pair_copy_loop",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059ec40": {
+    "name": "emit_unrolled_copy",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059f2a0": {
+    "name": "emit_load_store_copy",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059f7f0": {
+    "name": "fn_0059f7f0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059f8e0": {
+    "name": "fn_0059f8e0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_0059f950": {
+    "name": "fn_0059f950",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "StructMoves_EmitCopy": {
+    "name": "StructMoves_EmitCopy",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "emit_pair_copy_loop": {
+    "name": "emit_pair_copy_loop",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "StructMoves_0051aee0": {
+    "name": "fn_0059f7f0",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c"
   }
 }

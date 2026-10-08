@@ -21101,41 +21101,189 @@
     }
   },
   {
-    "name": "StructMoves_EmitCopy",
-    "address": "0x0059e780",
-    "size": 306,
-    "source": "src/optimizer/StructMoves.c",
-    "baseline_name": "StructMoves_EmitCopy",
-    "baseline_address": "0x0051a270",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_0059ce20",
+    "address": "0x59ce20",
+    "size": 193,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059cef0",
+    "address": "0x59cef0",
+    "size": 746,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059d1e0",
+    "address": "0x59d1e0",
+    "size": 426,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059d390",
+    "address": "0x59d390",
+    "size": 599,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059d5f0",
+    "address": "0x59d5f0",
+    "size": 179,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059d6b0",
+    "address": "0x59d6b0",
+    "size": 128,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059d730",
+    "address": "0x59d730",
+    "size": 979,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059db10",
+    "address": "0x59db10",
+    "size": 1302,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059e030",
+    "address": "0x59e030",
+    "size": 538,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059e250",
+    "address": "0x59e250",
+    "size": 1321,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "StructMoves_EmitCopy",
+    "address": "0x59e780",
+    "size": 306,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "emit_pair_copy_loop",
-    "address": "0x0059e8c0",
+    "address": "0x59e8c0",
     "size": 890,
-    "source": "src/optimizer/StructMoves.c",
-    "baseline_name": "emit_pair_copy_loop",
-    "baseline_address": "0x0051a350",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "StructMoves_0051aee0",
-    "address": "0x0059f7f0",
-    "size": 229,
-    "source": "src/optimizer/StructMoves.c",
-    "baseline_name": "StructMoves_0051aee0",
-    "baseline_address": "0x0051aee0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "emit_unrolled_copy",
+    "address": "0x59ec40",
+    "size": 1629,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "emit_load_store_copy",
+    "address": "0x59f2a0",
+    "size": 1360,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059f7f0",
+    "address": "0x59f7f0",
+    "size": 229,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059f8e0",
+    "address": "0x59f8e0",
+    "size": 112,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059f950",
+    "address": "0x59f950",
+    "size": 145,
+    "source": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "identity_evidence": "Both StructMoves.c native filename literals and all 30 assertions, 1.2.5 structure-copy architecture, supplied symbol roles and native ABI/control-flow review. Unconfirmed private names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image direct-call/entry/filename/seam audit",
       "unresolved_indirect_flow": false
     }
   },

@@ -14293,145 +14293,288 @@
     }
   },
   {
-    "name": "Operands_AllocateGPR",
-    "address": "0x00582850",
+    "name": "fn_005820e0",
+    "address": "0x5820e0",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00582100",
+    "address": "0x582100",
+    "size": 210,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005821e0",
+    "address": "0x5821e0",
+    "size": 189,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005822a0",
+    "address": "0x5822a0",
+    "size": 507,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005824a0",
+    "address": "0x5824a0",
+    "size": 181,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00582560",
+    "address": "0x582560",
+    "size": 162,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00582610",
+    "address": "0x582610",
+    "size": 221,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "computedepthfirstordering",
+    "address": "0x5826f0",
+    "size": 277,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pccomputeoffsets",
+    "address": "0x582810",
     "size": 51,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "Operands_AllocateGPR",
-    "baseline_address": "0x0049cf70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_InsertInstructionBefore",
-    "address": "0x005829d0",
+    "name": "setpcodeflags",
+    "address": "0x582850",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insertpcodeafter",
+    "address": "0x582890",
     "size": 120,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_InsertInstructionBefore",
-    "baseline_address": "0x0049cfd0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_UnlinkInstruction",
-    "address": "0x00582a50",
+    "name": "fn_00582910",
+    "address": "0x582910",
+    "size": 185,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "insertpcodebefore",
+    "address": "0x5829d0",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "deletepcode",
+    "address": "0x582a50",
     "size": 72,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_UnlinkInstruction",
-    "baseline_address": "0x0049d010",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_AppendInstruction",
-    "address": "0x00582aa0",
+    "name": "appendpcode",
+    "address": "0x582aa0",
     "size": 70,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_AppendInstruction",
-    "baseline_address": "0x0049d060",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_UnlinkBlocksWithoutFlag4",
-    "address": "0x00582af0",
+    "name": "deleteunreachableblocks",
+    "address": "0x582af0",
     "size": 93,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_UnlinkBlocksWithoutFlag4",
-    "baseline_address": "0x0049d0b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_BuildPredecessors",
-    "address": "0x00582b50",
+    "name": "fn_00582b50",
+    "address": "0x582b50",
     "size": 49,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_BuildPredecessors",
-    "baseline_address": "0x0049d0f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_AddSuccessor",
-    "address": "0x00582c80",
+    "name": "fn_00582b90",
+    "address": "0x582b90",
+    "size": 237,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcbranch",
+    "address": "0x582c80",
     "size": 88,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_AddSuccessor",
-    "baseline_address": "0x0049d140",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_ResolveLabel",
-    "address": "0x00582ce0",
+    "name": "pclabel",
+    "address": "0x582ce0",
     "size": 64,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_ResolveLabel",
-    "baseline_address": "0x0049d170",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_CreateBlock",
-    "address": "0x00582d20",
+    "name": "makepcblock",
+    "address": "0x582d20",
     "size": 89,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_CreateBlock",
-    "baseline_address": "0x0049d1b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCode_NewLabel",
-    "address": "0x00582d80",
+    "name": "makepclabel",
+    "address": "0x582d80",
     "size": 44,
-    "source": "src/backend/PCode.c",
-    "baseline_name": "PCode_NewLabel",
-    "baseline_address": "0x0049d240",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "PCodeUtilities_EmitInstruction",
-    "address": "0x00582ec0",
-    "size": 153,
-    "source": "src/backend/PCodeUtilities.c",
-    "baseline_name": "PCodeUtilities_EmitInstruction",
-    "baseline_address": "0x004a25d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "copypcode",
+    "address": "0x582db0",
+    "size": 264,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "emitpcode",
+    "address": "0x582ec0",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "makepcode",
+    "address": "0x582f60",
+    "size": 88,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initpcode",
+    "address": "0x582fc0",
+    "size": 240,
+    "source": "src/GC_3_0a5_2/backend/PCode.c",
+    "identity_evidence": "Native PCode.c assertion cluster and ordinary Mac operation symbols; unknown Windows helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed saved Windows cluster entries and complete native CFG",
       "unresolved_indirect_flow": false
     }
   },

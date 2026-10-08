@@ -1342,6 +1342,317 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/PCode.c",
+      "original_filename": "PCode.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_005820e0",
+          "address": "0x5820e0",
+          "size": 23,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582100",
+          "address": "0x00582100",
+          "size": 210,
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00582181"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c"
+        },
+        {
+          "name": "fn_005821e0",
+          "address": "0x5821e0",
+          "size": 189,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005822a0",
+          "address": "0x005822a0",
+          "size": 507,
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058233c",
+            "0x00582362"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c"
+        },
+        {
+          "name": "fn_005824a0",
+          "address": "0x5824a0",
+          "size": 181,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582560",
+          "address": "0x582560",
+          "size": 162,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582610",
+          "address": "0x00582610",
+          "size": 221,
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058262a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c"
+        },
+        {
+          "name": "computedepthfirstordering",
+          "address": "0x5826f0",
+          "size": 277,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pccomputeoffsets",
+          "address": "0x582810",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "setpcodeflags",
+          "address": "0x582850",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insertpcodeafter",
+          "address": "0x582890",
+          "size": 120,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582910",
+          "address": "0x582910",
+          "size": 185,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "insertpcodebefore",
+          "address": "0x5829d0",
+          "size": 120,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "deletepcode",
+          "address": "0x582a50",
+          "size": 72,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "appendpcode",
+          "address": "0x582aa0",
+          "size": 70,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "deleteunreachableblocks",
+          "address": "0x582af0",
+          "size": 93,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582b50",
+          "address": "0x582b50",
+          "size": 49,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00582b90",
+          "address": "0x582b90",
+          "size": 237,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pcbranch",
+          "address": "0x582c80",
+          "size": 88,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pclabel",
+          "address": "0x582ce0",
+          "size": 64,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "makepcblock",
+          "address": "0x582d20",
+          "size": 89,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "makepclabel",
+          "address": "0x582d80",
+          "size": 44,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "copypcode",
+          "address": "0x582db0",
+          "size": 264,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "emitpcode",
+          "address": "0x582ec0",
+          "size": 153,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "makepcode",
+          "address": "0x582f60",
+          "size": 88,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "initpcode",
+          "address": "0x582fc0",
+          "size": 240,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCode.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed saved Windows cluster entries and complete native CFG",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
       "original_filename": "PCodeUtilities.c",
       "evidence": [
@@ -20362,163 +20673,11 @@
     },
     {
       "source": "src/backend/PCode.c",
-      "original_filename": "PCode.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "FUN_00582100",
-          "address": "0x00582100",
-          "size": 210,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00582181"
-          ]
-        },
-        {
-          "name": "FUN_005822a0",
-          "address": "0x005822a0",
-          "size": 507,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058233c",
-            "0x00582362"
-          ]
-        },
-        {
-          "name": "FUN_00582610",
-          "address": "0x00582610",
-          "size": 221,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058262a"
-          ]
-        },
-        {
-          "name": "Operands_AllocateGPR",
-          "address": "0x00582850",
-          "size": 51,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_InsertInstructionBefore",
-          "address": "0x005829d0",
-          "size": 120,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_UnlinkInstruction",
-          "address": "0x00582a50",
-          "size": 72,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_AppendInstruction",
-          "address": "0x00582aa0",
-          "size": 70,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_UnlinkBlocksWithoutFlag4",
-          "address": "0x00582af0",
-          "size": 93,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_BuildPredecessors",
-          "address": "0x00582b50",
-          "size": 49,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_AddSuccessor",
-          "address": "0x00582c80",
-          "size": 88,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_ResolveLabel",
-          "address": "0x00582ce0",
-          "size": 64,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_CreateBlock",
-          "address": "0x00582d20",
-          "size": 89,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "PCode_NewLabel",
-          "address": "0x00582d80",
-          "size": 44,
-          "compiled_source": "src/backend/PCode.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -20636,19 +20795,7 @@
       "evidence": [
         "Provisional imported helper grouping; original source filename unresolved"
       ],
-      "windows_functions": [
-        {
-          "name": "PCodeUtilities_EmitInstruction",
-          "address": "0x00582ec0",
-          "size": 153,
-          "compiled_source": "src/backend/PCodeUtilities.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
+      "windows_functions": [],
       "mac_functions": [],
       "ownership_conflicts": [],
       "compiled": true,
@@ -81151,6 +81298,743 @@
         "text_bytes": 309,
         "text_match_percent": 100.0,
         "command": "build/tools/objdiff-cli.exe diff -p . -u src/GC_3_0a5_2/backend/BitVectors -o build/bitvectors-project-diff.json"
+      }
+    },
+    "src/GC_3_0a5_2/backend/PCode.c": {
+      "source": "src/GC_3_0a5_2/backend/PCode.c",
+      "source_sha256": "2645441f737cc6db48168f2a283393b3aab514474a0a294f3264a019089a9a0c",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mapped_members": [
+        {
+          "name": "appendpcode",
+          "address": "0x582aa0",
+          "size": 70,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 70,
+          "compiled_size": 70,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "emitpcode",
+          "address": "0x582ec0",
+          "size": 153,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 153,
+          "compiled_size": 157,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "makepcode",
+          "address": "0x582f60",
+          "size": 88,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "original_size": 88,
+          "compiled_size": 92,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "copypcode",
+          "address": "0x582db0",
+          "size": 264,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "original_size": 264,
+          "compiled_size": 263,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "makepclabel",
+          "address": "0x582d80",
+          "size": 44,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 44,
+          "compiled_size": 44,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "makepcblock",
+          "address": "0x582d20",
+          "size": 89,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 89,
+          "compiled_size": 89,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "deletepcode",
+          "address": "0x582a50",
+          "size": 72,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 72,
+          "compiled_size": 72,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "insertpcodebefore",
+          "address": "0x5829d0",
+          "size": 120,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 120,
+          "compiled_size": 136,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "insertpcodeafter",
+          "address": "0x582890",
+          "size": 120,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 120,
+          "compiled_size": 136,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "pccomputeoffsets",
+          "address": "0x582810",
+          "size": 51,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 51,
+          "compiled_size": 51,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "setpcodeflags",
+          "address": "0x582850",
+          "size": 51,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 51,
+          "compiled_size": 51,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_005820e0",
+          "address": "0x5820e0",
+          "size": 23,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 23,
+          "compiled_size": 23,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_005821e0",
+          "address": "0x5821e0",
+          "size": 189,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 189,
+          "compiled_size": 189,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "pcbranch",
+          "address": "0x582c80",
+          "size": 88,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 88,
+          "compiled_size": 88,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "pclabel",
+          "address": "0x582ce0",
+          "size": 64,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 64,
+          "compiled_size": 64,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582b90",
+          "address": "0x582b90",
+          "size": 237,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 237,
+          "compiled_size": 237,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582b50",
+          "address": "0x582b50",
+          "size": 49,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 49,
+          "compiled_size": 269,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582910",
+          "address": "0x582910",
+          "size": 185,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 185,
+          "compiled_size": 89,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582100",
+          "address": "0x582100",
+          "size": 210,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 210,
+          "compiled_size": 194,
+          "ownership": "direct assertion"
+        },
+        {
+          "name": "deleteunreachableblocks",
+          "address": "0x582af0",
+          "size": 93,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 93,
+          "compiled_size": 93,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "initpcode",
+          "address": "0x582fc0",
+          "size": 240,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 240,
+          "compiled_size": 240,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_005822a0",
+          "address": "0x5822a0",
+          "size": 507,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 507,
+          "compiled_size": 315,
+          "ownership": "direct assertion"
+        },
+        {
+          "name": "fn_005824a0",
+          "address": "0x5824a0",
+          "size": 181,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "original_size": 181,
+          "compiled_size": 154,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582560",
+          "address": "0x582560",
+          "size": 162,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 162,
+          "compiled_size": 83,
+          "ownership": "bounded native cluster and helper/caller role"
+        },
+        {
+          "name": "fn_00582610",
+          "address": "0x582610",
+          "size": 221,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 221,
+          "compiled_size": 131,
+          "ownership": "direct assertion"
+        },
+        {
+          "name": "computedepthfirstordering",
+          "address": "0x5826f0",
+          "size": 277,
+          "source": "src/GC_3_0a5_2/backend/PCode.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 277,
+          "compiled_size": 279,
+          "ownership": "bounded native cluster and helper/caller role"
+        }
+      ],
+      "mac_inventory": [
+        {
+          "address": "000df294",
+          "kind": "t",
+          "name": "deleteblock",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000dedb0",
+          "kind": "t",
+          "name": "emitpcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df058",
+          "kind": "t",
+          "name": "makepclabel",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000ded34",
+          "kind": "t",
+          "name": "makepcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df324",
+          "kind": "t",
+          "name": "appendpcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df18c",
+          "kind": "t",
+          "name": "pcbranch",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df0b8",
+          "kind": "t",
+          "name": "makepcblock",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df154",
+          "kind": "t",
+          "name": "pclabel",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000decdc",
+          "kind": "t",
+          "name": "initpcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df200",
+          "kind": "t",
+          "name": "pccomputepredecessors",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000df2c4",
+          "kind": "t",
+          "name": "deleteunreachableblocks",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df378",
+          "kind": "t",
+          "name": "deletepcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df488",
+          "kind": "t",
+          "name": "setpcodeflags",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df3e0",
+          "kind": "t",
+          "name": "insertpcodebefore",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df434",
+          "kind": "t",
+          "name": "insertpcodeafter",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000dee3c",
+          "kind": "t",
+          "name": "copypcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df4dc",
+          "kind": "t",
+          "name": "clearpcodeflags",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000df510",
+          "kind": "t",
+          "name": "pccomputeoffsets",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000df558",
+          "kind": "t",
+          "name": "computedepthfirstordering",
+          "windows_status": "mapped_by_signature_and_role"
+        }
+      ],
+      "source_bindings": {
+        "_pcbasicblocks": "0x7108c8",
+        "_pclastblock": "0x7101cc",
+        "_pcodeCurrentSource": "0x710154",
+        "_gCurrentStatement": "0x7109ac",
+        "_pcblockcount": "0x7107e0",
+        "_pcloopweight": "0x71032c",
+        "_pclabelcount": "0x6e3b8c",
+        "_vformatpcode": "0x58bc10",
+        "_lalloc": "0x46c660",
+        "_memclrw": "0x46c400",
+        "_pcodeEdgeHash": "0x6e3b8e",
+        "_pcodeEdgeCount": "0x710230",
+        "_computedepthfirstordering": "0x5826f0",
+        "_fn_005a0930": "0x5a0930",
+        "_CError_Internal": "0x45a250",
+        "_galloc": "0x46c5e0",
+        "_depthfirstordering": "0x716c38",
+        "_depthfirstorder": "0x6e3b88",
+        "_epilogue": "0x710784",
+        "_fn_0058aec0": "0x58aec0",
+        "_appendpcode": "0x582aa0",
+        "_emitpcode": "0x582ec0",
+        "_makepcode": "0x582f60",
+        "_copypcode": "0x582db0",
+        "_makepclabel": "0x582d80",
+        "_makepcblock": "0x582d20",
+        "_deletepcode": "0x582a50",
+        "_insertpcodebefore": "0x5829d0",
+        "_insertpcodeafter": "0x582890",
+        "_pccomputeoffsets": "0x582810",
+        "_setpcodeflags": "0x582850",
+        "_fn_005820e0": "0x5820e0",
+        "_fn_005821e0": "0x5821e0",
+        "_pcbranch": "0x582c80",
+        "_pclabel": "0x582ce0",
+        "_fn_00582b90": "0x582b90",
+        "_fn_00582b50": "0x582b50",
+        "_fn_00582910": "0x582910",
+        "_fn_00582100": "0x582100",
+        "_deleteunreachableblocks": "0x582af0",
+        "_initpcode": "0x582fc0",
+        "_fn_005822a0": "0x5822a0",
+        "_fn_005824a0": "0x5824a0",
+        "_fn_00582560": "0x582560",
+        "_fn_00582610": "0x582610"
+      },
+      "baseline_aliases": [
+        {
+          "name": "Operands_AllocateGPR",
+          "address": "0x00582850",
+          "size": 51,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "Operands_AllocateGPR",
+          "baseline_address": "0x0049cf70",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_InsertInstructionBefore",
+          "address": "0x005829d0",
+          "size": 120,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_InsertInstructionBefore",
+          "baseline_address": "0x0049cfd0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_UnlinkInstruction",
+          "address": "0x00582a50",
+          "size": 72,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_UnlinkInstruction",
+          "baseline_address": "0x0049d010",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_AppendInstruction",
+          "address": "0x00582aa0",
+          "size": 70,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_AppendInstruction",
+          "baseline_address": "0x0049d060",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_UnlinkBlocksWithoutFlag4",
+          "address": "0x00582af0",
+          "size": 93,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_UnlinkBlocksWithoutFlag4",
+          "baseline_address": "0x0049d0b0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_BuildPredecessors",
+          "address": "0x00582b50",
+          "size": 49,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_BuildPredecessors",
+          "baseline_address": "0x0049d0f0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_AddSuccessor",
+          "address": "0x00582c80",
+          "size": 88,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_AddSuccessor",
+          "baseline_address": "0x0049d140",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_ResolveLabel",
+          "address": "0x00582ce0",
+          "size": 64,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_ResolveLabel",
+          "baseline_address": "0x0049d170",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_CreateBlock",
+          "address": "0x00582d20",
+          "size": 89,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_CreateBlock",
+          "baseline_address": "0x0049d1b0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCode_NewLabel",
+          "address": "0x00582d80",
+          "size": 44,
+          "source": "src/backend/PCode.c",
+          "baseline_name": "PCode_NewLabel",
+          "baseline_address": "0x0049d240",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "PCodeUtilities_EmitInstruction",
+          "address": "0x00582ec0",
+          "size": 153,
+          "source": "src/backend/PCodeUtilities.c",
+          "baseline_name": "PCodeUtilities_EmitInstruction",
+          "baseline_address": "0x004a25d0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3848",
+          "match_percent": 76.563644
+        },
+        {
+          "name": ".data",
+          "size": "8",
+          "match_percent": 100.0
+        }
+      ],
+      "candidate_data": [
+        {
+          "name": "@178",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ad186",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "candidate_data_complete": true,
+      "original_state_data_complete": false,
+      "unresolved_relocations": 0,
+      "profiles": [
+        {
+          "profile": "pcode-speed-intrinsics",
+          "compiled": true,
+          "exact": 12
+        },
+        {
+          "profile": "pcode-speed-nointrinsics",
+          "compiled": true,
+          "exact": 12
+        },
+        {
+          "profile": "pcode-space-intrinsics",
+          "compiled": true,
+          "exact": 0
+        },
+        {
+          "profile": "pcode-space-nointrinsics",
+          "compiled": true,
+          "exact": 0
+        }
+      ],
+      "cp932": true,
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 26,
+      "strict_exact_count": 12,
+      "semantic_review": [
+        "Generic emitpcode/makepcode use original cdecl varargs and vformatpcode(short,char*), then conditionally inherit active source; emitpcode appends to current block. Nonmatches remain register allocation/redundant copy/branch arrangement differences, not byte-equivalence claims.",
+        "setpcodeflags takes ONE 64-bit value; original stacklow/high dwords are one UInt64, not two independent arguments.",
+        "Graph helpers retain native hash table1997, dual predecessor/successor lists, pending branch nodes, protected unreachable-block flags0x190, DFS postorder and epilogue merge behavior. Nonexact larger members have static data-flow review only; original application was not run."
+      ],
+      "ownership_limits": [
+        "PCode preceding581fe0/582080 belong TOC cluster; next5830b0 is assembly-related and not assigned here without proof.",
+        "Old Operands_AllocateGPR(flags32) and PCode_BuildPredecessors(void) have incorrect imported mappings/ABIs for582850 and582b50. Their bodies remain provisional; those global mappings are removed, not redirected."
+      ],
+      "native_abi": {
+        "operand_size": 14,
+        "operand_kind": 0,
+        "registerClass": 1,
+        "operand_flags": 2,
+        "register_value": 4,
+        "label_value": 2,
+        "instruction_size": 44,
+        "instruction_flags64": 12,
+        "source_location": 32,
+        "opcode": 40,
+        "operand_count": 42,
+        "block_size": 46,
+        "label_size": 12,
+        "edge_size": 28,
+        "pending_branch_size": 10,
+        "descriptor_base": "0x6b52ec",
+        "descriptor_stride": 22,
+        "descriptor_name": 0,
+        "descriptor_format": 4,
+        "descriptor_count": 8,
+        "descriptor_flags64": 10,
+        "descriptor_encoding": 18
+      },
+      "objdiff_cli": {
+        "scope": "All26mapped/emitted bodies; external state data unclaimed",
+        "text_bytes": 3848,
+        "text_match_percent": 76.563644,
+        "filename_data_bytes": 8,
+        "filename_data_match_percent": 100.0
       }
     }
   },

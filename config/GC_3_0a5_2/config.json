@@ -223,7 +223,8 @@
     "src/GC_3_0a5_2/backend/PPCError.c",
     "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "src/GC_3_0a5_2/backend/Operands.c",
-    "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+    "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "src/GC_3_0a5_2/backend/PCode.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3439,6 +3440,27 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/PCode.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -3997,7 +4019,19 @@
     "src/GC_3_0a5_2/backend/BitVectors/bitvectorinitialize",
     "src/GC_3_0a5_2/backend/BitVectors/bitvectorunion",
     "src/GC_3_0a5_2/backend/BitVectors/bitvectorintersect",
-    "src/GC_3_0a5_2/backend/BitVectors/bitvectorintersectionisempty"
+    "src/GC_3_0a5_2/backend/BitVectors/bitvectorintersectionisempty",
+    "src/GC_3_0a5_2/backend/PCode/appendpcode",
+    "src/GC_3_0a5_2/backend/PCode/makepclabel",
+    "src/GC_3_0a5_2/backend/PCode/makepcblock",
+    "src/GC_3_0a5_2/backend/PCode/deletepcode",
+    "src/GC_3_0a5_2/backend/PCode/pccomputeoffsets",
+    "src/GC_3_0a5_2/backend/PCode/setpcodeflags",
+    "src/GC_3_0a5_2/backend/PCode/fn_005820e0",
+    "src/GC_3_0a5_2/backend/PCode/fn_005821e0",
+    "src/GC_3_0a5_2/backend/PCode/pcbranch",
+    "src/GC_3_0a5_2/backend/PCode/pclabel",
+    "src/GC_3_0a5_2/backend/PCode/deleteunreachableblocks",
+    "src/GC_3_0a5_2/backend/PCode/initpcode"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5238,13 +5272,61 @@
       "_add_immediate": "0x595890",
       "_Registers_LoadStoreType": "0x5794e0"
     },
-    "src/GC_3_0a5_2/backend/BitVectors.c": {}
+    "src/GC_3_0a5_2/backend/BitVectors.c": {},
+    "src/GC_3_0a5_2/backend/PCode.c": {
+      "_pcbasicblocks": "0x7108c8",
+      "_pclastblock": "0x7101cc",
+      "_pcodeCurrentSource": "0x710154",
+      "_gCurrentStatement": "0x7109ac",
+      "_pcblockcount": "0x7107e0",
+      "_pcloopweight": "0x71032c",
+      "_pclabelcount": "0x6e3b8c",
+      "_vformatpcode": "0x58bc10",
+      "_lalloc": "0x46c660",
+      "_memclrw": "0x46c400",
+      "_pcodeEdgeHash": "0x6e3b8e",
+      "_pcodeEdgeCount": "0x710230",
+      "_computedepthfirstordering": "0x5826f0",
+      "_fn_005a0930": "0x5a0930",
+      "_CError_Internal": "0x45a250",
+      "_galloc": "0x46c5e0",
+      "_depthfirstordering": "0x716c38",
+      "_depthfirstorder": "0x6e3b88",
+      "_epilogue": "0x710784",
+      "_fn_0058aec0": "0x58aec0",
+      "_appendpcode": "0x582aa0",
+      "_emitpcode": "0x582ec0",
+      "_makepcode": "0x582f60",
+      "_copypcode": "0x582db0",
+      "_makepclabel": "0x582d80",
+      "_makepcblock": "0x582d20",
+      "_deletepcode": "0x582a50",
+      "_insertpcodebefore": "0x5829d0",
+      "_insertpcodeafter": "0x582890",
+      "_pccomputeoffsets": "0x582810",
+      "_setpcodeflags": "0x582850",
+      "_fn_005820e0": "0x5820e0",
+      "_fn_005821e0": "0x5821e0",
+      "_pcbranch": "0x582c80",
+      "_pclabel": "0x582ce0",
+      "_fn_00582b90": "0x582b90",
+      "_fn_00582b50": "0x582b50",
+      "_fn_00582910": "0x582910",
+      "_fn_00582100": "0x582100",
+      "_deleteunreachableblocks": "0x582af0",
+      "_initpcode": "0x582fc0",
+      "_fn_005822a0": "0x5822a0",
+      "_fn_005824a0": "0x5824a0",
+      "_fn_00582560": "0x582560",
+      "_fn_00582610": "0x582610"
+    }
   },
   "original_source_units": {
     "MacSpecs.c": "src/GC_3_0a5_2/OSLib/MacSpecs.c",
     "PPCError.c": "src/GC_3_0a5_2/backend/PPCError.c",
     "CompilerTools.c": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "Operands.c": "src/GC_3_0a5_2/backend/Operands.c",
-    "PCodeUtilities.c": "src/GC_3_0a5_2/backend/PCodeUtilities.c"
+    "PCodeUtilities.c": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
+    "PCode.c": "src/GC_3_0a5_2/backend/PCode.c"
   }
 }

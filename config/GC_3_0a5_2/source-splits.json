@@ -2166,5 +2166,61 @@
   "BitVectors_CopyAndCheckChanged": {
     "name": "bitvectorchanged",
     "source": "src/GC_3_0a5_2/backend/BitVectors.c"
+  },
+  "PCode_InsertInstructionBefore": {
+    "name": "insertpcodebefore",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_UnlinkInstruction": {
+    "name": "deletepcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_AppendInstruction": {
+    "name": "appendpcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_UnlinkBlocksWithoutFlag4": {
+    "name": "deleteunreachableblocks",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_AddSuccessor": {
+    "name": "pcbranch",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_ResolveLabel": {
+    "name": "pclabel",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_CreateBlock": {
+    "name": "makepcblock",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_NewLabel": {
+    "name": "makepclabel",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCodeUtilities_EmitInstruction": {
+    "name": "emitpcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_SetCodeOffsets": {
+    "name": "pccomputeoffsets",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_InsertInstructionAfter": {
+    "name": "insertpcodeafter",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_CloneInstruction": {
+    "name": "copypcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCode_ResetBlocks": {
+    "name": "initpcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "PCodeUtilities_CreateInstruction": {
+    "name": "makepcode",
+    "source": "src/GC_3_0a5_2/backend/PCode.c"
   }
 }

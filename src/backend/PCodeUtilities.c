@@ -499,11 +499,13 @@ void PCodeUtilities_MakeRecordForm(PCodeInstruction *o)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCodeUtilities_EmitInstruction(short opcode, ...)
 {
     va_list arguments = (va_list)&opcode + (((va_list)(&opcode + 1) - (va_list)&opcode + 3) / 4) * 4;
     return PCode_AppendInstruction(gCurrentBlock, create_pcode_instruction(opcode, arguments));
 }
+#endif
 
 /* Object cv-qualifier: for pointer types the pointee qualifier lives in the
  * TypePointer record, otherwise the object's own qual field is used. */
@@ -740,6 +742,7 @@ PCodeInstruction *create_pcode_instruction(SInt16 opcode, char *args)
     return inst;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCodeUtilities_CreateInstruction(UInt16 op, ...)
 {
     va_list arguments;
@@ -748,3 +751,4 @@ PCodeInstruction *PCodeUtilities_CreateInstruction(UInt16 op, ...)
     instruction = create_pcode_instruction(op, arguments);
     return instruction;
 }
+#endif

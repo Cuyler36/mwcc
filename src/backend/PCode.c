@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "unknown.c"
 #include "compiler/common.h"
 #include "compiler/PCode.h"
@@ -59,6 +60,7 @@ enum {
     PCode_LFD = 0x92,
     PCode_LFDX = 0x94
 };
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int PCode_SetCodeOffsets(void)
 {
     unsigned int total = 0;
@@ -70,12 +72,14 @@ unsigned int PCode_SetCodeOffsets(void)
     }
     return total;
 }
+#endif
 
 void Operands_AllocateGPR(unsigned int flags)
 {
     gCurrentBlock->reverse_instructions->flags |= flags;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_InsertInstructionAfter(PCodeInstruction *h, PCodeInstruction *n)
 {
     PCodeBlock *c = h->block;
@@ -90,7 +94,9 @@ void PCode_InsertInstructionAfter(PCodeInstruction *h, PCodeInstruction *n)
     c->instruction_count++;
     c->flags &= 0xfff7;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_InsertInstructionBefore(PCodeInstruction *h, PCodeInstruction *n)
 {
     PCodeBlock *o = h->block;
@@ -105,7 +111,9 @@ void PCode_InsertInstructionBefore(PCodeInstruction *h, PCodeInstruction *n)
     o->instruction_count++;
     o->flags &= ~8;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_UnlinkInstruction(PCodeInstruction *instruction)
 {
     PCodeBlock *owner;
@@ -125,7 +133,9 @@ void PCode_UnlinkInstruction(PCodeInstruction *instruction)
     owner->instruction_count--;
     owner->flags &= 0xfff7;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCode_AppendInstruction(PCodeBlock *block, PCodeInstruction *instruction)
 {
     PCodeInstruction *tail;
@@ -148,7 +158,9 @@ PCodeInstruction *PCode_AppendInstruction(PCodeBlock *block, PCodeInstruction *i
     block->instruction_count += 1U;
     return tail;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_UnlinkBlocksWithoutFlag4(void)
 {
     PCodeBlock *p;
@@ -165,6 +177,7 @@ void PCode_UnlinkBlocksWithoutFlag4(void)
         p = p->next;
     }
 }
+#endif
 
 /* Builds every block's predecessor list from the successor lists. */
 void PCode_BuildPredecessors(void)
@@ -192,6 +205,7 @@ void PCode_BuildPredecessors(void)
 }
 
 /* Links a saved name ID into the block's list. */
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_AddSuccessor(PCodeBlock *block, PCodeLabel *name)
 {
     PCodeBlockLink *entry;
@@ -202,7 +216,9 @@ void PCode_AddSuccessor(PCodeBlock *block, PCodeLabel *name)
     entry->next = (PCodeBlockLink *)block->successors;
     block->successors = (PCodeBlockLink *)entry;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_ResolveLabel(PCodeBlock *target, PCodeLabel *entry)
 {
     PCodeBlockLink *current;
@@ -220,7 +236,9 @@ void PCode_ResolveLabel(PCodeBlock *target, PCodeLabel *entry)
     entry->next = previous;
     target->labels = entry;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeBlock *PCode_CreateBlock(void)
 {
     PCodeBlock *block;
@@ -247,7 +265,9 @@ PCodeBlock *PCode_CreateBlock(void)
     gCurrentBlock = block;
     return block;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeLabel *PCode_NewLabel(void)
 {
     PCodeLabel *node;
@@ -260,7 +280,9 @@ PCodeLabel *PCode_NewLabel(void)
     ++next_label_number;
     return node;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCode_CloneInstruction(PCodeInstruction *instr)
 {
     PCodeInstruction *clone;
@@ -278,7 +300,9 @@ PCodeInstruction *PCode_CloneInstruction(PCodeInstruction *instr)
         clone->operandData.operands[i] = ((PCodeInstruction *)(instr))->operandData.operands[i];
     return (PCodeInstruction *)(clone);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void PCode_ResetBlocks(void)
 {
     unsigned short *statusValue = (unsigned short *)&gPCodeBlockCount;
@@ -288,3 +312,4 @@ void PCode_ResetBlocks(void)
     next_label_number = *statusValue;
     data_00587ffc = 1;
 }
+#endif

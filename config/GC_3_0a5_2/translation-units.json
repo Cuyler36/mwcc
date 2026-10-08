@@ -10645,97 +10645,203 @@
       "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
       "original_filename": "CCallGraph.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_005a0f80",
+          "name": "CCallGraph_RemoveDeadNodes",
+          "address": "0x5a0e60",
+          "size": 152,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a0f00",
+          "address": "0x5a0f00",
+          "size": 118,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CCallGraph_Compute",
           "address": "0x005a0f80",
           "size": 818,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": true
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a11ca",
             "0x005a124a",
             "0x005a126e"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
         },
         {
-          "name": "FUN_005a12c0",
+          "name": "CCallGraph_SetIR",
           "address": "0x005a12c0",
           "size": 67,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a12fa"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
         },
         {
-          "name": "FUN_005a1310",
+          "name": "CCallGraph_GetIR",
           "address": "0x005a1310",
           "size": 153,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a1391"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
         },
         {
-          "name": "FUN_005a13b0",
+          "name": "CCallGraph_RemoveNode",
           "address": "0x005a13b0",
           "size": 347,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a144a",
             "0x005a1492"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
         },
         {
-          "name": "CCallGraph_AddFunction",
+          "name": "fn_005a1510",
+          "address": "0x5a1510",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a1560",
           "address": "0x005a1560",
           "size": 192,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": true
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a157b",
             "0x005a15aa"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
         },
         {
-          "name": "FUN_005a1780",
+          "name": "fn_005a1620",
+          "address": "0x5a1620",
+          "size": 250,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a1720",
+          "address": "0x5a1720",
+          "size": 30,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a1740",
+          "address": "0x5a1740",
+          "size": 31,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a1760",
+          "address": "0x5a1760",
+          "size": 27,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005a1780",
           "address": "0x005a1780",
           "size": 76,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005a17c2"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c"
+        },
+        {
+          "name": "CCallGraph_Cleanup",
+          "address": "0x5a17d0",
+          "size": 70,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CCallGraph_Setup",
+          "address": "0x5a1820",
+          "size": 25,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/CError.c",
@@ -95286,6 +95392,1317 @@
         "objdiff_cli": "normal per-TU view processed successfully",
         "data_complete": false,
         "retained_versions": "Every symbol, section byte and relocation unchanged in the three retained CABI objects."
+      }
+    },
+    "src/GC_3_0a5_2/frontend/CCallGraph.c": {
+      "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+      "frozen": true,
+      "functions": [
+        {
+          "name": "CCallGraph_RemoveDeadNodes",
+          "address": "0x5a0e60",
+          "size": 152,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 152,
+          "semantic_review": "Clear marked+1e on every node. For each unmarked node, initCode+1d OR object-root predicate fn5a0f00 roots a depth-first marking traversal. Save next before removing unmarked nodes; if any removed, renumber remaining nodes and replace graph.count. Returns removed boolean in AL; final152 bytes/fixups strict. Three recovered callers ignore AL (saved caller evidence), so signature is native register-result reconstruction, not Mac STABS declaration. Separate renumber scan lifetime was required to preserve original register allocation.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a0e60.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "fn_005a0f00",
+          "address": "0x5a0f00",
+          "size": 118,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 118,
+          "semantic_review": "NULL object or object.flags short+1a bit8 returns1. qualifier+14 bit20000 returns option70f1f4 && fn456a50(object); qualifier10 or storage102 returns0. Otherwise walk object+8 linked records; any record marked byte+1e returns0, no marked record returns1. All118 bytes/fixups exact. Identity unknown, retained address alias. No invented root-predicate canonical name.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a0f00.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "CCallGraph_Compute",
+          "address": "0x5a0f80",
+          "size": 818,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "error": "unbound literal: .sw$280 (0 retail blocks, 0 strings)",
+          "compiled_size": 850,
+          "semantic_review": "First renumber all nodes and count. For each node free both14-byte edge lists, zero outgoing/incoming, then dispatch kind1/2/3; unknown kind reports642 and continues. Kind1 obtains packed IR slot; NULL slot skips, NULL packed asserts609. Snapshot packed.count+14; eight-byte references start+1a. Only ref.kind1 and object.datatype0,2,3,4,5 contribute: snapshot flag bit1 and UInt16 count before allocation; obtain/create object.graphNode+1c, prepend outgoing edge with snapshot count/flag. Kind2 requires data slot/assert627; supported object datatype creates one edge count1. Kind3 optional list slot.objects+10; supported objects obtain/create graph node; existing target scans existing outgoing edges to deduplicate, OR flags1; no existing target immediately creates edge count0/flag1 (no preallocation scan). Appended graph nodes are visited by the same forward list traversal, native behavior retained. After all outgoing construction, allocate reverse edges, copy count/flags, prepend incoming. Candidate850 vs native818; register/scheduling/branch differences and three anonymous tables unresolved; one Compute reference table is automatically exact. No extra input/NULL guards; assertions retain native continuation if reporter returns.",
+          "classification": "reviewed_nonmatch_unresolved_tables",
+          "native_disassembly": "build/ccallgraph-fn-5a0f80.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "CCallGraph_SetIR",
+          "address": "0x5a12c0",
+          "size": 67,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 67,
+          "semantic_review": "Two cdecl args(node,54-byte IR pointer). Obtain slot from node.object+8; NULL assertion509 then native continuation; release old packed buffer via fn509f00 and replace with CIRStream_PackCode(ir). Strict67 bytes and all PE fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a12c0.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "CCallGraph_GetIR",
+          "address": "0x5a1310",
+          "size": 153,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 153,
+          "semantic_review": "Returns54-byte native IR struct through hidden first destination pointer; explicit node is second stack argument. Obtain packed slot/assert490; UnpackCode(slot.packed,&local,0); if node.initCode==0 overwrite local.object+4 with node.object. Copy exactly54 bytes to hidden destination and return destination in EAX. Strict153 bytes/fixups. Old generic IR layouts must not be used at this interface.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1310.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "CCallGraph_RemoveNode",
+          "address": "0x5a13b0",
+          "size": 347,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": false,
+          "compiled_size": 347,
+          "semantic_review": "Unlink doubly linked graph list with separate first/last/both branches, preserving native redundant previous-NULL check in last branch. For every incoming edge, find reciprocal outgoing edge whose target==node; assert450 on missing link, free14-byte edge then replace link with saved next. For every outgoing edge do same for reciprocal incoming/assert464. Then free own outgoing/incoming lists, clear object.graphNode+1c, free32-byte node. Count not decremented here (renumber caller handles). Candidate347 equals native size but register/memory-load ordering differs. Reciprocal lists and valid object are original preconditions. Self-edge compatibility is unchanged: native first reciprocal removal may invalidate its own traversal; no repair or added guard.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/ccallgraph-fn-5a13b0.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "fn_005a1510",
+          "address": "0x5a1510",
+          "size": 71,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 71,
+          "semantic_review": "One explicit IR argument; creates function object(0), sets namespace=cscope_root+7101c4, unique <init-code> name, type=rt_func6771e4, flags short+1a OR8. Stores IR through fn47cf40, creates graph node via fn5a1560, sets initCode+1d=1, returns node. Strict71 bytes/fixups; name unknown.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1510.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1560",
+          "address": "0x5a1560",
+          "size": 192,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "error": "unbound literal: .sw$436 (0 retail blocks, 0 strings)",
+          "compiled_size": 198,
+          "semantic_review": "One object arg; asserts graphNode absent at345. datatype0/2\u2192node kind3;3/4\u2192qualifier800000?kind2:kind1;5\u2192kind1; other datatype asserts365 and retains native uninitialized-kind continuation. Allocate/clear32 bytes, append graph list (last.next/previous or first=last), store object+8, old graph.count into index+18 then increment count, object.graphNode=node, node.kind+1c=kind; return node. Candidate198/native192, switch table unresolved. Allocation/call order, double-registration behavior and valid datatype domain reviewed.",
+          "classification": "reviewed_nonmatch_unresolved_tables",
+          "native_disassembly": "build/ccallgraph-fn-5a1560.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1620",
+          "address": "0x5a1620",
+          "size": 250,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": false,
+          "compiled_size": 250,
+          "semantic_review": "Marks node.byte1e=1; recursively visits unmarked outgoing targets in edge-list order, marking before descent so cycles terminate. Native expands six levels then calls itself. Source explicitly requests same six-level inline traversal; candidate250/native250 differs top two stack spill-slot assignments and consequent padding/branch offsets. Initial42-byte recursive candidate was equivalent but did not reproduce native expansion. Same memory writes, graph traversal and precondition (valid node/edges); no allocation/errors/return value.",
+          "classification": "reviewed_nonmatch",
+          "native_disassembly": "build/ccallgraph-fn-5a1620.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1720",
+          "address": "0x5a1720",
+          "size": 30,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 30,
+          "semantic_review": "Renumber graph.first forward list index+18=0..n-1, store count=n; no allocation. Strict30 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1720.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1740",
+          "address": "0x5a1740",
+          "size": 31,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 31,
+          "semantic_review": "Forward graph list sets marked+1e and marked2+1f to0; strict31 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1740.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1760",
+          "address": "0x5a1760",
+          "size": 27,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 27,
+          "semantic_review": "Forward graph list sets marked+1e to0; leaves second flag unchanged. Strict27 bytes/fixups.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1760.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "fn_005a1780",
+          "address": "0x5a1780",
+          "size": 76,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 76,
+          "semantic_review": "kind1 returns fn47d080(node.object)!=NULL; kind2 returns1 unconditionally; kind3 returns fn47cde0(node.object)!=NULL. Other kind reports248 then returns0. Strict76 bytes and12-byte switch/fixups exact. Name unknown; no invented HasIR binding.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1780.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias"
+        },
+        {
+          "name": "CCallGraph_Cleanup",
+          "address": "0x5a17d0",
+          "size": 70,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 70,
+          "semantic_review": "If ccallgraph_outfile NULL do nothing. Otherwise option70f1d4 true closes to file, false closes to window with second arg0; then free handle and clear global. Strict70 bytes/fixups. Does not free graph nodes.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a17d0.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        },
+        {
+          "name": "CCallGraph_Setup",
+          "address": "0x5a1820",
+          "size": 25,
+          "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+          "exact": true,
+          "compiled_size": 25,
+          "semantic_review": "memclrw(&ccallgraph,12), then outfile=NULL; strict25 bytes/fixups. No allocation or traversal of previous graph.",
+          "classification": "strict_exact",
+          "native_disassembly": "build/ccallgraph-fn-5a1820.txt",
+          "ownership_evidence": "Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+          "identity_evidence": "CSV v10-applied name corroborated by native body"
+        }
+      ],
+      "summary": {
+        "strict_exact": 11,
+        "resolved_nonmatch": 2,
+        "unresolved_functions": [
+          {
+            "name": "CCallGraph_Compute",
+            "address": "0x5a0f80",
+            "size": 818,
+            "compiled_size": 850,
+            "error": "unbound literal: .sw$280 (0 retail blocks, 0 strings)"
+          },
+          {
+            "name": "fn_005a1560",
+            "address": "0x5a1560",
+            "size": 192,
+            "compiled_size": 198,
+            "error": "unbound literal: .sw$436 (0 retail blocks, 0 strings)"
+          }
+        ],
+        "objdiff_exit_code": 0,
+        "report": "build/ccallgraph-cw94-objdiff.json"
+      },
+      "profiles": {
+        "cw94": {
+          "strict_exact": 11,
+          "resolved_nonmatch": 2,
+          "unresolved_functions": [
+            {
+              "name": "CCallGraph_Compute",
+              "address": "0x5a0f80",
+              "size": 818,
+              "compiled_size": 850,
+              "error": "unbound literal: .sw$280 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005a1560",
+              "address": "0x5a1560",
+              "size": 192,
+              "compiled_size": 198,
+              "error": "unbound literal: .sw$436 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_exit_code": 0,
+          "report": "build/ccallgraph-cw94-objdiff.json"
+        },
+        "o3speed": {
+          "strict_exact": 11,
+          "resolved_nonmatch": 2,
+          "unresolved_functions": [
+            {
+              "name": "CCallGraph_Compute",
+              "address": "0x5a0f80",
+              "size": 818,
+              "compiled_size": 850,
+              "error": "unbound literal: .sw$280 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005a1560",
+              "address": "0x5a1560",
+              "size": 192,
+              "compiled_size": 198,
+              "error": "unbound literal: .sw$436 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_exit_code": 0,
+          "report": "build/ccallgraph-o3speed-objdiff.json"
+        },
+        "o4nointrinsics": {
+          "strict_exact": 11,
+          "resolved_nonmatch": 2,
+          "unresolved_functions": [
+            {
+              "name": "CCallGraph_Compute",
+              "address": "0x5a0f80",
+              "size": 818,
+              "compiled_size": 850,
+              "error": "unbound literal: .sw$280 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005a1560",
+              "address": "0x5a1560",
+              "size": 192,
+              "compiled_size": 198,
+              "error": "unbound literal: .sw$436 (0 retail blocks, 0 strings)"
+            }
+          ],
+          "objdiff_exit_code": 0,
+          "report": "build/ccallgraph-o4nointrinsics-objdiff.json"
+        },
+        "o4space": {
+          "strict_exact": 0,
+          "resolved_nonmatch": 15,
+          "unresolved_functions": [],
+          "objdiff_exit_code": 0,
+          "report": "build/ccallgraph-o4space-objdiff.json"
+        }
+      },
+      "compiler": {
+        "path": "build/compilers/cw94/mwcc.exe",
+        "preferred_flags": [
+          "-c",
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly",
+          "-DVERSION=3",
+          "-Iinclude",
+          "-i-",
+          "-Iinclude/libc"
+        ],
+        "profile_variations": {
+          "o3speed": "-O3 -opt speed -opt intrinsics",
+          "o4nointrinsics": "-O4 -opt speed",
+          "o4space": "-O4 -opt space -opt intrinsics"
+        },
+        "final_valid_profiles": 4,
+        "exploratory_attempts": "Initial native reconstruction, deferred removed flag initialization, distinct reindex variable, preserved byte result, reordered unlink branches, packed reference snapshots, recursive42-byte vs six-level250-byte traversal. All identified15 functions were compiled/reviewed; no unreviewed baseline pass-through."
+      },
+      "bindings": {},
+      "source_bindings": {
+        "src/GC_3_0a5_2/frontend/CCallGraph.c": {
+          "_CCallGraph_RemoveDeadNodes": "0x5a0e60",
+          "_fn_005a0f00": "0x5a0f00",
+          "_CCallGraph_Compute": "0x5a0f80",
+          "_CCallGraph_SetIR": "0x5a12c0",
+          "_CCallGraph_GetIR": "0x5a1310",
+          "_CCallGraph_RemoveNode": "0x5a13b0",
+          "_fn_005a1510": "0x5a1510",
+          "_fn_005a1560": "0x5a1560",
+          "_fn_005a1620": "0x5a1620",
+          "_fn_005a1720": "0x5a1720",
+          "_fn_005a1740": "0x5a1740",
+          "_fn_005a1760": "0x5a1760",
+          "_fn_005a1780": "0x5a1780",
+          "_CCallGraph_Cleanup": "0x5a17d0",
+          "_CCallGraph_Setup": "0x5a1820",
+          "_ccallgraph": "0x711bac",
+          "_ccallgraph_outfile": "0x6e9110",
+          "_fn_0070f1f4": "0x70f1f4",
+          "_fn_0070f1d4": "0x70f1d4",
+          "_cscope_root": "0x7101c4",
+          "_rt_func": "0x6771e4",
+          "_CError_Internal": "0x45a250",
+          "_galloc2": "0x46c730",
+          "_fn_0046c6e0": "0x46c6e0",
+          "_memclrw": "0x46c400",
+          "_fn_00456a50": "0x456a50",
+          "_fn_0047d080": "0x47d080",
+          "_fn_0047ce20": "0x47ce20",
+          "_fn_0047cde0": "0x47cde0",
+          "_fn_0047cf40": "0x47cf40",
+          "_fn_00509f00": "0x509f00",
+          "_CIRStream_PackCode": "0x505780",
+          "_CIRStream_UnpackCode": "0x505530",
+          "_CParser_NewFunctionObject": "0x4554f0",
+          "_CParser_AppendUniqueName": "0x455d40",
+          "_Dump_CloseToFile": "0x4ebf30",
+          "_Dump_CloseToWindow": "0x4ebc80",
+          "_Dump_FreeHandle": "0x4ec680"
+        }
+      },
+      "binding_policy": "Only actual emitted underscore-named functions/externals/commons, source-scoped. No dot-prefixed, anonymous .sw$, literal @ or section bindings. Unknown names remain explicit address aliases.",
+      "knownGlobals": [
+        {
+          "name": "ccallgraph",
+          "address": "0x711bac",
+          "size": 12,
+          "section": ".bss",
+          "identity": "User CSV, direct head/tail/count references and Setup12-byte clear"
+        },
+        {
+          "name": "ccallgraph_outfile",
+          "address": "0x6e9110",
+          "size": 4,
+          "section": ".bss",
+          "identity": "User CSV, Cleanup/Setup direct accesses"
+        }
+      ],
+      "data_complete": false,
+      "data_evidence": [
+        {
+          "name": "@284",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x006ad654",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_6",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_7",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_8",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00654784",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_9",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "@409",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x006ad664",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_16",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_22",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006547c0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_ccallgraph",
+          "section": ".bss",
+          "size": 12,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x00711bac",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_ccallgraph_outfile",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x006e9110",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "original_switch_tables": [
+        {
+          "owner": "CCallGraph_Compute",
+          "address": "0x654754",
+          "size": 24,
+          "section": ".rdata",
+          "indirect_jump": "0x5a1150",
+          "native_instruction": "jmp dword ptr [eax*4 + 0x654754]",
+          "entries": [
+            "0x5a1157",
+            "0x5a11b1",
+            "0x5a1157",
+            "0x5a1157",
+            "0x5a1157",
+            "0x5a1157"
+          ],
+          "sha256": "fc9166ed776dd267f1e24101a3c20eba9036f25d1b054ee79e8d1988bb53c244",
+          "status": "unresolved_emitted_table",
+          "manual_binding": false
+        },
+        {
+          "owner": "CCallGraph_Compute",
+          "address": "0x65476c",
+          "size": 24,
+          "section": ".rdata",
+          "indirect_jump": "0x5a10eb",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x65476c]",
+          "entries": [
+            "0x5a10f2",
+            "0x5a11d1",
+            "0x5a10f2",
+            "0x5a10f2",
+            "0x5a10f2",
+            "0x5a10f2"
+          ],
+          "sha256": "45cac71ccab9634be9ccf1c1b181f91152593c5653b147330681c375f45e286b",
+          "status": "unresolved_emitted_table",
+          "manual_binding": false
+        },
+        {
+          "owner": "CCallGraph_Compute",
+          "address": "0x654784",
+          "size": 24,
+          "section": ".rdata",
+          "indirect_jump": "0x5a106f",
+          "native_instruction": "jmp dword ptr [ecx*4 + 0x654784]",
+          "entries": [
+            "0x5a1076",
+            "0x5a10b3",
+            "0x5a1076",
+            "0x5a1076",
+            "0x5a1076",
+            "0x5a1076"
+          ],
+          "sha256": "e749aab8d90b715d4289d9528360444d67a1aabae0ae384704a2915ea6c24d00",
+          "status": "strict_exact_automatic_reference_anchor",
+          "manual_binding": false
+        },
+        {
+          "owner": "CCallGraph_Compute",
+          "address": "0x65479c",
+          "size": 12,
+          "section": ".rdata",
+          "indirect_jump": "0x5a1009",
+          "native_instruction": "jmp dword ptr [eax*4 + 0x65479c]",
+          "entries": [
+            "0x5a1010",
+            "0x5a10c9",
+            "0x5a1128"
+          ],
+          "sha256": "e0c5578085d18cd8ace8099118f036cc21a119e7f5b5aa94853df010d6f07c37",
+          "status": "unresolved_emitted_table",
+          "manual_binding": false
+        },
+        {
+          "owner": "fn_005a1560",
+          "address": "0x6547a8",
+          "size": 24,
+          "section": ".rdata",
+          "indirect_jump": "0x5a1609",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x6547a8]",
+          "entries": [
+            "0x5a1599",
+            "0x5a15a0",
+            "0x5a1599",
+            "0x5a1584",
+            "0x5a1584",
+            "0x5a1595"
+          ],
+          "sha256": "61aaa4e1affe3df4a050e7b781cd9b2cb301cca2427c265d6016aa2d06342252",
+          "status": "unresolved_emitted_table",
+          "manual_binding": false
+        },
+        {
+          "owner": "fn_005a1780",
+          "address": "0x6547c0",
+          "size": 12,
+          "section": ".rdata",
+          "indirect_jump": "0x5a1790",
+          "native_instruction": "jmp dword ptr [edx*4 + 0x6547c0]",
+          "entries": [
+            "0x5a1797",
+            "0x5a17a6",
+            "0x5a17a9"
+          ],
+          "sha256": "91f319e4254e64e9ea5e2b99087ac6ddf3a5ca8d3884e9759de3a78940b59a63",
+          "status": "strict_exact_automatic_reference_anchor",
+          "manual_binding": false
+        }
+      ],
+      "emitted_switch_provenance": [
+        {
+          "parent": "CCallGraph_Compute",
+          "symbol": ".sw$280",
+          "object_section": 9,
+          "size": 12,
+          "parent_relocation_offset": "0x8c",
+          "kind": 6,
+          "status": "unresolved_no_binding",
+          "binding": null,
+          "native_parent_jumps": [
+            "0x5a1150",
+            "0x5a10eb",
+            "0x5a106f",
+            "0x5a1009"
+          ],
+          "provenance": "Actual COFF relocation from emitted parent into compiler-generated section; no ordinal/name/section alias added."
+        },
+        {
+          "parent": "CCallGraph_Compute",
+          "symbol": ".sw$281",
+          "object_section": 8,
+          "size": 24,
+          "parent_relocation_offset": "0xf2",
+          "kind": 6,
+          "status": "automatically_resolved_independent_reference_anchor",
+          "binding": null,
+          "native_parent_jumps": [
+            "0x5a1150",
+            "0x5a10eb",
+            "0x5a106f",
+            "0x5a1009"
+          ],
+          "provenance": "Actual COFF relocation from emitted parent into compiler-generated section; no ordinal/name/section alias added."
+        },
+        {
+          "parent": "CCallGraph_Compute",
+          "symbol": ".sw$282",
+          "object_section": 7,
+          "size": 24,
+          "parent_relocation_offset": "0x16e",
+          "kind": 6,
+          "status": "unresolved_no_binding",
+          "binding": null,
+          "native_parent_jumps": [
+            "0x5a1150",
+            "0x5a10eb",
+            "0x5a106f",
+            "0x5a1009"
+          ],
+          "provenance": "Actual COFF relocation from emitted parent into compiler-generated section; no ordinal/name/section alias added."
+        },
+        {
+          "parent": "CCallGraph_Compute",
+          "symbol": ".sw$283",
+          "object_section": 6,
+          "size": 24,
+          "parent_relocation_offset": "0x1cf",
+          "kind": 6,
+          "status": "unresolved_no_binding",
+          "binding": null,
+          "native_parent_jumps": [
+            "0x5a1150",
+            "0x5a10eb",
+            "0x5a106f",
+            "0x5a1009"
+          ],
+          "provenance": "Actual COFF relocation from emitted parent into compiler-generated section; no ordinal/name/section alias added."
+        },
+        {
+          "parent": "fn_005a1560",
+          "symbol": ".sw$436",
+          "object_section": 16,
+          "size": 24,
+          "parent_relocation_offset": "0x1d",
+          "kind": 6,
+          "status": "unresolved_no_binding",
+          "binding": null,
+          "native_parent_jumps": [
+            "0x5a1609"
+          ],
+          "provenance": "Actual COFF relocation from emitted parent into compiler-generated section; no ordinal/name/section alias added."
+        }
+      ],
+      "native_abi": {
+        "packing": 2,
+        "NativeCGObject": "kind0,access1,datatype2,namespace8,name+c,type+10,qualifiers+14,storageClass+18,flags short+1a,graphNode+1c;32-byte prefix. Namespace +8 is also used as a linked-record chain by predicate, no claim that its complete type is GraphNode.",
+        "NativeCGNode": "next0,previous4,object8,unknown+c4,outgoing+10,incoming+14,index+18,kind+1c,initCode+1d,marked+1e,marked2+1f;32 bytes",
+        "NativeCGEdge": "next0,target4,count8,flags short+c;14 bytes",
+        "NativeCallGraph": "first0,last4,count8;12 bytes",
+        "NativeCGIR": "opaque first pointer0,object4,opaque46 bytes8;54 bytes; GetIR uses hidden first return pointer and returns destinationEAX",
+        "NativeCGPacked": "count unsigned32+14, references start+1a; each8 bytes object0,kind4,flags5,count UInt16+6",
+        "NativeCGIRSlot": "packed pointer0; remaining record unspecified",
+        "NativeCGListSlot": "object list pointer+10; remaining record unspecified",
+        "calling_convention": "cdecl; unknown helpers address aliases preserve observed argument counts. fn5a1510 returns node; fn5a1560 returns node; fn5a1780 and fn5a0f00 return UInt8."
+      },
+      "baseline_abi_audit": {
+        "baseline_counterparts_found": false,
+        "search": "Case-insensitive CallGraph/call_graph search of all src/include and Mac symbol map; only this new file matched. No baseline aliases/guards requested.",
+        "public_collision": "None found in existing baseline headers/source; new native records kept private.",
+        "scope_limit": "Unported callers and other TU helpers still use older shared record definitions. Compiling new TU does not establish whole-program native semantic compatibility."
+      },
+      "membership": {
+        "identified_native_members": 15,
+        "attempted_native_members": 15,
+        "first": "0x5a0e60",
+        "last": "0x5a1820",
+        "preceding_excluded": "CSV is_safe_const5a0e00/95, Alias family type/register/const predicate; ends5a0e5f before first member. Other left helpers5a0d90/5a0de0 refer alias sentinel6ad62e/alias global715c54, not graph globals.",
+        "following_excluded": "5a1840/349 template-instantiation scanner; calls5a19a0/5a1b90/5a1f80 with CTemplateFuncInst.c assertions. Starts after Setup25-byte body and terminal padding.",
+        "assertion_members": [
+          "0x5a0f80",
+          "0x5a12c0",
+          "0x5a1310",
+          "0x5a13b0",
+          "0x5a1560",
+          "0x5a1780"
+        ],
+        "all_image_audit": {
+          "anchors": {
+            "0x711bac": "ccallgraph.first",
+            "0x711bb0": "ccallgraph.last",
+            "0x711bb4": "ccallgraph.count",
+            "0x6e9110": "ccallgraph_outfile",
+            "0x6ad654": "CCallGraph.c filename",
+            "0x6ad664": "<init-code>"
+          },
+          "all_image_references": [
+            {
+              "function": "0x47a620",
+              "references": [
+                {
+                  "address": "0x47a626",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "CMiddleLayer native family consumer; neighboring CSV CMid_GenerateCallGraphHelper47a6e0 and CMid_GenerateMultiCallGraph479fc0; root owns migrated CMiddleLayer.c."
+            },
+            {
+              "function": "0x47a6e0",
+              "references": [
+                {
+                  "address": "0x47a74f",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x47a772",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "CSV CMid_GenerateCallGraphHelper, separate named source family; not a CCallGraph name."
+            },
+            {
+              "function": "0x47aa60",
+              "references": [
+                {
+                  "address": "0x47aa61",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "Native CMiddleLayer.c assertion body in saved assertion inventory; graph consumer outside this TU."
+            },
+            {
+              "function": "0x49c710",
+              "references": [
+                {
+                  "address": "0x49c72c",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "Can-throw analysis driver calling49c9e0 and49c7a0; shares flags/control with CException analysis, not graph allocation/ownership. Identity/source not independently named; retained as unresolved outside consumer rather than claimed CCallGraph member."
+            },
+            {
+              "function": "0x49c7a0",
+              "references": [
+                {
+                  "address": "0x49c7b5",
+                  "instruction": "mov edi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x49c7d1",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "Can-throw graph propagation pass calling49c920 and GetIR/SetIR; linked49c9e0\u2192CSV CExcept_CanThrowCheckCB49cbd0 with CException.cpp assertion and state6dc808..b. Source ownership remains provisional; no native CCallGraph canonical label or assertion. No reassignment of this body."
+            },
+            {
+              "function": "0x4bac40",
+              "references": [
+                {
+                  "address": "0x4bacef",
+                  "instruction": "push dword ptr [0x711bb4]",
+                  "anchor": "ccallgraph.count"
+                },
+                {
+                  "address": "0x4bacfa",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "Stream serialization consumer immediately before CSV CIRStream_ImportCallGraph4bad90, same native wire record access; source ownership CIRStreamCallGraph candidate, not inferred as CCallGraph from global usage alone."
+            },
+            {
+              "function": "0x545580",
+              "references": [
+                {
+                  "address": "0x5455b3",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ],
+              "ownership_review": "Template/type tooling graph consumer following CSV CTTool_Cleanup545560/CTTool_Setup545570; ownership remains provisional family evidence, not CCallGraph assertion/name. No reassignment."
+            },
+            {
+              "function": "0x5a0e60",
+              "references": [
+                {
+                  "address": "0x5a0e60",
+                  "instruction": "mov edx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a0e7a",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a0eaa",
+                  "instruction": "mov edx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a0ec8",
+                  "instruction": "mov ecx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a0ef0",
+                  "instruction": "mov dword ptr [0x711bb4], edx",
+                  "anchor": "ccallgraph.count"
+                }
+              ]
+            },
+            {
+              "function": "0x5a0f80",
+              "references": [
+                {
+                  "address": "0x5a0f84",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a0f9f",
+                  "instruction": "mov dword ptr [0x711bb4], ebp",
+                  "anchor": "ccallgraph.count"
+                },
+                {
+                  "address": "0x5a0fa5",
+                  "instruction": "mov ebx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a11c5",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                },
+                {
+                  "address": "0x5a11db",
+                  "instruction": "mov esi, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a1245",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                },
+                {
+                  "address": "0x5a1269",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                }
+              ]
+            },
+            {
+              "function": "0x5a12c0",
+              "references": [
+                {
+                  "address": "0x5a12f5",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1310",
+              "references": [
+                {
+                  "address": "0x5a138c",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                }
+              ]
+            },
+            {
+              "function": "0x5a13b0",
+              "references": [
+                {
+                  "address": "0x5a13fa",
+                  "instruction": "mov dword ptr [0x711bac], esi",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a1410",
+                  "instruction": "mov dword ptr [0x711bb0], 0",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a1422",
+                  "instruction": "mov dword ptr [0x711bb0], eax",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a1434",
+                  "instruction": "mov dword ptr [0x711bac], 0",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a1445",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                },
+                {
+                  "address": "0x5a148d",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1510",
+              "references": [
+                {
+                  "address": "0x5a1524",
+                  "instruction": "push 0x6ad664",
+                  "anchor": "<init-code>"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1560",
+              "references": [
+                {
+                  "address": "0x5a1576",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                },
+                {
+                  "address": "0x5a15a5",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                },
+                {
+                  "address": "0x5a15c3",
+                  "instruction": "mov edx, dword ptr [0x711bb0]",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a15d1",
+                  "instruction": "mov ecx, dword ptr [0x711bb0]",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a15da",
+                  "instruction": "mov dword ptr [0x711bb0], esi",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a15e3",
+                  "instruction": "mov eax, dword ptr [0x711bb4]",
+                  "anchor": "ccallgraph.count"
+                },
+                {
+                  "address": "0x5a15e8",
+                  "instruction": "add dword ptr [0x711bb4], 1",
+                  "anchor": "ccallgraph.count"
+                },
+                {
+                  "address": "0x5a1612",
+                  "instruction": "mov dword ptr [0x711bb0], esi",
+                  "anchor": "ccallgraph.last"
+                },
+                {
+                  "address": "0x5a1618",
+                  "instruction": "mov dword ptr [0x711bac], ecx",
+                  "anchor": "ccallgraph.first"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1720",
+              "references": [
+                {
+                  "address": "0x5a1720",
+                  "instruction": "mov ecx, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a1738",
+                  "instruction": "mov dword ptr [0x711bb4], eax",
+                  "anchor": "ccallgraph.count"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1740",
+              "references": [
+                {
+                  "address": "0x5a1740",
+                  "instruction": "mov eax, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1760",
+              "references": [
+                {
+                  "address": "0x5a1760",
+                  "instruction": "mov eax, dword ptr [0x711bac]",
+                  "anchor": "ccallgraph.first"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1780",
+              "references": [
+                {
+                  "address": "0x5a17bd",
+                  "instruction": "push 0x6ad654",
+                  "anchor": "CCallGraph.c filename"
+                }
+              ]
+            },
+            {
+              "function": "0x5a17d0",
+              "references": [
+                {
+                  "address": "0x5a17d0",
+                  "instruction": "cmp dword ptr [0x6e9110], 0",
+                  "anchor": "ccallgraph_outfile"
+                },
+                {
+                  "address": "0x5a17e2",
+                  "instruction": "push dword ptr [0x6e9110]",
+                  "anchor": "ccallgraph_outfile"
+                },
+                {
+                  "address": "0x5a17f2",
+                  "instruction": "push dword ptr [0x6e9110]",
+                  "anchor": "ccallgraph_outfile"
+                },
+                {
+                  "address": "0x5a17ff",
+                  "instruction": "push dword ptr [0x6e9110]",
+                  "anchor": "ccallgraph_outfile"
+                },
+                {
+                  "address": "0x5a180b",
+                  "instruction": "mov dword ptr [0x6e9110], 0",
+                  "anchor": "ccallgraph_outfile"
+                }
+              ]
+            },
+            {
+              "function": "0x5a1820",
+              "references": [
+                {
+                  "address": "0x5a1822",
+                  "instruction": "push 0x711bac",
+                  "anchor": "ccallgraph.first"
+                },
+                {
+                  "address": "0x5a182e",
+                  "instruction": "mov dword ptr [0x6e9110], 0",
+                  "anchor": "ccallgraph_outfile"
+                }
+              ]
+            }
+          ],
+          "all_csv_name_rows": [
+            {
+              "address": "0x479fc0",
+              "name": "CMid_GenerateMultiCallGraph"
+            },
+            {
+              "address": "0x47a6e0",
+              "name": "CMid_GenerateCallGraphHelper"
+            },
+            {
+              "address": "0x4bad90",
+              "name": "CIRStream_ImportCallGraph"
+            },
+            {
+              "address": "0x5a0e60",
+              "name": "CCallGraph_RemoveDeadNodes"
+            },
+            {
+              "address": "0x5a0f80",
+              "name": "CCallGraph_Compute"
+            },
+            {
+              "address": "0x5a12c0",
+              "name": "CCallGraph_SetIR"
+            },
+            {
+              "address": "0x5a1310",
+              "name": "CCallGraph_GetIR"
+            },
+            {
+              "address": "0x5a13b0",
+              "name": "CCallGraph_RemoveNode"
+            },
+            {
+              "address": "0x5a17d0",
+              "name": "CCallGraph_Cleanup"
+            },
+            {
+              "address": "0x5a1820",
+              "name": "CCallGraph_Setup"
+            },
+            {
+              "address": "0x6e9110",
+              "name": "ccallgraph_outfile"
+            },
+            {
+              "address": "0x711bac",
+              "name": "ccallgraph"
+            }
+          ],
+          "all_mac_name_rows": []
+        },
+        "outside_consumers": [
+          {
+            "function": "0x47a620",
+            "references": [
+              {
+                "address": "0x47a626",
+                "instruction": "mov esi, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "CMiddleLayer native family consumer; neighboring CSV CMid_GenerateCallGraphHelper47a6e0 and CMid_GenerateMultiCallGraph479fc0; root owns migrated CMiddleLayer.c."
+          },
+          {
+            "function": "0x47a6e0",
+            "references": [
+              {
+                "address": "0x47a74f",
+                "instruction": "mov ebx, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              },
+              {
+                "address": "0x47a772",
+                "instruction": "mov ebx, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "CSV CMid_GenerateCallGraphHelper, separate named source family; not a CCallGraph name."
+          },
+          {
+            "function": "0x47aa60",
+            "references": [
+              {
+                "address": "0x47aa61",
+                "instruction": "mov ebx, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "Native CMiddleLayer.c assertion body in saved assertion inventory; graph consumer outside this TU."
+          },
+          {
+            "function": "0x49c710",
+            "references": [
+              {
+                "address": "0x49c72c",
+                "instruction": "mov esi, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "Can-throw analysis driver calling49c9e0 and49c7a0; shares flags/control with CException analysis, not graph allocation/ownership. Identity/source not independently named; retained as unresolved outside consumer rather than claimed CCallGraph member."
+          },
+          {
+            "function": "0x49c7a0",
+            "references": [
+              {
+                "address": "0x49c7b5",
+                "instruction": "mov edi, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              },
+              {
+                "address": "0x49c7d1",
+                "instruction": "mov esi, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "Can-throw graph propagation pass calling49c920 and GetIR/SetIR; linked49c9e0\u2192CSV CExcept_CanThrowCheckCB49cbd0 with CException.cpp assertion and state6dc808..b. Source ownership remains provisional; no native CCallGraph canonical label or assertion. No reassignment of this body."
+          },
+          {
+            "function": "0x4bac40",
+            "references": [
+              {
+                "address": "0x4bacef",
+                "instruction": "push dword ptr [0x711bb4]",
+                "anchor": "ccallgraph.count"
+              },
+              {
+                "address": "0x4bacfa",
+                "instruction": "mov ebx, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "Stream serialization consumer immediately before CSV CIRStream_ImportCallGraph4bad90, same native wire record access; source ownership CIRStreamCallGraph candidate, not inferred as CCallGraph from global usage alone."
+          },
+          {
+            "function": "0x545580",
+            "references": [
+              {
+                "address": "0x5455b3",
+                "instruction": "mov esi, dword ptr [0x711bac]",
+                "anchor": "ccallgraph.first"
+              }
+            ],
+            "ownership_review": "Template/type tooling graph consumer following CSV CTTool_Cleanup545560/CTTool_Setup545570; ownership remains provisional family evidence, not CCallGraph assertion/name. No reassignment."
+          }
+        ],
+        "unlocated_mac_names": [],
+        "inline_helpers": "No Mac CCallGraph names exist. native_new_edge and native_mark_N are reconstruction-only static inline helpers, not asserted original names; emitted code has no extra standalone functions.",
+        "completeness_limit": "All currently identified members attempted. Seven outside graph consumers retain other/provisional ownership as documented; indirect calls, optimized-away symbols and missing debug records cannot prove exhaustive original source membership. No unproven consumer was silently declared absent or reassigned."
+      },
+      "validation": {
+        "source_sha256": "e921d63bca05c2a4371673a9078157c81368ea1f4bb11667ac563b4cf058ba5d",
+        "cp932": true,
+        "sjis_checker": "tools/check_sjis.py absent; direct CP932 encode succeeded",
+        "strict_definition": "Entire resolved code bytes equal retail body and absolute relocation site set exactly equals PE base relocations. Same size alone is not strict.",
+        "objdiff_scope": "Preferred profile resolves13/15 code functions plus6/10 emitted data items. Four anonymous tables remain unresolved. Space resolves15 but has0 strict, not a matching profile.",
+        "emitted_code_symbols": [
+          "_fn_005a0f00",
+          "_CCallGraph_RemoveDeadNodes",
+          "_CCallGraph_Compute",
+          "_CCallGraph_SetIR",
+          "_CCallGraph_GetIR",
+          "_CCallGraph_RemoveNode",
+          "_fn_005a1510",
+          "_fn_005a1560",
+          "_fn_005a1620",
+          "_fn_005a1720",
+          "_fn_005a1740",
+          "_fn_005a1760",
+          "_fn_005a1780",
+          "_CCallGraph_Cleanup",
+          "_CCallGraph_Setup"
+        ],
+        "runtime": "No original application execution or differential semantic test. Nonmatches reviewed statically against complete Capstone native bodies including cold assertion paths after early RET.",
+        "global_build": "Parent owns normal configure/build integration; not run here.",
+        "extent_policy": "Next saved Ghidra entry, trim trailing NOP padding only; retain cold assertion bodies. Function rows sorted and nonoverlapping verified."
+      },
+      "provenance": {
+        "csv": "C:\\Users\\olsen\\Downloads\\mwcc.csv",
+        "csv_sha256": "328893e092c2946a9530b01d15007320d7c088a85347d2604a03d1d99ad0b5a5",
+        "csv_kind": "Incomplete v10 address-name mapping applied to GC3 by user; corroborated with native behavior, not original GC3 debug information",
+        "mac": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "mac_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "native_disassembly": "build/ccallgraph-retail.txt",
+        "unknown_outside_analysis": "build/ccallgraph-library-retail.txt",
+        "caller_return_usage": "build/ccallgraph-remove-dead-callers.json"
+      },
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 15,
+      "strict_exact_count": 11,
+      "source_sha256": "e921d63bca05c2a4371673a9078157c81368ea1f4bb11667ac563b4cf058ba5d",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 15,
+        "attempted_members": 15,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "Whole-image named/global/assertion/caller/seam audit with outside consumers explicitly reviewed; all four valid compiler profiles tested for all15 members."
+      },
+      "normal_project_validation": {
+        "build": "all_source progress passed",
+        "strict_exact": 11,
+        "objdiff_cli": "normal per-TU view processed successfully",
+        "data_complete": false,
+        "matching_limit": "Four emitted tables remain unresolved; descriptor/graph code differences not claimed strict matches."
       }
     }
   },

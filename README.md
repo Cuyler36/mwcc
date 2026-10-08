@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 226 source files build, 1,470 candidate functions are
-mapped, and 626 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 227 source files build, 1,485 candidate functions are
+mapped, and 637 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -69,6 +69,11 @@ bodies retain reviewed code differences; two switch tables remain unresolved.
 Changed argument counts and record layouts are documented, with incompatible
 legacy aliases excluded. Full original data ownership remains incomplete.
 
+CCallGraph has all 15 identified members attempted, including its graph and IR
+helpers, with 11 exact matches. Two bodies retain reviewed code differences;
+two other bodies and four emitted switch tables remain unresolved. A whole-image
+membership audit distinguishes graph consumers in other source families.
+
 The shared `mwcc.csv` is preserved as normalized name candidates in
 [symbol-hints.json](config/GC_3_0a5_2/symbol-hints.json), with its input hash
 and reported version 10 provenance. It supplies 1,284 code names and 1,310
@@ -96,7 +101,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 48 original-only TU views to objdiff. The twenty
+map. It currently adds 46 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

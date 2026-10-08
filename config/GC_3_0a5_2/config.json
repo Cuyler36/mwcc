@@ -227,7 +227,8 @@
     "src/GC_3_0a5_2/backend/PCode.c",
     "src/GC_3_0a5_2/backend/PCodeInfo.c",
     "src/GC_3_0a5_2/frontend/CError.c",
-    "src/GC_3_0a5_2/frontend/CABI.c"
+    "src/GC_3_0a5_2/frontend/CABI.c",
+    "src/GC_3_0a5_2/frontend/CCallGraph.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3523,6 +3524,25 @@
       "include_dirs": [
         "src/frontend"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/CCallGraph.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
     }
   },
   "matching_functions": [
@@ -4151,7 +4171,18 @@
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetPtrDiffTType",
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetSizeTType",
     "src/GC_3_0a5_2/frontend/CABI/CABI_GetStructResultArgumentIndex",
-    "src/GC_3_0a5_2/frontend/CError/CError_InfoString"
+    "src/GC_3_0a5_2/frontend/CError/CError_InfoString",
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_RemoveDeadNodes",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a0f00",
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_SetIR",
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_GetIR",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1510",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1720",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1740",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1760",
+    "src/GC_3_0a5_2/frontend/CCallGraph/fn_005a1780",
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_Cleanup",
+    "src/GC_3_0a5_2/frontend/CCallGraph/CCallGraph_Setup"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5805,6 +5836,46 @@
       "_CClass_DefaultConstructor": "0x5427b0",
       "_CInit_ConstructClassArray": "0x535e60",
       "_nullnode": "0x5242f0"
+    },
+    "src/GC_3_0a5_2/frontend/CCallGraph.c": {
+      "_CCallGraph_RemoveDeadNodes": "0x5a0e60",
+      "_fn_005a0f00": "0x5a0f00",
+      "_CCallGraph_Compute": "0x5a0f80",
+      "_CCallGraph_SetIR": "0x5a12c0",
+      "_CCallGraph_GetIR": "0x5a1310",
+      "_CCallGraph_RemoveNode": "0x5a13b0",
+      "_fn_005a1510": "0x5a1510",
+      "_fn_005a1560": "0x5a1560",
+      "_fn_005a1620": "0x5a1620",
+      "_fn_005a1720": "0x5a1720",
+      "_fn_005a1740": "0x5a1740",
+      "_fn_005a1760": "0x5a1760",
+      "_fn_005a1780": "0x5a1780",
+      "_CCallGraph_Cleanup": "0x5a17d0",
+      "_CCallGraph_Setup": "0x5a1820",
+      "_ccallgraph": "0x711bac",
+      "_ccallgraph_outfile": "0x6e9110",
+      "_fn_0070f1f4": "0x70f1f4",
+      "_fn_0070f1d4": "0x70f1d4",
+      "_cscope_root": "0x7101c4",
+      "_rt_func": "0x6771e4",
+      "_CError_Internal": "0x45a250",
+      "_galloc2": "0x46c730",
+      "_fn_0046c6e0": "0x46c6e0",
+      "_memclrw": "0x46c400",
+      "_fn_00456a50": "0x456a50",
+      "_fn_0047d080": "0x47d080",
+      "_fn_0047ce20": "0x47ce20",
+      "_fn_0047cde0": "0x47cde0",
+      "_fn_0047cf40": "0x47cf40",
+      "_fn_00509f00": "0x509f00",
+      "_CIRStream_PackCode": "0x505780",
+      "_CIRStream_UnpackCode": "0x505530",
+      "_CParser_NewFunctionObject": "0x4554f0",
+      "_CParser_AppendUniqueName": "0x455d40",
+      "_Dump_CloseToFile": "0x4ebf30",
+      "_Dump_CloseToWindow": "0x4ebc80",
+      "_Dump_FreeHandle": "0x4ec680"
     }
   },
   "original_source_units": {
@@ -5815,6 +5886,7 @@
     "PCodeUtilities.c": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
     "PCode.c": "src/GC_3_0a5_2/backend/PCode.c",
     "CError.c": "src/GC_3_0a5_2/frontend/CError.c",
-    "CABI.c": "src/GC_3_0a5_2/frontend/CABI.c"
+    "CABI.c": "src/GC_3_0a5_2/frontend/CABI.c",
+    "CCallGraph.c": "src/GC_3_0a5_2/frontend/CCallGraph.c"
   }
 }

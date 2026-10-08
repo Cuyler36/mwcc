@@ -16843,6 +16843,171 @@
     }
   },
   {
+    "name": "CCallGraph_RemoveDeadNodes",
+    "address": "0x5a0e60",
+    "size": 152,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a0f00",
+    "address": "0x5a0f00",
+    "size": 118,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CCallGraph_Compute",
+    "address": "0x5a0f80",
+    "size": 818,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "CCallGraph_SetIR",
+    "address": "0x5a12c0",
+    "size": 67,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CCallGraph_GetIR",
+    "address": "0x5a1310",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CCallGraph_RemoveNode",
+    "address": "0x5a13b0",
+    "size": 347,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1510",
+    "address": "0x5a1510",
+    "size": 71,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1560",
+    "address": "0x5a1560",
+    "size": 192,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_005a1620",
+    "address": "0x5a1620",
+    "size": 250,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1720",
+    "address": "0x5a1720",
+    "size": 30,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1740",
+    "address": "0x5a1740",
+    "size": 31,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1760",
+    "address": "0x5a1760",
+    "size": 27,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005a1780",
+    "address": "0x5a1780",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV FUN label; no Mac name/STABS identity; retained address alias; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CCallGraph_Cleanup",
+    "address": "0x5a17d0",
+    "size": 70,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CCallGraph_Setup",
+    "address": "0x5a1820",
+    "size": 25,
+    "source": "src/GC_3_0a5_2/frontend/CCallGraph.c",
+    "identity_evidence": "CSV v10-applied name corroborated by native body; Seven CSV canonical entry names, six CCallGraph.c assertion bodies, same32-byte graph-node14-byte edge ABI, direct calls to/from proven family and graph globals. Whole-image audit saved separately; not adjacency alone.",
+    "boundary_evidence": {
+      "method": "Complete reviewed native CFG; whole-image graph/assertion/identity audit and adjoining alias/template consumers recorded in TU ledger.",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CExpr_ConstructObject",
     "address": "0x005a6b70",
     "size": 780,

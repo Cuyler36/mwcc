@@ -4404,41 +4404,74 @@
     }
   },
   {
-    "name": "MacFileTypes_AppendTable",
-    "address": "0x0042f690",
+    "name": "OS_AddFileTypeMappingList",
+    "address": "0x42f690",
     "size": 104,
-    "source": "src/driver/MacFileTypes.c",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
     "baseline_name": "MacFileTypes_AppendTable",
     "baseline_address": "0x00421a20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "MacFileTypes_MatchBytes",
-    "address": "0x0042f7b0",
+    "name": "OS_MacType_To_OSType",
+    "address": "0x42f700",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_SetMacFileType",
+    "address": "0x42f780",
+    "size": 35,
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_GetMacFileTypeMagic",
+    "address": "0x42f7b0",
     "size": 239,
-    "source": "src/driver/MacFileTypes.c",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
     "baseline_name": "MacFileTypes_MatchBytes",
     "baseline_address": "0x00421b20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "MacFileTypes_GetFileType",
-    "address": "0x0042f8a0",
+    "name": "OS_GetMacFileType",
+    "address": "0x42f8a0",
     "size": 351,
-    "source": "src/driver/MacFileTypes.c",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
     "baseline_name": "MacFileTypes_GetFileType",
     "baseline_address": "0x00421bf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_SetMacFileCreatorAndType",
+    "address": "0x42fa00",
+    "size": 16,
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+    "identity_evidence": "MacFileTypes.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

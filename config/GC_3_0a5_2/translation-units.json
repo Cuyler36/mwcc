@@ -5433,6 +5433,141 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+      "original_filename": "MacFileTypes.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "OS_AddFileTypeMappingList",
+          "address": "0x0042f690",
+          "size": 104,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0042f6ee"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+        },
+        {
+          "name": "OS_MacType_To_OSType",
+          "address": "0x42f700",
+          "size": 120,
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_SetMacFileType",
+          "address": "0x42f780",
+          "size": 35,
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_GetMacFileTypeMagic",
+          "address": "0x42f7b0",
+          "size": 239,
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_GetMacFileType",
+          "address": "0x42f8a0",
+          "size": 351,
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_SetMacFileCreatorAndType",
+          "address": "0x42fa00",
+          "size": 16,
+          "compiled_source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "OS_AddFileTypeMappingList",
+          "mac_address": "0x0001a338",
+          "linkage_names": [
+            "OS_AddFileTypeMappingList"
+          ]
+        },
+        {
+          "name": "OS_UseFileTypeMappings",
+          "mac_address": "0x0001a3e4",
+          "linkage_names": [
+            "OS_UseFileTypeMappings"
+          ]
+        },
+        {
+          "name": "OS_MacType_To_OSType",
+          "mac_address": "0x0001a420",
+          "linkage_names": [
+            "OS_MacType_To_OSType"
+          ]
+        },
+        {
+          "name": "OS_SetMacFileType",
+          "mac_address": "0x0001a4c4",
+          "linkage_names": [
+            "OS_SetMacFileType"
+          ]
+        },
+        {
+          "name": "OS_GetMacFileTypeMagic",
+          "mac_address": "0x0001a504",
+          "linkage_names": [
+            "OS_GetMacFileTypeMagic"
+          ]
+        },
+        {
+          "name": "OS_GetMacFileType",
+          "mac_address": "0x0001a5d4",
+          "linkage_names": [
+            "OS_GetMacFileType"
+          ]
+        },
+        {
+          "name": "OS_SetMacFileCreatorAndType",
+          "mac_address": "0x0001a740",
+          "linkage_names": [
+            "OS_SetMacFileCreatorAndType"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/MemUtils.c",
       "original_filename": "MemUtils.c",
       "evidence": [
@@ -21597,108 +21732,6 @@
       ],
       "windows_functions": [],
       "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/MacFileTypes.c",
-      "original_filename": "MacFileTypes.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "MacFileTypes_AppendTable",
-          "address": "0x0042f690",
-          "size": 104,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0042f6ee"
-          ],
-          "compiled_source": "src/driver/MacFileTypes.c"
-        },
-        {
-          "name": "MacFileTypes_MatchBytes",
-          "address": "0x0042f7b0",
-          "size": 239,
-          "compiled_source": "src/driver/MacFileTypes.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "MacFileTypes_GetFileType",
-          "address": "0x0042f8a0",
-          "size": 351,
-          "compiled_source": "src/driver/MacFileTypes.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "OS_AddFileTypeMappingList",
-          "mac_address": "0x0001a338",
-          "linkage_names": [
-            "OS_AddFileTypeMappingList"
-          ]
-        },
-        {
-          "name": "OS_UseFileTypeMappings",
-          "mac_address": "0x0001a3e4",
-          "linkage_names": [
-            "OS_UseFileTypeMappings"
-          ]
-        },
-        {
-          "name": "OS_MacType_To_OSType",
-          "mac_address": "0x0001a420",
-          "linkage_names": [
-            "OS_MacType_To_OSType"
-          ]
-        },
-        {
-          "name": "OS_SetMacFileType",
-          "mac_address": "0x0001a4c4",
-          "linkage_names": [
-            "OS_SetMacFileType"
-          ]
-        },
-        {
-          "name": "OS_GetMacFileTypeMagic",
-          "mac_address": "0x0001a504",
-          "linkage_names": [
-            "OS_GetMacFileTypeMagic"
-          ]
-        },
-        {
-          "name": "OS_GetMacFileType",
-          "mac_address": "0x0001a5d4",
-          "linkage_names": [
-            "OS_GetMacFileType"
-          ]
-        },
-        {
-          "name": "OS_SetMacFileCreatorAndType",
-          "mac_address": "0x0001a740",
-          "linkage_names": [
-            "OS_SetMacFileCreatorAndType"
-          ]
-        }
-      ],
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": false,
@@ -54060,7 +54093,7 @@
       }
     },
     "src/driver/MacFileTypes.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -54189,7 +54222,8 @@
           "space-nointrinsics": "6bd8a195f8f94773ab213bf9e5fc6350ff01f577205d9fb60bacaa89076b8854",
           "space-intrinsics": "2265f1f45e0d1fdd3f575b3097f8f1dbf87d80a5dd29a49702d2ebbcde962dab"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/MacFileTypes.c"
     },
     "src/driver/MacSpecs.c": {
       "status": "unattempted",
@@ -70608,6 +70642,243 @@
       "membership_reviewed": false,
       "strict_exact_count": 4,
       "source_sha256": "063cd16b6a6b8f0b02095afddd897a30a9dc456494b4c72a8dfc38f69244c5f5"
+    },
+    "src/GC_3_0a5_2/driver/MacFileTypes.c": {
+      "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+      "source_sha256": "4b679d5979ad0bc1c54fb20c98ddf02ce2364ba8391b23b29e2506a1c543b5f6",
+      "status": "attempted_equivalent",
+      "functions": [
+        {
+          "name": "OS_AddFileTypeMappingList",
+          "address": "0x42f690",
+          "size": 104,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": true,
+          "compiled_size": 104
+        },
+        {
+          "name": "OS_MacType_To_OSType",
+          "address": "0x42f700",
+          "size": 120,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": true,
+          "compiled_size": 120
+        },
+        {
+          "name": "OS_SetMacFileType",
+          "address": "0x42f780",
+          "size": 35,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": true,
+          "compiled_size": 35
+        },
+        {
+          "name": "OS_GetMacFileTypeMagic",
+          "address": "0x42f7b0",
+          "size": 239,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": false,
+          "compiled_size": 201
+        },
+        {
+          "name": "OS_GetMacFileType",
+          "address": "0x42f8a0",
+          "size": 351,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": true,
+          "compiled_size": 351
+        },
+        {
+          "name": "OS_SetMacFileCreatorAndType",
+          "address": "0x42fa00",
+          "size": 16,
+          "source": "src/GC_3_0a5_2/driver/MacFileTypes.c",
+          "exact": true,
+          "compiled_size": 16
+        }
+      ],
+      "source_bindings": {
+        "_fn_004263c0@4": "0x4263c0",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_defaultList": "0x6d90d8",
+        "_fmList": "0x6705cc",
+        "___OS_ExtendedGetMacFileTypeHook": "0x7100a8",
+        "_OS_TEXTTYPE": "0x710104",
+        "_OS_SetFileType@8": "0x40fad0",
+        "_OS_Open@12": "0x40fc10",
+        "_OS_GetSize@8": "0x40fe60",
+        "_OS_Read@12": "0x40fdb0",
+        "_OS_Close@4": "0x40fe40",
+        "_MacSpecs_MakeResourceForkSpec@12": "0x4249a0",
+        "_OS_AddFileTypeMappingList@8": "0x42f690",
+        "_OS_MacType_To_OSType@8": "0x42f700",
+        "_OS_SetMacFileType@8": "0x42f780",
+        "_OS_GetMacFileTypeMagic@12": "0x42f7b0",
+        "_OS_GetMacFileType@8": "0x42f8a0",
+        "_OS_SetMacFileCreatorAndType@12": "0x42fa00"
+      },
+      "compiler": {
+        "profile": "CW94speed",
+        "flags": [
+          "-O4",
+          "-opt speed",
+          "-opt intrinsics",
+          "-sym off",
+          "-Cpp_exceptions off",
+          "-str noreadonly",
+          "-DVERSION=3",
+          "-Iinclude",
+          "-i-",
+          "-Iinclude/libc"
+        ],
+        "compilations": 7,
+        "experiments": [
+          "Initial port: four strict functions; magic225B/GetType360B.",
+          "Explicit comparison local: magic201B; alternate flen branch374B.",
+          "Original no-hook-or-false wrapper: GetType351B strict.",
+          "Original-style declaration ordering and head local: magic201B.",
+          "Packed record alignment1 versus2: no instruction change.",
+          "Signed mactype/void input and idx=idx+1 versus idx++: no instruction change.",
+          "Final canonical UInt32/const char* and OS_TEXTTYPE naming: five strict; magic201B."
+        ]
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "_fmList",
+          "section": ".data",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006705cc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@68",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x006705d0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@69",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x006705e0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_defaultList",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d90d8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "___OS_ExtendedGetMacFileTypeHook",
+          "section": ".bss",
+          "size": 4,
+          "coff_common": true,
+          "method": "source-scoped common binding",
+          "address": "0x007100a8",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "membership": {
+        "mac_members": [
+          "OS_AddFileTypeMappingList",
+          "OS_UseFileTypeMappings",
+          "OS_MacType_To_OSType",
+          "OS_SetMacFileType",
+          "OS_GetMacFileTypeMagic",
+          "OS_GetMacFileType",
+          "OS_SetMacFileCreatorAndType"
+        ],
+        "windows_cluster": "0x42f690 through 0x42fa10 exclusive, six complete reachable bodies with alignment padding excluded.",
+        "evidence": [
+          "Explicit Mac STABS SO MacFileTypes.c lines12946..13130 gives names, signatures, record fields and defaultList/fmList/hook globals.",
+          "42f690 assertion refers directly to MacFileTypes.c, *scan != NULL and Windows line36.",
+          "The following five bodies operate the same mapping list or directly call named mapping helpers and correspond to the original Mac source functions.",
+          "42fa10 begins unrelated callback installation logic; preceding 42f67c..42f688 are import trampolines."
+        ],
+        "OS_UseFileTypeMappings": "No retained out-of-line body found. All .text PE base relocations referencing fmList/defaultList/hook are saved in macfiletypes-globalrefs.json. fmList has three read-only references, no write/address-taking instruction. defaultList has no direct .text reference. A separate Windows use-mappings function with the original state-changing behavior is absent; no claim about optimized/inlined code without these references.",
+        "known_limits": "No live Ghidra; original PE Capstone, saved entries, explicit STABS and direct static references used. Membership complete for known mapping cluster, platform omission documented."
+      },
+      "native_abi": {
+        "calling_convention": "All six Windows functions stdcall. Hook callback cdecl (caller pops two arguments).",
+        "records": "OSFileTypeMapping14 bytes: mactype@0, magic@4, signed length@8, executable@9, mimetype@10; list6: signed16 count@0, mappings*@2; node8 table*@0,next*@4; OSType4; OSSpec516(path260+name256).",
+        "globals": "fmList6705cc initialized to defaultList6d90d8; both static canonical symbols. Hook __OS_ExtendedGetMacFileTypeHook7100a8 zero BSS. OS_TEXTTYPE710104 external OSType fallback, name corroborated Mac global STABS and role in OS_MacType_To_OSType."
+      },
+      "baseline_aliases": {
+        "MacFileTypes_AppendTable": "OS_AddFileTypeMappingList",
+        "fn_00421a80": "OS_MacType_To_OSType",
+        "fn_00421af0": "OS_SetMacFileType",
+        "MacFileTypes_MatchBytes": "OS_GetMacFileTypeMagic",
+        "MacFileTypes_GetFileType": "OS_GetMacFileType",
+        "fn_00421d30": "OS_SetMacFileCreatorAndType",
+        "mac_file_types": "fmList",
+        "data_00587e70": "__OS_ExtendedGetMacFileTypeHook"
+      },
+      "semantic_review": {
+        "OS_AddFileTypeMappingList": "NULL list argument uses fmList; scan pointer-to-pointer reaches first NULL link; allocation fn4263c0 stdcall4 (GlobalAlloc40)8; allocation failure assertion exact string/file/line36; saves entry and NULL next. Exact body/fixups.",
+        "OS_MacType_To_OSType": "Iterates list in order and signed count only while idx<count. First equal UInt32 Mac type writes four zero bytes; no match copies external OS_TEXTTYPE four bytes. Exact body/fixups.",
+        "OS_SetMacFileType": "Stack OSType obtained from mapping helper, then OS_SetFileType(spec,&type), propagates its int result. Exact body/fixups.",
+        "OS_GetMacFileTypeMagic": {
+          "equivalent_not_exact": true,
+          "retail_size": 239,
+          "compiled_size": 201,
+          "branch_conditions": [
+            "Always zeroes output before any search. Empty mapping chain returns false.",
+            "Signed16 numMappings<=0 skips that mapping list. idx walks 0..numMappings-1 in order.",
+            "Signed8 length is promoted to int and compared <= signed input count; NULL magic skips.",
+            "memcmp(buffer,magic,length)==0 writes that entry type and returns UInt8 1; failed comparison advances to next record; exhausted lists return UInt8 0."
+          ],
+          "memory_writes": [
+            "Output is zero initially and selected mactype on success. No list/record mutation."
+          ],
+          "error_calls": "No error-reporting calls; memcmp intrinsic exactly implements comparison including zero-length successful comparison for non-NULL magic.",
+          "compatibility_cases": [
+            "Preserves first-match order, zero-length magic matches, NULL magic skips, signed negative lengths and counts retain original implicit size conversion behavior; no new guards.",
+            "No NULL guard on output/input/list contents, as original."
+          ],
+          "difference": "Compiler keeps scan table in a register and reduces stack frame24->16, hoists/reuses mappings pointer and emits different allocation of loop-index/address registers. Same loop edges, signed promotions, comparison intrinsic and output stores. Does not claim 100% or strict fixup match."
+        },
+        "OS_GetMacFileType": "Exact351B body/fixups. Initializes flen=0; open error still reaches optional cdecl hook, whose true result returns success. Successful open gets size, reads at most32B and closes before magic check. Read failure/empty/no match reaches hook. Hook absent/false then flen==0 checks resource fork, open, size and closes; nonzero resource size returns rsrc FourCC; otherwise TEXT. Returns0 after all fallback paths (original open error swallowed). GetSize errors intentionally ignored, including uninitialized rsize behavior. Native516B stack spec. Assertion no extra error calls.",
+        "OS_SetMacFileCreatorAndType": "Exact16B body/fixups. Reads args1 and3, ignores creator arg2 and propagates OS_SetMacFileType return, ret12. Windows signature recovered from instructions; Mac STABS omits unused creator parameter."
+      },
+      "validation": {
+        "strict": "Resolved function bytes and exact set of DIR32 PE-base-relocation locations checked separately for each function. Five true; remaining explicit false.",
+        "objdiff_cli": "build/tools/objdiff-cli.exe diff -1 build/macfiletypes-target.obj -2 build/macfiletypes-base.obj -o build/macfiletypes-full-diff.json",
+        "artifacts": [
+          "build/macfiletypes-stabs.txt",
+          "build/macfiletypes-retail.txt",
+          "build/macfiletypes-globalrefs.json",
+          "build/macfiletypes-probe.json",
+          "build/macfiletypes-full-diff.json",
+          "build/macfiletypes-diff.txt"
+        ],
+        "encoding": "Source encodes CP932. tools/check_sjis.py absent; no repository checker available."
+      },
+      "binding_policy": "All bindings source-scoped, including canonical static fmList/defaultList. Baseline aliases require root header/config integration; no global binding aliases added. Helper fn4263c0 retains address name as original unavailable.",
+      "membership_reviewed": true,
+      "strict_exact_count": 5
     }
   },
   "ownership_review": {

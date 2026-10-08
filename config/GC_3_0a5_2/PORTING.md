@@ -75,6 +75,19 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## MacFileTypes.c: reviewed native type-mapping unit
+
+Six retained Windows functions are reconstructed with canonical Mac names.
+Five pass strict byte/fixup checks; OS_GetMacFileTypeMagic remains a reviewed
+equivalent loop/register nonmatch after seven source experiments. The original
+865 code bytes compare at 95.39854%; all 36 initialized data bytes and eight
+BSS bytes match. Native specs are 516 bytes, and OS_SetMacFileCreatorAndType
+uses the observed three-argument Windows ABI while ignoring creator.
+GetMacFileType preserves the Windows open-error/hook/resource-fork fallbacks.
+OS_UseFileTypeMappings has no recovered standalone Windows implementation;
+the saved whole-text relocation audit documents the fmList/defaultList
+reference limits rather than adding a stub.
+
 ## OSLib/FileHandles.c: recovered file-handle unit
 
 Five native Windows bodies are recovered from the seven-member Mac source:

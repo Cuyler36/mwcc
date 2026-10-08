@@ -1458,5 +1458,41 @@
   "CLTarg_AppendEntry": {
     "name": "Target_Add",
     "source": "src/GC_3_0a5_2/driver/CLTarg.c"
+  },
+  "MacFileTypes_AppendTable": {
+    "name": "OS_AddFileTypeMappingList",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "OS_MacType_To_OSType": {
+    "name": "OS_MacType_To_OSType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "OS_SetMacFileType": {
+    "name": "OS_SetMacFileType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "MacFileTypes_MatchBytes": {
+    "name": "OS_GetMacFileTypeMagic",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "MacFileTypes_GetFileType": {
+    "name": "OS_GetMacFileType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "OS_SetMacFileCreatorAndType": {
+    "name": "OS_SetMacFileCreatorAndType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "fn_00421a80": {
+    "name": "OS_MacType_To_OSType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "fn_00421af0": {
+    "name": "OS_SetMacFileType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
+  },
+  "fn_00421d30": {
+    "name": "OS_SetMacFileCreatorAndType",
+    "source": "src/GC_3_0a5_2/driver/MacFileTypes.c"
   }
 }

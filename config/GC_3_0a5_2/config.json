@@ -72,7 +72,7 @@
     "src/driver/Files.c",
     "src/driver/Help.c",
     "src/driver/LicenseImports.c",
-    "src/driver/MacFileTypes.c",
+    "src/GC_3_0a5_2/driver/MacFileTypes.c",
     "src/driver/MacSpecs.c",
     "src/GC_3_0a5_2/driver/MemUtils.c",
     "src/driver/Memory.c",
@@ -1290,25 +1290,6 @@
       ]
     },
     "src/driver/LicenseImports.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/MacFileTypes.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3336,6 +3317,25 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/driver/MacFileTypes.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3757,7 +3757,12 @@
     "src/GC_3_0a5_2/OSLib/FileHandles/OS_WriteFileHandle",
     "src/GC_3_0a5_2/OSLib/FileHandles/OS_NewFileHandle",
     "src/GC_3_0a5_2/OSLib/FileHandles/OS_LockFileHandle",
-    "src/GC_3_0a5_2/OSLib/FileHandles/OS_FreeFileHandle"
+    "src/GC_3_0a5_2/OSLib/FileHandles/OS_FreeFileHandle",
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_AddFileTypeMappingList",
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_MacType_To_OSType",
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_SetMacFileType",
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_GetMacFileType",
+    "src/GC_3_0a5_2/driver/MacFileTypes/OS_SetMacFileCreatorAndType"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4451,6 +4456,26 @@
       "_OS_NewFileHandle@16": "0x42fc70",
       "_OS_LockFileHandle@12": "0x42fd30",
       "_OS_FreeFileHandle@4": "0x42fd90"
+    },
+    "src/GC_3_0a5_2/driver/MacFileTypes.c": {
+      "_fn_004263c0@4": "0x4263c0",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_defaultList": "0x6d90d8",
+      "_fmList": "0x6705cc",
+      "___OS_ExtendedGetMacFileTypeHook": "0x7100a8",
+      "_OS_TEXTTYPE": "0x710104",
+      "_OS_SetFileType@8": "0x40fad0",
+      "_OS_Open@12": "0x40fc10",
+      "_OS_GetSize@8": "0x40fe60",
+      "_OS_Read@12": "0x40fdb0",
+      "_OS_Close@4": "0x40fe40",
+      "_MacSpecs_MakeResourceForkSpec@12": "0x4249a0",
+      "_OS_AddFileTypeMappingList@8": "0x42f690",
+      "_OS_MacType_To_OSType@8": "0x42f700",
+      "_OS_SetMacFileType@8": "0x42f780",
+      "_OS_GetMacFileTypeMagic@12": "0x42f7b0",
+      "_OS_GetMacFileType@8": "0x42f8a0",
+      "_OS_SetMacFileCreatorAndType@12": "0x42fa00"
     }
   }
 }

@@ -57,10 +57,13 @@ case and checks that each object gets its own source dependencies.
 
 Data attribution also follows independently anchored pointer tables to local
 literals. It validates the entire table's bytes and exact loader-fixup set,
-then every pointed allocation's full payload, section category, bounds and
-absence of relocations. Ambiguous identities and interior pointers are rejected.
+then every inferred local allocation's full payload, section category, bounds
+and absence of relocations. Mixed function/global/external pointers must agree
+with independently established singleton destinations, including COFF addends
+and mapped image bounds; their addresses are never inferred from the table.
+Ambiguous identities and interior local-literal pointers are rejected.
 This recovers CLIO's table-only severity strings without generated-symbol
-bindings. The regression suite has 25 tests, including negative proof cases.
+bindings. The regression suite has 28 tests, including negative proof cases.
 
 First matching priorities are the runtime setjmp unit, ResourceStrings.c,
 ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining

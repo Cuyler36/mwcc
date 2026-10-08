@@ -304,17 +304,36 @@ def table_literal_references(symbols, sections, pe, addresses, references, fixup
                     raise ValueError('invalid pointer-table relocation')
                 cells.add(local)
                 literal = symbols[index]
+                addend = struct.unpack_from('<I', body, local)[0]
+                pointer = struct.unpack_from('<I', retail, local)[0]
                 if (literal['section'] <= 0 or literal['type'] & 0x20
                         or not re.fullmatch(r'_?@\d+', literal['name'])):
-                    raise ValueError('pointer does not name a local literal')
+                    # Ordinary functions/globals/external symbols must already
+                    # have an independent identity. Never derive their address
+                    # from this table, even when its other cells are verified.
+                    destinations = set(references[index])
+                    for name in (literal['name'], c_symbol(literal['name'])):
+                        if name in addresses:
+                            destinations.add(addresses[name])
+                    if len(destinations) != 1:
+                        raise ValueError('ordinary table pointer has no unique independent destination')
+                    destination = next(iter(destinations))
+                    if (destination + addend) & 0xffffffff != pointer:
+                        raise ValueError('ordinary table pointer disagrees with independent destination')
+                    # A bound name alone must not admit a pointer outside the
+                    # original image. Code, data and imported globals are valid.
+                    for location in (destination, pointer):
+                        mapped = pe.section_for_address(location)
+                        if not mapped.virtual_address <= location < mapped.virtual_address + mapped.virtual_size:
+                            raise ValueError('ordinary table pointer is outside its image section')
+                    struct.pack_into('<I', body, local, pointer)
+                    continue
                 pointed, pointed_end = allocation(literal['section'], literal['value'])
                 if (pointed['code'] or not pointed['flags'] & 0x40 or pointed['flags'] & 0x80
                         or any(o < pointed_end and o + 4 > literal['value'] for o, _, _ in pointed['relocs'])):
                     raise ValueError('pointed allocation is not relocation-free literal data')
-                addend = struct.unpack_from('<I', body, local)[0]
                 if addend != 0:
                     raise ValueError('interior literal pointers are not established allocation bases')
-                pointer = struct.unpack_from('<I', retail, local)[0]
                 payload = pointed['data'][literal['value']:pointed_end]
                 if image_payload(pointer, len(payload), category(pointed['flags'])) != payload:
                     raise ValueError('pointed literal payload mismatch')

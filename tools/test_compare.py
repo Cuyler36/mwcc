@@ -1,12 +1,14 @@
 """Regression checks for relocation resolution across imported source units."""
 import struct
 import unittest
+from collections import defaultdict
 from tempfile import TemporaryDirectory
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from compare import resolve_function, source_data, write_translation_unit, read_object, function_section
+from compare import (resolve_function, source_data, write_translation_unit, read_object,
+                     function_section, table_literal_references)
 
 
 class Image:
@@ -403,6 +405,82 @@ class BoundTableLiteralTests(unittest.TestCase):
         self.assertFalse(complete)
         self.assertNotIn((0x2220, 0x2224), claims)
         self.assertNotIn((0x2300, 0x2304), claims)
+
+
+class MixedTableLiteralTests(unittest.TestCase):
+    def fixture(self, invalid=None):
+        class MixedImage(Image):
+            def section_for_address(self, address):
+                for name, start, flags in [('.text', 0x1000, 0x60000020),
+                                           ('.data', 0x2000, 0xc0000040)]:
+                    if start <= address < start + 0x1000:
+                        return SimpleNamespace(name=name, virtual_address=start, virtual_size=0x1000,
+                                               file_offset=start, file_size=0x1000, characteristics=flags)
+                raise ValueError('outside image')
+        pe = MixedImage(b'')
+        symbols = {
+            0: dict(name='_table', section=1, value=0, storage=3, type=0),
+            1: dict(name='@1', section=2, value=0, storage=3, type=0),
+            2: dict(name='_callback@4', section=0, value=0, storage=2, type=0x20),
+            3: dict(name='_external', section=0, value=0, storage=2, type=0),
+            4: dict(name='_referenced_global', section=0, value=0, storage=2, type=0),
+        }
+        sections = [
+            dict(name='.data', data=struct.pack('<4I', 0, 0, 4, 8) + b'TAIL', code=False,
+                 flags=0xc0000040, relocs=[(i*4, i+1, 6) for i in range(4)]),
+            dict(name='.data', data=b'local\0\0\0', code=False, flags=0xc0000040, relocs=[]),
+        ]
+        pe.data[0x2000:0x2014] = struct.pack('<4I', 0x2200, 0x1100, 0x2304, 0x2408) + b'TAIL'
+        pe.data[0x2200:0x2208] = b'local\0\0\0'
+        addresses = {'_table': 0x2000, '_callback': 0x1100, '_external': 0x2300}
+        references = defaultdict(set, {4: {0x2400}})
+        fixups = {0x2000, 0x2004, 0x2008, 0x200c}
+        if invalid == 'unknown':
+            addresses.pop('_external')
+        elif invalid == 'named_reference_conflict':
+            references[3] = {0x2310}
+        elif invalid == 'two_references':
+            references[4].add(0x2410)
+        elif invalid == 'canonical_name_conflict':
+            addresses['_callback@4'] = 0x1110
+        elif invalid == 'wrong_addend':
+            sections[0]['data'] = struct.pack('<4I', 0, 0, 5, 8) + b'TAIL'
+        elif invalid == 'wrong_pointer':
+            struct.pack_into('<I', pe.data, 0x2004, 0x1110)
+        elif invalid == 'outside_image':
+            addresses['_external'] = 0x5000
+            struct.pack_into('<I', pe.data, 0x2008, 0x5004)
+        elif invalid == 'outside_virtual_extent':
+            addresses['_external'] = 0x2fff
+            struct.pack_into('<I', pe.data, 0x2008, 0x3003)
+        elif invalid == 'ordinary_missing_fixup':
+            fixups.remove(0x2008)
+        elif invalid == 'extra_fixup':
+            fixups.add(0x2010)
+        elif invalid == 'tail':
+            pe.data[0x2010] ^= 1
+        elif invalid == 'literal_payload':
+            pe.data[0x2206] = 1
+        elif invalid == 'literal_reference_conflict':
+            references[1] = {0x2210}
+        return table_literal_references(symbols, sections, pe, addresses, references, fixups)
+
+    def test_mixed_table_accepts_named_function_external_addend_and_resolved_global(self):
+        # Only the independently payload-verified local allocation is inferred.
+        self.assertEqual(dict(self.fixture()), {1: {0x2200}})
+
+    def test_unverified_ordinary_destination_rejects_all_local_inference(self):
+        for invalid in ['unknown', 'named_reference_conflict', 'two_references',
+                        'canonical_name_conflict', 'wrong_addend', 'wrong_pointer',
+                        'outside_image', 'outside_virtual_extent']:
+            with self.subTest(invalid=invalid):
+                self.assertFalse(self.fixture(invalid))
+
+    def test_mixed_table_still_requires_full_payload_and_exact_fixup_set(self):
+        for invalid in ['ordinary_missing_fixup', 'extra_fixup', 'tail',
+                        'literal_payload', 'literal_reference_conflict']:
+            with self.subTest(invalid=invalid):
+                self.assertFalse(self.fixture(invalid))
 
 
 if __name__ == '__main__':

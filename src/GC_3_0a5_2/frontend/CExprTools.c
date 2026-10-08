@@ -43,8 +43,8 @@ extern ExprObject *fn_0053f4c0(void);
 extern ExprNode *fn_00530810(ExprNode *,UInt8),*fn_00543c00(ExprObject *,ExprType *),*CExpr_New_EOBJREF_Node(ExprObject *,UInt8),*intconstnode(ExprType *,SInt32),*CExpr_New_EINDIRECT_Node(ExprObject *);
 extern UInt8 CInt64_Equal(ExprWords,ExprWords),CMach_FloatIsZero(ExprWords),fn_004e38e0(ExprWords);
 extern ExprWords CMach_CalcIntDiadic(ExprType *,ExprWords,int,ExprWords),CMach_CustomIntConvert(ExprType *,ExprType *,ExprWords),CMach_CalcFloatConvertFromInt(ExprType *,ExprWords),CMach_CalcFloatConvert(ExprType *,ExprWords),fn_004e4190(ExprType *,ExprWords);
-extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,UInt32,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);
-extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *,ExprNode *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);
+extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,ExprType *,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);
+extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);
 extern UInt8 fn_00463ba0(ExprNode *,void *,ExprType *),fn_00542360(ExprType *);
 extern void CDecl_CompleteType(ExprType *),fn_00514a10(ExprType *),fn_0045c2c0(int,...),fn_005454e0(ExprType *,ExprType **,UInt8 *);
 extern ExprType *fn_005454a0(ExprType *),*fn_005454c0(ExprType *);
@@ -301,8 +301,8 @@ ExprNode *CExpr_ConvertToCondition(ExprNode *node) {
     type=node->type;switch(type->kind){case 1:case 2:case 12:return node;case 3:return fn_0051ea50(node,nullnode());case 4:node->type=ENUMTYPE(type);return node;case 6:return fn_005e1f10(node,&stbool,0,0,1);case 11:return fn_00542fc0(0x18,node,nullnode());default:CError_Error(0x2888,type,node->flags&QUALS);return nullnode();}
 }
 ExprNode *fn_0055aa00(ExprNode *node,ExprType *type,UInt32 qual) {node=fn_005e1f10(node,type,qual,1,0);return node;}
-ExprNode *fn_0055aa20(ExprNode *node,ExprType *type,UInt32 qual,UInt8 mode,UInt8 flag) {
-    ExprNode *converted=fn_005418b0(node,type,qual,mode,1,flag),*result;
+ExprNode *fn_0055aa20(ExprNode *node,ExprType *fromClass,ExprType *toClass,UInt8 reverse,UInt8 checkAccess) {
+    ExprNode *converted=fn_005418b0(node,fromClass,toClass,reverse,1,checkAccess),*result;
     if(converted==node||(converted->kind==0x32&&LEFT(converted)==node)||(SInt16)isnotzero(node))return converted;
     result=CExpr_CopyENode(converted);result->kind=0x3c;LEFT(result)=CExpr_CopyENode(node);RIGHT(result)=converted;THIRD(result)=(ExprNode *)CParser_GetUniqueID();node->kind=0x3d;LEFT(node)=THIRD(result);return result;
 }
@@ -320,7 +320,7 @@ ExprNode *CExpr_DoExplicitConversion(ExprType *type,UInt32 qual,ExprList *argume
     }
     if(type->kind!=6){if(arguments){if(arguments->next)CError_Error(0x2874);value=fn_0055ba60(fn_0055b810(arguments->node));}else value=nullnode();return fn_005e1f10(value,type,qual,1,0);}
     CDecl_CompleteType(type);if(!(*(UInt32 *)((UInt8 *)type+34)&2))CError_Error(0x2798,type,0);fn_00514a10(type);
-    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type,size);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}
+    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}
     return fn_005a8cd0(NULL,NULL,arguments,type,qual,1,1,1);
 }
 void fn_0055aaf0(ExprNode **left,const char *op,ExprNode **right) {

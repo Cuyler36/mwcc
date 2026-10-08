@@ -111,7 +111,7 @@ boundary review. Names require native-code corroboration before promotion;
 the hint inventory does not change build mappings or TU ownership.
 
 CPrepLexer has all 121 identified native functions attempted, with 39 exact
-matches. Sixty whole-TU compiler profiles favor CW94; six helpers pass 4,220
+matches. Sixty whole-TU compiler profiles favor CW94; seven helpers pass 4,988
 bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument

@@ -166268,7 +166268,7 @@
         "_fn_0070f08c": "0x70f08c",
         "_fn_0070f1a8": "0x70f1a8",
         "_fn_0070f1e5": "0x70f1e5",
-        "_fn_00449d60": "0x449d60",
+        "_fn_00449d60": "0x462db0",
         "_fn_0070f086": "0x70f086",
         "_fn_0070f087": "0x70f087",
         "_fn_0070f071": "0x70f071",
@@ -174734,7 +174734,2160 @@
             ],
             "unresolved_codegen_count": 19
           }
-        ]
+        ],
+        "diagnostic_import_correction": {
+          "status": "frozen_narrow_scoped_binding_correction_ready",
+          "source": "build/CPrepLexer-native-candidate.c",
+          "source_sha256": "dc1a8a5e8a1b6270610b0bc379c98da7f079854d8b1807313a9986e327ffb9ee",
+          "source_unchanged": true,
+          "change": {
+            "source_binding": "_fn_00449d60",
+            "old": "0x449d60",
+            "corrected": "0x462db0",
+            "native_call": "0x4d44f7",
+            "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c"
+          },
+          "abi": "Verified zero-argument cdecl native call; existing legacy import name and void prototype are call-compatible. Global bindings.json already has the correct legacy alias. The lexer scoped override alone incorrectly supplied the address encoded in its stale name.",
+          "native_instructions": [
+            {
+              "address": "0x4d4470",
+              "mnemonic": "push",
+              "operands": "ebx"
+            },
+            {
+              "address": "0x4d4471",
+              "mnemonic": "push",
+              "operands": "esi"
+            },
+            {
+              "address": "0x4d4472",
+              "mnemonic": "push",
+              "operands": "ebp"
+            },
+            {
+              "address": "0x4d4473",
+              "mnemonic": "mov",
+              "operands": "esi, dword ptr [esp + 0x18]"
+            },
+            {
+              "address": "0x4d4477",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [esi], 0"
+            },
+            {
+              "address": "0x4d447a",
+              "mnemonic": "mov",
+              "operands": "ebx, dword ptr [esp + 0x10]"
+            },
+            {
+              "address": "0x4d447e",
+              "mnemonic": "mov",
+              "operands": "ebp, dword ptr [esp + 0x14]"
+            },
+            {
+              "address": "0x4d4482",
+              "mnemonic": "mov",
+              "operands": "cl, 1"
+            },
+            {
+              "address": "0x4d4484",
+              "mnemonic": "mov",
+              "operands": "al, 1"
+            },
+            {
+              "address": "0x4d4486",
+              "mnemonic": "jne",
+              "operands": "0x4d4549"
+            },
+            {
+              "address": "0x4d448c",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f1da], 0"
+            },
+            {
+              "address": "0x4d4493",
+              "mnemonic": "je",
+              "operands": "0x4d449e"
+            },
+            {
+              "address": "0x4d4495",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f1af], 0"
+            },
+            {
+              "address": "0x4d449c",
+              "mnemonic": "je",
+              "operands": "0x4d44b0"
+            },
+            {
+              "address": "0x4d449e",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f1b3], 0"
+            },
+            {
+              "address": "0x4d44a5",
+              "mnemonic": "je",
+              "operands": "0x4d44b2"
+            },
+            {
+              "address": "0x4d44a7",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f1af], 0"
+            },
+            {
+              "address": "0x4d44ae",
+              "mnemonic": "jne",
+              "operands": "0x4d44b2"
+            },
+            {
+              "address": "0x4d44b0",
+              "mnemonic": "xor",
+              "operands": "al, al"
+            },
+            {
+              "address": "0x4d44b2",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f08c], 0"
+            },
+            {
+              "address": "0x4d44b9",
+              "mnemonic": "je",
+              "operands": "0x4d44c6"
+            },
+            {
+              "address": "0x4d44bb",
+              "mnemonic": "cmp",
+              "operands": "byte ptr [0x70f1a8], 0"
+            },
+            {
+              "address": "0x4d44c2",
+              "mnemonic": "jne",
+              "operands": "0x4d44c6"
+            },
+            {
+              "address": "0x4d44c4",
+              "mnemonic": "xor",
+              "operands": "cl, cl"
+            },
+            {
+              "address": "0x4d44c6",
+              "mnemonic": "test",
+              "operands": "cl, cl"
+            },
+            {
+              "address": "0x4d44c8",
+              "mnemonic": "je",
+              "operands": "0x4d4546"
+            },
+            {
+              "address": "0x4d44ca",
+              "mnemonic": "test",
+              "operands": "al, al"
+            },
+            {
+              "address": "0x4d44cc",
+              "mnemonic": "je",
+              "operands": "0x4d4507"
+            },
+            {
+              "address": "0x4d44ce",
+              "mnemonic": "mov",
+              "operands": "edx, dword ptr [ebp + 4]"
+            },
+            {
+              "address": "0x4d44d1",
+              "mnemonic": "add",
+              "operands": "edx, 0xa"
+            },
+            {
+              "address": "0x4d44d4",
+              "mnemonic": "push",
+              "operands": "edx"
+            },
+            {
+              "address": "0x4d44d5",
+              "mnemonic": "push",
+              "operands": "0x277c"
+            },
+            {
+              "address": "0x4d44da",
+              "mnemonic": "push",
+              "operands": "ebx"
+            },
+            {
+              "address": "0x4d44db",
+              "mnemonic": "call",
+              "operands": "0x4d5a50"
+            },
+            {
+              "address": "0x4d44e0",
+              "mnemonic": "add",
+              "operands": "esp, 0xc"
+            },
+            {
+              "address": "0x4d44e3",
+              "mnemonic": "cmp",
+              "operands": "dword ptr [ebp + 0x10], 0"
+            },
+            {
+              "address": "0x4d44e7",
+              "mnemonic": "je",
+              "operands": "0x4d4546"
+            },
+            {
+              "address": "0x4d44e9",
+              "mnemonic": "movzx",
+              "operands": "ebx, byte ptr [0x70f1e5]"
+            },
+            {
+              "address": "0x4d44f0",
+              "mnemonic": "mov",
+              "operands": "byte ptr [0x70f1e5], 0"
+            },
+            {
+              "address": "0x4d44f7",
+              "mnemonic": "call",
+              "operands": "0x462db0"
+            },
+            {
+              "address": "0x4d44fc",
+              "mnemonic": "add",
+              "operands": "ebp, 0x10"
+            },
+            {
+              "address": "0x4d44ff",
+              "mnemonic": "push",
+              "operands": "0x28c4"
+            },
+            {
+              "address": "0x4d4504",
+              "mnemonic": "push",
+              "operands": "ebp"
+            },
+            {
+              "address": "0x4d4505",
+              "mnemonic": "jmp",
+              "operands": "0x4d4539"
+            },
+            {
+              "address": "0x4d4507",
+              "mnemonic": "mov",
+              "operands": "ecx, dword ptr [ebp + 4]"
+            },
+            {
+              "address": "0x4d450a",
+              "mnemonic": "add",
+              "operands": "ecx, 0xa"
+            },
+            {
+              "address": "0x4d450d",
+              "mnemonic": "push",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x4d450e",
+              "mnemonic": "push",
+              "operands": "0x277c"
+            },
+            {
+              "address": "0x4d4513",
+              "mnemonic": "push",
+              "operands": "ebx"
+            },
+            {
+              "address": "0x4d4514",
+              "mnemonic": "call",
+              "operands": "0x4d5a00"
+            },
+            {
+              "address": "0x4d4519",
+              "mnemonic": "add",
+              "operands": "esp, 0xc"
+            },
+            {
+              "address": "0x4d451c",
+              "mnemonic": "cmp",
+              "operands": "dword ptr [ebp + 0x10], 0"
+            },
+            {
+              "address": "0x4d4520",
+              "mnemonic": "je",
+              "operands": "0x4d4546"
+            },
+            {
+              "address": "0x4d4522",
+              "mnemonic": "lea",
+              "operands": "edx, [ebp + 0x10]"
+            },
+            {
+              "address": "0x4d4525",
+              "mnemonic": "movzx",
+              "operands": "ebx, byte ptr [0x70f1e5]"
+            },
+            {
+              "address": "0x4d452c",
+              "mnemonic": "push",
+              "operands": "0x28c4"
+            },
+            {
+              "address": "0x4d4531",
+              "mnemonic": "mov",
+              "operands": "byte ptr [0x70f1e5], 0"
+            },
+            {
+              "address": "0x4d4538",
+              "mnemonic": "push",
+              "operands": "edx"
+            },
+            {
+              "address": "0x4d4539",
+              "mnemonic": "call",
+              "operands": "0x4d5b50"
+            },
+            {
+              "address": "0x4d453e",
+              "mnemonic": "pop",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x4d453f",
+              "mnemonic": "pop",
+              "operands": "ecx"
+            },
+            {
+              "address": "0x4d4540",
+              "mnemonic": "mov",
+              "operands": "byte ptr [0x70f1e5], bl"
+            },
+            {
+              "address": "0x4d4546",
+              "mnemonic": "mov",
+              "operands": "byte ptr [esi], 1"
+            },
+            {
+              "address": "0x4d4549",
+              "mnemonic": "pop",
+              "operands": "ebp"
+            },
+            {
+              "address": "0x4d454a",
+              "mnemonic": "pop",
+              "operands": "esi"
+            },
+            {
+              "address": "0x4d454b",
+              "mnemonic": "pop",
+              "operands": "ebx"
+            },
+            {
+              "address": "0x4d454c",
+              "mnemonic": "ret",
+              "operands": ""
+            }
+          ],
+          "helper_prefix_instructions": [
+            {
+              "address": "0x462db0",
+              "mnemonic": "mov",
+              "operands": "dword ptr [0x6daa64], 0xffffffff"
+            },
+            {
+              "address": "0x462dba",
+              "mnemonic": "ret",
+              "operands": ""
+            },
+            {
+              "address": "0x462dbb",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dbc",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dbd",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dbe",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dbf",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dc0",
+              "mnemonic": "mov",
+              "operands": "ecx, dword ptr [esp + 4]"
+            },
+            {
+              "address": "0x462dc4",
+              "mnemonic": "mov",
+              "operands": "eax, dword ptr [ecx]"
+            },
+            {
+              "address": "0x462dc6",
+              "mnemonic": "mov",
+              "operands": "dword ptr [0x715c3c], eax"
+            },
+            {
+              "address": "0x462dcb",
+              "mnemonic": "mov",
+              "operands": "eax, dword ptr [ecx + 4]"
+            },
+            {
+              "address": "0x462dce",
+              "mnemonic": "mov",
+              "operands": "dword ptr [0x715c40], eax"
+            },
+            {
+              "address": "0x462dd3",
+              "mnemonic": "mov",
+              "operands": "eax, dword ptr [ecx + 8]"
+            },
+            {
+              "address": "0x462dd6",
+              "mnemonic": "mov",
+              "operands": "dword ptr [0x715c44], eax"
+            },
+            {
+              "address": "0x462ddb",
+              "mnemonic": "ret",
+              "operands": ""
+            },
+            {
+              "address": "0x462ddc",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462ddd",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462dde",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462ddf",
+              "mnemonic": "nop",
+              "operands": ""
+            },
+            {
+              "address": "0x462de0",
+              "mnemonic": "push",
+              "operands": "ebx"
+            },
+            {
+              "address": "0x462de1",
+              "mnemonic": "mov",
+              "operands": "edx, dword ptr [esp + 0xc]"
+            },
+            {
+              "address": "0x462de5",
+              "mnemonic": "mov",
+              "operands": "ecx, dword ptr [0x715c3c]"
+            },
+            {
+              "address": "0x462deb",
+              "mnemonic": "mov",
+              "operands": "ebx, dword ptr [esp + 8]"
+            }
+          ],
+          "bounded_cases": 768,
+          "bounded_passed": 768,
+          "failures": [],
+          "checks": "Execute original and corrected-relocated candidate diagnostic helper instructions; compare full synthetic heap/globals, resumable diagnostic/reset helper order and arguments, cdecl stack, callee-saved registers. Void return ignored. All option/report/reference/restore branches exercised.",
+          "existing_harness_audit": "The old five-function lexer bounded harness and hex-float harness did not execute lexer_macro_redef_error, so they neither validated nor masked this import. The new diagnostic harness models only the actual target0x462db0. Original whole-image native disassembly evidence already recorded this call target.",
+          "compiler_profile_note": "Source and compiled objects unchanged. Reprojected original CW94 object and all60 existing MW compiler profiles with only the corrected scoped binding. No compiler rebuild is needed for an address-only binding change.",
+          "limits": "Deterministic resumable helper models compare caller control flow and state; they do not execute the full diagnostic subsystem. Parent must update the scoped binding and verify normal project code/data. No active source/config/Git edits by this agent.",
+          "full_report_sha256": "854dc812e7386609ce07592c07a6f9b586ff30de7ca983056a23bf2a6cbf80d6",
+          "profiles": [
+            {
+              "object": "build\\lexer-cw94.obj",
+              "object_sha256": "e25449cfb28365f9ac31b5766773a923da3af65d0129809af666a52ed7bdd17c",
+              "strict_exact_count": 39,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O2-space-inline0.obj",
+              "object_sha256": "03d53c41aa76a7aa8b02da2ce602964cd9c560412f1f711449936828b7398910",
+              "strict_exact_count": 7,
+              "unresolved_count": 9,
+              "diagnostic_function": [
+                {
+                  "size": 213,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O2-space-inline1.obj",
+              "object_sha256": "03d53c41aa76a7aa8b02da2ce602964cd9c560412f1f711449936828b7398910",
+              "strict_exact_count": 7,
+              "unresolved_count": 9,
+              "diagnostic_function": [
+                {
+                  "size": 213,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O2-speed-inline0.obj",
+              "object_sha256": "8a3ace7006c3c7125f06195d66cd847c924bbdb7ae80a9049ae1ecd4ddacdc2b",
+              "strict_exact_count": 20,
+              "unresolved_count": 22,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O2-speed-inline1.obj",
+              "object_sha256": "b11f273ec5804910c75eebfedd31954ab6a1665eea658a80cf5acd4719dfe9e9",
+              "strict_exact_count": 20,
+              "unresolved_count": 22,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O3-space-inline0.obj",
+              "object_sha256": "d02751ddac77fcc484eccd8c4a21e580bfc9623a17ae3dac6c8f49fe7d093de0",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O3-space-inline1.obj",
+              "object_sha256": "28aa886aafb446afd506ca3c7d89041e91e29cd435fe26c0fb6b045ffb12d132",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O3-speed-inline0.obj",
+              "object_sha256": "8f54301972041138164b71c456552cb9d9d3b555c6a622fdf71109960b7a69ce",
+              "strict_exact_count": 36,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O3-speed-inline1.obj",
+              "object_sha256": "b71e74e360dbe0fab36fabd8d1d2f34b0f42e52c584b46d9180efeeca15dc85c",
+              "strict_exact_count": 36,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O4-space-inline0.obj",
+              "object_sha256": "018d5d543809fa43dbc296b61f6c303c498fa7555bb91dbe9e108715134eab02",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O4-space-inline1.obj",
+              "object_sha256": "018d5d543809fa43dbc296b61f6c303c498fa7555bb91dbe9e108715134eab02",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O4-speed-inline0.obj",
+              "object_sha256": "40dd1f306076cb06b117efd1f647baf68afa7e122aa02d0521d4c1cd9c4c77ff",
+              "strict_exact_count": 39,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\cw94-O4-speed-inline1.obj",
+              "object_sha256": "99e26537033025cda18692162bafb51e844072a95ab33866739578354cf72069",
+              "strict_exact_count": 39,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 220,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O2-space-inline0.obj",
+              "object_sha256": "b0f21b1891926b3341926d8f883e2772c90a1fdfb42fd2d795b2cb2746126d67",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O2-space-inline1.obj",
+              "object_sha256": "5c17919be4577b5fc47bfc163265339e002c596764bbf02af6cded16260acd5c",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O2-speed-inline0.obj",
+              "object_sha256": "97ee1b2dbc37d552d4c6b80f55930172034a9a016acb81fbe24b053b64fc2f19",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O2-speed-inline1.obj",
+              "object_sha256": "97ee1b2dbc37d552d4c6b80f55930172034a9a016acb81fbe24b053b64fc2f19",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O3-space-inline0.obj",
+              "object_sha256": "fa026c716670a76ae88862044ce3b956c7588af2952c9a41907820b820f45ed7",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O3-space-inline1.obj",
+              "object_sha256": "fa026c716670a76ae88862044ce3b956c7588af2952c9a41907820b820f45ed7",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O3-speed-inline0.obj",
+              "object_sha256": "feef4e3e2005c8eec91c61ec06d145eac8059a8df4242aaa77f798940cab0dd5",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O3-speed-inline1.obj",
+              "object_sha256": "feef4e3e2005c8eec91c61ec06d145eac8059a8df4242aaa77f798940cab0dd5",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O4-space-inline0.obj",
+              "object_sha256": "a5d9b5c2e0964920209ef009eb6d2c0cc3d38b38bcca5da2544058e071e9b0d7",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O4-space-inline1.obj",
+              "object_sha256": "a5d9b5c2e0964920209ef009eb6d2c0cc3d38b38bcca5da2544058e071e9b0d7",
+              "strict_exact_count": 7,
+              "unresolved_count": 19,
+              "diagnostic_function": [
+                {
+                  "size": 216,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O4-speed-inline0.obj",
+              "object_sha256": "f36772cb36673ed40f9672a66e29b91dea79408ea6c159ba4c2b3096056a57ad",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro53-O4-speed-inline1.obj",
+              "object_sha256": "f36772cb36673ed40f9672a66e29b91dea79408ea6c159ba4c2b3096056a57ad",
+              "strict_exact_count": 7,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 218,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O2-space-inline0.obj",
+              "object_sha256": "04024649d9fd4140f361853762d4da5584dd5b506f35faf1cf54832e98d7e51f",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O2-space-inline1.obj",
+              "object_sha256": "d3baacbc4d3c5c16b053f33cf89af35404518a3e309dbd68745bdc4f106edf38",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O2-speed-inline0.obj",
+              "object_sha256": "be05ea691dac27e8eb2a37d0e061980f2eceeab5ee8228474a666533348e2d6e",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O2-speed-inline1.obj",
+              "object_sha256": "be05ea691dac27e8eb2a37d0e061980f2eceeab5ee8228474a666533348e2d6e",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O3-space-inline0.obj",
+              "object_sha256": "28fb6494a549a048255ae379a2a0c980dea942d480a25010d1f6a2891d41df99",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O3-space-inline1.obj",
+              "object_sha256": "28fb6494a549a048255ae379a2a0c980dea942d480a25010d1f6a2891d41df99",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O3-speed-inline0.obj",
+              "object_sha256": "4bc05f9831535f4169822155ca5077c6d2c1a2b25b8e18c90a5ab251056c5508",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O3-speed-inline1.obj",
+              "object_sha256": "fead07807785a0ff2ffd1064e341cdcbca7a70027d7956ceca672bc2bd8be2b8",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O4-space-inline0.obj",
+              "object_sha256": "76c9a17a3a9abe5f3aa033d998f9e1a94789d041d67c3f3d9000bd73380b354b",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O4-space-inline1.obj",
+              "object_sha256": "76c9a17a3a9abe5f3aa033d998f9e1a94789d041d67c3f3d9000bd73380b354b",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O4-speed-inline0.obj",
+              "object_sha256": "b3c179eb54489d1a7b91ac3cc88332ecd6d5f971990a025b4567a21cd711daad",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro6-O4-speed-inline1.obj",
+              "object_sha256": "b3c179eb54489d1a7b91ac3cc88332ecd6d5f971990a025b4567a21cd711daad",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O2-space-inline0.obj",
+              "object_sha256": "d868137eb1f40f3acd51b715c71b01d88e4afdc5a93c3489cbeae4812b7e97e7",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O2-space-inline1.obj",
+              "object_sha256": "e175c5ca0eebc980ac47c6b6085389ff948b63a206b63e0917421a06a0f4ec63",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O2-speed-inline0.obj",
+              "object_sha256": "6cab6a53aa9aad267de9ab696fe3781e31d5adee40e0e680571009f1ae8d42dd",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O2-speed-inline1.obj",
+              "object_sha256": "6cab6a53aa9aad267de9ab696fe3781e31d5adee40e0e680571009f1ae8d42dd",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O3-space-inline0.obj",
+              "object_sha256": "76c4f737a40d648655eba65795b42b94663a83c7283f453c36620b1ccefa0f17",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O3-space-inline1.obj",
+              "object_sha256": "76c4f737a40d648655eba65795b42b94663a83c7283f453c36620b1ccefa0f17",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O3-speed-inline0.obj",
+              "object_sha256": "674aeaa2d725c01c149c3235cf91513f6d0928520c1dbfb409b4819d8a8164b2",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O3-speed-inline1.obj",
+              "object_sha256": "549e59db5850e9ffeedf9d563a3065f1979f3646949c151e54110179eb698b3f",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O4-space-inline0.obj",
+              "object_sha256": "4901823ea7c66bc9739c566b66971641769281342514fb5cca1f6ca29c8f4ddd",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O4-space-inline1.obj",
+              "object_sha256": "4901823ea7c66bc9739c566b66971641769281342514fb5cca1f6ca29c8f4ddd",
+              "strict_exact_count": 7,
+              "unresolved_count": 14,
+              "diagnostic_function": [
+                {
+                  "size": 210,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O4-speed-inline0.obj",
+              "object_sha256": "613c380a990d0c72a287cf6e9af47089e43d53f023b565b647a89884023df8f6",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro7-O4-speed-inline1.obj",
+              "object_sha256": "613c380a990d0c72a287cf6e9af47089e43d53f023b565b647a89884023df8f6",
+              "strict_exact_count": 8,
+              "unresolved_count": 28,
+              "diagnostic_function": [
+                {
+                  "size": 214,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O2-space-inline0.obj",
+              "object_sha256": "a9f19ed7ecbe72e13c4d4e27d29b40185b0af786b5550b18ff8f4032570ebc86",
+              "strict_exact_count": 7,
+              "unresolved_count": 9,
+              "diagnostic_function": [
+                {
+                  "size": 213,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O2-space-inline1.obj",
+              "object_sha256": "a9f19ed7ecbe72e13c4d4e27d29b40185b0af786b5550b18ff8f4032570ebc86",
+              "strict_exact_count": 7,
+              "unresolved_count": 9,
+              "diagnostic_function": [
+                {
+                  "size": 213,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O2-speed-inline0.obj",
+              "object_sha256": "dd95c5a2207541433b9677bae87f3a98267634d49e66e66754f06f5e5f3e66b7",
+              "strict_exact_count": 15,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O2-speed-inline1.obj",
+              "object_sha256": "dd95c5a2207541433b9677bae87f3a98267634d49e66e66754f06f5e5f3e66b7",
+              "strict_exact_count": 15,
+              "unresolved_count": 23,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O3-space-inline0.obj",
+              "object_sha256": "d1b2932aef9cc8eca8771a6326fa5999c34bef984a09a7a7e1cefb4d04fa9ebf",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O3-space-inline1.obj",
+              "object_sha256": "d886d6631ee283c5ff8adb7adf04e29fec3c6f2ac5f94548d34ad3f861b24803",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O3-speed-inline0.obj",
+              "object_sha256": "43ff70c7ad3ece9369ecdd0f41cdf85d8f2c36a5f905f90bbfdbae383eb19978",
+              "strict_exact_count": 15,
+              "unresolved_count": 24,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O3-speed-inline1.obj",
+              "object_sha256": "1de095b7cdcaedeb1f2a4022967b376ecdc8046d91aa94f2a24566b209472fa1",
+              "strict_exact_count": 15,
+              "unresolved_count": 24,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O4-space-inline0.obj",
+              "object_sha256": "607554b7f46727353dde8005654c9e2e69cb491ac454abdcb67ce024a0da498f",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O4-space-inline1.obj",
+              "object_sha256": "607554b7f46727353dde8005654c9e2e69cb491ac454abdcb67ce024a0da498f",
+              "strict_exact_count": 7,
+              "unresolved_count": 10,
+              "diagnostic_function": [
+                {
+                  "size": 212,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O4-speed-inline0.obj",
+              "object_sha256": "a29d06192d1e17956357ba14c48d01b854b4d8fc948b45a90ffaac18efe4893e",
+              "strict_exact_count": 15,
+              "unresolved_count": 24,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            },
+            {
+              "object": "build\\lexer-profiles\\pro8-O4-speed-inline1.obj",
+              "object_sha256": "0202893c48e98a6b54d249e42b7b342b437ba93c3d8574d7a82f2dcc5af1161a",
+              "strict_exact_count": 15,
+              "unresolved_count": 24,
+              "diagnostic_function": [
+                {
+                  "size": 217,
+                  "strict_exact": false,
+                  "bytes_exact": false
+                }
+              ]
+            }
+          ]
+        },
+        "corrected_normal_project": {
+          "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+          "source_sha256": "dc1a8a5e8a1b6270610b0bc379c98da7f079854d8b1807313a9986e327ffb9ee",
+          "candidate_project_sections_sha256": "48ac901e3d63f467eefda9fea63540506fc7f0db74ef07c2efbf855f4fb5469d",
+          "source_bindings_sha256": "e053fcb0412c502e6e9bf318ae2e06af1b611be1835571d92c0ac224ac01ce63",
+          "code_and_initialized_data_sections_equal": true,
+          "functions": [
+            {
+              "name": "lexer_validate",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_lex",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_string_handling",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "cat_strings",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_convert_to_token",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$1027 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_peekahead",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "parselit",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$5381 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "parseescape",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$1419 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "parsenumber",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "parseintsuffix",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "parsefloatsuffix",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_add_keywords",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_matchendofline",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_isendofline",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_expansion_unlock",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_expansion_lock",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_plextokenorfail",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_plextokenorskip",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_readtokenorskip",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_plex",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$2545 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_directive",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: @1303 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_preppragma",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepundef",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepdefine",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$7076 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_prepmessage",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepinclude",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "parse_include_name",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepline",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "parsefilename",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "setup_line_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prependif",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepelse",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$1993 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_prepelif",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3807 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "ig_save_if",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "scanner_getsourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_prepifndef",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3707 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_prepifdef",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3619 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_prepif",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3769 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "pragma_dump_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "dump_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "pragma_text_encoding",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "pragma_message",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "pragma_once",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "prepifskip",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3922 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "negativeif",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "popifstate",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$1858 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "parsecond",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "parsebinary",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "ppgetprec",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "parseunary",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "ig_test",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "igtdirective",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$5571 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "ig_skipline",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_reparse_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_simple_expand_string",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_push_mstream",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_expand_argument",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_expand_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: @6365 (2 retail blocks, 2 strings)"
+            },
+            {
+              "name": "expand_mstream",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_expand_special_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: @1303 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_macro_encode_text",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_encode_number",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_encode_string",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_encode_escaped_string",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "stringizemlist",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "pastemacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_preprocess_token",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "preprocesstoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: @1303 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "gathermacroargument",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "expandmacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "decodemacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "appendmacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_readmacrotokenorskip",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_readmacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "readmacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "peekeol",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_peekmacrotoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "peekargparen",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "peekparen",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "mlist_delete_after_thru",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_lookup_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_delete_special_macros",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_insert_special_macro",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_macro_redef_error",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_skipendofline",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_unreadtoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_readtoken",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_file_stack_string",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$4539 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_pop",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_push_string",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_push_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_push_include_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$4718 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_push",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_getsourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_flattensourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$3148 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_match_stacked_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_current_disk_filespec",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$802 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_get_current_line",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_current_filename",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_current_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_current_disk_file",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$757 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_warning",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_error",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_info_at_sourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_warning_at_sourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_error_at_sourceref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_message_v",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_setupref",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": false,
+              "unresolved": "unbound literal: .sw$6652 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "lexer_temp_push",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_silent",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_depth",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_get_lines",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_clear_macros",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_fixup_names",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_insert_special_macros",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_reconfig",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_cleanup",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_setup",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_unload",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_load",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "lexer_scan_hexfloat",
+              "raw_function_bytes_equal": true,
+              "normal_project_relocations_equal": true,
+              "strict_exact": false,
+              "fully_resolved": true
+            }
+          ],
+          "inferred_owned_bss_count": 43,
+          "inferred_owned_bss_bytes": 19403,
+          "all_owned_bss_symbol_sizes_equal": true
+        }
       },
       "boundary_review": [
         {
@@ -175349,11 +177502,21 @@
         "attempted_members": 121,
         "unexplored_windows_candidates": [],
         "push_ready": true,
-        "basis": "All121 identified bodies attempted and reviewed;60 compiler profiles compile,six helpers pass4220 bounded instruction comparisons,and all normal-project code/data sections and relocation metadata equal the frozen candidate. Full image inventory partition and objdiff CLI pass. Original object membership and unresolved generated data remain documented limits."
+        "basis": "All121 identified bodies attempted and reviewed;60 compiler profiles compile,six helpers pass4220 bounded instruction comparisons,and all normal-project code/data sections and relocation metadata equal the frozen candidate. Full image inventory partition and objdiff CLI pass. Original object membership and unresolved generated data remain documented limits. Diagnostic import correction is supported by actual native call/callee instructions, 768 additional bounded diagnostic-branch comparisons, 61 corrected object projections and normal-project verification; source and39 strict matches unchanged."
       },
       "integration_review": {
         "legacy": "Incorrect zero-argument CPrep_ParseDirective binding removed. Legacy implementation remains provisional; no incompatible alias or source guard added.",
-        "data": "43 inferred BSS definitions total19403 bytes. Shared macro table and unreferenced gap remain external/unclaimed. Generated literals and switch tables have no forced bindings."
+        "data": "43 inferred BSS definitions total19403 bytes. Shared macro table and unreferenced gap remain external/unclaimed. Generated literals and switch tables have no forced bindings.",
+        "diagnostic_import_correction": {
+          "source_binding": "_fn_00449d60",
+          "old": "0x449d60",
+          "corrected": "0x462db0",
+          "native_call": "0x4d44f7",
+          "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
+          "normal_project_verified": true,
+          "bounded_cases": 768,
+          "compiler_objects_reprojected": 61
+        }
       },
       "normal_project_validation": {
         "source": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
@@ -175366,7 +177529,8 @@
         "checked_functions": 121,
         "fully_resolved_functions": 98,
         "objdiff_cli_success": true,
-        "image_partition_exact": true
+        "image_partition_exact": true,
+        "source_bindings_sha256": "e053fcb0412c502e6e9bf318ae2e06af1b611be1835571d92c0ac224ac01ce63"
       }
     },
     "src/GC_3_0a5_2/backend/Alias.c": {
@@ -194194,7 +196358,7 @@
     "src/GC_3_0a5_2/frontend/CExprTools.c": {
       "status": "attempted_equivalent",
       "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
-      "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+      "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
       "destination": "src/GC_3_0a5_2/frontend/CExprTools.c",
       "function_count": 46,
       "native_function_bytes": 12319,
@@ -195323,7 +197487,7 @@
             }
           ],
           "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed\\build\\CExprTools-native-candidate.c\\compiled.obj",
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "source_stable": true,
           "exact_count": 25,
           "unresolved_count": 10,
@@ -195697,7 +197861,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-intrinsics-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 25,
             "unresolved_count": 10,
@@ -196070,7 +198234,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-nointrinsics-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 25,
             "unresolved_count": 10,
@@ -196451,7 +198615,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-space-intrinsics-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 4,
             "unresolved_count": 2,
@@ -196832,7 +198996,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-space-nointrinsics-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 4,
             "unresolved_count": 2,
@@ -197209,7 +199373,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-noloop-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 25,
             "unresolved_count": 10,
@@ -197586,7 +199750,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-noschedule-cw94\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 15,
             "unresolved_count": 10,
@@ -197958,7 +200122,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-pro8\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 11,
             "unresolved_count": 11,
@@ -198328,7 +200492,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-pro7\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 0,
             "unresolved_count": 13,
@@ -198698,7 +200862,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-pro6\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 0,
             "unresolved_count": 13,
@@ -199072,7 +201236,7 @@
               }
             ],
             "object": "build\\GC_3_0a5_2\\tu-sweep\\cexprtools-speed-pro53\\build\\CExprTools-native-candidate.c\\compiled.obj",
-            "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+            "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
             "source_stable": true,
             "exact_count": 1,
             "unresolved_count": 9,
@@ -199082,7 +201246,7 @@
           }
         ],
         "execution-validation.json": {
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "functions": [
             {
               "name": "fn_00559240",
@@ -199319,7 +201483,7 @@
           "comparison": "Both full native and candidate TU functions execute; compiled object sections and generated switch tables receive normal COFF relocations at private execution addresses. No generated native table bindings are used. Shared helper models are deterministic. Compare return width, EDX for words, heap, globals, helper callbacks/order, allocation cursor, stack and callee-saved registers."
         },
         "semantic-abi-review.json": {
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "functions": [
             {
               "name": "fn_00559240",
@@ -199878,7 +202042,7 @@
               "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
               "signature": "ExprNode *(ExprType *, UInt32 quals, ExprList *)",
               "baseline_or_symbol_role": "CExpr.c:4551 CExpr_DoExplicitConversion.",
-              "semantic_abi_review": "Handle vector constants through a16-byte output, normal/class constructors and type diagnostics. Native trivial-construction funccallexpr takes five args; its third argument reuses the size node, not NULL.",
+              "semantic_abi_review": "Handle vector constants through a16-byte output, normal/class constructors and type diagnostics. The temporary builder0x52df70 takes one type argument, verified from its explicit GC3 native body; reused stack cells belong to later calls. Native trivial-construction funccallexpr takes five args; its third argument reuses the size node, not NULL.",
               "full_native_body_attempted": true,
               "manual_native_control_flow_and_layout_review": true,
               "comparison": {
@@ -199947,9 +202111,9 @@
               "address": "0x55aa20",
               "size": 118,
               "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
-              "signature": "ExprNode *(ExprNode *, ExprType *, UInt32 quals, UInt8 mode, UInt8 flag)",
-              "baseline_or_symbol_role": "Related native precomputation-preserving conversion wrapper.",
-              "semantic_abi_review": "Six-argument native conversion helper; preserve value only for a changed nontrivial, not-known-nonzero expression. Test the native isnotzero result in AX, then clone and connect0x3c/0x3d nodes with a unique ID.",
+              "signature": "ExprNode *(ExprNode *, ExprType *fromClass, ExprType *toClass, UInt8 reverse, UInt8 checkAccess)",
+              "baseline_or_symbol_role": "Related native precomputation-preserving class pointer cast wrapper.",
+              "semantic_abi_review": "Explicit native helper0x5418b0 takes(node,fromClass,toClass,reverse,ambiguityError,checkAccess). The third argument is a type pointer; its32-bit bits and call order are unchanged by the corrected declaration. Preserve value only for a changed nontrivial, not-known-nonzero expression. Test the native isnotzero result in AX, then clone and connect0x3c/0x3d nodes with a unique ID.",
               "full_native_body_attempted": true,
               "manual_native_control_flow_and_layout_review": true,
               "comparison": {
@@ -200468,7 +202632,7 @@
           }
         },
         "membership-audit.json": {
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "program": "/mwcc/GC 3.0/mwcceppc.exe",
           "supported_cluster": [
             "0x559240",
@@ -201692,7 +203856,7 @@
           ]
         },
         "data-review.json": {
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "complete": false,
           "records": [
             {
@@ -202181,7 +204345,7 @@
             },
             {
               "name": ".text",
-              "size": 392,
+              "size": 390,
               "flags": "0x60501020"
             },
             {
@@ -202306,7 +204470,7 @@
           "ownership_policy": "Owned named allocations are CExprTools.c at0x69b110 (13 initialized bytes) and has_func_call at0x6e2ed0 (1 BSS byte). The shared native type objects, 64-bit constants, clear_func and parser/options/context globals remain imports. Anonymous compiler-generated switch tables are exposed as candidate data and gain original claims only if automatic reference/payload/fixup verification succeeds; there are no manual generated-label native bindings."
         },
         "owned-data.json": {
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
           "named_owned_allocations": [
             {
               "name": "filename",
@@ -202508,6 +204672,41 @@
           "decompiled": "{\"0x55bc00\":\"\\r\\nvoid FUN_0055bc00(char *param_1)\\r\\n\\r\\n{\\r\\n  if ((byte)(*param_1 - 0x39U) < 2) {\\r\\n    DAT_006e2ed0 = 1;\\r\\n  }\\r\\n  return;\\r\\n}\\r\\n\\r\\n\"}",
           "save_result": "{\"success\":true,\"program\":\"mwcceppc.exe\",\"message\":\"Program saved successfully\"}"
         },
+        "native-helper-abi-correction": {
+          "status": "frozen_complete_TU_ABI_correction_ready",
+          "scope": "Two confirmed native helper ABIs: temporary builder0x52df70 takes only type; class pointer helper0x5418b0 takes node/fromClass/toClass/reverse/ambiguityError/checkAccess. Its private wrapper third argument is now a type pointer instead of mislabeled qualifiers, preserving32-bit argument bits.",
+          "old_source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "new_source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
+          "source_diff": "--- build\\CExprTools-pre-onearg-abifix\\CExprTools-native-candidate.c\n+++ build\\CExprTools-native-candidate.c\n@@ -43,8 +43,8 @@\n extern ExprNode *fn_00530810(ExprNode *,UInt8),*fn_00543c00(ExprObject *,ExprType *),*CExpr_New_EOBJREF_Node(ExprObject *,UInt8),*intconstnode(ExprType *,SInt32),*CExpr_New_EINDIRECT_Node(ExprObject *);\n extern UInt8 CInt64_Equal(ExprWords,ExprWords),CMach_FloatIsZero(ExprWords),fn_004e38e0(ExprWords);\n extern ExprWords CMach_CalcIntDiadic(ExprType *,ExprWords,int,ExprWords),CMach_CustomIntConvert(ExprType *,ExprType *,ExprWords),CMach_CalcFloatConvertFromInt(ExprType *,ExprWords),CMach_CalcFloatConvert(ExprType *,ExprWords),fn_004e4190(ExprType *,ExprWords);\n-extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,UInt32,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);\n-extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *,ExprNode *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);\n+extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,ExprType *,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);\n+extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);\n extern UInt8 fn_00463ba0(ExprNode *,void *,ExprType *),fn_00542360(ExprType *);\n extern void CDecl_CompleteType(ExprType *),fn_00514a10(ExprType *),fn_0045c2c0(int,...),fn_005454e0(ExprType *,ExprType **,UInt8 *);\n extern ExprType *fn_005454a0(ExprType *),*fn_005454c0(ExprType *);\n@@ -301,8 +301,8 @@\n     type=node->type;switch(type->kind){case 1:case 2:case 12:return node;case 3:return fn_0051ea50(node,nullnode());case 4:node->type=ENUMTYPE(type);return node;case 6:return fn_005e1f10(node,&stbool,0,0,1);case 11:return fn_00542fc0(0x18,node,nullnode());default:CError_Error(0x2888,type,node->flags&QUALS);return nullnode();}\n }\n ExprNode *fn_0055aa00(ExprNode *node,ExprType *type,UInt32 qual) {node=fn_005e1f10(node,type,qual,1,0);return node;}\n-ExprNode *fn_0055aa20(ExprNode *node,ExprType *type,UInt32 qual,UInt8 mode,UInt8 flag) {\n-    ExprNode *converted=fn_005418b0(node,type,qual,mode,1,flag),*result;\n+ExprNode *fn_0055aa20(ExprNode *node,ExprType *fromClass,ExprType *toClass,UInt8 reverse,UInt8 checkAccess) {\n+    ExprNode *converted=fn_005418b0(node,fromClass,toClass,reverse,1,checkAccess),*result;\n     if(converted==node||(converted->kind==0x32&&LEFT(converted)==node)||(SInt16)isnotzero(node))return converted;\n     result=CExpr_CopyENode(converted);result->kind=0x3c;LEFT(result)=CExpr_CopyENode(node);RIGHT(result)=converted;THIRD(result)=(ExprNode *)CParser_GetUniqueID();node->kind=0x3d;LEFT(node)=THIRD(result);return result;\n }\n@@ -320,7 +320,7 @@\n     }\n     if(type->kind!=6){if(arguments){if(arguments->next)CError_Error(0x2874);value=fn_0055ba60(fn_0055b810(arguments->node));}else value=nullnode();return fn_005e1f10(value,type,qual,1,0);}\n     CDecl_CompleteType(type);if(!(*(UInt32 *)((UInt8 *)type+34)&2))CError_Error(0x2798,type,0);fn_00514a10(type);\n-    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type,size);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}\n+    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}\n     return fn_005a8cd0(NULL,NULL,arguments,type,qual,1,1,1);\n }\n void fn_0055aaf0(ExprNode **left,const char *op,ExprNode **right) {\n",
+          "helper_body_evidence": "build/CExprConvMatch/helper-abi.json",
+          "native_stack_proof": [
+            "0x55a8ef/0x55a8f1 push two zero arguments retained for the later five-argument funccallexpr call.",
+            "0x55a8f3 pushes size; zero-argument CABI_GetSizeTType at 0x55a8f6 preserves that size; 0x55a8fb pushes returned type for intconstnode(type,size).",
+            "0x55a901/0x55a902 pop only intconstnode arguments; 0x55a903 pushes its result as the later size-node argument.",
+            "0x55a904 pushes only type, 0x55a905 calls 0x52df70, and 0x55a90a pops one argument.",
+            "0x55a90b pushes returned temporary, 0x55a90c pushes clear_func, 0x55a912 calls funccallexpr(clear_func,temporary,size_node,NULL,NULL), and 0x55a917 adds 20 bytes."
+          ],
+          "strict_exact_functions": 25,
+          "strict_match_effect": "No strict match count or exact-function set changed. CExpr_DoExplicitConversion remains nonexact.",
+          "bounded_native_checks": 7360,
+          "compiler_profiles": 10,
+          "verified_data_bytes": 38,
+          "unresolved_generated_data_records": 20,
+          "full_refreshed_handoff": "build\\CExprTools\\handoff.json",
+          "old_frozen_evidence_archive": "build\\CExprTools-pre-onearg-abifix",
+          "integration": "Parent applies this frozen complete-TU correction for both verified native helper ABIs, then reruns normal code/data and retained-version checks. All ten compiler profiles and7,360 original/candidate bounded comparisons have been refreshed under the final source hash. No active source/config/Git changed by this agent.",
+          "class_pointer_body_evidence": "build/CExprConvMatch/additional-helper-abi.json",
+          "class_pointer_type_clarification": "fn_0055aa20 now names its two class-type arguments fromClass/toClass and its byte arguments reverse/checkAccess. It still passes those same five argument values to0x5418b0 with ambiguityError=1. Native helper accesses both class pointers and calls class-path resolution."
+        },
+        "helper-abi.json": {
+          "0x52df70": "\r\nint FUN_0052df70(char *param_1)\r\n\r\n{\r\n  int iVar1;\r\n  int iVar2;\r\n  \r\n  iVar1 = FUN_0055a2e0(param_1, 0);\r\n  if (*param_1 == '\\x06') {\r\n    iVar2 = CClass_Destructor(param_1);\r\n    if (iVar2 != 0) {\r\n      *(undefined1 *)(iVar1 + 0x18) = 1;\r\n    }\r\n  }\r\n  return iVar1;\r\n}\r\n\r\n",
+          "0x5a89a0": "\r\nvoid funccallexpr(int param_1, int param_2, int param_3, int param_4, int param_5)\r\n\r\n{\r\n  char *pcVar1;\r\n  uint uVar2;\r\n  int iVar3;\r\n  undefined4 uVar4;\r\n  undefined4 *puVar5;\r\n  \r\n  pcVar1 = *(char **)(param_1 + 0x10);\r\n  if (*pcVar1 != '\\a') {\r\n    CError_Internal(&DAT_006ad768, 0x263);\r\n  }\r\n  iVar3 = FUN_005243b0(0x39);\r\n  *(undefined1 *)(iVar3 + 1) = 4;\r\n  *(undefined4 *)(iVar3 + 4) = *(undefined4 *)(pcVar1 + 0xe);\r\n  uVar2 = *(uint *)(pcVar1 + 0x12);\r\n  *(uint *)(iVar3 + 8) = *(uint *)(iVar3 + 8) & 0xe0dffffc;\r\n  *(uint *)(iVar3 + 8) = *(uint *)(iVar3 + 8) | uVar2 & 0x1f200003;\r\n  uVar4 = FUN_00521c20(param_1, 1);\r\n  *(undefined4 *)(iVar3 + 0x10) = uVar4;\r\n  *(char **)(iVar3 + 0x18) = pcVar1;\r\n  if (param_2 == 0) {\r\n    *(undefined4 *)(iVar3 + 0x14) = 0;\r\n  }\r\n  else {\r\n    puVar5 = (undefined4 *)CompilerTools_AllocatePool(8);\r\n    *(undefined4 **)(iVar3 + 0x14) = puVar5;\r\n    puVar5[1] = param_2;\r\n    if (param_3 != 0) {\r\n      uVar4 = CompilerTools_AllocatePool(8);\r\n      *puVar5 = uVar4;\r\n      puVar5 = (undefined4 *)*puVar5;\r\n      puVar5[1] = param_3;\r\n      if (param_4 != 0) {\r\n        uVar4 = CompilerTools_AllocatePool(8);\r\n        *puVar5 = uVar4;\r\n        puVar5 = (undefined4 *)*puVar5;\r\n        puVar5[1] = param_4;\r\n        if (param_5 != 0) {\r\n          uVar4 = CompilerTools_AllocatePool(8);\r\n          *puVar5 = uVar4;\r\n          puVar5 = (undefined4 *)*puVar5;\r\n          puVar5[1] = param_5;\r\n        }\r\n      }\r\n    }\r\n    *puVar5 = 0;\r\n  }\r\n  CExpr_AdjustFunctionCall(iVar3);\r\n  return;\r\n}\r\n\r\n",
+          "0x5a6b70": "\r\nchar * CExpr_ConstructObject\r\n                 (int param_1, int param_2, int param_3, int *param_4, char param_5, char param_6,\r\n                 undefined1 param_7, char param_8, undefined1 param_9)\r\n\r\n{\r\n  char *pcVar1;\r\n  bool bVar2;\r\n  char cVar3;\r\n  char *pcVar4;\r\n  int *piVar5;\r\n  int iVar6;\r\n  int *piVar7;\r\n  int *piVar8;\r\n  undefined4 uVar9;\r\n  int *piStack_2c;\r\n  int iStack_28;\r\n  int iStack_24;\r\n  char *pcStack_18;\r\n  \r\n  if (**(char **)(param_3 + 4) != '\\f') {\r\n    CError_Internal(&DAT_006ad768, 0x8bc);\r\n  }\r\n  pcVar4 = (char *)makemonadicnode(param_3, 4);\r\n  *(int *)(pcVar4 + 4) = param_1;\r\n  if ((param_6 == '\\0') && (param_4 != (int *)0x0) && (*param_4 == 0) &&\r\n     (*(int *)(param_4[1] + 4) == param_1 && (cVar3 = FUN_00542530(param_1, 0), cVar3 == '\\0'))) {\r\n    if (**(char **)(pcVar4 + 4) != '\\x06') {\r\n      CError_Internal(&DAT_006ad768, 0x8c6);\r\n    }\r\n    if ((*(uint *)(*(int *)(pcVar4 + 4) + 0x22) & 0x1000) == 0) {\r\n      pcVar4 = (char *)makediadicnode(pcVar4, param_4[1], 0x1e);\r\n    }\r\n    if (param_5 == '\\0') {\r\n      pcVar4 = (char *)FUN_00559da0(pcVar4, 0);\r\n    }\r\n    return pcVar4;\r\n  }\r\n  piVar5 = (int *)CClass_Constructor(param_1);\r\n  if ((piVar5 != (int *)0x0) && (param_4 != (int *)0x0) &&\r\n     (*param_4 == 0 && (piVar7 = piVar5, *(int *)(param_4[1] + 4) == param_1))) {\r\n    for (; piVar7 != (int *)0x0; piVar7 = (int *)*piVar7) {\r\n      if ((*(char *)piVar7[1] == '\\x05') &&\r\n         (pcVar1 = *(char **)((char *)piVar7[1] + 0x10), *pcVar1 == '\\a') &&\r\n         ((*(uint *)(pcVar1 + 0x16) & 0x100000) != 0) &&\r\n         (*(int **)(pcVar1 + 6) != (int *)0x0 && (iVar6 = **(int **)(pcVar1 + 6), iVar6 != 0)) &&\r\n         (pcVar1 = *(char **)(iVar6 + 0xc), *pcVar1 == '\\n' && (pcVar1[6] == '\\0'))) {\r\n        bVar2 = true;\r\n      }\r\n      else {\r\n        bVar2 = false;\r\n      }\r\n      if (bVar2) {\r\n        piVar8 = (int *)0x0;\r\n        for (piVar7 = piVar5; piVar5 = piVar8, piVar7 != (int *)0x0; piVar7 = (int *)*piVar7) {\r\n          if ((*(char *)piVar7[1] == '\\x05') &&\r\n             (pcVar1 = *(char **)((char *)piVar7[1] + 0x10), *pcVar1 == '\\a') &&\r\n             ((*(uint *)(pcVar1 + 0x16) & 0x100000) != 0 &&\r\n             (*(int **)(pcVar1 + 6) != (int *)0x0 && (iVar6 = **(int **)(pcVar1 + 6), iVar6 != 0) &&\r\n             (pcVar1 = *(char **)(iVar6 + 0xc), *pcVar1 == '\\n')) && (pcVar1[6] == '\\0'))) {\r\n            bVar2 = true;\r\n          }\r\n          else {\r\n            bVar2 = false;\r\n          }\r\n          piVar8 = piVar5;\r\n          if (!bVar2) {\r\n            piVar8 = (int *)CompilerTools_AllocatePool(8);\r\n            iVar6 = piVar7[1];\r\n            *piVar8 = *piVar7;\r\n            piVar8[1] = iVar6;\r\n            *piVar8 = (int)piVar5;\r\n          }\r\n        }\r\n        break;\r\n      }\r\n    }\r\n  }\r\n  if (piVar5 != (int *)0x0) {\r\n    if (param_2 == 0) {\r\n      iVar6 = FUN_00553250(param_1, param_1, 1, param_9);\r\n    }\r\n    else {\r\n      iVar6 = FUN_00553250(param_1, param_2, 0, param_9);\r\n    }\r\n    piVar7 = param_4;\r\n    if (iVar6 != 0) {\r\n      piVar7 = (int *)CompilerTools_AllocatePool(8);\r\n      piVar7[1] = iVar6;\r\n      *piVar7 = (int)param_4;\r\n    }\r\n    memclrw(&piStack_2c, 0x1c);\r\n    iStack_28 = param_1;\r\n    iStack_24 = param_1;\r\n    piStack_2c = piVar5;\r\n    pcStack_18 = pcVar4;\r\n    pcVar4 = (char *)CExpr_GenericFuncCall(&piStack_2c, 0, piVar7, param_8 == '\\0', param_7);\r\n    if ((byte)(*pcVar4 - 0x39U) < 2) {\r\n      uVar9 = CDecl_NewPointerType(param_1);\r\n      *(undefined4 *)(pcVar4 + 4) = uVar9;\r\n    }\r\n    if (param_5 != '\\0') {\r\n      pcVar4 = (char *)makemonadicnode(pcVar4, 4);\r\n      *(int *)(pcVar4 + 4) = param_1;\r\n    }\r\n    return pcVar4;\r\n  }\r\n  if (param_4 != (int *)0x0) {\r\n    if ((*param_4 == 0) && (*pcVar4 == '\\x04')) {\r\n      uVar9 = oldassignmentpromotion(param_4[1], param_1, 0, 1, 0x1e);\r\n      pcVar4 = (char *)makediadicnode(pcVar4, uVar9);\r\n      return pcVar4;\r\n    }\r\n    CError_ReportError(0x27be);\r\n  }\r\n  return pcVar4;\r\n}\r\n\r\n"
+        },
+        "additional-helper-abi.json": {
+          "0x5418b0": "\r\nchar * FUN_005418b0(char *param_1, int param_2, int param_3, char param_4, char param_5,\r\n                   char param_6)\r\n\r\n{\r\n  char cVar1;\r\n  int iVar2;\r\n  char local_15;\r\n  undefined1 local_14 [3];\r\n  undefined1 local_11;\r\n  \r\n  local_11 = 0;\r\n  if (param_2 == param_3) goto LAB_005419c4;\r\n  iVar2 = FUN_00541ba0(param_2, param_3, local_14, &local_15);\r\n  if (iVar2 == 0) {\r\n    if (param_4 == '\\0') {\r\n      CError_ReportError(0x27e1, param_2, 0, param_3, 0);\r\n      goto LAB_005419c4;\r\n    }\r\n    iVar2 = FUN_00541ba0(param_3, param_2, local_14, &local_15);\r\n    if (iVar2 == 0) goto LAB_005419c4;\r\n    if (param_6 != '\\0') {\r\n      CClass_CheckStaticAccess(0, param_3, param_2, 0, 0, 0);\r\n    }\r\n    local_11 = 1;\r\n  }\r\n  else if (param_6 != '\\0') {\r\n    CClass_CheckStaticAccess(0, param_2, param_3, 0, 0, 0);\r\n  }\r\n  if ((local_15 != '\\0') && (param_5 != '\\0')) {\r\n    CError_ReportError(0x28b5, param_2, 0, param_3, 0);\r\n  }\r\n  if ((*(uint *)(param_2 + 0x22) & 0x10) == 0) {\r\n    cVar1 = FUN_0053d470(param_1);\r\n    if (cVar1 != '\\0') {\r\n      CError_Internal(s_CClass_c_0069aac8, 0x507);\r\n    }\r\n    param_1 = (char *)FUN_005419f0(iVar2, param_1, local_11);\r\n  }\r\nLAB_005419c4:\r\n  if ((param_4 != '\\0') && (*param_1 == '\\x04') && (**(char **)(param_1 + 4) == '\\f')) {\r\n    param_1 = (char *)makemonadicnode(param_1, 0x32);\r\n  }\r\n  return param_1;\r\n}\r\n\r\n",
+          "0x449d60": "\r\nundefined4 FUN_00449c80(int param_1)\r\n\r\n{\r\n  if (param_1 == 0x191) {\r\n    return 0;\r\n  }\r\n  if (param_1 == 0x193) {\r\n    return 1;\r\n  }\r\n  if (param_1 == 0x195) {\r\n    return 0x1d;\r\n  }\r\n  if (param_1 == 0x1f9) {\r\n    return 2;\r\n  }\r\n  if (param_1 == 0x1fd) {\r\n    return 3;\r\n  }\r\n  if (param_1 == 0x22b) {\r\n    return 4;\r\n  }\r\n  if (param_1 == 0x259) {\r\n    return 5;\r\n  }\r\n  if (param_1 == 0x25a) {\r\n    return 6;\r\n  }\r\n  if (param_1 == 0x25b) {\r\n    return 7;\r\n  }\r\n  if (param_1 == 0x25c) {\r\n    return 9;\r\n  }\r\n  if ((param_1 == 0x2e4) || (param_1 == 0x2e9)) {\r\n    return 0xb;\r\n  }\r\n  if ((param_1 == 0x2ee) || (param_1 == 0x2f3)) {\r\n    return 0xc;\r\n  }\r\n  if (param_1 == 0x321) {\r\n    return 0xd;\r\n  }\r\n  if (param_1 == 0x335) {\r\n    return 0xe;\r\n  }\r\n  if (param_1 == 0x337) {\r\n    return 0xf;\r\n  }\r\n  if ((param_1 != 0x352) && (param_1 != 0x354) && (param_1 != 0x359) && (param_1 != 0x35b)) {\r\n    if ((param_1 == 0x35c) || (param_1 == 0x35e) || (param_1 == 0x362)) {\r\n      return 0x11;\r\n    }\r\n    if ((param_1 == 0x366) || (param_1 == 0x36b)) {\r\n      return 0x21;\r\n    }\r\n    if ((param_1 == 0x370) || (param_1 == 0x375)) {\r\n      return 0x22;\r\n    }\r\n    if (param_1 == 0x3ca) {\r\n      return 0x23;\r\n    }\r\n    if (param_1 == 0x13ec) {\r\n      return 0x1b;\r\n    }\r\n    if (param_1 == 0x1450) {\r\n      return 0x1e;\r\n    }\r\n    if (param_1 == 0x15bd) {\r\n      return 0x1c;\r\n    }\r\n    if ((param_1 == 0x1ce8) || (param_1 == 0x1cf2)) {\r\n      return 0x15;\r\n    }\r\n    if ((param_1 == 0x1d15) || (param_1 - 0x1d17U < 2)) {\r\n      return 0x25;\r\n    }\r\n    if ((param_1 - 0x1d1aU < 2) || (param_1 == 0x1d1f) || (param_1 == 0x1d21)) {\r\n      return 0x18;\r\n    }\r\n    if ((param_1 - 0x2030U < 2) || (param_1 == 0x2035) || (param_1 - 0x2037U < 2)) {\r\n      return 0x12;\r\n    }\r\n    if ((param_1 == 0x2044) || (param_1 - 0x2048U < 3)) {\r\n      return 0x13;\r\n    }\r\n    if ((param_1 - 0x204eU < 3) || (param_1 == 0x2053)) {\r\n      return 0x1f;\r\n    }\r\n    if (param_1 == 0x2058) {\r\n      return 0x20;\r\n    }\r\n    if ((param_1 == 0x2085) || (param_1 == 0x2097) || (param_1 == 0x209b) ||\r\n       (param_1 == 0x209d || (param_1 == 0x20a6)) || (param_1 == 0x20a8)) {\r\n      return 0x27;\r\n    }\r\n    if ((param_1 == 0x2145) || (param_1 - 0x215cU < 2)) {\r\n      return 0x17;\r\n    }\r\n    if ((param_1 != 0x215f) && (param_1 != 0x2161) && (param_1 - 0x2163U > 1)) {\r\n      if ((param_1 != 0x216b) && (param_1 != 0x2170)) {\r\n        if (param_1 != 0x21c1) {\r\n          return 0x14;\r\n        }\r\n        return 0x28;\r\n      }\r\n      return 0x17;\r\n    }\r\n    return 0x26;\r\n  }\r\n  return 0x10;\r\n}\r\n\r\n"
+        },
         "legacy-guard-review.json": [
           {
             "source": "src/frontend/CExpr.c",
@@ -202532,8 +204731,8 @@
         ],
         "normal_project": {
           "source": "src/GC_3_0a5_2/frontend/CExprTools.c",
-          "source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
-          "candidate_project_sections_sha256": "f47738987d4071fdb6b6c7e0e4de8f88dd804fde7e3ca7cb5cb6546f35bbdbae",
+          "source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
+          "candidate_project_sections_sha256": "66fc604020413506f66425e873369e74f02bb323510018d3eb68a44c45ff7511",
           "all_code_and_data_sections_equal": true,
           "common_symbols_equal": true,
           "checked_functions": 46,
@@ -202859,7 +205058,7 @@
         "attempted_members": 46,
         "unexplored_windows_candidates": [],
         "push_ready": true,
-        "basis": "All 46 identified bodies attempted and reviewed across ten compiling profiles. All pass 7360 bounded native instruction comparisons in total. Full normal build, strict match verification, objdiff-cli, image partition, six retained-version object fingerprints and CP932 checks passed. Twenty generated table allocations and original physical membership remain unproved."
+        "basis": "All 46 supported bodies remain fully attempted and reviewed. Both corrected native helper ABIs are supported by explicit callee bodies and actual caller stack instructions. Ten profiles and 7360 bounded native comparisons refreshed. Normal project, six retained object fingerprints, strict matches and CP932 passed. Twenty generated table allocations and original physical membership remain unproved."
       },
       "integration_review": {
         "replaced_provisional_mapping": {
@@ -202901,12 +205100,38 @@
         "data": "Named filename and flag plus two automatically located tables match. Twenty emitted generated tables stay exposed and unclaimed.",
         "normal_project_checks": {
           "ninja_all_source_progress": true,
-          "strict_exact_total": 881,
-          "mapped_total": 1942,
+          "strict_exact_total": 890,
+          "mapped_total": 1962,
           "objdiff_cli": true,
           "inventory_partition": true,
           "ownership_conflicts": 0,
           "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        },
+        "native-helper-abi-correction": {
+          "status": "frozen_complete_TU_ABI_correction_ready",
+          "scope": "Two confirmed native helper ABIs: temporary builder0x52df70 takes only type; class pointer helper0x5418b0 takes node/fromClass/toClass/reverse/ambiguityError/checkAccess. Its private wrapper third argument is now a type pointer instead of mislabeled qualifiers, preserving32-bit argument bits.",
+          "old_source_sha256": "16e12e5c90963f99ba63fec28c03b5b52fa50cb00c0ed6684b936b3f07aa2ff7",
+          "new_source_sha256": "0ea7b202b702b8cf13b37dddfaf06c09a3d05ff0d691fe5b0a9cc3f2cd36e8a3",
+          "source_diff": "--- build\\CExprTools-pre-onearg-abifix\\CExprTools-native-candidate.c\n+++ build\\CExprTools-native-candidate.c\n@@ -43,8 +43,8 @@\n extern ExprNode *fn_00530810(ExprNode *,UInt8),*fn_00543c00(ExprObject *,ExprType *),*CExpr_New_EOBJREF_Node(ExprObject *,UInt8),*intconstnode(ExprType *,SInt32),*CExpr_New_EINDIRECT_Node(ExprObject *);\n extern UInt8 CInt64_Equal(ExprWords,ExprWords),CMach_FloatIsZero(ExprWords),fn_004e38e0(ExprWords);\n extern ExprWords CMach_CalcIntDiadic(ExprType *,ExprWords,int,ExprWords),CMach_CustomIntConvert(ExprType *,ExprType *,ExprWords),CMach_CalcFloatConvertFromInt(ExprType *,ExprWords),CMach_CalcFloatConvert(ExprType *,ExprWords),fn_004e4190(ExprType *,ExprWords);\n-extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,UInt32,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);\n-extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *,ExprNode *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);\n+extern ExprNode *argumentpromotion(ExprNode *,ExprType *,UInt32,UInt8),*fn_005418b0(ExprNode *,ExprType *,ExprType *,UInt8,UInt8,UInt8),*fn_005e1f10(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_00543680(ExprNode *,ExprType *,UInt32,UInt8,UInt8),*fn_0051ea50(ExprNode *,ExprNode *),*fn_00542fc0(UInt8,ExprNode *,ExprNode *);\n+extern ExprNode *fn_005e2a20(ExprNode *,ExprType *),*fn_0052df70(ExprType *),*funccallexpr(ExprObject *,ExprNode *,ExprNode *,ExprNode *,ExprNode *),*fn_005a8cd0(ExprNode *,ExprNode *,ExprList *,ExprType *,UInt32,UInt8,UInt8,UInt8);\n extern UInt8 fn_00463ba0(ExprNode *,void *,ExprType *),fn_00542360(ExprType *);\n extern void CDecl_CompleteType(ExprType *),fn_00514a10(ExprType *),fn_0045c2c0(int,...),fn_005454e0(ExprType *,ExprType **,UInt8 *);\n extern ExprType *fn_005454a0(ExprType *),*fn_005454c0(ExprType *);\n@@ -301,8 +301,8 @@\n     type=node->type;switch(type->kind){case 1:case 2:case 12:return node;case 3:return fn_0051ea50(node,nullnode());case 4:node->type=ENUMTYPE(type);return node;case 6:return fn_005e1f10(node,&stbool,0,0,1);case 11:return fn_00542fc0(0x18,node,nullnode());default:CError_Error(0x2888,type,node->flags&QUALS);return nullnode();}\n }\n ExprNode *fn_0055aa00(ExprNode *node,ExprType *type,UInt32 qual) {node=fn_005e1f10(node,type,qual,1,0);return node;}\n-ExprNode *fn_0055aa20(ExprNode *node,ExprType *type,UInt32 qual,UInt8 mode,UInt8 flag) {\n-    ExprNode *converted=fn_005418b0(node,type,qual,mode,1,flag),*result;\n+ExprNode *fn_0055aa20(ExprNode *node,ExprType *fromClass,ExprType *toClass,UInt8 reverse,UInt8 checkAccess) {\n+    ExprNode *converted=fn_005418b0(node,fromClass,toClass,reverse,1,checkAccess),*result;\n     if(converted==node||(converted->kind==0x32&&LEFT(converted)==node)||(SInt16)isnotzero(node))return converted;\n     result=CExpr_CopyENode(converted);result->kind=0x3c;LEFT(result)=CExpr_CopyENode(node);RIGHT(result)=converted;THIRD(result)=(ExprNode *)CParser_GetUniqueID();node->kind=0x3d;LEFT(node)=THIRD(result);return result;\n }\n@@ -320,7 +320,7 @@\n     }\n     if(type->kind!=6){if(arguments){if(arguments->next)CError_Error(0x2874);value=fn_0055ba60(fn_0055b810(arguments->node));}else value=nullnode();return fn_005e1f10(value,type,qual,1,0);}\n     CDecl_CompleteType(type);if(!(*(UInt32 *)((UInt8 *)type+34)&2))CError_Error(0x2798,type,0);fn_00514a10(type);\n-    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type,size);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}\n+    if(!arguments&&fn_00542360(type)){size=intconstnode(CABI_GetSizeTType(),type->size);value=fn_0052df70(type);value=funccallexpr(clear_func,value,size,NULL,NULL);node=makemonadicnode(value,4);node->type=type;node->flags=(node->flags&~QUALS)|(qual&QUALS);return node;}\n     return fn_005a8cd0(NULL,NULL,arguments,type,qual,1,1,1);\n }\n void fn_0055aaf0(ExprNode **left,const char *op,ExprNode **right) {\n",
+          "helper_body_evidence": "build/CExprConvMatch/helper-abi.json",
+          "native_stack_proof": [
+            "0x55a8ef/0x55a8f1 push two zero arguments retained for the later five-argument funccallexpr call.",
+            "0x55a8f3 pushes size; zero-argument CABI_GetSizeTType at 0x55a8f6 preserves that size; 0x55a8fb pushes returned type for intconstnode(type,size).",
+            "0x55a901/0x55a902 pop only intconstnode arguments; 0x55a903 pushes its result as the later size-node argument.",
+            "0x55a904 pushes only type, 0x55a905 calls 0x52df70, and 0x55a90a pops one argument.",
+            "0x55a90b pushes returned temporary, 0x55a90c pushes clear_func, 0x55a912 calls funccallexpr(clear_func,temporary,size_node,NULL,NULL), and 0x55a917 adds 20 bytes."
+          ],
+          "strict_exact_functions": 25,
+          "strict_match_effect": "No strict match count or exact-function set changed. CExpr_DoExplicitConversion remains nonexact.",
+          "bounded_native_checks": 7360,
+          "compiler_profiles": 10,
+          "verified_data_bytes": 38,
+          "unresolved_generated_data_records": 20,
+          "full_refreshed_handoff": "build\\CExprTools\\handoff.json",
+          "old_frozen_evidence_archive": "build\\CExprTools-pre-onearg-abifix",
+          "integration": "Parent applies this frozen complete-TU correction for both verified native helper ABIs, then reruns normal code/data and retained-version checks. All ten compiler profiles and7,360 original/candidate bounded comparisons have been refreshed under the final source hash. No active source/config/Git changed by this agent.",
+          "class_pointer_body_evidence": "build/CExprConvMatch/additional-helper-abi.json",
+          "class_pointer_type_clarification": "fn_0055aa20 now names its two class-type arguments fromClass/toClass and its byte arguments reverse/checkAccess. It still passes those same five argument values to0x5418b0 with ambiguityError=1. Native helper accesses both class pointers and calls class-path resolution."
         }
       }
     },

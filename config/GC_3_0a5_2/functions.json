@@ -22586,5 +22586,71 @@
       "method": "Reviewed reachable native CFG and whole-image scope audit",
       "unresolved_indirect_flow": false
     }
+  },
+  {
+    "name": "fn_0063e430",
+    "address": "0x63e430",
+    "size": 632,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063e6b0",
+    "address": "0x63e6b0",
+    "size": 495,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063e8a0",
+    "address": "0x63e8a0",
+    "size": 427,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063ea50",
+    "address": "0x63ea50",
+    "size": 238,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063eb40",
+    "address": "0x63eb40",
+    "size": 220,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_OptimizeNonRegAccesses",
+    "address": "0x63ec20",
+    "size": 344,
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c",
+    "identity_evidence": "Native IroNonRegLoopAccesses.c assertions and full behavior/ABI review; native caller diagnostic confirms IRO_OptimizeNonRegAccesses. Unproved helper names retain address identifiers.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
+      "unresolved_indirect_flow": false
+    }
   }
 ]

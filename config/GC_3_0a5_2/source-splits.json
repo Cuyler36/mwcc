@@ -3586,5 +3586,29 @@
   "fn_00544120": {
     "name": "fn_00544120",
     "source": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+  },
+  "fn_0063e430": {
+    "name": "fn_0063e430",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_0063e6b0": {
+    "name": "fn_0063e6b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_0063e8a0": {
+    "name": "fn_0063e8a0",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_0063ea50": {
+    "name": "fn_0063ea50",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_0063eb40": {
+    "name": "fn_0063eb40",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
+  },
+  "fn_0063ec20": {
+    "name": "IRO_OptimizeNonRegAccesses",
+    "source": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
   }
 }

@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 242 source files build, 1,888 candidate functions are
-mapped, and 852 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 243 source files build, 1,894 candidate functions are
+mapped, and 854 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -117,6 +117,12 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
 
+IroNonRegLoopAccesses has all six identified native bodies attempted, with two
+exact matches. Eleven compiler profiles build; all six bodies pass 1,800 bounded
+native instruction comparisons in total. All 194 emitted data and switch-table
+bytes match. The native caller diagnostic confirms IRO_OptimizeNonRegAccesses;
+shared optimizer state remains external and physical object membership unproven.
+
 CMemberPointer has all 18 identified native bodies reconstructed, with eight
 exact matches. Ten compiler profiles build, and eleven reviewed bodies pass
 2,200 bounded native instruction comparisons. Its emitted filename data matches.
@@ -146,7 +152,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 40 original-only TU views to objdiff. The twenty
+map. It currently adds 39 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

@@ -243,7 +243,8 @@
     "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
     "src/GC_3_0a5_2/frontend/CPrepLexer.c",
     "src/GC_3_0a5_2/backend/Alias.c",
-    "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+    "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3858,6 +3859,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4712,7 +4731,9 @@
     "src/GC_3_0a5_2/frontend/CMemberPointer/fn_00543ff0",
     "src/GC_3_0a5_2/frontend/CMemberPointer/CDecl_MakePTMFuncType",
     "src/GC_3_0a5_2/frontend/CMemberPointer/CPTM_GetMemberFunctionPointerSize",
-    "src/GC_3_0a5_2/frontend/CMemberPointer/fn_00544120"
+    "src/GC_3_0a5_2/frontend/CMemberPointer/fn_00544120",
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses/fn_0063ea50",
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses/IRO_OptimizeNonRegAccesses"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8030,6 +8051,62 @@
       "_CMach_InitIntMem": "0x4e40d0",
       "_fn_005dedc0": "0x5dedc0",
       "_fn_00454e40": "0x454e40"
+    },
+    "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c": {
+      "_fn_005c64e0": "0x5c64e0",
+      "_fn_005ad220": "0x5ad220",
+      "_fn_005ad400": "0x5ad400",
+      "_fn_005acb80": "0x5acb80",
+      "_fn_005ed4c0": "0x5ed4c0",
+      "_fn_00455840": "0x455840",
+      "_fn_005bd630": "0x5bd630",
+      "_fn_005b53d0": "0x5b53d0",
+      "_fn_005b1fc0": "0x5b1fc0",
+      "_fn_0063e8a0": "0x63e8a0",
+      "_fn_004c53c0": "0x4c53c0",
+      "_fn_005ac1e0": "0x5ac1e0",
+      "_fn_005b04a0": "0x5b04a0",
+      "_fn_005acf30": "0x5acf30",
+      "_fn_005c6400": "0x5c6400",
+      "_fn_0063e6b0": "0x63e6b0",
+      "_fn_005bf6c0": "0x5bf6c0",
+      "_fn_005b7d30": "0x5b7d30",
+      "_fn_005ad440": "0x5ad440",
+      "_fn_00453290": "0x453290",
+      "_fn_005ab7d0": "0x5ab7d0",
+      "_fn_005ab500": "0x5ab500",
+      "_fn_005c6340": "0x5c6340",
+      "_fn_005bfae0": "0x5bfae0",
+      "_fn_004c5470": "0x4c5470",
+      "_fn_0063eb40": "0x63eb40",
+      "_fn_005ac320": "0x5ac320",
+      "_fn_005acdf0": "0x5acdf0",
+      "_fn_005ad280": "0x5ad280",
+      "_fn_005bf780": "0x5bf780",
+      "_fn_0063e430": "0x63e430",
+      "_fn_005f6b80": "0x5f6b80",
+      "_fn_005b8d90": "0x5b8d90",
+      "_fn_0063ea50": "0x63ea50",
+      "_fn_005ab710": "0x5ab710",
+      "_native_variables": "0x710674",
+      "_native_blocks": "0x710990",
+      "_native_modified": "0x71015c",
+      "_native_variable_count": "0x710084",
+      "_native_serial": "0x710998",
+      "_native_work": "0x710170",
+      "_native_side_effect": "0x711ba8",
+      "_create_temp_object": "0x52dfb0",
+      "_CError_Internal": "0x45a250",
+      "_IroBitVect_ClearBitVector": "0x5bf760",
+      "_filename": "0x6bfcad",
+      "_log_replace": "0x6bfc75",
+      "_log_candidate": "0x6bfcc5",
+      "_log_valid": "0x6bfce9",
+      "_log_invalid": "0x6bfcf1",
+      "_log_possible": "0x6bfcfd",
+      "_log_newline": "0x6bfd11",
+      "_log_no_predecessor": "0x6bfd15",
+      "_IRO_OptimizeNonRegAccesses": "0x63ec20"
     }
   },
   "original_source_units": {
@@ -8057,6 +8134,7 @@
     "IroCounterLoop.c": "src/GC_3_0a5_2/optimizer/IroCounterLoop.c",
     "CPrepLexer.c": "src/GC_3_0a5_2/frontend/CPrepLexer.c",
     "Alias.c": "src/GC_3_0a5_2/backend/Alias.c",
-    "CMemberPointer.c": "src/GC_3_0a5_2/frontend/CMemberPointer.c"
+    "CMemberPointer.c": "src/GC_3_0a5_2/frontend/CMemberPointer.c",
+    "IroNonRegLoopAccesses.c": "src/GC_3_0a5_2/optimizer/IroNonRegLoopAccesses.c"
   }
 }

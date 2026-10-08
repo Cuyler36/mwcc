@@ -3368,5 +3368,6 @@
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c"
-  ]
+  ],
+  "translation_units": "config/GC_3_0a5_2/translation-units.json"
 }

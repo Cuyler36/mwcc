@@ -15,6 +15,14 @@ mapped, and 217 functions pass full-byte and relocation checks. Targets.c is one
 complete translation unit: 380 code bytes and 112 data bytes. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
 
+The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
+Windows assertion callers with explicit source membership from the Mac symbol
+map. It currently adds 53 original-only TU views to objdiff and identifies 20
+imported ownership conflicts for physical splitting. These views contain real
+original functions without placeholder implementations. Unassigned functions
+and data remain visible in image-section buckets. See the porting notes for
+inventory generation and the per-TU attempt ledger.
+
 Supported versions:
 
 - `GC_1_2_5`: GameCube 1.2.5

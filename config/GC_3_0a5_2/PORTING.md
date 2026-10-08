@@ -5,6 +5,45 @@ SHA-1: `79683505e7fc6bb63e5c169f21623df272dd2262`.
 Ghidra: project `City Folk`, program `/mwcc/GC 3.0/mwcceppc.exe`.
 Its executable path identifies the 3.0a5.2 compiler. Use this explicit program path in MCP calls.
 
+## TU inventory and matching order
+
+`translation-units.json` is the source checklist and per-TU attempt ledger.
+Its initial inventory contains 262 units: 209 imported compiled sources and 53
+original-only Windows source views. It records 1,984 known Windows functions,
+including 905 not yet implemented, and keeps the Mac-only source checklist
+separate. The original's remaining code and data stay in unknown section views.
+The inventory is incomplete: assertions name callers, not every function in a
+file, and 20 existing mappings conflict with their recovered filenames.
+Seven mixed-source and 48 header-only diagnostic callers remain ambiguous.
+Missing mappings do not prove that an imported TU is obsolete.
+
+The Windows inventory resolves all 3,032 calls to three assertion/file-line
+helpers. The Mac map has 62 explicit STABS source units and 1,070 named FUN
+records, plus 12,129 ordinary symbols without implied source membership.
+Regenerate the evidence with local Capstone installed under `build/python`:
+
+```sh
+python tools/index_gc3_symbols.py --symbols /path/to/mwccppc_pro8_syms
+python tools/index_gc3_assertions.py --exe build/compilers/GC/3.0a5.2/mwcceppc.exe --functions build/gc3-ghidra-functions-current.txt
+python tools/plan_gc3_units.py
+python configure.py --version GC_3_0a5_2
+ninja all_source progress
+```
+
+Matching proceeds by physical TU. Resolve ownership conflicts and added
+functions first, then compare every emitted function, literal, initialized
+data object, and BSS contribution with objdiff-cli. Record compiler experiments
+and semantic differences in `attempts`; a compile or high similarity score is
+not a functional-equivalence result. Mark completion only after reviewing the
+known original inventory and strict code/data/relocation checks. Push each TU
+as its review finishes. `source-splits.json` preserves physical splits and
+canonical symbol names when rediscovering baseline mappings.
+
+First matching priorities are the runtime setjmp unit, ResourceStrings.c,
+ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
+driver units, frontend, optimizer, backend, MSL, and runtime sources. New
+original-only units remain explicit work items, rather than empty C stubs.
+
 ## Targets.c: complete symbol-identified unit
 
 The 1.2.5 reconstruction's `src/driver/Targets.c` bundles 42 functions from

@@ -27,6 +27,7 @@ def unit(function):
 
 def records():
     baseline = json.loads(Path("config/GC_1_2_5/functions.json").read_text())
+    splits = json.loads((CONFIG / 'source-splits.json').read_text()) if (CONFIG / 'source-splits.json').exists() else {}
     renames = json.loads((CONFIG / "parser-baseline-names.json").read_text())
     renames.update(dict(Targets_SetTool="SetParserToolInfo", Targets_MatchTool="ParserToolMatchesPlugin",
                         Targets_MatchCommandLineOptions="ParserToolHandlesPanels",
@@ -38,6 +39,9 @@ def records():
             filename = "Targets.c" if row["baseline_name"] in list(renames)[-4:] else (
                 "Arguments.c" if row["name"].startswith("Arg_") else "ParserErrors.c")
             row["source"] = "src/GC_3_0a5_2/driver/" + filename
+        # Physical GC3 splits and canonical names must survive rediscovery.
+        if row['baseline_name'] in splits:
+            row.update(splits[row['baseline_name']])
         row["symbol"] = row["name"] if row["name"].startswith("?") else "_" + row["name"]
         yield row
 
@@ -161,6 +165,12 @@ def integrate():
         row["size"] = boundaries[int(row["address"], 0)]
         row['boundary_evidence'] = 'Ghidra function body' if int(row['address'],0) in direct_boundaries else extent_notes[row['name']]
     rows = sorted(previous + rows, key=lambda r: int(r["address"], 0))
+    splits = json.loads((CONFIG / 'source-splits.json').read_text()) if (CONFIG / 'source-splits.json').exists() else {}
+    for row in rows:
+        split = splits.get(row.get('baseline_name', row['name']))
+        if split:
+            row.update(split)
+            row['symbol'] = row['name'] if row['name'].startswith('?') else '_' + row['name']
     overlaps = {r["name"] for r, following in zip(rows, rows[1:])
                 if int(r["address"], 0)+r["size"] > int(following["address"], 0)}
     rows = [r for r in rows if r["name"] not in overlaps]

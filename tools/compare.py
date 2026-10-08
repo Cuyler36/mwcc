@@ -58,6 +58,21 @@ def inventory(version):
     """The executable as rows: each function config/VERSION/functions.json maps, and the ranges between them."""
     config, pe = original(version)
     functions = json.loads(Path(f"config/{version}/functions.json").read_text())
+    # Explicit Windows diagnostic ownership adds original-only functions to
+    # their source TU, without inventing implementations or compiled objects.
+    known = {int(f['address'], 0) for f in functions}
+    plan = config.get('translation_units')
+    if plan:
+        for unit in json.loads(Path(plan).read_text())['units']:
+            for function in unit['windows_functions']:
+                address = int(function['address'], 0)
+                if address not in known and function['size']:
+                    functions.append(dict(function, target_source=unit['source']))
+                    known.add(address)
+        ordered = sorted(functions, key=lambda f: int(f['address'], 0))
+        for left, right in zip(ordered, ordered[1:]):
+            if int(left['address'], 0) + left['size'] > int(right['address'], 0):
+                raise ValueError(f"Overlapping original functions: {left['name']} / {right['name']}")
     rows = []
     for section in pe.sections:
         code = bool(section.characteristics & 0x20000000)
@@ -72,7 +87,8 @@ def inventory(version):
             if address > cursor:
                 rows.append(dict(name=f"unknown/{section.name}/{cursor:08x}", address=cursor, size=address - cursor, code=code))
             # (a function without a source is one the decompilation does not have yet)
-            unit = Path(f["source"]).with_suffix("").as_posix() if "source" in f else "unrecovered"
+            source = f.get('source', f.get('target_source'))
+            unit = Path(source).with_suffix("").as_posix() if source else "unrecovered"
             rows.append(dict(f, address=address, code=True, name=unit + "/" + f["name"],
                              # (C++-mangled names carry no C underscore in COFF)
                              symbol=f["name"] if f["name"].startswith("?") else "_" + f["name"]))
@@ -167,6 +183,11 @@ def write_source_unit(version, source, rows, results, pe, claims=None):
     target, base = source_paths(version, source)
     mapped = {row["symbol"]: row for row in rows}
     target_functions = [(row["symbol"], pe.read(row["address"], row["size"])) for row in rows]
+    config = version_config(version)
+    if source not in config.get('sources', sources()):
+        write_translation_unit(target, target_functions, [])
+        return dict(name=Path(source).with_suffix('').as_posix(), target_path=target,
+                    metadata=dict(complete=False, progress_categories=['code', 'data']))
     symbols, sections = read_object(Path(f"build/{version}/compiled/{source}.obj"))
     emitted = sorted((s for s in symbols.values() if s["section"] > 0 and s["type"] & 0x20
                       and sections[s["section"] - 1]["code"]),
@@ -185,9 +206,8 @@ def write_source_unit(version, source, rows, results, pe, claims=None):
     write_translation_unit(base, base_functions, base_data)
     all_emitted_mapped = all(name in mapped for name, _ in base_functions)
     complete = bool(rows) and all_emitted_mapped and data_complete and all(
-        results[r["name"]][1] and matching(version, source, r["name"]) and not r.get("binary_patch")
+        results.get(r["name"], (None, False))[1] and matching(version, source, r["name"]) and not r.get("binary_patch")
         for r in rows)
-    config = version_config(version)
     if "complete_sources" in config:
         complete &= source in config["complete_sources"]
     if complete:
@@ -340,12 +360,14 @@ def read_object(path):
         off = 20 + i * 40
         rawsize, rawoff, reloff = struct.unpack_from("<III", data, off + 16)
         nrel = struct.unpack_from("<H", data, off + 32)[0]
+        flags = struct.unpack_from("<I", data, off + 36)[0]
         sections.append(
             dict(
                 name=name(data[off:off + 8]),
-                flags=struct.unpack_from("<I", data, off + 36)[0],
-                code=bool(struct.unpack_from("<I", data, off + 36)[0] & 0x20),
-                data=data[rawoff : rawoff + rawsize] if rawoff else bytes(rawsize),
+                flags=flags,
+                code=bool(flags & 0x20),
+                # CW94 may leave a nonzero raw pointer on uninitialized data.
+                data=data[rawoff : rawoff + rawsize] if rawoff and not flags & 0x80 else bytes(rawsize),
                 relocs=[
                     struct.unpack_from("<IIH", data, reloff + j * 10)
                     for j in range(nrel)
@@ -474,6 +496,10 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
             # unrelated literals that happen to share its section. Every entry
             # in this range must resolve and occur together in the original.
             matches = locate(bytes(payload)) if payload else []
+            # Zero storage is not a uniquely identifiable literal. Its address
+            # must come from the original operand and a bounded data section.
+            if payload and not any(payload):
+                matches = []
             # Macro expansion can change string-pool grouping without changing
             # a string's contents. Prefer the original operand when its complete
             # NUL-terminated string agrees, rather than another identical copy.
@@ -523,9 +549,16 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
                     if derived is not None:
                         derived &= 0xFFFFFFFF
                         try:
-                            there = pe.read(derived, len(payload)) if payload else b""
+                            if hasattr(pe, 'section_for_address'):
+                                target_section = pe.section_for_address(derived)
+                                if (target_section.characteristics & 0x20000000 or
+                                        target_section.name in ('.rsrc', '.reloc', '.idata', '.edata')):
+                                    raise ValueError('literal reference is not allocated data')
+                                there = read_memory(pe, derived, len(payload))
+                            else:
+                                there = pe.read(derived, len(payload))
                         except ValueError:
-                            there = bytes(len(payload))
+                            there = None
                         if there == bytes(payload):
                             hits = [derived + addend]
                 if len(hits) != 1:
@@ -565,7 +598,7 @@ def extract(version):
     _, pe, rows = inventory(version)
     unknown_units(version, rows, pe, [])
     for row in rows:
-        if 'source' in row or row['name'].startswith('unknown/'):
+        if 'source' in row or 'target_source' in row or row['name'].startswith('unknown/'):
             continue
         data = b"" if row["bss"] else pe.read(row["address"], row["size"])
         write_coff(row["target"], data, row.get("symbol") or (f"__unknown_{row['address']:08x}" if row["code"] else None),
@@ -648,6 +681,9 @@ def compare(version):
     units, exact, linked, failed, nonmatching, patched = [], 0, 0, [], [], []
     for row in rows:
         if "source" not in row:
+            if 'target_source' in row:
+                grouped[row['target_source']].append(row)
+                continue
             if not row['name'].startswith('unknown/'):
                 units.append(dict(name=row['name'], target_path=row['target'],
                                   metadata=dict(complete=False, progress_categories=['code'])))
@@ -666,7 +702,7 @@ def compare(version):
     enabled.update(version_config(version).get("source_settings", {}))
     selected = version_config(version).get("sources", list(enabled))
     claims = []
-    for source in selected:
+    for source in dict.fromkeys([*selected, *grouped]):
         units.append(write_source_unit(version, source, grouped[source], results, pe, claims))
     units.extend(unknown_units(version, rows, pe, claims))
     Path("objdiff.json").write_text(json.dumps({
@@ -725,9 +761,9 @@ def unknown_units(version, rows, pe, claims):
 def unit(version, source):
     rows, results = check(version, source)
     _, pe = original(version)
-    selected = [r for r in rows if r.get("source") == source]
+    selected = [r for r in rows if r.get("source", r.get('target_source')) == source]
     write_source_unit(version, source, selected, results, pe)
-    failed = [r["name"] for r in selected if matching(version, source, r["name"])
+    failed = [r["name"] for r in selected if 'source' in r and matching(version, source, r["name"])
               and not results[r["name"]][1] and not r.get("binary_patch")]
     if failed:
         raise SystemExit("Not exact: " + ", ".join(failed))

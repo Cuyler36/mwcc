@@ -108,11 +108,18 @@ def main():
         out.append(f"  compiler = {compiler}")
         objects.append(obj)
     configs = f"config/{version}/config.json config/{version}/functions.json config/{version}/bindings.json config/sources.json"
-    for source in sources:
+    target_only = []
+    if config.get('translation_units'):
+        configs += ' ' + config['translation_units']
+        target_only = [u['source'] for u in json.loads(Path(config['translation_units']).read_text())['units']
+                       if u['source'] not in sources and any(f['size'] for f in u['windows_functions'])]
+    for source in [*sources, *target_only]:
         filename = quote(source, safe="/@$") + ".obj"
         target = f"build/{version}/target/{filename}".replace("$", "$$")
         base = f"build/{version}/base/{filename}".replace("$", "$$")
-        out += [f"build {target} {base}: source_diff | build/{version}/compiled/{source}.obj {config['original']} {configs} tools/compare.py tools/pe.py {objdiff}",
+        outputs = target if source in target_only else f'{target} {base}'
+        compiled = '' if source in target_only else f'build/{version}/compiled/{source}.obj '
+        out += [f"build {outputs}: source_diff | {compiled}{config['original']} {configs} tools/compare.py tools/pe.py {objdiff}",
                 f"  source = {quote_args([source]).replace('$', '$$')}"]
     out += [
         f"build build/{version}/target/ok: extract | {config['original']} {configs} tools/compare.py tools/pe.py",
@@ -120,7 +127,7 @@ def main():
         f"build build/{version}/report.json: report | build/{version}/ok {objdiff}",
         f"build all_source: phony {' '.join(objects)}",
         f"build progress: phony build/{version}/report.json",
-        f"build build.ninja: configure | configure.py config/sources.json {' '.join(f'config/{v}/config.json' for v in VERSIONS)}",
+        f"build build.ninja: configure | configure.py config/sources.json {' '.join(f'config/{v}/config.json' for v in VERSIONS)} {config.get('translation_units', '')}",
         f"default build/{version}/ok",
         "",
     ]

@@ -85170,7 +85170,13 @@
       "status": "exact",
       "membership_reviewed": true,
       "source_sha256": "61103f7f3c21b8805c379b3cc380016a28596c044f0b0c4ddfc3c51153dfce2f",
-      "strict_exact_count": 8
+      "strict_exact_count": 8,
+      "unused_binding_audit": {
+        "removed": "_memset ->0x4041a0",
+        "reason": "4041a0 is original strchr, not memset. PrefPanel_New zero-init path4260a0 uses intrinsic rep stosb; current exact object has no _memset symbol or relocation. Remove wrong unused source binding rather than invent a CRT address.",
+        "all_members": "All8 native members already strict exact; source unchanged, full-TU exact completion retained pending normal rebuild check.",
+        "normal_recheck": "All8 remain strict exact; whole TU code/data objdiff100%; project772/1672 unchanged."
+      }
     },
     "src/GC_3_0a5_2/driver/CLAccessPaths.c": {
       "source": "src\\GC_3_0a5_2\\driver\\CLAccessPaths.c",

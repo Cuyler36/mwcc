@@ -4866,7 +4866,6 @@
       "_CLIO_CompareStringsIgnoreCase@8": "0x424b60",
       "_strcmp": "0x404120",
       "_memcpy": "0x404850",
-      "_memset": "0x4041a0",
       "_fprintf": "0x407e30",
       "_exit": "0x402e70",
       "_PrefPanel_New": "0x426020",

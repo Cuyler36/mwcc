@@ -7711,326 +7711,511 @@
     "name": "CTool_EndianConvertInPlaceWord32Ptr",
     "address": "0x0046be80",
     "size": 76,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertInPlaceWord32Ptr",
     "baseline_address": "0x00441890",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertInPlaceWord32Ptr",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_EndianConvertInPlaceWord16Ptr",
     "address": "0x0046bed0",
     "size": 60,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertInPlaceWord16Ptr",
     "baseline_address": "0x004418e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertInPlaceWord16Ptr",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_EndianConvertWord64",
     "address": "0x0046bf10",
     "size": 306,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertWord64",
     "baseline_address": "0x00441920",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertWord64",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_EndianConvertMem",
     "address": "0x0046c050",
     "size": 54,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertMem",
     "baseline_address": "0x00441a30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertMem",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_EndianConvertWord32",
     "address": "0x0046c090",
     "size": 71,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertWord32",
     "baseline_address": "0x00441a70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertWord32",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_EndianConvertWord16",
     "address": "0x0046c0e0",
     "size": 62,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "CTool_EndianConvertWord16",
     "baseline_address": "0x00441ab0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_CTool_EndianConvertWord16",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "getbit",
     "address": "0x0046c120",
     "size": 646,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "getbit",
     "baseline_address": "0x00441af0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_getbit",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "CToLowercase",
+    "address": "0x0046c3b0",
+    "size": 71,
+    "symbol": "_CToLowercase",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "memclrw",
     "address": "0x0046c400",
     "size": 15,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "memclrw",
     "baseline_address": "0x00441db0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_memclrw",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "memclr",
+    "address": "0x0046c410",
+    "size": 15,
+    "symbol": "_memclr",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "ScanDec",
     "address": "0x0046c420",
     "size": 92,
-    "source": "src/frontend/CompilerTools.c",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "baseline_name": "ScanDec",
     "baseline_address": "0x00441dc0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "symbol": "_ScanDec",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "CompilerTools_ResetPool",
+    "name": "freeaheap",
     "address": "0x0046c480",
     "size": 103,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CompilerTools_ResetPool",
-    "baseline_address": "0x00441e20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_freeaheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "CompilerTools_AllocatePoolMemory",
+    "name": "freeoheap",
+    "address": "0x0046c4f0",
+    "size": 81,
+    "symbol": "_freeoheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "freelheap",
+    "address": "0x0046c550",
+    "size": 85,
+    "symbol": "_freelheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "unlocklheap",
+    "address": "0x0046c5b0",
+    "size": 19,
+    "symbol": "_unlocklheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "locklheap",
+    "address": "0x0046c5d0",
+    "size": 9,
+    "symbol": "_locklheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "aalloc",
     "address": "0x0046c5e0",
     "size": 53,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CompilerTools_AllocatePoolMemory",
-    "baseline_address": "0x00441f20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_aalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "CompilerTools_AllocateBlock",
+    "name": "oalloc",
     "address": "0x0046c620",
     "size": 53,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CompilerTools_AllocateBlock",
-    "baseline_address": "0x00441f60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_oalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "CompilerTools_AllocatePool",
+    "name": "lalloc",
     "address": "0x0046c660",
     "size": 53,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CompilerTools_AllocatePool",
-    "baseline_address": "0x00441fa0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_lalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "galloc",
     "address": "0x0046c6a0",
     "size": 53,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "galloc",
-    "baseline_address": "0x00441fe0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_galloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "select_or_allocate_pool_node",
+    "name": "fn_0046c6e0",
+    "address": "0x0046c6e0",
+    "size": 66,
+    "symbol": "_fn_0046c6e0",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046c730",
+    "address": "0x0046c730",
+    "size": 127,
+    "symbol": "_fn_0046c730",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046c7b0",
+    "address": "0x0046c7b0",
+    "size": 71,
+    "symbol": "_fn_0046c7b0",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046c800",
+    "address": "0x0046c800",
+    "size": 84,
+    "symbol": "_fn_0046c800",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046c860",
+    "address": "0x0046c860",
+    "size": 70,
+    "symbol": "_fn_0046c860",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046c8b0",
+    "address": "0x0046c8b0",
+    "size": 134,
+    "symbol": "_fn_0046c8b0",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "releaseheaps",
+    "address": "0x0046c940",
+    "size": 293,
+    "symbol": "_releaseheaps",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "setheaperror",
+    "address": "0x0046ca70",
+    "size": 10,
+    "symbol": "_setheaperror",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "getheaperror",
+    "address": "0x0046ca80",
+    "size": 6,
+    "symbol": "_getheaperror",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "initheaps",
+    "address": "0x0046ca90",
+    "size": 156,
+    "symbol": "_initheaps",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046cb30",
+    "address": "0x0046cb30",
+    "size": 328,
+    "symbol": "_fn_0046cb30",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "MoreHeapSpace",
     "address": "0x0046cc80",
     "size": 180,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "select_or_allocate_pool_node",
-    "baseline_address": "0x004422f0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_MoreHeapSpace",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "CTool_GetHeapInfo",
+    "address": "0x0046cd40",
+    "size": 853,
+    "symbol": "_CTool_GetHeapInfo",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046d0a0",
+    "address": "0x0046d0a0",
+    "size": 22,
+    "symbol": "_fn_0046d0a0",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "CTool_TotalHeapSize",
     "address": "0x0046d0c0",
     "size": 109,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CTool_TotalHeapSize",
-    "baseline_address": "0x004423a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_CTool_TotalHeapSize",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "InitNameHash",
+    "address": "0x0046d130",
+    "size": 85,
+    "symbol": "_InitNameHash",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "NameHashExportReset",
+    "address": "0x0046d190",
+    "size": 51,
+    "symbol": "_NameHashExportReset",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "GetHashNameNode",
     "address": "0x0046d1d0",
     "size": 360,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "GetHashNameNode",
-    "baseline_address": "0x00442470",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_GetHashNameNode",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "GetHashNameNodeExport",
+    "address": "0x0046d340",
+    "size": 406,
+    "symbol": "_GetHashNameNodeExport",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "CHash",
+    "address": "0x0046d4e0",
+    "size": 73,
+    "symbol": "_CHash",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046d530",
+    "address": "0x0046d530",
+    "size": 105,
+    "symbol": "_fn_0046d530",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "AppendGListName",
+    "address": "0x0046d5a0",
+    "size": 106,
+    "symbol": "_AppendGListName",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "AppendGListTargetEndianLong",
+    "address": "0x0046d610",
+    "size": 172,
+    "symbol": "_AppendGListTargetEndianLong",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "AppendGListLong",
     "address": "0x0046d6c0",
     "size": 106,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "AppendGListLong",
-    "baseline_address": "0x00442980",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_AppendGListLong",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "AppendGListTargetEndianWord",
+    "address": "0x0046d730",
+    "size": 139,
+    "symbol": "_AppendGListTargetEndianWord",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "AppendGListWord",
     "address": "0x0046d7c0",
     "size": 90,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "AppendGListWord",
-    "baseline_address": "0x00442a80",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_AppendGListWord",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "AppendGListByte",
     "address": "0x0046d820",
     "size": 81,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "AppendGListByte",
-    "baseline_address": "0x00442ae0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_AppendGListByte",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "AppendGListNoData",
     "address": "0x0046d880",
     "size": 73,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "AppendGListNoData",
-    "baseline_address": "0x00442b30",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_AppendGListNoData",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "CompilerTools_AppendGListData",
+    "name": "AppendGListData",
     "address": "0x0046d8d0",
     "size": 91,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "CompilerTools_AppendGListData",
-    "baseline_address": "0x00442b80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_AppendGListData",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "ShrinkGList",
     "address": "0x0046d930",
     "size": 23,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "ShrinkGList",
-    "baseline_address": "0x00442be0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_ShrinkGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "UnlockGList",
+    "address": "0x0046d950",
+    "size": 13,
+    "symbol": "_UnlockGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "LockGList",
+    "address": "0x0046d960",
+    "size": 13,
+    "symbol": "_LockGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "FreeGList",
     "address": "0x0046d970",
     "size": 39,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "FreeGList",
-    "baseline_address": "0x00442c10",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_FreeGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "InitGList",
     "address": "0x0046d9a0",
     "size": 68,
-    "source": "src/frontend/CompilerTools.c",
-    "baseline_name": "InitGList",
-    "baseline_address": "0x00442c40",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
+    "symbol": "_InitGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "fn_0046d9f0",
+    "address": "0x0046d9f0",
+    "size": 144,
+    "symbol": "_fn_0046d9f0",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "CTool_PtoCstr",
+    "address": "0x0046da80",
+    "size": 150,
+    "symbol": "_CTool_PtoCstr",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
+  },
+  {
+    "name": "CompilerGetCString",
+    "address": "0x0046db20",
+    "size": 71,
+    "symbol": "_CompilerGetCString",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+    "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
     "name": "write_precompiled_file",

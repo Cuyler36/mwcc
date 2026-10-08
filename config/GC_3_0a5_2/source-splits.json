@@ -1850,5 +1850,213 @@
   "xor_64": {
     "name": "CInt64_Xor",
     "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CTool_EndianConvertInPlaceWord32Ptr": {
+    "name": "CTool_EndianConvertInPlaceWord32Ptr",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_EndianConvertInPlaceWord16Ptr": {
+    "name": "CTool_EndianConvertInPlaceWord16Ptr",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_EndianConvertWord64": {
+    "name": "CTool_EndianConvertWord64",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_EndianConvertMem": {
+    "name": "CTool_EndianConvertMem",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_EndianConvertWord32": {
+    "name": "CTool_EndianConvertWord32",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_EndianConvertWord16": {
+    "name": "CTool_EndianConvertWord16",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "getbit": {
+    "name": "getbit",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "memclrw": {
+    "name": "memclrw",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "ScanDec": {
+    "name": "ScanDec",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_ResetPool": {
+    "name": "freeaheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_AllocatePoolMemory": {
+    "name": "aalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_AllocateBlock": {
+    "name": "oalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_AllocatePool": {
+    "name": "lalloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "galloc": {
+    "name": "galloc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "select_or_allocate_pool_node": {
+    "name": "MoreHeapSpace",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CTool_TotalHeapSize": {
+    "name": "CTool_TotalHeapSize",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "GetHashNameNode": {
+    "name": "GetHashNameNode",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListLong": {
+    "name": "AppendGListLong",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListWord": {
+    "name": "AppendGListWord",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListByte": {
+    "name": "AppendGListByte",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListNoData": {
+    "name": "AppendGListNoData",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_AppendGListData": {
+    "name": "AppendGListData",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "ShrinkGList": {
+    "name": "ShrinkGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "FreeGList": {
+    "name": "FreeGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "InitGList": {
+    "name": "InitGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_ResetPoolAvail": {
+    "name": "freeoheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_DecrementPositiveCounter": {
+    "name": "unlocklheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "fn_00441f10": {
+    "name": "locklheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_InitHeaps": {
+    "name": "fn_0046cb30",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerTools_AppendGListString": {
+    "name": "fn_0046d530",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "fn_00442c00": {
+    "name": "LockGList",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CToLowercase": {
+    "name": "CToLowercase",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "freelheap": {
+    "name": "freelheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "releaseheaps": {
+    "name": "releaseheaps",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "initheaps": {
+    "name": "initheaps",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "InitNameHash": {
+    "name": "InitNameHash",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "GetHashNameNodeExport": {
+    "name": "GetHashNameNodeExport",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CHash": {
+    "name": "CHash",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListName": {
+    "name": "AppendGListName",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListTargetEndianLong": {
+    "name": "AppendGListTargetEndianLong",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "AppendGListTargetEndianWord": {
+    "name": "AppendGListTargetEndianWord",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "CompilerGetCString": {
+    "name": "CompilerGetCString",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "galloc_pool": {
+    "name": "gheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "data_0057fd84": {
+    "name": "lheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "block_pool": {
+    "name": "oheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "data_0057fdac": {
+    "name": "aheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "heap_pool": {
+    "name": "bheap",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "data_0057fdd4": {
+    "name": "heaperror",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "data_0057fdd8": {
+    "name": "lheaplockcount",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "next_name_id": {
+    "name": "hash_name_id",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "data_00587f88": {
+    "name": "name_hash_nodes",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
+  },
+  "DAT_00587708": {
+    "name": "GListErrorProc",
+    "source": "src/GC_3_0a5_2/frontend/CompilerTools.c"
   }
 }

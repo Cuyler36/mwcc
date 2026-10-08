@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "unknown.c"
 #include "compiler/common.h"
 #include "compiler/CompilerTools.h"
@@ -53,6 +54,7 @@ static unsigned int Swap32(unsigned int x)
     return out.w;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int CTool_EndianConvertInPlaceWord32Ptr(unsigned int *p)
 {
     unsigned int value = *p;
@@ -61,7 +63,9 @@ unsigned int CTool_EndianConvertInPlaceWord32Ptr(unsigned int *p)
     value = *p;
     return value;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 short CTool_EndianConvertInPlaceWord16Ptr(short *word)
 {
     short *destination = word;
@@ -72,6 +76,7 @@ short CTool_EndianConvertInPlaceWord16Ptr(short *word)
     *destination = value;
     return *destination;
 }
+#endif
 
 static UInt32 swap32(UInt32 x)
 {
@@ -86,6 +91,7 @@ static UInt32 swap32(UInt32 x)
     return d.word;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CTool_EndianConvertWord64(CInt64 ci, char *result)
 {
     UInt32 buf[2];
@@ -101,7 +107,9 @@ void CTool_EndianConvertWord64(CInt64 ci, char *result)
     }
     memcpy(result, buf, 8);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt32 CTool_EndianConvertMem(void *buffer, short size)
 {
     unsigned char *front;
@@ -124,7 +132,9 @@ UInt32 CTool_EndianConvertMem(void *buffer, short size)
         front++;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 unsigned int CTool_EndianConvertWord32(unsigned int value)
 {
     union {
@@ -141,7 +151,9 @@ unsigned int CTool_EndianConvertWord32(unsigned int value)
     converted.bytes[7] = converted.bytes[0];
     return converted.words[1];
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 UInt16 CTool_EndianConvertWord16(UInt16 word)
 {
     union {
@@ -159,7 +171,9 @@ UInt16 CTool_EndianConvertWord16(UInt16 word)
     result.bytes[3] = result.bytes[0];
     return result.words.swapped;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 getbit(UInt32 value)
 {
     switch (value) {
@@ -232,18 +246,24 @@ SInt16 getbit(UInt32 value)
     }
     return -2;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CToLowercase(char *src, char *dst)
 {
     while ((*dst++ = (char)tolower(*src++)) != 0)
         ;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void memclrw(void *buffer, unsigned int size)
 {
     memset(buffer, 0, size);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *ScanDec(char *src, SInt32 *value, Boolean *flag)
 {
     unsigned int val = 0U;
@@ -263,8 +283,10 @@ char *ScanDec(char *src, SInt32 *value, Boolean *flag)
     *value = val;
     return src;
 }
+#endif
 
 #pragma sym off
+#if VERSION != VERSION_GC_3_0A5_2
 void CompilerTools_ResetPool(void)
 {
     PoolNode *block = data_0057fdac.head;
@@ -277,6 +299,7 @@ void CompilerTools_ResetPool(void)
         block = block->next;
     }
 }
+#endif
 #pragma sym reset
 
 static inline void reset_pool_block(PoolNode *block)
@@ -286,6 +309,7 @@ static inline void reset_pool_block(PoolNode *block)
     block_pool.free = block->size - sizeof(PoolNode);
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CompilerTools_ResetPoolAvail(void)
 {
     PoolNode *block;
@@ -294,8 +318,10 @@ void CompilerTools_ResetPoolAvail(void)
     for (; block; block = block->next)
         block->avail = block->size - sizeof(PoolNode);
 }
+#endif
 
 #pragma sym off
+#if VERSION != VERSION_GC_3_0A5_2
 void freelheap(void)
 {
     PoolNode *block;
@@ -312,8 +338,10 @@ void freelheap(void)
         }
     }
 }
+#endif
 #pragma sym reset
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CompilerTools_DecrementPositiveCounter(void)
 
 {
@@ -322,13 +350,17 @@ void CompilerTools_DecrementPositiveCounter(void)
     }
     return;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void fn_00441f10(void)
 {
     data_0057fdd8 += 1;
     return;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *galloc(SInt32 size)
 {
     char *result;
@@ -342,6 +374,7 @@ void *galloc(SInt32 size)
     galloc_pool.ptr += size;
     return result;
 }
+#endif
 
 void CompilerTools_ClearPoolBlocks(void)
 {
@@ -356,6 +389,7 @@ void CompilerTools_ClearPoolBlocks(void)
     memset(&galloc_pool, 0, sizeof(galloc_pool));
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *CompilerTools_AllocatePool(unsigned int size)
 {
     char *allocation;
@@ -369,7 +403,9 @@ void *CompilerTools_AllocatePool(unsigned int size)
     data_0057fd84.ptr += size;
     return allocation;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *CompilerTools_AllocateBlock(SInt32 size)
 {
     char *block;
@@ -382,7 +418,9 @@ void *CompilerTools_AllocateBlock(SInt32 size)
     block_pool.ptr += size;
     return block;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *CompilerTools_AllocatePoolMemory(UInt32 requestedSize)
 {
     char *result;
@@ -397,7 +435,9 @@ void *CompilerTools_AllocatePoolMemory(UInt32 requestedSize)
     data_0057fdac.ptr += requestedSize;
     return result;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void releaseheaps(void)
 {
     PoolNode *node;
@@ -439,7 +479,9 @@ void releaseheaps(void)
     }
     memset(&heap_pool, 0, sizeof(heap_pool));
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 initheaps(void (*param)())
 {
     Pool *pool = &galloc_pool;
@@ -458,7 +500,9 @@ SInt16 initheaps(void (*param)())
         return -1;
     return 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 CompilerTools_InitHeaps(void (*param)())
 {
     data_0057fdd4 = NULL;
@@ -485,7 +529,9 @@ SInt16 CompilerTools_InitHeaps(void (*param)())
         return -1;
     return 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int select_or_allocate_pool_node(Pool *pool, SInt32 size)
 {
     PoolNode **block;
@@ -529,7 +575,9 @@ selected:
     pool->free = node->avail;
     pool->ptr = (char *)node + node->size - node->avail;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 int CTool_TotalHeapSize(void)
 {
     unsigned int total = 0;
@@ -548,7 +596,9 @@ int CTool_TotalHeapSize(void)
 
     return total;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void InitNameHash(void)
 {
     HashNameNode *(*buckets)[2048];
@@ -563,7 +613,9 @@ void InitNameHash(void)
         *active = 1;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 HashNameNode *GetHashNameNode(const char *text)
 {
     short bucket;
@@ -622,7 +674,9 @@ HashNameNode *GetHashNameNode(const char *text)
         entry = entry->next;
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 HashNameNode *GetHashNameNodeExport(const char *text)
 {
     short hash;
@@ -681,7 +735,9 @@ HashNameNode *GetHashNameNodeExport(const char *text)
         }
     }
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 short CHash(const char *str)
 {
     short len;
@@ -695,7 +751,9 @@ short CHash(const char *str)
     }
     return len & 0x7ff;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListName(GList *buf, const char *str)
 {
     UInt32 len = strlen(str) + 1;
@@ -712,7 +770,9 @@ void AppendGListName(GList *buf, const char *str)
     memcpy(buf->data[0] + buf->size, str, len);
     buf->size += len;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListWord(GList *buffer, SInt16 value)
 {
     Boolean resized;
@@ -733,6 +793,7 @@ void AppendGListWord(GList *buffer, SInt16 value)
     valueBytes = (const char *)&value;
     destination[1] = valueBytes[1];
 }
+#endif
 
 static UInt16 SwapOutputWord(UInt16 x)
 {
@@ -748,6 +809,7 @@ static UInt16 SwapOutputWord(UInt16 x)
     return r.w;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListTargetEndianWord(GList *buf, UInt16 word)
 {
     char *dest;
@@ -766,6 +828,7 @@ void AppendGListTargetEndianWord(GList *buf, UInt16 word)
     dest[0] = bytes->b[0];
     dest[1] = ((const U16Bytes *)&word)->b[1];
 }
+#endif
 
 static UInt32 MaybeSwap32(UInt32 x)
 {
@@ -790,6 +853,7 @@ static inline void CopyFourBytes(UInt8 *dest, const UInt8 *source)
     dest[3] = source[3];
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListTargetEndianLong(GList *buf, UInt32 value)
 {
     UInt8 *dest;
@@ -805,7 +869,9 @@ void AppendGListTargetEndianLong(GList *buf, UInt32 value)
     value = MaybeSwap32(value);
     CopyFourBytes(dest, (const UInt8 *)&value);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListLong(GList *buffer, SInt32 value)
 {
     Boolean allocated;
@@ -825,7 +891,9 @@ void AppendGListLong(GList *buffer, SInt32 value)
     destination[2] = ((const NativeLongBytes *)&value)->byte2;
     destination[3] = ((const NativeLongBytes *)&value)->byte3;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CompilerTools_AppendGListString(GList *buf, const char *str)
 {
     UInt32 len = strlen(str);
@@ -837,7 +905,9 @@ void CompilerTools_AppendGListString(GList *buf, const char *str)
     memcpy(*buf->data + buf->size, str, len);
     buf->size += len;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListByte(GList *buffer, SInt8 value)
 {
     if (buffer->size + 1 > buffer->hndlsize) {
@@ -850,18 +920,24 @@ void AppendGListByte(GList *buffer, SInt8 value)
     }
     (*buffer->data)[buffer->size++] = value;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void ShrinkGList(GList *list)
 {
     list->hndlsize = list->size;
     fn_00443170((struct StorageHandle *)list->data, list->hndlsize);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void fn_00442c00(GList *entry)
 {
     fn_004431a0(entry->data);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void FreeGList(GList *storage)
 {
     if (storage->data != NULL) {
@@ -871,7 +947,9 @@ void FreeGList(GList *storage)
     storage->hndlsize = 0;
     storage->size = storage->hndlsize;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void *CompilerTools_AppendGListData(GList *buffer, const void *source, SInt32 count)
 {
     char *data;
@@ -887,7 +965,9 @@ void *CompilerTools_AppendGListData(GList *buffer, const void *source, SInt32 co
     buffer->size += count;
     return data;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 SInt16 InitGList(GList *allocation, SInt32 size)
 {
     allocation->data = CompilerTools_AllocateMemoryIfEnabled(size);
@@ -901,7 +981,9 @@ SInt16 InitGList(GList *allocation, SInt32 size)
     allocation->hndlsize = size;
     return 0;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 void AppendGListNoData(GList *buffer, SInt32 additionalLength)
 {
     if (buffer->size + additionalLength > buffer->hndlsize) {
@@ -912,6 +994,7 @@ void AppendGListNoData(GList *buffer, SInt32 additionalLength)
     }
     buffer->size += additionalLength;
 }
+#endif
 
 void CompilerTools_ConvertCStringToPString(unsigned char *text)
 {
@@ -932,10 +1015,12 @@ void CompilerTools_ConvertCStringToPString(unsigned char *text)
     *text = length;
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CompilerGetCString(short value, char *destination)
 {
     CompilerTools_GetResourceCString(destination, 0x2774, value);
 }
+#endif
 
 #pragma optimization_level 2
 void format_string(char *buf, int size, char *fmt, char *ap)

@@ -12490,6 +12490,503 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+      "original_filename": "CompilerTools.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional"
+      ],
+      "windows_functions": [
+        {
+          "name": "CTool_EndianConvertInPlaceWord32Ptr",
+          "address": "0x0046be80",
+          "size": 76,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTool_EndianConvertInPlaceWord16Ptr",
+          "address": "0x0046bed0",
+          "size": 60,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTool_EndianConvertWord64",
+          "address": "0x0046bf10",
+          "size": 306,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTool_EndianConvertMem",
+          "address": "0x0046c050",
+          "size": 54,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTool_EndianConvertWord32",
+          "address": "0x0046c090",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CTool_EndianConvertWord16",
+          "address": "0x0046c0e0",
+          "size": 62,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "getbit",
+          "address": "0x0046c120",
+          "size": 646,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CToLowercase",
+          "address": "0x0046c3b0",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "memclrw",
+          "address": "0x0046c400",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "memclr",
+          "address": "0x0046c410",
+          "size": 15,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "ScanDec",
+          "address": "0x0046c420",
+          "size": 92,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "freeaheap",
+          "address": "0x0046c480",
+          "size": 103,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "freeoheap",
+          "address": "0x0046c4f0",
+          "size": 81,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "freelheap",
+          "address": "0x0046c550",
+          "size": 85,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "unlocklheap",
+          "address": "0x0046c5b0",
+          "size": 19,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "locklheap",
+          "address": "0x0046c5d0",
+          "size": 9,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "aalloc",
+          "address": "0x0046c5e0",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "oalloc",
+          "address": "0x0046c620",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "lalloc",
+          "address": "0x0046c660",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "galloc",
+          "address": "0x0046c6a0",
+          "size": 53,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c6e0",
+          "address": "0x0046c6e0",
+          "size": 66,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c730",
+          "address": "0x0046c730",
+          "size": 127,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c7b0",
+          "address": "0x0046c7b0",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c800",
+          "address": "0x0046c800",
+          "size": 84,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c860",
+          "address": "0x0046c860",
+          "size": 70,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046c8b0",
+          "address": "0x0046c8b0",
+          "size": 134,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "releaseheaps",
+          "address": "0x0046c940",
+          "size": 293,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "setheaperror",
+          "address": "0x0046ca70",
+          "size": 10,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "getheaperror",
+          "address": "0x0046ca80",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "initheaps",
+          "address": "0x0046ca90",
+          "size": 156,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046cb30",
+          "address": "0x0046cb30",
+          "size": 328,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "MoreHeapSpace",
+          "address": "0x0046cc80",
+          "size": 180,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CTool_GetHeapInfo",
+          "address": "0x0046cd40",
+          "size": 853,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046d0a0",
+          "address": "0x0046d0a0",
+          "size": 22,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CTool_TotalHeapSize",
+          "address": "0x0046d0c0",
+          "size": 109,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "InitNameHash",
+          "address": "0x0046d130",
+          "size": 85,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "NameHashExportReset",
+          "address": "0x0046d190",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "GetHashNameNode",
+          "address": "0x0046d1d0",
+          "size": 360,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "GetHashNameNodeExport",
+          "address": "0x0046d340",
+          "size": 406,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CHash",
+          "address": "0x0046d4e0",
+          "size": 73,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046d530",
+          "address": "0x0046d530",
+          "size": 105,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListName",
+          "address": "0x0046d5a0",
+          "size": 106,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListTargetEndianLong",
+          "address": "0x0046d610",
+          "size": 172,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListLong",
+          "address": "0x0046d6c0",
+          "size": 106,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListTargetEndianWord",
+          "address": "0x0046d730",
+          "size": 139,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListWord",
+          "address": "0x0046d7c0",
+          "size": 90,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListByte",
+          "address": "0x0046d820",
+          "size": 81,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListNoData",
+          "address": "0x0046d880",
+          "size": 73,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "AppendGListData",
+          "address": "0x0046d8d0",
+          "size": 91,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "ShrinkGList",
+          "address": "0x0046d930",
+          "size": 23,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "UnlockGList",
+          "address": "0x0046d950",
+          "size": 13,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "LockGList",
+          "address": "0x0046d960",
+          "size": 13,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "FreeGList",
+          "address": "0x0046d970",
+          "size": 39,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "InitGList",
+          "address": "0x0046d9a0",
+          "size": 68,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "fn_0046d9f0",
+          "address": "0x0046d9f0",
+          "size": 144,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CTool_PtoCstr",
+          "address": "0x0046da80",
+          "size": 150,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        },
+        {
+          "name": "CompilerGetCString",
+          "address": "0x0046db20",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": null
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_pending_review"
+    },
+    {
       "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
       "original_filename": "DumpUtils.c",
       "evidence": [
@@ -34016,286 +34513,11 @@
     },
     {
       "source": "src/frontend/CompilerTools.c",
-      "original_filename": "CompilerTools.c",
+      "original_filename": null,
       "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional"
+        "Provisional imported helper grouping; original source filename unresolved"
       ],
       "windows_functions": [
-        {
-          "name": "CTool_EndianConvertInPlaceWord32Ptr",
-          "address": "0x0046be80",
-          "size": 76,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_EndianConvertInPlaceWord16Ptr",
-          "address": "0x0046bed0",
-          "size": 60,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_EndianConvertWord64",
-          "address": "0x0046bf10",
-          "size": 306,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_EndianConvertMem",
-          "address": "0x0046c050",
-          "size": 54,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_EndianConvertWord32",
-          "address": "0x0046c090",
-          "size": 71,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_EndianConvertWord16",
-          "address": "0x0046c0e0",
-          "size": 62,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "getbit",
-          "address": "0x0046c120",
-          "size": 646,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "memclrw",
-          "address": "0x0046c400",
-          "size": 15,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ScanDec",
-          "address": "0x0046c420",
-          "size": 92,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CompilerTools_ResetPool",
-          "address": "0x0046c480",
-          "size": 103,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CompilerTools_AllocatePoolMemory",
-          "address": "0x0046c5e0",
-          "size": 53,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CompilerTools_AllocateBlock",
-          "address": "0x0046c620",
-          "size": 53,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CompilerTools_AllocatePool",
-          "address": "0x0046c660",
-          "size": 53,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "galloc",
-          "address": "0x0046c6a0",
-          "size": 53,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "select_or_allocate_pool_node",
-          "address": "0x0046cc80",
-          "size": 180,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CTool_TotalHeapSize",
-          "address": "0x0046d0c0",
-          "size": 109,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "GetHashNameNode",
-          "address": "0x0046d1d0",
-          "size": 360,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "AppendGListLong",
-          "address": "0x0046d6c0",
-          "size": 106,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "AppendGListWord",
-          "address": "0x0046d7c0",
-          "size": 90,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "AppendGListByte",
-          "address": "0x0046d820",
-          "size": 81,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "AppendGListNoData",
-          "address": "0x0046d880",
-          "size": 73,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CompilerTools_AppendGListData",
-          "address": "0x0046d8d0",
-          "size": 91,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "ShrinkGList",
-          "address": "0x0046d930",
-          "size": 23,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "FreeGList",
-          "address": "0x0046d970",
-          "size": 39,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "InitGList",
-          "address": "0x0046d9a0",
-          "size": 68,
-          "compiled_source": "src/frontend/CompilerTools.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
         {
           "name": "CompilerTools_DispatchMessageBufferByMode",
           "address": "0x004993e0",
@@ -74331,6 +74553,266 @@
       ],
       "membership_reviewed": false,
       "source_sha256": "e62a0f15037867f6f8a2005a4b4dc7d0d0e1c308e9aa0c9a7263deab7e27e6f7"
+    },
+    "src/GC_3_0a5_2/frontend/CompilerTools.c": {
+      "source": "src/GC_3_0a5_2/frontend/CompilerTools.c",
+      "source_sha256": "a7c937474590067debaa2dd17bad20b87697e9a02b0bc12b033ee1074e1de13e",
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "all_emitted_mapped": true,
+      "mapped_functions": 57,
+      "strict_exact": 39,
+      "data_complete": true,
+      "data_sections": {
+        ".data": 796,
+        ".rdata": 28,
+        ".bss": 636
+      },
+      "tuple_complete": false,
+      "source_ownership": "Existing utility ownership retained provisionally; no CompilerTools.c filename/assertion or explicit Mac SO/FUN proof. Contiguous Windows cluster fully covered, with only NOP gaps. Ordinary Mac names support canonical names but not source membership.",
+      "mac_related_candidates": 82,
+      "mac_unmapped": [
+        "CompilerGetPString",
+        "CTool_CtoPstr",
+        "GListError",
+        "AppendGListID",
+        "RemoveGListData",
+        "GetGListByte",
+        "GetGListWord",
+        "GetGListLong",
+        "GetGListID",
+        "GetGListData",
+        "hashpjw",
+        "elf_hash",
+        "PHash",
+        "GetHashNameNodeHash",
+        "GetHashNameNodeHash2",
+        "GetHashNameNodeExportID",
+        "GetHashNameNodeByID",
+        "NameHashWriteNameTable",
+        "NameHashWriteTargetEndianNameTable",
+        "DumpHashNameTable",
+        "getheapinfo",
+        "initgheap",
+        "initlheap",
+        "relheap",
+        "releasegheap",
+        "releaselheap",
+        "releaseoheap",
+        "balloc",
+        "freebheap",
+        "ScanHex",
+        "ScanOct",
+        "UnmangleClassname",
+        "UnmangleAppend",
+        "OldUnmangle",
+        "hash",
+        "CTool_EndianConvertVector128",
+        "CTool_GetPathName",
+        "strcat_safe"
+      ],
+      "review": "Every mapped body statically reconstructed/reviewed against native instructions. Nonmatches require independent semantic review before functional-equivalence promotion. No independent execution tests claimed.",
+      "semantic_changes": [
+        "Endian conversion uses runtime predicate 0x4c07c0 instead of direct baseline option read, preserving repeated Word64 calls.",
+        "Heap allocation rounds (size+7)&~7, preserving zero-size behavior.",
+        "Pool resets stop resetting avail after current node and invoke new aheap callbacks.",
+        "New 128-bin free list and direct allocation linked list are retained.",
+        "Native initheaps sizes and handle failure/callback ordering retained.",
+        "Name checksum uses first255 bytes, rather than baseline strlen modulo256; allocation uses strlen+12 before eight-byte rounding.",
+        "GList uses native memory-wrapper addresses and complete lock/unlock wrappers.",
+        "CompilerGetCString uses native14-string table and fallback.",
+        "Pascal conversion preserves unsigned lengths0..255; lowercase routines preserve signed-char non-ASCII behavior.",
+        "Heap-info preserves selector-1 no-op and selector5 cumulative totals, including native unguarded divisions."
+      ],
+      "nonmatches": [
+        {
+          "name": "CTool_EndianConvertMem",
+          "address": "0x0046c050",
+          "size": 54,
+          "source": "src/frontend/CompilerTools.c",
+          "baseline_name": "CTool_EndianConvertMem",
+          "baseline_address": "0x00441a30",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "compiled_size": 52,
+          "strict_exact": false,
+          "objdiff_percent": 73.96
+        },
+        {
+          "name": "CToLowercase",
+          "address": "0x46c3b0",
+          "size": 71,
+          "compiled_size": 66,
+          "strict_exact": false,
+          "objdiff_percent": 47.857143
+        },
+        {
+          "name": "fn_0046d530",
+          "address": "0x46d530",
+          "size": 105,
+          "compiled_size": 105,
+          "strict_exact": false,
+          "objdiff_percent": 80.11628
+        },
+        {
+          "name": "AppendGListName",
+          "address": "0x46d5a0",
+          "size": 106,
+          "compiled_size": 105,
+          "strict_exact": false,
+          "objdiff_percent": 79.76744
+        },
+        {
+          "name": "AppendGListData",
+          "address": "0x46d8d0",
+          "size": 91,
+          "compiled_size": 91,
+          "strict_exact": false,
+          "objdiff_percent": 99.14286
+        },
+        {
+          "name": "GetHashNameNode",
+          "address": "0x46d1d0",
+          "size": 360,
+          "compiled_size": 360,
+          "strict_exact": false,
+          "objdiff_percent": 97.916664
+        },
+        {
+          "name": "GetHashNameNodeExport",
+          "address": "0x46d340",
+          "size": 406,
+          "compiled_size": 406,
+          "strict_exact": false,
+          "objdiff_percent": 99.14894
+        },
+        {
+          "name": "CHash",
+          "address": "0x46d4e0",
+          "size": 73,
+          "compiled_size": 73,
+          "strict_exact": false,
+          "objdiff_percent": 90.666664
+        },
+        {
+          "name": "releaseheaps",
+          "address": "0x46c940",
+          "size": 293,
+          "compiled_size": 287,
+          "strict_exact": false,
+          "objdiff_percent": 79.909836
+        },
+        {
+          "name": "fn_0046c7b0",
+          "address": "0x46c7b0",
+          "size": 71,
+          "compiled_size": 73,
+          "strict_exact": false,
+          "objdiff_percent": 83.71429
+        },
+        {
+          "name": "fn_0046c800",
+          "address": "0x46c800",
+          "size": 84,
+          "compiled_size": 69,
+          "strict_exact": false,
+          "objdiff_percent": 70.46429
+        },
+        {
+          "name": "fn_0046c6e0",
+          "address": "0x46c6e0",
+          "size": 66,
+          "compiled_size": 66,
+          "strict_exact": false,
+          "objdiff_percent": 96.94444
+        },
+        {
+          "name": "fn_0046c730",
+          "address": "0x46c730",
+          "size": 127,
+          "compiled_size": 112,
+          "strict_exact": false,
+          "objdiff_percent": 56.25641
+        },
+        {
+          "name": "fn_0046c8b0",
+          "address": "0x46c8b0",
+          "size": 134,
+          "compiled_size": 129,
+          "strict_exact": false,
+          "objdiff_percent": 55.489796
+        },
+        {
+          "name": "initheaps",
+          "address": "0x46ca90",
+          "size": 156,
+          "compiled_size": 155,
+          "strict_exact": false,
+          "objdiff_percent": 96.90909
+        },
+        {
+          "name": "fn_0046cb30",
+          "address": "0x46cb30",
+          "size": 328,
+          "compiled_size": 327,
+          "strict_exact": false,
+          "objdiff_percent": 98.13187
+        },
+        {
+          "name": "CTool_PtoCstr",
+          "address": "0x46da80",
+          "size": 150,
+          "compiled_size": 286,
+          "strict_exact": false,
+          "objdiff_percent": 0.0
+        },
+        {
+          "name": "fn_0046d9f0",
+          "address": "0x46d9f0",
+          "size": 144,
+          "compiled_size": 136,
+          "strict_exact": false,
+          "objdiff_percent": 40.714287
+        }
+      ],
+      "retained_old_helpers": "Old formatter/diagnostic/file I/O wrappers and CompilerTools_ClearPoolBlocks need separate identity/ownership audit. Keep their static helper dependencies in baseline source.",
+      "cp932": "Python strict cp932 encoding passed; tools/check_sjis.py absent.",
+      "files": [
+        "CompilerTools-reviewed-rows.json",
+        "CompilerTools-scoped-bindings.json",
+        "CompilerTools-aliases.json",
+        "CompilerTools-global-aliases.json",
+        "CompilerTools-attempt.json",
+        "CompilerTools-owned-data.json",
+        "CompilerTools-emitted-inventory.json",
+        "CompilerTools-boundaries.json",
+        "CompilerTools-mac-checklist.json",
+        "CompilerTools-retail.txt"
+      ],
+      "status": "attempted_pending_review",
+      "membership_reviewed": false,
+      "mapped_function_count": 57,
+      "strict_exact_count": 39,
+      "limitations": [
+        "18 code generation nonmatches retain agent static review; no independent execution validation claimed.",
+        "Ordinary Mac symbols establish names, not complete original TU membership.",
+        "Legacy diagnostic/file wrappers remain in provisional baseline source."
+      ]
     }
   },
   "ownership_review": {

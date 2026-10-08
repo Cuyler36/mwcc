@@ -224,7 +224,8 @@
     "src/GC_3_0a5_2/frontend/CompilerTools.c",
     "src/GC_3_0a5_2/backend/Operands.c",
     "src/GC_3_0a5_2/backend/PCodeUtilities.c",
-    "src/GC_3_0a5_2/backend/PCode.c"
+    "src/GC_3_0a5_2/backend/PCode.c",
+    "src/GC_3_0a5_2/backend/PCodeInfo.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3461,6 +3462,27 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/PCodeInfo.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -4031,7 +4053,17 @@
     "src/GC_3_0a5_2/backend/PCode/pcbranch",
     "src/GC_3_0a5_2/backend/PCode/pclabel",
     "src/GC_3_0a5_2/backend/PCode/deleteunreachableblocks",
-    "src/GC_3_0a5_2/backend/PCode/initpcode"
+    "src/GC_3_0a5_2/backend/PCode/initpcode",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058aec0",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058add0",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058ae30",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058ae40",
+    "src/GC_3_0a5_2/backend/PCodeInfo/is_valid_displ",
+    "src/GC_3_0a5_2/backend/PCodeInfo/makecopyinstruction",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058ad80",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058acf0",
+    "src/GC_3_0a5_2/backend/PCodeInfo/fn_0058b870",
+    "src/GC_3_0a5_2/backend/PCodeInfo/nbytes_loaded_or_stored_by"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -5319,6 +5351,60 @@
       "_fn_005824a0": "0x5824a0",
       "_fn_00582560": "0x582560",
       "_fn_00582610": "0x582610"
+    },
+    "src/GC_3_0a5_2/backend/PCodeInfo.c": {
+      "_pcodeInfoDescriptors": "0x6b52ec",
+      "_makepcode": "0x582f60",
+      "_pcsetrecordbit": "0x5960e0",
+      "_CError_Internal": "0x45a250",
+      "_fn_00587410": "0x587410",
+      "_pcodeNameBuffer": "0x6e5e50",
+      "_fn_00407fd0": "0x407fd0",
+      "_first_temporary_register": "0x710768",
+      "_last_temporary_register": "0x7100fc",
+      "_pcodeSpecialBaseRegister": "0x7172bc",
+      "_fn_00579560": "0x579560",
+      "_pcodeFloatOption": "0x70f019",
+      "_pcodeProcessor": "0x70effa",
+      "_pcbasicblocks": "0x7108c8",
+      "_insertpcodebefore": "0x5829d0",
+      "_deletepcode": "0x582a50",
+      "_fn_00403ff0": "0x403ff0",
+      "_fn_0042d960": "0x42d960",
+      "_lalloc": "0x46c660",
+      "_memclrw": "0x46c400",
+      "_pcsetsideeffects": "0x596090",
+      "_pcodeHasExtendedRegisters": "0x725ed0",
+      "_pcodeHasProcessorRegisters": "0x726066",
+      "_pcodeSpecialRegisters": "0x6ace26",
+      "_fn_00453150": "0x453150",
+      "_fn_00587320": "0x587320",
+      "_fn_00587380": "0x587380",
+      "_fn_004c3f60": "0x4c3f60",
+      "_fn_00581be0": "0x581be0",
+      "_fn_005a05d0": "0x5a05d0",
+      "_fn_004041a0": "0x4041a0",
+      "_fn_0058aec0": "0x58aec0",
+      "_fn_0058add0": "0x58add0",
+      "_fn_0058ae30": "0x58ae30",
+      "_fn_0058ae40": "0x58ae40",
+      "_change_num_operands": "0x58b310",
+      "_change_opcode": "0x58b210",
+      "_is_valid_displ": "0x58b180",
+      "_makecopyinstruction": "0x58bb30",
+      "_fn_0058ad80": "0x58ad80",
+      "_fn_0058acf0": "0x58acf0",
+      "_fn_0058ba80": "0x58ba80",
+      "_fn_0058b870": "0x58b870",
+      "_copy_opcode_for_type": "0x58b0c0",
+      "_makecopyforload": "0x58b6f0",
+      "_fn_0058af20": "0x58af20",
+      "_nbytes_loaded_or_stored_by": "0x58b4c0",
+      "_fn_0058b910": "0x58b910",
+      "_pcode_const_from_format": "0x58d8e0",
+      "_pcode_check_imm_bits": "0x58d960",
+      "_pcode_get_hi_lo": "0x58da70",
+      "_vformatpcode": "0x58bc10"
     }
   },
   "original_source_units": {

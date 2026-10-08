@@ -514,6 +514,7 @@ PCodeInstruction *PCodeUtilities_EmitInstruction(short opcode, ...)
 
 #define PCARG(type) (*(type *)((args += 4) - 4))
 
+#if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *create_pcode_instruction(SInt16 opcode, char *args)
 {
     PCodeOpcodeDescriptor *desc;
@@ -741,6 +742,7 @@ PCodeInstruction *create_pcode_instruction(SInt16 opcode, char *args)
     }
     return inst;
 }
+#endif
 
 #if VERSION != VERSION_GC_3_0A5_2
 PCodeInstruction *PCodeUtilities_CreateInstruction(UInt16 op, ...)

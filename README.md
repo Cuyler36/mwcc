@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 223 source files build, 1,371 candidate functions are
-mapped, and 568 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 224 source files build, 1,392 candidate functions are
+mapped, and 578 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -55,6 +55,10 @@ PCode has 26 native bodies reconstructed, including the generic emitters and
 graph helpers; 12 match exactly. The native flag setter takes one 64-bit value.
 Incorrect imported flag-setter and predecessor-builder mappings were removed;
 their old bodies remain provisional. Original state-data ownership is still open.
+
+PCodeInfo has all 21 identified native bodies reconstructed, including the
+41-terminal instruction formatter, with ten exact matches. Four switch-table
+relocations and one byte of string-allocation padding remain nonmatching.
 
 ELF_Endian.c has all eight known Windows members ported and reviewed, including
 the recovered conversion-block routine. Six functions match exactly; two code

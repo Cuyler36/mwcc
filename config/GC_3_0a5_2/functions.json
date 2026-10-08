@@ -14683,6 +14683,237 @@
     }
   },
   {
+    "name": "fn_0058acf0",
+    "address": "0x58acf0",
+    "size": 133,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058ad80",
+    "address": "0x58ad80",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058add0",
+    "address": "0x58add0",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058ae30",
+    "address": "0x58ae30",
+    "size": 14,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058ae40",
+    "address": "0x58ae40",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058aec0",
+    "address": "0x58aec0",
+    "size": 84,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058af20",
+    "address": "0x58af20",
+    "size": 409,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "copy_opcode_for_type",
+    "address": "0x58b0c0",
+    "size": 183,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_valid_displ",
+    "address": "0x58b180",
+    "size": 138,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "change_opcode",
+    "address": "0x58b210",
+    "size": 243,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "change_num_operands",
+    "address": "0x58b310",
+    "size": 419,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "nbytes_loaded_or_stored_by",
+    "address": "0x58b4c0",
+    "size": 551,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "makecopyforload",
+    "address": "0x58b6f0",
+    "size": 376,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058b870",
+    "address": "0x58b870",
+    "size": 147,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058b910",
+    "address": "0x58b910",
+    "size": 362,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0058ba80",
+    "address": "0x58ba80",
+    "size": 169,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "makecopyinstruction",
+    "address": "0x58bb30",
+    "size": 213,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "vformatpcode",
+    "address": "0x58bc10",
+    "size": 7364,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcode_const_from_format",
+    "address": "0x58d8e0",
+    "size": 126,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcode_check_imm_bits",
+    "address": "0x58d960",
+    "size": 264,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "pcode_get_hi_lo",
+    "address": "0x58da70",
+    "size": 229,
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+    "identity_evidence": "Windows PCodeInfo.c assertions, complete native formatter grammar and ordinary Mac operation names; unknown helpers retain address aliases.",
+    "boundary_evidence": {
+      "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "Switch_GenerateSwitch",
     "address": "0x0058dbe0",
     "size": 300,

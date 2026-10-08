@@ -1653,6 +1653,307 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+      "original_filename": "PCodeInfo.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_0058acf0",
+          "address": "0x58acf0",
+          "size": 133,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058ad80",
+          "address": "0x58ad80",
+          "size": 76,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058add0",
+          "address": "0x58add0",
+          "size": 87,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058ae30",
+          "address": "0x58ae30",
+          "size": 14,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058ae40",
+          "address": "0x0058ae40",
+          "size": 119,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058aeae"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "fn_0058aec0",
+          "address": "0x58aec0",
+          "size": 84,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058af20",
+          "address": "0x0058af20",
+          "size": 409,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b09a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "copy_opcode_for_type",
+          "address": "0x0058b0c0",
+          "size": 183,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b115",
+            "0x0058b15a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "is_valid_displ",
+          "address": "0x58b180",
+          "size": 138,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "change_opcode",
+          "address": "0x0058b210",
+          "size": 243,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b2da"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "change_num_operands",
+          "address": "0x0058b310",
+          "size": 419,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b49a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "nbytes_loaded_or_stored_by",
+          "address": "0x0058b4c0",
+          "size": 551,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b6ba",
+            "0x0058b6cb"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "makecopyforload",
+          "address": "0x0058b6f0",
+          "size": 376,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058b82a",
+            "0x0058b85a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "fn_0058b870",
+          "address": "0x58b870",
+          "size": 147,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058b910",
+          "address": "0x58b910",
+          "size": 362,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_0058ba80",
+          "address": "0x58ba80",
+          "size": 169,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "makecopyinstruction",
+          "address": "0x0058bb30",
+          "size": 213,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058bbfa"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "vformatpcode",
+          "address": "0x0058bc10",
+          "size": 7364,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058beae",
+            "0x0058c14c",
+            "0x0058c6fe",
+            "0x0058c758",
+            "0x0058c7b2",
+            "0x0058c872",
+            "0x0058cb2a",
+            "0x0058ccaa",
+            "0x0058cff2",
+            "0x0058d04a",
+            "0x0058d1aa",
+            "0x0058d34a",
+            "0x0058d3ad",
+            "0x0058d48a",
+            "0x0058d4ea",
+            "0x0058d500",
+            "0x0058d52a",
+            "0x0058d540",
+            "0x0058d72a",
+            "0x0058d82a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "pcode_const_from_format",
+          "address": "0x58d8e0",
+          "size": 126,
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "pcode_check_imm_bits",
+          "address": "0x0058d960",
+          "size": 264,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058da5f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        },
+        {
+          "name": "pcode_get_hi_lo",
+          "address": "0x0058da70",
+          "size": 229,
+          "boundary_evidence": {
+            "method": "Reviewed native CFG with post-formatter helper boundaries; next58db60 asserts another filename",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0058db4c"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/PCodeUtilities.c",
       "original_filename": "PCodeUtilities.c",
       "evidence": [
@@ -15074,185 +15375,6 @@
           "call_addresses": [
             "0x00638da1",
             "0x00638f7e"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/GC_3_0a5_2/frontend/PCodeInfo.c",
-      "original_filename": "PCodeInfo.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_0058ae40",
-          "address": "0x0058ae40",
-          "size": 119,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058aeae"
-          ]
-        },
-        {
-          "name": "FUN_0058af20",
-          "address": "0x0058af20",
-          "size": 409,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b09a"
-          ]
-        },
-        {
-          "name": "FUN_0058b0c0",
-          "address": "0x0058b0c0",
-          "size": 183,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b115",
-            "0x0058b15a"
-          ]
-        },
-        {
-          "name": "FUN_0058b210",
-          "address": "0x0058b210",
-          "size": 243,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b2da"
-          ]
-        },
-        {
-          "name": "FUN_0058b310",
-          "address": "0x0058b310",
-          "size": 419,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b49a"
-          ]
-        },
-        {
-          "name": "FUN_0058b4c0",
-          "address": "0x0058b4c0",
-          "size": 551,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b6ba",
-            "0x0058b6cb"
-          ]
-        },
-        {
-          "name": "FUN_0058b6f0",
-          "address": "0x0058b6f0",
-          "size": 376,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058b82a",
-            "0x0058b85a"
-          ]
-        },
-        {
-          "name": "FUN_0058bb30",
-          "address": "0x0058bb30",
-          "size": 213,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058bbfa"
-          ]
-        },
-        {
-          "name": "FUN_0058bc10",
-          "address": "0x0058bc10",
-          "size": 7364,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058beae",
-            "0x0058c14c",
-            "0x0058c6fe",
-            "0x0058c758",
-            "0x0058c7b2",
-            "0x0058c872",
-            "0x0058cb2a",
-            "0x0058ccaa",
-            "0x0058cff2",
-            "0x0058d04a",
-            "0x0058d1aa",
-            "0x0058d34a",
-            "0x0058d3ad",
-            "0x0058d48a",
-            "0x0058d4ea",
-            "0x0058d500",
-            "0x0058d52a",
-            "0x0058d540",
-            "0x0058d72a",
-            "0x0058d82a"
-          ]
-        },
-        {
-          "name": "FUN_0058d960",
-          "address": "0x0058d960",
-          "size": 264,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058da5f"
-          ]
-        },
-        {
-          "name": "FUN_0058da70",
-          "address": "0x0058da70",
-          "size": 229,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0058db4c"
           ]
         }
       ],
@@ -82048,6 +82170,701 @@
         "filename_data_bytes": 8,
         "filename_data_match_percent": 100.0
       }
+    },
+    "src/GC_3_0a5_2/backend/PCodeInfo.c": {
+      "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+      "source_sha256": "cc41a5ba059d9b7b13e2ac08b1568ac14341c04084c045d319d60e7a35e5534f",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mapped_members": [
+        {
+          "name": "fn_0058aec0",
+          "address": "0x58aec0",
+          "size": 84,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 84,
+          "compiled_size": 84,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058add0",
+          "address": "0x58add0",
+          "size": 87,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 87,
+          "compiled_size": 87,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058ae30",
+          "address": "0x58ae30",
+          "size": 14,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 14,
+          "compiled_size": 14,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058ae40",
+          "address": "0x58ae40",
+          "size": 119,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 119,
+          "compiled_size": 119,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "change_num_operands",
+          "address": "0x58b310",
+          "size": 419,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 419,
+          "compiled_size": 579,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "change_opcode",
+          "address": "0x58b210",
+          "size": 243,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 243,
+          "compiled_size": 243,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "is_valid_displ",
+          "address": "0x58b180",
+          "size": 138,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 138,
+          "compiled_size": 138,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "makecopyinstruction",
+          "address": "0x58bb30",
+          "size": 213,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 213,
+          "compiled_size": 213,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "fn_0058ad80",
+          "address": "0x58ad80",
+          "size": 76,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 76,
+          "compiled_size": 76,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058acf0",
+          "address": "0x58acf0",
+          "size": 133,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 133,
+          "compiled_size": 133,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058ba80",
+          "address": "0x58ba80",
+          "size": 169,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 169,
+          "compiled_size": 179,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "fn_0058b870",
+          "address": "0x58b870",
+          "size": 147,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 147,
+          "compiled_size": 147,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "copy_opcode_for_type",
+          "address": "0x58b0c0",
+          "size": 183,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "unresolved": "unbound literal: .sw$1279 (0 retail blocks, 0 strings)",
+          "original_size": 183,
+          "compiled_size": 183,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "makecopyforload",
+          "address": "0x58b6f0",
+          "size": 376,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "original_size": 376,
+          "compiled_size": 376,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "fn_0058af20",
+          "address": "0x58af20",
+          "size": 409,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "unresolved": "unbound literal: .sw$957 (0 retail blocks, 0 strings)",
+          "original_size": 409,
+          "compiled_size": 374,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "nbytes_loaded_or_stored_by",
+          "address": "0x58b4c0",
+          "size": 551,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": true,
+          "bytes_exact": true,
+          "fixups_exact": true,
+          "original_size": 551,
+          "compiled_size": 551,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "fn_0058b910",
+          "address": "0x58b910",
+          "size": 362,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "unresolved": "unbound literal: .sw$1034 (0 retail blocks, 0 strings)",
+          "original_size": 362,
+          "compiled_size": 374,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "pcode_const_from_format",
+          "address": "0x58d8e0",
+          "size": 126,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": true,
+          "original_size": 126,
+          "compiled_size": 126,
+          "ownership": "bounded native helper/caller cluster; canonical role where symbol established"
+        },
+        {
+          "name": "pcode_check_imm_bits",
+          "address": "0x58d960",
+          "size": 264,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 264,
+          "compiled_size": 280,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "pcode_get_hi_lo",
+          "address": "0x58da70",
+          "size": 229,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "bytes_exact": false,
+          "fixups_exact": false,
+          "original_size": 229,
+          "compiled_size": 227,
+          "ownership": "direct PCodeInfo.c assertion"
+        },
+        {
+          "name": "vformatpcode",
+          "address": "0x58bc10",
+          "size": 7364,
+          "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+          "exact": false,
+          "unresolved": "unbound literal: .sw$907 (0 retail blocks, 0 strings)",
+          "original_size": 7364,
+          "compiled_size": 6324,
+          "ownership": "direct PCodeInfo.c assertion"
+        }
+      ],
+      "mac_inventory": [
+        {
+          "address": "000e5d98",
+          "kind": "t",
+          "name": "expectandformatoperand",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e7a94",
+          "kind": "t",
+          "name": "copy_opcode_for_type",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e7288",
+          "kind": "t",
+          "name": "makecopyinstruction",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e4a50",
+          "kind": "t",
+          "name": "vformatpcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e746c",
+          "kind": "t",
+          "name": "can_reuse_stored_value",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e75bc",
+          "kind": "t",
+          "name": "makecopyforload",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e78a0",
+          "kind": "t",
+          "name": "change_num_operands",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e476c",
+          "kind": "t",
+          "name": "pcode_get_hi_lo",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e4868",
+          "kind": "t",
+          "name": "pcode_check_imm_bits",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e49b4",
+          "kind": "t",
+          "name": "pcode_const_from_format",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e5bf8",
+          "kind": "t",
+          "name": "formatobject",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e647c",
+          "kind": "t",
+          "name": "formatoperand",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e64c0",
+          "kind": "t",
+          "name": "formatoperands",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e734c",
+          "kind": "t",
+          "name": "is_location_independent",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        },
+        {
+          "address": "000e769c",
+          "kind": "t",
+          "name": "nbytes_loaded_or_stored_by",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e797c",
+          "kind": "t",
+          "name": "change_opcode",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e7a04",
+          "kind": "t",
+          "name": "is_valid_displ",
+          "windows_status": "mapped_by_signature_and_role"
+        },
+        {
+          "address": "000e7b60",
+          "kind": "t",
+          "name": "is_same_operand",
+          "windows_status": "unresolved native counterpart; no removal claim"
+        }
+      ],
+      "source_bindings": {
+        "_pcodeInfoDescriptors": "0x6b52ec",
+        "_makepcode": "0x582f60",
+        "_pcsetrecordbit": "0x5960e0",
+        "_CError_Internal": "0x45a250",
+        "_fn_00587410": "0x587410",
+        "_pcodeNameBuffer": "0x6e5e50",
+        "_fn_00407fd0": "0x407fd0",
+        "_first_temporary_register": "0x710768",
+        "_last_temporary_register": "0x7100fc",
+        "_pcodeSpecialBaseRegister": "0x7172bc",
+        "_fn_00579560": "0x579560",
+        "_pcodeFloatOption": "0x70f019",
+        "_pcodeProcessor": "0x70effa",
+        "_pcbasicblocks": "0x7108c8",
+        "_insertpcodebefore": "0x5829d0",
+        "_deletepcode": "0x582a50",
+        "_fn_00403ff0": "0x403ff0",
+        "_fn_0042d960": "0x42d960",
+        "_lalloc": "0x46c660",
+        "_memclrw": "0x46c400",
+        "_pcsetsideeffects": "0x596090",
+        "_pcodeHasExtendedRegisters": "0x725ed0",
+        "_pcodeHasProcessorRegisters": "0x726066",
+        "_pcodeSpecialRegisters": "0x6ace26",
+        "_fn_00453150": "0x453150",
+        "_fn_00587320": "0x587320",
+        "_fn_00587380": "0x587380",
+        "_fn_004c3f60": "0x4c3f60",
+        "_fn_00581be0": "0x581be0",
+        "_fn_005a05d0": "0x5a05d0",
+        "_fn_004041a0": "0x4041a0",
+        "_fn_0058aec0": "0x58aec0",
+        "_fn_0058add0": "0x58add0",
+        "_fn_0058ae30": "0x58ae30",
+        "_fn_0058ae40": "0x58ae40",
+        "_change_num_operands": "0x58b310",
+        "_change_opcode": "0x58b210",
+        "_is_valid_displ": "0x58b180",
+        "_makecopyinstruction": "0x58bb30",
+        "_fn_0058ad80": "0x58ad80",
+        "_fn_0058acf0": "0x58acf0",
+        "_fn_0058ba80": "0x58ba80",
+        "_fn_0058b870": "0x58b870",
+        "_copy_opcode_for_type": "0x58b0c0",
+        "_makecopyforload": "0x58b6f0",
+        "_fn_0058af20": "0x58af20",
+        "_nbytes_loaded_or_stored_by": "0x58b4c0",
+        "_fn_0058b910": "0x58b910",
+        "_pcode_const_from_format": "0x58d8e0",
+        "_pcode_check_imm_bits": "0x58d960",
+        "_pcode_get_hi_lo": "0x58da70",
+        "_vformatpcode": "0x58bc10"
+      },
+      "baseline_aliases": [],
+      "sections": [
+        {
+          "name": ".text",
+          "size": "11706",
+          "match_percent": 66.50637
+        },
+        {
+          "name": ".data",
+          "size": "24",
+          "match_percent": 95.833336
+        },
+        {
+          "name": ".rdata",
+          "size": "76",
+          "match_percent": 100.0
+        }
+      ],
+      "candidate_data": [
+        {
+          "name": "@73",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x006ad303",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@906",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x006ad380",
+          "bytes_exact": false,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_8",
+          "section": ".rdata",
+          "size": 344,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_10",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_12",
+          "section": ".rdata",
+          "size": 12,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_13",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_14",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_15",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_16",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_17",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_18",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "@1146",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x006ad30f",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_26",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "unresolved": "no established retail address"
+        },
+        {
+          "name": "__anonymous_section_28",
+          "section": ".rdata",
+          "size": 24,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653a78",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_30",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653b20",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_38",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653a90",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_39",
+          "section": ".rdata",
+          "size": 20,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x00653aa0",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "candidate_data_complete": false,
+      "original_state_data_complete": false,
+      "unresolved_relocations": 4,
+      "profiles": [
+        {
+          "profile": "pcodeinfo-speed-intrinsics",
+          "compiled": true,
+          "exact": 10,
+          "unresolved": 4
+        },
+        {
+          "profile": "pcodeinfo-speed-nointrinsics",
+          "compiled": true,
+          "exact": 10,
+          "unresolved": 4
+        },
+        {
+          "profile": "pcodeinfo-space-intrinsics",
+          "compiled": true,
+          "exact": 1,
+          "unresolved": 1
+        },
+        {
+          "profile": "pcodeinfo-space-nointrinsics",
+          "compiled": true,
+          "exact": 1,
+          "unresolved": 1
+        }
+      ],
+      "cp932": true,
+      "status": "attempted_equivalent",
+      "unported_candidates": [],
+      "membership_reviewed": false,
+      "mapped_function_count": 21,
+      "strict_exact_count": 10,
+      "data_complete": false,
+      "native_abi": {
+        "operand_size": 14,
+        "operand_kind": 0,
+        "registerClass": 1,
+        "operand_flags": 2,
+        "register_value": 4,
+        "label_value": 2,
+        "instruction_size": 44,
+        "instruction_flags64": 12,
+        "source_location": 32,
+        "opcode": 40,
+        "operand_count": 42,
+        "block_size": 46,
+        "label_size": 12,
+        "edge_size": 28,
+        "pending_branch_size": 10,
+        "descriptor_base": "0x6b52ec",
+        "descriptor_stride": 22,
+        "descriptor_name": 0,
+        "descriptor_format": 4,
+        "descriptor_count": 8,
+        "descriptor_flags64": 10,
+        "descriptor_encoding": 18
+      },
+      "semantic_review": [
+        "change_opcode keeps mutable bit0x20, replaces descriptor-derived flags, clears mutable0x10 when record bit52 applies, and invokes pcsetrecordbit under original conditions. change_num_operands takes int count and marks removed operands kind8. Both nonexact.",
+        "is_valid_displ and makecopyinstruction are strict exact. Displacement object kind is byte+2; vector displacement admits opcodes192,193,196,197 only and range[-2048,2047].",
+        "Native descriptor view here starts6b52ec; Utilities intentionally keeps its narrower external descriptor view6b52f0. Do not merge address bindings by guessed name.",
+        "Complete native vformatpcode grammar now represented:41 terminal keys, # count, =/+ modes, ^/:/./backtick flags, $ named registers, bracket and parenthesis syntax, immediate constraints, SPR names, compound base+memory forms, qualifier/access tracking and suffix grammar. Native byte+2 payload and +6 object slot preserved; source private register view keeps +4 register slot.",
+        "All21 native bodies statically reviewed; exact status is only granted to strict bytes AND original PE fixup sets. Four generated switch-table references unresolved, no manual .sw$/anonymous bindings. Raw unresolved bodies included in full objdiff for review, not strict match proof.",
+        "Full .data suffix allocation has padding mismatch: candidate @/<>|* NUL plus trailing zero at+7, original seven-byte string immediately followed by ! from next literal. Seven-byte string payload matches; full eight-byte allocated span does not. This failure remains explicit.",
+        "pcode_get_hi_lo58da70, pcode_check_imm_bits58d960 and pcode_const_from_format58d8e0 identified from native signatures/roles and supplied Mac symbol list. pcode_check reports invalid range/alignment, includes literal1..4 alignment; bits32/negative paths preserved.",
+        "copy_opcode_for_type native GPR assertion rejects certain eight-byte types; reviewed exact original branch targets and corrected predicate before final build. Larger nonmatches retain static-only functional review; no execution of original."
+      ],
+      "ownership_limits": [
+        "Native21-body cluster58acf0..58db53; helper58db60 asserts a different source and is excluded.",
+        "Ordinary Mac dump/format names without Windows assignments remain an unresolved membership checklist.",
+        "Four generated switch tables remain unresolved; full raw-body objdiff is descriptive, not byte-equivalence evidence.",
+        "One byte of suffix-literal allocation padding differs; full emitted data is not exact."
+      ],
+      "retained_validation": [
+        {
+          "version": "GC_1_2_5",
+          "normalized_object_sha256": "dbf6520791d5033c2353a06380468a41366390c7bdad4b325779d6679f69fa25",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_2_5n",
+          "normalized_object_sha256": "dbf6520791d5033c2353a06380468a41366390c7bdad4b325779d6679f69fa25",
+          "unchanged": true
+        },
+        {
+          "version": "GC_1_3",
+          "normalized_object_sha256": "9f22d0db028c56b72b5fcff5359fd9bfb57e2c4df001cd783603aaa14ce86ded",
+          "unchanged": true
+        }
+      ],
+      "retained_validation_scope": "Affected legacy source rebuilt for allthree retained versions; every normalized COFF symbol, section byte and relocation unchanged. Previous full matrix remains applicable."
     }
   },
   "ownership_review": {

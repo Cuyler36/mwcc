@@ -2222,5 +2222,9 @@
   "PCodeUtilities_CreateInstruction": {
     "name": "makepcode",
     "source": "src/GC_3_0a5_2/backend/PCode.c"
+  },
+  "create_pcode_instruction": {
+    "name": "vformatpcode",
+    "source": "src/GC_3_0a5_2/backend/PCodeInfo.c"
   }
 }

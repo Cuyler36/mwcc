@@ -3091,56 +3091,56 @@
     }
   },
   {
-    "name": "CLProj_AppendString",
+    "name": "strcatn",
     "address": "0x00424ac0",
     "size": 75,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c",
     "baseline_name": "CLProj_AppendString",
     "baseline_address": "0x00418350",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Four-member explicit Mac StringExtras.c STABS unit; reviewed full Windows cluster and strict original byte/fixup matches."
   },
   {
-    "name": "CLProj_CopyStringBounded",
+    "name": "strcpyn",
     "address": "0x00424b10",
     "size": 65,
-    "source": "src/driver/CLProj.c",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c",
     "baseline_name": "CLProj_CopyStringBounded",
     "baseline_address": "0x004183a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Four-member explicit Mac StringExtras.c STABS unit; reviewed full Windows cluster and strict original byte/fixup matches."
   },
   {
-    "name": "CLIO_CompareStringsIgnoreCase",
+    "name": "ustrcmp",
     "address": "0x00424b60",
     "size": 71,
-    "source": "src/driver/CLIO.c",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c",
     "baseline_name": "CLIO_CompareStringsIgnoreCase",
     "baseline_address": "0x00416670",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Four-member explicit Mac StringExtras.c STABS unit; reviewed full Windows cluster and strict original byte/fixup matches."
   },
   {
-    "name": "fn_004050e0",
+    "name": "ustrncmp",
     "address": "0x00424bb0",
     "size": 105,
-    "source": "src/driver/ClientGlue.c",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c",
     "baseline_name": "fn_004050e0",
     "baseline_address": "0x004050e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Four-member explicit Mac StringExtras.c STABS unit; reviewed full Windows cluster and strict original byte/fixup matches."
   },
   {
     "name": "CallPlugin",

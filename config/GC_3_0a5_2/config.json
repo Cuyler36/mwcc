@@ -214,7 +214,8 @@
     "src/GC_3_0a5_2/driver/Targets.c",
     "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
     "src/GC_3_0a5_2/backend/RegisterInfo.c",
-    "src/GC_3_0a5_2/backend/StackFrame.c"
+    "src/GC_3_0a5_2/backend/StackFrame.c",
+    "src/GC_3_0a5_2/driver/StringExtras.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3248,6 +3249,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/StringExtras.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3307,8 +3327,6 @@
     "src/GC_3_0a5_2/driver/Targets/ParserToolHandlesPanels",
     "src/GC_3_0a5_2/driver/Targets/SetupParserToolOptions",
     "src/driver/MacSpecs/find_or_create_spec_entry_negated",
-    "src/driver/CLProj/CLProj_AppendString",
-    "src/driver/CLProj/CLProj_CopyStringBounded",
     "src/driver/CLFileOps/set_bytes",
     "src/msl/misc_io/clearerr",
     "src/driver/Memory/set_storage_handle_data",
@@ -3615,7 +3633,11 @@
     "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_GatherRecurse",
     "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_CountRecurse",
     "src/GC_3_0a5_2/driver/CLAccessPaths/CopyRecurseSpecs",
-    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_CopyRecurseSpecs"
+    "src/GC_3_0a5_2/driver/CLAccessPaths/Paths_CopyRecurseSpecs",
+    "src/GC_3_0a5_2/driver/StringExtras/strcatn",
+    "src/GC_3_0a5_2/driver/StringExtras/strcpyn",
+    "src/GC_3_0a5_2/driver/StringExtras/ustrcmp",
+    "src/GC_3_0a5_2/driver/StringExtras/ustrncmp"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3630,7 +3652,8 @@
     "src/GC_3_0a5_2/driver/CLSegs.c",
     "src/GC_3_0a5_2/driver/CLLoadAndCache.c",
     "src/GC_3_0a5_2/driver/CLPrefs.c",
-    "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+    "src/GC_3_0a5_2/driver/CLAccessPaths.c",
+    "src/GC_3_0a5_2/driver/StringExtras.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3992,6 +4015,9 @@
       "_Paths_CountRecurse": "0x426ca0",
       "_CopyRecurseSpecs": "0x426d10",
       "_Paths_CopyRecurseSpecs": "0x426e10"
+    },
+    "src/GC_3_0a5_2/driver/StringExtras.c": {
+      "_tolower": "0x42ce00"
     }
   }
 }

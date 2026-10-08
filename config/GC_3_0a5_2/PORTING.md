@@ -57,7 +57,7 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-The current inventory has 261 source views: 213 compiled files and 48
+The current inventory has 262 source views: 214 compiled files and 48
 original-only units. All twenty direct assertion ownership conflicts are now
 split physically. CFunc.cpp and CException.cpp retain provisional C language
 mode while imported pointer conversions are ported. CMiddleLayer.c,
@@ -74,6 +74,15 @@ span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## StringExtras.c: complete Windows unit
+
+The four explicit Mac members are strcatn, strcpyn, ustrcmp and ustrncmp.
+All four retained Windows bodies match exactly, with native stdcall argument
+sizes and no allocated data. The 316-byte text section passes objdiff-cli.
+The old definitions in CLProj.c, CLIO.c and ClientGlue.c are excluded for GC3;
+canonical mappings preserve their baseline aliases. This includes the former
+fn_004050e0, whose identity is ustrncmp rather than a ClientGlue helper.
 
 ## CLAccessPaths.c: complete Windows unit
 

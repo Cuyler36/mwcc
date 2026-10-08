@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <msl_internal.h>
 #include <ctype.h>
+#if VERSION != VERSION_GC_3_0A5_2
 int fn_004050e0(char *left, char *right, int count)
 {
     unsigned int rightValue;
@@ -31,6 +32,7 @@ int fn_004050e0(char *left, char *right, int count)
     }
     return 0;
 }
+#endif
 
 int ClientGlue_CompareLowercaseStrings(const char *left, const char *right)
 {

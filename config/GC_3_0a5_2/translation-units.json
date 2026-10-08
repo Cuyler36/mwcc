@@ -4351,6 +4351,94 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/StringExtras.c",
+      "original_filename": "StringExtras.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "strcatn",
+          "address": "0x00424ac0",
+          "size": 75,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringExtras.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "strcpyn",
+          "address": "0x00424b10",
+          "size": 65,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringExtras.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ustrcmp",
+          "address": "0x00424b60",
+          "size": 71,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringExtras.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ustrncmp",
+          "address": "0x00424bb0",
+          "size": 105,
+          "compiled_source": "src/GC_3_0a5_2/driver/StringExtras.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "strcatn",
+          "mac_address": "0x00010df4",
+          "linkage_names": [
+            "strcatn"
+          ]
+        },
+        {
+          "name": "strcpyn",
+          "mac_address": "0x00010e78",
+          "linkage_names": [
+            "strcpyn"
+          ]
+        },
+        {
+          "name": "ustrcmp",
+          "mac_address": "0x00010ec4",
+          "linkage_names": [
+            "ustrcmp"
+          ]
+        },
+        {
+          "name": "ustrncmp",
+          "mac_address": "0x00010f40",
+          "linkage_names": [
+            "ustrncmp"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/StringUtils.c",
       "original_filename": "StringUtils.c",
       "evidence": [
@@ -18049,17 +18137,6 @@
           }
         },
         {
-          "name": "CLIO_CompareStringsIgnoreCase",
-          "address": "0x00424b60",
-          "size": 71,
-          "compiled_source": "src/driver/CLIO.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
           "name": "CLIO_ConvertPascalToCString",
           "address": "0x0042f450",
           "size": 34,
@@ -19645,28 +19722,6 @@
           }
         },
         {
-          "name": "CLProj_AppendString",
-          "address": "0x00424ac0",
-          "size": 75,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLProj_CopyStringBounded",
-          "address": "0x00424b10",
-          "size": 65,
-          "compiled_source": "src/driver/CLProj.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
           "name": "FUN_004262d0",
           "address": "0x004262d0",
           "size": 45,
@@ -20004,17 +20059,6 @@
           "compiled_source": "src/driver/ClientGlue.c",
           "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
           "boundary_evidence": "Ghidra function body"
-        },
-        {
-          "name": "fn_004050e0",
-          "address": "0x00424bb0",
-          "size": 105,
-          "compiled_source": "src/driver/ClientGlue.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
         }
       ],
       "mac_functions": [
@@ -37047,44 +37091,6 @@
           "descriptor": "intbuf:S(0,87)=ar(0,1);0;255;(0,2)"
         }
       ],
-      "baseline_same_filename": []
-    },
-    {
-      "source": "StringExtras.c",
-      "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/StringExtras.c",
-      "mac_address": "0x00010df4",
-      "line": 7395,
-      "functions": [
-        {
-          "name": "strcatn",
-          "mac_address": "0x00010df4",
-          "linkage_names": [
-            "strcatn"
-          ]
-        },
-        {
-          "name": "strcpyn",
-          "mac_address": "0x00010e78",
-          "linkage_names": [
-            "strcpyn"
-          ]
-        },
-        {
-          "name": "ustrcmp",
-          "mac_address": "0x00010ec4",
-          "linkage_names": [
-            "ustrcmp"
-          ]
-        },
-        {
-          "name": "ustrncmp",
-          "mac_address": "0x00010f40",
-          "linkage_names": [
-            "ustrncmp"
-          ]
-        }
-      ],
-      "data_symbols": [],
       "baseline_same_filename": []
     },
     {
@@ -67232,6 +67238,106 @@
       "bss_bytes": 0,
       "membership_reviewed": true,
       "strict_exact_count": 22
+    },
+    "src/GC_3_0a5_2/driver/StringExtras.c": {
+      "source": "src/GC_3_0a5_2/driver/StringExtras.c",
+      "sha256": "c48458162acc1a3763c0f6a2935ad0c0e4fe21fe70511170714ae0e47ebb7fb6",
+      "compiler": "CW94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "mac_functions": [
+        {
+          "name": "strcatn",
+          "map_line": 7433
+        },
+        {
+          "name": "strcpyn",
+          "map_line": 7444
+        },
+        {
+          "name": "ustrcmp",
+          "map_line": 7455
+        },
+        {
+          "name": "ustrncmp",
+          "map_line": 7465
+        }
+      ],
+      "emitted_functions": [
+        {
+          "symbol": "_ustrcmp@8",
+          "size": 71
+        },
+        {
+          "symbol": "_strcatn@12",
+          "size": 75
+        },
+        {
+          "symbol": "_strcpyn@16",
+          "size": 65
+        },
+        {
+          "symbol": "_ustrncmp@12",
+          "size": 105
+        }
+      ],
+      "attempts": [
+        {
+          "name": "strcatn@12",
+          "address": "0x424ac0",
+          "size": 75,
+          "compiled_size": 75,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "strcpyn@16",
+          "address": "0x424b10",
+          "size": 65,
+          "compiled_size": 65,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "ustrcmp@8",
+          "address": "0x424b60",
+          "size": 71,
+          "compiled_size": 71,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        },
+        {
+          "name": "ustrncmp@12",
+          "address": "0x424bb0",
+          "size": 105,
+          "compiled_size": 105,
+          "bytes_exact": true,
+          "strict_exact": true,
+          "objdiff_percent": 100.0
+        }
+      ],
+      "complete": true,
+      "sjis": "Source encodes to CP932; repository checker is unavailable",
+      "inventory": "All four Mac functions map to all four Windows bodies in424ac0..424c19. Next function424c20 copies unrelated record fields. No allocated data sections.",
+      "data_complete": true,
+      "status": "exact",
+      "membership_reviewed": true,
+      "strict_exact_count": 4,
+      "source_sha256": "c48458162acc1a3763c0f6a2935ad0c0e4fe21fe70511170714ae0e47ebb7fb6"
     }
   },
   "ownership_review": {

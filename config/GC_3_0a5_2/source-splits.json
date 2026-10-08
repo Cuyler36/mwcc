@@ -1202,5 +1202,21 @@
   "copy_access_paths_to_file_specs_checked": {
     "name": "Paths_CopyRecurseSpecs",
     "source": "src/GC_3_0a5_2/driver/CLAccessPaths.c"
+  },
+  "CLProj_AppendString": {
+    "name": "strcatn",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c"
+  },
+  "CLProj_CopyStringBounded": {
+    "name": "strcpyn",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c"
+  },
+  "CLIO_CompareStringsIgnoreCase": {
+    "name": "ustrcmp",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c"
+  },
+  "fn_004050e0": {
+    "name": "ustrncmp",
+    "source": "src/GC_3_0a5_2/driver/StringExtras.c"
   }
 }

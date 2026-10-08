@@ -48,6 +48,7 @@
 
 #pragma auto_inline reset
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *__stdcall CLProj_AppendString(char *dest, char *src, int size)
 {
     char *end;
@@ -62,7 +63,9 @@ char *__stdcall CLProj_AppendString(char *dest, char *src, int size)
     *end = '\0';
     return dest;
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 char *__stdcall CLProj_CopyStringBounded(char *destination, const char *source, unsigned int count, int capacity)
 {
     char *output;
@@ -75,6 +78,7 @@ char *__stdcall CLProj_CopyStringBounded(char *destination, const char *source, 
     *output = '\0';
     return destination;
 }
+#endif
 
 unsigned char CLProj_InitializeCWD(char *a0)
 {

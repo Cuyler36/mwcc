@@ -4885,145 +4885,244 @@
     }
   },
   {
-    "name": "dep_records_equal",
-    "address": "0x0043c890",
+    "name": "Incls_Initialize",
+    "address": "0x43c7a0",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Incls_Terminate",
+    "address": "0x43c800",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsSysIncl",
+    "address": "0x43c840",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "MakeInclFileSpec",
+    "address": "0x43c860",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "SameIncl",
+    "address": "0x43c890",
     "size": 91,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "dep_records_equal",
     "baseline_address": "0x00427b40",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_or_create_access_path_entry",
-    "address": "0x0043c8f0",
+    "name": "FindOrAddGlobalInclPath",
+    "address": "0x43c8f0",
     "size": 52,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "find_or_create_access_path_entry",
     "baseline_address": "0x00427bb0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_access_path_entry",
-    "address": "0x0043c930",
+    "name": "_FindFileInPath",
+    "address": "0x43c930",
     "size": 114,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "find_access_path_entry",
     "baseline_address": "0x00427bf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "find_dependency_access_path_entry",
-    "address": "0x0043c9b0",
+    "name": "FindFileInPaths",
+    "address": "0x43c9b0",
     "size": 134,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "find_dependency_access_path_entry",
     "baseline_address": "0x00427c50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_dep_record",
-    "address": "0x0043ca40",
+    "name": "AddFileToIncls",
+    "address": "0x43ca40",
     "size": 399,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "append_dep_record",
     "baseline_address": "0x00427cd0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLDependencies_FindFile",
-    "address": "0x0043cbd0",
+    "name": "Incls_FindFileInPaths",
+    "address": "0x43cbd0",
     "size": 463,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "CLDependencies_FindFile",
     "baseline_address": "0x00427e30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "initialize_four_words",
-    "address": "0x0043cda0",
+    "name": "Deps_Initialize",
+    "address": "0x43cda0",
     "size": 34,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "initialize_four_words",
     "baseline_address": "0x00428000",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLDependencies_SetAccessPath",
-    "address": "0x0043cdf0",
+    "name": "Deps_Terminate",
+    "address": "0x43cdd0",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Deps_ChangeSpecialAccessPath",
+    "address": "0x43cdf0",
     "size": 270,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "CLDependencies_SetAccessPath",
     "baseline_address": "0x00428030",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_access_path_entry",
-    "address": "0x0043cf00",
+    "name": "Deps_GetSpecialAccessPath",
+    "address": "0x43cf00",
     "size": 6,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "get_access_path_entry",
     "baseline_address": "0x00428140",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_dependency_entry",
-    "address": "0x0043cfe0",
+    "name": "SetSpecialAccessPathFromIncludeStackTOS",
+    "address": "0x43cf10",
+    "size": 135,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "FindDepFile",
+    "address": "0x43cfa0",
+    "size": 64,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "AddDepFile",
+    "address": "0x43cfe0",
     "size": 65,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "append_dependency_entry",
     "baseline_address": "0x00428190",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "escape_spaces",
-    "address": "0x0043d0d0",
+    "name": "Deps_AddDependency",
+    "address": "0x43d030",
+    "size": 146,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "EscapeName",
+    "address": "0x43d0d0",
     "size": 76,
-    "source": "src/driver/CLDependencies.c",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
     "baseline_name": "escape_spaces",
     "baseline_address": "0x00428270",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Deps_ListDependencies",
+    "address": "0x43d120",
+    "size": 778,
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+    "identity_evidence": "CLDependencies.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
+    "boundary_evidence": {
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

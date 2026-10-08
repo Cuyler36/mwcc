@@ -934,5 +934,113 @@
   "free_if_not_null": {
     "name": "Segment_Free",
     "source": "src/GC_3_0a5_2/driver/CLSegs.c"
+  },
+  "Incls_Initialize": {
+    "name": "Incls_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "Incls_Terminate": {
+    "name": "Incls_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "IsSysIncl": {
+    "name": "IsSysIncl",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "MakeInclFileSpec": {
+    "name": "MakeInclFileSpec",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "dep_records_equal": {
+    "name": "SameIncl",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "find_or_create_access_path_entry": {
+    "name": "FindOrAddGlobalInclPath",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "find_access_path_entry": {
+    "name": "_FindFileInPath",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "find_dependency_access_path_entry": {
+    "name": "FindFileInPaths",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "append_dep_record": {
+    "name": "AddFileToIncls",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_FindFile": {
+    "name": "Incls_FindFileInPaths",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "initialize_four_words": {
+    "name": "Deps_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "Deps_Terminate": {
+    "name": "Deps_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_SetAccessPath": {
+    "name": "Deps_ChangeSpecialAccessPath",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "get_access_path_entry": {
+    "name": "Deps_GetSpecialAccessPath",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "SetSpecialAccessPathFromIncludeStackTOS": {
+    "name": "SetSpecialAccessPathFromIncludeStackTOS",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "FindDepFile": {
+    "name": "FindDepFile",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "append_dependency_entry": {
+    "name": "AddDepFile",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "Deps_AddDependency": {
+    "name": "Deps_AddDependency",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "escape_spaces": {
+    "name": "EscapeName",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "Deps_ListDependencies": {
+    "name": "Deps_ListDependencies",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_InitDeps": {
+    "name": "Incls_Initialize",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_FreeDeps": {
+    "name": "Incls_Terminate",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "get_record_flag": {
+    "name": "IsSysIncl",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "make_dependency_osspec": {
+    "name": "MakeInclFileSpec",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "contains_dependency": {
+    "name": "FindDepFile",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_InsertDependencyIfAbsent": {
+    "name": "Deps_AddDependency",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+  },
+  "CLDependencies_WriteDependencies": {
+    "name": "Deps_ListDependencies",
+    "source": "src/GC_3_0a5_2/driver/CLDependencies.c"
   }
 }

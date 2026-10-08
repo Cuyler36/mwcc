@@ -1130,6 +1130,393 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+      "original_filename": "CLDependencies.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Incls_Initialize",
+          "address": "0x43c7a0",
+          "size": 86,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Incls_Terminate",
+          "address": "0x43c800",
+          "size": 51,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "IsSysIncl",
+          "address": "0x43c840",
+          "size": 19,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "MakeInclFileSpec",
+          "address": "0x43c860",
+          "size": 46,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SameIncl",
+          "address": "0x43c890",
+          "size": 91,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindOrAddGlobalInclPath",
+          "address": "0x43c8f0",
+          "size": 52,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "_FindFileInPath",
+          "address": "0x43c930",
+          "size": 114,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindFileInPaths",
+          "address": "0x0043c9b0",
+          "size": 134,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x0043ca21"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c"
+        },
+        {
+          "name": "AddFileToIncls",
+          "address": "0x43ca40",
+          "size": 399,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Incls_FindFileInPaths",
+          "address": "0x43cbd0",
+          "size": 463,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_Initialize",
+          "address": "0x43cda0",
+          "size": 34,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_Terminate",
+          "address": "0x43cdd0",
+          "size": 18,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_ChangeSpecialAccessPath",
+          "address": "0x43cdf0",
+          "size": 270,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_GetSpecialAccessPath",
+          "address": "0x43cf00",
+          "size": 6,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SetSpecialAccessPathFromIncludeStackTOS",
+          "address": "0x43cf10",
+          "size": 135,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FindDepFile",
+          "address": "0x43cfa0",
+          "size": 64,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "AddDepFile",
+          "address": "0x43cfe0",
+          "size": 65,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_AddDependency",
+          "address": "0x43d030",
+          "size": 146,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "EscapeName",
+          "address": "0x43d0d0",
+          "size": 76,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "Deps_ListDependencies",
+          "address": "0x43d120",
+          "size": 778,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Incls_Initialize",
+          "mac_address": "0x00023f68",
+          "linkage_names": [
+            "Incls_Initialize"
+          ]
+        },
+        {
+          "name": "Incls_Terminate",
+          "mac_address": "0x00023fd8",
+          "linkage_names": [
+            "Incls_Terminate"
+          ]
+        },
+        {
+          "name": "IsSysIncl",
+          "mac_address": "0x00024030",
+          "linkage_names": [
+            "IsSysIncl"
+          ]
+        },
+        {
+          "name": "MakeInclFileSpec",
+          "mac_address": "0x00024044",
+          "linkage_names": [
+            "MakeInclFileSpec"
+          ]
+        },
+        {
+          "name": "QuickFindFileInIncls",
+          "mac_address": "0x0002408c",
+          "linkage_names": [
+            "QuickFindFileInIncls"
+          ]
+        },
+        {
+          "name": "SameIncl",
+          "mac_address": "0x00024148",
+          "linkage_names": [
+            "SameIncl"
+          ]
+        },
+        {
+          "name": "FindOrAddGlobalInclPath",
+          "mac_address": "0x000241cc",
+          "linkage_names": [
+            "FindOrAddGlobalInclPath"
+          ]
+        },
+        {
+          "name": "_FindFileInPath",
+          "mac_address": "0x00024230",
+          "linkage_names": [
+            "_FindFileInPath"
+          ]
+        },
+        {
+          "name": "FindFileInPaths",
+          "mac_address": "0x000242dc",
+          "linkage_names": [
+            "FindFileInPaths"
+          ]
+        },
+        {
+          "name": "AddFileToIncls",
+          "mac_address": "0x00024394",
+          "linkage_names": [
+            "AddFileToIncls"
+          ]
+        },
+        {
+          "name": "Incls_FindFileInPaths",
+          "mac_address": "0x00024508",
+          "linkage_names": [
+            "Incls_FindFileInPaths"
+          ]
+        },
+        {
+          "name": "Deps_Initialize",
+          "mac_address": "0x000247bc",
+          "linkage_names": [
+            "Deps_Initialize"
+          ]
+        },
+        {
+          "name": "Deps_Terminate",
+          "mac_address": "0x000247d8",
+          "linkage_names": [
+            "Deps_Terminate"
+          ]
+        },
+        {
+          "name": "Deps_ChangeSpecialAccessPath",
+          "mac_address": "0x00024804",
+          "linkage_names": [
+            "Deps_ChangeSpecialAccessPath"
+          ]
+        },
+        {
+          "name": "Deps_GetSpecialAccessPath",
+          "mac_address": "0x00024970",
+          "linkage_names": [
+            "Deps_GetSpecialAccessPath"
+          ]
+        },
+        {
+          "name": "SetSpecialAccessPathFromIncludeStackTOS",
+          "mac_address": "0x00024994",
+          "linkage_names": [
+            "SetSpecialAccessPathFromIncludeStackTOS"
+          ]
+        },
+        {
+          "name": "FindDepFile",
+          "mac_address": "0x00024acc",
+          "linkage_names": [
+            "FindDepFile"
+          ]
+        },
+        {
+          "name": "AddDepFile",
+          "mac_address": "0x00024b54",
+          "linkage_names": [
+            "AddDepFile"
+          ]
+        },
+        {
+          "name": "Deps_AddDependency",
+          "mac_address": "0x00024bd8",
+          "linkage_names": [
+            "Deps_AddDependency"
+          ]
+        },
+        {
+          "name": "EscapeName",
+          "mac_address": "0x00024cc4",
+          "linkage_names": [
+            "EscapeName"
+          ]
+        },
+        {
+          "name": "Deps_ListDependencies",
+          "mac_address": "0x00024d1c",
+          "linkage_names": [
+            "Deps_ListDependencies"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLErrors.c",
       "original_filename": "CLErrors.c",
       "evidence": [
@@ -16549,294 +16936,6 @@
           "mac_address": "0x00023eb0",
           "linkage_names": [
             "_ZN23CWCompilerLinkerContext7destroyEv"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLDependencies.c",
-      "original_filename": "CLDependencies.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "dep_records_equal",
-          "address": "0x0043c890",
-          "size": 91,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "find_or_create_access_path_entry",
-          "address": "0x0043c8f0",
-          "size": 52,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "find_access_path_entry",
-          "address": "0x0043c930",
-          "size": 114,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "find_dependency_access_path_entry",
-          "address": "0x0043c9b0",
-          "size": 134,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x0043ca21"
-          ],
-          "compiled_source": "src/driver/CLDependencies.c"
-        },
-        {
-          "name": "append_dep_record",
-          "address": "0x0043ca40",
-          "size": 399,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLDependencies_FindFile",
-          "address": "0x0043cbd0",
-          "size": 463,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "initialize_four_words",
-          "address": "0x0043cda0",
-          "size": 34,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLDependencies_SetAccessPath",
-          "address": "0x0043cdf0",
-          "size": 270,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "get_access_path_entry",
-          "address": "0x0043cf00",
-          "size": 6,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_dependency_entry",
-          "address": "0x0043cfe0",
-          "size": 65,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "escape_spaces",
-          "address": "0x0043d0d0",
-          "size": 76,
-          "compiled_source": "src/driver/CLDependencies.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Incls_Initialize",
-          "mac_address": "0x00023f68",
-          "linkage_names": [
-            "Incls_Initialize"
-          ]
-        },
-        {
-          "name": "Incls_Terminate",
-          "mac_address": "0x00023fd8",
-          "linkage_names": [
-            "Incls_Terminate"
-          ]
-        },
-        {
-          "name": "IsSysIncl",
-          "mac_address": "0x00024030",
-          "linkage_names": [
-            "IsSysIncl"
-          ]
-        },
-        {
-          "name": "MakeInclFileSpec",
-          "mac_address": "0x00024044",
-          "linkage_names": [
-            "MakeInclFileSpec"
-          ]
-        },
-        {
-          "name": "QuickFindFileInIncls",
-          "mac_address": "0x0002408c",
-          "linkage_names": [
-            "QuickFindFileInIncls"
-          ]
-        },
-        {
-          "name": "SameIncl",
-          "mac_address": "0x00024148",
-          "linkage_names": [
-            "SameIncl"
-          ]
-        },
-        {
-          "name": "FindOrAddGlobalInclPath",
-          "mac_address": "0x000241cc",
-          "linkage_names": [
-            "FindOrAddGlobalInclPath"
-          ]
-        },
-        {
-          "name": "_FindFileInPath",
-          "mac_address": "0x00024230",
-          "linkage_names": [
-            "_FindFileInPath"
-          ]
-        },
-        {
-          "name": "FindFileInPaths",
-          "mac_address": "0x000242dc",
-          "linkage_names": [
-            "FindFileInPaths"
-          ]
-        },
-        {
-          "name": "AddFileToIncls",
-          "mac_address": "0x00024394",
-          "linkage_names": [
-            "AddFileToIncls"
-          ]
-        },
-        {
-          "name": "Incls_FindFileInPaths",
-          "mac_address": "0x00024508",
-          "linkage_names": [
-            "Incls_FindFileInPaths"
-          ]
-        },
-        {
-          "name": "Deps_Initialize",
-          "mac_address": "0x000247bc",
-          "linkage_names": [
-            "Deps_Initialize"
-          ]
-        },
-        {
-          "name": "Deps_Terminate",
-          "mac_address": "0x000247d8",
-          "linkage_names": [
-            "Deps_Terminate"
-          ]
-        },
-        {
-          "name": "Deps_ChangeSpecialAccessPath",
-          "mac_address": "0x00024804",
-          "linkage_names": [
-            "Deps_ChangeSpecialAccessPath"
-          ]
-        },
-        {
-          "name": "Deps_GetSpecialAccessPath",
-          "mac_address": "0x00024970",
-          "linkage_names": [
-            "Deps_GetSpecialAccessPath"
-          ]
-        },
-        {
-          "name": "SetSpecialAccessPathFromIncludeStackTOS",
-          "mac_address": "0x00024994",
-          "linkage_names": [
-            "SetSpecialAccessPathFromIncludeStackTOS"
-          ]
-        },
-        {
-          "name": "FindDepFile",
-          "mac_address": "0x00024acc",
-          "linkage_names": [
-            "FindDepFile"
-          ]
-        },
-        {
-          "name": "AddDepFile",
-          "mac_address": "0x00024b54",
-          "linkage_names": [
-            "AddDepFile"
-          ]
-        },
-        {
-          "name": "Deps_AddDependency",
-          "mac_address": "0x00024bd8",
-          "linkage_names": [
-            "Deps_AddDependency"
-          ]
-        },
-        {
-          "name": "EscapeName",
-          "mac_address": "0x00024cc4",
-          "linkage_names": [
-            "EscapeName"
-          ]
-        },
-        {
-          "name": "Deps_ListDependencies",
-          "mac_address": "0x00024d1c",
-          "linkage_names": [
-            "Deps_ListDependencies"
           ]
         }
       ],
@@ -50389,7 +50488,7 @@
       }
     },
     "src/driver/CLDependencies.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -50518,7 +50617,8 @@
           "space-nointrinsics": "1422df5073430c3ee02eccc1fa4798cb0760fce7ec1422d7caff3ec46315c263",
           "space-intrinsics": "216d53566c275d6efc21affb22e7ee5dbd8148da6eeab41accf880c3836aba9f"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLDependencies.c"
     },
     "src/driver/CLDropinCallbacks_V10.cpp": {
       "status": "unattempted",
@@ -65621,6 +65721,572 @@
       "bss_bytes": 0,
       "membership_reviewed": true,
       "strict_exact_count": 8
+    },
+    "src/GC_3_0a5_2/driver/CLDependencies.c": {
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/CLDependencies.c",
+        "mac_functions": [
+          "Incls_Initialize",
+          "Incls_Terminate",
+          "IsSysIncl",
+          "MakeInclFileSpec",
+          "QuickFindFileInIncls",
+          "SameIncl",
+          "FindOrAddGlobalInclPath",
+          "_FindFileInPath",
+          "FindFileInPaths",
+          "AddFileToIncls",
+          "Incls_FindFileInPaths",
+          "Deps_Initialize",
+          "Deps_Terminate",
+          "Deps_ChangeSpecialAccessPath",
+          "Deps_GetSpecialAccessPath",
+          "SetSpecialAccessPathFromIncludeStackTOS",
+          "FindDepFile",
+          "AddDepFile",
+          "Deps_AddDependency",
+          "EscapeName",
+          "Deps_ListDependencies"
+        ],
+        "windows_region": [
+          "0x0043c7a0",
+          "0x0043d42a"
+        ],
+        "windows_functions": 20,
+        "removed_mac_function": "QuickFindFileInIncls",
+        "proof": "20 consecutive recovered Windows function bodies; two CLDependencies.c assertion/internal-error literals; call graph and layouts match the explicit Mac debug unit. Adjacent 43c720/43c770 assert CLSegs.c and are excluded.",
+        "unknown_external": {
+          "fn_00427b90": "Six-argument Windows search helper; ABI differs from old cache helper. Identity not guessed."
+        },
+        "new_behavior": [
+          "Native Windows OSSpec is 516 bytes",
+          "Incls_Terminate frees the scope object after its items",
+          "Include search uses plugin API/includeStackTOS and six-argument Windows helper for bare filenames",
+          "Deps_ChangeSpecialAccessPath preserves currentsrcfss and supports verbose messages",
+          "Deps_AddDependency takes an index pointer and updates it if discovery is needed",
+          "Dependency output exits(-23) on out of memory, instead of old longjmp path"
+        ]
+      },
+      "verification": {
+        "strict_exact_functions": 19,
+        "attempted_functions": 20,
+        "functions": [
+          {
+            "name": "Incls_Initialize",
+            "address": "0x43c7a0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Incls_Terminate",
+            "address": "0x43c800",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "IsSysIncl",
+            "address": "0x43c840",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "MakeInclFileSpec",
+            "address": "0x43c860",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "SameIncl",
+            "address": "0x43c890",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindOrAddGlobalInclPath",
+            "address": "0x43c8f0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "_FindFileInPath",
+            "address": "0x43c930",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindFileInPaths",
+            "address": "0x43c9b0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "AddFileToIncls",
+            "address": "0x43ca40",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Incls_FindFileInPaths",
+            "address": "0x43cbd0",
+            "exact": false,
+            "bytes_exact": false,
+            "fixups_exact": false
+          },
+          {
+            "name": "Deps_Initialize",
+            "address": "0x43cda0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Deps_Terminate",
+            "address": "0x43cdd0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Deps_ChangeSpecialAccessPath",
+            "address": "0x43cdf0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Deps_GetSpecialAccessPath",
+            "address": "0x43cf00",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "SetSpecialAccessPathFromIncludeStackTOS",
+            "address": "0x43cf10",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "FindDepFile",
+            "address": "0x43cfa0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "AddDepFile",
+            "address": "0x43cfe0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Deps_AddDependency",
+            "address": "0x43d030",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "EscapeName",
+            "address": "0x43d0d0",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          },
+          {
+            "name": "Deps_ListDependencies",
+            "address": "0x43d120",
+            "exact": true,
+            "bytes_exact": true,
+            "fixups_exact": true
+          }
+        ],
+        "data_bytes": 224,
+        "data_all_exact": true,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "3047",
+            "match_percent": 98.60921
+          },
+          ".data": {
+            "bytes": "200",
+            "match_percent": 100.0
+          },
+          ".rdata": {
+            "bytes": "16",
+            "match_percent": 100.0
+          },
+          ".bss": {
+            "bytes": "8",
+            "match_percent": 100.0
+          }
+        },
+        "complete": false,
+        "remaining": "Incls_FindFileInPaths: same size (463 bytes), changed register/stack allocation. Every branch/call and pointed value reviewed; no byte-exact claim. Filename register vs special path register is the main cause. Functionally equivalent on reviewed control/data flow; no executable runtime integration test.",
+        "encoding": "Source encodes as CP932; repository tools/check_sjis.py absent",
+        "source_sha256": "7941070bac0b6b45e0b8349194f3572369d5d86a71fa9be1fcc5e691bb618fee"
+      },
+      "functions": [
+        {
+          "name": "Incls_Initialize",
+          "address": "0x43c7a0",
+          "size": 86,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Incls_Terminate",
+          "address": "0x43c800",
+          "size": 51,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "IsSysIncl",
+          "address": "0x43c840",
+          "size": 19,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "MakeInclFileSpec",
+          "address": "0x43c860",
+          "size": 46,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "SameIncl",
+          "address": "0x43c890",
+          "size": 91,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "FindOrAddGlobalInclPath",
+          "address": "0x43c8f0",
+          "size": 52,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "_FindFileInPath",
+          "address": "0x43c930",
+          "size": 114,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "FindFileInPaths",
+          "address": "0x43c9b0",
+          "size": 134,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "AddFileToIncls",
+          "address": "0x43ca40",
+          "size": 399,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Incls_FindFileInPaths",
+          "address": "0x43cbd0",
+          "size": 463,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": false
+        },
+        {
+          "name": "Deps_Initialize",
+          "address": "0x43cda0",
+          "size": 34,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Deps_Terminate",
+          "address": "0x43cdd0",
+          "size": 18,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Deps_ChangeSpecialAccessPath",
+          "address": "0x43cdf0",
+          "size": 270,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Deps_GetSpecialAccessPath",
+          "address": "0x43cf00",
+          "size": 6,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "SetSpecialAccessPathFromIncludeStackTOS",
+          "address": "0x43cf10",
+          "size": 135,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "FindDepFile",
+          "address": "0x43cfa0",
+          "size": 64,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "AddDepFile",
+          "address": "0x43cfe0",
+          "size": 65,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Deps_AddDependency",
+          "address": "0x43d030",
+          "size": 146,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "EscapeName",
+          "address": "0x43d0d0",
+          "size": 76,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        },
+        {
+          "name": "Deps_ListDependencies",
+          "address": "0x43d120",
+          "size": 778,
+          "source": "src/GC_3_0a5_2/driver/CLDependencies.c",
+          "exact": true
+        }
+      ],
+      "data_evidence": [
+        {
+          "name": "@262",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00671f2c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@405",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00671f3c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@406",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00671f40",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@407",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671f44",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@408",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00671f50",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@409",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671f54",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@410",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00671f60",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@411",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00671f70",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@412",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x00671f84",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@437",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00671ec8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@438",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00671edc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@471",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x00671ee4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@516",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x00671ef4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@517",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x00671efc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@557",
+          "section": ".data",
+          "size": 44,
+          "method": "resolved function reference",
+          "address": "0x00671f00",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "__anonymous_section_35",
+          "section": ".rdata",
+          "size": 16,
+          "method": "resolved function reference (anonymous section)",
+          "address": "0x006475c8",
+          "bytes_exact": true,
+          "target_section": ".rdata",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_currentsrcfss",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d95a4",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_specialAccessPath",
+          "section": ".bss",
+          "size": 4,
+          "method": "named binding",
+          "address": "0x006d95a0",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "code_bytes": 3047,
+      "initialized_data_bytes": 200,
+      "rodata_bytes": 16,
+      "bss_bytes": 8,
+      "status": "attempted_equivalent",
+      "membership_reviewed": true,
+      "source_sha256": "7941070bac0b6b45e0b8349194f3572369d5d86a71fa9be1fcc5e691bb618fee",
+      "strict_exact_count": 19
     }
   },
   "ownership_review": {

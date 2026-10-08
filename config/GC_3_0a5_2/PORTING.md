@@ -62,6 +62,18 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLDependencies.c: reviewed equivalent nonmatch
+
+All twenty retained Windows functions are inventoried and reviewed; nineteen
+match exactly. Incls_FindFileInPaths remains a 463-byte equivalent nonmatch
+after compiler/source-shape attempts, chiefly register and stack allocation.
+Its full-TU code similarity is 98.60921%; all 200 initialized bytes, 16 read-only
+switch-table bytes, and eight BSS bytes match with exact fixups. GC3 uses native
+516-byte specs, new include-search behavior, saved currentsrcfss state, and a
+fatal allocation path during dependency output. The Mac QuickFindFileInIncls
+body is replaced by a six-argument Windows search helper whose original name
+remains unresolved. The source stays NonMatching as a complete TU.
+
 ## CLSegs.c: complete Windows unit
 
 All eight Windows functions match 642 code bytes and 76 initialized bytes.

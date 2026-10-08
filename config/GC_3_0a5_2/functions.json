@@ -4443,6 +4443,61 @@
     }
   },
   {
+    "name": "OS_LoadFileHandle",
+    "address": "0x42fb10",
+    "size": 161,
+    "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "identity_evidence": "FileHandles.c Mac STABS signatures, Windows contiguous native file-handle cluster and matching called API roles.",
+    "boundary_evidence": {
+      "method": "Reviewed original function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_WriteFileHandle",
+    "address": "0x42fbc0",
+    "size": 169,
+    "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "identity_evidence": "FileHandles.c Mac STABS signatures, Windows contiguous native file-handle cluster and matching called API roles.",
+    "boundary_evidence": {
+      "method": "Reviewed original function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_NewFileHandle",
+    "address": "0x42fc70",
+    "size": 181,
+    "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "identity_evidence": "FileHandles.c Mac STABS signatures, Windows contiguous native file-handle cluster and matching called API roles.",
+    "boundary_evidence": {
+      "method": "Reviewed original function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_LockFileHandle",
+    "address": "0x42fd30",
+    "size": 83,
+    "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "identity_evidence": "FileHandles.c Mac STABS signatures, Windows contiguous native file-handle cluster and matching called API roles.",
+    "boundary_evidence": {
+      "method": "Reviewed original function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OS_FreeFileHandle",
+    "address": "0x42fd90",
+    "size": 97,
+    "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+    "identity_evidence": "FileHandles.c Mac STABS signatures, Windows contiguous native file-handle cluster and matching called API roles.",
+    "boundary_evidence": {
+      "method": "Reviewed original function CFG and neighboring cluster",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_0041bcb0",
     "address": "0x0042fe20",
     "size": 54,

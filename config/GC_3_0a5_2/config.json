@@ -217,7 +217,8 @@
     "src/GC_3_0a5_2/backend/StackFrame.c",
     "src/GC_3_0a5_2/driver/StringExtras.c",
     "src/GC_3_0a5_2/OSLib/Generic.c",
-    "src/GC_3_0a5_2/driver/TextUtils.c"
+    "src/GC_3_0a5_2/driver/TextUtils.c",
+    "src/GC_3_0a5_2/OSLib/FileHandles.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3314,6 +3315,27 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/OSLib/FileHandles.c": {
+      "compiler": "cw94",
+      "include_dirs": [
+        "src/driver"
+      ],
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -3731,7 +3753,11 @@
     "src/GC_3_0a5_2/driver/CLTarg/Target_Free",
     "src/GC_3_0a5_2/driver/CLTarg/fn_004270b0",
     "src/GC_3_0a5_2/driver/CLTarg/Targets_Term",
-    "src/GC_3_0a5_2/driver/CLTarg/Target_Add"
+    "src/GC_3_0a5_2/driver/CLTarg/Target_Add",
+    "src/GC_3_0a5_2/OSLib/FileHandles/OS_WriteFileHandle",
+    "src/GC_3_0a5_2/OSLib/FileHandles/OS_NewFileHandle",
+    "src/GC_3_0a5_2/OSLib/FileHandles/OS_LockFileHandle",
+    "src/GC_3_0a5_2/OSLib/FileHandles/OS_FreeFileHandle"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4399,6 +4425,32 @@
       "_fn_004270d0": "0x4270d0",
       "_Targets_Term": "0x427120",
       "_Target_Add": "0x427150"
+    },
+    "src/GC_3_0a5_2/OSLib/FileHandles.c": {
+      "_OS_Open@12": "0x40fc10",
+      "_OS_Close@4": "0x40fe40",
+      "_OS_GetSize@8": "0x40fe60",
+      "_OS_Read@12": "0x40fdb0",
+      "_OS_Write@12": "0x40fca0",
+      "_OS_Delete@4": "0x40fef0",
+      "_OS_Create@8": "0x40fa10",
+      "_OS_NewHandle@8": "0x411c90",
+      "_OS_ResizeHandle@8": "0x411cc0",
+      "_OS_FreeHandle@4": "0x411d40",
+      "_OS_GetHandleSize@8": "0x411d80",
+      "_OS_ValidHandle@4": "0x411de0",
+      "_OS_LockHandle@4": "0x411d00",
+      "_OS_UnlockHandle@4": "0x411d30",
+      "_OS_CopyHandle@8": "0x417f20",
+      "_data_00710104": "0x710104",
+      "_OS_LoadFileHandle": "0x42fb10",
+      "_OS_WriteFileHandle": "0x42fbc0",
+      "_OS_NewFileHandle": "0x42fc70",
+      "_OS_LockFileHandle": "0x42fd30",
+      "_OS_FreeFileHandle": "0x42fd90",
+      "_OS_NewFileHandle@16": "0x42fc70",
+      "_OS_LockFileHandle@12": "0x42fd30",
+      "_OS_FreeFileHandle@4": "0x42fd90"
     }
   }
 }

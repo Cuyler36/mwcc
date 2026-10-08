@@ -17,6 +17,126 @@
   ],
   "units": [
     {
+      "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+      "original_filename": "FileHandles.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "OS_LoadFileHandle",
+          "address": "0x42fb10",
+          "size": 161,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_WriteFileHandle",
+          "address": "0x42fbc0",
+          "size": 169,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_NewFileHandle",
+          "address": "0x42fc70",
+          "size": 181,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_LockFileHandle",
+          "address": "0x42fd30",
+          "size": 83,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "OS_FreeFileHandle",
+          "address": "0x42fd90",
+          "size": 97,
+          "compiled_source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed original function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "OS_LoadFileHandle",
+          "mac_address": "0x00021918",
+          "linkage_names": [
+            "OS_LoadFileHandle"
+          ]
+        },
+        {
+          "name": "OS_WriteFileHandle",
+          "mac_address": "0x000219d4",
+          "linkage_names": [
+            "OS_WriteFileHandle"
+          ]
+        },
+        {
+          "name": "OS_NewFileHandle",
+          "mac_address": "0x00021ab8",
+          "linkage_names": [
+            "OS_NewFileHandle"
+          ]
+        },
+        {
+          "name": "OS_LockFileHandle",
+          "mac_address": "0x00021b78",
+          "linkage_names": [
+            "OS_LockFileHandle"
+          ]
+        },
+        {
+          "name": "OS_UnlockFileHandle",
+          "mac_address": "0x00021bf4",
+          "linkage_names": [
+            "OS_UnlockFileHandle"
+          ]
+        },
+        {
+          "name": "OS_FreeFileHandle",
+          "mac_address": "0x00021c40",
+          "linkage_names": [
+            "OS_FreeFileHandle"
+          ]
+        },
+        {
+          "name": "OS_GetFileHandleSpec",
+          "mac_address": "0x00021cc8",
+          "linkage_names": [
+            "OS_GetFileHandleSpec"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/OSLib/Generic.c",
       "original_filename": "Generic.c",
       "evidence": [
@@ -37680,65 +37800,6 @@
       "baseline_same_filename": []
     },
     {
-      "source": "FileHandles.c",
-      "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/FileHandles.c",
-      "mac_address": "0x00021918",
-      "line": 16583,
-      "functions": [
-        {
-          "name": "OS_LoadFileHandle",
-          "mac_address": "0x00021918",
-          "linkage_names": [
-            "OS_LoadFileHandle"
-          ]
-        },
-        {
-          "name": "OS_WriteFileHandle",
-          "mac_address": "0x000219d4",
-          "linkage_names": [
-            "OS_WriteFileHandle"
-          ]
-        },
-        {
-          "name": "OS_NewFileHandle",
-          "mac_address": "0x00021ab8",
-          "linkage_names": [
-            "OS_NewFileHandle"
-          ]
-        },
-        {
-          "name": "OS_LockFileHandle",
-          "mac_address": "0x00021b78",
-          "linkage_names": [
-            "OS_LockFileHandle"
-          ]
-        },
-        {
-          "name": "OS_UnlockFileHandle",
-          "mac_address": "0x00021bf4",
-          "linkage_names": [
-            "OS_UnlockFileHandle"
-          ]
-        },
-        {
-          "name": "OS_FreeFileHandle",
-          "mac_address": "0x00021c40",
-          "linkage_names": [
-            "OS_FreeFileHandle"
-          ]
-        },
-        {
-          "name": "OS_GetFileHandleSpec",
-          "mac_address": "0x00021cc8",
-          "linkage_names": [
-            "OS_GetFileHandleSpec"
-          ]
-        }
-      ],
-      "data_symbols": [],
-      "baseline_same_filename": []
-    },
-    {
       "source": "ErrMgr.c",
       "original_path": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/MacEmul/ErrMgr.c",
       "mac_address": "0x00026088",
@@ -70273,6 +70334,280 @@
       "encoding": "CP932 succeeds; repository tools/check_sjis.py absent.",
       "membership_reviewed": false,
       "strict_exact_count": 5
+    },
+    "src/GC_3_0a5_2/OSLib/FileHandles.c": {
+      "functions": [
+        {
+          "name": "OS_LoadFileHandle",
+          "address": "0x42fb10",
+          "size": 161,
+          "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "abi": "cdecl/4"
+        },
+        {
+          "name": "OS_WriteFileHandle",
+          "address": "0x42fbc0",
+          "size": 169,
+          "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "abi": "cdecl/4"
+        },
+        {
+          "name": "OS_NewFileHandle",
+          "address": "0x42fc70",
+          "size": 181,
+          "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "abi": "stdcall/16"
+        },
+        {
+          "name": "OS_LockFileHandle",
+          "address": "0x42fd30",
+          "size": 83,
+          "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "abi": "stdcall/12"
+        },
+        {
+          "name": "OS_FreeFileHandle",
+          "address": "0x42fd90",
+          "size": 97,
+          "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+          "abi": "stdcall/4"
+        }
+      ],
+      "source_bindings": {
+        "_OS_Open@12": "0x40fc10",
+        "_OS_Close@4": "0x40fe40",
+        "_OS_GetSize@8": "0x40fe60",
+        "_OS_Read@12": "0x40fdb0",
+        "_OS_Write@12": "0x40fca0",
+        "_OS_Delete@4": "0x40fef0",
+        "_OS_Create@8": "0x40fa10",
+        "_OS_NewHandle@8": "0x411c90",
+        "_OS_ResizeHandle@8": "0x411cc0",
+        "_OS_FreeHandle@4": "0x411d40",
+        "_OS_GetHandleSize@8": "0x411d80",
+        "_OS_ValidHandle@4": "0x411de0",
+        "_OS_LockHandle@4": "0x411d00",
+        "_OS_UnlockHandle@4": "0x411d30",
+        "_OS_CopyHandle@8": "0x417f20",
+        "_data_00710104": "0x710104",
+        "_OS_LoadFileHandle": "0x42fb10",
+        "_OS_WriteFileHandle": "0x42fbc0",
+        "_OS_NewFileHandle": "0x42fc70",
+        "_OS_LockFileHandle": "0x42fd30",
+        "_OS_FreeFileHandle": "0x42fd90",
+        "_OS_NewFileHandle@16": "0x42fc70",
+        "_OS_LockFileHandle@12": "0x42fd30",
+        "_OS_FreeFileHandle@4": "0x42fd90"
+      },
+      "recommended_settings": {
+        "compiler": "cw94",
+        "include_dirs": [
+          "src/driver"
+        ],
+        "flags": [
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-inline",
+          "auto",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly"
+        ]
+      },
+      "mac_checklist": [
+        {
+          "name": "OS_LoadFileHandle",
+          "mac_address": "0x00021918",
+          "mac_signature": "static int (FileHandle*)",
+          "windows": {
+            "name": "OS_LoadFileHandle",
+            "address": "0x42fb10",
+            "size": 161,
+            "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+            "abi": "cdecl/4"
+          },
+          "status": "reviewed semantic equivalence; temporary register nonmatch"
+        },
+        {
+          "name": "OS_WriteFileHandle",
+          "mac_address": "0x000219d4",
+          "mac_signature": "static int (FileHandle*)",
+          "windows": {
+            "name": "OS_WriteFileHandle",
+            "address": "0x42fbc0",
+            "size": 169,
+            "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+            "abi": "cdecl/4"
+          },
+          "status": "strict byte and PE-fixup exact"
+        },
+        {
+          "name": "OS_NewFileHandle",
+          "mac_address": "0x00021ab8",
+          "mac_signature": "int (OSSpec*,OSHandle*,Boolean,FileHandle*)",
+          "windows": {
+            "name": "OS_NewFileHandle",
+            "address": "0x42fc70",
+            "size": 181,
+            "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+            "abi": "stdcall/16"
+          },
+          "status": "strict byte and PE-fixup exact"
+        },
+        {
+          "name": "OS_LockFileHandle",
+          "mac_address": "0x00021b78",
+          "mac_signature": "int (FileHandle*,void**,unsigned long*)",
+          "windows": {
+            "name": "OS_LockFileHandle",
+            "address": "0x42fd30",
+            "size": 83,
+            "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+            "abi": "stdcall/12"
+          },
+          "status": "strict byte and PE-fixup exact"
+        },
+        {
+          "name": "OS_UnlockFileHandle",
+          "mac_address": "0x00021bf4",
+          "mac_signature": "int (FileHandle*)",
+          "windows": null,
+          "status": "unresolved Windows counterpart; not emitted"
+        },
+        {
+          "name": "OS_FreeFileHandle",
+          "mac_address": "0x00021c40",
+          "mac_signature": "int (FileHandle*)",
+          "windows": {
+            "name": "OS_FreeFileHandle",
+            "address": "0x42fd90",
+            "size": 97,
+            "source": "src/GC_3_0a5_2/OSLib/FileHandles.c",
+            "abi": "stdcall/4"
+          },
+          "status": "strict byte and PE-fixup exact"
+        },
+        {
+          "name": "OS_GetFileHandleSpec",
+          "mac_address": "0x00021cc8",
+          "mac_signature": "void (FileHandle*,OSSpec*)",
+          "windows": null,
+          "status": "unresolved Windows counterpart; not emitted"
+        }
+      ],
+      "membership_proof": {
+        "mac_source": "/Volumes/Macintosh_HD/3.0PPC/command_line/CmdLine/Src/OSLib/FileHandles.c",
+        "mac_so_line": 16583,
+        "mac_members": 7,
+        "windows_evidenced_members": 5,
+        "region": [
+          "0x42fb10",
+          "0x42fdf1"
+        ],
+        "discovery": "Static Capstone references to native loaded/changed/writeable offsets20c/20d/20e reveal contiguous five-body cluster after FileTypes and before Callback support. Canonical Mac roles agree with handle/load/write/create call chains and flags. Existing source inventory had zero Windows rows; all five mappings newly recovered.",
+        "boundary": "Final Free body ends42fdf1; next function42fe00 verifies plugin context CWIE signature at418 and callback bodies follow42fe20.",
+        "unresolved": [
+          "OS_UnlockFileHandle",
+          "OS_GetFileHandleSpec"
+        ],
+        "unresolved_evidence": "No separate body slot in this recovered cluster. No whole-binary absence or inlining conclusion, no invented stubs."
+      },
+      "native_layout": {
+        "OSSpec": 516,
+        "OSPathSpec": 260,
+        "OSNameSpec": 256,
+        "OSHandle_MemBuffer": 8,
+        "FileHandle": 528,
+        "offsets": {
+          "spec": 0,
+          "hand": 516,
+          "loaded": 524,
+          "changed": 525,
+          "writeable": 526
+        },
+        "mac_difference": "Mac FileHandle336 bytes has spec320/handle12; Windows uses516/8. Recovered code directly proves Windows offsets."
+      },
+      "semantic_review": {
+        "OS_LoadFileHandle": "Clears loaded; open read-only, get size, resize, lock/read, set loaded and clear changed only on success; unlock after attempted read; close after successful open; retain error. Compiled161bytes, identical instructions/control-flow except local address temporary ECX vs EDX at GetSize.",
+        "OS_WriteFileHandle": "Skip only when both loaded and changed clear; delete/create then open mode2, get size, lock/write, clear changed on success, unlock/close. Original early GetHandleSize failure returns without close; preserved.",
+        "OS_NewFileHandle": "Reject nonwriteable supplied source with12; copy516byte spec and writeable; source branch copies handle and sets changed/loaded; else allocate zero-size handle then load. All paths strict exact.",
+        "OS_LockFileHandle": "Set output size0; invalid handle returns8; lock and query size; ignores GetHandleSize return as original. Strict exact.",
+        "OS_FreeFileHandle": "Write dirty writable handle first; propagate write/free errors; invalid handle8; successful free clears loaded. Strict exact."
+      },
+      "data_review": {
+        "owned_data_bytes": 0,
+        "mac_explicit_data_symbols": [],
+        "coff_owned_data": [],
+        "external_data": {
+          "data_00710104": "Address710104 passed to OS_Create as file-type pointer. Original symbol name unresolved. External declaration only; no allocation or local ownership claimed."
+        },
+        "unknowns": "Two unresolved Mac members may carry additional Windows code/data; TU is not complete."
+      },
+      "verification": {
+        "strict_exact_functions": 4,
+        "attempted_windows_functions": 5,
+        "code_bytes": 691,
+        "data_bytes": 0,
+        "all_fixups_exact": true,
+        "unresolved_relocations": 0,
+        "objdiff_sections": {
+          ".text": {
+            "bytes": "691",
+            "match_percent": 99.95604
+          }
+        },
+        "load_differing_bytes": [
+          {
+            "offset": 49,
+            "address": "0x42fb41",
+            "target": "0x4c",
+            "compiled": "0x54"
+          },
+          {
+            "offset": 52,
+            "address": "0x42fb44",
+            "target": "0x51",
+            "compiled": "0x52"
+          }
+        ],
+        "profile_results": [
+          {
+            "profile": "filehandles-speed-intrinsics",
+            "compiled": true,
+            "exact_count": 4
+          },
+          {
+            "profile": "filehandles-speed-nointrinsics",
+            "compiled": true,
+            "exact_count": 4
+          },
+          {
+            "profile": "filehandles-space-intrinsics",
+            "compiled": true,
+            "exact_count": 0
+          },
+          {
+            "profile": "filehandles-space-nointrinsics",
+            "compiled": true,
+            "exact_count": 0
+          }
+        ],
+        "declaration_probes": "Six declaration-order probes made no improvement.",
+        "complete": false,
+        "original_application_executed": false,
+        "encoding": "Direct CP932 encode succeeds; repository tools/check_sjis.py absent",
+        "source_sha256": "063cd16b6a6b8f0b02095afddd897a30a9dc456494b4c72a8dfc38f69244c5f5"
+      },
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "strict_exact_count": 4,
+      "source_sha256": "063cd16b6a6b8f0b02095afddd897a30a9dc456494b4c72a8dfc38f69244c5f5"
     }
   },
   "ownership_review": {

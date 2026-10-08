@@ -57,7 +57,7 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-The current inventory has 264 source views: 216 compiled files and 48
+The current inventory has 265 source views: 217 compiled files and 48
 original-only units. All twenty direct assertion ownership conflicts are now
 split physically. CFunc.cpp and CException.cpp retain provisional C language
 mode while imported pointer conversions are ported. CMiddleLayer.c,
@@ -74,6 +74,18 @@ span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## OSLib/FileHandles.c: recovered file-handle unit
+
+Five native Windows bodies are recovered from the seven-member Mac source:
+OS_LoadFileHandle, OS_WriteFileHandle, OS_NewFileHandle, OS_LockFileHandle and
+OS_FreeFileHandle. Four pass strict byte/fixup checks; the loader differs only
+in the temporary register holding the size-output address. Four compiler
+profiles and six declaration-order probes did not improve that match.
+The native record is 528 bytes: 516-byte spec, eight-byte handle and three
+state flags at 0x20c..0x20e. All 691 original code bytes compare at 99.95604%,
+all fixups match, and there is no owned data. OS_UnlockFileHandle and
+OS_GetFileHandleSpec remain unmapped; no placeholder implementations are added.
 
 ## CLTarg.c: native target-list port
 

@@ -63,7 +63,7 @@
     "src/driver/CLStaticMain.c",
     "src/driver/CLStaticPlugins.c",
     "src/driver/CLTarg.c",
-    "src/driver/CLToolExec.c",
+    "src/GC_3_0a5_2/driver/CLToolExec.c",
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "src/driver/CWParserPluginsPrivate.c",
     "src/driver/CWPluginsPrivate.c",
@@ -1173,25 +1173,6 @@
       ]
     },
     "src/driver/CLTarg.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLToolExec.c": {
       "compiler": "cw94",
       "flags": [
         "-O4",
@@ -3314,6 +3295,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLToolExec.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3720,7 +3720,13 @@
     "src/GC_3_0a5_2/driver/CLIO/InitWorking",
     "src/GC_3_0a5_2/driver/CLIO/ProgressFunction",
     "src/GC_3_0a5_2/driver/CLIO/TermWorking",
-    "src/GC_3_0a5_2/driver/CLIO/CheckForUserBreak"
+    "src/GC_3_0a5_2/driver/CLIO/CheckForUserBreak",
+    "src/GC_3_0a5_2/driver/CLToolExec/AppendArgumentList",
+    "src/GC_3_0a5_2/driver/CLToolExec/CopyArgumentList",
+    "src/GC_3_0a5_2/driver/CLToolExec/FreeArgumentList",
+    "src/GC_3_0a5_2/driver/CLToolExec/SetupLinkerCommandLine",
+    "src/GC_3_0a5_2/driver/CLToolExec/SetupTemporaries",
+    "src/GC_3_0a5_2/driver/CLToolExec/DeleteTemporaries"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -4322,6 +4328,49 @@
       "_ioInHelp": "0x6d6bf8",
       "_ioPiping": "0x6d6bf9",
       "_msgnames": "0x66b0f4"
+    },
+    "src/GC_3_0a5_2/driver/CLToolExec.c": {
+      "_fflush": "0x40f2b0",
+      "_xmalloc@8": "0x426300",
+      "_xrealloc@12": "0x4263e0",
+      "_xstrdup@4": "0x426460",
+      "_xfree@4": "0x426490",
+      "_default_target": "0x71099c",
+      "_plugin_requests": "0x716c20",
+      "_plugin_request_count": "0x716d10",
+      "_tool_argument_sets": "0x71007c",
+      "_data_00541b22": "0x71023e",
+      "_DAT_00541b28": "0x710244",
+      "_data_0065b6ee": "0x65b6ee",
+      "_data_00541b26": "0x710242",
+      "_data_00710669": "0x710669",
+      "_data_005880e0": "0x716d9c",
+      "_linker_tool_name": "0x71039e",
+      "_program_name": "0x702f2c",
+      "_CLFiles_GetIndex": "0x436850",
+      "_CLFiles_FindFileByIndex": "0x436790",
+      "_CLFileOps_SetupOutputPath": "0x428b00",
+      "_fn_00419e90": "0x429680",
+      "_CLFileOps_FindExecutable@8": "0x417d60",
+      "_OS_SpecToString@12": "0x4111f0",
+      "_OS_Delete@4": "0x40fef0",
+      "_OS_Execute@24": "0x410160",
+      "_OS_GetErrText@4": "0x40f880",
+      "_fn_004050e0@12": "0x424bb0",
+      "_CLPlugins_GetName": "0x415090",
+      "_CLMain_AppendEnabledCommandLineOptions": "0x408840",
+      "_CLReport": "0x414a60",
+      "_CLReportError": "0x414a00",
+      "_CLReportWarning": "0x414a30",
+      "_CLIO_FormatAndDispatchText": "0x419d90",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_AppendArgumentList": "0x423650",
+      "_CopyArgumentList": "0x423690",
+      "_FreeArgumentList": "0x423720",
+      "_SetupLinkerCommandLine": "0x423750",
+      "_SetupTemporaries": "0x423ab0",
+      "_DeleteTemporaries": "0x423b50",
+      "_ExecuteLinker": "0x423c30"
     }
   }
 }

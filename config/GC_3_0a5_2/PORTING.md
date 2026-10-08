@@ -75,6 +75,18 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLToolExec.c: reviewed linker-driver equivalent nonmatch
+
+All seven Mac-named Windows functions are reconstructed. Six pass strict byte
+and loader-fixup checks. ExecuteLinker remains nonmatching after 19 recorded
+source experiments; its original branch, memory and call behavior was reviewed
+through executable lookup, nmw-prefixed/fallback tool names, explicit overrides,
+argv/env ownership, dry-run printing, distinct execution/exit-code reports and
+cleanup. Native file specs are 516 bytes. The command trailer is two newlines.
+The complete original code inventory totals 2,714 bytes at 80.53141%; all 184
+initialized data bytes match. Static review found no unported behavior, but
+execution testing was not performed and strict completion remains false.
+
 ## CLIO.c and TextUtils.c: reviewed native diagnostic and string ports
 
 CLIO.c now has all 42 emitted Windows cluster bodies mapped and reviewed,

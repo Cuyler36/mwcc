@@ -1390,5 +1390,33 @@
   "fn_004151e0": {
     "name": "TermWorking",
     "source": "src/GC_3_0a5_2/driver/CLIO.c"
+  },
+  "CLToolExec_AppendArgument": {
+    "name": "AppendArgumentList",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "append_command_line_arguments": {
+    "name": "CopyArgumentList",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "free_items": {
+    "name": "FreeArgumentList",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "build_tool_command_line": {
+    "name": "SetupLinkerCommandLine",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "CLToolExec_SetTemporaryOutputMask": {
+    "name": "SetupTemporaries",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "CLToolExec_DeleteTemporaryOutputs": {
+    "name": "DeleteTemporaries",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+  },
+  "CLToolExec_ExecuteLinker": {
+    "name": "ExecuteLinker",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c"
   }
 }

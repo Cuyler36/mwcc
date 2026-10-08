@@ -4950,6 +4950,155 @@
       "status": "exact"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+      "original_filename": "CLToolExec.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "AppendArgumentList",
+          "address": "0x423650",
+          "size": 59,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CopyArgumentList",
+          "address": "0x423690",
+          "size": 132,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "FreeArgumentList",
+          "address": "0x423720",
+          "size": 47,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "SetupLinkerCommandLine",
+          "address": "0x00423750",
+          "size": 859,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x004237c0"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+        },
+        {
+          "name": "SetupTemporaries",
+          "address": "0x423ab0",
+          "size": 146,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "DeleteTemporaries",
+          "address": "0x423b50",
+          "size": 211,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "ExecuteLinker",
+          "address": "0x00423c30",
+          "size": 1260,
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00423e38"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/driver/CLToolExec.c"
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "AppendArgumentList",
+          "mac_address": "0x0000daac",
+          "linkage_names": [
+            "AppendArgumentList"
+          ]
+        },
+        {
+          "name": "CopyArgumentList",
+          "mac_address": "0x0000db34",
+          "linkage_names": [
+            "CopyArgumentList"
+          ]
+        },
+        {
+          "name": "FreeArgumentList",
+          "mac_address": "0x0000dc08",
+          "linkage_names": [
+            "FreeArgumentList"
+          ]
+        },
+        {
+          "name": "SetupLinkerCommandLine",
+          "mac_address": "0x0000dc60",
+          "linkage_names": [
+            "SetupLinkerCommandLine"
+          ]
+        },
+        {
+          "name": "SetupTemporaries",
+          "mac_address": "0x0000dfd0",
+          "linkage_names": [
+            "SetupTemporaries"
+          ]
+        },
+        {
+          "name": "DeleteTemporaries",
+          "mac_address": "0x0000e0a8",
+          "linkage_names": [
+            "DeleteTemporaries"
+          ]
+        },
+        {
+          "name": "ExecuteLinker",
+          "mac_address": "0x0000e198",
+          "linkage_names": [
+            "ExecuteLinker"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
       "original_filename": "CLWriteObjectFile.c",
       "evidence": [
@@ -20311,155 +20460,6 @@
           "mac_address": "0x00016acc",
           "linkage_names": [
             "Target_Add"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLToolExec.c",
-      "original_filename": "CLToolExec.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Windows assertion/file-line diagnostic",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "CLToolExec_AppendArgument",
-          "address": "0x00423650",
-          "size": 59,
-          "compiled_source": "src/driver/CLToolExec.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "append_command_line_arguments",
-          "address": "0x00423690",
-          "size": 132,
-          "compiled_source": "src/driver/CLToolExec.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "free_items",
-          "address": "0x00423720",
-          "size": 47,
-          "compiled_source": "src/driver/CLToolExec.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "build_tool_command_line",
-          "address": "0x00423750",
-          "size": 859,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x004237c0"
-          ],
-          "compiled_source": "src/driver/CLToolExec.c"
-        },
-        {
-          "name": "CLToolExec_SetTemporaryOutputMask",
-          "address": "0x00423ab0",
-          "size": 146,
-          "compiled_source": "src/driver/CLToolExec.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLToolExec_DeleteTemporaryOutputs",
-          "address": "0x00423b50",
-          "size": 211,
-          "compiled_source": "src/driver/CLToolExec.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLToolExec_ExecuteLinker",
-          "address": "0x00423c30",
-          "size": 1260,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00423e38"
-          ],
-          "compiled_source": "src/driver/CLToolExec.c"
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "AppendArgumentList",
-          "mac_address": "0x0000daac",
-          "linkage_names": [
-            "AppendArgumentList"
-          ]
-        },
-        {
-          "name": "CopyArgumentList",
-          "mac_address": "0x0000db34",
-          "linkage_names": [
-            "CopyArgumentList"
-          ]
-        },
-        {
-          "name": "FreeArgumentList",
-          "mac_address": "0x0000dc08",
-          "linkage_names": [
-            "FreeArgumentList"
-          ]
-        },
-        {
-          "name": "SetupLinkerCommandLine",
-          "mac_address": "0x0000dc60",
-          "linkage_names": [
-            "SetupLinkerCommandLine"
-          ]
-        },
-        {
-          "name": "SetupTemporaries",
-          "mac_address": "0x0000dfd0",
-          "linkage_names": [
-            "SetupTemporaries"
-          ]
-        },
-        {
-          "name": "DeleteTemporaries",
-          "mac_address": "0x0000e0a8",
-          "linkage_names": [
-            "DeleteTemporaries"
-          ]
-        },
-        {
-          "name": "ExecuteLinker",
-          "mac_address": "0x0000e198",
-          "linkage_names": [
-            "ExecuteLinker"
           ]
         }
       ],
@@ -52874,7 +52874,7 @@
       }
     },
     "src/driver/CLToolExec.c": {
-      "status": "unattempted",
+      "status": "superseded_import",
       "membership_reviewed": false,
       "compiler_experiments": {
         "scope": "Compiler-profile coverage only; not a functional-equivalence or TU-completion result.",
@@ -53003,7 +53003,8 @@
           "space-nointrinsics": "2059256268238f07c99f9e3c6e6d0f8da559b391862f8c84ce7ace4312559ee6",
           "space-intrinsics": "825625738f82ba68d2e99e4e11a2bcf83313775f0be08fa6707dbe3af0c70be1"
         }
-      }
+      },
+      "superseded_by": "src/GC_3_0a5_2/driver/CLToolExec.c"
     },
     "src/driver/CWParserPluginsPrivate.c": {
       "status": "unattempted",
@@ -69291,6 +69292,629 @@
         "_ioPiping": "0x6d6bf9",
         "_msgnames": "0x66b0f4"
       }
+    },
+    "src/GC_3_0a5_2/driver/CLToolExec.c": {
+      "source": "src\\GC_3_0a5_2\\driver\\CLToolExec.c",
+      "source_sha256": "e041969cfc8ba35e276b5d435c2aeb249d66cf45d2dde7d010c30efc6625aa08",
+      "status": "attempted_equivalent",
+      "functions": [
+        {
+          "name": "AppendArgumentList",
+          "address": "0x423650",
+          "size": 59,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 59,
+          "baseline_name": "CLToolExec_AppendArgument",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "CopyArgumentList",
+          "address": "0x423690",
+          "size": 132,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 132,
+          "baseline_name": "append_command_line_arguments",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "FreeArgumentList",
+          "address": "0x423720",
+          "size": 47,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 47,
+          "baseline_name": "free_items",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "SetupLinkerCommandLine",
+          "address": "0x423750",
+          "size": 859,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 859,
+          "baseline_name": "build_tool_command_line",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "SetupTemporaries",
+          "address": "0x423ab0",
+          "size": 146,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 146,
+          "baseline_name": "CLToolExec_SetTemporaryOutputMask",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "DeleteTemporaries",
+          "address": "0x423b50",
+          "size": 211,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": true,
+          "compiled_size": 211,
+          "baseline_name": "CLToolExec_DeleteTemporaryOutputs",
+          "review_status": "strict_exact"
+        },
+        {
+          "name": "ExecuteLinker",
+          "address": "0x423c30",
+          "size": 1260,
+          "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
+          "exact": false,
+          "compiled_size": 1252,
+          "baseline_name": "CLToolExec_ExecuteLinker",
+          "review_status": "reviewed_equivalent_nonmatch"
+        }
+      ],
+      "baseline_aliases": {
+        "CLToolExec_AppendArgument": "AppendArgumentList",
+        "append_command_line_arguments": "CopyArgumentList",
+        "free_items": "FreeArgumentList",
+        "build_tool_command_line": "SetupLinkerCommandLine",
+        "CLToolExec_SetTemporaryOutputMask": "SetupTemporaries",
+        "CLToolExec_DeleteTemporaryOutputs": "DeleteTemporaries",
+        "CLToolExec_ExecuteLinker": "ExecuteLinker"
+      },
+      "binding_policy": "All probe bindings are source-scoped. Do not globally alias private static names or historical baseline names. Final probe contains no manual generated-local override or symbol renaming.",
+      "source_bindings": {
+        "_fflush": "0x40f2b0",
+        "_xmalloc@8": "0x426300",
+        "_xrealloc@12": "0x4263e0",
+        "_xstrdup@4": "0x426460",
+        "_xfree@4": "0x426490",
+        "_default_target": "0x71099c",
+        "_plugin_requests": "0x716c20",
+        "_plugin_request_count": "0x716d10",
+        "_tool_argument_sets": "0x71007c",
+        "_data_00541b22": "0x71023e",
+        "_DAT_00541b28": "0x710244",
+        "_data_0065b6ee": "0x65b6ee",
+        "_data_00541b26": "0x710242",
+        "_data_00710669": "0x710669",
+        "_data_005880e0": "0x716d9c",
+        "_linker_tool_name": "0x71039e",
+        "_program_name": "0x702f2c",
+        "_CLFiles_GetIndex": "0x436850",
+        "_CLFiles_FindFileByIndex": "0x436790",
+        "_CLFileOps_SetupOutputPath": "0x428b00",
+        "_fn_00419e90": "0x429680",
+        "_CLFileOps_FindExecutable@8": "0x417d60",
+        "_OS_SpecToString@12": "0x4111f0",
+        "_OS_Delete@4": "0x40fef0",
+        "_OS_Execute@24": "0x410160",
+        "_OS_GetErrText@4": "0x40f880",
+        "_fn_004050e0@12": "0x424bb0",
+        "_CLPlugins_GetName": "0x415090",
+        "_CLMain_AppendEnabledCommandLineOptions": "0x408840",
+        "_CLReport": "0x414a60",
+        "_CLReportError": "0x414a00",
+        "_CLReportWarning": "0x414a30",
+        "_CLIO_FormatAndDispatchText": "0x419d90",
+        "_CLIO_ReportAssertionFailure": "0x42ddb0",
+        "_AppendArgumentList": "0x423650",
+        "_CopyArgumentList": "0x423690",
+        "_FreeArgumentList": "0x423720",
+        "_SetupLinkerCommandLine": "0x423750",
+        "_SetupTemporaries": "0x423ab0",
+        "_DeleteTemporaries": "0x423b50",
+        "_ExecuteLinker": "0x423c30"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@266",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066dcc8",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@267",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066dcd4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@268",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066dca4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@269",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066dcdc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@270",
+          "section": ".data",
+          "size": 12,
+          "method": "resolved function reference",
+          "address": "0x0066dcfc",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@271",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd08",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@272",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd0c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@273",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd10",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@274",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd14",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@275",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd18",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@276",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066dd1c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@277",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066dd24",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@278",
+          "section": ".data",
+          "size": 8,
+          "method": "resolved function reference",
+          "address": "0x0066dd34",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@279",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd3c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@280",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dd40",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@365",
+          "section": ".data",
+          "size": 16,
+          "method": "resolved function reference",
+          "address": "0x0066dcb4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@366",
+          "section": ".data",
+          "size": 24,
+          "method": "resolved function reference",
+          "address": "0x0066dc8c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@367",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066dcc4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "2714",
+          "match_percent": 80.53141
+        },
+        {
+          "name": ".data",
+          "size": "184",
+          "match_percent": 100.0
+        }
+      ],
+      "compiler": "build/compilers/cw94/mwcc.exe",
+      "flags": "-c -O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+      "compiler_experiments": {
+        "configured_source_compiles": 4,
+        "declaration_variants": 11,
+        "equivalent_control_structure_variants": 5,
+        "return_lifetime_variants": 3,
+        "profile_attempts": "CW94 speed+intrinsics resolved; CW94 speed+nointrinsics compiled but resolver stopped at unbound_strlen. pro8/pro7 profiles were planned in ignored script but NOT reached and are NOT claimed tested.",
+        "results": {
+          "declaration": [
+            {
+              "variant": "result_at_0",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_1",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_2",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_3",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_4",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_5",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_6",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_7",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_8",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_9",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "result_at_10",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            }
+          ],
+          "structure": [
+            {
+              "variant": "combined",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "assignment",
+              "size": 1236,
+              "score": 0.5427286356821589,
+              "exact": false
+            },
+            {
+              "variant": "or_assignment",
+              "size": 1236,
+              "score": 0.5405405405405406,
+              "exact": false
+            },
+            {
+              "variant": "if_else",
+              "size": 1236,
+              "score": 0.5405405405405406,
+              "exact": false
+            },
+            {
+              "variant": "direct",
+              "size": 1236,
+              "score": 0.5405405405405406,
+              "exact": false
+            }
+          ],
+          "init": [
+            {
+              "variant": "early_ret",
+              "size": 1276,
+              "score": 0.5357142857142857,
+              "exact": false
+            },
+            {
+              "variant": "shared_ret_found",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            },
+            {
+              "variant": "ifelse_print",
+              "size": 1252,
+              "score": 0.5394932935916542,
+              "exact": false
+            }
+          ]
+        },
+        "remaining": "No experiment produced a strict ExecuteLinker match. No target application was executed."
+      },
+      "native_ABI": {
+        "OSSpec": {
+          "size": 516,
+          "directory260": 0,
+          "name256": 260
+        },
+        "File": {
+          "packing": 1,
+          "inputName256": "0x1c",
+          "objectName256": "0x11c",
+          "nameFlag": "0x21e",
+          "sourcePath516": "0x21f",
+          "outputPath516": "0x423",
+          "outputMask16": "0x628",
+          "onDiskMask16": "0x62a",
+          "temporaryOutputMask16": "0x62c",
+          "inputArgumentMask16": "0x640",
+          "outputArgumentMask16": "0x642"
+        },
+        "Target": {
+          "settings_pointer": "0x10",
+          "files": "0x2c"
+        },
+        "Settings": {
+          "firstFile516": "0xe"
+        },
+        "ToolRequest": {
+          "size": 18,
+          "tag": 0,
+          "flags": 8
+        },
+        "CWCommandLineArgs": {
+          "size": 12,
+          "argc": 0,
+          "argv": 4,
+          "envp": 8
+        },
+        "calls": "Allocation wrappers stdcall; OS_Execute stdcall24; CLFileOps_FindExecutable stdcall8; OS_SpecToString stdcall12; OS_Delete/OS_GetErrText stdcall4; SetupOutputPath cdecl3 args. Native output spec conversion replaces baseline MacSpecs conversion."
+      },
+      "membership": {
+        "Windows": 7,
+        "Mac_explicit_STABS": 7,
+        "canonical_names": "All7 names recovered from explicit CLToolExec.c SO/FUN block. Lowercase f marks CopyArgumentList/FreeArgumentList/SetupLinkerCommandLine static.",
+        "Windows_cluster": "423650..42411c, trailing4NOP before nextTU424120. All7 match observed order and call structure. No extra retained or removed function is claimed.",
+        "data": "18 literal objects total184B writable.data, all bytes/fixups exact. No emittedBSS/rodata or private named static data. Includes -o, pre/post/linker names, nmw prefix, fallback substrings, Link insertion, command formats and double-newline trailer.",
+        "evidence": "build/toolexec-stabs.txt; build/toolexec-retail.txt; direct PE byte read of66dd40 confirms newline,newline,NUL,NUL."
+      },
+      "semantic_review": {
+        "AppendArgumentList": "Reallocates storage to(argc+2)*4 with label command-line arguments. Duplicates str using xstrdup@4, increments argc, writes the prior slot. Does not append the terminator itself; caller later writes it. Exact bytes and fixups.",
+        "CopyArgumentList": "Static original function. Starting total is *Argc if supplied, otherwise0; reallocates(total+argc+1)*4. If argv nonNULL, duplicates argc entries, incrementing total. Always writes final NULL; updates *Argc only when supplied. Returns1. Negative argc and NULL argv behavior remain unchanged. Exact bytes and fixups.",
+        "FreeArgumentList": "Static original function. Walks untilNULL, calls xfree@4 on each string, then xfree@4 on the vector, returns1. No extra NULL-vector guard. Exact bytes and fixups.",
+        "SetupLinkerCommandLine": "Static original function. Scans packed18B plugin request records for tagLink and equal flags masked0x48000000, asserts x<numPlugins at89. Initializes argc1/argv8B; appends enabled options408840. Copies baseargs excluding original argv[0] and duplicates env vector. For no explicit file and non-postlink, iterates target files2c: input mask2 adds inputName1c; output mask2 requires setup(file,2,1) and429680 before adding output423, otherwise returns0. For explicit file, grows argv by one spare slot, adds input/output names where enabled; output failure is ignored in this branch. Additional option condition is global65b6ee bit4, outputArgumentMask bit1, byte21e, nonempty objectName11c, setup(file,4,1) success: appends -o and output spec string. For postlink with no file, appends target.settings+e native spec string. Ends argv[argc]=NULL, returns1. Exact bytes and fixups.",
+        "SetupTemporaries": "For each target file: outputArgumentMask642 bit2 enabled, global71023e bit2 clear, outputMask628 bit2 clear. If keep-output byte710669 is0, sets temporaryOutputMask62c bit2; otherwise sets outputMask628 bit2. Returns1. Exact bytes and fixups.",
+        "DeleteTemporaries": "For each target file: requires outputArgumentMask642 bit2, temporaryOutputMask62c bit2, onDiskMask62a bit2. Calls setup(file,2,0) and ignores result. If signed16verbosity>1, report19(path). Calls OS_Delete@4(outputPath423), ignores error, clears temporary and onDisk bits2, returns1. Exact bytes and fixups.",
+        "ExecuteLinker": {
+          "status": "Reviewed equivalent nonmatch, not strict exact",
+          "original_size": 1260,
+          "compiled_size": 1252,
+          "objdiff_match_percent": 58.06528,
+          "differences": "Control-flow block ordering, register assignment, alignment and conditional print-call construction. All original input conditions, writes, allocation sizes, external call targets, report IDs, argument vectors, environment, filename transformations and cleanup paths are represented. No semantic stub remains.",
+          "branch_and_memory_review": [
+            {
+              "original": "423c3c..423c47 / cold assertion 423e27..423e40",
+              "condition": "flags bit1 clear",
+              "behavior": "Reports assertion expression dropinflags & isExecutableTool, CLToolExec.c line266, then continues. No early failure added."
+            },
+            {
+              "original": "423c4d..423c96",
+              "condition": "message selection",
+              "behavior": "Initializes command.envp=NULL, argc=0, argv=NULL. Selects pre-linker if0x08000000, else post-linker if0x40000000, else linker."
+            },
+            {
+              "original": "423c9b..423cc8 / 423e50..423eab",
+              "condition": "executable name override and nmw prefix",
+              "behavior": "Gets plugin name via415090. For ordinary linker with neither0x48000000 bit and nonempty linker_tool_name71039e, selects explicit override and skips nmw lookup. Otherwise compares first3 program_name bytes against nmw using424bb0; when equal, writes fallbackName[0]=n and strncpy254 to fallbackName+1, searches it, and marks found on success. No additional terminator write is introduced."
+            },
+            {
+              "original": "423ccd..423cd7 / 423eb0..423ec3",
+              "condition": "ordinary executable lookup",
+              "behavior": "If prefix lookup has not succeeded, searches selected toolName. Success proceeds to command construction; failure enters derived-name fallback. found state has the same outcomes although compiled block ordering differs."
+            },
+            {
+              "original": "423cd9..423d26 / 423ec8..42400d",
+              "condition": "derived-name fallback",
+              "behavior": "Copies full program_name into256B cname and lowercases each signed char through tolower42ce00. Searches cc, then pas, then asm. For pas/asm, memmove(ptr+2,ptr+3,strlen(ptr)-3), terminates at new strlen-1; replaces first2 bytes with ld. If none found, searches mwc, shifts suffix at+2 right3 by strlen(suffix) bytes, then copies four bytes Link at+2. Preserves original copy lengths and missing extra bounds/termination checks."
+            },
+            {
+              "original": "423ef2..423f3f / 424012..42404d",
+              "condition": "fallback executable lookup and reporting",
+              "behavior": "On derived-name success adopts cname as toolName. If explicit linker override is nonempty, reports warning66 with original override and always report65 with resolved fallback/program_name. Otherwise report65 requires verbosity. Failure reports error66(message, selected original name), returns0 before command allocation, and does not run cleanup on unallocated vectors."
+            },
+            {
+              "original": "423d30..423d84",
+              "condition": "successful executable resolution",
+              "behavior": "Sets result1; calls SetupLinkerCommandLine(flags,file,&command) and deliberately ignores its result, matching original. Converts native516B toolPath through OS_SpecToString@12 into shared716d9c, duplicates string with xstrdup@4 into argv[0], writes argv[argc]=NULL."
+            },
+            {
+              "original": "423d8b..423da0 / 424050..4240ae",
+              "condition": "verbosity or dry-run enabled",
+              "behavior": "Prints exact header newline+Command line:+newline. Iterates signed index<argc while argv[index] nonNULL. Uses quoted format for arguments containing ASCIIspace, ordinary format otherwise; prints exact double-newline trailer. Source conditional formatting expression is equivalent to original shared call block; printed text and argument order are the same."
+            },
+            {
+              "original": "423da6..423dc4 / 4240b3..4240d3",
+              "condition": "flush and execution announcement",
+              "behavior": "Always fflush(stdout65a638), fflush(stderr65a68c). If signed16 verbosity710244 nonzero, report67(message, native tool path string)."
+            },
+            {
+              "original": "423dca..423e22 / 4240d8..4240f3",
+              "condition": "dry-run byte710242 is zero",
+              "behavior": "Calls OS_Execute@24 with native toolPath, argv, envp, stdoutfile, stderrfile, &exitcode. Nonzero execution error calls OS_GetErrText@4 then report error68(message,argv[0],detail), sets result0. Successful execution with nonzero32bit exitcode reports error69(message,argv[0],exitcode), sets result0. Zero status preserves result1. Dry-run skips execution and preserves result1."
+            },
+            {
+              "original": "4240f5..42411b",
+              "condition": "normal cleanup",
+              "behavior": "Calls FreeArgumentList(argv), then FreeArgumentList(envp), returns result. Both lists are allocated/null-terminated by Setup/Copy; FreeArgumentList itself assumes nonNULL list pointer, which is preserved."
+            }
+          ],
+          "compatibility_cases": [
+            "Executable-tool flag clear reports assertion and continues.",
+            "Ordinary explicit override skips nmw prefix lookup. Pre/post linker still allows nmw prefix lookup.",
+            "nmw prefix success skips ordinary/fallback search; ordinary success skips fallback.",
+            "Derived fallback handles cc, pas, asm, mwc and absent substrings with original memmove lengths.",
+            "Fallback warning65/66 differs depending on explicit override and verbosity; preserved.",
+            "Dry-run prints command and skips execution. Verbosity alone prints/announces and still executes.",
+            "OS execution error and process exitcode errors are separately reported.",
+            "SetupLinkerCommandLine failure return is intentionally ignored by ExecuteLinker, matching retail.",
+            "Environment vector is duplicated and passed to execution, then freed separately from argv."
+          ]
+        }
+      },
+      "limits": {
+        "strict_nonmatches": [
+          "ExecuteLinker"
+        ],
+        "unported_behavior": [],
+        "execution_testing": "Target application/linker execution was not performed; equivalence assessment is static branch/memory/call review of original code plus strict6 function matches.",
+        "unknown_global_names": "Several historical data_* aliases remain source-scoped; their addresses/types are proven by original instructions, canonical GC3 global names are not guessed."
+      },
+      "provenance": {
+        "binary": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+        "binary_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+        "symbolmap": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "symbolmap_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+        "Ghidra_live": "Unavailable; savedGhidraentries and originalPE Capstone used."
+      },
+      "encoding": "CP932 succeeds; tools/check_sjis.py absent from checkout.",
+      "membership_reviewed": true,
+      "strict_exact_count": 6
     }
   },
   "ownership_review": {

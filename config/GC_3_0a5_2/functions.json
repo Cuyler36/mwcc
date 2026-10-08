@@ -3138,93 +3138,93 @@
     }
   },
   {
-    "name": "CLToolExec_AppendArgument",
-    "address": "0x00423650",
+    "name": "AppendArgumentList",
+    "address": "0x423650",
     "size": 59,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "CLToolExec_AppendArgument",
     "baseline_address": "0x00417ab0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_command_line_arguments",
-    "address": "0x00423690",
+    "name": "CopyArgumentList",
+    "address": "0x423690",
     "size": 132,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "append_command_line_arguments",
     "baseline_address": "0x00417af0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "free_items",
-    "address": "0x00423720",
+    "name": "FreeArgumentList",
+    "address": "0x423720",
     "size": 47,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "free_items",
     "baseline_address": "0x00417b80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "build_tool_command_line",
-    "address": "0x00423750",
+    "name": "SetupLinkerCommandLine",
+    "address": "0x423750",
     "size": 859,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "build_tool_command_line",
     "baseline_address": "0x00417bb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLToolExec_SetTemporaryOutputMask",
-    "address": "0x00423ab0",
+    "name": "SetupTemporaries",
+    "address": "0x423ab0",
     "size": 146,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "CLToolExec_SetTemporaryOutputMask",
     "baseline_address": "0x00417e50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLToolExec_DeleteTemporaryOutputs",
-    "address": "0x00423b50",
+    "name": "DeleteTemporaries",
+    "address": "0x423b50",
     "size": 211,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "CLToolExec_DeleteTemporaryOutputs",
     "baseline_address": "0x00417ec0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLToolExec_ExecuteLinker",
-    "address": "0x00423c30",
+    "name": "ExecuteLinker",
+    "address": "0x423c30",
     "size": 1260,
-    "source": "src/driver/CLToolExec.c",
+    "source": "src/GC_3_0a5_2/driver/CLToolExec.c",
     "baseline_name": "CLToolExec_ExecuteLinker",
     "baseline_address": "0x00417f60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLToolExec.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

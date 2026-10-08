@@ -722,7 +722,7 @@ int Targets_SetTool(int *tool)
 {
     pTool = tool;
     ((pTool[6] && pTool[7]) ? (void)0
-                            : CLIO_ReportAssertionFailure("pTool->toolInfo && pTool->copyright", "Targets.c", 16));
+                            : OS_ASSERT_AT("pTool->toolInfo && pTool->copyright", "Targets.c", 16));
     return 1;
 }
 

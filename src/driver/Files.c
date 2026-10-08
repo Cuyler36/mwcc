@@ -501,7 +501,7 @@ int __stdcall Files_MakeFileSpecFromPath(short volume, int directory, unsigned c
         fn_00412340(location.directory.path, fullPath, sizeof(fullPath));
     } else {
         if (volume == 0) {
-            CLIO_ReportAssertionFailure("vRefNum!=0", "Files.c", 839);
+            OS_ASSERT_AT("vRefNum!=0", "Files.c", 839);
         }
         base.fileData.file.volumeRef = volume;
         base.fileData.file.directoryId = directory == 0 ? 2 : directory;

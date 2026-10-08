@@ -39,7 +39,7 @@ StorageHandle *CLPrefs_CopyDestinationToTemporary(NameTableEntry *preferences)
         Memory_ResizeStorageHandle(copy->handles.storage.temporary, size);
     }
     if (Memory_GetError() != 0) {
-        CLIO_ReportAssertionFailure("MemError()==noErr", "CLPrefs.c", 60);
+        OS_ASSERT_AT("MemError()==noErr", "CLPrefs.c", 60);
     }
     fn_00413a00(copy->handles.storage.destination);
     fn_00413a00(copy->handles.storage.temporary);

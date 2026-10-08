@@ -1098,7 +1098,7 @@ int parse_parameter_value(PARAM_T *parameter, char **value, UInt32 flags)
 
     token = (TokenText *)fn_0040f969();
     if (token == NULL)
-        CLIO_ReportAssertionFailure("tok", "Parameter.c", 0x5bb);
+        OS_ASSERT_AT("tok", "Parameter.c", 0x5bb);
 
     if ((parameter->flags & 3) == 0) {
         if (token->kind == separator || token->kind == 4)

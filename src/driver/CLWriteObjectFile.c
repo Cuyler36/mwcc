@@ -37,7 +37,7 @@ UInt32 CLWriteObjectFile_WriteObjectFile(struct DropinFileRecord *self, unsigned
 
     unsigned int ready = self->objectData != 0 && self->selectedPlugin != NULL;
     if (!ready)
-        CLIO_ReportAssertionFailure("file->objectdata && file->compiler", "CLWriteObjectFile.c", 0x16);
+        OS_ASSERT_AT("file->objectdata && file->compiler", "CLWriteObjectFile.c", 0x16);
     MacSpecs_MakeCWFileSpecFromString(self->outputPath.directory.path, &objectFile);
     MacSpecs_MakeCWFileSpecFromString(self->inputPath.directory.path, &sourceFile);
     if (DAT_00541b28 != 0) {

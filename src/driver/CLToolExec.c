@@ -82,7 +82,7 @@ int CLToolExec_ExecuteLinker(Plugin *tool, UInt32 flags, DropinFileRecord *argum
     UInt32 status;
 
     if ((flags & 1) == 0)
-        CLIO_ReportAssertionFailure("dropinflags & isExecutableTool", "CLToolExec.c", 0xf7);
+        OS_ASSERT_AT("dropinflags & isExecutableTool", "CLToolExec.c", 0xf7);
 
     command.envp = NULL;
     command.argc = 0;
@@ -191,7 +191,7 @@ int build_tool_command_line(int flags, DropinFileRecord *tool, struct ToolComman
         } while (index < plugin_request_count);
     }
     if (index >= plugin_request_count) {
-        CLIO_ReportAssertionFailure("x < numPlugins", "CLToolExec.c", 87);
+        OS_ASSERT_AT("x < numPlugins", "CLToolExec.c", 87);
     }
     arguments->argc = 1;
     arguments->argv = xmalloc("command-line arguments", 8);

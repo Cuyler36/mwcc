@@ -108,10 +108,10 @@ int CLBrowser_LookupValue(void *table, char *name, short *value)
     found = 0;
     index = MsDos_IsAbsolutePath(name);
     if (index == 0) {
-        CLIO_ReportAssertionFailure("OS_IsFullPath(fullpath)", "CLBrowser.c", 0x73);
+        OS_ASSERT_AT("OS_IsFullPath(fullpath)", "CLBrowser.c", 0x73);
     }
     if (!table) {
-        CLIO_ReportAssertionFailure("browsetable!=NULL", "CLBrowser.c", 0x74);
+        OS_ASSERT_AT("browsetable!=NULL", "CLBrowser.c", 0x74);
     }
     fn_004287c0(table, &entry, (unsigned int *)&count, &tableInfo);
     index = 0;
@@ -179,10 +179,10 @@ unsigned int build_browser_file_buffer(struct StorageHandle *dataHandle, void *i
     int byteOrder = 1;
 
     if (dataHandle == NULL) {
-        CLIO_ReportAssertionFailure("browsedata!=NULL", "CLBrowser.c", 258);
+        OS_ASSERT_AT("browsedata!=NULL", "CLBrowser.c", 258);
     }
     if (indexHandle == NULL) {
-        CLIO_ReportAssertionFailure("browsetable!=NULL", "CLBrowser.c", 259);
+        OS_ASSERT_AT("browsetable!=NULL", "CLBrowser.c", 259);
     }
     dataSize = Memory_GetHandleSize(dataHandle);
     indexOffset = (dataSize + sizeof(header) + 7) & -8;
@@ -382,7 +382,11 @@ void CLBrowser_ReleaseBuffer(StorageHandle *value)
             return;
         }
     }
+#if VERSION == VERSION_GC_3_0A5_2
+    OS_FreeHandle((MemBuffer *)value);
+#else
     Memory_FreeHandle(value);
+#endif
 }
 
 int write_lookup_entries(CLBrowserLookupEntry *entries, DstRec *output, UInt32 count)

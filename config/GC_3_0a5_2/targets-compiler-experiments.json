@@ -1,0 +1,141 @@
+{
+  "source": "src/GC_3_0a5_2/driver/Targets.c",
+  "source_sha256": "4febeeb0a4663156423bef9ffbe05e6043e80311e595f7a9f0b92afbc11bd4c9",
+  "original_sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+  "comparison": "Complete resolved bytes and PE absolute relocation locations; trailing compiler alignment padding excluded in probes.",
+  "full_report": "build/GC_3_0a5_2/targets-probes.json",
+  "results": [
+    {
+      "compiler": "pro53",
+      "tool_sha256": "4cc48c3919c3ac8caa12716e66509ab12dc6684bf5adab3cb245611b4819cfcd",
+      "tested_combinations": 14,
+      "best_exact_count": 0,
+      "best_variants": []
+    },
+    {
+      "compiler": "pro6",
+      "tool_sha256": "41ce15fd2c716f8d0ee5c8e8bf14aa3ad8d3eb715eace8c61cfdec70d3ff418c",
+      "tested_combinations": 14,
+      "best_exact_count": 0,
+      "best_variants": []
+    },
+    {
+      "compiler": "pro7",
+      "tool_sha256": "962fa567ca629a28f9952e9c5674e8f25f97352f4e5bec1b4aff2df2ee123e05",
+      "tested_combinations": 14,
+      "best_exact_count": 0,
+      "best_variants": []
+    },
+    {
+      "compiler": "pro8",
+      "tool_sha256": "68108b15594fdeefe83efea3dea090c9f1bc25d1b7570a62a1ca45f54c7c3947",
+      "tested_combinations": 14,
+      "best_exact_count": 3,
+      "best_variants": [
+        {
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off"
+          ],
+          "matches": [
+            "SetParserToolInfo",
+            "ParserToolMatchesPlugin",
+            "SetupParserToolOptions"
+          ]
+        },
+        {
+          "flags": [
+            "-O4",
+            "-opt",
+            "space,schedule,lifetimes",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off"
+          ],
+          "matches": [
+            "SetParserToolInfo",
+            "ParserToolMatchesPlugin",
+            "SetupParserToolOptions"
+          ]
+        }
+      ]
+    },
+    {
+      "compiler": "cw94",
+      "tool_sha256": "683338f8c8475015259b94d7ee5408aa5dd4a9d9d7cc615bb250f1fef49f11ed",
+      "tested_combinations": 14,
+      "best_exact_count": 4,
+      "best_variants": [
+        {
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off"
+          ],
+          "matches": [
+            "SetParserToolInfo",
+            "ParserToolMatchesPlugin",
+            "ParserToolHandlesPanels",
+            "SetupParserToolOptions"
+          ]
+        },
+        {
+          "flags": [
+            "-O4",
+            "-opt",
+            "space,schedule,lifetimes",
+            "-opt",
+            "intrinsics",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off"
+          ],
+          "matches": [
+            "SetParserToolInfo",
+            "ParserToolMatchesPlugin",
+            "ParserToolHandlesPanels",
+            "SetupParserToolOptions"
+          ]
+        }
+      ]
+    },
+    {
+      "compiler": "msvc6",
+      "tool_sha256": "1bf99f206271ecdbd13da2829192ea2c02e2a44c740b8d72935d5d9cb753b156",
+      "tested_combinations": 4,
+      "best_exact_count": 0,
+      "best_variants": []
+    },
+    {
+      "compiler": "msvc71",
+      "tool_sha256": "333254d73ee602f6ec14b00e9bf40f533a1b181429943e3634971642af00c9f7",
+      "tested_combinations": 4,
+      "best_exact_count": 0,
+      "best_variants": []
+    },
+    {
+      "compiler": "msvc8",
+      "tool_sha256": "3cbf4306526c06a07d09fd4785ac290c7ac7b52355944e7b377e08f5d8e7ece7",
+      "tested_combinations": 4,
+      "best_exact_count": 0,
+      "best_variants": []
+    }
+  ]
+}

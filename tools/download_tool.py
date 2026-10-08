@@ -4,12 +4,13 @@
   objdiff-cli   objdiff's command line (OUTPUT: the executable)
   wibo          the Win32 loader the compilers run under
   compilers     decomp.dev's compiler archive, with the original executables (OUTPUT: a stamp in the extracted tree)
-  pro4, pro5, pro53, pro6
+  pro4, pro5, pro53, pro6, cw94
                 the CodeWarrior Windows/x86 compilers the sources build with (OUTPUT: mwcc.exe)
   lib           the MSL C library and runtime sources of CodeWarrior Pro 5, which src/msl and src/runtime build
                 (OUTPUT: lib/ok)
 """
 import io
+import hashlib
 import json
 import platform
 import re
@@ -171,9 +172,12 @@ def pro53():
             name = updater[offset + 30:offset + 30 + length].decode()
             begin = offset + 30 + length + extra
             (root / name).write_bytes(zlib.decompress(updater[begin:begin + packed], -15))
-        if not shutil.which("unshield"):
+        unshield = shutil.which("unshield")
+        if not unshield and Path("build/tools/unshield.exe").exists():
+            unshield = str(Path("build/tools/unshield.exe").resolve())
+        if not unshield:
             raise SystemExit("unshield is required (brew install unshield / apt install unshield)")
-        subprocess.run(["unshield", "-g", "Win CC++ - FU2", "-j", "-d", str(root / "files"), "x", str(root / "data1.cab"),
+        subprocess.run([unshield, "-g", "Win CC++ - FU2", "-j", "-d", str(root / "files"), "x", str(root / "data1.cab"),
                         "mwcc.exe"], check=True, stdout=subprocess.DEVNULL)
         return (root / "files/Win_CC++_-_FU2/mwcc.exe").read_bytes()
 
@@ -220,9 +224,70 @@ def lib(output):
     output.touch()
 
 
+def cw94(output):
+    """Extract the portable Windows 9.4 tools without running the package wrapper."""
+    files = {
+        output.name: (204406784, 2449408, "683338f8c8475015259b94d7ee5408aa5dd4a9d9d7cc615bb250f1fef49f11ed"),
+        "LMGR8C.dll": (37879808, 851968, "103003cf7caee25de5d7f0e8df2771b8f4e13655e680173b8623d5635a50e320"),
+        "license.dat": (168391676, 452, "0f5b37b01090ae5bd473188dadfe25f48017227c154f4ef540634aa4980b900e"),
+    }
+    if all((output.parent / name).exists() and
+           hashlib.sha256((output.parent / name).read_bytes()).hexdigest() == digest
+           for name, (_, _, digest) in files.items()):
+        output.touch()
+        return
+    cache = output.parent.parent / "downloads"
+    datafile = cache / "cw94/CodeWarrior94.dat"
+    if not datafile.exists():
+        extractor = shutil.which("bsdtar")
+        if not extractor and platform.system() == "Windows":
+            candidate = Path("C:/Windows/System32/tar.exe")
+            extractor = str(candidate) if candidate.exists() else None
+        if not extractor:
+            raise SystemExit("cw94 extraction requires bsdtar (libarchive) on PATH")
+        archive = cache / "CodeWarrior 9.4.7z"
+        digest = "36f8719087fd35402253b97b23638935f6e8f7cad9b942efea8b34c359bfc244"
+        cache.mkdir(parents=True, exist_ok=True)
+        if not archive.exists():
+            archive.write_bytes(fetch("https://archive.org/download/CodewarriorForWindows/CodeWarrior%209.4.7z"))
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != digest:
+            raise SystemExit(f"{archive}: unexpected SHA256")
+        with tempfile.TemporaryDirectory() as temporary:
+            subprocess.run([extractor, "-xf", str(archive.resolve()), "-C", temporary], check=True)
+            candidates = list(Path(temporary).rglob("CodeWarrior94.dat"))
+            if len(candidates) != 1:
+                raise SystemExit("cw94: package must contain one CodeWarrior94.dat")
+            datafile.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(candidates[0], datafile)
+    contents = {}
+    with datafile.open("rb") as data:
+        for name, (offset, size, digest) in files.items():
+            data.seek(offset)
+            contents[name] = data.read(size)
+            if hashlib.sha256(contents[name]).hexdigest() != digest:
+                raise SystemExit(f"cw94: unexpected {name} contents")
+    for name, data in contents.items():
+        (output.parent / name).write_bytes(data)
+    output.chmod(0o755)
+
+
 def main():
     tool, output = sys.argv[1], Path(sys.argv[2])
     output.parent.mkdir(parents=True, exist_ok=True)
+    if tool == "cw94":
+        cw94(output)
+        return
+    companions = ("lmgr326b.dll", "license.dat")
+    if (platform.system() == "Windows" and tool in ("pro5", "pro53", "pro6")
+            and any(not (output.parent / name).exists() for name in companions)):
+        # Native execution needs the DLL and license shipped with the compiler.
+        disc = PRO6_ISO if tool == "pro6" else PRO5_BIN
+        with zipfile.ZipFile(Disc(disc, True).file("CODEWA~1.ZIP;1")) as archive:
+            for name in companions:
+                target = output.parent / name
+                if not target.exists():
+                    member = ("Bin/" if name.endswith(".dll") else "") + name if tool == "pro6" else "Tools/Command Line Tools/" + name
+                    target.write_bytes(archive.read(member))
     if tool in ("compilers", "pro4", "pro5", "pro53", "pro6", "lib") and output.exists():
         # (fixed archives: a restored cache need not be fetched again)
         output.touch()

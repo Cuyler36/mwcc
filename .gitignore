@@ -13,3 +13,15 @@ __pycache__/
 /CLAUDE.md
 /AGENTS.md
 /HANDOVER.md
+
+# Compiled binaries and compiler/linker outputs belong in ignored build directories.
+*.exe
+*.dll
+*.obj
+*.o
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.so
+*.dylib

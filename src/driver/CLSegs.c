@@ -29,7 +29,7 @@ void free_if_not_null(void *ptr)
 struct PayloadWithValue *CLSegs_GetValue(struct AccessPathValueTable *table, unsigned int index)
 {
     if (table == NULL) {
-        CLIO_ReportAssertionFailure("segs != NULL", "CLSegs.c", 135U);
+        OS_ASSERT_AT("segs != NULL", "CLSegs.c", 135U);
     }
     if ((unsigned short)index < table->count) {
         struct PayloadWithValue **entries = (struct PayloadWithValue **)table->values;
@@ -41,7 +41,7 @@ struct PayloadWithValue *CLSegs_GetValue(struct AccessPathValueTable *table, uns
 unsigned short CLSegs_GetCount(struct AccessPathValueTable *table)
 {
     if (table == NULL) {
-        CLIO_ReportAssertionFailure("segs != NULL", "CLSegs.c", 145U);
+        OS_ASSERT_AT("segs != NULL", "CLSegs.c", 145U);
     }
     return table->count;
 }
@@ -51,19 +51,19 @@ Boolean CLSegs_InitSegments(AccessPathValueTable *segments)
     unsigned short segmentIndex;
     struct PayloadWithValue *segment;
     if (segments == NULL) {
-        CLIO_ReportAssertionFailure("segs != NULL", "CLSegs.c", 34U);
+        OS_ASSERT_AT("segs != NULL", "CLSegs.c", 34U);
     }
     memset(segments, 0, 8U);
     segments->values = NULL;
     segment = CLSegs_CreatePayloadWithValue("Jump Table", 40U);
     CLSegs_AddValue(segments, segment, &segmentIndex);
     if (segmentIndex != 0U) {
-        CLIO_ReportAssertionFailure("idx==0", "CLSegs.c", 42U);
+        OS_ASSERT_AT("idx==0", "CLSegs.c", 42U);
     }
     segment = CLSegs_CreatePayloadWithValue("Main", 65535U);
     CLSegs_AddValue(segments, segment, &segmentIndex);
     if (segmentIndex != 1U) {
-        CLIO_ReportAssertionFailure("idx==1", "CLSegs.c", 47U);
+        OS_ASSERT_AT("idx==1", "CLSegs.c", 47U);
     }
     return 1;
 }
@@ -84,7 +84,7 @@ Boolean CLSegs_AddValue(AccessPathValueTable *table, struct PayloadWithValue *va
 Boolean allocate_access_path_value_index(AccessPathValueTable *table, UInt16 *index)
 {
     if (table == NULL) {
-        CLIO_ReportAssertionFailure("segs != NULL", "CLSegs.c", 76U);
+        OS_ASSERT_AT("segs != NULL", "CLSegs.c", 76U);
     }
     if (table->count >= table->capacity) {
         UInt16 capacity;
@@ -108,7 +108,7 @@ unsigned char CLSegs_FreeValues(AccessPathValueTable *array)
 {
     unsigned short index;
     if (array == NULL)
-        CLIO_ReportAssertionFailure("segs != NULL", "CLSegs.c", 55U);
+        OS_ASSERT_AT("segs != NULL", "CLSegs.c", 55U);
     if (array->values != NULL) {
         index = 0;
         while (index < array->count) {

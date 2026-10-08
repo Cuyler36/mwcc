@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
-"""python tools/compare.py {extract,compare,report} VERSION
+"""python tools/compare.py {extract,compare,report,unit} VERSION [SOURCE]
 
-extract: the original's functions and the ranges between them as COFF objects (build/VERSION/target).
+extract: validate the original and prepare unassigned image-section objects.
 compare: each function of a compiled source, its relocations resolved against the original (the executable is not
   relinked), compared byte for byte and its absolute addresses against the original's base relocations; writes
-  objdiff.json and fails when a function of a Matching source differs.
+  source-level code/data objects and objdiff.json; fails when a Matching function differs.
+unit: rebuild one source's target/base pair for objdiff's Ninja request.
 report:  objdiff's progress report (build/VERSION/report.json).
 """
 import hashlib
 import json
+import os
 import re
+from urllib.parse import quote
 import struct
 from bisect import bisect_left
 import subprocess
 import sys
 from functools import cache
+from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -40,9 +44,11 @@ def version_config(version):
     return json.loads(Path(f"config/{version}/config.json").read_text())
 
 
-def matching(version, source):
+def matching(version, source, unit=None):
     """Whether SOURCE's exact functions are linked in VERSION: a version can list its Matching sources itself (its
     config's "matching"), else config/sources.json's status decides."""
+    if "matching_functions" in version_config(version):
+        return unit in version_config(version)["matching_functions"]
     if "matching" in version_config(version):
         return source in version_config(version)["matching"]
     return sources().get(source, {}).get("status", "Matching") == "Matching"
@@ -66,7 +72,7 @@ def inventory(version):
             if address > cursor:
                 rows.append(dict(name=f"unknown/{section.name}/{cursor:08x}", address=cursor, size=address - cursor, code=code))
             # (a function without a source is one the decompilation does not have yet)
-            unit = str(Path(f["source"]).with_suffix("")) if "source" in f else "unrecovered"
+            unit = Path(f["source"]).with_suffix("").as_posix() if "source" in f else "unrecovered"
             rows.append(dict(f, address=address, code=True, name=unit + "/" + f["name"],
                              # (C++-mangled names carry no C underscore in COFF)
                              symbol=f["name"] if f["name"].startswith("?") else "_" + f["name"]))
@@ -76,14 +82,15 @@ def inventory(version):
     for row in rows:
         section = pe.section_for_address(row["address"])
         row["bss"] = bool(section.characteristics & 0x80) and section.file_size == 0
-        row["target"] = f"build/{version}/target/{row['name']}.obj"
+        filename = quote(row["name"], safe="/@$")
+        row["target"] = f"build/{version}/target/{filename}.obj"
         if "source" in row:
-            row["base"] = f"build/{version}/base/{row['name']}.obj"
+            row["base"] = f"build/{version}/base/{filename}.obj"
     return config, pe, rows
 
 
 def write_coff(path, data, name=None, code=True, bss_size=0):
-    """One section; unknown ranges intentionally have no invented function symbol."""
+    """One section; optional symbols also keep unassigned code visible to objdiff."""
     strings = bytearray(b"\0" * 4)
     symbols = b""
     if name:
@@ -114,6 +121,189 @@ def write_coff(path, data, name=None, code=True, bss_size=0):
     path.write_bytes(header + section + data + symbols + strings)
 
 
+def source_paths(version, source):
+    filename = quote(source, safe="/@$") + ".obj"
+    return (f"build/{version}/target/{filename}", f"build/{version}/base/{filename}")
+
+
+def write_translation_unit(path, functions, data_sections=None):
+    """Consolidated .text and distinct data classes, with sized function symbols."""
+    text = bytearray()
+    code_symbols = []
+    for name, body in functions:
+        code_symbols.append((name, len(text), len(body), True))
+        text.extend(body)
+    sections = [dict(name=".text", data=bytes(text), symbols=code_symbols, flags=0x60000020)]
+    sections.extend(data_sections or [])
+    strings = bytearray(b"\0" * 4)
+    symbols, headers, bodies = bytearray(), bytearray(), bytearray()
+    offset = 20 + 40 * len(sections)
+    symbol_count = 0
+    for index, section in enumerate(sections, 1):
+        for name, value, size, code in section["symbols"]:
+            name_offset = len(strings)
+            strings.extend(name.encode() + b"\0")
+            symbols.extend(struct.pack("<IIIhHBB", 0, name_offset, value, index, 0x20 if code else 0, 2, int(code)))
+            symbol_count += 1
+            if code:
+                symbols.extend(struct.pack("<IIIIH", 0, size, 0, 0, 0))
+                symbol_count += 1
+        body = section["data"]
+        bss = section["flags"] & 0x80
+        headers.extend(struct.pack("<8sIIIIIIHHI", section["name"].encode(), 0, 0,
+                                   section.get("size", len(body)), 0 if bss else offset + len(bodies),
+                                   0, 0, 0, 0, section["flags"]))
+        if not bss:
+            bodies.extend(body)
+    struct.pack_into("<I", strings, 0, len(strings))
+    header = struct.pack("<HHIIIHH", 0x14C, len(sections), 0,
+                         offset + len(bodies), symbol_count, 0, 0)
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(header + headers + bodies + symbols + strings)
+
+
+def write_source_unit(version, source, rows, results, pe, claims=None):
+    target, base = source_paths(version, source)
+    mapped = {row["symbol"]: row for row in rows}
+    target_functions = [(row["symbol"], pe.read(row["address"], row["size"])) for row in rows]
+    symbols, sections = read_object(Path(f"build/{version}/compiled/{source}.obj"))
+    emitted = sorted((s for s in symbols.values() if s["section"] > 0 and s["type"] & 0x20
+                      and sections[s["section"] - 1]["code"]),
+                     key=lambda s: (s["section"], s["value"]))
+    base_functions = []
+    for symbol in emitted:
+        name = symbol["name"]
+        row = mapped.get(name) or next((r for n, r in mapped.items() if c_symbol(name) == n), None)
+        body = results[row["name"]][0] if row else None
+        if body is None:
+            sec, begin, end = function_section(symbols, sections, name)
+            body = sec["data"][begin:end]
+        base_functions.append((row["symbol"] if row else name, body))
+    target_data, base_data, data_complete = source_data(version, source, rows, symbols, sections, pe, claims)
+    write_translation_unit(target, target_functions, target_data)
+    write_translation_unit(base, base_functions, base_data)
+    all_emitted_mapped = all(name in mapped for name, _ in base_functions)
+    complete = bool(rows) and all_emitted_mapped and data_complete and all(
+        results[r["name"]][1] and matching(version, source, r["name"]) and not r.get("binary_patch")
+        for r in rows)
+    config = version_config(version)
+    if "complete_sources" in config:
+        complete &= source in config["complete_sources"]
+    if complete:
+        report_path = Path(f'build/{version}/unit-diffs/{source}.json')
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        cli = 'build/tools/objdiff-cli' + ('.exe' if os.name == 'nt' else '')
+        subprocess.run([cli, 'diff', '-1', target, '-2', base, '-o', str(report_path)], check=True)
+        diff = json.loads(report_path.read_text())
+        left, right = diff['left']['sections'], diff['right']['sections']
+        shape = lambda items: sorted((s['name'], s['kind'], int(s.get('size', 0))) for s in items)
+        complete = shape(left) == shape(right) and all(s.get('match_percent', 100) == 100 for s in left + right)
+    return dict(name=Path(source).with_suffix("").as_posix(), target_path=target, base_path=base,
+                metadata=dict(complete=bool(complete), source_path=source, progress_categories=["code", "data"]))
+
+
+def read_memory(pe, address, size):
+    section = pe.section_for_address(address)
+    relative = address - section.virtual_address
+    if relative + size > max(section.virtual_size, section.file_size):
+        raise ValueError("data crosses image section")
+    backed = min(size, max(0, section.file_size - relative))
+    offset = section.file_offset + relative
+    return pe.data[offset:offset + backed] + bytes(size - backed)
+
+
+def source_data(version, source, rows, symbols, sections, pe, claims):
+    """Expose compiled data; attribute retail data only through names or resolved references."""
+    addresses = {k: int(v, 0) for k, v in json.loads(Path(f"config/{version}/bindings.json").read_text()).items()}
+    functions = json.loads(Path(f'config/{version}/functions.json').read_text())
+    addresses.update({r['name'] if r['name'].startswith('?') else '_' + r['name']: int(r['address'], 0)
+                      for r in functions})
+    references = defaultdict(set)
+    fixups = set(base_relocations(pe))
+    for row in rows:
+        try:
+            _, resolutions = resolve_function(symbols, sections, row["symbol"], row["address"],
+                                               addresses, pe, row["size"])
+        except ValueError:
+            continue
+        for resolution in resolutions:
+            references[resolution["symbol"]].add(resolution["address"])
+    base, target, evidence = {}, {}, []
+    complete = True
+    for index, section in enumerate(sections, 1):
+        flags = section["flags"]
+        if section["code"] or not flags & (0x40 | 0x80) or section["name"].startswith(('.debug', '.stab')):
+            continue
+        category = ".bss" if flags & 0x80 else ".data" if flags & 0x80000000 else ".rdata"
+        normalized_flags = {".rdata": 0x40000040, ".data": 0xc0000040, ".bss": 0xc0000080}[category]
+        output = base.setdefault(category, dict(name=category, data=bytearray(), symbols=[], flags=normalized_flags))
+        start = len(output["data"])
+        body = bytearray(section["data"])
+        unresolved_relocations = set()
+        for offset, symbol_index, kind in section["relocs"]:
+            reference = symbols[symbol_index]
+            name = reference["name"]
+            generated_local = reference['section'] > 0 and re.fullmatch(r'_?@\d+', name)
+            location = None if generated_local else addresses.get(name, addresses.get(c_symbol(name)))
+            if location is None and len(references[name]) == 1:
+                location = next(iter(references[name]))
+            if location is None or kind not in (6, 7) or offset + 4 > len(body):
+                unresolved_relocations.add(offset)
+                continue
+            addend = struct.unpack_from('<I', body, offset)[0]
+            struct.pack_into('<I', body, offset, (location + addend - (pe.image_base if kind == 7 else 0)) & 0xffffffff)
+        output["data"].extend(body)
+        definitions = sorted((s for s in symbols.values() if s["section"] == index
+                              and not s["name"].startswith('.') and s["storage"] in (2, 3)),
+                             key=lambda s: s["value"])
+        offsets = sorted({s["value"] for s in definitions} | {len(body)})
+        if body and (not definitions or definitions[0]["value"] != 0):
+            complete = False
+        for symbol in definitions:
+            name, begin = symbol["name"], symbol["value"]
+            end = next((o for o in offsets if o > begin), len(body))
+            payload = bytes(body[begin:end])
+            output["symbols"].append((name, start + begin, len(payload), False))
+            location = None if re.fullmatch(r'_?@\d+', name) else addresses.get(name)
+            method = 'named binding'
+            if location is None and len(references[name]) == 1:
+                location = next(iter(references[name]))
+                method = 'resolved function reference'
+            entry = dict(name=name, section=category, size=len(payload), method=method)
+            try:
+                if location is None:
+                    raise ValueError('no established retail address')
+                retail = read_memory(pe, location, len(payload))
+                retail_section = pe.section_for_address(location)
+                if (retail_section.characteristics & 0x20
+                        or retail_section.name in ('.rsrc', '.reloc', '.idata', '.edata')):
+                    raise ValueError('data reference is outside attributable image data sections')
+                target_category = retail_section.name
+                target_flags = 0xc0000080 if retail_section.characteristics & 0x80 else (
+                    0xc0000040 if retail_section.characteristics & 0x80000000 else 0x40000040)
+                relocation_fixups = {location + o - begin for o, _, k in section['relocs']
+                                     if begin <= o < end and k == 6}
+                entry.update(address=f'0x{location:08x}', bytes_exact=retail == payload,
+                             target_section=target_category,
+                             fixups_exact=relocation_fixups == {f for f in fixups if location <= f < location + len(payload)},
+                             relocations_resolved=not any(begin <= o < end for o in unresolved_relocations))
+                dest = target.setdefault(target_category, dict(name=target_category, data=bytearray(), symbols=[], flags=target_flags))
+                dest["symbols"].append((name, len(dest["data"]), len(retail), False))
+                dest["data"].extend(retail)
+                if claims is not None:
+                    claims.append((location, location + len(retail)))
+                complete &= entry['bytes_exact'] and entry['relocations_resolved'] and entry['fixups_exact'] and category == target_category
+            except ValueError as error:
+                entry['unresolved'] = str(error)
+                complete = False
+            evidence.append(entry)
+    output_path = Path(f'build/{version}/unit-data/{source}.json')
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(evidence, indent=2) + '\n')
+    return list(target.values()), list(base.values()), complete
+
+
 def read_object(path):
     """Preserve COFF symbol indices, including auxiliary entries, for linking."""
     data = path.read_bytes()
@@ -124,6 +314,9 @@ def read_object(path):
     strings = data[strstart:]
 
     def name(raw):
+        if raw.startswith(b'/') and raw.rstrip(b'\0')[1:].isdigit():
+            offset = int(raw.rstrip(b'\0')[1:])
+            return strings[offset:strings.index(b'\0', offset)].decode()
         if raw[:4] == b"\0" * 4:
             offset = struct.unpack_from("<I", raw, 4)[0]
             return strings[offset : strings.index(b"\0", offset)].decode()
@@ -149,6 +342,8 @@ def read_object(path):
         nrel = struct.unpack_from("<H", data, off + 32)[0]
         sections.append(
             dict(
+                name=name(data[off:off + 8]),
+                flags=struct.unpack_from("<I", data, off + 36)[0],
                 code=bool(struct.unpack_from("<I", data, off + 36)[0] & 0x20),
                 data=data[rawoff : rawoff + rawsize] if rawoff else bytes(rawsize),
                 relocs=[
@@ -195,6 +390,8 @@ def function_section(symbols, sections, symbol_name):
 
 def resolve_function(symbols, sections, symbol_name, target_address, addresses, pe, target_size=None):
     sec, begin, end = function_section(symbols, sections, symbol_name)
+    if target_size and end-begin > target_size and all(b in (0x90,0xcc) for b in sec['data'][begin+target_size:end]):
+        end = begin+target_size
     # Immediates the original function itself uses: an ambiguous literal
     # (a short string that occurs many times) is resolved to one of these.
     referenced = set()
@@ -222,9 +419,12 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
             raise ValueError("relocation crosses function boundary")
         dest = symbols[index]
         addend = struct.unpack_from("<I", body, local)[0]
-        if dest["name"] in addresses:
+        # Compiler-generated local ordinals are translation-unit scoped; a
+        # same-named binding from another object must not override their data.
+        generated_local = dest["section"] > 0 and re.fullmatch(r"_?@\d+", dest["name"])
+        if dest["name"] in addresses and not generated_local:
             address = addresses[dest["name"]]
-        elif c_symbol(dest["name"]) in addresses:
+        elif c_symbol(dest["name"]) in addresses and not generated_local:
             address = addresses[c_symbol(dest["name"])]
         elif dest["section"] == section_index and begin <= dest["value"] < end:
             address = target_address + dest["value"] - begin
@@ -274,7 +474,26 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
             # unrelated literals that happen to share its section. Every entry
             # in this range must resolve and occur together in the original.
             matches = locate(bytes(payload)) if payload else []
-            if len(matches) == 1:
+            # Macro expansion can change string-pool grouping without changing
+            # a string's contents. Prefer the original operand when its complete
+            # NUL-terminated string agrees, rather than another identical copy.
+            start = dest["value"] + addend
+            tail = literal["data"][start:]
+            stop = tail.find(b"\0")
+            string = tail[:stop + 1] if stop > 0 else b""
+            original_string_address = None
+            if (kind == 6 and target_size and local + 4 <= len(original)
+                    and string and all(c in (9, 10, 13) or 32 <= c < 127 for c in string[:-1])
+                    and not any(start <= off < start + len(string) for off, _, _ in literal["relocs"])):
+                raw = struct.unpack_from("<I", original, local)[0]
+                try:
+                    if pe.read(raw, len(string)) == string:
+                        original_string_address = (raw - addend) & 0xFFFFFFFF
+                except ValueError:
+                    pass
+            if original_string_address is not None:
+                address = original_string_address
+            elif len(matches) == 1:
                 address = matches[0]
             else:
                 # COFF section references can point into a merged string pool.
@@ -344,7 +563,10 @@ def resolve_function(symbols, sections, symbol_name, target_address, addresses, 
 
 def extract(version):
     _, pe, rows = inventory(version)
+    unknown_units(version, rows, pe, [])
     for row in rows:
+        if 'source' in row or row['name'].startswith('unknown/'):
+            continue
         data = b"" if row["bss"] else pe.read(row["address"], row["size"])
         write_coff(row["target"], data, row.get("symbol") or (f"__unknown_{row['address']:08x}" if row["code"] else None),
                    row["code"], row["size"] if row["bss"] else 0)
@@ -367,7 +589,7 @@ def base_relocations(pe):
     return sorted(fixups)
 
 
-def check(version):
+def check(version, source=None):
     """(rows, {row name: (body or None, exact)}) for each function with a source: its compiled bytes, relocations
     resolved, and whether they are the original's."""
     _, pe, rows = inventory(version)
@@ -378,13 +600,38 @@ def check(version):
     for row in rows:
         if "source" not in row:
             continue
+        if source is not None and row["source"] != source:
+            continue
         if row["source"] not in objects:
             objects[row["source"]] = read_object(Path(f"build/{version}/compiled/{row['source']}.obj"))
         try:
             body, resolutions = resolve_function(*objects[row["source"]], row["symbol"], row["address"], addresses, pe,
                                                  row["size"])
         except ValueError:
-            results[row["name"]] = (None, False)
+            # Keep an inspectable instruction diff for imported NonMatching
+            # functions, even while some external addresses remain unbound.
+            if matching(version, row["source"], row["name"]):
+                results[row["name"]] = (None, False)
+                continue
+            try:
+                symbols, sections = objects[row["source"]]
+                sec, begin, end = function_section(symbols, sections, row["symbol"])
+                partial = bytearray(sec["data"][begin:end])
+                for relocation in sec["relocs"]:
+                    offset = relocation[0]
+                    if not begin <= offset < end:
+                        continue
+                    isolated = dict(sec, relocs=[relocation])
+                    isolated_sections = [isolated if s is sec else s for s in sections]
+                    try:
+                        resolved, _ = resolve_function(symbols, isolated_sections, row["symbol"],
+                                                       row["address"], addresses, pe, row["size"])
+                        partial[offset - begin:offset - begin + 4] = resolved[offset - begin:offset - begin + 4]
+                    except ValueError:
+                        pass
+                results[row["name"]] = (bytes(partial), False)
+            except ValueError:
+                results[row["name"]] = (None, False)
             continue
         # (the same bytes, and an absolute address exactly where the original's loader fixes one up: a source cannot
         # write an address as a number where the original has a reference, or the reverse)
@@ -396,28 +643,32 @@ def check(version):
 
 def compare(version):
     rows, results = check(version)
+    _, pe = original(version)
+    grouped = defaultdict(list)
     units, exact, linked, failed, nonmatching, patched = [], 0, 0, [], [], []
     for row in rows:
-        meta = {"complete": False, "progress_categories": ["code" if row["code"] else "data"]}
-        unit = dict(name=row["name"], target_path=row["target"], metadata=meta)
-        units.append(unit)
         if "source" not in row:
+            if not row['name'].startswith('unknown/'):
+                units.append(dict(name=row['name'], target_path=row['target'],
+                                  metadata=dict(complete=False, progress_categories=['code'])))
             continue
-        meta["source_path"] = row["source"]
-        body, same = results[row["name"]]
-        if body is not None:
-            write_coff(row["base"], body, row["symbol"])
-            unit["base_path"] = row["base"]
-        # (a function that does not link has no base: objdiff shows the target alone)
+        grouped[row["source"]].append(row)
+        _, same = results[row["name"]]
         exact += same
         if row.get("binary_patch"):
             # (Ninji's hand-written patch in 1.2.5n, not compiler output: never matched)
             patched.append(row["name"])
-        elif same and matching(version, row["source"]):
-            meta["complete"] = True
+        elif same and matching(version, row["source"], row["name"]):
             linked += 1
         elif not same:
-            (failed if matching(version, row["source"]) else nonmatching).append(row["name"])
+            (failed if matching(version, row["source"], row["name"]) else nonmatching).append(row["name"])
+    enabled = dict(sources())
+    enabled.update(version_config(version).get("source_settings", {}))
+    selected = version_config(version).get("sources", list(enabled))
+    claims = []
+    for source in selected:
+        units.append(write_source_unit(version, source, grouped[source], results, pe, claims))
+    units.extend(unknown_units(version, rows, pe, claims))
     Path("objdiff.json").write_text(json.dumps({
         "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
         "min_version": "3.8.0",
@@ -430,7 +681,8 @@ def compare(version):
     }, indent=2) + "\n")
     summary = [f"{version}: {exact}/{sum('source' in r for r in rows)} functions exact, {linked} linked"]
     if nonmatching:
-        summary.append("  NonMatching: " + " ".join(n.rsplit("/", 1)[1] for n in nonmatching))
+        summary.append("  NonMatching: " + (str(len(nonmatching)) + " functions (see objdiff)" if len(nonmatching)>20
+                       else " ".join(n.rsplit("/", 1)[1] for n in nonmatching)))
     if patched:
         summary.append("  binary patch: " + " ".join(n.rsplit("/", 1)[1] for n in patched))
     summary += ["  not exact: " + name for name in failed]
@@ -440,8 +692,50 @@ def compare(version):
     Path(f"build/{version}/ok").write_text("\n".join(summary) + "\n")
 
 
+def unknown_units(version, rows, pe, claims):
+    """Keep unassigned image ranges in section buckets without inventing source membership."""
+    sections = defaultdict(list)
+    for row in rows:
+        if not row['name'].startswith('unknown/'):
+            continue
+        remaining = [(row['address'], row['address'] + row['size'])]
+        if not row['code']:
+            for left, right in sorted(claims):
+                remaining = [(a, b) for start, end in remaining for a, b in (
+                    [(start, end)] if right <= start or left >= end else
+                    [(start, min(end, left)), (max(start, right), end)]) if a < b]
+        sections[row['name'].split('/')[1]].extend(remaining)
+    units = []
+    for section_name, spans in sections.items():
+        if not spans:
+            continue
+        section = pe.section_for_address(spans[0][0])
+        code = bool(section.characteristics & 0x20)
+        bss = bool(section.characteristics & 0x80)
+        target = f'build/{version}/target/unknown/{section_name}.obj'
+        size = sum(end - start for start, end in spans)
+        data = b'' if bss else b''.join(read_memory(pe, start, end - start) for start, end in spans)
+        write_coff(target, data, name='__unknown_' + section_name.strip('.') if code else None,
+                   code=code, bss_size=size if bss else 0)
+        units.append(dict(name='unknown/' + section_name, target_path=target,
+                          metadata=dict(complete=False, progress_categories=['code' if code else 'data'])))
+    return units
+
+
+def unit(version, source):
+    rows, results = check(version, source)
+    _, pe = original(version)
+    selected = [r for r in rows if r.get("source") == source]
+    write_source_unit(version, source, selected, results, pe)
+    failed = [r["name"] for r in selected if matching(version, source, r["name"])
+              and not results[r["name"]][1] and not r.get("binary_patch")]
+    if failed:
+        raise SystemExit("Not exact: " + ", ".join(failed))
+
+
 def report(version):
-    subprocess.run(["build/tools/objdiff-cli", "report", "generate", "-o", f"build/{version}/report.json"], check=True)
+    objdiff = "build/tools/objdiff-cli" + (".exe" if os.name == "nt" else "")
+    subprocess.run([objdiff, "report", "generate", "-o", f"build/{version}/report.json"], check=True)
     report = json.loads(Path(f"build/{version}/report.json").read_text())
     # (an unknown code range carries a symbol only so objdiff keeps its bytes: it is not a function)
     removed = 0
@@ -455,9 +749,37 @@ def report(version):
         measures["total_functions"] = measures.get("total_functions", 0) - removed
         total = measures["total_functions"]
         measures["matched_functions_percent"] = 100.0 * measures.get("matched_functions", 0) / total if total else 0.0
+    # Pooled constants can occur in multiple TU views. Count physical image
+    # bytes once in global data progress, and require resolved relocations.
+    _, pe = original(version)
+    total_data = sum(s.virtual_size for s in pe.sections if not s.characteristics & 0x20
+                     and s.name not in ('.reloc', '.rsrc', '.idata', '.edata'))
+    spans = []
+    enabled = dict(sources())
+    enabled.update(version_config(version).get('source_settings', {}))
+    for source in version_config(version).get('sources', list(enabled)):
+        path = Path(f'build/{version}/unit-data/{source}.json')
+        if not path.exists():
+            continue
+        for entry in json.loads(path.read_text()):
+            if (entry.get('bytes_exact') and entry.get('fixups_exact') and entry.get('relocations_resolved')
+                    and entry['section'] == entry.get('target_section')):
+                address = int(entry['address'], 0)
+                spans.append((address, address + entry['size']))
+    matched_data, end = 0, 0
+    for left, right in sorted(spans):
+        matched_data += max(0, right - max(end, left))
+        end = max(end, right)
+    for measures in [report['measures'], *(c['measures'] for c in report.get('categories', []) if c['id'] == 'data')]:
+        measures['total_data'] = str(total_data)
+        measures['matched_data'] = str(matched_data)
+        measures['matched_data_percent'] = 100.0 * matched_data / total_data if total_data else 0.0
     Path(f"build/{version}/report.json").write_text(json.dumps(report, indent=2) + "\n")
 
 
 if __name__ == "__main__":
     command, version = sys.argv[1:3]
-    {"extract": extract, "compare": compare, "report": report}[command](version)
+    if command == "unit":
+        unit(version, sys.argv[3])
+    else:
+        {"extract": extract, "compare": compare, "report": report}[command](version)

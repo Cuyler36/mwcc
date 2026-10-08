@@ -73,7 +73,7 @@ char *mvprintf(char *buffer, unsigned int size, const char *format, va_list args
     int length;
 
     if (buffer == NULL)
-        CLIO_ReportAssertionFailure("mybuf != NULL", "StringUtils.c", 135U);
+        OS_ASSERT_AT("mybuf != NULL", "StringUtils.c", 135U);
 
     capacity = size - 1;
     result = buffer;

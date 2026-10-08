@@ -50,7 +50,7 @@ void copy_access_paths_to_file_specs_checked(CWFileSpec *path, AccessPaths *valu
 {
     copy_access_paths_to_file_specs(&path, value, &result);
     if ((unsigned short)result != 0)
-        CLIO_ReportAssertionFailure("count == 0", "CLAccessPaths.c", 357U);
+        OS_ASSERT_AT("count == 0", "CLAccessPaths.c", 357U);
 }
 
 /* Array of access-path entries and its 16-bit bookkeeping. */
@@ -59,7 +59,7 @@ unsigned char CLAccessPaths_FreeItems(AccessPaths *paths)
 {
     unsigned int index;
     if (!paths)
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 63U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 63U);
     if (paths->items) {
         for (index = 0; (unsigned short)index < paths->count; ++index)
             free_access_path_entry(paths->items[(unsigned short)index]);
@@ -74,7 +74,7 @@ unsigned char CLAccessPaths_FreeItems(AccessPaths *paths)
 unsigned char CLAccessPaths_Init(AccessPaths *paths)
 {
     if (paths == NULL) {
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 52U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 52U);
     }
     memset(paths, 0, sizeof(*paths));
     paths->items = NULL;
@@ -101,7 +101,7 @@ int count_access_paths_recursive(AccessPaths *accessPaths)
     for (index = 0; index < count; index++) {
         entry = CLAccessPaths_GetEntry(accessPaths, index);
         if (entry == NULL)
-            CLIO_ReportAssertionFailure("path", "CLAccessPaths.c", 0x146);
+            OS_ASSERT_AT("path", "CLAccessPaths.c", 0x146);
         if (entry->children)
             count += count_access_paths_recursive(entry->children);
     }
@@ -123,11 +123,11 @@ void copy_access_paths_to_file_specs(CWFileSpec **destination, AccessPaths *path
             validEntry = 1;
         }
         if (!validEntry) {
-            CLIO_ReportAssertionFailure("path && *count > 0", "CLAccessPaths.c", 0x157);
+            OS_ASSERT_AT("path && *count > 0", "CLAccessPaths.c", 0x157);
         }
         CLProj_MakeOSSpecFromPath(entry->path, NULL, '\0', (struct OSSpec *)pathBuffer);
         if (MacSpecs_MakeCWFileSpecFromString(pathBuffer, *destination) == 0) {
-            CLIO_ReportAssertionFailure("OS_OSSpec_To_FSSpec(&spec, *list)", "CLAccessPaths.c", 0x159);
+            OS_ASSERT_AT("OS_OSSpec_To_FSSpec(&spec, *list)", "CLAccessPaths.c", 0x159);
         }
         *destination += 1;
         *remaining -= 1;
@@ -146,7 +146,7 @@ AccessPathEntry *CLAccessPaths_FindPath(AccessPaths *table, void *value)
     AccessPathEntry *entry;
 
     if (!table)
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 173U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 173U);
     for (index = 0; (unsigned short)index < table->count; ++index) {
         entry = table->items[(unsigned short)index];
         if (OS_EqualPathSpec(entry->path, value))
@@ -212,7 +212,7 @@ Boolean add_subdirectory_access_paths(AccessPaths *ctx, AccessPathEntry *param2)
 unsigned short CLAccessPaths_GetCount(AccessPaths *table)
 {
     if (!table) {
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 152U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 152U);
     }
     return table->count;
 }
@@ -220,7 +220,7 @@ unsigned short CLAccessPaths_GetCount(AccessPaths *table)
 AccessPathEntry *CLAccessPaths_GetEntry(AccessPaths *table, unsigned short index)
 {
     if (table == NULL)
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 142U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 142U);
     if ((unsigned short)index < table->count)
         return table->items[(unsigned short)index];
     return 0U;
@@ -249,7 +249,7 @@ unsigned char CLAccessPaths_StoreItem(AccessPaths *ctx, void *value)
 Boolean allocate_slot(AccessPaths *table, UInt16 *slotIndex)
 {
     if (table == NULL) {
-        CLIO_ReportAssertionFailure("paths != NULL", "CLAccessPaths.c", 84U);
+        OS_ASSERT_AT("paths != NULL", "CLAccessPaths.c", 84U);
     }
     if (table->count >= table->capacity) {
         table->capacity += 20U;

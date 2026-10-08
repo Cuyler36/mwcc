@@ -14918,12 +14918,6 @@
     "size": 316
   },
   {
-    "name": "CMangler_ConversionFuncName",
-    "address": "0x004fe050",
-    "size": 104,
-    "source": "src/frontend/CMangler.c"
-  },
-  {
     "name": "CMangler_RTTIObjectName",
     "address": "0x004fe050",
     "size": 104,

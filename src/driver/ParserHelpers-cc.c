@@ -18,7 +18,7 @@
 #include <setjmp.h>
 #include <string.h>
 #include "driver/CLDropinCallbacks_V10.h"
-#define OPTION_ASSERT(cond, line) ((cond) ? (void)0 : CLIO_ReportAssertionFailure(#cond, "ParserHelpers-cc.c", line))
+#define OPTION_ASSERT(cond, line) ((cond) ? (void)0 : OS_ASSERT_AT(#cond, "ParserHelpers-cc.c", line))
 #define PR_UNSET 0
 int append_undef_directive(char *option, int unused, char *symbol)
 {

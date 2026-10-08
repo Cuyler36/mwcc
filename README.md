@@ -1,22 +1,26 @@
-MWCC
-====
+MWCC GC 3.0a5.2
+==============
 
-[![Build Status]][actions] [![1.2.5]][progress] [![1.2.5n]][progress] [![1.3]][progress]
+[![Build Status]][actions]
 
-[Build Status]: https://github.com/rayanht/mwcc/actions/workflows/build.yml/badge.svg
-[actions]: https://github.com/rayanht/mwcc/actions/workflows/build.yml
-[1.2.5]: https://decomp.dev/rayanht/mwcc/GC_1_2_5.svg?mode=shield&measure=code&label=1.2.5
-[1.2.5n]: https://decomp.dev/rayanht/mwcc/GC_1_2_5n.svg?mode=shield&measure=code&label=1.2.5n
-[1.3]: https://decomp.dev/rayanht/mwcc/GC_1_3.svg?mode=shield&measure=code&label=1.3
-[progress]: https://decomp.dev/rayanht/mwcc
+[Build Status]: https://github.com/Cuyler36/mwcc/actions/workflows/build.yml/badge.svg
+[actions]: https://github.com/Cuyler36/mwcc/actions/workflows/build.yml
 
 A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler for GameCube.
+This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
+to GC 3.0a5.2 while retaining the earlier versions.
+
+Current GC 3.0a5.2 status: 209 source files build, 1,079 candidate functions are
+mapped, and 217 functions pass full-byte and relocation checks. Targets.c is one
+complete translation unit: 380 code bytes and 112 data bytes. The remaining
+compiler is a port in progress; mappings alone do not establish a match.
 
 Supported versions:
 
 - `GC_1_2_5`: GameCube 1.2.5
 - `GC_1_2_5n`: GameCube 1.2.5n (1.2.5 with Ninji's patch)
 - `GC_1_3`: GameCube 1.3
+- `GC_3_0a5_2`: GameCube 3.0a5.2 (port in progress; see `config/GC_3_0a5_2/PORTING.md`)
 
 Dependencies
 ============
@@ -24,20 +28,35 @@ Dependencies
 - Python 3.11+
 - [ninja](https://github.com/ninja-build/ninja)
 - [unshield](https://github.com/twogood/unshield), to unpack the CodeWarrior Pro 5.3 updater
+- libarchive's `bsdtar`, to unpack the portable CodeWarrior 9.4 archive
 
-macOS: `brew install ninja unshield`. Linux: `apt install ninja-build unshield`.
+macOS: `brew install ninja unshield libarchive` (make libarchive's `bsdtar` available on `PATH`).
+Linux: `apt install ninja-build unshield libarchive-tools`.
 
-[wibo](https://github.com/decompals/wibo) runs the compilers and is downloaded automatically.
+[wibo](https://github.com/decompals/wibo) runs the compilers on macOS and Linux and is downloaded automatically.
+Windows runs the compilers directly; their companion DLL and license data are extracted from the original disc.
+On Windows, put `unshield.exe` on `PATH` or at `build/tools/unshield.exe`.
+The 3.0a5.2 compiler sources use Windows 9.4; its first download requires
+`bsdtar` (libarchive), or Windows' bundled `tar.exe`, to unpack the portable archive.
 
 Building
 ========
 
 ```sh
-python configure.py
-ninja
+python configure.py --version GC_3_0a5_2
+ninja all_source progress
 ```
 
-For another version, `python configure.py --version GC_1_2_5n` (or `GC_1_3`).
+For the baseline, use `python configure.py --version GC_1_2_5` followed by `ninja`.
+The other retained versions are `GC_1_2_5n` and `GC_1_3`.
+Without `--version`, configure.py selects GC 1.2.5.
+
+The same commands work in PowerShell. To select the 3.0a5.2 target, run
+`python configure.py --version GC_3_0a5_2`. Its original executable is checked against its SHA-1 and
+extracted for objdiff; only explicitly enabled sources and verified function mappings contribute to its progress. To build all enabled sources and
+generate the objdiff progress report, run `ninja all_source progress`.
+The GC 3.0a5.2 build and compiler experiments have been verified on Windows;
+its macOS/Linux wibo execution path has not yet been validated.
 
 The build downloads what it needs but this repository does not contain:
 
@@ -45,16 +64,38 @@ The build downloads what it needs but this repository does not contain:
   their published SHA-1 (`build/compilers/GC`)
 - the CodeWarrior Pro 4, 5, 5.3 and 6 Windows/x86 compilers that built them, from the Internet Archive
   (`build/compilers/pro*`)
+- the portable CodeWarrior Windows 9.4 compiler used by the GC 3.0a5.2 port
+  (`build/compilers/cw94`)
 - the MSL C library and runtime sources of CodeWarrior Pro 5, from the same Internet Archive disc (`lib/`), with
   `printf.c` patched to the revision the compiler was linked with
 
-Each function of the compiled sources is compared with the original's; `ninja` fails when a function of a Matching
-source differs. `python tools/verify.py` builds and checks every version.
+Each function of the compiled sources is compared with the original's; `ninja` fails when a function designated
+Matching differs. `python tools/verify.py` builds and checks every version.
+Run `python tools/test_compare.py` for the relocation and translation-unit
+regression tests. verify.py leaves GC 1.2.5 selected; reconfigure GC 3.0a5.2 afterward.
+Downloaded executables, compiler libraries, archives, and generated objects stay
+in ignored directories and are not distributed with this repository.
 
 Diffing
 =======
 
 Open the project in [objdiff](https://github.com/encounter/objdiff) after building.
+Each source file is one objdiff unit. Its object has a consolidated `.text`
+section with individually sized function symbols, plus separate `.rdata`, `.data`,
+and `.bss` sections where present. Unassigned image bytes stay in section buckets.
+Ninja can rebuild each source-level base object directly when objdiff requests it.
+
+For GC 3.0a5.2, all baseline source units are enabled, with the old Targets.c
+bundle split into Targets.c, ParserErrors.c, and Arguments.c. Imported functions
+remain NonMatching until their complete bytes and relocations pass verification.
+Use the portable CLI for individual comparisons, for example:
+
+```sh
+build/tools/objdiff-cli.exe diff -p . -u src/frontend/CInt64 -o build/CInt64.diff.json
+```
+
+See [the port notes](config/GC_3_0a5_2/PORTING.md) for compiler choices,
+mapping provenance, current coverage, and regeneration commands.
 
 Project structure
 =================
@@ -62,6 +103,13 @@ Project structure
 - `config/sources.json`: each source's compiler, flags and status (Matching or NonMatching)
 - `config/<version>/config.json`: the original executable and its SHA-1; for 1.3, the compiler that replaces Pro 5.3
   and the sources Matching in that version
+- A version's optional `sources` list selects files from `config/sources.json`; an empty list enables none.
+  Omit it to build all shared sources. `matching` separately lists which sources count as Matching.
+  Its optional `source_settings` dictionary adds or overrides compiler settings for that version.
+  An optional `matching_functions` list overrides file status with function identifiers
+  (`source path without extension/function name`) for strict verification.
+  An optional `complete_sources` list restricts whole-unit completion to inventoried files;
+  all emitted functions and attributed data must also pass their checks.
 - `config/<version>/functions.json`: each function's address, size and source (none yet for a function not
   decompiled)
 - `config/<version>/bindings.json`: the addresses of the data and functions the sources reference

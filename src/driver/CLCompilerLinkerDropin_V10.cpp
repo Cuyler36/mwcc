@@ -185,7 +185,7 @@ int __stdcall get_precompiled_header_spec(DropinRequest *request, int output, co
     }
     file = CLFiles_FindFileByIndex(&default_target->files, fileRequest->fileKey);
     if (file == 0) {
-        CLIO_ReportAssertionFailure("file != NULL", "CLCompilerLinkerDropin_V10.cpp", 415);
+        OS_ASSERT_AT("file != NULL", "CLCompilerLinkerDropin_V10.cpp", 415);
     }
     settings = (struct DropinSettings *)CLPlugins_GetObjectFlags(file->selectedPlugin);
     if (file->outputName[0] == 0) {
@@ -298,7 +298,7 @@ int __stdcall lookup_precompiled_unit(struct DropinRequest *request, char *input
     }
     settings = CLFiles_FindFileByIndex(&default_target->files, validatedRequest->fileKey);
     if (settings == 0) {
-        CLIO_ReportAssertionFailure("srcfile != NULL", "CLCompilerLinkerDropin_V10.cpp", 586);
+        OS_ASSERT_AT("srcfile != NULL", "CLCompilerLinkerDropin_V10.cpp", 586);
     }
     *outputObject = 0;
     outputValue->value = 0;
@@ -441,7 +441,7 @@ int __stdcall store_precompiled_unit(void *compilerObject, char *filename, int s
 
         sourceFile = CLFiles_FindFileByIndex(&default_target->files, sourceObject->requestData.fileIndex);
         if (sourceFile == 0)
-            CLIO_ReportAssertionFailure("srcfile != NULL", "CLCompilerLinkerDropin_V10.cpp", 0x312);
+            OS_ASSERT_AT("srcfile != NULL", "CLCompilerLinkerDropin_V10.cpp", 0x312);
 
         if (data_00541d10[0] != 0) {
             error = CLProj_MakeOSSpecFromPath(precompiled_unit_directory.path, name, 1, &path);

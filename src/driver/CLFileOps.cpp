@@ -733,7 +733,7 @@ int compile_file(DropinFileRecord *file, char *processed)
         return 1;
     }
     if (file->selectedPlugin == 0)
-        CLIO_ReportAssertionFailure("file->compiler", "CLFileOps.c", 0x342);
+        OS_ASSERT_AT("file->compiler", "CLFileOps.c", 0x342);
     *processed = 1;
     startTime = OS_GetMilliseconds();
     timerState = &data_00587570;
@@ -825,14 +825,14 @@ int CLFileOps_CompileProject(void)
         for (index = 0; index < CLAccessPaths_GetCount(&default_target->systemPaths); index++) {
             path = CLAccessPaths_GetEntry(&default_target->systemPaths, index);
             if (path == 0)
-                CLIO_ReportAssertionFailure("path != NULL", "CLFileOps.c", 0x3ca);
+                OS_ASSERT_AT("path != NULL", "CLFileOps.c", 0x3ca);
             CLErrors_ForwardMessage(0x55, fn_00412340(path->path, data_005880e0, 0x104), path->children ? " [r]" : "");
             if (path->children != 0) {
                 for (subIndex = 0; subIndex < CLAccessPaths_GetCount(path->children); subIndex++) {
                     struct AccessPathEntry *subPath;
                     subPath = CLAccessPaths_GetEntry(path->children, subIndex);
                     if (subPath == 0)
-                        CLIO_ReportAssertionFailure("sub", "CLFileOps.c", 0x3d3);
+                        OS_ASSERT_AT("sub", "CLFileOps.c", 0x3d3);
                     CLErrors_ForwardMessage(0x55, "\t", fn_00412340(subPath->path, data_005880e0, 0x104));
                 }
             }
@@ -842,14 +842,14 @@ int CLFileOps_CompileProject(void)
         for (pathIndex = 0; pathIndex < CLAccessPaths_GetCount(&default_target->userPaths); pathIndex++) {
             path = CLAccessPaths_GetEntry(&default_target->userPaths, pathIndex);
             if (path == 0)
-                CLIO_ReportAssertionFailure("path != NULL", "CLFileOps.c", 0x3e0);
+                OS_ASSERT_AT("path != NULL", "CLFileOps.c", 0x3e0);
             CLErrors_ForwardMessage(0x55, fn_00412340(path->path, data_005880e0, 0x104), path->children ? " [r]" : "");
             if (path->children != 0) {
                 for (subIndex = 0; subIndex < CLAccessPaths_GetCount(path->children); subIndex++) {
                     struct AccessPathEntry *subPath;
                     subPath = CLAccessPaths_GetEntry(path->children, subIndex);
                     if (subPath == 0)
-                        CLIO_ReportAssertionFailure("sub", "CLFileOps.c", 0x3e9);
+                        OS_ASSERT_AT("sub", "CLFileOps.c", 0x3e9);
                     CLErrors_ForwardMessage(0x55, "\t", fn_00412340(subPath->path, data_005880e0, 0x104));
                 }
             }

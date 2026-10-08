@@ -771,7 +771,7 @@ void write_resource_file(short refnum)
 
         for (entry = type->entries; entry != NULL; entry = entry->next) {
             if (reflist_offs >= map.namelist_offs) {
-                CLIO_ReportAssertionFailure("reflist_offs < dmap.namelist_offs", "Resources.c", 943);
+                OS_ASSERT_AT("reflist_offs < dmap.namelist_offs", "Resources.c", 943);
             }
             reference.id = entry->id;
             reference.nameOffset = entry->name ? name_offs : -1;
@@ -795,7 +795,7 @@ void write_resource_file(short refnum)
             if (entry->name != NULL) {
                 if (header.map_offs < header.data_offs &&
                     name_offs + map.namelist_offs + header.map_offs >= header.data_offs) {
-                    CLIO_ReportAssertionFailure("name_offs + dmap.namelist_offs + dhdr.map_offs < dhdr.data_offs",
+                    OS_ASSERT_AT("name_offs + dmap.namelist_offs + dhdr.map_offs < dhdr.data_offs",
                                                 "Resources.c", 963);
                 }
                 offset = header.map_offs + map.namelist_offs + reference.nameOffset;
@@ -809,13 +809,13 @@ void write_resource_file(short refnum)
             }
 
             if (data_offs >= header.data_len) {
-                CLIO_ReportAssertionFailure("data_offs < dhdr.data_len", "Resources.c", 970);
+                OS_ASSERT_AT("data_offs < dhdr.data_len", "Resources.c", 970);
             }
             if (entry->hand == NULL) {
-                CLIO_ReportAssertionFailure("mrle->hand!=NULL", "Resources.c", 971);
+                OS_ASSERT_AT("mrle->hand!=NULL", "Resources.c", 971);
             }
             if (header.map_offs > header.data_offs && data_offs + header.data_offs >= header.map_offs) {
-                CLIO_ReportAssertionFailure("data_offs + dhdr.data_offs < dhdr.map_offs", "Resources.c", 973);
+                OS_ASSERT_AT("data_offs + dhdr.data_offs < dhdr.map_offs", "Resources.c", 973);
             }
 
             fn_00413a00(entry->hand);

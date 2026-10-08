@@ -38,11 +38,13 @@
 
 /* "\r\n" */
 
+#if VERSION != VERSION_GC_3_0A5_2
 void CLIO_ReportAssertionFailure(char *message, char *file, unsigned int line)
 {
     fprintf(stderr, "Assertion (%s) failed in \"%s\" on line %d\n", message, file, line);
     abort();
 }
+#endif
 
 char *CLIO_ConvertToPascalString(char *string)
 {
@@ -527,7 +529,7 @@ unsigned int write_text_to_stdout_or_stderr(int unused, short messageType, const
     } else if (type == 2 || type == 3 || type == 4) {
         output = stderr;
     } else {
-        CLIO_ReportAssertionFailure("0", "CLIO.c", 845);
+        OS_ASSERT_AT("0", "CLIO.c", 845);
     }
     if (data_0054b9dc == 0 && DAT_0057eb68 == 0) {
         data_0054b9dc = 1;

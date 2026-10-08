@@ -48,7 +48,7 @@ char *CLPlugins_GetName(Plugin *plugin)
     char *name;
 
     if (plugin == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0x36);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0x36);
     }
     if (plugin->callbacks->getName != NULL) {
         result = plugin->callbacks->getName(&name);
@@ -65,7 +65,7 @@ UInt8 *get_plugin_result(Plugin *plugin)
     UInt8 *result;
 
     if (plugin == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0x42);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0x42);
     }
     if (plugin->callbacks->getResult != NULL) {
         status = plugin->callbacks->getResult((void **)&result);
@@ -82,7 +82,7 @@ PluginDesc *CLPlugins_GetPluginDesc(Plugin *provider)
     unsigned int size;
 
     if (provider == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0x56);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0x56);
     }
     if (provider->callbacks->getData != NULL) {
         if (provider->callbacks->getData(&data, &size) == 0) {
@@ -98,7 +98,7 @@ unsigned int CLPlugins_GetType(Plugin *type)
 {
     PluginDesc *resolvedType;
     if (!type)
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 102U);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 102U);
     resolvedType = CLPlugins_GetPluginDesc(type);
     if (resolvedType)
         return resolvedType->type;
@@ -111,10 +111,10 @@ TargetInfo *get_target_info(Plugin *entry)
     unsigned char *result;
 
     if (entry == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 115);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 115);
     }
     if (((Plugin *)entry)->targetCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->cl_cb != NULL", "CLPlugins.c", 116);
+        OS_ASSERT_AT("pl->cl_cb != NULL", "CLPlugins.c", 116);
     }
     if (((Plugin *)entry)->targetCallbacks->getTargetInfo != NULL) {
         status = ((Plugin *)entry)->targetCallbacks->getTargetInfo(&result);
@@ -130,7 +130,7 @@ void *get_plugin_directory_list(Plugin *plugin)
     struct PluginDirectoryList *directoryList;
     SInt16 status;
     if (plugin == NULL)
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0x8a);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0x8a);
     if (plugin->callbacks->getDirectoryList != NULL) {
         status = plugin->callbacks->getDirectoryList(&directoryList);
         if (status == 0)
@@ -144,10 +144,10 @@ FileMapInfo *get_file_map(Plugin *context)
     FileMapInfo *result;
 
     if (context == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0x9e);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0x9e);
     }
     if (context->targetCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->cl_cb != NULL", "CLPlugins.c", 0x9f);
+        OS_ASSERT_AT("pl->cl_cb != NULL", "CLPlugins.c", 0x9f);
     }
     if (context->targetCallbacks->getFileMap != NULL) {
         if ((*context->targetCallbacks->getFileMap)(&result) == 0) {
@@ -164,7 +164,7 @@ unsigned int get_callback_result(void *input)
     PluginResultCallback **callbacks = input;
 
     if (callbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0xb3);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0xb3);
     }
     if ((*callbacks)[8] != NULL) {
         status = (*callbacks)[8](&result);
@@ -181,10 +181,10 @@ void *CLPlugins_GetObjectFlags(Plugin *plugin)
     PluginDesc *info;
 
     if (plugin == NULL) {
-        CLIO_ReportAssertionFailure("pl", "CLPlugins.c", 0xbf);
+        OS_ASSERT_AT("pl", "CLPlugins.c", 0xbf);
     }
     if (plugin->targetCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->cl_cb != NULL", "CLPlugins.c", 0xc0);
+        OS_ASSERT_AT("pl->cl_cb != NULL", "CLPlugins.c", 0xc0);
     }
     if (plugin->targetCallbacks->getObjectFlags != NULL) {
         if (plugin->targetCallbacks->getObjectFlags(&flags) == 0) {
@@ -276,7 +276,7 @@ Boolean call_query_callback(Plugin *p, PluginRequest *a, SInt32 b, SInt32 c)
     Boolean result;
 
     if (p->queryCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->pr_cb != NULL", "CLPlugins.c", 0x143);
+        OS_ASSERT_AT("pl->pr_cb != NULL", "CLPlugins.c", 0x143);
     }
     if ((f = *(CLPluginFunc *)p->queryCallbacks) != NULL) {
         if (f(a, b, c, &result) == 0) {
@@ -306,7 +306,7 @@ UInt8 query_plugin(Plugin *plugin, unsigned int queryArgument, char **queryKind)
     UInt8 result;
 
     if (plugin->queryCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->pr_cb != NULL", "CLPlugins.c", 0x14f);
+        OS_ASSERT_AT("pl->pr_cb != NULL", "CLPlugins.c", 0x14f);
     }
     if (plugin->queryCallbacks->query != NULL) {
         status = plugin->queryCallbacks->query(queryArgument, queryKind, &result);
@@ -357,7 +357,7 @@ UInt8 CLPlugins_WriteObjectFile(Plugin *plugin, struct CWFileSpec *context, stru
     struct OSSpec outputSpec;
 
     if (plugin->targetCallbacks == NULL) {
-        CLIO_ReportAssertionFailure("pl->cl_cb != NULL", "CLPlugins.c", 0x173);
+        OS_ASSERT_AT("pl->cl_cb != NULL", "CLPlugins.c", 0x173);
     }
     validInput = 0;
     validContext = 0;
@@ -368,7 +368,7 @@ UInt8 CLPlugins_WriteObjectFile(Plugin *plugin, struct CWFileSpec *context, stru
         validInput = 1;
     }
     if (!validInput) {
-        CLIO_ReportAssertionFailure("data != NULL && srcfss != NULL && outfss != NULL", "CLPlugins.c", 0x174);
+        OS_ASSERT_AT("data != NULL && srcfss != NULL && outfss != NULL", "CLPlugins.c", 0x174);
     }
     if (plugin->targetCallbacks->writeObjectFile != NULL) {
         callbackResult = (*plugin->targetCallbacks->writeObjectFile)(context, input, objectFlags, option, objectHandle);
@@ -943,9 +943,9 @@ int CLPlugins_BuildPluginRequests(Plugin *list, SInt32 *count, PluginRequest **o
         info = (PluginDesc *)CLPlugins_GetPluginDesc(node);
         name = get_plugin_result(node);
         if (info == NULL)
-            CLIO_ReportAssertionFailure("df != NULL", "CLPlugins.c", 0x40d);
+            OS_ASSERT_AT("df != NULL", "CLPlugins.c", 0x40d);
         if (name == NULL)
-            CLIO_ReportAssertionFailure("vi != NULL", "CLPlugins.c", 0x40e);
+            OS_ASSERT_AT("vi != NULL", "CLPlugins.c", 0x40e);
         (*out)[index].tag.signed_kind = info->type;
         (*out)[index].secondCode = info->lang;
         (*out)[index].flags = info->flags;

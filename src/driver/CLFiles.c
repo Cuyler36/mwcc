@@ -51,7 +51,7 @@ unsigned char CLFiles_FreeAllocationRecords(struct IndexedListLink *list)
     struct IndexedListLink *entry;
 
     if (list == NULL) {
-        CLIO_ReportAssertionFailure("this != NULL", "CLFiles.c", 0x32);
+        OS_ASSERT_AT("this != NULL", "CLFiles.c", 0x32);
     }
     entry = list->next;
     while (entry != NULL) {
@@ -72,7 +72,7 @@ unsigned char CLFiles_InsertIndexedListLinkAtFirstIndex(IndexedListLink *first, 
 SInt32 CLFiles_GetIndex(IndexedListLink *entry)
 {
     if (!entry)
-        CLIO_ReportAssertionFailure("this != NULL", "CLFiles.c", 121U);
+        OS_ASSERT_AT("this != NULL", "CLFiles.c", 121U);
     return entry->index;
 }
 
@@ -151,9 +151,9 @@ DropinFileRecord *CLFiles_FindFileByIndex(IndexedListLink *head, int index)
 {
     IndexedListLink *entry;
     if (!head)
-        CLIO_ReportAssertionFailure("this != NULL", "CLFiles.c", 98U);
+        OS_ASSERT_AT("this != NULL", "CLFiles.c", 98U);
     if (index < 0)
-        CLIO_ReportAssertionFailure("filenum >= 0", "CLFiles.c", 99U);
+        OS_ASSERT_AT("filenum >= 0", "CLFiles.c", 99U);
     entry = head->next;
     while (entry && entry->index != index)
         entry = entry->next;
@@ -163,7 +163,7 @@ DropinFileRecord *CLFiles_FindFileByIndex(IndexedListLink *head, int index)
 unsigned char CLFiles_AssertNonNullIndexedListLink(struct IndexedListLink *value)
 {
     if (value == NULL)
-        CLIO_ReportAssertionFailure("this != NULL", "CLFiles.c", 41U);
+        OS_ASSERT_AT("this != NULL", "CLFiles.c", 41U);
     return 1;
 }
 
@@ -181,10 +181,10 @@ char CLFiles_InsertIndexedListLink(IndexedListLink *list, IndexedListLink *node,
 {
     IndexedListLink *p;
     if (list == NULL) {
-        CLIO_ReportAssertionFailure("this != NULL", "CLFiles.c", 74);
+        OS_ASSERT_AT("this != NULL", "CLFiles.c", 74);
     }
     if (node == NULL) {
-        CLIO_ReportAssertionFailure("file != NULL", "CLFiles.c", 75);
+        OS_ASSERT_AT("file != NULL", "CLFiles.c", 75);
     }
     if (pos < 0) {
         pos = 0;

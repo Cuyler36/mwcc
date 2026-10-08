@@ -1,0 +1,272 @@
+[
+  {
+    "name": "CLStaticPlugins_SetIdentifiers",
+    "address": "0x00405e70",
+    "size": 21,
+    "baseline_address": "0x00405380",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLStaticPlugins.c"
+  },
+  {
+    "name": "fn_004053a0",
+    "address": "0x00405e90",
+    "size": 21,
+    "baseline_address": "0x004053a0",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLStaticPlugins.c"
+  },
+  {
+    "name": "_rt_modu64",
+    "address": "0x0041ac70",
+    "size": 125,
+    "baseline_address": "0x00405940",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/runtime/LongLongx86.c"
+  },
+  {
+    "name": "register_option_lists",
+    "address": "0x0041a3c8",
+    "size": 23,
+    "baseline_address": "0x0040b851",
+    "masked_bytes": 8,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/ToolHelpers.c"
+  },
+  {
+    "name": "store_boolean_result",
+    "address": "0x0041a868",
+    "size": 28,
+    "baseline_address": "0x0040bcb4",
+    "masked_bytes": 4,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/ToolHelpers.c"
+  },
+  {
+    "name": "Targets_FormatAndDispatchMessage",
+    "address": "0x0041e529",
+    "size": 53,
+    "baseline_address": "0x0040eb76",
+    "masked_bytes": 24,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "Targets_ReportFormattedMessage",
+    "address": "0x0041e55e",
+    "size": 46,
+    "baseline_address": "0x0040ebab",
+    "masked_bytes": 20,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "format_and_forward_message",
+    "address": "0x0041e58c",
+    "size": 40,
+    "baseline_address": "0x0040ec07",
+    "masked_bytes": 20,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "format_and_report_message",
+    "address": "0x0041e5b4",
+    "size": 51,
+    "baseline_address": "0x0040ec2f",
+    "masked_bytes": 24,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "report_operating_system_error",
+    "address": "0x0041e5e7",
+    "size": 55,
+    "baseline_address": "0x0040ec62",
+    "masked_bytes": 28,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "Targets_DecrementCountAndGetTokenText",
+    "address": "0x0041f277",
+    "size": 24,
+    "baseline_address": "0x0040f9ca",
+    "masked_bytes": 12,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Targets.c"
+  },
+  {
+    "name": "clearerr",
+    "address": "0x0042d980",
+    "size": 13,
+    "baseline_address": "0x0040fe30",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/msl/misc_io.c"
+  },
+  {
+    "name": "time_g_clear_tm",
+    "address": "0x0049ade0",
+    "size": 67,
+    "baseline_address": "0x004103d0",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/msl/time_g.c"
+  },
+  {
+    "name": "OS_InvalidateHandle",
+    "address": "0x00411dc0",
+    "size": 20,
+    "baseline_address": "0x00412a50",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/MsDos.c"
+  },
+  {
+    "name": "CLIO_InitializeStreamBuffering",
+    "address": "0x004181f0",
+    "size": 121,
+    "baseline_address": "0x00414da0",
+    "masked_bytes": 48,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLIO.c"
+  },
+  {
+    "name": "reset_column_and_append_prefix",
+    "address": "0x00418830",
+    "size": 36,
+    "baseline_address": "0x00415200",
+    "masked_bytes": 8,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLIO.c"
+  },
+  {
+    "name": "append_prefix_separator",
+    "address": "0x00418a20",
+    "size": 35,
+    "baseline_address": "0x004153f0",
+    "masked_bytes": 8,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLIO.c"
+  },
+  {
+    "name": "_Setjmp",
+    "address": "0x00404920",
+    "size": 24,
+    "baseline_address": "0x0041b370",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/msl/setjmp_x86.c"
+  },
+  {
+    "name": "longjmp",
+    "address": "0x00404940",
+    "size": 31,
+    "baseline_address": "0x0041b390",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/msl/setjmp_x86.c"
+  },
+  {
+    "name": "push_option",
+    "address": "0x0043048b",
+    "size": 17,
+    "baseline_address": "0x0041c14d",
+    "masked_bytes": 4,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Option.c"
+  },
+  {
+    "name": "initialize_plugin_context",
+    "address": "0x00434760",
+    "size": 93,
+    "baseline_address": "0x0041ebc0",
+    "masked_bytes": 32,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/libimp-eabi-ppc.c"
+  },
+  {
+    "name": "free_if_not_null",
+    "address": "0x00421770",
+    "size": 16,
+    "baseline_address": "0x004277b0",
+    "masked_bytes": 4,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLSegs.c"
+  },
+  {
+    "name": "CLBrowser_InitCache",
+    "address": "0x0043dda0",
+    "size": 31,
+    "baseline_address": "0x00428d90",
+    "masked_bytes": 16,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/CLBrowser.c"
+  },
+  {
+    "name": "push_argument_option",
+    "address": "0x0043f6c4",
+    "size": 17,
+    "baseline_address": "0x0042a786",
+    "masked_bytes": 4,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/driver/Parameter.c"
+  },
+  {
+    "name": "CExpr2_ConvertCInt64ToUInt8",
+    "address": "0x004d9030",
+    "size": 18,
+    "baseline_address": "0x00474d20",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/frontend/CExpr2.c"
+  },
+  {
+    "name": "CExpr2_ConvertCInt64ToUnsignedShort",
+    "address": "0x004d9080",
+    "size": 18,
+    "baseline_address": "0x00474d70",
+    "masked_bytes": 0,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/frontend/CExpr2.c"
+  },
+  {
+    "name": "CParser_NewFuncArg",
+    "address": "0x00455420",
+    "size": 25,
+    "baseline_address": "0x0048ff20",
+    "masked_bytes": 8,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/frontend/CParser.c"
+  },
+  {
+    "name": "CExcept_Setup",
+    "address": "0x004a0ac0",
+    "size": 25,
+    "baseline_address": "0x004e36b0",
+    "masked_bytes": 12,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/frontend/CException.c"
+  },
+  {
+    "name": "InlineAsm_CreateLabel",
+    "address": "0x0055eb30",
+    "size": 26,
+    "baseline_address": "0x004ed610",
+    "masked_bytes": 12,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/backend/InlineAsm.c"
+  },
+  {
+    "name": "CDecl_PrependFuncArg",
+    "address": "0x00514980",
+    "size": 48,
+    "baseline_address": "0x005043f0",
+    "masked_bytes": 8,
+    "evidence": "unique byte pattern at Ghidra function entry; relocation and external branch operands masked",
+    "baseline_source": "src/frontend/CDecl.c"
+  }
+]

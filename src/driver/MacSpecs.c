@@ -152,7 +152,7 @@ struct MacSpecEntry *lookup_dir_id(unsigned int dirID)
     unsigned int index = dirID >> 8;
     unsigned int entryIndex = dirID & 0xff;
     if (dirID == 2U)
-        CLIO_ReportAssertionFailure("dirID != 2", "MacSpecs.c", 166U);
+        OS_ASSERT_AT("dirID != 2", "MacSpecs.c", 166U);
     if (index >= directory_count)
         return NULL;
     return mac_spec_entries[index][entryIndex];
@@ -221,7 +221,7 @@ int find_or_create_spec_entry(char *spec, unsigned int *typePtr, unsigned int *o
     rec = &node->root;
     p = str + 1;
     if (str[0] != '\\')
-        CLIO_ReportAssertionFailure("*pb == OS_PATHSEP", "MacSpecs.c", 0x108);
+        OS_ASSERT_AT("*pb == OS_PATHSEP", "MacSpecs.c", 0x108);
     while (*p != '\0') {
         tok = p;
         while (*p != '\0' && *p != '\\')

@@ -4,6 +4,7 @@
 #define VERSION_GC_1_2_5 0
 #define VERSION_GC_1_2_5N 1
 #define VERSION_GC_1_3 2
+#define VERSION_GC_3_0A5_2 3
 
 /* configure.py passes -DVERSION=<index> */
 #ifndef VERSION

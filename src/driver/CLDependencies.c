@@ -285,7 +285,7 @@ Boolean find_dependency_access_path_entry(AccessPaths *dependencies, char *compa
     for (index = 0; index < CLAccessPaths_GetCount(dependencies); index++) {
         dependency = CLAccessPaths_GetEntry(dependencies, index);
         if (dependency == NULL)
-            CLIO_ReportAssertionFailure("path", "CLDependencies.c", 0x9b);
+            OS_ASSERT_AT("path", "CLDependencies.c", 0x9b);
         if (find_access_path_entry(dependency, comparison, result, path))
             return 1;
     }

@@ -26,7 +26,7 @@ void __stdcall MacFileTypes_AppendTable(struct MacFileTypeNode **list, SInt32 va
     }
     *pp = (struct MacFileTypeNode *)malloc(8);
     if (*pp == NULL) {
-        CLIO_ReportAssertionFailure("*scan != NULL", "MacFileTypes.c", 0x2b);
+        OS_ASSERT_AT("*scan != NULL", "MacFileTypes.c", 0x2b);
     }
     (*pp)->table = (struct OpcodeDescriptorTable *)value;
     (*pp)->next = NULL;

@@ -214,7 +214,7 @@ Boolean insert_dependency_from_path(DropinRequest *descriptor, char *argument, D
         }
         entry = CLFiles_FindFileByIndex(&default_target->files, acceptedDescriptor->requestData.fileIndex);
         if (entry == 0) {
-            CLIO_ReportAssertionFailure("file != NULL", "CLDropinCallbacks_V10.cpp", 496);
+            OS_ASSERT_AT("file != NULL", "CLDropinCallbacks_V10.cpp", 496);
         }
         CLProj_MakeOSSpecFromPath(entry->inputPath.directory.path, argument, 1, context);
         flag = state->enableDependencyLookup != 0 || data_00541b42 != 0;
@@ -801,7 +801,7 @@ int __stdcall cache_access_path_list(CWPluginPrivateContext *request)
             entry0 = cache->entries0 + index;
             source0 = CLAccessPaths_GetEntry(&default_target->systemPaths, index);
             if (source0 == 0) {
-                CLIO_ReportAssertionFailure("path", "CLDropinCallbacks_V10.cpp", 1954);
+                OS_ASSERT_AT("path", "CLDropinCallbacks_V10.cpp", 1954);
             }
             CLProj_MakeOSSpecFromPath(source0->path, 0, 0, (struct OSSpec *)buffer0);
             MacSpecs_MakeCWFileSpecFromString(buffer0, &entry0->file);
@@ -816,7 +816,7 @@ int __stdcall cache_access_path_list(CWPluginPrivateContext *request)
             entry1 = cache->entries1 + index;
             source1 = CLAccessPaths_GetEntry(&default_target->userPaths, index);
             if (source1 == 0) {
-                CLIO_ReportAssertionFailure("path", "CLDropinCallbacks_V10.cpp", 1988);
+                OS_ASSERT_AT("path", "CLDropinCallbacks_V10.cpp", 1988);
             }
             CLProj_MakeOSSpecFromPath(source1->path, 0, 0, (struct OSSpec *)buffer1);
             MacSpecs_MakeCWFileSpecFromString(buffer1, &entry1->file);

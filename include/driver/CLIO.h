@@ -1,6 +1,7 @@
 #ifndef DRIVER_CLIO_H
 #define DRIVER_CLIO_H
 
+#include "driver/OSAssert.h"
 #include <setjmp.h>
 #include "compiler/common.h"
 #include "driver/MsDos.h"
@@ -8,6 +9,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+struct _FILE;
 
 struct StringListHeader {
     unsigned char countHigh; /* 0x00: CLIO_GetResourceString reads the high byte of the big-endian STR# string count */
@@ -47,7 +50,6 @@ struct DiagnosticSourcePosition {
 
 extern char data_005880e0[];
 extern void __stdcall CLIO_GetResourceString(unsigned char *output, short resourceID, short stringIndex);
-extern void CLIO_ReportAssertionFailure(char *a, char *b, unsigned int c);
 extern char *__stdcall CLIO_ConvertPascalToCString(char *p);
 extern char *CLIO_ConvertToPascalString(char *string);
 extern Boolean write_text_buffer(struct _FILE *fp, StorageHandle *bufp, SInt32 len);

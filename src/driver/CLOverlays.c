@@ -1,3 +1,4 @@
+#define CERROR_FILE "CLOverlays.c"
 #include "compiler/common.h"
 #include "driver/CLOverlays.h"
 #include "driver/CLDropinCallbacks_V10.h"
@@ -9,10 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
-#define OS_ASSERT(line, cond)                                                                                          \
-    if (!(cond))                                                                                                       \
-    CLIO_ReportAssertionFailure(#cond, "CLOverlays.c", line)
+#include "driver/OSAssert.h"
 
 Boolean CLOverlays_Init(Overlays *this)
 {
@@ -42,10 +40,10 @@ Boolean CLOverlays_Init(Overlays *this)
 char CLOverlays_AppendOverlay(CLOverlayEntry *self, struct OverlayAllocation *overlay, unsigned int *index)
 {
     if (self == NULL) {
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 211U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 211U);
     }
     if (overlay == NULL) {
-        CLIO_ReportAssertionFailure("oly", "CLOverlays.c", 212U);
+        OS_ASSERT_AT("oly", "CLOverlays.c", 212U);
     }
     if (self->lastOverlay == NULL) {
         self->firstOverlay = overlay;
@@ -74,7 +72,7 @@ unsigned int CLOverlays_CountGroups(struct Overlays *list)
     unsigned int count;
     count = 0U;
     if (!list)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 112U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 112U);
     record = list->groups;
     if (record) {
         do {
@@ -90,7 +88,7 @@ unsigned int CLOverlays_GetAllocationValueByGroupIndex(Overlays *overlay, unsign
 {
     struct OverlayAllocation *allocation;
     if (!overlay)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 160U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 160U);
     allocation = CLOverlays_GetAllocationByGroupIndex(overlay, groupName, groupIndex);
     if (allocation)
         return get_allocation_value(allocation, valueIndex);
@@ -101,7 +99,7 @@ struct OverlayAllocation *CLOverlays_GetAllocationByGroupIndex(Overlays *overlay
 {
     struct CLOverlayEntry *entry;
     if (overlay == 0U)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 144U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 144U);
     entry = CLOverlays_GetGroupByIndex(overlay, name);
     if (entry != 0U)
         return CLOverlays_GetOverlayAtIndex(entry, value);
@@ -115,7 +113,7 @@ struct CLOverlayEntry *CLOverlays_GetGroupByIndex(struct Overlays *list, int ind
 
     count = 0;
     if (!list)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 93);
+        OS_ASSERT_AT("this", "CLOverlays.c", 93);
 
     record = list->groups;
     while (record && count < index) {
@@ -135,7 +133,7 @@ struct OverlayAllocation *CLOverlays_GetOverlayAtIndex(struct CLOverlayEntry *li
     int position;
     position = 0;
     if (list == NULL)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 234U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 234U);
     entry = list->firstOverlay;
     while (entry != NULL && position < index) {
         position += 1;
@@ -155,7 +153,7 @@ unsigned int CLOverlays_CountOverlays(CLOverlayEntry *record)
 
     count = 0U;
     if (record == NULL)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 254U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 254U);
 
     link = record->firstOverlay;
     if (link != NULL) {
@@ -191,7 +189,7 @@ struct OverlayAllocation *CLOverlays_CreateOverlayAllocation(const char *name)
 unsigned int CLOverlays_GetValueCount(struct OverlayAllocation *record)
 {
     if (record == NULL)
-        CLIO_ReportAssertionFailure("oly", "CLOverlays.c", 323U);
+        OS_ASSERT_AT("oly", "CLOverlays.c", 323U);
     return record->valueCount;
 }
 
@@ -253,9 +251,9 @@ void CLOverlays_ConvertSecondsToTimestamp(unsigned int seconds, struct PackedCon
 unsigned char CLOverlays_AppendGroup(Overlays *list, CLOverlayEntry *entry, unsigned int *index)
 {
     if (!list)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 70U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 70U);
     if (!entry)
-        CLIO_ReportAssertionFailure("grp", "CLOverlays.c", 71U);
+        OS_ASSERT_AT("grp", "CLOverlays.c", 71U);
     if (!list->groups)
         list->groups = entry;
     else
@@ -275,7 +273,7 @@ unsigned int get_allocation_value(OverlayAllocation *table, unsigned int index)
     int valueCount;
 
     if (table == NULL) {
-        CLIO_ReportAssertionFailure("oly", "CLOverlays.c", 314U);
+        OS_ASSERT_AT("oly", "CLOverlays.c", 314U);
     }
     allocationIndex = index;
     valueCount = table->valueCount;
@@ -295,7 +293,7 @@ unsigned char CLOverlays_FreeGroups(Overlays *list)
     struct CLOverlayEntry *next;
 
     if (!list)
-        CLIO_ReportAssertionFailure("this", "CLOverlays.c", 54U);
+        OS_ASSERT_AT("this", "CLOverlays.c", 54U);
     entry = list->groups;
     while (entry) {
         next = entry->next;
@@ -314,7 +312,7 @@ void free_overlay_allocations(CLOverlayEntry *list)
     struct OverlayAllocation *p;
     struct OverlayAllocation *next;
     if (list == NULL) {
-        CLIO_ReportAssertionFailure("grp", "CLOverlays.c", 0xc5);
+        OS_ASSERT_AT("grp", "CLOverlays.c", 0xc5);
     }
     p = list->firstOverlay;
     while (p) {
@@ -329,7 +327,7 @@ void free_overlay_allocations(CLOverlayEntry *list)
 void free_overlay_values(struct OverlayAllocation *overlay)
 {
     if (overlay == NULL)
-        CLIO_ReportAssertionFailure("oly", "CLOverlays.c", 288U);
+        OS_ASSERT_AT("oly", "CLOverlays.c", 288U);
     if (overlay->values != NULL)
         free(overlay->values);
     overlay->values = NULL;
@@ -343,7 +341,7 @@ CLOverlayEntry *CLOverlays_CreateOverlayEntry(const char *name, CLOverlayValues 
 {
     CLOverlayEntry *overlay;
     if (!name)
-        CLIO_ReportAssertionFailure("name", "CLOverlays.c", 175U);
+        OS_ASSERT_AT("name", "CLOverlays.c", 175U);
     overlay = xmalloc(NULL, 280U);
     if (overlay) {
         strncpy(overlay->name, name, 256U);
@@ -366,7 +364,7 @@ UInt8 CLOverlays_AppendEntry(struct OverlayAllocation *table, SInt32 entry, SInt
     SInt32 count;
     SInt32 capacity;
     if (!table) {
-        CLIO_ReportAssertionFailure("oly", "CLOverlays.c", 296U);
+        OS_ASSERT_AT("oly", "CLOverlays.c", 296U);
     }
     count = table->valueCount;
     capacity = table->word264;

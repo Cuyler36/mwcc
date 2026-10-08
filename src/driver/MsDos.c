@@ -1164,7 +1164,7 @@ unsigned int __stdcall OS_RefToMac(unsigned int value)
     {
         int ref = value;
         if (ref >= 65535)
-            CLIO_ReportAssertionFailure("(long)ref < 0xffff", "MsDos.c", 1560U);
+            OS_ASSERT_AT("(long)ref < 0xffff", "MsDos.c", 1560U);
     }
     return value + 1U;
 }

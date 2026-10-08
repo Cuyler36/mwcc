@@ -1,0 +1,3372 @@
+{
+  "original": "build/compilers/GC/3.0a5.2/mwcceppc.exe",
+  "sha1": "79683505e7fc6bb63e5c169f21623df272dd2262",
+  "sources": [
+    "src/backend/BE_elf.c",
+    "src/backend/BE_symbol.c",
+    "src/backend/BitVectors.c",
+    "src/backend/CMachine.c",
+    "src/backend/CodeGen.c",
+    "src/backend/Coloring.c",
+    "src/backend/DWARF.c",
+    "src/backend/DumpIR.c",
+    "src/backend/ELF_Endian.c",
+    "src/backend/Exceptions.c",
+    "src/backend/FuncLevelAsmPPC.c",
+    "src/backend/InlineAsm.c",
+    "src/backend/InlineAsmPPC.c",
+    "src/backend/InstrSelection.c",
+    "src/backend/InterferenceGraph.c",
+    "src/backend/Intrinsics.c",
+    "src/backend/LiveVariables.c",
+    "src/backend/MachineSimulation601.c",
+    "src/backend/MachineSimulation603.c",
+    "src/backend/MachineSimulation603e.c",
+    "src/backend/MachineSimulation604.c",
+    "src/backend/MachineSimulation7400.c",
+    "src/backend/MachineSimulation750.c",
+    "src/backend/MachineSimulation821.c",
+    "src/backend/ObjGen_PPC_EABI.c",
+    "src/backend/Operands.c",
+    "src/backend/PCode.c",
+    "src/backend/PCodeAssembly.c",
+    "src/backend/PCodeListing.c",
+    "src/backend/PCodeUtilities.c",
+    "src/backend/PPCError.c",
+    "src/backend/Peephole.c",
+    "src/backend/Registers.c",
+    "src/backend/SFPE_PPC_EABI.c",
+    "src/backend/Scheduler.c",
+    "src/backend/SpillCode.c",
+    "src/backend/StackFrameEABI.c",
+    "src/backend/Switch.c",
+    "src/backend/TOC.c",
+    "src/driver/CLAccessPaths.c",
+    "src/driver/CLBrowser.c",
+    "src/driver/CLCompilerLinkerDropin_V10.cpp",
+    "src/driver/CLDependencies.c",
+    "src/driver/CLDropinCallbacks_V10.cpp",
+    "src/driver/CLErrors.c",
+    "src/driver/CLFileOps.cpp",
+    "src/driver/CLFiles.c",
+    "src/driver/CLIO.c",
+    "src/driver/CLLicenses.c",
+    "src/driver/CLLoadAndCache.c",
+    "src/driver/CLMain.c",
+    "src/driver/CLOverlays.c",
+    "src/driver/CLPluginRequests.cpp",
+    "src/driver/CLPlugins.c",
+    "src/driver/CLPrefs.c",
+    "src/driver/CLProj.c",
+    "src/driver/CLSegs.c",
+    "src/driver/CLStaticMain.c",
+    "src/driver/CLStaticPlugins.c",
+    "src/driver/CLTarg.c",
+    "src/driver/CLToolExec.c",
+    "src/driver/CLWriteObjectFile.c",
+    "src/driver/CWParserPluginsPrivate.c",
+    "src/driver/CWPluginsPrivate.c",
+    "src/driver/ClientGlue.c",
+    "src/driver/DropInCompilerLinkerPrivate.c",
+    "src/driver/Files.c",
+    "src/driver/Help.c",
+    "src/driver/LicenseImports.c",
+    "src/driver/MacFileTypes.c",
+    "src/driver/MacSpecs.c",
+    "src/driver/MemUtils.c",
+    "src/driver/Memory.c",
+    "src/driver/MsDos.c",
+    "src/driver/OptimizerHelpers.c",
+    "src/driver/Option.c",
+    "src/driver/Parameter.c",
+    "src/driver/ParserGlue-eabi-ppc-cc.c",
+    "src/driver/ParserHelpers-cc.c",
+    "src/driver/ParserHelpers.c",
+    "src/driver/ResourceStrings.c",
+    "src/driver/Resources.c",
+    "src/driver/StaticParserGlue.c",
+    "src/driver/StringUtils.c",
+    "src/driver/TargetOptimizer-ppc-eabi.c",
+    "src/driver/TargetPanels-eabi-ppc.c",
+    "src/driver/ToolHelpers-cc.c",
+    "src/driver/ToolHelpers.c",
+    "src/driver/Utils.c",
+    "src/driver/WarningHelpers.c",
+    "src/driver/cc-eabi-ppc-mw.c",
+    "src/driver/cc-eabi-ppc.c",
+    "src/driver/libimp-eabi-ppc.c",
+    "src/frontend/CABI.c",
+    "src/frontend/CBrowse.c",
+    "src/frontend/CClass.c",
+    "src/frontend/CDecl.c",
+    "src/frontend/CError.c",
+    "src/frontend/CException.c",
+    "src/frontend/CExpr.c",
+    "src/frontend/CExpr2.c",
+    "src/frontend/CFunc.c",
+    "src/frontend/CInit.c",
+    "src/frontend/CInline.c",
+    "src/frontend/CInt64.c",
+    "src/frontend/CMangler.c",
+    "src/frontend/CObjC.c",
+    "src/frontend/CObjCModern.c",
+    "src/frontend/CParser.c",
+    "src/frontend/CPrec.c",
+    "src/frontend/CPrep.c",
+    "src/frontend/CPrepTokenizer.c",
+    "src/frontend/CPreprocess.c",
+    "src/frontend/CRTTI.c",
+    "src/frontend/CSOM.c",
+    "src/frontend/CScope.c",
+    "src/frontend/CTemplateClass.c",
+    "src/frontend/CTemplateFunc.c",
+    "src/frontend/CTemplateNew.c",
+    "src/frontend/CTemplateTools.c",
+    "src/frontend/CompilerTools.c",
+    "src/frontend/Unmangle.c",
+    "src/msl/abort_exit.c",
+    "src/msl/alloc_g.c",
+    "src/msl/ansi_files.c",
+    "src/msl/ansi_files_g.c",
+    "src/msl/ansifp_x86.c",
+    "src/msl/arith.c",
+    "src/msl/buffer_io_g.c",
+    "src/msl/char_io.c",
+    "src/msl/critical_regions_win32.c",
+    "src/msl/ctype.c",
+    "src/msl/direct_io_g.c",
+    "src/msl/extras.c",
+    "src/msl/fcntl_win32_g.c",
+    "src/msl/file_io.c",
+    "src/msl/file_io_g.c",
+    "src/msl/file_io_win32_g.c",
+    "src/msl/file_pos_g.c",
+    "src/msl/mbstring.c",
+    "src/msl/mem.c",
+    "src/msl/misc_io.c",
+    "src/msl/pool_alloc_win32_g.c",
+    "src/msl/printf_g.c",
+    "src/msl/qsort_g.c",
+    "src/msl/scanf.c",
+    "src/msl/scanf_g.c",
+    "src/msl/setjmp_x86.c",
+    "src/msl/signal.c",
+    "src/msl/startup_win32.c",
+    "src/msl/string.c",
+    "src/msl/string_g.c",
+    "src/msl/string_io.c",
+    "src/msl/strtold.c",
+    "src/msl/strtoul.c",
+    "src/msl/sysenv_win32.c",
+    "src/msl/time_g.c",
+    "src/msl/time_win32.c",
+    "src/msl/unistd_win32.c",
+    "src/msl/wchar_io.c",
+    "src/msl/wcstold.c",
+    "src/msl/wcstoul.c",
+    "src/msl/wctype.c",
+    "src/msl/wscanf.c",
+    "src/msl/wscanf_g.c",
+    "src/optimizer/AddPropagation.c",
+    "src/optimizer/CIRTransform.c",
+    "src/optimizer/COptimizer.c",
+    "src/optimizer/CodeMotion.c",
+    "src/optimizer/ConstantPropagation.c",
+    "src/optimizer/CopyPropagation.c",
+    "src/optimizer/FunctionCalls.c",
+    "src/optimizer/GlobalOptimizer.c",
+    "src/optimizer/IROUseDef.c",
+    "src/optimizer/IrOptimizer.c",
+    "src/optimizer/IroBitVect.c",
+    "src/optimizer/IroCSE.c",
+    "src/optimizer/IroDump.c",
+    "src/optimizer/IroEval.c",
+    "src/optimizer/IroFlowgraph.c",
+    "src/optimizer/IroJump.c",
+    "src/optimizer/IroLoop.c",
+    "src/optimizer/IroPropagate.c",
+    "src/optimizer/IroRangePropagation.c",
+    "src/optimizer/IroTransform.c",
+    "src/optimizer/IroUtil.c",
+    "src/optimizer/IroVars.c",
+    "src/optimizer/LoadDeletion.c",
+    "src/optimizer/LoopDetection.c",
+    "src/optimizer/LoopOptimization.c",
+    "src/optimizer/StrengthReduction.c",
+    "src/optimizer/StructMoves.c",
+    "src/optimizer/ValueNumbering.c",
+    "src/optimizer/VectorArraysToRegs.c",
+    "src/runtime/ExceptionTables.c",
+    "src/runtime/ExceptionX86.cpp",
+    "src/runtime/LongLongx86.c",
+    "src/runtime/NMWException.cpp",
+    "src/runtime/NewHand.cpp",
+    "src/runtime/arrcondes.cpp",
+    "src/runtime/delarrop.cpp",
+    "src/runtime/delop.cpp",
+    "src/runtime/globdest.c",
+    "src/runtime/maincrt.c",
+    "src/runtime/newop.cpp",
+    "src/runtime/stackall.c",
+    "src/GC_3_0a5_2/driver/ParserErrors.c",
+    "src/GC_3_0a5_2/driver/Arguments.c",
+    "src/GC_3_0a5_2/driver/Targets.c"
+  ],
+  "matching": [
+    "src/GC_3_0a5_2/driver/ParserErrors.c",
+    "src/GC_3_0a5_2/driver/Arguments.c",
+    "src/GC_3_0a5_2/driver/Targets.c"
+  ],
+  "source_settings": {
+    "src/GC_3_0a5_2/driver/ParserErrors.c": {
+      "compiler": "pro53",
+      "flags": [
+        "-O1",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/GC_3_0a5_2/driver/Arguments.c": {
+      "compiler": "pro53",
+      "flags": [
+        "-O1",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/GC_3_0a5_2/driver/Targets.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
+    },
+    "src/backend/BE_elf.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/BE_symbol.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
+    },
+    "src/backend/BitVectors.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend",
+        "include/mwcc",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/backend/CMachine.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/CodeGen.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Coloring.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/DWARF.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/DumpIR.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/ELF_Endian.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Exceptions.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/FuncLevelAsmPPC.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/InlineAsm.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/InlineAsmPPC.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/InstrSelection.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/InterferenceGraph.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Intrinsics.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/LiveVariables.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/MachineSimulation601.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/backend/MachineSimulation603.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/MachineSimulation603e.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/MachineSimulation604.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer",
+        "include"
+      ]
+    },
+    "src/backend/MachineSimulation7400.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/MachineSimulation750.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/backend/MachineSimulation821.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/ObjGen_PPC_EABI.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Operands.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/PCode.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/PCodeAssembly.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/PCodeListing.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/PCodeUtilities.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/PPCError.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Peephole.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Registers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/SFPE_PPC_EABI.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend",
+        "include"
+      ]
+    },
+    "src/backend/Scheduler.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
+    },
+    "src/backend/SpillCode.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/StackFrameEABI.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/backend/Switch.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend",
+        "include/compiler",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/backend/TOC.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
+    },
+    "src/driver/CLAccessPaths.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLBrowser.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLCompilerLinkerDropin_V10.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLDependencies.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLDropinCallbacks_V10.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLErrors.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLFileOps.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLFiles.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLIO.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLLicenses.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/driver/CLLoadAndCache.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLMain.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLOverlays.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLPluginRequests.cpp": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLPlugins.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLPrefs.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLProj.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/driver/CLSegs.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLStaticMain.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLStaticPlugins.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLTarg.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLToolExec.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CLWriteObjectFile.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CWParserPluginsPrivate.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/CWPluginsPrivate.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/driver/ClientGlue.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/DropInCompilerLinkerPrivate.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Files.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Help.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/LicenseImports.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/MacFileTypes.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/MacSpecs.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/MemUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver",
+        "include"
+      ]
+    },
+    "src/driver/Memory.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/MsDos.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/OptimizerHelpers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Option.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Parameter.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ParserGlue-eabi-ppc-cc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ParserHelpers-cc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ParserHelpers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ResourceStrings.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Resources.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/StaticParserGlue.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/StringUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/TargetOptimizer-ppc-eabi.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/TargetPanels-eabi-ppc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ToolHelpers-cc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/ToolHelpers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/Utils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/WarningHelpers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/cc-eabi-ppc-mw.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/cc-eabi-ppc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/driver/libimp-eabi-ppc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
+    },
+    "src/frontend/CABI.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CBrowse.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CClass.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CDecl.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CError.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CException.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CExpr.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CExpr2.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CFunc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CInit.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "include",
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CInline.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend",
+        "include"
+      ]
+    },
+    "src/frontend/CInt64.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CMangler.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CObjC.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CObjCModern.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CParser.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CPrec.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CPrep.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CPrepTokenizer.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CPreprocess.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CRTTI.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend",
+        "include"
+      ]
+    },
+    "src/frontend/CSOM.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CScope.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CTemplateClass.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CTemplateFunc.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CTemplateNew.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/CTemplateTools.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend",
+        "include"
+      ]
+    },
+    "src/frontend/CompilerTools.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
+    },
+    "src/frontend/Unmangle.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend",
+        "include"
+      ]
+    },
+    "src/optimizer/AddPropagation.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/CIRTransform.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/COptimizer.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/CodeMotion.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/ConstantPropagation.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/CopyPropagation.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "include"
+      ]
+    },
+    "src/optimizer/FunctionCalls.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/GlobalOptimizer.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IROUseDef.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IrOptimizer.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroBitVect.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroCSE.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroDump.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroEval.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroFlowgraph.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroJump.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroLoop.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer",
+        "include"
+      ]
+    },
+    "src/optimizer/IroPropagate.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroRangePropagation.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroTransform.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer",
+        "include",
+        "include/libc"
+      ]
+    },
+    "src/optimizer/IroUtil.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/IroVars.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer",
+        "include"
+      ]
+    },
+    "src/optimizer/LoadDeletion.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/LoopDetection.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/LoopOptimization.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/StrengthReduction.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/StructMoves.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/ValueNumbering.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/optimizer"
+      ]
+    },
+    "src/optimizer/VectorArraysToRegs.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
+    }
+  },
+  "matching_functions": [
+    "src/msl/setjmp_x86/_Setjmp",
+    "src/msl/setjmp_x86/longjmp",
+    "src/driver/ClientGlue/ClientGlue_SetNamesAndRun",
+    "src/driver/CLMain/invoke_if_requested",
+    "src/driver/CLMain/is_enabled_or_global_nonzero",
+    "src/driver/cc-eabi-ppc-mw/find_driver_lookup_entry",
+    "src/driver/ResourceStrings/ResourceStrings_AddResource",
+    "src/driver/MsDos/OS_GetErrText",
+    "src/driver/MsDos/OS_Status",
+    "src/driver/MsDos/OS_SetFileTime",
+    "src/driver/MsDos/OS_Open",
+    "src/driver/MsDos/OS_Read",
+    "src/driver/MsDos/OS_Seek",
+    "src/driver/MsDos/OS_Tell",
+    "src/driver/MsDos/OS_Close",
+    "src/driver/MsDos/OS_GetSize",
+    "src/driver/MsDos/OS_SetSize",
+    "src/driver/MsDos/OS_Mkdir",
+    "src/driver/MsDos/ensure_trailing_backslash",
+    "src/driver/MsDos/OS_IsDir",
+    "src/driver/MsDos/OS_IsFile",
+    "src/driver/MsDos/OS_GetTime",
+    "src/driver/MsDos/MsDos_GetValidMemBufferPtr",
+    "src/driver/MsDos/fn_004129c0",
+    "src/driver/MsDos/OS_FreeHandle",
+    "src/driver/MsDos/OS_GetHandleSize",
+    "src/driver/MsDos/OS_InvalidateHandle",
+    "src/driver/MsDos/OS_ValidHandle",
+    "src/driver/MacSpecs/MacSpecs_LoadMacResource",
+    "src/driver/Resources/find_resfile_by_refnum",
+    "src/driver/Resources/find_resfile_with_previous",
+    "src/driver/Resources/calculate_resource_sizes",
+    "src/driver/Resources/count_types",
+    "src/driver/Resources/count_entries",
+    "src/driver/CLPlugins/CLPlugins_CallEntry",
+    "src/driver/CLProj/match_wildcard_pattern",
+    "src/driver/CLProj/CLProj_GetFileName",
+    "src/driver/CLProj/CLProj_MakeOSSpecFromDirectoryAndFilename",
+    "src/driver/CLFileOps/CLFileOps_CopyMemBuffer",
+    "src/driver/CLFileOps/CLFileOps_AppendMemBuffer",
+    "src/driver/CLIO/reset_column_and_append_prefix",
+    "src/driver/CLIO/forward_format_arguments",
+    "src/driver/CLIO/select_plugin_type_data",
+    "src/driver/ToolHelpers/register_option_lists",
+    "src/driver/ToolHelpers/match_tool",
+    "src/driver/ToolHelpers/store_boolean_result",
+    "src/runtime/LongLongx86/_rt_modu64",
+    "src/driver/ParserHelpers/ParserHelpers_GetFirstEnvironmentVariable",
+    "src/driver/ParserHelpers/match_extension_pattern",
+    "src/driver/ToolHelpers-cc/ToolHelpers_cc_CallValuePairCallback",
+    "src/driver/ToolHelpers-cc/ToolHelpers_cc_GetNumFiles",
+    "src/driver/ToolHelpers-cc/ToolHelpers_cc_PassVirtualFileValuePair",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportError_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportWarning_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPStatus_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPAlert_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPOSAlert_V",
+    "src/GC_3_0a5_2/driver/Arguments/Arg_GetToken",
+    "src/GC_3_0a5_2/driver/Arguments/Arg_UndoToken",
+    "src/GC_3_0a5_2/driver/Targets/SetParserToolInfo",
+    "src/GC_3_0a5_2/driver/Targets/ParserToolMatchesPlugin",
+    "src/GC_3_0a5_2/driver/Targets/ParserToolHandlesPanels",
+    "src/GC_3_0a5_2/driver/Targets/SetupParserToolOptions",
+    "src/driver/CLSegs/free_if_not_null",
+    "src/driver/CLLicenses/get_license_slot_values",
+    "src/driver/MacSpecs/find_or_create_spec_entry_negated",
+    "src/driver/CLProj/CLProj_AppendString",
+    "src/driver/CLProj/CLProj_CopyStringBounded",
+    "src/driver/MemUtils/MemUtils_CallPluginEntry",
+    "src/driver/CLFileOps/set_bytes",
+    "src/msl/misc_io/clearerr",
+    "src/driver/StringUtils/_pstrcpy",
+    "src/driver/StringUtils/pstrcmp",
+    "src/driver/StringUtils/pstrchr",
+    "src/driver/StringUtils/c2pstrcpy",
+    "src/driver/StringUtils/p2cstrcpy",
+    "src/driver/StringUtils/mprintf",
+    "src/driver/Memory/set_storage_handle_data",
+    "src/driver/CLIO/CLIO_ConvertPascalToCString",
+    "src/driver/Option/push_option",
+    "src/driver/Option/pop_option_stack",
+    "src/driver/Option/fn_0041c1eb",
+    "src/driver/Option/format_ostack",
+    "src/driver/Option/Option_FormatOStackToList",
+    "src/driver/Option/clear_option_avail_high_bits",
+    "src/driver/Option/Option_IsAvailable",
+    "src/driver/Option/fn_0041c8ba",
+    "src/driver/Option/match_option_kind",
+    "src/driver/Option/print_option_help",
+    "src/driver/Option/Option_ShowHelp",
+    "src/driver/cc-eabi-ppc/cc_eabi_ppc_ReportCompilingFunction",
+    "src/driver/libimp-eabi-ppc/fn_0041e970",
+    "src/driver/libimp-eabi-ppc/fn_0041e990",
+    "src/driver/libimp-eabi-ppc/initialize_plugin_context",
+    "src/driver/libimp-eabi-ppc/fn_0041ede0",
+    "src/driver/libimp-eabi-ppc/fn_0041ee00",
+    "src/driver/libimp-eabi-ppc/check_ticks_and_longjmp",
+    "src/driver/Utils/Utils_IsDigit",
+    "src/driver/Utils/Utils_IsAlpha",
+    "src/driver/Utils/Utils_FormatOptions",
+    "src/driver/Utils/Utils_MatchStringSegments",
+    "src/driver/CLFiles/CLFiles_InitChain",
+    "src/driver/CLOverlays/CLOverlays_AppendGroup",
+    "src/driver/CLOverlays/CLOverlays_GetGroupByIndex",
+    "src/driver/CLOverlays/CLOverlays_GetAllocationByGroupIndex",
+    "src/driver/CLOverlays/CLOverlays_GetAllocationValueByGroupIndex",
+    "src/driver/CLOverlays/CLOverlays_AppendOverlay",
+    "src/driver/CLOverlays/CLOverlays_GetOverlayAtIndex",
+    "src/driver/CLOverlays/get_allocation_value",
+    "src/driver/CLOverlays/CLOverlays_GetValueCount",
+    "src/driver/CLDropinCallbacks_V10/emit_alert_messages",
+    "src/driver/CLDropinCallbacks_V10/report_message_detail",
+    "src/driver/CLSegs/CLSegs_AddValue",
+    "src/driver/CLDependencies/dep_records_equal",
+    "src/driver/CLDependencies/find_or_create_access_path_entry",
+    "src/driver/CLDependencies/initialize_four_words",
+    "src/driver/CLDependencies/escape_spaces",
+    "src/driver/CLBrowser/fn_004287c0",
+    "src/driver/CLBrowser/CLBrowser_InitMemBuffer",
+    "src/driver/CLBrowser/calculate_lookup_entries_size",
+    "src/driver/CLBrowser/prepend_browser_cache_entry",
+    "src/driver/CLBrowser/unlink_browser_cache_entry",
+    "src/driver/CLBrowser/CLBrowser_ReleaseBuffer",
+    "src/driver/Parameter/get_string_name_help_value",
+    "src/driver/Parameter/compare_setstring_value",
+    "src/driver/Parameter/invoke_float_parameter_callback",
+    "src/driver/Parameter/format_setting_help",
+    "src/driver/Parameter/fn_0042a312",
+    "src/driver/Parameter/push_argument_option",
+    "src/driver/Parameter/fn_0042a797",
+    "src/driver/Parameter/Parameter_InitHelpColumn",
+    "src/driver/Help/append_formatted_text",
+    "src/driver/Help/append_column_newline",
+    "src/driver/Help/fn_0042ae0a",
+    "src/driver/Help/fn_0042ae56",
+    "src/driver/Help/print_string_line",
+    "src/driver/Help/Help_PrintRepeatedCharLine",
+    "src/driver/Help/fn_0042c0a0",
+    "src/frontend/CPrep/CPrep_ResetBufferedTokenPosition",
+    "src/frontend/CParser/CParser_NewFuncArg",
+    "src/frontend/CException/copy_relocation_list",
+    "src/frontend/CParser/CParser_PrintUniqueID",
+    "src/frontend/CParser/CParser_IsPublicRuntimeObject",
+    "src/frontend/CompilerTools/memclrw",
+    "src/frontend/CompilerTools/ScanDec",
+    "src/frontend/CompilerTools/CTool_TotalHeapSize",
+    "src/frontend/CPrec/write_serialized_buckets",
+    "src/frontend/CPrec/patch_hash_name_reference",
+    "src/frontend/CompilerTools/CompilerTools_DispatchMessageBufferByMode",
+    "src/backend/ELF_Endian/ELF_Endian_ConvertThreeWords",
+    "src/backend/ELF_Endian/ELF_Endian_ConvertSymbolRecord",
+    "src/backend/ELF_Endian/ELF_Endian_SwapElf32Section",
+    "src/backend/ELF_Endian/ELF_Endian_SwapElf32Header",
+    "src/msl/time_g/time_g_clear_tm",
+    "src/frontend/CException/append_namespace_names",
+    "src/frontend/CException/CExcept_Setup",
+    "src/frontend/CPrep/is_zero_name_ref",
+    "src/backend/ObjGen_PPC_EABI/ObjGen_PPC_EABI_IsSpecialSectionName",
+    "src/frontend/CExpr2/CExpr2_FormatCInt64Decimal",
+    "src/frontend/CExpr2/CExpr2_ParseDecimalCInt64",
+    "src/frontend/CExpr2/CExpr2_ParseOctalInt64",
+    "src/frontend/CExpr2/CExpr2_ConvertCInt64ToUInt8",
+    "src/frontend/CExpr2/CExpr2_SignExtendSignedChar",
+    "src/frontend/CExpr2/CExpr2_ConvertCInt64ToUnsignedShort",
+    "src/frontend/CExpr2/CExpr2_SignExtendShort",
+    "src/frontend/CExpr2/CExpr2_ClearCInt64Hi",
+    "src/frontend/CExpr2/CExpr2_BitwiseOrCInt64",
+    "src/frontend/CExpr2/xor_64",
+    "src/frontend/CInt64/CInt64_And",
+    "src/frontend/CInt64/CInt64_IsInURange",
+    "src/frontend/CInt64/CInt64_NotEqual",
+    "src/frontend/CInt64/CInt64_Equal",
+    "src/frontend/CInt64/CInt64_GreaterU",
+    "src/frontend/CInt64/CInt64_LessU",
+    "src/frontend/CInt64/CInt64_ShrU",
+    "src/frontend/CInt64/CInt64_Shl",
+    "src/frontend/CInt64/CInt64_ModU",
+    "src/frontend/CInt64/CInt64_Mod",
+    "src/frontend/CInt64/CInt64_DivU",
+    "src/frontend/CInt64/CInt64_Div",
+    "src/frontend/CInt64/CInt64_Sub",
+    "src/frontend/CInt64/CInt64_Inv",
+    "src/frontend/CInt64/CInt64_Add",
+    "src/frontend/CFunc/CFunc_BitwiseNot",
+    "src/frontend/CFunc/CFunc_LogicalNotCInt64",
+    "src/backend/DWARF/DWARF_SetSectionAndState",
+    "src/backend/DWARF/DWARF_ReplaceTrailingLongWordLong",
+    "src/backend/DWARF/DWARF_AppendLongWordLong",
+    "src/backend/CMachine/initialize_hash_name_globals",
+    "src/backend/CMachine/CMach_FloatReciprocal",
+    "src/frontend/CScope/fn_0049b300",
+    "src/frontend/CScope/CScope_RestoreScope",
+    "src/frontend/CScope/CScope_SetMethodScope",
+    "src/backend/BE_elf/BE_elf_SaveScope",
+    "src/backend/InstrSelection/InstrSelection_EmitAddImmediate",
+    "src/frontend/CDecl/CDecl_PrependFuncArg",
+    "src/frontend/CFunc/findlabel",
+    "src/frontend/CTemplateTools/CTemplateTools_IsTemplDepClassBase",
+    "src/frontend/CClass/create_root_class_layout",
+    "src/frontend/CClass/contains_base_layout",
+    "src/frontend/CClass/CClass_MemberObject",
+    "src/frontend/CABI/CABI_GetDestructorObject",
+    "src/frontend/CABI/CABI_FindNVBase",
+    "src/frontend/CABI/CABI_GetSizeTType",
+    "src/frontend/CMangler/CMangler_VTableName",
+    "src/frontend/CMangler/CMangler_Setup",
+    "src/backend/InlineAsm/InlineAsm_CreateLabel",
+    "src/backend/Intrinsics/is_same_type_or_signedint_compatible",
+    "src/backend/PCodeUtilities/PCodeUtilities_EmitInstructionAndCreateBlock",
+    "src/backend/Peephole/make_contiguous_mask",
+    "src/optimizer/IroVars/IroVars_CheckTimedLongjmp",
+    "src/optimizer/IroBitVect/IroBitVect_SetAllBits",
+    "src/optimizer/IroBitVect/IroBitVect_ClearBitVector",
+    "src/optimizer/CodeMotion/find_object_node",
+    "src/optimizer/LoopDetection/fn_00522640",
+    "src/optimizer/LoopDetection/compute_unsigned_iteration_count",
+    "src/optimizer/LoopDetection/compute_iteration_count"
+  ],
+  "complete_sources": [
+    "src/GC_3_0a5_2/driver/Targets.c"
+  ]
+}

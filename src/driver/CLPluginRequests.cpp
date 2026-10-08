@@ -212,7 +212,7 @@ Boolean CLPluginRequests_InitializeTargetSettings(CLTarget *input, Plugin *plugi
             CLErrors_ForwardMessage(0x32, pluginValue);
         }
         if (CLPlugins_GetType(plugin) != 0x4c696e6b) {
-            CLIO_ReportAssertionFailure("Plugin_GetPluginType(linker) == CWDROPINLINKERTYPE", "CLPluginRequests.cpp",
+            OS_ASSERT_AT("Plugin_GetPluginType(linker) == CWDROPINLINKERTYPE", "CLPluginRequests.cpp",
                                         0x135);
         }
         if (!fn_004098a0(plugin)) {

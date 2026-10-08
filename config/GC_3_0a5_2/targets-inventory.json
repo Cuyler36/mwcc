@@ -1,0 +1,58 @@
+{
+  "symbol_file": "mwccppc_pro8_syms",
+  "symbol_file_sha256": "4420d3de674e1cc6389b17dfdea6489e525f590141de82a99b2f1a685103b47f",
+  "source": "Targets.c",
+  "functions": [
+    {
+      "name": "SetParserToolInfo",
+      "mac_symbol_address": "0x001b1d34",
+      "windows_address": "0x0041f5c9",
+      "windows_size": 56,
+      "baseline_name": "Targets_SetTool",
+      "baseline_address": "0x0040fcab",
+      "baseline_size": 61
+    },
+    {
+      "name": "ParserToolMatchesPlugin",
+      "mac_symbol_address": "0x001b1dbc",
+      "windows_address": "0x0041f601",
+      "windows_size": 171,
+      "baseline_name": "Targets_MatchTool",
+      "baseline_address": "0x0040fce8",
+      "baseline_size": 166
+    },
+    {
+      "name": "ParserToolHandlesPanels",
+      "mac_symbol_address": "0x001b1ea0",
+      "windows_address": "0x0041f6ac",
+      "windows_size": 106,
+      "baseline_name": "Targets_MatchCommandLineOptions",
+      "baseline_address": "0x0040fd8e",
+      "baseline_size": 110
+    },
+    {
+      "name": "SetupParserToolOptions",
+      "mac_symbol_address": "0x001b1f70",
+      "windows_address": "0x0041f716",
+      "windows_size": 47,
+      "baseline_name": "Targets_RegisterOptionLists",
+      "baseline_address": "0x0040fdfc",
+      "baseline_size": 45
+    }
+  ],
+  "windows_end_exclusive": "0x0041f745",
+  "next_function": "0x0041f750",
+  "baseline_bundle_function_count": 42,
+  "symbol_unit_counts": {
+    "Targets.c": 4,
+    "ParserErrors.c": 15,
+    "Arguments.c": 28
+  },
+  "assertion_helper": {
+    "windows_address": "0x0042ddb0",
+    "ported_name": "CLIO_ReportAssertionFailure",
+    "baseline_address": "0x00414a90",
+    "name_provenance": "Existing 1.2.5 interface name reused for the corresponding assertion-reporting role; not an exported name in the supplied Mac STABS map.",
+    "signature_evidence": "Windows assembly reads expression, file, optional function, and line; formats the assertion and presents Abort/Retry/Ignore."
+  }
+}

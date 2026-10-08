@@ -18,7 +18,7 @@
 #define oStackPtr data_00587594
 
 #define MAXSTACK 8
-#define OPTION_ASSERT(cond, line) ((cond) ? (void)0 : CLIO_ReportAssertionFailure(#cond, "Option.c", line))
+#define OPTION_ASSERT(cond, line) ((cond) ? (void)0 : OS_ASSERT_AT(#cond, "Option.c", line))
 /* Declarations gathered from the merged files. */
 OStack data_00586d20[180];
 
@@ -80,7 +80,7 @@ void Option_Push(short flags, void *a, char *b)
 
 #define OPTION_ASSERT(cond, line)                                                                                      \
     if (!(cond))                                                                                                       \
-    CLIO_ReportAssertionFailure(#cond, "Option.c", line)
+    OS_ASSERT_AT(#cond, "Option.c", line)
 OStack *Option_PopStack(short flags)
 {
     OPTION_ASSERT(oStackPtr>0, 121);
@@ -829,7 +829,7 @@ int parse_option_list(OptionList *options, UInt32 flags)
             if (node == NULL)
                 node = Targets_DecrementCountAndGetTokenText();
             if (node == NULL)
-                CLIO_ReportAssertionFailure("tok", "Option.c", 0x532);
+                OS_ASSERT_AT("tok", "Option.c", 0x532);
         }
         if (handled == 0)
             break;

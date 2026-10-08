@@ -30,15 +30,15 @@ struct CLTarget *CLTarg_CreateTarget(char *targetName, int processor, int operat
     target->targetKind = targetKind;
     OS_GetCWD(target->outputDirectory.path);
     if (!CLSegs_InitSegments(&target->lookupPaths))
-        CLIO_ReportAssertionFailure("Segments_Initialize(&targ->linkage.segs)", "CLTarg.c", 25);
+        OS_ASSERT_AT("Segments_Initialize(&targ->linkage.segs)", "CLTarg.c", 25);
     if (!CLOverlays_Init(&target->overlays))
-        CLIO_ReportAssertionFailure("Overlays_Initialize(&targ->linkage.overlays)", "CLTarg.c", 28);
+        OS_ASSERT_AT("Overlays_Initialize(&targ->linkage.overlays)", "CLTarg.c", 28);
     initialized = CLFiles_AssertNonNullIndexedListLink(&target->files) &&
                   CLFiles_AssertNonNullIndexedListLink(&target->generatedFiles) &&
                   CLFiles_InitChain(&target->fileLookup) && CLAccessPaths_Init(&target->userPaths) &&
                   CLAccessPaths_Init(&target->systemPaths) && CLDependencies_InitDeps(&target->dependencyTable, target);
     if (!initialized)
-        CLIO_ReportAssertionFailure(
+        OS_ASSERT_AT(
             "Files_Initialize(&targ->files) && Files_Initialize(&targ->pchs) && VFiles_Initialize(&targ->virtualFiles) && Paths_Initialize(&targ->sysPaths) && Paths_Initialize(&targ->userPaths) && Incls_Initialize(&targ->incls, targ)",
             "CLTarg.c", 36);
     return target;

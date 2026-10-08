@@ -1399,5 +1399,7 @@
   "_xmalloc": "0x00426300",
   "_xor_64": "0x004d9120",
   "_xrealloc": "0x004263e0",
-  "_xstrdup": "0x00426460"
+  "_xstrdup": "0x00426460",
+  "_Res_AddResource": "0x0040f6e0",
+  "_Res_GetResource": "0x0040f770"
 }

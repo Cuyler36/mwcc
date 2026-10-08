@@ -1,1 +1,10 @@
-{}
+{
+  "ResourceStrings_AddResource": {
+    "name": "Res_AddResource",
+    "source": "src/GC_3_0a5_2/driver/ResourceStrings.c"
+  },
+  "ResourceStrings_GetString": {
+    "name": "Res_GetResource",
+    "source": "src/GC_3_0a5_2/driver/ResourceStrings.c"
+  }
+}

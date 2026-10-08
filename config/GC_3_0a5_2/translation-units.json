@@ -847,6 +847,69 @@
       "status": "unattempted"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
+      "original_filename": "ResourceStrings.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "Res_AddResource",
+          "address": "0x0040f6e0",
+          "size": 142,
+          "compiled_source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
+          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+          "boundary_evidence": "Ghidra function body"
+        },
+        {
+          "name": "Res_GetResource",
+          "address": "0x0040f770",
+          "size": 263,
+          "compiled_source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
+          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "Res_Initialize",
+          "mac_address": "0x0000792c",
+          "linkage_names": [
+            "Res_Initialize"
+          ]
+        },
+        {
+          "name": "Res_AddResource",
+          "mac_address": "0x00007964",
+          "linkage_names": [
+            "Res_AddResource"
+          ]
+        },
+        {
+          "name": "Res_GetResource",
+          "mac_address": "0x00007a1c",
+          "linkage_names": [
+            "Res_GetResource"
+          ]
+        },
+        {
+          "name": "Res_Cleanup",
+          "mac_address": "0x00007b68",
+          "linkage_names": [
+            "Res_Cleanup"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/Targets.c",
       "original_filename": "Targets.c",
       "evidence": [
@@ -22201,69 +22264,6 @@
       "status": "unattempted"
     },
     {
-      "source": "src/driver/ResourceStrings.c",
-      "original_filename": "ResourceStrings.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "ResourceStrings_AddResource",
-          "address": "0x0040f6e0",
-          "size": 142,
-          "compiled_source": "src/driver/ResourceStrings.c",
-          "evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-          "boundary_evidence": "Ghidra function body"
-        },
-        {
-          "name": "ResourceStrings_GetString",
-          "address": "0x0040f770",
-          "size": 263,
-          "compiled_source": "src/driver/ResourceStrings.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "Res_Initialize",
-          "mac_address": "0x0000792c",
-          "linkage_names": [
-            "Res_Initialize"
-          ]
-        },
-        {
-          "name": "Res_AddResource",
-          "mac_address": "0x00007964",
-          "linkage_names": [
-            "Res_AddResource"
-          ]
-        },
-        {
-          "name": "Res_GetResource",
-          "mac_address": "0x00007a1c",
-          "linkage_names": [
-            "Res_GetResource"
-          ]
-        },
-        {
-          "name": "Res_Cleanup",
-          "mac_address": "0x00007b68",
-          "linkage_names": [
-            "Res_Cleanup"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
       "source": "src/driver/Resources.c",
       "original_filename": "Resources.c",
       "evidence": [
@@ -39064,6 +39064,291 @@
       "code_bytes": 380,
       "data_bytes": 112,
       "evidence": "Explicit STABS membership and strict full-TU objdiff at baseline commit 872a240"
+    },
+    "src/GC_3_0a5_2/driver/ResourceStrings.c": {
+      "source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
+      "compiler": "cw94",
+      "flags": "-c -O4 -opt speed -inline auto -sym off -Cpp_exceptions off -str noreadonly -DVERSION=3 -Iinclude -i- -Iinclude/libc",
+      "source_sha256": "46f1b7edbe15cb7073044c3fcef551072ce1b1e229a70ef3248ccfdb8b9f8cc3",
+      "functions": [
+        {
+          "name": "Res_AddResource",
+          "address": "0x0040f6e0",
+          "size": 142,
+          "exact": true,
+          "relocations": [
+            {
+              "offset": 24,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 4
+            },
+            {
+              "offset": 53,
+              "symbol": "@92",
+              "address": 6726571,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 58,
+              "symbol": "___files",
+              "address": 6661604,
+              "kind": 6,
+              "addend": 168
+            },
+            {
+              "offset": 63,
+              "symbol": "_fprintf",
+              "address": 4226608,
+              "kind": 20,
+              "addend": 0
+            },
+            {
+              "offset": 114,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 121,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 4
+            },
+            {
+              "offset": 131,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 8
+            }
+          ],
+          "fixups_exact": true
+        },
+        {
+          "name": "Res_GetResource",
+          "address": "0x0040f770",
+          "size": 263,
+          "exact": true,
+          "relocations": [
+            {
+              "offset": 39,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 4
+            },
+            {
+              "offset": 81,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 8
+            },
+            {
+              "offset": 105,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 124,
+              "symbol": "@142",
+              "address": 6726603,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 134,
+              "symbol": "_err$100",
+              "address": 7166808,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 139,
+              "symbol": "_snprintf",
+              "address": 4227024,
+              "kind": 20,
+              "addend": 0
+            },
+            {
+              "offset": 147,
+              "symbol": "_err$100",
+              "address": 7166808,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 188,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 204,
+              "symbol": "@143",
+              "address": 6726651,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 214,
+              "symbol": "_err$100",
+              "address": 7166808,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 219,
+              "symbol": "_snprintf",
+              "address": 4227024,
+              "kind": 20,
+              "addend": 0
+            },
+            {
+              "offset": 227,
+              "symbol": "_err$100",
+              "address": 7166808,
+              "kind": 6,
+              "addend": 0
+            },
+            {
+              "offset": 248,
+              "symbol": "_rlist",
+              "address": 7167064,
+              "kind": 6,
+              "addend": 8
+            }
+          ],
+          "fixups_exact": true
+        }
+      ],
+      "proposed_bindings": {
+        "_rlist": "0x006d5c58",
+        "_err$100": "0x006d5b58"
+      },
+      "data_complete": false,
+      "data_evidence": [
+        {
+          "name": "@92",
+          "section": ".data",
+          "size": 32,
+          "method": "resolved function reference",
+          "address": "0x0066a3ab",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_err$100",
+          "section": ".bss",
+          "size": 256,
+          "method": "named binding",
+          "address": "0x006d5b58",
+          "bytes_exact": false,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_rlist",
+          "section": ".bss",
+          "size": 192,
+          "method": "named binding",
+          "address": "0x006d5c58",
+          "bytes_exact": false,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@142",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066a3cb",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@143",
+          "section": ".data",
+          "size": 48,
+          "method": "resolved function reference",
+          "address": "0x0066a3fb",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "mac_only_unlocated_functions": {
+        "Res_Initialize": "Mac STABS function exists; no direct absolute rlist or err references exist outside two Windows functions. No Windows target body identified. Do not fabricate code or map neighboring function.",
+        "Res_Cleanup": "Mac FUN start0x7b68,end0x7b6c implies one PPC instruction, consistent with no-op return. No Windows function found to identify; could be linker stripped."
+      },
+      "semantic_review": "Baseline table scan, duplicate detection, return values and short-index behavior preserved. Changed sprintf to snprintf with256-byte capacity, matching original Windows calls. Restored original static data names/layout from STABS.",
+      "completeness": "Two identified Windows functions405bytes and128 literal bytes exact. Original BSS layout448bytes verified by operands and COFF symbol offsets but data progress blocked by parser bug. Mac-only Res_Initialize/Res_Cleanup remain unlocated in Windows; record uncertainty rather than claim proven full original TU inventory.",
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "kind": "SECTION_CODE",
+          "size": "405",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "kind": "SECTION_DATA",
+          "size": "128",
+          "match_percent": 100.0,
+          "data_diff": [
+            {
+              "data": "UmVzb3VyY2UgJWQgaXMgYWxyZWFkeSBhZGRlZCEKAABbU3RyaW5nICMlZCBub3QgZm91bmQgaW4gcmVzb3VyY2UgJyVzJyAoJWQpXQAAAABbSWxsZWdhbCBzdHJpbmcgaW5kZXggIyVkIGluIGxpc3QgJyVzJyAoJWQpXQAAAAA=",
+              "size": "128"
+            }
+          ]
+        },
+        {
+          "name": ".bss",
+          "kind": "SECTION_BSS",
+          "size": "448",
+          "match_percent": 100.0
+        }
+      ],
+      "objdiff_function_scores": [
+        {
+          "name": "_Res_AddResource",
+          "match_percent": 100.0
+        },
+        {
+          "name": "_Res_GetResource",
+          "match_percent": 100.0
+        }
+      ],
+      "data_parser_blocker": "read_object parses nonzero .bss raw pointer as initialized bytes despite uninitialized section flag. CW94 places pointer at next code payload; must synthesize448 zero bytes for this section. Current data_complete false is parser artifact; objdiff verifies .bss size only.",
+      "binding_free_resolution": "Res_AddResource exact after locally zeroing parsed BSS. Res_GetResource zero-filled payload search chooses spurious0x00680066 instead of original BSS operands. Requires guarded original-operand preference or scoped verified data bindings.",
+      "status": "exact",
+      "membership_reviewed": true,
+      "code_bytes": 405,
+      "initialized_data_bytes": 128,
+      "bss_bytes": 448,
+      "semantic_changes": [
+        "Use bounded snprintf(err,256,...) instead of sprintf.",
+        "Recover original Res_* names and static rlist[16]/err[256]."
+      ],
+      "completeness_limits": [
+        "Mac Res_Initialize/Res_Cleanup have no identified retained Windows body; adjacent routines and all direct BSS references were reviewed."
+      ],
+      "binding_policy": "Local BSS addresses derive from bounded original data operands; no generated-name global binding."
     }
   }
 }

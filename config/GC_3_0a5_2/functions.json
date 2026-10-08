@@ -320,20 +320,20 @@
     "boundary_evidence": "Ghidra function body"
   },
   {
-    "name": "ResourceStrings_AddResource",
+    "name": "Res_AddResource",
     "address": "0x0040f6e0",
     "size": 142,
-    "source": "src/driver/ResourceStrings.c",
+    "source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "baseline_name": "ResourceStrings_AddResource",
     "baseline_address": "0x00408ba0",
     "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
     "boundary_evidence": "Ghidra function body"
   },
   {
-    "name": "ResourceStrings_GetString",
+    "name": "Res_GetResource",
     "address": "0x0040f770",
     "size": 263,
-    "source": "src/driver/ResourceStrings.c",
+    "source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "baseline_name": "ResourceStrings_GetString",
     "baseline_address": "0x00408c20",
     "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",

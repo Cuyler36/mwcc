@@ -82,7 +82,7 @@
     "src/driver/ParserGlue-eabi-ppc-cc.c",
     "src/driver/ParserHelpers-cc.c",
     "src/driver/ParserHelpers.c",
-    "src/driver/ResourceStrings.c",
+    "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "src/driver/Resources.c",
     "src/driver/StaticParserGlue.c",
     "src/driver/StringUtils.c",
@@ -1791,25 +1791,6 @@
         "src/driver"
       ]
     },
-    "src/driver/ResourceStrings.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
     "src/driver/Resources.c": {
       "compiler": "cw94",
       "flags": [
@@ -3145,6 +3126,25 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/driver/ResourceStrings.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3154,7 +3154,6 @@
     "src/driver/CLMain/invoke_if_requested",
     "src/driver/CLMain/is_enabled_or_global_nonzero",
     "src/driver/cc-eabi-ppc-mw/find_driver_lookup_entry",
-    "src/driver/ResourceStrings/ResourceStrings_AddResource",
     "src/driver/MsDos/OS_GetErrText",
     "src/driver/MsDos/OS_Status",
     "src/driver/MsDos/OS_SetFileTime",
@@ -3364,11 +3363,14 @@
     "src/optimizer/CodeMotion/find_object_node",
     "src/optimizer/LoopDetection/fn_00522640",
     "src/optimizer/LoopDetection/compute_unsigned_iteration_count",
-    "src/optimizer/LoopDetection/compute_iteration_count"
+    "src/optimizer/LoopDetection/compute_iteration_count",
+    "src/GC_3_0a5_2/driver/ResourceStrings/Res_AddResource",
+    "src/GC_3_0a5_2/driver/ResourceStrings/Res_GetResource"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
-    "src/msl/setjmp_x86.c"
+    "src/msl/setjmp_x86.c",
+    "src/GC_3_0a5_2/driver/ResourceStrings.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json"
 }

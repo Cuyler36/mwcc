@@ -46,6 +46,15 @@ original-only units remain explicit work items, rather than empty C stubs.
 
 ## setjmp: complete runtime unit
 
+ResourceStrings.c also passes full-TU objdiff: two functions, 405 code bytes,
+128 initialized literal bytes, and 448 BSS bytes. Its GC3 implementation uses
+bounded `snprintf` calls and original `Res_*`, `rlist`, and `err` names. Local
+BSS references are derived from validated original operands rather than global
+compiler-generated symbol bindings. The Mac map's Res_Initialize/Res_Cleanup
+have no identified retained Windows bodies; adjacent code and all direct
+references to this static storage were reviewed. This platform difference is
+recorded in the attempt ledger.
+
 The MSL setjmp unit also passes complete-TU objdiff: `_Setjmp` at 0x00404920
 (24 bytes) and `longjmp` at 0x00404940 (31 bytes). Both are naked assembly,
 including the required zero-to-one `longjmp` return conversion. There are no

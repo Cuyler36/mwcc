@@ -106,7 +106,7 @@
     "src/frontend/CFunc.c",
     "src/frontend/CInit.c",
     "src/frontend/CInline.c",
-    "src/frontend/CInt64.c",
+    "src/GC_3_0a5_2/frontend/CInt64.c",
     "src/frontend/CMangler.c",
     "src/frontend/CObjC.c",
     "src/frontend/CObjCModern.c",
@@ -2230,25 +2230,6 @@
         "include"
       ]
     },
-    "src/frontend/CInt64.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/frontend"
-      ]
-    },
     "src/frontend/CMangler.c": {
       "compiler": "cw94",
       "flags": [
@@ -3145,6 +3126,25 @@
       "include_dirs": [
         "src/driver"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/CInt64.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/frontend"
+      ]
     }
   },
   "matching_functions": [
@@ -3315,23 +3315,23 @@
     "src/frontend/CExpr2/CExpr2_ClearCInt64Hi",
     "src/frontend/CExpr2/CExpr2_BitwiseOrCInt64",
     "src/frontend/CExpr2/xor_64",
-    "src/frontend/CInt64/CInt64_And",
-    "src/frontend/CInt64/CInt64_IsInURange",
-    "src/frontend/CInt64/CInt64_NotEqual",
-    "src/frontend/CInt64/CInt64_Equal",
-    "src/frontend/CInt64/CInt64_GreaterU",
-    "src/frontend/CInt64/CInt64_LessU",
-    "src/frontend/CInt64/CInt64_ShrU",
-    "src/frontend/CInt64/CInt64_Shl",
-    "src/frontend/CInt64/CInt64_ModU",
-    "src/frontend/CInt64/CInt64_Mod",
-    "src/frontend/CInt64/CInt64_DivU",
-    "src/frontend/CInt64/CInt64_Div",
-    "src/frontend/CInt64/CInt64_Sub",
-    "src/frontend/CInt64/CInt64_Inv",
-    "src/frontend/CInt64/CInt64_Add",
-    "src/frontend/CFunc/CFunc_BitwiseNot",
-    "src/frontend/CFunc/CFunc_LogicalNotCInt64",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_And",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_IsInURange",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_NotEqual",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Equal",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_GreaterU",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_LessU",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_ShrU",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Shl",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_ModU",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Mod",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_DivU",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Div",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Sub",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Neg",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Add",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Inv",
+    "src/GC_3_0a5_2/frontend/CInt64/CInt64_Not",
     "src/backend/DWARF/DWARF_SetSectionAndState",
     "src/backend/DWARF/DWARF_ReplaceTrailingLongWordLong",
     "src/backend/DWARF/DWARF_AppendLongWordLong",

@@ -149,7 +149,7 @@
   "_CInt64_GreaterEqual": "0x004d94b0",
   "_CInt64_GreaterEqualU": "0x004d9460",
   "_CInt64_GreaterU": "0x004d96c0",
-  "_CInt64_Inv": "0x004da330",
+  "_CInt64_Inv": "0x004da3d0",
   "_CInt64_IsInURange": "0x004d9160",
   "_CInt64_Less": "0x004d9840",
   "_CInt64_LessEqual": "0x004d95e0",
@@ -1401,5 +1401,8 @@
   "_xrealloc": "0x004263e0",
   "_xstrdup": "0x00426460",
   "_Res_AddResource": "0x0040f6e0",
-  "_Res_GetResource": "0x0040f770"
+  "_Res_GetResource": "0x0040f770",
+  "_CInt64_Neg": "0x004da330",
+  "_CInt64_Not": "0x004da3f0",
+  "_cint64_min": "0x00699b86"
 }

@@ -2,6 +2,13 @@
 #define COMPILER_CINT64_H
 
 #include "compiler/common.h"
+#include "version.h"
+
+/* The imported 1.2.5 sources use Inv for arithmetic negation. The GC3 symbol
+ * map calls that operation Neg; preserve their behavior while porting them. */
+#if VERSION == VERSION_GC_3_0A5_2
+#define CInt64_Inv CInt64_Neg
+#endif
 
 #ifdef __cplusplus
 extern "C" {

@@ -6,5 +6,109 @@
   "ResourceStrings_GetString": {
     "name": "Res_GetResource",
     "source": "src/GC_3_0a5_2/driver/ResourceStrings.c"
+  },
+  "CInt64_And": {
+    "name": "CInt64_And",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_IsInURange": {
+    "name": "CInt64_IsInURange",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_NotEqual": {
+    "name": "CInt64_NotEqual",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Equal": {
+    "name": "CInt64_Equal",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_GreaterEqualU": {
+    "name": "CInt64_GreaterEqualU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_GreaterEqual": {
+    "name": "CInt64_GreaterEqual",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_LessEqualU": {
+    "name": "CInt64_LessEqualU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_LessEqual": {
+    "name": "CInt64_LessEqual",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_GreaterU": {
+    "name": "CInt64_GreaterU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Greater": {
+    "name": "CInt64_Greater",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_LessU": {
+    "name": "CInt64_LessU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Less": {
+    "name": "CInt64_Less",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_ShrU": {
+    "name": "CInt64_ShrU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Shr": {
+    "name": "CInt64_Shr",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Shl": {
+    "name": "CInt64_Shl",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_ModU": {
+    "name": "CInt64_ModU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Mod": {
+    "name": "CInt64_Mod",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_DivU": {
+    "name": "CInt64_DivU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Div": {
+    "name": "CInt64_Div",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Mul": {
+    "name": "CInt64_Mul",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_MulU": {
+    "name": "CInt64_MulU",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Sub": {
+    "name": "CInt64_Sub",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Inv": {
+    "name": "CInt64_Neg",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CInt64_Add": {
+    "name": "CInt64_Add",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CFunc_BitwiseNot": {
+    "name": "CInt64_Inv",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
+  },
+  "CFunc_LogicalNotCInt64": {
+    "name": "CInt64_Not",
+    "source": "src/GC_3_0a5_2/frontend/CInt64.c"
   }
 }

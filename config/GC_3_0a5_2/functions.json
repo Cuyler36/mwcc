@@ -16130,80 +16130,632 @@
     }
   },
   {
-    "name": "StackFrameEABI_004aabb0",
-    "address": "0x00588360",
-    "size": 808,
-    "source": "src/backend/StackFrameEABI.c",
-    "baseline_name": "StackFrameEABI_004aabb0",
-    "baseline_address": "0x004aabb0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_00585520",
+    "address": "0x585520",
+    "size": 1579,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "fn_00585b50",
+    "address": "0x585b50",
+    "size": 1625,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "restore_gprs",
-    "address": "0x005888b0",
+    "name": "fn_005861b0",
+    "address": "0x5861b0",
+    "size": 2162,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00586a30",
+    "address": "0x586a30",
+    "size": 185,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "compress_data_area",
+    "address": "0x586af0",
+    "size": 489,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "call_helper_function",
+    "address": "0x586ce0",
+    "size": 511,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "use_helper_function",
+    "address": "0x586ee0",
+    "size": 409,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": true
+    }
+  },
+  {
+    "name": "update_frame_align",
+    "address": "0x587080",
+    "size": 76,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "can_add_displ_to_local",
+    "address": "0x5870d0",
+    "size": 83,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "no_frame_for_asm",
+    "address": "0x587130",
+    "size": 11,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "align_bits",
+    "address": "0x587140",
+    "size": 230,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_base_register",
+    "address": "0x587230",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005872d0",
+    "address": "0x5872d0",
+    "size": 67,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00587320",
+    "address": "0x587320",
+    "size": 24,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00587340",
+    "address": "0x587340",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_is_16bit_offset",
+    "address": "0x587380",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_offset_16",
+    "address": "0x5873a0",
+    "size": 41,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_offset_ha",
+    "address": "0x5873d0",
+    "size": 31,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_offset_lo",
+    "address": "0x5873f0",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "local_offset_32",
+    "address": "0x587410",
+    "size": 508,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "update_out_param_align",
+    "address": "0x587610",
+    "size": 39,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "estimate_out_param_size",
+    "address": "0x587640",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "update_out_param_size",
+    "address": "0x587660",
+    "size": 40,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "needs_frame",
+    "address": "0x587690",
+    "size": 33,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "out_param_displ_to_offset",
+    "address": "0x5876c0",
+    "size": 13,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "set_out_param_displ",
+    "address": "0x5876d0",
+    "size": 482,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_arguments_to_memory",
+    "address": "0x5878c0",
+    "size": 1105,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "move_varargs_to_memory",
+    "address": "0x587d20",
+    "size": 1015,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "check_dynamic_aligned_frame",
+    "address": "0x588120",
+    "size": 574,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "generate_traceback",
+    "address": "0x588360",
+    "size": 808,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "change_dynamic_stack_space",
+    "address": "0x588690",
+    "size": 146,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "allocate_dynamic_stack_space",
+    "address": "0x588730",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "do_allocate_dynamic_stack_space",
+    "address": "0x5887a0",
+    "size": 260,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "restore_nonvolatile_GPRs",
+    "address": "0x5888b0",
     "size": 411,
     "source": "src/GC_3_0a5_2/backend/StackFrame.c",
-    "baseline_name": "restore_gprs",
-    "baseline_address": "0x004aaf60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "save_gprs",
-    "address": "0x00588a50",
+    "name": "save_nonvolatile_GPRs",
+    "address": "0x588a50",
     "size": 373,
-    "source": "src/backend/StackFrameEABI.c",
-    "baseline_name": "save_gprs",
-    "baseline_address": "0x004ab170",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "emit_restore_fprs",
-    "address": "0x00588bd0",
+    "name": "restore_nonvolatile_FPRs",
+    "address": "0x588bd0",
     "size": 377,
-    "source": "src/backend/StackFrameEABI.c",
-    "baseline_name": "emit_restore_fprs",
-    "baseline_address": "0x004ab560",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "emit_save_fprs",
-    "address": "0x00588d50",
+    "name": "save_nonvolatile_FPRs",
+    "address": "0x588d50",
     "size": 533,
-    "source": "src/backend/StackFrameEABI.c",
-    "baseline_name": "emit_save_fprs",
-    "baseline_address": "0x004ab8b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "StackFrameEABI_MergePrologueEpilogue",
-    "address": "0x00588f70",
+    "name": "generate_epilogue",
+    "address": "0x588f70",
     "size": 1674,
     "source": "src/GC_3_0a5_2/backend/StackFrame.c",
-    "baseline_name": "StackFrameEABI_MergePrologueEpilogue",
-    "baseline_address": "0x004aba30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "generate_prologue",
+    "address": "0x589600",
+    "size": 1943,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "allocate_new_frame",
+    "address": "0x589da0",
+    "size": 269,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "compute_frame_sizes",
+    "address": "0x589eb0",
+    "size": 1329,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_locals_to_memory",
+    "address": "0x58a3f0",
+    "size": 236,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_local_memory",
+    "address": "0x58a4e0",
+    "size": 651,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "init_frame_sizes",
+    "address": "0x58a770",
+    "size": 510,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "init_stack_globals",
+    "address": "0x58a970",
+    "size": 884,
+    "source": "src/GC_3_0a5_2/backend/StackFrame.c",
+    "identity_evidence": {
+      "method": "Native CFG, assertion and ABI review recorded in StackFrame TU attempt ledger",
+      "canonical_name_policy": "Behavior and symbol evidence; unsupported names retain original address"
+    },
+    "boundary_evidence": {
+      "method": "Saved entries plus full native CFG review",
       "unresolved_indirect_flow": false
     }
   },

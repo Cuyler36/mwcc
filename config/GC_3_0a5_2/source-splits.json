@@ -331,14 +331,6 @@
     "name": "Registers_GetVarInfo",
     "source": "src/GC_3_0a5_2/backend/RegisterInfo.c"
   },
-  "restore_gprs": {
-    "name": "restore_gprs",
-    "source": "src/GC_3_0a5_2/backend/StackFrame.c"
-  },
-  "StackFrameEABI_MergePrologueEpilogue": {
-    "name": "StackFrameEABI_MergePrologueEpilogue",
-    "source": "src/GC_3_0a5_2/backend/StackFrame.c"
-  },
   "CFunc_GenerateSingleExprFunc": {
     "name": "CFunc_GenerateSingleExprFunc",
     "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"

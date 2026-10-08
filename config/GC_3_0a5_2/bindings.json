@@ -1404,5 +1404,7 @@
   "_Res_GetResource": "0x0040f770",
   "_CInt64_Neg": "0x004da330",
   "_CInt64_Not": "0x004da3f0",
-  "_cint64_min": "0x00699b86"
+  "_cint64_min": "0x00699b86",
+  "_CLIO_GetResourceString@12": "0x0042f480",
+  "_CLIO_ConvertPascalToCString@4": "0x0042f450"
 }

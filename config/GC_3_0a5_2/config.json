@@ -219,15 +219,19 @@
   ],
   "source_settings": {
     "src/GC_3_0a5_2/driver/ParserErrors.c": {
-      "compiler": "pro53",
+      "compiler": "cw94",
       "flags": [
-        "-O1",
+        "-O4",
+        "-opt",
+        "space",
         "-opt",
         "intrinsics",
         "-sym",
         "off",
         "-Cpp_exceptions",
-        "off"
+        "off",
+        "-str",
+        "noreadonly"
       ],
       "include_dirs": [
         "src/driver"
@@ -3199,11 +3203,6 @@
     "src/driver/ToolHelpers-cc/ToolHelpers_cc_CallValuePairCallback",
     "src/driver/ToolHelpers-cc/ToolHelpers_cc_GetNumFiles",
     "src/driver/ToolHelpers-cc/ToolHelpers_cc_PassVirtualFileValuePair",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportError_V",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportWarning_V",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPStatus_V",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPAlert_V",
-    "src/GC_3_0a5_2/driver/ParserErrors/CLPOSAlert_V",
     "src/GC_3_0a5_2/driver/Arguments/Arg_GetToken",
     "src/GC_3_0a5_2/driver/Arguments/Arg_UndoToken",
     "src/GC_3_0a5_2/driver/Targets/SetParserToolInfo",
@@ -3365,12 +3364,24 @@
     "src/optimizer/LoopDetection/compute_unsigned_iteration_count",
     "src/optimizer/LoopDetection/compute_iteration_count",
     "src/GC_3_0a5_2/driver/ResourceStrings/Res_AddResource",
-    "src/GC_3_0a5_2/driver/ResourceStrings/Res_GetResource"
+    "src/GC_3_0a5_2/driver/ResourceStrings/Res_GetResource",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportError_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportWarning_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPStatus_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPAlert_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPOSAlert_V",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPGetErrorString",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportError",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPReportWarning",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPOSAlert",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPStatus",
+    "src/GC_3_0a5_2/driver/ParserErrors/CLPFatalError"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
     "src/msl/setjmp_x86.c",
-    "src/GC_3_0a5_2/driver/ResourceStrings.c"
+    "src/GC_3_0a5_2/driver/ResourceStrings.c",
+    "src/GC_3_0a5_2/driver/ParserErrors.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json"
 }

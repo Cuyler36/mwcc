@@ -44,7 +44,17 @@ ParserErrors.c, CLIncludeFileCache.c, and CLBrowser.c. Then handle the remaining
 driver units, frontend, optimizer, backend, MSL, and runtime sources. New
 original-only units remain explicit work items, rather than empty C stubs.
 
-## setjmp: complete runtime unit
+## ParserErrors.c: complete Windows unit
+
+All 11 retained Windows functions match under CW94 with space and intrinsic
+optimization: 654 code bytes, 24 literal bytes, and 1024 BSS bytes. The original
+static `errorbuf` belongs to this TU. Resource IDs are signed shorts; resource
+lookup calls the stdcall Pascal lookup/conversion functions directly. Correct
+varargs calculations reproduce the report wrappers. The Mac-only CLPReport,
+CLPReport_V, CLPAlert, and CLPProgress are absent from the reviewed Windows
+range. The full-TU CLI diff and strict relocation checks both pass.
+
+## ResourceStrings.c: complete Windows unit
 
 ResourceStrings.c also passes full-TU objdiff: two functions, 405 code bytes,
 128 initialized literal bytes, and 448 BSS bytes. Its GC3 implementation uses
@@ -54,6 +64,8 @@ compiler-generated symbol bindings. The Mac map's Res_Initialize/Res_Cleanup
 have no identified retained Windows bodies; adjacent code and all direct
 references to this static storage were reviewed. This platform difference is
 recorded in the attempt ledger.
+
+## setjmp: complete runtime unit
 
 The MSL setjmp unit also passes complete-TU objdiff: `_Setjmp` at 0x00404920
 (24 bytes) and `longjmp` at 0x00404940 (31 bytes). Both are naked assembly,

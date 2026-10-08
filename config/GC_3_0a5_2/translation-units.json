@@ -843,8 +843,8 @@
       ],
       "ownership_conflicts": [],
       "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
+      "membership_complete": true,
+      "status": "exact"
     },
     {
       "source": "src/GC_3_0a5_2/driver/ResourceStrings.c",
@@ -39382,6 +39382,108 @@
       "reference_resolution": {
         "_cint64_min": "0x00699b86: original loads and 80000000/00000000 words verified"
       }
+    },
+    "src/GC_3_0a5_2/driver/ParserErrors.c": {
+      "status": "exact",
+      "membership_reviewed": true,
+      "functions": [
+        {
+          "name": "CLPReportError_V",
+          "address": "0x0041e529",
+          "size": 53,
+          "exact": true
+        },
+        {
+          "name": "CLPReportWarning_V",
+          "address": "0x0041e55e",
+          "size": 46,
+          "exact": true
+        },
+        {
+          "name": "CLPStatus_V",
+          "address": "0x0041e58c",
+          "size": 40,
+          "exact": true
+        },
+        {
+          "name": "CLPAlert_V",
+          "address": "0x0041e5b4",
+          "size": 51,
+          "exact": true
+        },
+        {
+          "name": "CLPOSAlert_V",
+          "address": "0x0041e5e7",
+          "size": 55,
+          "exact": true
+        },
+        {
+          "name": "CLPGetErrorString",
+          "address": "0x0041e61e",
+          "size": 32,
+          "exact": true
+        },
+        {
+          "name": "CLPReportError",
+          "address": "0x0041e63e",
+          "size": 79,
+          "exact": true
+        },
+        {
+          "name": "CLPReportWarning",
+          "address": "0x0041e68d",
+          "size": 79,
+          "exact": true
+        },
+        {
+          "name": "CLPOSAlert",
+          "address": "0x0041e6dc",
+          "size": 89,
+          "exact": true
+        },
+        {
+          "name": "CLPStatus",
+          "address": "0x0041e735",
+          "size": 79,
+          "exact": true
+        },
+        {
+          "name": "CLPFatalError",
+          "address": "0x0041e784",
+          "size": 51,
+          "exact": true
+        }
+      ],
+      "code_bytes": 654,
+      "initialized_data_bytes": 24,
+      "bss_bytes": 1024,
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "space",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "compiler_experiments": [
+        "pro53 imported profile: five exact functions before port",
+        "pro8 and cw94 reproduce all11 after semantic/varargs port"
+      ],
+      "semantic_changes": [
+        "Signed short resource IDs.",
+        "Direct CLIO_GetResourceString/CLIO_ConvertPascalToCString stdcall resource conversion.",
+        "Recover original static errorbuf[1024] and correct varargs start/end.",
+        "Remove CLPReport and CLPReport_V bodies absent from Windows."
+      ],
+      "completeness_limits": [
+        "Mac CLPReport,CLPReport_V,CLPAlert,CLPProgress have no retained Windows bodies in the reviewed contiguous range; predecessor and successor belong to other source units."
+      ]
     }
   }
 }

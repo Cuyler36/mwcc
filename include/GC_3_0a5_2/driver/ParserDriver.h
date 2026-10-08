@@ -6,14 +6,12 @@
 
 extern void CLPReportError_V(char *message, char *arguments);
 extern void CLPReportWarning_V(char *a0, char *a1);
-extern void CLPReport_V(char *first, char *second);
 extern void CLPStatus_V(char *message, unsigned int *arguments);
 extern void CLPAlert_V(const char *text, va_list position);
 extern void CLPOSAlert_V(char *name, DWORD value, unsigned int *result);
-extern char *CLPGetErrorString(SInt32 argument, char *buffer);
-extern void CLPReport(int argument, ...);
-extern unsigned char CLPOSAlert(int id, short code, ...);
-extern void CLPStatus(int s, ...);
+extern char *CLPGetErrorString(SInt16 argument, char *buffer);
+extern void CLPOSAlert(SInt16 id, short code, ...);
+extern void CLPStatus(SInt16 s, ...);
 extern void CLPFatalError(const char *fmt, ...);
 extern void Arg_AddToken(short kind, char *text);
 extern void Arg_Setup(unsigned int value, char **otherValue);
@@ -34,8 +32,8 @@ extern void Arg_AddToToolArgs(PtrList *list, short kind, char *text);
 extern void Arg_FinishToolArgs(PtrList *list);
 extern void Arg_ToolArgsForPlugin(PtrList *source, IntegerSequenceResult *result);
 extern void Arg_InitToolArgs(PtrList *state);
-extern void CLPReportError(SInt32 a, ...);
-extern void CLPReportWarning(int a, ...);
+extern void CLPReportError(SInt16 a, ...);
+extern void CLPReportWarning(SInt16 a, ...);
 extern char *Arg_GetNext(Boolean expand);
 extern void Arg_Parse(void);
 extern void Arg_Init(int argc, char **argv);

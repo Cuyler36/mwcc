@@ -1,4 +1,4 @@
-/* Baseline bodies ported under the source/function names in the 3.0 map. */
+/* ParserErrors.c: the 11 functions retained in the Windows executable. */
 #include "compiler/common.h"
 #include "GC_3_0a5_2/driver/ParserDriver.h"
 #include "compiler/objects.h"
@@ -26,108 +26,96 @@
 
 #define pTool driverTool
 
-#define va_start(ap, parm) ap = (char *)&parm + ((((char *)(&parm + 1) - (char *)&parm) + 3) / 4 * 4)
+#define va_start(ap, parm) do { \
+    char *argumentAddress = (char *)&parm; \
+    char *argumentEnd = (char *)(&parm + 1); \
+    ap = argumentAddress + (argumentEnd - argumentAddress + 3) / 4 * 4; \
+} while (0)
+
+#if __MWERKS__ >= 0x3000
+extern __declspec(noreturn) void longjmp(jmp_buf env, int val);
+#endif
 
 #include <string.h>
+static char errorbuf[1024];
 void CLPReportError_V(char *message, char *arguments)
 {
-    vsprintf(formatted_message, message, (char *)(unsigned int *)arguments);
+    vsprintf(errorbuf, message, (char *)(unsigned int *)arguments);
     CWPluginsPrivate_InvokeMessageCallback((struct DispatchObject_0041b830 *)pluginPrivateContext, NULL,
-                                           formatted_message, NULL, 2, 0);
+                                           errorbuf, NULL, 2, 0);
     data_00587e1d = 1;
 }
 
 void CLPReportWarning_V(char *format, char *arguments)
 {
-    vsprintf(formatted_message, format, arguments);
-    CWPluginsPrivate_InvokeMessageCallback(pluginPrivateContext, NULL, formatted_message, NULL, 1, 0);
-}
-
-void CLPReport_V(char *first, char *second)
-{
-    vsprintf(formatted_message, first, (char *)(unsigned int *)second);
-    CWPluginsPrivate_InvokeMessageCallback((struct DispatchObject_0041b830 *)pluginPrivateContext, NULL,
-                                           formatted_message, NULL, 0, 0);
+    vsprintf(errorbuf, format, arguments);
+    CWPluginsPrivate_InvokeMessageCallback(pluginPrivateContext, NULL, errorbuf, NULL, 1, 0);
 }
 
 void CLPStatus_V(char *message, unsigned int *arguments)
 {
-    vsprintf(formatted_message, message, (char *)arguments);
-    fn_0041b8d0((CWPluginPrivateContext *)pluginPrivateContext, formatted_message, NULL);
+    vsprintf(errorbuf, message, (char *)arguments);
+    fn_0041b8d0((CWPluginPrivateContext *)pluginPrivateContext, errorbuf, NULL);
 }
 
 void CLPAlert_V(const char *text, va_list position)
 {
-    vsprintf(formatted_message, text, position);
-    CWPluginsPrivate_CallCallback9(pluginPrivateContext, formatted_message, NULL, NULL, 0);
+    vsprintf(errorbuf, text, position);
+    CWPluginsPrivate_CallCallback9(pluginPrivateContext, errorbuf, NULL, NULL, 0);
     data_00587e1d = 1;
 }
 
 void CLPOSAlert_V(char *name, DWORD value, unsigned int *result)
 {
-    vsprintf(formatted_message, name, (char *)result);
-    CWPluginsPrivate_CallCallback9(pluginPrivateContext, formatted_message,
+    vsprintf(errorbuf, name, (char *)result);
+    CWPluginsPrivate_CallCallback9(pluginPrivateContext, errorbuf,
                                    "Operating system error:", (unsigned char *)OS_GetErrText(value), 0);
 }
 
-char *CLPGetErrorString(SInt32 argument, char *buffer)
+char *CLPGetErrorString(SInt16 argument, char *buffer)
 {
-    CLIO_GetResourceCString(buffer, 0x2eea, argument);
+    CLIO_GetResourceString((unsigned char *)buffer, 0x2eea, argument);
+    CLIO_ConvertPascalToCString(buffer);
     return buffer;
 }
 
-void CLPReportError(SInt32 messageId, ...)
+void CLPReportError(SInt16 messageId, ...)
 {
     char message[256];
     va_list arguments;
 
     CLPGetErrorString(messageId, message);
-    arguments = (char *)&messageId + (((char *)((SInt16 *)&messageId + 1) - (char *)&messageId + 3) / 4 * 4);
+    va_start(arguments, messageId);
     CLPReportError_V(message, arguments);
 }
 
-void CLPReportWarning(int messageId, ...)
+void CLPReportWarning(SInt16 messageId, ...)
 {
     char buffer[256];
     va_list args;
 
     CLPGetErrorString(messageId, buffer);
-    args = (char *)&messageId + (((char *)((SInt16 *)&messageId + 1) - (char *)&messageId + 3) / 4 * 4);
+    va_start(args, messageId);
     CLPReportWarning_V(buffer, args);
 }
 
-void CLPReport(int messageId, ...)
+void CLPOSAlert(SInt16 resourceId, short errorCode, ...)
 {
-    char buffer[256];
-    va_list arguments;
-    char *argumentAddress;
-    char *argumentEnd;
-
-    CLPGetErrorString(messageId, buffer);
-    argumentAddress = (va_list)&messageId;
-    argumentEnd = (va_list)&messageId + sizeof(short);
-    arguments = (va_list)&messageId + (argumentEnd - argumentAddress + 3) / 4 * 4;
-    CLPReport_V(buffer, arguments);
-}
-
-unsigned char CLPOSAlert(int resourceId, short errorCode, ...)
-{
-    unsigned char CLPOSAlert_V(char *message, int errorCode, va_list arguments);
     char message[256];
     va_list arguments;
 
     CLPGetErrorString(resourceId, message);
     va_start(arguments, errorCode);
-    return CLPOSAlert_V(message, errorCode, arguments);
+    CLPOSAlert_V(message, errorCode, (unsigned int *)arguments);
 }
 
-void CLPStatus(int messageId, ...)
+void CLPStatus(SInt16 messageId, ...)
 {
     char buffer[256];
     va_list arguments;
 
     CLPGetErrorString(messageId, buffer);
-    arguments = (char *)&messageId + ((((char *)((short *)&messageId + 1) - (char *)&messageId) + 3) / 4 * 4);
+    va_start(arguments, messageId);
     CLPStatus_V(buffer, (unsigned int *)arguments);
 }
 

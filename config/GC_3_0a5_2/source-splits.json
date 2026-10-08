@@ -3810,5 +3810,89 @@
   "CExpr2_00473720": {
     "name": "fn_0055b2d0",
     "source": "src/GC_3_0a5_2/frontend/CExprTools.c"
+  },
+  "fn_005b5500": {
+    "name": "fn_005b5500",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5580": {
+    "name": "fn_005b5580",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5730": {
+    "name": "fn_005b5730",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5760": {
+    "name": "fn_005b5760",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5770": {
+    "name": "fn_005b5770",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5780": {
+    "name": "fn_005b5780",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5820": {
+    "name": "fn_005b5820",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b58b0": {
+    "name": "fn_005b58b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5a50": {
+    "name": "fn_005b5a50",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b5fb0": {
+    "name": "fn_005b5fb0",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b61f0": {
+    "name": "fn_005b61f0",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b6390": {
+    "name": "fn_005b6390",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b6800": {
+    "name": "fn_005b6800",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7230": {
+    "name": "fn_005b7230",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7580": {
+    "name": "fn_005b7580",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7980": {
+    "name": "fn_005b7980",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7af0": {
+    "name": "fn_005b7af0",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7b10": {
+    "name": "fn_005b7b10",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7c20": {
+    "name": "fn_005b7c20",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7d30": {
+    "name": "fn_005b7d30",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
+  },
+  "fn_005b7e20": {
+    "name": "fn_005b7e20",
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c"
   }
 }

@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 245 source files build, 1,942 candidate functions are
-mapped, and 881 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 246 source files build, 1,962 candidate functions are
+mapped, and 890 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,13 @@ and tree walkers. Its filename, flag and two generated tables match; twenty
 generated tables remain unclaimed. Eight GC3-only legacy guards preserve all
 six retained-version CExpr/CExpr2 object outputs.
 
+IroType has all 21 supported native type helpers attempted, with nine exact
+matches. Eight compiler profiles build, and all bodies pass 6,300 bounded native
+instruction comparisons. Its filename and 64 switch-table bytes match; 368
+generated switch bytes remain unclaimed. Two neighboring formatting helpers
+were separately attempted and held. The incompatible legacy DumpIR formatter
+mapping is removed.
+
 PCodeInfo has all 21 identified native bodies reconstructed, including the
 41-terminal instruction formatter, with ten exact matches. Four switch-table
 relocations and one byte of string-allocation padding remain nonmatching.
@@ -165,7 +172,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 37 original-only TU views to objdiff. The twenty
+map. It currently adds 36 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

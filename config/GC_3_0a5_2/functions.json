@@ -21732,15 +21732,233 @@
     }
   },
   {
-    "name": "format_type",
-    "address": "0x005b5ac0",
-    "size": 1213,
-    "source": "src/backend/DumpIR.c",
-    "baseline_name": "format_type",
-    "baseline_address": "0x004bdc60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_005b5500",
+    "address": "0x5b5500",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5580",
+    "address": "0x5b5580",
+    "size": 429,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5730",
+    "address": "0x5b5730",
+    "size": 42,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5760",
+    "address": "0x5b5760",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5770",
+    "address": "0x5b5770",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5780",
+    "address": "0x5b5780",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5820",
+    "address": "0x5b5820",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b58b0",
+    "address": "0x5b58b0",
+    "size": 405,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5a50",
+    "address": "0x5b5a50",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b5fb0",
+    "address": "0x5b5fb0",
+    "size": 573,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b61f0",
+    "address": "0x5b61f0",
+    "size": 409,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b6390",
+    "address": "0x5b6390",
+    "size": 1134,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b6800",
+    "address": "0x5b6800",
+    "size": 2604,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7230",
+    "address": "0x5b7230",
+    "size": 839,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7580",
+    "address": "0x5b7580",
+    "size": 1023,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7980",
+    "address": "0x5b7980",
+    "size": 361,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7af0",
+    "address": "0x5b7af0",
+    "size": 30,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7b10",
+    "address": "0x5b7b10",
+    "size": 266,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7c20",
+    "address": "0x5b7c20",
+    "size": 266,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7d30",
+    "address": "0x5b7d30",
+    "size": 235,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005b7e20",
+    "address": "0x5b7e20",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/optimizer/IroType.c",
+    "identity_evidence": "Six IroType.c assertion callers, native type-conversion dependency cluster, 1.2.5 type equality architecture and complete ABI/control-flow review. Private Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image direct-call/filename/seam audit",
       "unresolved_indirect_flow": false
     }
   },

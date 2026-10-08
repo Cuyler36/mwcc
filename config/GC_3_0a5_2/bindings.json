@@ -1012,7 +1012,6 @@
   "_format_ostack": "0x00430652",
   "_format_prefixed_text": "0x00418ac0",
   "_format_setting_help": "0x0043f0d5",
-  "_format_type": "0x005b5ac0",
   "_formatted_message": "0x006d7318",
   "_forward_format_arguments": "0x00418c90",
   "_forward_stack_varargs": "0x0043fb32",

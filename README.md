@@ -56,6 +56,13 @@ graph helpers; 12 match exactly. The native flag setter takes one 64-bit value.
 Incorrect imported flag-setter and predecessor-builder mappings were removed;
 their old bodies remain provisional. Original state-data ownership is still open.
 
+The shared `mwcc.csv` is preserved as normalized name candidates in
+[symbol-hints.json](config/GC_3_0a5_2/symbol-hints.json), with its input hash
+and reported version 10 provenance. It supplies 1,284 code names and 1,310
+other in-image names. Fifty code names lack saved Ghidra entries and need
+boundary review. Names require native-code corroboration before promotion;
+the hint inventory does not change build mappings or TU ownership.
+
 PCodeInfo has all 21 identified native bodies reconstructed, including the
 41-terminal instruction formatter, with ten exact matches. Four switch-table
 relocations and one byte of string-allocation padding remain nonmatching.

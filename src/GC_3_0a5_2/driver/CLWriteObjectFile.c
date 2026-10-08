@@ -2,82 +2,80 @@
 #include "compiler/common.h"
 #include "driver/CLWriteObjectFile.h"
 #include "GC_3_0a5_2/driver/CLBrowser.h"
-#include "driver/Memory.h"
-#include "driver/CLDependencies.h"
 #include "driver/CLDropinCallbacks_V10.h"
 #include "driver/CLErrors.h"
 #include "driver/CLFileOps.h"
 #include "driver/CLIO.h"
 #include "driver/CLPlugins.h"
 #include "driver/CLProj.h"
-#include "driver/CLTarg.h"
 #include "driver/Files.h"
-#include "driver/MacSpecs.h"
-#include "driver/MsDos.h"
-#include <stdlib.h>
-#include <setjmp.h>
-#include <string.h>
-#include <stdio.h>
-#pragma auto_inline off
+#include "driver/Memory.h"
 
-#pragma auto_inline reset
+/* GC 3.0 File field names come from the symbol map. Windows embeds its
+ * 516-byte native OSSpec directly; the older driver record is a different ABI. */
+#pragma pack(push, 1)
+typedef struct WriterOSSpec {
+    char path[0x104];
+    char name[0x100];
+} WriterOSSpec;
+typedef struct WriterFile {
+    unsigned char reserved000[0x21f];
+    WriterOSSpec srcfss;
+    WriterOSSpec outfss;
+    unsigned char reserved627[5];
+    short tempOnDisk;
+    unsigned char reserved62e[2];
+    Plugin *compiler;
+    unsigned char reserved634[0x14];
+    StorageHandle *objectdata;
+    StorageHandle *browsedata;
+} WriterFile;
+#pragma pack(pop)
 
-#pragma auto_inline off
-
-#pragma auto_inline reset
-
-#pragma auto_inline off
-
-#pragma auto_inline reset
-
-UInt32 WriteObjectFile(struct DropinFileRecord *self, unsigned int option1, unsigned int option2)
+int WriteObjectFile(struct DropinFileRecord *input, unsigned int maccreator, unsigned int mactype)
 {
-    CWFileSpec sourceFile;
-    CWFileSpec objectFile;
+    WriterFile *file = (WriterFile *)input;
     char *result;
+    unsigned char *message;
     UInt8 success;
 
-    unsigned int ready = self->objectData != 0 && self->selectedPlugin != NULL;
-    if (!ready)
+    if (!(file->objectdata && file->compiler))
         OS_ASSERT_AT("file->objectdata && file->compiler", "CLWriteObjectFile.c", 0x16);
-    MacSpecs_MakeCWFileSpecFromString(self->outputPath.directory.path, &objectFile);
-    MacSpecs_MakeCWFileSpecFromString(self->inputPath.directory.path, &sourceFile);
-    if (DAT_00541b28 != 0) {
-        unsigned char *message = (self->temporaryOutputMask & 2) ? temporary_output_message : browse_file_message;
-        result = CLProj_MakeRelativePath(&self->outputPath, NULL, data_005880e0, 0x104);
+    if (DAT_00541b28) {
+        message = (file->tempOnDisk & 2) ? temporary_output_message : browse_file_message;
+        result = CLProj_MakeRelativePath((OSSpec *)&file->outfss, NULL, data_005880e0, 0x104);
         CLErrors_ForwardMessage(0x10, message, result);
     }
-    success = CLPlugins_WriteObjectFile(self->selectedPlugin, &sourceFile, &objectFile, option1, option2,
-                                        (int)self->objectData);
+    success = CLPlugins_WriteObjectFile(file->compiler, (CWFileSpec *)&file->srcfss,
+                                        (CWFileSpec *)&file->outfss, maccreator, mactype,
+                                        (int)file->objectdata);
     if (!success)
         return 0;
     return 1;
 }
 
-/* STABS WriteBrowseData: filedata, maccreator, mactype; browsehandle, outfss, cof.
- * Imported body still requires the GC 3.0 DropinFileRecord layout port. */
-int WriteBrowseData(DropinFileRecord *input, unsigned int processingMode, unsigned int processingFlags)
+int WriteBrowseData(DropinFileRecord *input, unsigned int maccreator, unsigned int mactype)
 {
-    MemBuffer lookupResult;
-    OSSpec state;
-    OutputSuffixes *type;
+    WriterFile *filedata = (WriterFile *)input;
+    MemBuffer browsehandle;
+    WriterOSSpec outfss;
+    OutputSuffixes *cof;
     char *extension;
 
-    type = CLPlugins_GetObjectFlags(input->selectedPlugin);
-    state = input->outputPath;
-    if (data_00541b95[0] != 0)
+    cof = CLPlugins_GetObjectFlags(filedata->compiler);
+    outfss = filedata->outfss;
+    if (data_00541b95[0])
         extension = data_00541b95;
     else
-        extension = type->suffix0;
-    CLProj_ChangeFileExtension(state.name, extension);
-    if (DAT_00541b28 != 0) {
-        char *result = CLProj_MakeRelativePath(&state, NULL, data_005880e0, 260);
+        extension = cof->suffix0;
+    CLProj_ChangeFileExtension(outfss.name, extension);
+    if (DAT_00541b28) {
+        char *result = CLProj_MakeRelativePath((OSSpec *)&outfss, NULL, data_005880e0, 260);
         CLErrors_ForwardMessage(17, result);
     }
-    if (Browser_PackBrowseFile(input->secondaryReferenceHandle, &data_00587570, &lookupResult) == 0)
+    if (!Browser_PackBrowseFile(filedata->browsedata, &data_00587570, &browsehandle))
         return 0;
-    if (fn_00415090(&state, processingMode, processingFlags, &lookupResult) == 0)
+    if (!fn_00415090((OSSpec *)&outfss, maccreator, mactype, &browsehandle))
         return 0;
     return 1;
 }
-

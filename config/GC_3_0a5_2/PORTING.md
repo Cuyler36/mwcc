@@ -59,8 +59,17 @@ functions reviewed: eight exact, one equivalent serializer nonmatch. Its 131
 literal payload bytes match; five alignment bytes in the 136-byte original
 span remain unassigned. WriteBrowseData belongs to CLWriteObjectFile.c, proven
 by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
-imports still need the GC3 record ABI. Static cache bindings are scoped to the
+functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
+
+## CLWriteObjectFile.c: complete Windows unit
+
+WriteObjectFile and WriteBrowseData match all 496 code bytes and 56 initialized
+data bytes under CW94 speed/intrinsic optimization. The Windows File embeds
+516-byte native specs; its object and browse handles and compiler pointer use
+the recovered GC3 offsets. Original STABS names supply the source, parameters,
+local variables, and record fields. Full-TU objdiff and strict loader-fixup
+checks pass, with no additional emitted functions or BSS contributions.
 
 ## Arguments.c: reviewed equivalent nonmatches
 

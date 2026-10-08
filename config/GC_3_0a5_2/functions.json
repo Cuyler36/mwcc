@@ -4743,11 +4743,11 @@
     "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "baseline_name": "CLWriteObjectFile_WriteObjectFile",
     "baseline_address": "0x004285d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Mac CLWriteObjectFile.c STABS names/parameters and exact Windows native-record implementation."
   },
   {
     "name": "WriteBrowseData",
@@ -4756,11 +4756,11 @@
     "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
     "baseline_name": "fn_004286d0",
     "baseline_address": "0x004286d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
       "unresolved_indirect_flow": false
-    }
+    },
+    "identity_evidence": "Mac CLWriteObjectFile.c STABS names/parameters and exact Windows native-record implementation."
   },
   {
     "name": "GetBrowseTableInfoAndLock",

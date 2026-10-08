@@ -3167,9 +3167,9 @@
       "flags": [
         "-O4",
         "-opt",
-        "space",
-        "-inline",
-        "auto",
+        "speed",
+        "-opt",
+        "intrinsics",
         "-sym",
         "off",
         "-Cpp_exceptions",
@@ -3500,13 +3500,16 @@
     "src/GC_3_0a5_2/driver/Arguments/Arg_AddToToolArgs",
     "src/GC_3_0a5_2/driver/Arguments/Arg_FinishToolArgs",
     "src/GC_3_0a5_2/driver/Arguments/Arg_ToolArgsForPlugin",
-    "src/GC_3_0a5_2/driver/Arguments/Arg_FreeToolArgs"
+    "src/GC_3_0a5_2/driver/Arguments/Arg_FreeToolArgs",
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile/WriteObjectFile",
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile/WriteBrowseData"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
     "src/msl/setjmp_x86.c",
     "src/GC_3_0a5_2/driver/ResourceStrings.c",
-    "src/GC_3_0a5_2/driver/ParserErrors.c"
+    "src/GC_3_0a5_2/driver/ParserErrors.c",
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3565,6 +3568,18 @@
       "_respfilestart": "0x006d7720",
       "_respfilesize": "0x006d771c",
       "_respfilehandle": "0x006d7728"
+    },
+    "src/GC_3_0a5_2/driver/CLWriteObjectFile.c": {
+      "_DAT_00541b28": "0x710244",
+      "_temporary_output_message": "0x671fa0",
+      "_browse_file_message": "0x671fac",
+      "_data_005880e0": "0x716d9c",
+      "_data_00541b95": "0x7103ed",
+      "_data_00587570": "0x703240",
+      "_CLProj_MakeRelativePath@16": "0x4179f0",
+      "_CLProj_ChangeFileExtension@8": "0x4178e0",
+      "_fn_00415090": "0x4186c0",
+      "_Browser_PackBrowseFile": "0x43daf0"
     }
   }
 }

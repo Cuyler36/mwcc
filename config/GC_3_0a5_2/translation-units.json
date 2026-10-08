@@ -1535,7 +1535,7 @@
       "ownership_conflicts": [],
       "compiled": true,
       "membership_complete": true,
-      "status": "attempted_unresolved"
+      "status": "exact"
     },
     {
       "source": "src/GC_3_0a5_2/driver/CLibrary.c",
@@ -40253,16 +40253,133 @@
       "evidence": "ownership_review in this inventory"
     },
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c": {
-      "status": "attempted_unresolved",
+      "functions": [
+        {
+          "name": "WriteObjectFile",
+          "address": "0x0043d590",
+          "size": 195,
+          "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+          "baseline_name": "CLWriteObjectFile_WriteObjectFile",
+          "baseline_address": "0x004285d0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 195
+        },
+        {
+          "name": "WriteBrowseData",
+          "address": "0x0043d660",
+          "size": 301,
+          "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
+          "baseline_name": "fn_004286d0",
+          "baseline_address": "0x004286d0",
+          "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+          "boundary_evidence": {
+            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "unresolved_indirect_flow": false
+          },
+          "exact": true,
+          "compiled_size": 301
+        }
+      ],
+      "bindings": {
+        "_DAT_00541b28": "0x710244",
+        "_temporary_output_message": "0x671fa0",
+        "_browse_file_message": "0x671fac",
+        "_data_005880e0": "0x716d9c",
+        "_data_00541b95": "0x7103ed",
+        "_data_00587570": "0x703240",
+        "_CLProj_MakeRelativePath@16": "0x4179f0",
+        "_CLProj_ChangeFileExtension@8": "0x4178e0",
+        "_fn_00415090": "0x4186c0",
+        "_Browser_PackBrowseFile": "0x43daf0"
+      },
+      "status": "exact",
+      "source_sha256": "dc25ae82e450fb85a22ebaa60e50cbeea6c2ff2972066e91f87d7ac8ed34e358",
+      "selected_flags": "-O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly",
+      "compiler_profiles_attempted": 1,
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "496",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "56",
+          "match_percent": 100.0
+        }
+      ],
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@1029",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x00671fb0",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@1030",
+          "section": ".data",
+          "size": 36,
+          "method": "resolved function reference",
+          "address": "0x00671fc4",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "semantic_port": [
+        "Windows File source and output native specs at offsets0x21f and0x423,516bytes each; prior CWFileSpec conversion removed because GC3 passes embedded specs directly.",
+        "tempOnDisk signed short at0x62c; compiler pointer0x630; objectdata pointer0x648; browsedata pointer0x64c.",
+        "WriteBrowseData copies516byte outputspec and changes its filename atoffset260. Mapped original browse suffix override0x7103ed and original flags string suffixoffset10.",
+        "WriteObjectFile assertion text,file,line22 and fourargumentGC3assertABI retain exact original behavior; verbosemessage16 optionaltemporaryprefix; objectwritercall sixarguments withoriginalmaccreator/mactype order.",
+        "WriteBrowseData emits verbosemessage17, Browser_PackBrowseFile, then filewritehelper, returning0on eitherfailure and1otherwise. Both functions exact bytes and loaderfixups; fullTUcodeanddataCLI100%."
+      ],
+      "provenance": {
+        "symbol_map": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "source_unit": "CLWriteObjectFile.c",
+        "STABS_lines": [
+          18548,
+          18810
+        ],
+        "parameter_names": [
+          "file",
+          "filedata",
+          "maccreator",
+          "mactype"
+        ],
+        "local_names": [
+          "browsehandle",
+          "outfss",
+          "cof"
+        ],
+        "record_field_names": [
+          "srcfss",
+          "outfss",
+          "tempOnDisk",
+          "compiler",
+          "objectdata",
+          "browsedata"
+        ],
+        "Windows_offsets": "Read from original local PE instructions at0043d590..0043d653 and0043d660..0043d78d. No live Ghidra instance."
+      },
+      "encoding": "CP932 encoding pass; repository check_sjis.py absent",
+      "binding_policy": "Source-scope all writer-probe.bindings; do not mutate baseline global aliases.",
       "membership_reviewed": true,
-      "known_original_functions": [
-        "WriteObjectFile",
-        "WriteBrowseData"
-      ],
-      "unresolved": [
-        "Imported object writer and browser writer require the GC3 record/file-spec ABI; not declared equivalent."
-      ],
-      "identity_evidence": "Explicit Mac STABS source membership, three parameter names and browse serialization/write semantics."
+      "code_bytes": 496,
+      "initialized_data_bytes": 56,
+      "bss_bytes": 0,
+      "strict_exact_count": 2
     },
     "src/GC_3_0a5_2/driver/Arguments.c": {
       "status": "attempted_equivalent",

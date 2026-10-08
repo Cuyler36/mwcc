@@ -237,7 +237,8 @@
     "src/GC_3_0a5_2/frontend/CScope.c",
     "src/GC_3_0a5_2/backend/Coloring.c",
     "src/GC_3_0a5_2/backend/InterferenceGraph.c",
-    "src/GC_3_0a5_2/backend/Spill.c"
+    "src/GC_3_0a5_2/backend/Spill.c",
+    "src/GC_3_0a5_2/backend/Registers.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3737,6 +3738,27 @@
       "include_dirs": [
         "src/backend"
       ]
+    },
+    "src/GC_3_0a5_2/backend/Registers.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/backend"
+      ]
     }
   },
   "matching_functions": [
@@ -4512,7 +4534,11 @@
     "src/GC_3_0a5_2/frontend/CScope/CScope_Cleanup",
     "src/GC_3_0a5_2/backend/InterferenceGraph/interferes",
     "src/GC_3_0a5_2/backend/InterferenceGraph/makeinterfere",
-    "src/GC_3_0a5_2/backend/Spill/makespilltemporary"
+    "src/GC_3_0a5_2/backend/Spill/makespilltemporary",
+    "src/GC_3_0a5_2/backend/Registers/fn_00594590",
+    "src/GC_3_0a5_2/backend/Registers/fn_005946b0",
+    "src/GC_3_0a5_2/backend/Registers/fn_00594700",
+    "src/GC_3_0a5_2/backend/Registers/assign_register_to_variable"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -7021,6 +7047,37 @@
       "_fn_00582a50": "0x582a50",
       "_fn_00578a20": "0x578a20",
       "_fn_00578dd0": "0x578dd0"
+    },
+    "src/GC_3_0a5_2/backend/Registers.c": {
+      "_filename": "0x6ad5ac",
+      "_used_virtual_registers": "0x716ea0",
+      "_last_temporary_register": "0x7100ec",
+      "_first_temporary_register": "0x710758",
+      "_n_real_registers": "0x710274",
+      "_n_nonvolatile_registers": "0x71019c",
+      "_used_nonvolatile_registers": "0x716c84",
+      "_n_scratch_registers": "0x71003c",
+      "_assignable_registers": "0x710788",
+      "_nonvolatile_registers": "0x70ed68",
+      "_scratch_registers": "0x70eac0",
+      "_reg_state": "0x70f2e0",
+      "_optimizing": "0x715c34",
+      "_coloring": "0x710394",
+      "_CError_Internal": "0x45a250",
+      "_fn_005ed260": "0x5ed260",
+      "_init_target_registers": "0x579cb0",
+      "_Registers_GetVarInfo": "0x579790",
+      "_close_temp_registers": "0x594470",
+      "_check_temp_registers": "0x5944b0",
+      "_open_temp_registers": "0x594550",
+      "_fn_00594590": "0x594590",
+      "_fn_005945f0": "0x5945f0",
+      "_fn_00594650": "0x594650",
+      "_fn_005946b0": "0x5946b0",
+      "_fn_00594700": "0x594700",
+      "_retain_register": "0x594740",
+      "_assign_register_to_variable": "0x5947e0",
+      "_init_registers": "0x5948a0"
     }
   },
   "original_source_units": {
@@ -7042,6 +7099,7 @@
     "CScope.c": "src/GC_3_0a5_2/frontend/CScope.c",
     "Coloring.c": "src/GC_3_0a5_2/backend/Coloring.c",
     "InterferenceGraph.c": "src/GC_3_0a5_2/backend/InterferenceGraph.c",
-    "Spill.c": "src/GC_3_0a5_2/backend/Spill.c"
+    "Spill.c": "src/GC_3_0a5_2/backend/Spill.c",
+    "Registers.c": "src/GC_3_0a5_2/backend/Registers.c"
   }
 }

@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 236 source files build, 1,678 candidate functions are
-mapped, and 773 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 237 source files build, 1,689 candidate functions are
+mapped, and 777 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -45,6 +45,12 @@ RegisterInfo has 29 reconstructed native members and 13 exact matches, including
 Registers_GetVarInfo and its switch table. Four named data objects match;
 eight function switch relocations remain unresolved. GC3 uses a 20-byte variable
 record; the imported 44-byte record and object offsets cannot be reused.
+
+Registers has all eleven identified native bodies reconstructed, with four exact
+matches. Each body passed 500 bounded instruction comparisons using modeled
+helpers. Its seven BSS definitions total 248 exact bytes; target-specific arrays
+remain external until their source ownership is established. Five additional Mac
+helper names remain unlocated, so original object membership remains unproven.
 
 Six native bit-vector operations match exactly: copy, copy-and-change detection,
 initialize, union, intersection, and empty-intersection testing. Their names use

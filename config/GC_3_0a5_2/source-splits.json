@@ -2870,5 +2870,29 @@
   "fn_00620ec0": {
     "name": "makespilltemporary",
     "source": "src/GC_3_0a5_2/backend/Spill.c"
+  },
+  "fn_00594470": {
+    "name": "close_temp_registers",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "fn_005944b0": {
+    "name": "check_temp_registers",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "fn_00594550": {
+    "name": "open_temp_registers",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "fn_00594740": {
+    "name": "retain_register",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "fn_005947e0": {
+    "name": "assign_register_to_variable",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
+  },
+  "fn_005948a0": {
+    "name": "init_registers",
+    "source": "src/GC_3_0a5_2/backend/Registers.c"
   }
 }

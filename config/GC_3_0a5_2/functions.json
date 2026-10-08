@@ -18031,6 +18031,127 @@
     }
   },
   {
+    "name": "close_temp_registers",
+    "address": "0x594470",
+    "size": 55,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "check_temp_registers",
+    "address": "0x5944b0",
+    "size": 160,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "open_temp_registers",
+    "address": "0x594550",
+    "size": 49,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00594590",
+    "address": "0x594590",
+    "size": 92,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005945f0",
+    "address": "0x5945f0",
+    "size": 81,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00594650",
+    "address": "0x594650",
+    "size": 81,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005946b0",
+    "address": "0x5946b0",
+    "size": 72,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00594700",
+    "address": "0x594700",
+    "size": 55,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "retain_register",
+    "address": "0x594740",
+    "size": 154,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "assign_register_to_variable",
+    "address": "0x5947e0",
+    "size": 180,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "init_registers",
+    "address": "0x5948a0",
+    "size": 213,
+    "source": "src/GC_3_0a5_2/backend/Registers.c",
+    "identity_evidence": "Reviewed Mac roles, supplied address-symbol leads, native state access and CFG; unproved ordinary identities retain address names.",
+    "boundary_evidence": {
+      "method": "Whole-image call/state/filename and seam audit with independent membership review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_005949a0",
     "address": "0x5949a0",
     "size": 439,

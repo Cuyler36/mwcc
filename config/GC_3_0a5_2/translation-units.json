@@ -1130,6 +1130,184 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+      "original_filename": "CLErrors.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Explicit Mac STABS SO/FUN membership"
+      ],
+      "windows_functions": [
+        {
+          "name": "CLGetErrorString",
+          "address": "0x414950",
+          "size": 45,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLMessageReporter",
+          "address": "0x414980",
+          "size": 119,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLReportError",
+          "address": "0x414a00",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLReportWarning",
+          "address": "0x414a30",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLReport",
+          "address": "0x414a60",
+          "size": 43,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLReportOSError",
+          "address": "0x414a90",
+          "size": 140,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLReportCError",
+          "address": "0x414b20",
+          "size": 141,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLInternalError",
+          "address": "0x414bb0",
+          "size": 170,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "CLFatalError",
+          "address": "0x414c60",
+          "size": 151,
+          "compiled_source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Reviewed Windows function CFG and neighboring cluster",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [
+        {
+          "name": "CLGetErrorString",
+          "mac_address": "0x000074b0",
+          "linkage_names": [
+            "CLGetErrorString"
+          ]
+        },
+        {
+          "name": "CLMessageReporter",
+          "mac_address": "0x00007514",
+          "linkage_names": [
+            "CLMessageReporter"
+          ]
+        },
+        {
+          "name": "CLReportError",
+          "mac_address": "0x000075e0",
+          "linkage_names": [
+            "CLReportError"
+          ]
+        },
+        {
+          "name": "CLReportWarning",
+          "mac_address": "0x0000762c",
+          "linkage_names": [
+            "CLReportWarning"
+          ]
+        },
+        {
+          "name": "CLReport",
+          "mac_address": "0x00007678",
+          "linkage_names": [
+            "CLReport"
+          ]
+        },
+        {
+          "name": "CLReportOSError",
+          "mac_address": "0x000076c4",
+          "linkage_names": [
+            "CLReportOSError"
+          ]
+        },
+        {
+          "name": "CLReportCError",
+          "mac_address": "0x00007758",
+          "linkage_names": [
+            "CLReportCError"
+          ]
+        },
+        {
+          "name": "CLInternalError",
+          "mac_address": "0x000077ec",
+          "linkage_names": [
+            "CLInternalError"
+          ]
+        },
+        {
+          "name": "CLFatalError",
+          "mac_address": "0x00007894",
+          "linkage_names": [
+            "CLFatalError"
+          ]
+        }
+      ],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": true,
+      "status": "exact"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/CLFileOps.c",
       "original_filename": "CLFileOps.c",
       "evidence": [
@@ -16002,184 +16180,6 @@
           "mac_address": "0x00021820",
           "linkage_names": [
             "_ZN22CWPluginPrivateContext7destroyEv"
-          ]
-        }
-      ],
-      "ownership_conflicts": [],
-      "compiled": true,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/driver/CLErrors.c",
-      "original_filename": "CLErrors.c",
-      "evidence": [
-        "Imported 1.2.5 source; GC3 membership remains provisional",
-        "Explicit Mac STABS SO/FUN membership"
-      ],
-      "windows_functions": [
-        {
-          "name": "fn_004087d0",
-          "address": "0x00414950",
-          "size": 45,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "format_and_emit_diagnostic",
-          "address": "0x00414980",
-          "size": 119,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_EmitDiagnostic",
-          "address": "0x00414a00",
-          "size": 43,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_ForwardMessageArguments",
-          "address": "0x00414a30",
-          "size": 43,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_ForwardMessage",
-          "address": "0x00414a60",
-          "size": 43,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_ReportOSError",
-          "address": "0x00414a90",
-          "size": 140,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_ReportFormattedOSError",
-          "address": "0x00414b20",
-          "size": 141,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_ReportInternalError",
-          "address": "0x00414bb0",
-          "size": 170,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        },
-        {
-          "name": "CLErrors_FatalError",
-          "address": "0x00414c60",
-          "size": 160,
-          "compiled_source": "src/driver/CLErrors.c",
-          "evidence": "Existing Ghidra label; baseline identity requires semantic review",
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          }
-        }
-      ],
-      "mac_functions": [
-        {
-          "name": "CLGetErrorString",
-          "mac_address": "0x000074b0",
-          "linkage_names": [
-            "CLGetErrorString"
-          ]
-        },
-        {
-          "name": "CLMessageReporter",
-          "mac_address": "0x00007514",
-          "linkage_names": [
-            "CLMessageReporter"
-          ]
-        },
-        {
-          "name": "CLReportError",
-          "mac_address": "0x000075e0",
-          "linkage_names": [
-            "CLReportError"
-          ]
-        },
-        {
-          "name": "CLReportWarning",
-          "mac_address": "0x0000762c",
-          "linkage_names": [
-            "CLReportWarning"
-          ]
-        },
-        {
-          "name": "CLReport",
-          "mac_address": "0x00007678",
-          "linkage_names": [
-            "CLReport"
-          ]
-        },
-        {
-          "name": "CLReportOSError",
-          "mac_address": "0x000076c4",
-          "linkage_names": [
-            "CLReportOSError"
-          ]
-        },
-        {
-          "name": "CLReportCError",
-          "mac_address": "0x00007758",
-          "linkage_names": [
-            "CLReportCError"
-          ]
-        },
-        {
-          "name": "CLInternalError",
-          "mac_address": "0x000077ec",
-          "linkage_names": [
-            "CLInternalError"
-          ]
-        },
-        {
-          "name": "CLFatalError",
-          "mac_address": "0x00007894",
-          "linkage_names": [
-            "CLFatalError"
           ]
         }
       ],
@@ -41987,6 +41987,262 @@
       "membership_reviewed": true,
       "source_sha256": "2035b07807baf4cb4ca724832e718ffcd74bb4bbeed8f3fee5c5993accc37d10",
       "strict_exact_count": 10
+    },
+    "src/GC_3_0a5_2/driver/CLErrors.c": {
+      "functions": [
+        {
+          "name": "CLGetErrorString",
+          "address": "0x414950",
+          "size": 45,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 45
+        },
+        {
+          "name": "CLMessageReporter",
+          "address": "0x414980",
+          "size": 119,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 119
+        },
+        {
+          "name": "CLReportError",
+          "address": "0x414a00",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "CLReportWarning",
+          "address": "0x414a30",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "CLReport",
+          "address": "0x414a60",
+          "size": 43,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 43
+        },
+        {
+          "name": "CLReportOSError",
+          "address": "0x414a90",
+          "size": 140,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 140
+        },
+        {
+          "name": "CLReportCError",
+          "address": "0x414b20",
+          "size": 141,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 141
+        },
+        {
+          "name": "CLInternalError",
+          "address": "0x414bb0",
+          "size": 170,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 170
+        },
+        {
+          "name": "CLFatalError",
+          "address": "0x414c60",
+          "size": 151,
+          "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+          "exact": true,
+          "compiled_size": 151
+        }
+      ],
+      "bindings": {
+        "_stmsg": "0x6d5f60",
+        "_stbuf": "0x6d6060",
+        "_CLIO_GetResourceString@12": "0x42f480",
+        "_CLIO_ConvertPascalToCString@4": "0x42f450",
+        "_get_strerror": "0x404490",
+        "_data_00711b88": "0x711b88",
+        "_data_007101d0": "0x7101d0",
+        "_fn_00423010": "0x423010",
+        "_fn_00423080": "0x423080",
+        "_xfree@4": "0x426490",
+        "_exit": "0x402e70",
+        "_CLGetErrorString": "0x414950",
+        "_CLMessageReporter": "0x414980",
+        "_CLReportError": "0x414a00",
+        "_CLReportWarning": "0x414a30",
+        "_CLReport": "0x414a60",
+        "_CLReportOSError": "0x414a90",
+        "_CLReportCError": "0x414b20",
+        "_CLInternalError": "0x414bb0",
+        "_CLFatalError": "0x414c60"
+      },
+      "data_complete": true,
+      "data_evidence": [
+        {
+          "name": "@638",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a64c",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@657",
+          "section": ".data",
+          "size": 4,
+          "method": "resolved function reference",
+          "address": "0x0066a650",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@752",
+          "section": ".data",
+          "size": 28,
+          "method": "resolved function reference",
+          "address": "0x0066a654",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "@771",
+          "section": ".data",
+          "size": 20,
+          "method": "resolved function reference",
+          "address": "0x0066a670",
+          "bytes_exact": true,
+          "target_section": ".data",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_stbuf",
+          "section": ".bss",
+          "size": 256,
+          "method": "named binding",
+          "address": "0x006d6060",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        },
+        {
+          "name": "_stmsg",
+          "section": ".bss",
+          "size": 256,
+          "method": "named binding",
+          "address": "0x006d5f60",
+          "bytes_exact": true,
+          "target_section": ".bss",
+          "fixups_exact": true,
+          "relocations_resolved": true
+        }
+      ],
+      "status": "exact",
+      "source": "src/GC_3_0a5_2/driver/CLErrors.c",
+      "source_sha256": "36c9fc703a8e296235581b1b718231971d5cac37366dfd54bf8adf2269a37351",
+      "selected_flags": "-O4 -opt speed -opt intrinsics -sym off -Cpp_exceptions off -str noreadonly",
+      "compiler_profiles_attempted": 1,
+      "function_count": 9,
+      "strict_exact_count": 9,
+      "objdiff_artifact": "build/clerrors-full-diff.json",
+      "objdiff_sections": [
+        {
+          "name": ".text",
+          "size": "895",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".data",
+          "size": "56",
+          "match_percent": 100.0
+        },
+        {
+          "name": ".bss",
+          "size": "512",
+          "match_percent": 100.0
+        }
+      ],
+      "boundary_overrides": [
+        {
+          "name": "CLFatalError",
+          "address": "0x00414c60",
+          "size": 151,
+          "end_exclusive": "0x00414cf7",
+          "old_size": 160,
+          "excluded_bytes": "Nine0x90alignmentNOPs at0x00414cf7..0x00414d00. Function terminates with call to noreturnexit at0x00414cf2, ending0x00414cf7."
+        }
+      ],
+      "provenance": {
+        "symbol_map": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+        "STABS_function_lines": [
+          2858,
+          2870,
+          2886,
+          2892,
+          2898,
+          2904,
+          2921,
+          2938,
+          2950
+        ],
+        "source_unit": "CLErrors.c",
+        "canonical_functions": [
+          "CLGetErrorString",
+          "CLMessageReporter",
+          "CLReportError",
+          "CLReportWarning",
+          "CLReport",
+          "CLReportOSError",
+          "CLReportCError",
+          "CLInternalError",
+          "CLFatalError"
+        ],
+        "canonical_private_globals": {
+          "stmsg": "0x006d5f60/256",
+          "stbuf": "0x006d6060/256"
+        },
+        "original_disassembly": "build/clerrors-retail.txt"
+      },
+      "semantic_changes_from_baseline": [
+        "All diagnostic resource IDs have signed-short parameter ABI. CLGetErrorString loads resource12000 via CLIO_GetResourceString then converts Pascal toC string and appends newline.",
+        "CLReportError/Warning/Report returnvoid and pass diagnosticflags2/1/0 to CLMessageReporter; legacy varargs start expression uses separate address/end variables to preserve compiled integer division and combinedLEA.",
+        "CLMessageReporter selects severity3/2/5 for flags2/1/other, invokes CLIO_ReportDiagnostic with literalpercent and formattedtext, then frees only allocatedreplacementbuffers withxfree.",
+        "OS and C error wrappers report IDs101 and102 respectively, up from99/100 baseline; otherformatting and errorparameter order preserved.",
+        "Internal and fatal diagnostics optionally write the same message to FILE*at0x00711b88, then call unknown-namehelpers0x00423010(global0x007101d0),0x00423080 inoriginalorder; helpersretainaddress-basednames.",
+        "All deallocatedformattedbuffers usexfree@4 instead ofMSLfree. Fatal exits-123 withnoreturnprototype and excludes terminalalignmentpadding fromfunctionextent."
+      ],
+      "binding_policy": "Source-scopeallclerrors-probe.bindings, includingcanonicalstaticstmsg/stbuf, renamedfunctionaddresses andnumericexternalglobal/helperaliases. No privategeneratedliteralordinals inglobalbindings.",
+      "verification": {
+        "strict_bytes_and_loader_fixups": "9/9exact",
+        "all_emitted_functions_mapped": true,
+        "all_emitted_data_attributed": true,
+        "objdiff_code_data_bss": "100%forallsections",
+        "encoding": "Python CP932 encode passes; tools/check_sjis.py absent"
+      },
+      "limitations": [
+        "The original names of Windows-onlyexternalhelpers423010/423080 and log/stateglobals711b88/7101d0 remainunrecovered. Their exactaddresses,callorderandABIarepreserved."
+      ],
+      "code_bytes": 895,
+      "initialized_data_bytes": 56,
+      "bss_bytes": 512,
+      "membership_reviewed": true
     }
   },
   "ownership_review": {

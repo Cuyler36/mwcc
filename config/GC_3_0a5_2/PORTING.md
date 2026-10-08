@@ -62,6 +62,16 @@ by STABS parameters and behavior, and joins WriteObjectFile there. Both writer
 functions now match with the GC3 record ABI. Static cache bindings are scoped to the
 source file to avoid contaminating unrelated file-local names.
 
+## CLErrors.c: complete Windows unit
+
+All nine functions use their original CLGetErrorString, CLMessageReporter,
+CLReport*, CLInternalError, and CLFatalError names. CW94 speed/intrinsic
+optimization reproduces 895 code bytes, 56 initialized bytes, and 512 BSS
+bytes. Original stmsg/stbuf names, signed-short resource IDs, varargs handling,
+new diagnostic IDs, optional log output, and fatal cleanup are ported. The
+fatal function ends after its noreturn exit call; nine following NOP alignment
+bytes belong to the unassigned image range rather than the function.
+
 ## CLLicenses.c: complete Windows unit
 
 All ten Windows functions match 1,544 code bytes, 204 initialized bytes, and

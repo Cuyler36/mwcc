@@ -1097,119 +1097,119 @@
     }
   },
   {
-    "name": "fn_004087d0",
-    "address": "0x00414950",
+    "name": "CLGetErrorString",
+    "address": "0x414950",
     "size": 45,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "fn_004087d0",
     "baseline_address": "0x004087d0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "format_and_emit_diagnostic",
-    "address": "0x00414980",
+    "name": "CLMessageReporter",
+    "address": "0x414980",
     "size": 119,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "format_and_emit_diagnostic",
     "baseline_address": "0x00408800",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_EmitDiagnostic",
-    "address": "0x00414a00",
+    "name": "CLReportError",
+    "address": "0x414a00",
     "size": 43,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_EmitDiagnostic",
     "baseline_address": "0x00408880",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_ForwardMessageArguments",
-    "address": "0x00414a30",
+    "name": "CLReportWarning",
+    "address": "0x414a30",
     "size": 43,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_ForwardMessageArguments",
     "baseline_address": "0x004088c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_ForwardMessage",
-    "address": "0x00414a60",
+    "name": "CLReport",
+    "address": "0x414a60",
     "size": 43,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_ForwardMessage",
     "baseline_address": "0x00408900",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_ReportOSError",
-    "address": "0x00414a90",
+    "name": "CLReportOSError",
+    "address": "0x414a90",
     "size": 140,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_ReportOSError",
     "baseline_address": "0x00408940",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_ReportFormattedOSError",
-    "address": "0x00414b20",
+    "name": "CLReportCError",
+    "address": "0x414b20",
     "size": 141,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_ReportFormattedOSError",
     "baseline_address": "0x004089e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_ReportInternalError",
-    "address": "0x00414bb0",
+    "name": "CLInternalError",
+    "address": "0x414bb0",
     "size": 170,
-    "source": "src/driver/CLErrors.c",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_ReportInternalError",
     "baseline_address": "0x00408a80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CLErrors_FatalError",
-    "address": "0x00414c60",
-    "size": 160,
-    "source": "src/driver/CLErrors.c",
+    "name": "CLFatalError",
+    "address": "0x414c60",
+    "size": 151,
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c",
     "baseline_name": "CLErrors_FatalError",
     "baseline_address": "0x00408b10",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CLErrors.c source/symbol inventory and reviewed Windows native implementation; strict byte/fixup evidence in attempt ledger.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed Windows function CFG and neighboring cluster",
       "unresolved_indirect_flow": false
     }
   },

@@ -662,5 +662,41 @@
   "CLLicenses_DeleteLicense": {
     "name": "CLLicenses_DeleteLicense",
     "source": "src/GC_3_0a5_2/driver/CLLicenses.c"
+  },
+  "fn_004087d0": {
+    "name": "CLGetErrorString",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "format_and_emit_diagnostic": {
+    "name": "CLMessageReporter",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_EmitDiagnostic": {
+    "name": "CLReportError",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_ForwardMessageArguments": {
+    "name": "CLReportWarning",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_ForwardMessage": {
+    "name": "CLReport",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_ReportOSError": {
+    "name": "CLReportOSError",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_ReportFormattedOSError": {
+    "name": "CLReportCError",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_ReportInternalError": {
+    "name": "CLInternalError",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
+  },
+  "CLErrors_FatalError": {
+    "name": "CLFatalError",
+    "source": "src/GC_3_0a5_2/driver/CLErrors.c"
   }
 }

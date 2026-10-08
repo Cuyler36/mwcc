@@ -47,7 +47,7 @@
     "src/driver/CLCompilerLinkerDropin_V10.cpp",
     "src/driver/CLDependencies.c",
     "src/driver/CLDropinCallbacks_V10.cpp",
-    "src/driver/CLErrors.c",
+    "src/GC_3_0a5_2/driver/CLErrors.c",
     "src/driver/CLFileOps.cpp",
     "src/driver/CLFiles.c",
     "src/driver/CLIO.c",
@@ -1080,25 +1080,6 @@
         "-O4",
         "-opt",
         "speed",
-        "-inline",
-        "auto",
-        "-sym",
-        "off",
-        "-Cpp_exceptions",
-        "off",
-        "-str",
-        "noreadonly"
-      ],
-      "include_dirs": [
-        "src/driver"
-      ]
-    },
-    "src/driver/CLErrors.c": {
-      "compiler": "cw94",
-      "flags": [
-        "-O4",
-        "-opt",
-        "space",
         "-inline",
         "auto",
         "-sym",
@@ -3240,6 +3221,25 @@
         "include",
         "include/libc"
       ]
+    },
+    "src/GC_3_0a5_2/driver/CLErrors.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "include_dirs": [
+        "src/driver"
+      ]
     }
   },
   "matching_functions": [
@@ -3520,7 +3520,16 @@
     "src/GC_3_0a5_2/driver/CLLicenses/get_license_slot_count",
     "src/GC_3_0a5_2/driver/CLLicenses/fn_00417750",
     "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_ReleaseLicenses",
-    "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_DeleteLicense"
+    "src/GC_3_0a5_2/driver/CLLicenses/CLLicenses_DeleteLicense",
+    "src/GC_3_0a5_2/driver/CLErrors/CLGetErrorString",
+    "src/GC_3_0a5_2/driver/CLErrors/CLMessageReporter",
+    "src/GC_3_0a5_2/driver/CLErrors/CLReportError",
+    "src/GC_3_0a5_2/driver/CLErrors/CLReportWarning",
+    "src/GC_3_0a5_2/driver/CLErrors/CLReport",
+    "src/GC_3_0a5_2/driver/CLErrors/CLReportOSError",
+    "src/GC_3_0a5_2/driver/CLErrors/CLReportCError",
+    "src/GC_3_0a5_2/driver/CLErrors/CLInternalError",
+    "src/GC_3_0a5_2/driver/CLErrors/CLFatalError"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -3528,7 +3537,8 @@
     "src/GC_3_0a5_2/driver/ResourceStrings.c",
     "src/GC_3_0a5_2/driver/ParserErrors.c",
     "src/GC_3_0a5_2/driver/CLWriteObjectFile.c",
-    "src/GC_3_0a5_2/driver/CLLicenses.c"
+    "src/GC_3_0a5_2/driver/CLLicenses.c",
+    "src/GC_3_0a5_2/driver/CLErrors.c"
   ],
   "translation_units": "config/GC_3_0a5_2/translation-units.json",
   "source_bindings": {
@@ -3639,6 +3649,28 @@
       "_fn_00417750": "0x421a10",
       "_CLLicenses_ReleaseLicenses": "0x421a30",
       "_CLLicenses_DeleteLicense": "0x421e00"
+    },
+    "src/GC_3_0a5_2/driver/CLErrors.c": {
+      "_stmsg": "0x6d5f60",
+      "_stbuf": "0x6d6060",
+      "_CLIO_GetResourceString@12": "0x42f480",
+      "_CLIO_ConvertPascalToCString@4": "0x42f450",
+      "_get_strerror": "0x404490",
+      "_data_00711b88": "0x711b88",
+      "_data_007101d0": "0x7101d0",
+      "_fn_00423010": "0x423010",
+      "_fn_00423080": "0x423080",
+      "_xfree@4": "0x426490",
+      "_exit": "0x402e70",
+      "_CLGetErrorString": "0x414950",
+      "_CLMessageReporter": "0x414980",
+      "_CLReportError": "0x414a00",
+      "_CLReportWarning": "0x414a30",
+      "_CLReport": "0x414a60",
+      "_CLReportOSError": "0x414a90",
+      "_CLReportCError": "0x414b20",
+      "_CLInternalError": "0x414bb0",
+      "_CLFatalError": "0x414c60"
     }
   }
 }

@@ -28364,6 +28364,149 @@
     }
   },
   {
+    "name": "fn_005f57b0",
+    "address": "0x5f57b0",
+    "size": 194,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertion cluster and complete depends/kills-family caller review; an unambiguous newer cross-version name was not established.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit, function-pointer review and adjacent-family NOP/string seam",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f5880",
+    "address": "0x5f5880",
+    "size": 665,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertion cluster and complete depends/kills-family caller review; an unambiguous newer cross-version name was not established.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit, function-pointer review and adjacent-family NOP/string seam",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_ComputeFuncKills",
+    "address": "0x5f5b20",
+    "size": 1821,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Supplied Pro8 symbol role corroborated by construction of the per-size function-kill bitvectors and IroDependsKills.c native evidence.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit, function-pointer review and adjacent-family NOP/string seam",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f6240",
+    "address": "0x5f6240",
+    "size": 20,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Recovered conditional callback used by whole-image expression walkers; byte-exact CW94 body. The private name remains address based.",
+    "boundary_evidence": {
+      "method": "Complete straight-line CFG plus indirect callback references and enclosing NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_FindDepends",
+    "address": "0x5f6260",
+    "size": 707,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Supplied Pro8 symbol role corroborated by assignment/call/inline-assembly dependency traversal and the recovered callback wrapper.",
+    "boundary_evidence": {
+      "method": "Complete native CFG including both verified switch tables, direct-call audit and callback references",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f6530",
+    "address": "0x5f6530",
+    "size": 864,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertions and function-call dependency behavior; private cross-version role was not named beyond reasonable doubt.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit, function-pointer review and adjacent NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f6890",
+    "address": "0x5f6890",
+    "size": 118,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Recovered exception-action callback from native function pointers; private name remains address based.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indirect callback-reference audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f6910",
+    "address": "0x5f6910",
+    "size": 617,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertions and indirect-assignment dependency behavior; private cross-version role was not named beyond reasonable doubt.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit and adjacent NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_GetKills",
+    "address": "0x5f6b80",
+    "size": 102,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Supplied Pro8 symbol role, native callers and wrapper semantics; byte-exact CW94 body and relocations.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image caller review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_GetKillsInExpr",
+    "address": "0x5f6bf0",
+    "size": 1604,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Supplied Pro8 symbol role corroborated by recursive expression kill collection and the byte-exact IRO_GetKills wrapper.",
+    "boundary_evidence": {
+      "method": "Complete native CFG including verified switch table and whole-image caller review",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f7240",
+    "address": "0x5f7240",
+    "size": 825,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertions and function-call kill behavior; private cross-version role was not named beyond reasonable doubt.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit and adjacent NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f7580",
+    "address": "0x5f7580",
+    "size": 147,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Recovered exception-action callback from native function pointers; private name remains address based.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indirect callback-reference audit",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f7620",
+    "address": "0x5f7620",
+    "size": 951,
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c",
+    "identity_evidence": "Native IroDependsKills.c assertions and indirect-assignment kill behavior; private cross-version role was not named beyond reasonable doubt.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, direct-call audit and separate factoring-expression family seam",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_00606400",
     "address": "0x606400",
     "size": 111,

@@ -5315,6 +5315,58 @@
     "name": "IRO_DumpBeforePhase",
     "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
   },
+  "fn_005f57b0": {
+    "name": "fn_005f57b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f5880": {
+    "name": "fn_005f5880",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f5b20": {
+    "name": "IRO_ComputeFuncKills",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6240": {
+    "name": "fn_005f6240",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6260": {
+    "name": "IRO_FindDepends",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6530": {
+    "name": "fn_005f6530",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6890": {
+    "name": "fn_005f6890",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6910": {
+    "name": "fn_005f6910",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6b80": {
+    "name": "IRO_GetKills",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f6bf0": {
+    "name": "IRO_GetKillsInExpr",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f7240": {
+    "name": "fn_005f7240",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f7580": {
+    "name": "fn_005f7580",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
+  "fn_005f7620": {
+    "name": "fn_005f7620",
+    "source": "src/GC_3_0a5_2/optimizer/IroDependsKills.c"
+  },
   "fn_00606400": {
     "name": "fn_00606400",
     "source": "src/GC_3_0a5_2/optimizer/IroJump.c"

@@ -180,7 +180,6 @@
     "src/optimizer/IroCSE.c",
     "src/optimizer/IroEval.c",
     "src/optimizer/IroFlowgraph.c",
-    "src/optimizer/IroJump.c",
     "src/optimizer/IroLoop.c",
     "src/optimizer/IroPropagate.c",
     "src/optimizer/IroRangePropagation.c",
@@ -264,7 +263,8 @@
     "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
     "src/GC_3_0a5_2/frontend/CleanUpIR.c",
     "src/GC_3_0a5_2/backend/ConstantPropagation.c",
-    "src/GC_3_0a5_2/optimizer/IroDump.c"
+    "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "src/GC_3_0a5_2/optimizer/IroJump.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4298,6 +4298,26 @@
         "off",
         "-str",
         "noreadonly"
+      ]
+    },
+    "src/GC_3_0a5_2/optimizer/IroJump.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly",
+        "-opt",
+        "nocse"
       ]
     }
   },
@@ -10403,6 +10423,49 @@
       "_dumpForce": "0x70f24d",
       "_dumpCurrentObject": "0x7107e8",
       "_fn_005bd8e0": "0x5bd8e0"
+    },
+    "src/GC_3_0a5_2/optimizer/IroJump.c": {
+      "_fn_00606400": "0x606400",
+      "_fn_00606470": "0x606470",
+      "_fn_00606530": "0x606530",
+      "_fn_00606640": "0x606640",
+      "_IRO_RemoveLabels": "0x606870",
+      "_IRO_RemoveRedundantJumps": "0x6068d0",
+      "_IRO_DoJumpChaining": "0x606ae0",
+      "_fn_00606ba0": "0x606ba0",
+      "_DAT_00710b54": "0x710b54",
+      "_DAT_00710924": "0x710924",
+      "_s_Removing_tail_recursion_at__d_006b9d1b": "0x6b9d1b",
+      "_DAT_007107e8": "0x7107e8",
+      "_s_Removing_goto_next_at__d_006b9d3b": "0x6b9d3b",
+      "_DAT_00710990": "0x710990",
+      "_DAT_00710998": "0x710998",
+      "_s_Removing_Switch_next_at__d_006b9d9f": "0x6b9d9f",
+      "_s_Chaining_goto_at__d_006b9dbb": "0x6b9dbb",
+      "_s_IroJump_c_006b9d0f": "0x6b9d0f",
+      "_s_Removing_If_IfNot_Goto_next_at___006b9d7b": "0x6b9d7b",
+      "_s_Removing_branch_around_goto_at___006b9d57": "0x6b9d57",
+      "_DAT_00710170": "0x710170",
+      "_FUN_005ed4c0": "0x5ed4c0",
+      "_FUN_005be690": "0x5be690",
+      "_FUN_005bdb30": "0x5bdb30",
+      "_FUN_005a9d80": "0x5a9d80",
+      "_FUN_005be4b0": "0x5be4b0",
+      "_FUN_005be190": "0x5be190",
+      "_FUN_005ac050": "0x5ac050",
+      "_FUN_005aba80": "0x5aba80",
+      "_FUN_005bd630": "0x5bd630",
+      "_FUN_005a9cc0": "0x5a9cc0",
+      "_FUN_00521c20": "0x521c20",
+      "_FUN_005b7d30": "0x5b7d30",
+      "_FUN_005ad400": "0x5ad400",
+      "_FUN_005ad440": "0x5ad440",
+      "_FUN_005ad280": "0x5ad280",
+      "_FUN_005ad220": "0x5ad220",
+      "_FUN_005ad260": "0x5ad260",
+      "_FUN_005ae7b0": "0x5ae7b0",
+      "_FUN_005acf30": "0x5acf30",
+      "_CError_Internal": "0x45a250"
     }
   },
   "original_source_units": {
@@ -10454,7 +10517,8 @@
     "IRFlowgraph.c": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
     "CleanUpIR.c": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
     "ConstantPropagation.c": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
-    "IroDump.c": "src/GC_3_0a5_2/optimizer/IroDump.c"
+    "IroDump.c": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "IroJump.c": "src/GC_3_0a5_2/optimizer/IroJump.c"
   },
   "held_native_functions": [
     {
@@ -10476,6 +10540,17 @@
       "identity_evidence": "Zero-argument whole-graph dump; iterates graph list and calls the one-block dump; saved native instructions and graph-layout references prove the separate IroFlowgraph family, not complete physical TU membership.",
       "boundary_evidence": {
         "method": "Saved complete native control flow through return; native IroDump caller/argument and graph traversal review",
+        "unresolved_indirect_flow": false
+      }
+    },
+    {
+      "name": "fn_005bd990",
+      "address": "0x005bd990",
+      "size": 409,
+      "source": "src/optimizer/IroFlowgraph.c",
+      "identity_evidence": "Native 409 B driver is physically in the 5bd... flowgraph lifecycle cluster beside 5bdb30 reachability. The 1.2.5 IroJump.c carries an older role with different packed layouts/return width; no supported GC3 IroJump filename/call/literal ownership proof associates this remote entry with 606400..606ba0. Existing Ghidra IRO_RemoveUnreachable label and old reconstructed source are identity leads, not independent supplied-address symbol proof. Its old implementation has not been semantically/ABI matched as part of this TU.",
+      "boundary_evidence": {
+        "method": "Reachable x86 control flow bounded by Ghidra entries",
         "unresolved_indirect_flow": false
       }
     }

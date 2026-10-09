@@ -24118,19 +24118,6 @@
     }
   },
   {
-    "name": "IRO_RemoveUnreachable",
-    "address": "0x005bd990",
-    "size": 409,
-    "source": "src/optimizer/IroJump.c",
-    "baseline_name": "IRO_RemoveUnreachable",
-    "baseline_address": "0x00456860",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
     "name": "IroBitVect_SetAllBits",
     "address": "0x005bf740",
     "size": 24,
@@ -26147,6 +26134,94 @@
     "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
     "boundary_evidence": {
       "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00606400",
+    "address": "0x606400",
+    "size": 111,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00606470",
+    "address": "0x606470",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00606530",
+    "address": "0x606530",
+    "size": 262,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00606640",
+    "address": "0x606640",
+    "size": 555,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_RemoveLabels",
+    "address": "0x606870",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_RemoveRedundantJumps",
+    "address": "0x6068d0",
+    "size": 518,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_DoJumpChaining",
+    "address": "0x606ae0",
+    "size": 188,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00606ba0",
+    "address": "0x606ba0",
+    "size": 146,
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "identity_evidence": "IroJump.c filename assertions, supplied/Mac role comparison and complete native caller/layout/member review; original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG plus whole-image call/reference and NOP-seam review; prefix def/use family and suffix expression regeneration separate",
       "unresolved_indirect_flow": false
     }
   },

@@ -5498,5 +5498,37 @@
   "IRO_DumpBeforePhase": {
     "name": "IRO_DumpBeforePhase",
     "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "fn_00606400": {
+    "name": "fn_00606400",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "fn_00606470": {
+    "name": "fn_00606470",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "fn_00606530": {
+    "name": "fn_00606530",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "fn_00606640": {
+    "name": "fn_00606640",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "IRO_RemoveLabels": {
+    "name": "IRO_RemoveLabels",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "IRO_RemoveRedundantJumps": {
+    "name": "IRO_RemoveRedundantJumps",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "IRO_DoJumpChaining": {
+    "name": "IRO_DoJumpChaining",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "fn_00606ba0": {
+    "name": "fn_00606ba0",
+    "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
   }
 }

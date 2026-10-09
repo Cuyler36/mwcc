@@ -25,6 +25,13 @@ def unit(function):
     return Path(function["source"]).with_suffix("").as_posix() + "/" + function["name"]
 
 
+def baseline_mapping_allowed(row, config):
+    """Do not resurrect deselected sources or reviewed target-only entries."""
+    held = {int(item['address'], 0) for item in config.get('held_native_functions', [])}
+    return (row['source'] in config['sources'] and
+            ('address' not in row or int(row['address'], 0) not in held))
+
+
 def records():
     baseline = json.loads(Path("config/GC_1_2_5/functions.json").read_text())
     splits = json.loads((CONFIG / 'source-splits.json').read_text()) if (CONFIG / 'source-splits.json').exists() else {}
@@ -47,7 +54,7 @@ def records():
 
 
 def discover():
-    _, pe = original("GC_3_0a5_2")
+    config, pe = original("GC_3_0a5_2")
     labels = {m[1]: int(m[2], 16) for m in re.finditer(r"^([^\n]+) at ([0-9a-f]+)$",
               Path("build/gc3-ghidra-functions-current.txt").read_text(), re.M)}
     entries = set(labels.values())
@@ -55,6 +62,8 @@ def discover():
             for s in pe.sections if s.characteristics & 0x20000000]
     objects, candidates, mappings = {}, [], []
     for row in records():
+        if not baseline_mapping_allowed({'source': row['source']}, config):
+            continue
         obj = ROOT / "compiled" / (row["source"] + ".obj")
         if not obj.exists():
             continue
@@ -81,9 +90,12 @@ def discover():
             evidence = "Existing Ghidra label; baseline identity requires semantic review"
         else:
             continue
-        mappings.append(dict(row, address=f"0x{address:08x}", mapping_evidence=evidence))
+        mapping = dict(row, address=f"0x{address:08x}", mapping_evidence=evidence)
+        if baseline_mapping_allowed(mapping, config):
+            mappings.append(mapping)
     occupied = Counter(r["address"] for r in mappings)
     mappings = [r for r in mappings if occupied[r["address"]] == 1]
+    candidates = [r for r in candidates if baseline_mapping_allowed(r, config)]
     (ROOT / "selected-body-candidates.json").write_text(json.dumps(candidates, indent=2)+"\n")
     (ROOT / "baseline-mappings.json").write_text(json.dumps(mappings, indent=2)+"\n")
     print(f"{len(mappings)} mapped baseline imports; {len(candidates)} unique compiled-body candidates")
@@ -132,7 +144,7 @@ def flow_boundary(pe, address, end):
 
 
 def integrate():
-    _, pe = original("GC_3_0a5_2")
+    config, pe = original("GC_3_0a5_2")
     fixups = set(base_relocations(pe))
     exported = json.loads((ROOT / "ghidra-import-boundaries.json").read_text())
     boundaries = {}
@@ -171,6 +183,7 @@ def integrate():
         if split:
             row.update(split)
             row['symbol'] = row['name'] if row['name'].startswith('?') else '_' + row['name']
+    rows = [row for row in rows if baseline_mapping_allowed(row, config)]
     overlaps = {r["name"] for r, following in zip(rows, rows[1:])
                 if int(r["address"], 0)+r["size"] > int(following["address"], 0)}
     rows = [r for r in rows if r["name"] not in overlaps]

@@ -10,7 +10,7 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 263 source files build, 2,342 candidate functions are
+Current GC 3.0a5.2 status: 263 source files build, 2,349 candidate functions are
 mapped, and 1,010 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
@@ -143,6 +143,15 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+IroJump has all eight supported members attempted. Twenty final compiler
+profiles and 22 historical attempts were compared; CW94 with CSE disabled
+reaches 72.56% weighted code similarity. All 824 bounded native comparisons
+pass, including the complete candidate family. No member is exact yet; all
+186 named data bytes verify, while two seven-slot switch tables remain
+unresolved. The remote reachability entry remains target-only under
+IroFlowgraph. Baseline rediscovery preserves these held entries and ignores
+deselected sources. Original physical TU extent remains unproved.
 
 IroDump has all seven supported dump-control members attempted, with six exact
 matches and no unresolved relocations. Ten compiler profiles and 16 distinct

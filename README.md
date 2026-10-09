@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 256 source files build, 2,235 candidate functions are
-mapped, and 985 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 257 source files build, 2,261 candidate functions are
+mapped, and 986 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -144,6 +144,13 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
 
+IroExprRegeneration has all 26 supported reconstruction members attempted;
+its 409-byte driver matches exactly. Ten final-source compiler/optimizer
+profiles and three separate source-form experiments were tested. All 1,612
+bounded instruction comparisons pass, including successful logical, conditional,
+sin/cos and div/mod transformations. Eighteen literals total 435 verified bytes.
+Three generated switches remain unresolved; shared optimizer state is external.
+
 CRTTI has all 18 supported cast, typeid and typeinfo members attempted, with
 six exact matches. Ten compiler profiles and four source forms were tested;
 all 4,608 bounded native comparisons pass. The filename and namespace/type
@@ -258,7 +265,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 27 original-only TU views to objdiff. The twenty
+map. It currently adds 26 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

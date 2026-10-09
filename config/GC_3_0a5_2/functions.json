@@ -25592,6 +25592,292 @@
     }
   },
   {
+    "name": "IRO_RegenerateExpressions",
+    "address": "0x606c40",
+    "size": 409,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GenerateCombinedOperations",
+    "address": "0x606de0",
+    "size": 1476,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsCombinedSinCos",
+    "address": "0x6073b0",
+    "size": 801,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsCosine",
+    "address": "0x6076e0",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsSine",
+    "address": "0x607780",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "OrderByStatement",
+    "address": "0x607820",
+    "size": 196,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "NewDualOperationRTCall",
+    "address": "0x6078f0",
+    "size": 298,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GenerateCondAssignments",
+    "address": "0x607a20",
+    "size": 92,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GeneratePossibleCondAss",
+    "address": "0x607a80",
+    "size": 2571,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RebuildLogicalExpressions",
+    "address": "0x608490",
+    "size": 400,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RebuildPossibleLogicalExpression",
+    "address": "0x608620",
+    "size": 3902,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "AddNodeAndSuccessorsRecursively",
+    "address": "0x609560",
+    "size": 486,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00609750",
+    "address": "0x609750",
+    "size": 80,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CheckForTopLevelExpressions",
+    "address": "0x6097a0",
+    "size": 319,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RebuildCondExpressions",
+    "address": "0x6098e0",
+    "size": 106,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RebuildPossibleReturnCondExpression",
+    "address": "0x609950",
+    "size": 746,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RebuildPossibleCondExpression",
+    "address": "0x609c40",
+    "size": 4931,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CheckThenOrElseBranch",
+    "address": "0x60af90",
+    "size": 360,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "UsesAKilledVarBeforeUse",
+    "address": "0x60b100",
+    "size": 551,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "GetDependsOfStatement",
+    "address": "0x60b330",
+    "size": 114,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060b3b0",
+    "address": "0x60b3b0",
+    "size": 702,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "HasSideEffectsBeforeUse",
+    "address": "0x60b670",
+    "size": 323,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "StatementHasSideEffectBeforeUse",
+    "address": "0x60b7c0",
+    "size": 277,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060b8e0",
+    "address": "0x60b8e0",
+    "size": 307,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060ba20",
+    "address": "0x60ba20",
+    "size": 277,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "RewriteUse",
+    "address": "0x60bb40",
+    "size": 187,
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "identity_evidence": "Asserted IroExprRegeneration.c and IroFlowgraph.h, call-connected reconstruction passes, supplied Mac operation roles and explicit native ABI/layout review. Four uncertain private identities retain address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG and whole-image call/entry/filename audit; omitted114-byte callback independently proven, defined and saved; IroJump prefix and block-reordering suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "IRO_ConstantFolding",
     "address": "0x00613b90",
     "size": 3774,

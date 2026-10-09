@@ -5058,5 +5058,109 @@
   "CRTTI_ParseTypeid": {
     "name": "CRTTI_ParseTypeid",
     "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_00606c40": {
+    "name": "IRO_RegenerateExpressions",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00606de0": {
+    "name": "GenerateCombinedOperations",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_006073b0": {
+    "name": "IsCombinedSinCos",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_006076e0": {
+    "name": "IsCosine",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00607780": {
+    "name": "IsSine",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00607820": {
+    "name": "OrderByStatement",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_006078f0": {
+    "name": "NewDualOperationRTCall",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00607a20": {
+    "name": "GenerateCondAssignments",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00607a80": {
+    "name": "GeneratePossibleCondAss",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00608490": {
+    "name": "RebuildLogicalExpressions",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00608620": {
+    "name": "RebuildPossibleLogicalExpression",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00609560": {
+    "name": "AddNodeAndSuccessorsRecursively",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00609750": {
+    "name": "fn_00609750",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_006097a0": {
+    "name": "CheckForTopLevelExpressions",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_006098e0": {
+    "name": "RebuildCondExpressions",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00609950": {
+    "name": "RebuildPossibleReturnCondExpression",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00609c40": {
+    "name": "RebuildPossibleCondExpression",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060af90": {
+    "name": "CheckThenOrElseBranch",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b100": {
+    "name": "UsesAKilledVarBeforeUse",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b330": {
+    "name": "GetDependsOfStatement",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b3b0": {
+    "name": "fn_0060b3b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b670": {
+    "name": "HasSideEffectsBeforeUse",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b7c0": {
+    "name": "StatementHasSideEffectBeforeUse",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060b8e0": {
+    "name": "fn_0060b8e0",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060ba20": {
+    "name": "fn_0060ba20",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_0060bb40": {
+    "name": "RewriteUse",
+    "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
   }
 }

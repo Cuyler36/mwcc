@@ -181,7 +181,9 @@ attempts were compared; 9,216 bounded native execution comparisons pass,
 including complete initialization/issue/advance/clear sequences. Seven missing
 Ghidra descriptor callbacks were recovered from verified pointers and entry
 instructions. The complete 48-byte descriptor includes its verified header
-and display pointer. The initializer, pipeline advance and display formatter remain
+and display pointer. The advance callback explicitly accepts the scheduler
+clock word, which this CPU model ignores; the corrected prototype preserves
+all generated code and data. The initializer, pipeline advance and display formatter remain
 code generation nonmatches. Shared callbacks remain imports; original physical
 TU extent remains unproved.
 

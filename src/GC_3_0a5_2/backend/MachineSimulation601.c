@@ -304,7 +304,7 @@ extern char machineSharedCode[];
 
 void fn_0063cb00(void);
 int is_execution_unit_seven(Machine601Instruction *instruction);
-void advance_instruction_pipeline(void);
+void advance_instruction_pipeline(UInt32 clock);
 void set_execution_unit_instruction(Machine601Instruction *instruction);
 int is_execution_unit_available(Machine601Instruction *instruction);
 void clear_instruction_and_globals(void);
@@ -357,7 +357,7 @@ int is_execution_unit_seven(Machine601Instruction *instruction)
     return unit == 7;
 }
 
-void advance_instruction_pipeline(void)
+void advance_instruction_pipeline(UInt32 clock)
 {
     SInt32 i;
     for (i = 0; i < 6; ++i) {

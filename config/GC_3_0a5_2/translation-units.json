@@ -6469,6 +6469,78 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/cobraError.c",
+      "original_filename": "cobraError.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_005ed160",
+          "address": "0x005ed160",
+          "size": 255,
+          "boundary_evidence": {
+            "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ed1ac",
+            "0x005ed24f"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/cobraError.c"
+        },
+        {
+          "name": "fn_005ed260",
+          "address": "0x005ed260",
+          "size": 178,
+          "boundary_evidence": {
+            "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ed309"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/cobraError.c"
+        },
+        {
+          "name": "fn_005ed320",
+          "address": "0x005ed320",
+          "size": 165,
+          "boundary_evidence": {
+            "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ed3bc"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/cobraError.c"
+        },
+        {
+          "name": "fn_005ed3d0",
+          "address": "0x005ed3d0",
+          "size": 183,
+          "boundary_evidence": {
+            "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x005ed477"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/cobraError.c"
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/driver/Arguments.c",
       "original_filename": "Arguments.c",
       "evidence": [
@@ -25722,73 +25794,6 @@
       "compiled": true,
       "membership_complete": false,
       "status": "attempted_equivalent"
-    },
-    {
-      "source": "src/GC_3_0a5_2/frontend/cobraError.c",
-      "original_filename": "cobraError.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_005ed160",
-          "address": "0x005ed160",
-          "size": 255,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ed1ac",
-            "0x005ed24f"
-          ]
-        },
-        {
-          "name": "FUN_005ed260",
-          "address": "0x005ed260",
-          "size": 178,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ed309"
-          ]
-        },
-        {
-          "name": "FUN_005ed320",
-          "address": "0x005ed320",
-          "size": 165,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ed3bc"
-          ]
-        },
-        {
-          "name": "FUN_005ed3d0",
-          "address": "0x005ed3d0",
-          "size": 183,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x005ed477"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
     },
     {
       "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
@@ -491464,6 +491469,3553 @@
           "ownership_conflicts": 0,
           "encoding": "Strict CP932 passed; tools/check_sjis.py absent."
         }
+      }
+    },
+    "src/GC_3_0a5_2/backend/cobraError.c": {
+      "source": "src/GC_3_0a5_2/backend/cobraError.c",
+      "source_candidate": "build/cobraError/cobraError.c",
+      "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+      "object_sha256": "10e00becb220f52f71f36f9276b849931d466dc6206cd57b7fe2e466a78afbce",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 4,
+      "strict_exact_count": 4,
+      "data_complete": true,
+      "initialized_data_bytes": 1509,
+      "readonly_data_bytes": 12,
+      "private_bss_bytes": 0,
+      "native_code_bytes": 781,
+      "compiler_profiles": [
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "cw94",
+          "profile": "cobraerror-cw94-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "cw94",
+          "profile": "cobraerror-cw94-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-space\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-space\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-space\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "cw94",
+          "profile": "cobraerror-cw94-speed--opt-nointrinsics",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "nointrinsics"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nointrinsics\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "nointrinsics",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nointrinsics\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nointrinsics\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "cw94",
+          "profile": "cobraerror-cw94-speed--opt-nocse",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "nocse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nocse\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "nocse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nocse\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-nocse\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "cw94",
+          "profile": "cobraerror-cw94-speed--opt-level-3",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "level=3"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-level-3\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-opt",
+            "level=3",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-level-3\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-cw94-speed--opt-level-3\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "pro8",
+          "profile": "cobraerror-pro8-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-speed\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": false,
+              "unresolved": "unbound literal: @51 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "pro8",
+          "profile": "cobraerror-pro8-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-space\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-space\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "fn_005ed160",
+              "address": "0x5ed160",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed260",
+              "address": "0x5ed260",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed320",
+              "address": "0x5ed320",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ed3d0",
+              "address": "0x5ed3d0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro8-space\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "pro7",
+          "profile": "cobraerror-pro7-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro7-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/pro7/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro7-speed\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": false,
+          "mapped_functions": 4,
+          "functions": [],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro7-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "status": "compile_failed"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "pro6",
+          "profile": "cobraerror-pro6-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro6-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/pro6/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro6-speed\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": false,
+          "mapped_functions": 4,
+          "functions": [],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro6-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "status": "compile_failed"
+        },
+        {
+          "source": "build/cobraError/cobraError.c",
+          "compiler": "pro53",
+          "profile": "cobraerror-pro53-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro53-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+            "--",
+            "build/compilers/pro53/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/cobraError/cobraError.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro53-speed\\build\\cobraError\\cobraError.c\\compiled.obj"
+          ],
+          "compiled": false,
+          "mapped_functions": 4,
+          "functions": [],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\cobraerror-pro53-speed\\build\\cobraError\\cobraError.c\\compiled.obj",
+          "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+          "source_stable": true,
+          "status": "compile_failed"
+        }
+      ],
+      "native_review": {
+        "functions": [
+          {
+            "name": "fn_005ed160",
+            "address": "0x5ed160",
+            "size": 255,
+            "boundary": false,
+            "next_entry": "0x5ed260",
+            "gap_hex": "90",
+            "calls": [
+              {
+                "site": "0x5ed1ac",
+                "target": "0x45a250"
+              },
+              {
+                "site": "0x5ed1c8",
+                "target": "0x404940"
+              },
+              {
+                "site": "0x5ed216",
+                "target": "0x404050"
+              },
+              {
+                "site": "0x5ed22e",
+                "target": "0x45c600"
+              },
+              {
+                "site": "0x5ed24f",
+                "target": "0x45a250"
+              },
+              {
+                "site": "0x5ed258",
+                "target": "0x55eba0"
+              }
+            ]
+          },
+          {
+            "name": "fn_005ed260",
+            "address": "0x5ed260",
+            "size": 178,
+            "boundary": false,
+            "next_entry": "0x5ed320",
+            "gap_hex": "9090909090909090909090909090",
+            "calls": [
+              {
+                "site": "0x5ed27c",
+                "target": "0x404940"
+              },
+              {
+                "site": "0x5ed2c8",
+                "target": "0x404050"
+              },
+              {
+                "site": "0x5ed2e0",
+                "target": "0x45c600"
+              },
+              {
+                "site": "0x5ed2f1",
+                "target": "0x55eba0"
+              },
+              {
+                "site": "0x5ed2fd",
+                "target": "0x404940"
+              },
+              {
+                "site": "0x5ed309",
+                "target": "0x45a250"
+              }
+            ]
+          },
+          {
+            "name": "fn_005ed320",
+            "address": "0x5ed320",
+            "size": 165,
+            "boundary": false,
+            "next_entry": "0x5ed3d0",
+            "gap_hex": "9090909090909090909090",
+            "calls": [
+              {
+                "site": "0x5ed38f",
+                "target": "0x404050"
+              },
+              {
+                "site": "0x5ed3a7",
+                "target": "0x45c600"
+              },
+              {
+                "site": "0x5ed3bc",
+                "target": "0x45a250"
+              }
+            ]
+          },
+          {
+            "name": "fn_005ed3d0",
+            "address": "0x5ed3d0",
+            "size": 183,
+            "boundary": false,
+            "next_entry": "0x5ed490",
+            "gap_hex": "909090909090909090",
+            "calls": [
+              {
+                "site": "0x5ed3ec",
+                "target": "0x404940"
+              },
+              {
+                "site": "0x5ed437",
+                "target": "0x404050"
+              },
+              {
+                "site": "0x5ed44f",
+                "target": "0x45c600"
+              },
+              {
+                "site": "0x5ed477",
+                "target": "0x45a250"
+              },
+              {
+                "site": "0x5ed480",
+                "target": "0x55eba0"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "caller": "0x55c3a0",
+            "site": "0x55c3bc",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x55c3d0",
+            "site": "0x55c3e1",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x574640",
+            "site": "0x5748e0",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x574640",
+            "site": "0x574a1d",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x574640",
+            "site": "0x574a92",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x574640",
+            "site": "0x574ad0",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x574640",
+            "site": "0x574b08",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x57a2e0",
+            "site": "0x57a6c0",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5944b0",
+            "site": "0x594514",
+            "target": "0x5ed260",
+            "kind": "call"
+          },
+          {
+            "caller": "0x596df0",
+            "site": "0x596f75",
+            "target": "0x5ed3d0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5a3860",
+            "site": "0x5a38b3",
+            "target": "0x5ed160",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5a3940",
+            "site": "0x5a3e9d",
+            "target": "0x5ed160",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed186",
+            "target": "0x5ed1b3",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed193",
+            "target": "0x5ed1b3",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed1a0",
+            "target": "0x5ed1b3",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed1ac",
+            "target": "0x45a250",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed1c8",
+            "target": "0x404940",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed216",
+            "target": "0x404050",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed22e",
+            "target": "0x45c600",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed24f",
+            "target": "0x45a250",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed256",
+            "target": "0x5ed204",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed258",
+            "target": "0x55eba0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed160",
+            "site": "0x5ed25d",
+            "target": "0x5ed23f",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed27c",
+            "target": "0x404940",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed2c8",
+            "target": "0x404050",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed2e0",
+            "target": "0x45c600",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed2f1",
+            "target": "0x55eba0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed2fd",
+            "target": "0x404940",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed309",
+            "target": "0x45a250",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed260",
+            "site": "0x5ed310",
+            "target": "0x5ed2b6",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed320",
+            "site": "0x5ed38f",
+            "target": "0x404050",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed320",
+            "site": "0x5ed3a7",
+            "target": "0x45c600",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed320",
+            "site": "0x5ed3bc",
+            "target": "0x45a250",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed320",
+            "site": "0x5ed3c3",
+            "target": "0x5ed37d",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed3ec",
+            "target": "0x404940",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed437",
+            "target": "0x404050",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed44f",
+            "target": "0x45c600",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed477",
+            "target": "0x45a250",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed47e",
+            "target": "0x5ed425",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed480",
+            "target": "0x55eba0",
+            "kind": "call"
+          },
+          {
+            "caller": "0x5ed3d0",
+            "site": "0x5ed485",
+            "target": "0x5ed460",
+            "kind": "jmp"
+          },
+          {
+            "caller": "0x620a40",
+            "site": "0x620bb4",
+            "target": "0x5ed260",
+            "kind": "call"
+          },
+          {
+            "caller": "0x620c40",
+            "site": "0x620e62",
+            "target": "0x5ed260",
+            "kind": "call"
+          },
+          {
+            "caller": "0x627080",
+            "site": "0x6270b5",
+            "target": "0x5ed260",
+            "kind": "call"
+          },
+          {
+            "caller": "0x627080",
+            "site": "0x6270ca",
+            "target": "0x5ed320",
+            "kind": "call"
+          }
+        ],
+        "references": [
+          {
+            "site": "0x440eb0",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x440e20"
+          },
+          {
+            "site": "0x441167",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x440e20"
+          },
+          {
+            "site": "0x4413b6",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x440e20"
+          },
+          {
+            "site": "0x4417c2",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x4417c0"
+          },
+          {
+            "site": "0x441b68",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x441a60"
+          },
+          {
+            "site": "0x441bbe",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x441a60"
+          },
+          {
+            "site": "0x441cb0",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x441a60"
+          },
+          {
+            "site": "0x441e6b",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x441d10"
+          },
+          {
+            "site": "0x44213a",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x442100"
+          },
+          {
+            "site": "0x442228",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x442100"
+          },
+          {
+            "site": "0x442327",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x442100"
+          },
+          {
+            "site": "0x443803",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443790"
+          },
+          {
+            "site": "0x443926",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443790"
+          },
+          {
+            "site": "0x443a94",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443a50"
+          },
+          {
+            "site": "0x443b93",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443a50"
+          },
+          {
+            "site": "0x443cd4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x443d53",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x443e44",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x443f83",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x444063",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x4440f4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x444233",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x4442c3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x4444b3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x4445e3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x4446c4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x444753",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x443c90"
+          },
+          {
+            "site": "0x444913",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4448c0"
+          },
+          {
+            "site": "0x4449b4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4448c0"
+          },
+          {
+            "site": "0x444b53",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4448c0"
+          },
+          {
+            "site": "0x444c03",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4448c0"
+          },
+          {
+            "site": "0x444cb4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x444d24",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x444e33",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x444e93",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4450f5",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445295",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445435",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4455d5",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445914",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4459b4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445a24",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445db3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445e24",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445ea3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445f53",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x445fc4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446043",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4460f3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446163",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446213",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4462e3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446353",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446403",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4464d3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446543",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4465f3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x4466c4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446734",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446843",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446923",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446993",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446a23",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446af4",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446b63",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446c23",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446ce3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x444c70"
+          },
+          {
+            "site": "0x446d93",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x446d40"
+          },
+          {
+            "site": "0x446fd3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x446fa0"
+          },
+          {
+            "site": "0x447093",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x446fa0"
+          },
+          {
+            "site": "0x447205",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4471d0"
+          },
+          {
+            "site": "0x44726b",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4471d0"
+          },
+          {
+            "site": "0x447353",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4471d0"
+          },
+          {
+            "site": "0x447985",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x447970"
+          },
+          {
+            "site": "0x4479d7",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4479d0"
+          },
+          {
+            "site": "0x4479e1",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4479d0"
+          },
+          {
+            "site": "0x447b29",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x447ad0"
+          },
+          {
+            "site": "0x447bf0",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x447b80"
+          },
+          {
+            "site": "0x447d64",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x447d30"
+          },
+          {
+            "site": "0x447df5",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x447dd0"
+          },
+          {
+            "site": "0x448b0e",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448b30",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448ba7",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448c2c",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448c52",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448c98",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448cf6",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448dc7",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448e01",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448e57",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448e7d",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x448eb2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x448b00"
+          },
+          {
+            "site": "0x44fe93",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x44f100"
+          },
+          {
+            "site": "0x45080f",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4507c0"
+          },
+          {
+            "site": "0x450835",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4507c0"
+          },
+          {
+            "site": "0x4508e7",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4507c0"
+          },
+          {
+            "site": "0x450982",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4507c0"
+          },
+          {
+            "site": "0x453729",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453610"
+          },
+          {
+            "site": "0x453751",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453610"
+          },
+          {
+            "site": "0x4537df",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453610"
+          },
+          {
+            "site": "0x45393b",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x453964",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x453a3b",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x453add",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x453b7d",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x453c36",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4538b0"
+          },
+          {
+            "site": "0x45401a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453f50"
+          },
+          {
+            "site": "0x454045",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453f50"
+          },
+          {
+            "site": "0x4540d1",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x453f50"
+          },
+          {
+            "site": "0x4577ec",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x457730"
+          },
+          {
+            "site": "0x4582fd",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x4582d0"
+          },
+          {
+            "site": "0x4593d5",
+            "target": "0x70f094",
+            "section": ".text",
+            "caller": "0x4593b0"
+          },
+          {
+            "site": "0x45a220",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45a1e0"
+          },
+          {
+            "site": "0x45a233",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45a230"
+          },
+          {
+            "site": "0x45a264",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45a250"
+          },
+          {
+            "site": "0x45a32a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45a320"
+          },
+          {
+            "site": "0x45a342",
+            "target": "0x70f094",
+            "section": ".text",
+            "caller": "0x45a320"
+          },
+          {
+            "site": "0x45a3dc",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45a320"
+          },
+          {
+            "site": "0x45a58c",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45a580"
+          },
+          {
+            "site": "0x45a59c",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45a580"
+          },
+          {
+            "site": "0x45ab4c",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45ab40"
+          },
+          {
+            "site": "0x45ab55",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45ab40"
+          },
+          {
+            "site": "0x45ac04",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45ab40"
+          },
+          {
+            "site": "0x45bafa",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45baf0"
+          },
+          {
+            "site": "0x45bb02",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45baf0"
+          },
+          {
+            "site": "0x45bbec",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45baf0"
+          },
+          {
+            "site": "0x45bcaa",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45bca0"
+          },
+          {
+            "site": "0x45bcb3",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45bca0"
+          },
+          {
+            "site": "0x45bd5c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45bca0"
+          },
+          {
+            "site": "0x45bffa",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45bff0"
+          },
+          {
+            "site": "0x45c002",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45bff0"
+          },
+          {
+            "site": "0x45c0ec",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45bff0"
+          },
+          {
+            "site": "0x45c1f4",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45c1a0"
+          },
+          {
+            "site": "0x45c20c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45c1a0"
+          },
+          {
+            "site": "0x45c2ca",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45c2c0"
+          },
+          {
+            "site": "0x45c361",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x45c2c0"
+          },
+          {
+            "site": "0x45c38c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45c2c0"
+          },
+          {
+            "site": "0x45c48a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45c480"
+          },
+          {
+            "site": "0x45c492",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x45c480"
+          },
+          {
+            "site": "0x45c522",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x45c480"
+          },
+          {
+            "site": "0x45c54c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45c480"
+          },
+          {
+            "site": "0x45c9f6",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45c650"
+          },
+          {
+            "site": "0x45d5b1",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45d380"
+          },
+          {
+            "site": "0x45d74f",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x45d5c0"
+          },
+          {
+            "site": "0x45d7e3",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45d5c0"
+          },
+          {
+            "site": "0x45d837",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45d5c0"
+          },
+          {
+            "site": "0x45da80",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45da00"
+          },
+          {
+            "site": "0x45db5c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45da00"
+          },
+          {
+            "site": "0x45dc3c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45da00"
+          },
+          {
+            "site": "0x45e936",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45e7d0"
+          },
+          {
+            "site": "0x45fb32",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45f060"
+          },
+          {
+            "site": "0x45fc8a",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45f060"
+          },
+          {
+            "site": "0x460250",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x45f060"
+          },
+          {
+            "site": "0x4615f2",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x461150"
+          },
+          {
+            "site": "0x461f12",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x461e80"
+          },
+          {
+            "site": "0x462358",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x462120"
+          },
+          {
+            "site": "0x46269c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x462120"
+          },
+          {
+            "site": "0x46dd95",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46db70"
+          },
+          {
+            "site": "0x46ddde",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46db70"
+          },
+          {
+            "site": "0x46dece",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46db70"
+          },
+          {
+            "site": "0x46df3d",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46db70"
+          },
+          {
+            "site": "0x46e01a",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46db70"
+          },
+          {
+            "site": "0x46e412",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e46b",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e49f",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e4d3",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e50b",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e53d",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e56f",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e5df",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e6b4",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46e956",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46ea89",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46e160"
+          },
+          {
+            "site": "0x46ef0b",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46ee50"
+          },
+          {
+            "site": "0x46efd9",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46ef30"
+          },
+          {
+            "site": "0x46f03c",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46ef30"
+          },
+          {
+            "site": "0x46f164",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46f090"
+          },
+          {
+            "site": "0x46f1f2",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46f090"
+          },
+          {
+            "site": "0x46f259",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x46f090"
+          },
+          {
+            "site": "0x484daa",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x484b20"
+          },
+          {
+            "site": "0x485a3f",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x484b20"
+          },
+          {
+            "site": "0x486baf",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x484b20"
+          },
+          {
+            "site": "0x48715a",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x486ed0"
+          },
+          {
+            "site": "0x487ddf",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x486ed0"
+          },
+          {
+            "site": "0x488f1c",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x486ed0"
+          },
+          {
+            "site": "0x489522",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x489270"
+          },
+          {
+            "site": "0x48a39c",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x489270"
+          },
+          {
+            "site": "0x48b617",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x489270"
+          },
+          {
+            "site": "0x48bc1a",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48b990"
+          },
+          {
+            "site": "0x48c85c",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48b990"
+          },
+          {
+            "site": "0x48d96e",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48b990"
+          },
+          {
+            "site": "0x48dfb2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48dcc0"
+          },
+          {
+            "site": "0x48f1e5",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48dcc0"
+          },
+          {
+            "site": "0x4905c0",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x48dcc0"
+          },
+          {
+            "site": "0x490be2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x490990"
+          },
+          {
+            "site": "0x491592",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x490990"
+          },
+          {
+            "site": "0x492192",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x490990"
+          },
+          {
+            "site": "0x4926d2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4923e0"
+          },
+          {
+            "site": "0x4930f3",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4923e0"
+          },
+          {
+            "site": "0x493e1a",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4923e0"
+          },
+          {
+            "site": "0x4942c2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x494070"
+          },
+          {
+            "site": "0x494c72",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x494070"
+          },
+          {
+            "site": "0x495872",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x494070"
+          },
+          {
+            "site": "0x495d22",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x495aa0"
+          },
+          {
+            "site": "0x4966d2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x495aa0"
+          },
+          {
+            "site": "0x49732a",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x495aa0"
+          },
+          {
+            "site": "0x4977b2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x497560"
+          },
+          {
+            "site": "0x498152",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x497560"
+          },
+          {
+            "site": "0x498d52",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x497560"
+          },
+          {
+            "site": "0x4c9259",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4c9080"
+          },
+          {
+            "site": "0x4d78ac",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4d7890"
+          },
+          {
+            "site": "0x4d7a8b",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4d7890"
+          },
+          {
+            "site": "0x4d7aa2",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4d7890"
+          },
+          {
+            "site": "0x4d7ae8",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x4d7890"
+          },
+          {
+            "site": "0x53da87",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x53da70"
+          },
+          {
+            "site": "0x56ec9a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ec90"
+          },
+          {
+            "site": "0x56eca3",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ec90"
+          },
+          {
+            "site": "0x56ed22",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x56ec90"
+          },
+          {
+            "site": "0x56ed33",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x56ec90"
+          },
+          {
+            "site": "0x56ed52",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ed50"
+          },
+          {
+            "site": "0x56ed9a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ed90"
+          },
+          {
+            "site": "0x56edb2",
+            "target": "0x70f094",
+            "section": ".text",
+            "caller": "0x56ed90"
+          },
+          {
+            "site": "0x56ee4a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ee40"
+          },
+          {
+            "site": "0x56ee53",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x56ee40"
+          },
+          {
+            "site": "0x56eed1",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x56ee40"
+          },
+          {
+            "site": "0x5d8900",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5d87a0"
+          },
+          {
+            "site": "0x5d8912",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5d87a0"
+          },
+          {
+            "site": "0x5d8c63",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5d87a0"
+          },
+          {
+            "site": "0x5ed1a8",
+            "target": "0x6b51c4",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed1b5",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed1be",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed20d",
+            "target": "0x6b5180",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed238",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed24b",
+            "target": "0x6b51c4",
+            "section": ".text",
+            "caller": "0x5ed160"
+          },
+          {
+            "site": "0x5ed26a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed272",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed2bf",
+            "target": "0x6b5180",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed2ea",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed2f9",
+            "target": "0x704910",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed305",
+            "target": "0x6b51c4",
+            "section": ".text",
+            "caller": "0x5ed260"
+          },
+          {
+            "site": "0x5ed32a",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed320"
+          },
+          {
+            "site": "0x5ed342",
+            "target": "0x70f094",
+            "section": ".text",
+            "caller": "0x5ed320"
+          },
+          {
+            "site": "0x5ed386",
+            "target": "0x6b5180",
+            "section": ".text",
+            "caller": "0x5ed320"
+          },
+          {
+            "site": "0x5ed3b8",
+            "target": "0x6b51c4",
+            "section": ".text",
+            "caller": "0x5ed320"
+          },
+          {
+            "site": "0x5ed3da",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed3d0"
+          },
+          {
+            "site": "0x5ed3e2",
+            "target": "0x71035c",
+            "section": ".text",
+            "caller": "0x5ed3d0"
+          },
+          {
+            "site": "0x5ed42e",
+            "target": "0x6b5180",
+            "section": ".text",
+            "caller": "0x5ed3d0"
+          },
+          {
+            "site": "0x5ed459",
+            "target": "0x725f3f",
+            "section": ".text",
+            "caller": "0x5ed3d0"
+          },
+          {
+            "site": "0x5ed473",
+            "target": "0x6b51c4",
+            "section": ".text",
+            "caller": "0x5ed3d0"
+          },
+          {
+            "site": "0x657790",
+            "target": "0x5ed17b",
+            "section": ".rdata",
+            "caller": null
+          },
+          {
+            "site": "0x657794",
+            "target": "0x5ed188",
+            "section": ".rdata",
+            "caller": null
+          },
+          {
+            "site": "0x657798",
+            "target": "0x5ed195",
+            "section": ".rdata",
+            "caller": null
+          },
+          {
+            "site": "0x6b5180",
+            "target": "0x6b4bd8",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b5184",
+            "target": "0x6b4c1c",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b5188",
+            "target": "0x6b4c5c",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b518c",
+            "target": "0x6b4ca0",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b5190",
+            "target": "0x6b4cd4",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b5194",
+            "target": "0x6b4d28",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b5198",
+            "target": "0x6b4d90",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b519c",
+            "target": "0x6b4de0",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51a0",
+            "target": "0x6b4e00",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51a4",
+            "target": "0x6b4e64",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51a8",
+            "target": "0x6b4edc",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51ac",
+            "target": "0x6b4f20",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51b0",
+            "target": "0x6b4f68",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51b4",
+            "target": "0x6b4fdc",
+            "section": ".data",
+            "caller": null
+          },
+          {
+            "site": "0x6b51b8",
+            "target": "0x6b50a8",
+            "section": ".data",
+            "caller": null
+          }
+        ],
+        "table": {
+          "address": "0x6b5180",
+          "size": 60,
+          "targets": [
+            "0x6b4bd8",
+            "0x6b4c1c",
+            "0x6b4c5c",
+            "0x6b4ca0",
+            "0x6b4cd4",
+            "0x6b4d28",
+            "0x6b4d90",
+            "0x6b4de0",
+            "0x6b4e00",
+            "0x6b4e64",
+            "0x6b4edc",
+            "0x6b4f20",
+            "0x6b4f68",
+            "0x6b4fdc",
+            "0x6b50a8"
+          ]
+        },
+        "literals": [
+          {
+            "address": "0x6b4bd8",
+            "size": 68,
+            "text": "%u was not assigned to a %u register (try using register qualifier)",
+            "payload": "257520776173206e6f742061737369676e656420746f20612025752072656769737465722028747279207573696e67207265676973746572207175616c69666965722900"
+          },
+          {
+            "address": "0x6b4c1c",
+            "size": 62,
+            "text": "%u was assigned to the wrong class of register %u expected %u",
+            "payload": "2575207761732061737369676e656420746f207468652077726f6e6720636c617373206f6620726567697374657220257520657870656374656420257500"
+          },
+          {
+            "address": "0x6b4c5c",
+            "size": 65,
+            "text": "GCC constraint '%u' indicates writing but expression is constant",
+            "payload": "47434320636f6e73747261696e74202725752720696e646963617465732077726974696e67206275742065787072657373696f6e20697320636f6e7374616e7400"
+          },
+          {
+            "address": "0x6b4ca0",
+            "size": 51,
+            "text": "GCC constraint '%u' is not supported at this time.",
+            "payload": "47434320636f6e73747261696e742027257527206973206e6f7420737570706f7274656420617420746869732074696d652e00"
+          },
+          {
+            "address": "0x6b4cd4",
+            "size": 81,
+            "text": "%i arguments to gcc style inline assember exceeded maximum number supported (%i)",
+            "payload": "256920617267756d656e747320746f20676363207374796c6520696e6c696e6520617373656d626572206578636565646564206d6178696d756d206e756d62657220737570706f72746564202825692900"
+          },
+          {
+            "address": "0x6b4d28",
+            "size": 103,
+            "text": "%i alternates in a single argument to gcc style inline assember exceeded maximum number supported (%i)",
+            "payload": "256920616c7465726e6174657320696e20612073696e676c6520617267756d656e7420746f20676363207374796c6520696e6c696e6520617373656d626572206578636565646564206d6178696d756d206e756d62657220737570706f72746564202825692900"
+          },
+          {
+            "address": "0x6b4d90",
+            "size": 79,
+            "text": "GCC style assembler processing could not match any of the constraints in '%u'.",
+            "payload": "474343207374796c6520617373656d626c65722070726f63657373696e6720636f756c64206e6f74206d6174636820616e79206f662074686520636f6e73747261696e747320696e20272575272e00"
+          },
+          {
+            "address": "0x6b4de0",
+            "size": 31,
+            "text": "expected a register name here.",
+            "payload": "65787065637465642061207265676973746572206e616d6520686572652e00"
+          },
+          {
+            "address": "0x6b4e00",
+            "size": 97,
+            "text": "%o can not be assigned to a %u register (it is an array or structure, or had it's address taken)",
+            "payload": "256f2063616e206e6f742062652061737369676e656420746f20612025752072656769737465722028697420697320616e206172726179206f72207374727563747572652c206f7220686164206974277320616464726573732074616b656e2900"
+          },
+          {
+            "address": "0x6b4e64",
+            "size": 120,
+            "text": "global register variable '%o' cannot be assigned %u%i because that register has already been assigned to something else",
+            "payload": "676c6f62616c207265676973746572207661726961626c652027256f272063616e6e6f742062652061737369676e65642025752569206265636175736520746861742072656769737465722068617320616c7265616479206265656e2061737369676e656420746f20736f6d657468696e6720656c736500"
+          },
+          {
+            "address": "0x6b4edc",
+            "size": 67,
+            "text": "global register variables must be variables; '%n' isn't a variable",
+            "payload": "676c6f62616c207265676973746572207661726961626c6573206d757374206265207661726961626c65733b2027256e272069736e27742061207661726961626c6500"
+          },
+          {
+            "address": "0x6b4f20",
+            "size": 69,
+            "text": "all registers are explictly used, can't color virtual '%u' registers",
+            "payload": "616c6c2072656769737465727320617265206578706c6963746c7920757365642c2063616e277420636f6c6f72207669727475616c20272575272072656769737465727300"
+          },
+          {
+            "address": "0x6b4f68",
+            "size": 114,
+            "text": "function consumes too many virtual registers; make function smaller, reduce inlining, or try optimization level 0",
+            "payload": "66756e6374696f6e20636f6e73756d657320746f6f206d616e79207669727475616c207265676973746572733b206d616b652066756e6374696f6e20736d616c6c65722c2072656475636520696e6c696e696e672c206f7220747279206f7074696d697a6174696f6e206c6576656c203000"
+          },
+          {
+            "address": "0x6b4fdc",
+            "size": 202,
+            "text": "Optimizer computes it would need more than %iM of memory to compute memory def-use chains.  Some optimizations disabled\nLimit currently set to %iM\nIncrease limit using '#pragma opt_usedef_mem_limit %i'",
+            "payload": "4f7074696d697a657220636f6d707574657320697420776f756c64206e656564206d6f7265207468616e2025694d206f66206d656d6f727920746f20636f6d70757465206d656d6f7279206465662d75736520636861696e732e2020536f6d65206f7074696d697a6174696f6e732064697361626c65640a4c696d69742063757272656e746c792073657420746f2025694d0a496e637265617365206c696d6974207573696e67202723707261676d61206f70745f7573656465665f6d656d5f6c696d69742025692700"
+          },
+          {
+            "address": "0x6b50a8",
+            "size": 201,
+            "text": "Optimizer computes it would need more than %iM of memory to compute register def-use chains.  Key Optimizations Failed\nLimit currently set to %iM\nIncrease limit using '#pragma opt_usedef_mem_limit %i'",
+            "payload": "4f7074696d697a657220636f6d707574657320697420776f756c64206e656564206d6f7265207468616e2025694d206f66206d656d6f727920746f20636f6d70757465207265676973746572206465662d75736520636861696e732e20204b6579204f7074696d697a6174696f6e73204661696c65640a4c696d69742063757272656e746c792073657420746f2025694d0a496e637265617365206c696d6974207573696e67202723707261676d61206f70745f7573656465665f6d656d5f6c696d69742025692700"
+          },
+          {
+            "address": "0x6b51c4",
+            "size": 13,
+            "text": "cobraError.c",
+            "payload": "636f6272614572726f722e6300"
+          }
+        ],
+        "original_physical_membership_proven": false,
+        "held_neighbors": [
+          "IRFlowgraph ends0x5ed160",
+          "IroDump starts0x5ed490"
+        ],
+        "shared_external_state": [
+          "0x71035c",
+          "0x70f094",
+          "0x725f3f",
+          "0x704910"
+        ],
+        "unclaimed_neighbors": [
+          "0x6b51bc",
+          "0x6b51c0"
+        ]
+      },
+      "data_review": {
+        "records": [
+          {
+            "name": "_cobraErrorFilename",
+            "section": ".data",
+            "size": 13,
+            "method": "named binding",
+            "address": "0x006b51c4",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@44",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4bd8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@45",
+            "section": ".data",
+            "size": 64,
+            "method": "verified bound data table",
+            "address": "0x006b4c1c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@46",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4c5c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@47",
+            "section": ".data",
+            "size": 52,
+            "method": "verified bound data table",
+            "address": "0x006b4ca0",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@48",
+            "section": ".data",
+            "size": 84,
+            "method": "verified bound data table",
+            "address": "0x006b4cd4",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@49",
+            "section": ".data",
+            "size": 104,
+            "method": "verified bound data table",
+            "address": "0x006b4d28",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@50",
+            "section": ".data",
+            "size": 80,
+            "method": "verified bound data table",
+            "address": "0x006b4d90",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@51",
+            "section": ".data",
+            "size": 32,
+            "method": "verified bound data table",
+            "address": "0x006b4de0",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@52",
+            "section": ".data",
+            "size": 100,
+            "method": "verified bound data table",
+            "address": "0x006b4e00",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@53",
+            "section": ".data",
+            "size": 120,
+            "method": "verified bound data table",
+            "address": "0x006b4e64",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@54",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4edc",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@55",
+            "section": ".data",
+            "size": 72,
+            "method": "verified bound data table",
+            "address": "0x006b4f20",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@56",
+            "section": ".data",
+            "size": 116,
+            "method": "verified bound data table",
+            "address": "0x006b4f68",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@57",
+            "section": ".data",
+            "size": 204,
+            "method": "verified bound data table",
+            "address": "0x006b4fdc",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@58",
+            "section": ".data",
+            "size": 204,
+            "method": "verified bound data table",
+            "address": "0x006b50a8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_cobraErrorStrings",
+            "section": ".data",
+            "size": 60,
+            "method": "named binding",
+            "address": "0x006b5180",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "__anonymous_section_20",
+            "section": ".rdata",
+            "size": 12,
+            "method": "resolved function reference (anonymous section)",
+            "address": "0x00657790",
+            "bytes_exact": true,
+            "target_section": ".rdata",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "complete": true,
+        "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+        "object_sha256": "10e00becb220f52f71f36f9276b849931d466dc6206cd57b7fe2e466a78afbce",
+        "claims": [
+          [
+            "0x6b51c4",
+            "0x6b51d1"
+          ],
+          [
+            "0x6b4bd8",
+            "0x6b4c1c"
+          ],
+          [
+            "0x6b4c1c",
+            "0x6b4c5c"
+          ],
+          [
+            "0x6b4c5c",
+            "0x6b4ca0"
+          ],
+          [
+            "0x6b4ca0",
+            "0x6b4cd4"
+          ],
+          [
+            "0x6b4cd4",
+            "0x6b4d28"
+          ],
+          [
+            "0x6b4d28",
+            "0x6b4d90"
+          ],
+          [
+            "0x6b4d90",
+            "0x6b4de0"
+          ],
+          [
+            "0x6b4de0",
+            "0x6b4e00"
+          ],
+          [
+            "0x6b4e00",
+            "0x6b4e64"
+          ],
+          [
+            "0x6b4e64",
+            "0x6b4edc"
+          ],
+          [
+            "0x6b4edc",
+            "0x6b4f20"
+          ],
+          [
+            "0x6b4f20",
+            "0x6b4f68"
+          ],
+          [
+            "0x6b4f68",
+            "0x6b4fdc"
+          ],
+          [
+            "0x6b4fdc",
+            "0x6b50a8"
+          ],
+          [
+            "0x6b50a8",
+            "0x6b5174"
+          ],
+          [
+            "0x6b5180",
+            "0x6b51bc"
+          ],
+          [
+            "0x657790",
+            "0x65779c"
+          ]
+        ],
+        "native_table": {
+          "address": "0x6b5180",
+          "size": 60,
+          "targets": [
+            "0x6b4bd8",
+            "0x6b4c1c",
+            "0x6b4c5c",
+            "0x6b4ca0",
+            "0x6b4cd4",
+            "0x6b4d28",
+            "0x6b4d90",
+            "0x6b4de0",
+            "0x6b4e00",
+            "0x6b4e64",
+            "0x6b4edc",
+            "0x6b4f20",
+            "0x6b4f68",
+            "0x6b4fdc",
+            "0x6b50a8"
+          ]
+        },
+        "private_bss_bytes": 0,
+        "physical_membership_proven": false,
+        "notes": [
+          "All four functions have byte-exact bodies and PE fixup sets;generated three-entry switch can be checked independently without guessed anonymous bindings.",
+          "15 format pointers and their strings have no outside references; shared diagnostic state and jump buffers remain external.",
+          "13-byte filename and15 diagnostic strings are byte-verified;compiler alignment is reviewed separately."
+        ]
+      },
+      "semantic_review": {
+        "members": [
+          {
+            "name": "fn_005ed160",
+            "semantics": "Maps class0/1/2 to diagnostics5/6/7 in the original parameter slot. Other classes assert line169 before escape/report. Escape longjmps to pointer+4;format lookup narrows to signed16 while reporting retains full32-bit code+34000. Reports severity(0,0),then optional InlineAsm_LongJump.",
+            "native_size": 255
+          },
+          {
+            "name": "fn_005ed260",
+            "semantics": "Signed16 diagnostic1..15;variadic pointer rounds the 2-byte formal to its 4-byte stack slot. Escape longjmps before lookup. Reports severity(1,0),optional inline-asm exit,then unconditional error-buffer longjmp.",
+            "native_size": 178
+          },
+          {
+            "name": "fn_005ed320",
+            "semantics": "Warning suppressed on active escape or warning-option byte. Signed16 lookup with full32-bit diagnostic+34000;severity(0,1),without inline-asm exit.",
+            "native_size": 165
+          },
+          {
+            "name": "fn_005ed3d0",
+            "semantics": "Error escape longjmp before lookup; signed16 lookup with full32-bit diagnostic+34000,severity(0,0),optional inline-asm exit.",
+            "native_size": 183
+          }
+        ],
+        "helper": "GetErrorString is inlined in all four wrappers;valid codes1..15;assert line61 and strcpy from15-entry table. Format strings, including historical spelling, preserved verbatim.",
+        "validation": "All four complete compiled function bodies equal native bytes and exact absolute PE fixup sets. Every compiled data object equals native bytes,fixup set and section category. This is direct machine-code/data equivalence;no modeled runtime execution claim is needed.",
+        "ownership": "All15 format strings referenced only by their60-byte table;all direct table/filename code references belong to the four wrappers. Shared diagnostic escape pointer,warning option,inline-asm byte,jump buffer and reporting services remain imports. Neighbor6b51bc/6b51c0 unclaimed;IRFlowgraph/IroDump separate. Physical original TU extent not proved.",
+        "compiler": "Ten unmodified-source profiles attempted;seven compile. Pro7/6/5.3 reject the noreturn declaration. CW94 speed,nointrinsics,nocse,level3 each match allfour;CW94 space andPro8 profiles do not. These older compiler failures remain recorded."
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 4,
+        "attempted_members": 4,
+        "push_ready": true,
+        "basis": "All four supported native bodies781bytes and every emitted data object1521bytes are byte/fixup/category exact;normal build and whole-TU objdiff-cli pass withzero unresolved records. Every code/data/common/relocation section equals frozen candidate;strict CP932 andimage partition pass. Shared state remains external,physical original TU extent unproved."
+      },
+      "integration_review": {
+        "legacy_compatibility": "No active row/definition collision,baseline edits,shared header edits or global binding changes. Existing callers retain their reviewed source-scoped diagnostic bindings.",
+        "identity": "Real asserted filename cobraError.c;four unsupported function-name identities remain raw addresses.",
+        "unclaimed_data": [
+          "0x6b51bc",
+          "0x6b51c0"
+        ],
+        "physical_original_tu_extent_proven": false,
+        "normal_project_checks": {
+          "ninja_all_source_progress": true,
+          "strict_exact_total": 996,
+          "mapped_total": 2305,
+          "objdiff_cli": true,
+          "inventory_partition": true,
+          "ownership_conflicts": 0,
+          "encoding": "Strict CP932 passed; tools/check_sjis.py absent."
+        }
+      },
+      "normal_project_validation": {
+        "source": "src/GC_3_0a5_2/backend/cobraError.c",
+        "source_sha256": "bff6caf6f6240c7174d128ee457427830d4b6535dd911356083587e4d4c6023c",
+        "candidate_project_sections_sha256": "0701d02cdf1c6212d77920c4ab41c6b3016b45ef75077ca00d01e7ef8f558f55",
+        "all_code_and_data_sections_equal": true,
+        "common_symbols_equal": true,
+        "checked_functions": 4,
+        "resolved_functions": 4,
+        "functions": [
+          {
+            "name": "fn_005ed160",
+            "raw_function_bytes_and_relocations_equal": true,
+            "fully_resolved": true
+          },
+          {
+            "name": "fn_005ed260",
+            "raw_function_bytes_and_relocations_equal": true,
+            "fully_resolved": true
+          },
+          {
+            "name": "fn_005ed320",
+            "raw_function_bytes_and_relocations_equal": true,
+            "fully_resolved": true
+          },
+          {
+            "name": "fn_005ed3d0",
+            "raw_function_bytes_and_relocations_equal": true,
+            "fully_resolved": true
+          }
+        ],
+        "owned_data_verified_bytes": 1521,
+        "owned_data": [
+          {
+            "name": "_cobraErrorFilename",
+            "section": ".data",
+            "size": 13,
+            "method": "named binding",
+            "address": "0x006b51c4",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@44",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4bd8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@45",
+            "section": ".data",
+            "size": 64,
+            "method": "verified bound data table",
+            "address": "0x006b4c1c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@46",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4c5c",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@47",
+            "section": ".data",
+            "size": 52,
+            "method": "verified bound data table",
+            "address": "0x006b4ca0",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@48",
+            "section": ".data",
+            "size": 84,
+            "method": "verified bound data table",
+            "address": "0x006b4cd4",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@49",
+            "section": ".data",
+            "size": 104,
+            "method": "verified bound data table",
+            "address": "0x006b4d28",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@50",
+            "section": ".data",
+            "size": 80,
+            "method": "verified bound data table",
+            "address": "0x006b4d90",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@51",
+            "section": ".data",
+            "size": 32,
+            "method": "verified bound data table",
+            "address": "0x006b4de0",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@52",
+            "section": ".data",
+            "size": 100,
+            "method": "verified bound data table",
+            "address": "0x006b4e00",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@53",
+            "section": ".data",
+            "size": 120,
+            "method": "verified bound data table",
+            "address": "0x006b4e64",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@54",
+            "section": ".data",
+            "size": 68,
+            "method": "verified bound data table",
+            "address": "0x006b4edc",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@55",
+            "section": ".data",
+            "size": 72,
+            "method": "verified bound data table",
+            "address": "0x006b4f20",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@56",
+            "section": ".data",
+            "size": 116,
+            "method": "verified bound data table",
+            "address": "0x006b4f68",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@57",
+            "section": ".data",
+            "size": 204,
+            "method": "verified bound data table",
+            "address": "0x006b4fdc",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "@58",
+            "section": ".data",
+            "size": 204,
+            "method": "verified bound data table",
+            "address": "0x006b50a8",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "_cobraErrorStrings",
+            "section": ".data",
+            "size": 60,
+            "method": "named binding",
+            "address": "0x006b5180",
+            "bytes_exact": true,
+            "target_section": ".data",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          {
+            "name": "__anonymous_section_20",
+            "section": ".rdata",
+            "size": 12,
+            "method": "resolved function reference (anonymous section)",
+            "address": "0x00657790",
+            "bytes_exact": true,
+            "target_section": ".rdata",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          }
+        ],
+        "remaining_unresolved_data_records": 0
       }
     }
   },

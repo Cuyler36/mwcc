@@ -25690,6 +25690,50 @@
     }
   },
   {
+    "name": "fn_005ed160",
+    "address": "0x5ed160",
+    "size": 255,
+    "source": "src/GC_3_0a5_2/backend/cobraError.c",
+    "identity_evidence": "Native cobraError.c filename assertions at lines61/169;complete four-wrapper diagnostic family and 15-string pointer table. Supplied maps do not establish canonical Windows names;address identities retained.",
+    "boundary_evidence": {
+      "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed260",
+    "address": "0x5ed260",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/backend/cobraError.c",
+    "identity_evidence": "Native cobraError.c filename assertions at lines61/169;complete four-wrapper diagnostic family and 15-string pointer table. Supplied maps do not establish canonical Windows names;address identities retained.",
+    "boundary_evidence": {
+      "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed320",
+    "address": "0x5ed320",
+    "size": 165,
+    "source": "src/GC_3_0a5_2/backend/cobraError.c",
+    "identity_evidence": "Native cobraError.c filename assertions at lines61/169;complete four-wrapper diagnostic family and 15-string pointer table. Supplied maps do not establish canonical Windows names;address identities retained.",
+    "boundary_evidence": {
+      "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed3d0",
+    "address": "0x5ed3d0",
+    "size": 183,
+    "source": "src/GC_3_0a5_2/backend/cobraError.c",
+    "identity_evidence": "Native cobraError.c filename assertions at lines61/169;complete four-wrapper diagnostic family and 15-string pointer table. Supplied maps do not establish canonical Windows names;address identities retained.",
+    "boundary_evidence": {
+      "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "is_loop_unrollable",
     "address": "0x005f1030",
     "size": 616,

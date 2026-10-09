@@ -261,7 +261,8 @@
     "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
     "src/GC_3_0a5_2/backend/CopyPropagation.c",
     "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
-    "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+    "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "src/GC_3_0a5_2/backend/cobraError.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4204,6 +4205,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/cobraError.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5198,7 +5217,11 @@
     "src/GC_3_0a5_2/backend/CopyPropagation/propagateandremovecopy",
     "src/GC_3_0a5_2/frontend/CIRStreamCallGraph/fn_004bac40",
     "src/GC_3_0a5_2/frontend/CIRStreamCallGraph/fn_004bafe0",
-    "src/GC_3_0a5_2/frontend/CIRStreamCallGraph/fn_004bb490"
+    "src/GC_3_0a5_2/frontend/CIRStreamCallGraph/fn_004bb490",
+    "src/GC_3_0a5_2/backend/cobraError/fn_005ed160",
+    "src/GC_3_0a5_2/backend/cobraError/fn_005ed260",
+    "src/GC_3_0a5_2/backend/cobraError/fn_005ed320",
+    "src/GC_3_0a5_2/backend/cobraError/fn_005ed3d0"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -10138,6 +10161,23 @@
       "_CError_Warning": "0x45a320",
       "_fn_004eaff0": "0x4eaff0",
       "_iscpp_typeequal": "0x454430"
+    },
+    "src/GC_3_0a5_2/backend/cobraError.c": {
+      "_fn_005ed160": "0x5ed160",
+      "_fn_005ed260": "0x5ed260",
+      "_fn_005ed320": "0x5ed320",
+      "_fn_005ed3d0": "0x5ed3d0",
+      "_cobraErrorFilename": "0x6b51c4",
+      "_cobraErrorStrings": "0x6b5180",
+      "_data_0071035c": "0x71035c",
+      "_data_00725f3f": "0x725f3f",
+      "_data_0070f094": "0x70f094",
+      "_error_jmp_buf": "0x704910",
+      "_longjmp": "0x404940",
+      "_CError_Internal": "0x45a250",
+      "_InlineAsm_LongJump": "0x55eba0",
+      "_fn_0045c600": "0x45c600",
+      "_strcpy": "0x404050"
     }
   },
   "original_source_units": {
@@ -10184,6 +10224,7 @@
     "CRTTI.c": "src/GC_3_0a5_2/frontend/CRTTI.c",
     "IroExprRegeneration.c": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
     "CopyPropagation.c": "src/GC_3_0a5_2/backend/CopyPropagation.c",
-    "CIRStreamCallGraph.c": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+    "CIRStreamCallGraph.c": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "cobraError.c": "src/GC_3_0a5_2/backend/cobraError.c"
   }
 }

@@ -5330,5 +5330,21 @@
   "fn_004bcdb0": {
     "name": "fn_004bcdb0",
     "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_005ed160": {
+    "name": "fn_005ed160",
+    "source": "src/GC_3_0a5_2/backend/cobraError.c"
+  },
+  "fn_005ed260": {
+    "name": "fn_005ed260",
+    "source": "src/GC_3_0a5_2/backend/cobraError.c"
+  },
+  "fn_005ed320": {
+    "name": "fn_005ed320",
+    "source": "src/GC_3_0a5_2/backend/cobraError.c"
+  },
+  "fn_005ed3d0": {
+    "name": "fn_005ed3d0",
+    "source": "src/GC_3_0a5_2/backend/cobraError.c"
   }
 }

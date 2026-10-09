@@ -23799,6 +23799,149 @@
     }
   },
   {
+    "name": "fn_005c97c0",
+    "address": "0x5c97c0",
+    "size": 1286,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005c9cd0",
+    "address": "0x5c9cd0",
+    "size": 408,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005c9e70",
+    "address": "0x5c9e70",
+    "size": 583,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ca0c0",
+    "address": "0x5ca0c0",
+    "size": 342,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ca220",
+    "address": "0x5ca220",
+    "size": 367,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ca390",
+    "address": "0x5ca390",
+    "size": 1631,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ca9f0",
+    "address": "0x5ca9f0",
+    "size": 556,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cac20",
+    "address": "0x5cac20",
+    "size": 937,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cafd0",
+    "address": "0x5cafd0",
+    "size": 350,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cb130",
+    "address": "0x5cb130",
+    "size": 755,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cb430",
+    "address": "0x5cb430",
+    "size": 198,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cb500",
+    "address": "0x5cb500",
+    "size": 474,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cb6e0",
+    "address": "0x5cb6e0",
+    "size": 204,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "identity_evidence": "Native CIRStreamType.c assertion filename, connected packed type/namespace stream read/write family, complete native ABI and semantic review. No uncorroborated canonical function names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, whole-image entry/call/filename and gap/seam audit; shared stream prefix and assembler suffix held separately",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_005ccef0",
     "address": "0x5ccef0",
     "size": 81,

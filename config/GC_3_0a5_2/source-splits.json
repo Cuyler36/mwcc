@@ -4762,5 +4762,57 @@
   "oldassignmentpromotion": {
     "name": "CExpr_AssignmentPromotion",
     "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c"
+  },
+  "fn_005c97c0": {
+    "name": "fn_005c97c0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005c9cd0": {
+    "name": "fn_005c9cd0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005c9e70": {
+    "name": "fn_005c9e70",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005ca0c0": {
+    "name": "fn_005ca0c0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005ca220": {
+    "name": "fn_005ca220",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005ca390": {
+    "name": "fn_005ca390",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005ca9f0": {
+    "name": "fn_005ca9f0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cac20": {
+    "name": "fn_005cac20",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cafd0": {
+    "name": "fn_005cafd0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cb130": {
+    "name": "fn_005cb130",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cb430": {
+    "name": "fn_005cb430",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cb500": {
+    "name": "fn_005cb500",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_005cb6e0": {
+    "name": "fn_005cb6e0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
   }
 }

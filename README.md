@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 246 source files build, 1,976 candidate functions are
-mapped, and 897 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 247 source files build, 1,982 candidate functions are
+mapped, and 900 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -157,6 +157,12 @@ table match; 464 generated switch bytes remain unresolved. Native operands use
 28-byte records, and the pair-copy loop takes four arguments. An exact neighboring
 register scan stays separate until its source ownership is supported.
 
+CodeMotionPPC has all six supported backend helpers attempted, with three exact
+matches. Its audit recovered two omitted callable starts. Four final compiler
+profiles and additional source variants were tested; all six bodies pass 9,344
+bounded native instruction comparisons. The filename and four-byte BSS cache
+match completely. Shared code-motion state and neighboring engines remain separate.
+
 PCodeInfo has all 21 identified native bodies reconstructed, including the
 41-terminal instruction formatter, with ten exact matches. Four switch-table
 relocations and one byte of string-allocation padding remain nonmatching.
@@ -179,7 +185,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 36 original-only TU views to objdiff. The twenty
+map. It currently adds 35 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

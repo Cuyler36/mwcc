@@ -247,7 +247,8 @@
     "src/GC_3_0a5_2/frontend/SourceText.c",
     "src/GC_3_0a5_2/frontend/CExprTools.c",
     "src/GC_3_0a5_2/optimizer/IroType.c",
-    "src/GC_3_0a5_2/backend/StructMoves.c"
+    "src/GC_3_0a5_2/backend/StructMoves.c",
+    "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3933,6 +3934,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/CodeMotionPPC.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4832,7 +4851,10 @@
     "src/GC_3_0a5_2/backend/StructMoves/StructMoves_EmitCopy",
     "src/GC_3_0a5_2/backend/StructMoves/fn_0059f7f0",
     "src/GC_3_0a5_2/backend/StructMoves/fn_0059f8e0",
-    "src/GC_3_0a5_2/backend/StructMoves/fn_0059f950"
+    "src/GC_3_0a5_2/backend/StructMoves/fn_0059f950",
+    "src/GC_3_0a5_2/backend/CodeMotionPPC/fn_00643840",
+    "src/GC_3_0a5_2/backend/CodeMotionPPC/fn_00643b00",
+    "src/GC_3_0a5_2/backend/CodeMotionPPC/fn_00643bd0"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8489,6 +8511,30 @@
       "_nativeHighWordOffset": "0x717462",
       "_nativeLowWordOffset": "0x716ed0",
       "_is_unsigned": "0x454260"
+    },
+    "src/GC_3_0a5_2/backend/CodeMotionPPC.c": {
+      "_codeMotionPhysicalRegisterCounts": "0x710274",
+      "_codeMotionDefinitionHeads": "0x710770",
+      "_codeMotionEntries": "0x7106fc",
+      "_codeMotionEntryCount": "0x715c74",
+      "_gCodeMotionChanged": "0x710b4c",
+      "_is_loop_invariant": "0x62a260",
+      "_move_instruction_to_preheader": "0x6298b0",
+      "_PCode_UnlinkInstruction": "0x582a50",
+      "_PCode_InsertInstructionBefore": "0x5829d0",
+      "_fn_00629df0": "0x629df0",
+      "_fn_00629ca0": "0x629ca0",
+      "_has_use_outside_loop_in_preheader_set": "0x629cc0",
+      "_fn_004531a0": "0x4531a0",
+      "_nbytes_loaded_or_stored_by": "0x58b4c0",
+      "_CError_Internal": "0x45a250",
+      "_codeMotionPPCNextInstruction": "0x7028e0",
+      "_fn_006436d0": "0x6436d0",
+      "_fn_00643840": "0x643840",
+      "_fn_006438a0": "0x6438a0",
+      "_fn_00643b00": "0x643b00",
+      "_fn_00643bd0": "0x643bd0",
+      "_fn_00643c00": "0x643c00"
     }
   },
   "original_source_units": {
@@ -8521,6 +8567,7 @@
     "SourceText.c": "src/GC_3_0a5_2/frontend/SourceText.c",
     "CExprTools.c": "src/GC_3_0a5_2/frontend/CExprTools.c",
     "IroType.c": "src/GC_3_0a5_2/optimizer/IroType.c",
-    "StructMoves.c": "src/GC_3_0a5_2/backend/StructMoves.c"
+    "StructMoves.c": "src/GC_3_0a5_2/backend/StructMoves.c",
+    "CodeMotionPPC.c": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
   }
 }

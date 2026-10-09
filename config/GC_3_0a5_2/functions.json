@@ -23544,5 +23544,71 @@
       "method": "Reviewed native CFG plus whole-image filename, caller and relocation audit",
       "unresolved_indirect_flow": false
     }
+  },
+  {
+    "name": "fn_006436d0",
+    "address": "0x6436d0",
+    "size": 362,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00643840",
+    "address": "0x643840",
+    "size": 91,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006438a0",
+    "address": "0x6438a0",
+    "size": 602,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00643b00",
+    "address": "0x643b00",
+    "size": 206,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00643bd0",
+    "address": "0x643bd0",
+    "size": 35,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00643c00",
+    "address": "0x643c00",
+    "size": 57,
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+    "identity_evidence": "Native CodeMotionPPC.c assertion and generic code-motion/invariance callers; all inter-entry gaps audited, including two recovered callable starts. Native ABI/layout and data references reviewed; unavailable Windows names remain provisional.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
   }
 ]

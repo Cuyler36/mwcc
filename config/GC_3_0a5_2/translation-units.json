@@ -1984,6 +1984,90 @@
       "status": "attempted_equivalent"
     },
     {
+      "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+      "original_filename": "CodeMotionPPC.c",
+      "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
+        "Windows assertion/file-line diagnostic"
+      ],
+      "windows_functions": [
+        {
+          "name": "fn_006436d0",
+          "address": "0x6436d0",
+          "size": 362,
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00643840",
+          "address": "0x643840",
+          "size": 91,
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_006438a0",
+          "address": "0x006438a0",
+          "size": 602,
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          },
+          "evidence": "Windows assertion/file-line diagnostic",
+          "call_addresses": [
+            "0x00643a5a"
+          ],
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+        },
+        {
+          "name": "fn_00643b00",
+          "address": "0x643b00",
+          "size": 206,
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00643bd0",
+          "address": "0x643bd0",
+          "size": 35,
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00643c00",
+          "address": "0x643c00",
+          "size": 57,
+          "compiled_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete reachable native CFG, all padding gaps and both neighboring clusters reviewed",
+            "unresolved_indirect_flow": false
+          }
+        }
+      ],
+      "mac_functions": [],
+      "ownership_conflicts": [],
+      "compiled": true,
+      "membership_complete": false,
+      "status": "attempted_equivalent"
+    },
+    {
       "source": "src/GC_3_0a5_2/backend/Coloring.c",
       "original_filename": "Coloring.c",
       "evidence": [
@@ -21670,33 +21754,6 @@
           "call_addresses": [
             "0x005ec58c",
             "0x005ec616"
-          ]
-        }
-      ],
-      "mac_functions": [],
-      "ownership_conflicts": [],
-      "compiled": false,
-      "membership_complete": false,
-      "status": "unattempted"
-    },
-    {
-      "source": "src/GC_3_0a5_2/frontend/CodeMotionPPC.c",
-      "original_filename": "CodeMotionPPC.c",
-      "evidence": [
-        "Windows assertion/file-line diagnostic"
-      ],
-      "windows_functions": [
-        {
-          "name": "FUN_006438a0",
-          "address": "0x006438a0",
-          "size": 602,
-          "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
-            "unresolved_indirect_flow": false
-          },
-          "evidence": "Windows assertion/file-line diagnostic",
-          "call_addresses": [
-            "0x00643a5a"
           ]
         }
       ],
@@ -229131,6 +229188,3540 @@
           "ninja_all_source_progress": true,
           "strict_exact_total": 897,
           "mapped_total": 1976,
+          "objdiff_cli": true,
+          "inventory_partition": true,
+          "ownership_conflicts": 0,
+          "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        }
+      }
+    },
+    "src/GC_3_0a5_2/backend/CodeMotionPPC.c": {
+      "status": "attempted_equivalent",
+      "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+      "intended_active_source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+      "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+      "original_filename": "CodeMotionPPC.c",
+      "supported_entries": 6,
+      "all_body_attempts_complete": true,
+      "native_abi_and_layout_reviewed": true,
+      "private_storage_attempted": true,
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "exact_count": 3,
+      "exact_functions": [
+        "fn_00643840",
+        "fn_00643b00",
+        "fn_00643bd0"
+      ],
+      "nonmatching_functions": [
+        "fn_006436d0",
+        "fn_006438a0",
+        "fn_00643c00"
+      ],
+      "unresolved_count": 0,
+      "objdiff_success": true,
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+      "object_sha256": "3ed9e929af6e85504b64a3f3b06de8d22eabb4d7a1c6962fd8e1b593c131bea2",
+      "total_bounded_cases": 9344,
+      "owned_data_complete": true,
+      "profiles": "full6-experiments.json",
+      "mapping": "port-mappings.json",
+      "inventory": "inventory.json",
+      "function_review": "frozen-function-review.json",
+      "data_review": "frozen-data-review.json",
+      "compiled_sections": "frozen-compiled-sections.json",
+      "execution": "execution-validation.json",
+      "source_variants": [
+        "source-variant-experiments.json",
+        "tune-experiments.json",
+        "operand-variant-experiments.json"
+      ],
+      "compiler_variants": "compiler-variant-experiments.json",
+      "encoding": {
+        "strict_cp932": true,
+        "ascii_only": true,
+        "repository_checker_present": false
+      },
+      "limits": [
+        "Full attempt of all six supported native members; discovery confidence comes from native caller/data references and audited boundaries, not proof of every original TU contribution.",
+        "Three functions remain nonmatching. Objdiff and bytes/fixups are reported honestly; bounded execution contracts are not unrestricted compiler equivalence.",
+        "Pro8, CW94 space and bounded source/optimizer variants tested. Selected CW94 speed yields the best exact count without per-function compiler overrides.",
+        "No active source, config, shared tool, Git or push edits by this agent. All evidence is ignored build data.",
+        "One early CW94 initial experiment reused its object path after a source edit; only full6 artifacts and frozen fingerprints are authoritative for integration."
+      ],
+      "membership_reviewed": false,
+      "mapped_function_count": 6,
+      "data_complete": true,
+      "review_evidence": {
+        "full6-experiments.json": [
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-cw94-speed",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-cw94-space",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-cw94-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "pro8",
+            "profile": "codemotionppc-full6-pro8-speed",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/pro8/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-speed\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "pro8",
+            "profile": "codemotionppc-full6-pro8-space",
+            "flags": [
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/pro8/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "space",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-pro8-space\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "inventory.json": {
+          "original_filename": "CodeMotionPPC.c",
+          "logical_category": "backend",
+          "supported_entries": [
+            "0x6436d0",
+            "0x643840",
+            "0x6438a0",
+            "0x643b00",
+            "0x643bd0",
+            "0x643c00"
+          ],
+          "filename_proof": {
+            "function": "0x6438a0",
+            "literal": "0x6c0089",
+            "assertion_call": "0x643a5a",
+            "line": 151
+          },
+          "cluster_extent": {
+            "start": "0x6436d0",
+            "last_body_end": "0x643c39",
+            "next_entry": "0x643c40"
+          },
+          "incoming_calls": {
+            "0x643b00": [
+              "0x628c03"
+            ],
+            "0x643c00": [
+              "0x62a7fd"
+            ],
+            "0x643840": [
+              "0x6290cd"
+            ],
+            "0x6438a0": [
+              "0x628af6"
+            ],
+            "0x643c40": [
+              "0x63d569",
+              "0x63d668"
+            ],
+            "0x643c80": [
+              "0x63d921"
+            ],
+            "0x643cc0": [
+              "0x63d9de"
+            ],
+            "0x644100": [
+              "0x63d932"
+            ],
+            "0x643620": [
+              "0x642c2a"
+            ],
+            "0x6436d0": [
+              "0x629013"
+            ],
+            "0x643bd0": [
+              "0x62a34c"
+            ],
+            "0x644130": [
+              "0x63d881",
+              "0x63d986"
+            ],
+            "0x643390": [
+              "0x642c58"
+            ],
+            "0x642ff0": [
+              "0x642d17"
+            ]
+          },
+          "missing_from_supplied_csv": [
+            "0x643bd0",
+            "0x643c00"
+          ],
+          "prefix_neighbor": {
+            "entries": [
+              "0x642be0",
+              "0x642de0",
+              "0x642ff0",
+              "0x643390",
+              "0x643620"
+            ],
+            "separate_state": [
+              "0x7028d0",
+              "0x7028d4",
+              "0x7028d8",
+              "0x7028dc"
+            ],
+            "role": "Generic candidate/use dataflow optimization engine, driven by callback table from 0x642be0, not direct general CodeMotion helpers. Source filename remains unproved."
+          },
+          "suffix_neighbor": {
+            "entries": [
+              "0x643c40",
+              "0x643c80",
+              "0x643cc0",
+              "0x644100",
+              "0x644130"
+            ],
+            "callers": [
+              "0x63d4b0",
+              "0x63d800"
+            ],
+            "role": "Instruction/memory/constant analysis helpers with byte-size and Int64 state. No assertion/name proves a CodeMotionPPC source role; excluded."
+          },
+          "symbols_review": {
+            "supplied_mac_file": "C:/Users/olsen/Downloads/mwccppc_pro8_syms",
+            "supplied_csv": "C:/Users/olsen/Downloads/mwcc.csv",
+            "no_native_names_for_supported_members": true,
+            "baseline_source": "src/optimizer/CodeMotion.c",
+            "baseline_roles": [
+              "is_loop_invariant",
+              "move_instruction_to_preheader",
+              "has_use_outside_loop_in_preheader_set",
+              "fn_00525fc0 and CodeMotion_00526070 pair logic"
+            ],
+            "ordinary_mac_names": [
+              "srawi_addze_maymove",
+              "srawi_addze_isloopinvariant",
+              "movecmptopreheader"
+            ],
+            "limitation": "Ordinary Mac symbols prove semantic operation names, not Windows addresses or unit membership; private routines keep native address aliases."
+          },
+          "gaps_review": "Every byte between 0x643620 body end and 0x643c40 reviewed; exactly six non-padding starts, all bounded CFGs resolve without indirect flow. Two originally unidentified callable bodies discovered in gap and root created them in Ghidra."
+        },
+        "frozen-function-review.json": [
+          {
+            "name": "fn_006436d0",
+            "address": "0x6436d0",
+            "size": 362,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "446d2c360e50fff20d566bf340063f78bd8808bceedf6d45707aec81ef862ff1",
+            "semantic_and_abi_review": "Physical-register path scans backward, requires positive signed operand count, register kind/class and definition flag, rejects combined flags, accepts exactly low-byte status 1. Virtual-register path uses signed class/register indexes and signed bitset word shifts, ignores missing/outside blocks, requires same block and precisely one invariant definition.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              }
+            ],
+            "execution": {
+              "name": "fn_006436d0",
+              "cases": 624,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 516,
+                "0x10001000": 32,
+                "0x10001100": 50,
+                "0x10001200": 26
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 401,
+                "1": 171,
+                "2": 52
+              }
+            }
+          },
+          {
+            "name": "fn_00643840",
+            "address": "0x643840",
+            "size": 91,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "79ac77e34eba0682d22b780af5b878f4e9887472db819d9f27622f25455dc0f4",
+            "semantic_and_abi_review": "Third argument is an instruction record. Physical comparison and unblocked instruction use Unlink/InsertBefore in order, decrement signed bodySize with native 32-bit wrap, set changed; other paths invoke the generic motion routine. Three stack arguments and plain ret.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              }
+            ],
+            "execution": {
+              "name": "fn_00643840",
+              "cases": 80,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 80
+              },
+              "ordered_external_call_count_coverage": {
+                "2": 24,
+                "1": 56
+              }
+            }
+          },
+          {
+            "name": "fn_006438a0",
+            "address": "0x6438a0",
+            "size": 602,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "b0ff2f6b4a418d738c69b6d97871f5bf9641cf3d3593c315d74bb71caf5f3eff",
+            "semantic_and_abi_review": "ADDZE cache hit clears cache and returns 1; every miss clears it before shape checks. SRAWI/ADDZE register/flag checks and initial definition indices preserved. Ten-byte entries and class-4 head array, exclusions for both pair indices and null blocks, returning assertion path, dataflow/use tests, captured next cache pointer and native record rereads after external calls reviewed.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              }
+            ],
+            "execution": {
+              "name": "fn_006438a0",
+              "cases": 2880,
+              "all_passed": true,
+              "return_coverage": {
+                "0x1": 718,
+                "0x0": 2162
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 1872,
+                "2": 96,
+                "1": 240,
+                "6": 72,
+                "5": 268,
+                "4": 252,
+                "3": 80
+              }
+            }
+          },
+          {
+            "name": "fn_00643b00",
+            "address": "0x643b00",
+            "size": 206,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "828bd91b9dd6999668c0d85c8b82c9125240f6ab72199e83ab4e91b1cf2317f2",
+            "semantic_and_abi_review": "GPR/comparison policy and signed loop body threshold 25; exact native opcode groups. ADDI/ADDIS require kind-4 third operand. Load/vector reference exclusions, kind 0/1, low-byte object classification and native byte size comparison preserve short circuit order. Five cdecl arguments; returns full int.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "execution": {
+              "name": "fn_00643b00",
+              "cases": 1792,
+              "all_passed": true,
+              "return_coverage": {
+                "0x1": 1036,
+                "0x0": 756
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 1696,
+                "2": 48,
+                "1": 48
+              }
+            }
+          },
+          {
+            "name": "fn_00643bd0",
+            "address": "0x643bd0",
+            "size": 35,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "cbfe1b3887ef95c251f7ab9e31f52f40e5745cf85777a89ff9e9522b2df20f70",
+            "semantic_and_abi_review": "Five cdecl stack arguments, only second and fifth used. Disallows kind-0 class-1 operand when fifth full-width flag is zero; returns low byte 0/1. Unspecified high EAX byte is outside the native ABI contract.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "execution": {
+              "name": "fn_00643bd0",
+              "cases": 384,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 4,
+                "0x1": 380
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 384
+              }
+            }
+          },
+          {
+            "name": "fn_00643c00",
+            "address": "0x643c00",
+            "size": 57,
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "body_attempt_complete": true,
+            "original_sha256": "17ebabe9a6c39d68e63780db7f4ff02c5caa414f410387e215e2bb48e5bd2b1e",
+            "semantic_and_abi_review": "Five cdecl arguments; class-1 requires nonzero full-width fifth flag and low two operand flags exactly 2. Class-0 register zero returns low byte 2; all other inputs return zero. Signed register field and raw class byte equality preserved.",
+            "native_abi": "cdecl, all arguments stack-passed, plain ret; low-byte return for 0x643bd0/0x643c00 only",
+            "attempts": [
+              {
+                "profile": "codemotionppc-full6-cw94-speed",
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-cw94-space",
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-speed",
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "profile": "codemotionppc-full6-pro8-space",
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "execution": {
+              "name": "fn_00643c00",
+              "cases": 3584,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 3384,
+                "0x1": 88,
+                "0x2": 112
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 3584
+              }
+            }
+          }
+        ],
+        "frozen-data-review.json": {
+          "owned_storage": {
+            "name": "_codeMotionPPCNextInstruction",
+            "section": ".bss",
+            "size": 4,
+            "coff_common": true,
+            "method": "source-scoped common binding",
+            "address": "0x007028e0",
+            "bytes_exact": true,
+            "target_section": ".bss",
+            "fixups_exact": true,
+            "relocations_resolved": true
+          },
+          "native_storage": {
+            "name": "codeMotionPPCNextInstruction",
+            "address": "0x7028e0",
+            "size": 4,
+            "section": ".bss",
+            "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+            "initialization": "zero-filled BSS common, no CRT or destructor needed",
+            "references": [
+              {
+                "address": "0x6438bd",
+                "target": "0x7028e0"
+              },
+              {
+                "address": "0x6438d1",
+                "target": "0x7028e0"
+              },
+              {
+                "address": "0x6438e2",
+                "target": "0x7028e0"
+              },
+              {
+                "address": "0x643963",
+                "target": "0x7028e0"
+              },
+              {
+                "address": "0x643aad",
+                "target": "0x7028e0"
+              }
+            ]
+          },
+          "filename_literal": {
+            "address": "0x6c0089",
+            "size": 16,
+            "sha256": "1fa7384a61598d55d94c9ab70993fded949998bcc9f55e63dac9267e1eff480d",
+            "source_emitted": true
+          },
+          "compiler_data_review": [
+            {
+              "name": "@147",
+              "section": ".data",
+              "size": 16,
+              "method": "resolved function reference",
+              "address": "0x006c0089",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_codeMotionPPCNextInstruction",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x007028e0",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "all_compiled_data_resolved": true,
+          "excluded_shared_globals": {
+            "_codeMotionPhysicalRegisterCounts": "0x710274",
+            "_codeMotionDefinitionHeads": "0x710770",
+            "_codeMotionEntries": "0x7106fc",
+            "_codeMotionEntryCount": "0x715c74",
+            "_gCodeMotionChanged": "0x710b4c"
+          },
+          "limits": [
+            "The paired-instruction cache is the sole private BSS datum supported by the audited native operands. It is concretely defined in source.",
+            "No generated anonymous data address is bound. No original memory immediately adjacent to the cache, string or neighboring TU state is absorbed.",
+            "Other compiler-generated data is absent in the selected object except the native filename literal; no switch tables, global constructors, destructors or CRT data are emitted."
+          ]
+        },
+        "frozen-compiled-sections.json": [
+          {
+            "index": 1,
+            "name": ".drectve",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "code": false,
+            "relocations": [],
+            "symbols": []
+          },
+          {
+            "index": 2,
+            "name": ".text",
+            "size": 334,
+            "sha256": "abd78648836687e9dbe0d6ac8c093c1da8855bb9a7e67cc774deb119fc7a0ddb",
+            "code": true,
+            "relocations": [
+              {
+                "offset": 26,
+                "symbol": "_codeMotionPhysicalRegisterCounts",
+                "kind": 6
+              },
+              {
+                "offset": 42,
+                "symbol": "_codeMotionDefinitionHeads",
+                "kind": 6
+              },
+              {
+                "offset": 96,
+                "symbol": "_codeMotionEntries",
+                "kind": 6
+              },
+              {
+                "offset": 164,
+                "symbol": "_is_loop_invariant",
+                "kind": 20
+              },
+              {
+                "offset": 291,
+                "symbol": "_is_loop_invariant",
+                "kind": 20
+              }
+            ],
+            "symbols": [
+              ".text",
+              "_fn_006436d0"
+            ]
+          },
+          {
+            "index": 3,
+            "name": ".text",
+            "size": 91,
+            "sha256": "3072c01147d036125c1aa5a966e37ad3ca7434ca964cd34363de6113db8ae1a1",
+            "code": true,
+            "relocations": [
+              {
+                "offset": 34,
+                "symbol": "_codeMotionPhysicalRegisterCounts",
+                "kind": 6
+              },
+              {
+                "offset": 42,
+                "symbol": "_PCode_UnlinkInstruction",
+                "kind": 20
+              },
+              {
+                "offset": 55,
+                "symbol": "_PCode_InsertInstructionBefore",
+                "kind": 20
+              },
+              {
+                "offset": 67,
+                "symbol": "_gCodeMotionChanged",
+                "kind": 6
+              },
+              {
+                "offset": 83,
+                "symbol": "_move_instruction_to_preheader",
+                "kind": 20
+              }
+            ],
+            "symbols": [
+              ".text",
+              "_fn_00643840"
+            ]
+          },
+          {
+            "index": 4,
+            "name": ".text",
+            "size": 586,
+            "sha256": "15089782748adfe51fc4bfc04afc2643db4add89b49b2485896f38652a36b35a",
+            "code": true,
+            "relocations": [
+              {
+                "offset": 29,
+                "symbol": "_codeMotionPPCNextInstruction",
+                "kind": 6
+              },
+              {
+                "offset": 49,
+                "symbol": "_codeMotionPPCNextInstruction",
+                "kind": 6
+              },
+              {
+                "offset": 66,
+                "symbol": "_codeMotionPPCNextInstruction",
+                "kind": 6
+              },
+              {
+                "offset": 189,
+                "symbol": "_codeMotionEntries",
+                "kind": 6
+              },
+              {
+                "offset": 195,
+                "symbol": "_codeMotionPPCNextInstruction",
+                "kind": 6
+              },
+              {
+                "offset": 204,
+                "symbol": "_codeMotionEntryCount",
+                "kind": 6
+              },
+              {
+                "offset": 275,
+                "symbol": "_codeMotionDefinitionHeads",
+                "kind": 6
+              },
+              {
+                "offset": 298,
+                "symbol": "_codeMotionEntries",
+                "kind": 6
+              },
+              {
+                "offset": 363,
+                "symbol": "_fn_00629df0",
+                "kind": 20
+              },
+              {
+                "offset": 438,
+                "symbol": "@147",
+                "kind": 6
+              },
+              {
+                "offset": 443,
+                "symbol": "_CError_Internal",
+                "kind": 20
+              },
+              {
+                "offset": 454,
+                "symbol": "_fn_00629ca0",
+                "kind": 20
+              },
+              {
+                "offset": 475,
+                "symbol": "_codeMotionEntries",
+                "kind": 6
+              },
+              {
+                "offset": 484,
+                "symbol": "_has_use_outside_loop_in_preheader_set",
+                "kind": 20
+              },
+              {
+                "offset": 508,
+                "symbol": "_fn_00629ca0",
+                "kind": 20
+              },
+              {
+                "offset": 525,
+                "symbol": "_codeMotionPPCNextInstruction",
+                "kind": 6
+              },
+              {
+                "offset": 557,
+                "symbol": "_codeMotionEntries",
+                "kind": 6
+              },
+              {
+                "offset": 566,
+                "symbol": "_has_use_outside_loop_in_preheader_set",
+                "kind": 20
+              }
+            ],
+            "symbols": [
+              ".text",
+              "_fn_006438a0"
+            ]
+          },
+          {
+            "index": 5,
+            "name": ".data",
+            "size": 16,
+            "sha256": "1fa7384a61598d55d94c9ab70993fded949998bcc9f55e63dac9267e1eff480d",
+            "code": false,
+            "relocations": [],
+            "symbols": [
+              ".data",
+              "@147"
+            ]
+          },
+          {
+            "index": 6,
+            "name": ".text",
+            "size": 206,
+            "sha256": "1f257154200954cac2ebbd61f67b039af1d13397d69441f594ea534dafd144c8",
+            "code": true,
+            "relocations": [
+              {
+                "offset": 164,
+                "symbol": "_fn_004531a0",
+                "kind": 20
+              },
+              {
+                "offset": 175,
+                "symbol": "_nbytes_loaded_or_stored_by",
+                "kind": 20
+              }
+            ],
+            "symbols": [
+              ".text",
+              "_fn_00643b00"
+            ]
+          },
+          {
+            "index": 7,
+            "name": ".text",
+            "size": 35,
+            "sha256": "cbfe1b3887ef95c251f7ab9e31f52f40e5745cf85777a89ff9e9522b2df20f70",
+            "code": true,
+            "relocations": [],
+            "symbols": [
+              ".text",
+              "_fn_00643bd0"
+            ]
+          },
+          {
+            "index": 8,
+            "name": ".text",
+            "size": 57,
+            "sha256": "f3b0eac5b04a538675272ea3531cbb9d6a7734f13badae71681ab20d5927cee9",
+            "code": true,
+            "relocations": [],
+            "symbols": [
+              ".text",
+              "_fn_00643c00"
+            ]
+          }
+        ],
+        "execution-validation.json": {
+          "functions": [
+            {
+              "name": "fn_006436d0",
+              "cases": 624,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 516,
+                "0x10001000": 32,
+                "0x10001100": 50,
+                "0x10001200": 26
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 401,
+                "1": 171,
+                "2": 52
+              }
+            },
+            {
+              "name": "fn_00643840",
+              "cases": 80,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 80
+              },
+              "ordered_external_call_count_coverage": {
+                "2": 24,
+                "1": 56
+              }
+            },
+            {
+              "name": "fn_006438a0",
+              "cases": 2880,
+              "all_passed": true,
+              "return_coverage": {
+                "0x1": 718,
+                "0x0": 2162
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 1872,
+                "2": 96,
+                "1": 240,
+                "6": 72,
+                "5": 268,
+                "4": 252,
+                "3": 80
+              }
+            },
+            {
+              "name": "fn_00643b00",
+              "cases": 1792,
+              "all_passed": true,
+              "return_coverage": {
+                "0x1": 1036,
+                "0x0": 756
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 1696,
+                "2": 48,
+                "1": 48
+              }
+            },
+            {
+              "name": "fn_00643c00",
+              "cases": 3584,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 3384,
+                "0x1": 88,
+                "0x2": 112
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 3584
+              }
+            },
+            {
+              "name": "fn_00643bd0",
+              "cases": 384,
+              "all_passed": true,
+              "return_coverage": {
+                "0x0": 4,
+                "0x1": 380
+              },
+              "ordered_external_call_count_coverage": {
+                "0": 384
+              }
+            }
+          ],
+          "total_cases": 9344,
+          "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+          "scope": "Actual original and full candidate COFF instructions with modeled external service contracts. Checks ordered arguments, memory effects, 32-bit or low-byte return as required, plain cdecl stack balance and all callee-saved registers. Includes physical/virtual definitions, status width, two-instruction cache state, assertion return paths, callee-induced record changes and operand/loop-size boundaries. Bounded unit evidence, not unrestricted or whole-compiler equivalence."
+        },
+        "compiler-variant-experiments.json": [
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-nocse",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nocse"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocse\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nocse",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocse\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocse\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-nolifetimes",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nolifetimes"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolifetimes\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nolifetimes",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolifetimes\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolifetimes\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-noschedule",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "noschedule"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-noschedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "noschedule",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-noschedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-noschedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-nolife-schedule",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nolifetimes,noschedule"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolife-schedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nolifetimes,noschedule",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolife-schedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nolife-schedule\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-nocoloring",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nocoloring"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocoloring\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "nocoloring",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocoloring\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-nocoloring\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-level3",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "level=3"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level3\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "level=3",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level3\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level3\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-full6-level2",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "level=2"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level2\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-opt",
+              "level=2",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/CodeMotionPPC.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level2\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-full6-level2\\build\\GC_3_0a5_2\\codemotionppc\\CodeMotionPPC.c\\compiled.obj",
+            "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+            "source_stable": true,
+            "exact_count": 0,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "source-variant-experiments.json": [
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/variant-split-pair-helper.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-split-pair-helper",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-helper\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-helper.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/variant-split-pair-helper.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-helper\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-helper.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-helper\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-helper.c\\compiled.obj",
+            "source_sha256": "9f4fb06694cc3d3bb9a0e918a39b27d860e69fba4ad04f74f0c47d0df4f4d64d",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/variant-predicate-invert.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-predicate-invert",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-predicate-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-predicate-invert.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/variant-predicate-invert.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-predicate-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-predicate-invert.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-predicate-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-predicate-invert.c\\compiled.obj",
+            "source_sha256": "7d31aa6b48ae4af65cf358a540c2a12deea84627a4ea669095cc425ea5c92e60",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/variant-split-pair-invert.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-split-pair-invert",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/variant-split-pair-invert.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert.c\\compiled.obj",
+            "source_sha256": "47afbce1242329e46fb689515243f7391843df084ef103cb6fc744f04261e985",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/variant-split-pair-invert-block-local.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-split-pair-invert-block-local",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert-block-local\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert-block-local.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/variant-split-pair-invert-block-local.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert-block-local\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert-block-local.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-split-pair-invert-block-local\\build\\GC_3_0a5_2\\codemotionppc\\variant-split-pair-invert-block-local.c\\compiled.obj",
+            "source_sha256": "d501bd780346258a9946adf370ad89c913cd0fc7d8388722a661d512a9d329c8",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/variant-explicit-registers.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-explicit-registers",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-explicit-registers\\build\\GC_3_0a5_2\\codemotionppc\\variant-explicit-registers.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/variant-explicit-registers.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-explicit-registers\\build\\GC_3_0a5_2\\codemotionppc\\variant-explicit-registers.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-explicit-registers\\build\\GC_3_0a5_2\\codemotionppc\\variant-explicit-registers.c\\compiled.obj",
+            "source_sha256": "39a0ce97a4527e61406cbce77c0f78f2d4d0f50448e20e9964f1abfd57eb9b26",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "tune-experiments.json": [
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-reference-equality.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-reference-equality",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-equality\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-equality.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-reference-equality.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-equality\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-equality.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-equality\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-equality.c\\compiled.obj",
+            "source_sha256": "246b15e6c105e0d9f6078ba7a70310c20af64dc7fb5da47c87eae133c91e3be8",
+            "source_stable": true,
+            "exact_count": 2,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-reference-bitfield.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-reference-bitfield",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-bitfield\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-bitfield.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-reference-bitfield.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-bitfield\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-bitfield.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-reference-bitfield\\build\\GC_3_0a5_2\\codemotionppc\\tune-reference-bitfield.c\\compiled.obj",
+            "source_sha256": "3f3faef21c7d1931c06052a5c83343d3027126fe0522b08f6eb67397c2b42269",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-definition-block-expression.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-definition-block-expression",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-block-expression\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-block-expression.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-definition-block-expression.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-block-expression\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-block-expression.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-block-expression\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-block-expression.c\\compiled.obj",
+            "source_sha256": "02a617de67ec208e7db8326bbb19f02a4cfdaae9d2bc7957162645888b4ee9ee",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-definition-descriptor.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-definition-descriptor",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-descriptor\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-descriptor.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-definition-descriptor.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-descriptor\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-descriptor.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-definition-descriptor\\build\\GC_3_0a5_2\\codemotionppc\\tune-definition-descriptor.c\\compiled.obj",
+            "source_sha256": "d6be4e256f1d4195e48c881712a5515315311ba61d422c4f0988cf7f99844010",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-comparison-block-local.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-comparison-block-local",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-block-local\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-block-local.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-comparison-block-local.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-block-local\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-block-local.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-block-local\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-block-local.c\\compiled.obj",
+            "source_sha256": "00d821071097bb3dd39e473d52889e0c8ac43ec079f5196e07dc0332e453bcc6",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/tune-comparison-register-defs.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-tune-comparison-register-defs",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-register-defs\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-register-defs.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/tune-comparison-register-defs.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-register-defs\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-register-defs.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-tune-comparison-register-defs\\build\\GC_3_0a5_2\\codemotionppc\\tune-comparison-register-defs.c\\compiled.obj",
+            "source_sha256": "2dfc842849b995a0f0291594ce9f0bc648b30bc477ede2a0838032df40d2efb5",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "operand-variant-experiments.json": [
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/operand-switch.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-operand-switch",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-switch\\build\\GC_3_0a5_2\\codemotionppc\\operand-switch.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/operand-switch.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-switch\\build\\GC_3_0a5_2\\codemotionppc\\operand-switch.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "unresolved": "unbound literal: .sw$219 (0 retail blocks, 0 strings)"
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-switch\\build\\GC_3_0a5_2\\codemotionppc\\operand-switch.c\\compiled.obj",
+            "source_sha256": "5caeadb6f293e0158dd198f380f2578ae6fce989093bf2b1a941e20e51ceb433",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 1,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/operand-not-one-first.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-operand-not-one-first",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-not-one-first\\build\\GC_3_0a5_2\\codemotionppc\\operand-not-one-first.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/operand-not-one-first.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-not-one-first\\build\\GC_3_0a5_2\\codemotionppc\\operand-not-one-first.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-not-one-first\\build\\GC_3_0a5_2\\codemotionppc\\operand-not-one-first.c\\compiled.obj",
+            "source_sha256": "bb3ed075e611a13dec4d099e4d83bee3eaa0df0dbbd4c06f611c85fa90739c90",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/GC_3_0a5_2/codemotionppc/operand-early-reject.c",
+            "compiler": "cw94",
+            "profile": "codemotionppc-operand-early-reject",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-early-reject\\build\\GC_3_0a5_2\\codemotionppc\\operand-early-reject.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/GC_3_0a5_2/codemotionppc/operand-early-reject.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-early-reject\\build\\GC_3_0a5_2\\codemotionppc\\operand-early-reject.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 6,
+            "functions": [
+              {
+                "name": "fn_006436d0",
+                "address": "0x6436d0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              },
+              {
+                "name": "fn_00643840",
+                "address": "0x643840",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_006438a0",
+                "address": "0x6438a0",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643b00",
+                "address": "0x643b00",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643bd0",
+                "address": "0x643bd0",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00643c00",
+                "address": "0x643c00",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\codemotionppc-operand-early-reject\\build\\GC_3_0a5_2\\codemotionppc\\operand-early-reject.c\\compiled.obj",
+            "source_sha256": "eff7645e025677bbbfeb52f5a4a91f77554f70a51f0203ce6089fdd176ab1d34",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "proven-padding-helpers-created.json": {
+          "functions": [
+            {
+              "address": "0x643bd0",
+              "size": 35,
+              "proof": "Reachable native CFG at distinct aligned start after previous complete helper, separately identified by CodeMotionPPC padding/caller audit",
+              "before": "No function found for 0x643bd0",
+              "created": {
+                "success": true,
+                "address": "00643bd0",
+                "function_name": "FUN_00643bd0",
+                "entry_point": "00643bd0",
+                "body_size": 28,
+                "message": "Function created successfully at 00643bd0"
+              },
+              "after": "Function: FUN_00643bd0 at 00643bd0\nSignature: undefined FUN_00643bd0(void)\nEntry: 00643bd0\nBody: 00643bd0 - 00643bf2",
+              "decompiled": "{\"0x643bd0\":\"\\r\\nundefined1\\r\\nFUN_00643bd0(undefined4 param_1, char *param_2, undefined4 param_3, undefined4 param_4, int param_5)\\r\\n\\r\\n{\\r\\n  if ((param_5 == 0) && (*param_2 == '\\\\0') && (param_2[1] == '\\\\x01')) {\\r\\n    return 0;\\r\\n  }\\r\\n  return 1;\\r\\n}\\r\\n\\r\\n\"}"
+            },
+            {
+              "address": "0x643c00",
+              "size": 57,
+              "proof": "Reachable native CFG at distinct aligned start after previous complete helper, separately identified by CodeMotionPPC padding/caller audit",
+              "before": "No function found for 0x643c00",
+              "created": {
+                "success": true,
+                "address": "00643c00",
+                "function_name": "FUN_00643c00",
+                "entry_point": "00643c00",
+                "body_size": 53,
+                "message": "Function created successfully at 00643c00"
+              },
+              "after": "Function: FUN_00643c00 at 00643c00\nSignature: undefined FUN_00643c00(void)\nEntry: 00643c00\nBody: 00643c00 - 00643c38",
+              "decompiled": "{\"0x643c00\":\"\\r\\nundefined1\\r\\nFUN_00643c00(undefined4 param_1, int param_2, undefined4 param_3, undefined4 param_4, int param_5)\\r\\n\\r\\n{\\r\\n  if (*(char *)(param_2 + 1) == '\\\\x01') {\\r\\n    if ((param_5 != 0) && ((*(ushort *)(param_2 + 2) & 3) == 2)) {\\r\\n      return 1;\\r\\n    }\\r\\n  }\\r\\n  else if ((*(char *)(param_2 + 1) == '\\\\0') && (*(short *)(param_2 + 4) == 0)) {\\r\\n    return 2;\\r\\n  }\\r\\n  return 0;\\r\\n}\\r\\n\\r\\n\"}"
+            }
+          ],
+          "save_result": "{\"success\":true,\"program\":\"mwcceppc.exe\",\"message\":\"Program saved successfully\"}"
+        },
+        "normal_project": {
+          "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
+          "source_sha256": "8cf5f7acb2efd432598db980b3dcc1574bd2e0ad4998c88b4481f182a74a13ae",
+          "candidate_project_sections_sha256": "b89afc86d18d1b71f80b99b2bfc2cbe81db91369c3c26fbcc1aebde7eb49c5a9",
+          "all_code_and_data_sections_equal": true,
+          "common_symbols_equal": true,
+          "checked_functions": 6,
+          "functions": [
+            {
+              "name": "fn_006436d0",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_00643840",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_006438a0",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_00643b00",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_00643bd0",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_00643c00",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            }
+          ]
+        }
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 6,
+        "attempted_members": 6,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All six supported bodies fully attempted and reviewed across four final full-source profiles and additional source/optimizer variants. All pass 9344 bounded native comparisons with positive/negative returns and modeled callee mutation/reloads. Full normal build, strict matches, objdiff-cli, image partition and CP932 checks passed; filename and cache exact. Physical original membership remains unproved."
+      },
+      "integration_review": {
+        "classification": "Backend source; original assertion-only inventory used a frontend default.",
+        "legacy": "No duplicate definitions or old source changes. Existing old code-motion layouts are not reused in this private native TU.",
+        "ownership": "Owns the four-byte next-instruction cache supported by all five native PE references. Shared motion/definition state remains external.",
+        "boundaries": "Two previously omitted helpers now defined/decompiled/saved in the explicit GC3 Ghidra program; prefix dataflow engine and suffix instruction analysis remain separate.",
+        "normal_project_checks": {
+          "ninja_all_source_progress": true,
+          "strict_exact_total": 900,
+          "mapped_total": 1982,
           "objdiff_cli": true,
           "inventory_partition": true,
           "ownership_conflicts": 0,

@@ -3974,5 +3974,29 @@
   "StructMoves_0051aee0": {
     "name": "fn_0059f7f0",
     "source": "src/GC_3_0a5_2/backend/StructMoves.c"
+  },
+  "fn_006436d0": {
+    "name": "fn_006436d0",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_00643840": {
+    "name": "fn_00643840",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_006438a0": {
+    "name": "fn_006438a0",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_00643b00": {
+    "name": "fn_00643b00",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_00643bd0": {
+    "name": "fn_00643bd0",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_00643c00": {
+    "name": "fn_00643c00",
+    "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
   }
 }

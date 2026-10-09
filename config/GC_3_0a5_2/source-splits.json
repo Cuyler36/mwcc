@@ -4922,5 +4922,37 @@
   "fn_005a3290": {
     "name": "fn_005a3290",
     "source": "src/GC_3_0a5_2/frontend/CTemplateFuncInst.c"
+  },
+  "fn_005e9f60": {
+    "name": "fn_005e9f60",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005e9fd0": {
+    "name": "fn_005e9fd0",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005e9fe0": {
+    "name": "fn_005e9fe0",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005ea050": {
+    "name": "fn_005ea050",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005ea080": {
+    "name": "fn_005ea080",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005ea170": {
+    "name": "fn_005ea170",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005ea250": {
+    "name": "fn_005ea250",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_005ea280": {
+    "name": "fn_005ea280",
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
   }
 }

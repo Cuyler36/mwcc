@@ -25241,6 +25241,94 @@
     }
   },
   {
+    "name": "fn_005e9f60",
+    "address": "0x5e9f60",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9fd0",
+    "address": "0x5e9fd0",
+    "size": 5,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9fe0",
+    "address": "0x5e9fe0",
+    "size": 103,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea050",
+    "address": "0x5ea050",
+    "size": 44,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea080",
+    "address": "0x5ea080",
+    "size": 232,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea170",
+    "address": "0x5ea170",
+    "size": 220,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea250",
+    "address": "0x5ea250",
+    "size": 35,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea280",
+    "address": "0x5ea280",
+    "size": 390,
+    "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+    "identity_evidence": "Native TranslatorUtils.c assertions, shared IR conversion/type/label utilities and private list lifecycle; all native ABI/layout/semantic paths reviewed. Unasserted prefix helper physical ownership inferred; no unsupported canonical names assigned.",
+    "boundary_evidence": {
+      "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "is_loop_unrollable",
     "address": "0x005f1030",
     "size": 616,

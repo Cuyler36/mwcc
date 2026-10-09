@@ -255,7 +255,8 @@
     "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
     "src/GC_3_0a5_2/frontend/CIRStreamType.c",
     "src/GC_3_0a5_2/backend/PeepholeForward.c",
-    "src/GC_3_0a5_2/frontend/CTemplateFuncInst.c"
+    "src/GC_3_0a5_2/frontend/CTemplateFuncInst.c",
+    "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4087,6 +4088,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/TranslatorUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5063,7 +5082,11 @@
     "src/GC_3_0a5_2/frontend/CTemplateFuncInst/fn_005a19a0",
     "src/GC_3_0a5_2/frontend/CTemplateFuncInst/fn_005a1b30",
     "src/GC_3_0a5_2/frontend/CTemplateFuncInst/fn_005a2a60",
-    "src/GC_3_0a5_2/frontend/CTemplateFuncInst/fn_005a2fe0"
+    "src/GC_3_0a5_2/frontend/CTemplateFuncInst/fn_005a2fe0",
+    "src/GC_3_0a5_2/frontend/TranslatorUtils/fn_005e9f60",
+    "src/GC_3_0a5_2/frontend/TranslatorUtils/fn_005e9fd0",
+    "src/GC_3_0a5_2/frontend/TranslatorUtils/fn_005ea050",
+    "src/GC_3_0a5_2/frontend/TranslatorUtils/fn_005ea250"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -9508,6 +9531,37 @@
       "_fn_00526410": "0x526410",
       "_fn_00526d20": "0x526d20",
       "_CMachine_FunctionRequiresMemoryReturn": "0x4e24f0"
+    },
+    "src/GC_3_0a5_2/frontend/TranslatorUtils.c": {
+      "_fn_005e9f60": "0x5e9f60",
+      "_fn_005e9fd0": "0x5e9fd0",
+      "_fn_005e9fe0": "0x5e9fe0",
+      "_fn_005ea050": "0x5ea050",
+      "_fn_005ea080": "0x5ea080",
+      "_fn_005ea170": "0x5ea170",
+      "_fn_005ea250": "0x5ea250",
+      "_fn_005ea280": "0x5ea280",
+      "_translatorLabels": "0x6eac60",
+      "_translatorLabelCount": "0x6eac64",
+      "_translatorSourceLabels": "0x716cc8",
+      "_translatorCurrentContext": "0x7102c4",
+      "_translatorDirectTargets": "0x70f240",
+      "_translatorAllocate": "0x6b4ba0",
+      "_translatorFree": "0x6b4ba4",
+      "_translatorFilename": "0x6b4ba8",
+      "_CError_Internal": "0x45a250",
+      "_fn_00454260": "0x454260",
+      "_fn_00455840": "0x455840",
+      "_fn_00454c20": "0x454c20",
+      "_fn_004d9030": "0x4d9030",
+      "_fn_004d9080": "0x4d9080",
+      "_fn_004d90d0": "0x4d90d0",
+      "_fn_004d9050": "0x4d9050",
+      "_fn_004d90a0": "0x4d90a0",
+      "_fn_004d90e0": "0x4d90e0",
+      "_fn_0055bf70": "0x55bf70",
+      "_fn_004a6c00": "0x4a6c00",
+      "_fn_004c5330": "0x4c5330"
     }
   },
   "original_source_units": {
@@ -9548,6 +9602,7 @@
     "CExprConvMatch.c": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
     "CIRStreamType.c": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
     "PeepholeForward.c": "src/GC_3_0a5_2/backend/PeepholeForward.c",
-    "CTemplateFuncInst.c": "src/GC_3_0a5_2/frontend/CTemplateFuncInst.c"
+    "CTemplateFuncInst.c": "src/GC_3_0a5_2/frontend/CTemplateFuncInst.c",
+    "TranslatorUtils.c": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
   }
 }

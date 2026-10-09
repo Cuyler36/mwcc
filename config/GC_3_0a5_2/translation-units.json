@@ -25175,55 +25175,114 @@
       "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
       "original_filename": "TranslatorUtils.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_005ea080",
+          "name": "fn_005e9f60",
+          "address": "0x5e9f60",
+          "size": 108,
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005e9fd0",
+          "address": "0x5e9fd0",
+          "size": 5,
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005e9fe0",
+          "address": "0x5e9fe0",
+          "size": 103,
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ea050",
+          "address": "0x5ea050",
+          "size": 44,
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ea080",
           "address": "0x005ea080",
           "size": 232,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005ea0a4"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
         },
         {
-          "name": "FUN_005ea170",
+          "name": "fn_005ea170",
           "address": "0x005ea170",
           "size": 220,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005ea1ff"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
         },
         {
-          "name": "FUN_005ea280",
+          "name": "fn_005ea250",
+          "address": "0x5ea250",
+          "size": 35,
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_005ea280",
           "address": "0x005ea280",
           "size": 390,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Native CFG, all in-range saved entries and NOP gaps; whole-image calls and relocated filename/state/entry references. CRTTI prefix and CleanUpIR suffix separate",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x005ea3da",
             "0x005ea3fa"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/cobraError.c",
@@ -332184,6 +332243,3688 @@
           "ownership_conflicts": 0,
           "all_four_versions_verify": true,
           "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        }
+      }
+    },
+    "src/GC_3_0a5_2/frontend/TranslatorUtils.c": {
+      "source_candidate": "build/TranslatorUtils/TranslatorUtils.c",
+      "intended_source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+      "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+      "object_sha256": "5660e53c7c47f01418959cf2ed639bb5413a0bc6ea0d753803185e28b2b15bf6",
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ],
+      "strict_exact_names": [
+        "fn_005e9f60",
+        "fn_005e9fd0",
+        "fn_005ea050",
+        "fn_005ea250"
+      ],
+      "mapped_function_count": 8,
+      "native_code_bytes": 1137,
+      "profiles": [
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-cw94-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$153 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-cw94-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-cw94-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "pro8",
+          "profile": "translatorutils-pro8-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: @109 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 2,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "pro8",
+          "profile": "translatorutils-pro8-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro8-space\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "pro7",
+          "profile": "translatorutils-pro7-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro7-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/pro7/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro7-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "unresolved": "unbound literal: @19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: @92 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro7-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 2,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "pro6",
+          "profile": "translatorutils-pro6-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro6-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/pro6/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro6-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "unresolved": "unbound literal: @19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: @92 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro6-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 2,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "compiler": "pro53",
+          "profile": "translatorutils-pro53-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro53-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+            "--",
+            "build/compilers/pro53/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/TranslatorUtils.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro53-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "unresolved": "unbound literal: @19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: @93 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-pro53-speed\\build\\TranslatorUtils\\TranslatorUtils.c\\compiled.obj",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 2,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        }
+      ],
+      "source_forms": [
+        {
+          "source": "build/TranslatorUtils/explicit-size8.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-explicit-size8",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-explicit-size8\\build\\TranslatorUtils\\explicit-size8.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/explicit-size8.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-explicit-size8\\build\\TranslatorUtils\\explicit-size8.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$119 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-explicit-size8\\build\\TranslatorUtils\\explicit-size8.c\\compiled.obj",
+          "source_sha256": "a647acaf254a5be03b9ad11504d6a6b1a55952e1bf81a87c28a3505ac00b523d",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/negative-kind.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-negative-kind",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-negative-kind\\build\\TranslatorUtils\\negative-kind.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/negative-kind.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-negative-kind\\build\\TranslatorUtils\\negative-kind.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$112 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-negative-kind\\build\\TranslatorUtils\\negative-kind.c\\compiled.obj",
+          "source_sha256": "6f1e3ae5b561354df06e5bd211a2866cfc8f4ca6e8917a41fe9042439924d2bb",
+          "source_stable": true,
+          "exact_count": 3,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/combined.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-combined",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined\\build\\TranslatorUtils\\combined.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/combined.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined\\build\\TranslatorUtils\\combined.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$114 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined\\build\\TranslatorUtils\\combined.c\\compiled.obj",
+          "source_sha256": "678ac944ae707aa53a918183e97980a47e2b6d71560d85c2e7f9dfe719bdd478",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/combined-memset.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-combined-memset",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-memset\\build\\TranslatorUtils\\combined-memset.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/combined-memset.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-memset\\build\\TranslatorUtils\\combined-memset.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$153 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-memset\\build\\TranslatorUtils\\combined-memset.c\\compiled.obj",
+          "source_sha256": "1917289b24dde88cd3a32a95daaf26d688d92705bf11b6aaa9dcf76e4e0326f2",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/combined-sequential.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-combined-sequential",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-sequential\\build\\TranslatorUtils\\combined-sequential.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/combined-sequential.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-sequential\\build\\TranslatorUtils\\combined-sequential.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$114 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-combined-sequential\\build\\TranslatorUtils\\combined-sequential.c\\compiled.obj",
+          "source_sha256": "9070520abf8b4a8253b64a9ce270ece54d914579faca9e002b8092c52d8e7994",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/case15-first-memset.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-case15-first-memset",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-case15-first-memset\\build\\TranslatorUtils\\case15-first-memset.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/case15-first-memset.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-case15-first-memset\\build\\TranslatorUtils\\case15-first-memset.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$153 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-case15-first-memset\\build\\TranslatorUtils\\case15-first-memset.c\\compiled.obj",
+          "source_sha256": "c08f65fc4b4919ee6795adffd56041d7f71b2df4c9feb338c9a13e19858779e5",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/reference-chain.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-reference-chain",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-chain\\build\\TranslatorUtils\\reference-chain.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/reference-chain.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-chain\\build\\TranslatorUtils\\reference-chain.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$153 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-chain\\build\\TranslatorUtils\\reference-chain.c\\compiled.obj",
+          "source_sha256": "97c1e139f1daa85e1b58899e46c2c70c50fad6d6c0c671a85038a29358a00084",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/reference-early.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-reference-early",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-early\\build\\TranslatorUtils\\reference-early.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/reference-early.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-early\\build\\TranslatorUtils\\reference-early.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$158 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-early\\build\\TranslatorUtils\\reference-early.c\\compiled.obj",
+          "source_sha256": "5f084ca6bdb254e9aab6af2c0548f2f661924d5abfcef42706189c0970f1f80e",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/TranslatorUtils/reference-direct.c",
+          "compiler": "cw94",
+          "profile": "translatorutils-form-reference-direct",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-direct\\build\\TranslatorUtils\\reference-direct.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/TranslatorUtils/reference-direct.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-direct\\build\\TranslatorUtils\\reference-direct.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 8,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$157 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-form-reference-direct\\build\\TranslatorUtils\\reference-direct.c\\compiled.obj",
+          "source_sha256": "fcc3ca2643c965a119afe68b503ea0d89a6615733ae5f9d3a75f0bd07c65232c",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        }
+      ],
+      "data_verified_bytes": 90,
+      "data_complete": false,
+      "bounded_execution_cases": 2048,
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "review_evidence": {
+        "functions": [
+          {
+            "name": "fn_005e9f60",
+            "address": "0x5e9f60",
+            "size": 108,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "void(void*integer64,Type*)",
+            "semantic_review": "Actual unsigned-type predicate; packed size2 selects1/2/4 conversion,8 no-op. Original two32-byte switch tables include explicit no-op8, essential for exact full108bytes andfixups. Six integer conversions mutate8-byte value.",
+            "layout_codegen_review": "Integer value is two native32-bit words, high at0,low at4. Native predicate454260 handles wrappers and calls4e2300; tests execute both and native conversions.",
+            "native_sha256": "554059da75734d245448a46fca6e647ea96abeb31bb760782d827054a231a5d7",
+            "candidate_size": 108,
+            "candidate_unrelocated_sha256": "10062642ad6241e1a0b8321cede379d6b66dd58f221d1d58de4323f9b8625f7a",
+            "execution": {
+              "name": "fn_005e9f60",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 40
+            },
+            "strict_result": {
+              "name": "fn_005e9f60",
+              "address": "0x5e9f60",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          },
+          {
+            "name": "fn_005e9fd0",
+            "address": "0x5e9fd0",
+            "size": 5,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "Type*(Type*)",
+            "semantic_review": "Identity translator type view; native5bytes andfixups exact. Called by many CleanUpIR helpers; no guessed original name.",
+            "layout_codegen_review": "Full EAX pointer returned, including null. This entry is unrelated to no-op free callback5ea630.",
+            "native_sha256": "6d072d11a5144359746b0e9d2eaf5a06531a0162b9f7d07a44dd01f51006e142",
+            "candidate_size": 5,
+            "candidate_unrelocated_sha256": "6d072d11a5144359746b0e9d2eaf5a06531a0162b9f7d07a44dd01f51006e142",
+            "execution": {
+              "name": "fn_005e9fd0",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 2
+            },
+            "strict_result": {
+              "name": "fn_005e9fd0",
+              "address": "0x5e9fd0",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          },
+          {
+            "name": "fn_005e9fe0",
+            "address": "0x5e9fe0",
+            "size": 103,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "UInt8(Type*,Type*)",
+            "semantic_review": "If leftkind8 require rightkind8,target6 and flags10/11 identity; kind12/12 accepted; other kinds use signed16 type equality. Native AL-only predicate.",
+            "layout_codegen_review": "Packed12-byte reference view preserves unaligned target6. Positive/negative/early/direct source forms tried; native preserved registers/byte temporaries and epilogues differ. Only upper return EAX bits are undefined and excluded.",
+            "native_sha256": "46bbe0196465f838bf17be4984748579e8300dcd5e12f0bd4e73a06ed43ce744",
+            "candidate_size": 104,
+            "candidate_unrelocated_sha256": "3d99a5742f8048deb07628b1ca41b9aee7023ba889bfd0bd953c4778bf4f064a",
+            "execution": {
+              "name": "fn_005e9fe0",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 47
+            },
+            "strict_result": {
+              "name": "fn_005e9fe0",
+              "address": "0x5e9fe0",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": true
+            }
+          },
+          {
+            "name": "fn_005ea050",
+            "address": "0x5ea050",
+            "size": 44,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "void(void)",
+            "semantic_review": "Read next before invoking free callback, then clear global list pointer; intentionally leave count unchanged. Native44bytes/fixups exact.",
+            "layout_codegen_review": "Zero/one/multi-record lists; free model poisons all24record bytes to verify saved-next traversal. No global shared pointer ownership inferred.",
+            "native_sha256": "56f66be1699ddcbdb9983b857d0176297fde7ff8fe980c7f8d8fa7f899db21fe",
+            "candidate_size": 44,
+            "candidate_unrelocated_sha256": "a2b94162949465c34894681e14a675748a611cf78f78447c47ad4730d91cd720",
+            "execution": {
+              "name": "fn_005ea050",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 15
+            },
+            "strict_result": {
+              "name": "fn_005ea050",
+              "address": "0x5ea050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          },
+          {
+            "name": "fn_005ea080",
+            "address": "0x5ea080",
+            "size": 232,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "void(Statement*)",
+            "semantic_review": "Reset count before nonempty-list invariant455; walk statement next0/kind4/expression10. Kinds4/5/6/7/12/13/14 visit;8 visits nonnull;15 may prepend all eligible noninternal labels then visit. Other kinds no-op.",
+            "layout_codegen_review": "Minimal statement view exposes offsets10/14; actual native statements are34bytes in CleanUpIR. Labels read next0,statement4,name12,name string10. Allocate24 and zero before publication. Actual native recursive tree walker and current candidate callback execute. Local48-byte dispatch remains unresolved.",
+            "native_sha256": "c4b7abfa2e988a05da7d9b25f0f99143fd7f0dcd1aedc520b0269ed47125909f",
+            "candidate_size": 232,
+            "candidate_unrelocated_sha256": "362a48cabe57f949e9f7a7fb80f902a36483fd2b5828971bcb72ad5023851fec",
+            "execution": {
+              "name": "fn_005ea080",
+              "cases": 256,
+              "terminal_assertions": 16,
+              "pass": true,
+              "native_instructions_visited": 78
+            },
+            "strict_result": {
+              "name": "fn_005ea080",
+              "address": "0x5ea080",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$153 (0 retail blocks, 0 strings)"
+            }
+          },
+          {
+            "name": "fn_005ea170",
+            "address": "0x5ea170",
+            "size": 220,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "Node*(Node*)",
+            "semantic_review": "Leafkind62 nonnull payload adds24-byte label record. Kind59 objectstorage2==8 checks context64 and name12 against label list then reaches terminal assertion442 even after matching. Returns original node EAX on normal paths.",
+            "layout_codegen_review": "The native assertion follows complete label walk, not only no-match case; source preserves it. Packed node prefix value16 is not an allocation-size claim. Predicate helper uses AL. Source memset produces native-style inlined zero clear; codegen still differs.",
+            "native_sha256": "7d3f3ddb9c69460d7c2398a4fc0fd00f1e532a05323e47463d14a72cdb5c5c25",
+            "candidate_size": 220,
+            "candidate_unrelocated_sha256": "ac0d35215a72ca2448587775312ebc6bc66038f0ad996c6806b231e5c51e6f08",
+            "execution": {
+              "name": "fn_005ea170",
+              "cases": 256,
+              "terminal_assertions": 43,
+              "pass": true,
+              "native_instructions_visited": 80
+            },
+            "strict_result": {
+              "name": "fn_005ea170",
+              "address": "0x5ea170",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          },
+          {
+            "name": "fn_005ea250",
+            "address": "0x5ea250",
+            "size": 35,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "void(Record*)",
+            "semantic_review": "Free temporary list only if head differs from shared list head; save next before free. Native35bytes/fixups exact.",
+            "layout_codegen_review": "Pointer comparison is head identity, not membership search. Counts and shared root unchanged. Poisoned free records cover lifetime behavior.",
+            "native_sha256": "c196cf184fe5fbc338124bb12de714a3b2cf779142e2819c924d5be2be42944a",
+            "candidate_size": 35,
+            "candidate_unrelocated_sha256": "a9dbebadc0848f8946c3929e35ec0bc6651031e0fafd4e71a79af8f7e6396c14",
+            "execution": {
+              "name": "fn_005ea250",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 15
+            },
+            "strict_result": {
+              "name": "fn_005ea250",
+              "address": "0x5ea250",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          },
+          {
+            "name": "fn_005ea280",
+            "address": "0x5ea280",
+            "size": 390,
+            "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+            "body_attempt_complete": true,
+            "native_abi": "Record*(Statement*,SInt32*count)",
+            "semantic_review": "Statementkind3 creates one label record;kind15 optionally analyzes target expression when option/current context/expressionflags12 permit. All targets must be nonnull kind62 and payload nonnull; build reversed24-byte list/count, dispose all analysis pairs. Fallback aliases shared root/count. Invalidkind asserts387; null targetpayload asserts356.",
+            "layout_codegen_review": "Output initialized only on selected paths. Terminal assertions exclude unreachable undefined return. Analysis pair next0/expr4 and label records zeroed before linking; source restores temporary list freeing order. Generic target analysis/free-pair contracts explicitly modeled. All valid source paths reviewed; native stack/reload/epilogue arrangement differs.",
+            "native_sha256": "650dac7e1417a41a3747eb4031e006043f1812ea561395db1310bfe5a98c2f04",
+            "candidate_size": 374,
+            "candidate_unrelocated_sha256": "c14133b3e8aadadc87e3568dcffa785386018a983c90229e8c86bab6b88045a7",
+            "execution": {
+              "name": "fn_005ea280",
+              "cases": 256,
+              "terminal_assertions": 40,
+              "pass": true,
+              "native_instructions_visited": 126
+            },
+            "strict_result": {
+              "name": "fn_005ea280",
+              "address": "0x5ea280",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          }
+        ],
+        "data": {
+          "owned": [
+            {
+              "name": "_translatorFilename",
+              "section": ".data",
+              "size": 18,
+              "method": "named binding",
+              "address": "0x006b4ba8",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_4",
+              "section": ".rdata",
+              "size": 32,
+              "method": "resolved function reference (anonymous section)",
+              "address": "0x00657494",
+              "bytes_exact": true,
+              "target_section": ".rdata",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_5",
+              "section": ".rdata",
+              "size": 32,
+              "method": "resolved function reference (anonymous section)",
+              "address": "0x006574b4",
+              "bytes_exact": true,
+              "target_section": ".rdata",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_10",
+              "section": ".rdata",
+              "size": 48,
+              "method": "resolved function reference (anonymous section)",
+              "unresolved": "no established retail address"
+            },
+            {
+              "name": "_translatorLabels",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x006eac60",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_translatorLabelCount",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x006eac64",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "verified_bytes": 90,
+          "complete": false,
+          "native_tables": [
+            {
+              "address": "0x657494",
+              "size": 32,
+              "owner": "0x5e9f60",
+              "payload_sha256": "68582fac7d61ff9fe855e49b0ecc08eafe1e3f8c21bc9e743b78f3fa8b64a11d",
+              "target_entries": [
+                "0x5e9fb2",
+                "0x5e9fba",
+                "0x5e9fc9",
+                "0x5e9fc2",
+                "0x5e9fc9",
+                "0x5e9fc9",
+                "0x5e9fc9",
+                "0x5e9fc9"
+              ]
+            },
+            {
+              "address": "0x6574b4",
+              "size": 32,
+              "owner": "0x5e9f60",
+              "payload_sha256": "3e23cee89d47e4101f3c89361375bb948f84eed40c29fc0f77fda2921fac1bb8",
+              "target_entries": [
+                "0x5e9f87",
+                "0x5e9f8f",
+                "0x5e9fc9",
+                "0x5e9f97",
+                "0x5e9fc9",
+                "0x5e9fc9",
+                "0x5e9fc9",
+                "0x5e9fc9"
+              ]
+            },
+            {
+              "address": "0x6574d4",
+              "size": 48,
+              "owner": "0x5ea080",
+              "payload_sha256": "d8db1d1efd8b75c7f944307120e8a3d5707844ce906dba210808c56e06015b18",
+              "target_entries": [
+                "0x5ea13c",
+                "0x5ea13c",
+                "0x5ea13c",
+                "0x5ea13c",
+                "0x5ea146",
+                "0x5ea15a",
+                "0x5ea15a",
+                "0x5ea15a",
+                "0x5ea13c",
+                "0x5ea13c",
+                "0x5ea13c",
+                "0x5ea0cc"
+              ]
+            }
+          ],
+          "private_state": "Root6eac60 andcount6eac64 all relocated references are within this cluster; both common4-byte definitions verified in BSS. Adjacent6eac68.. is separate CleanUpIR scratch.",
+          "shared_state": "Allocator pointer6b4ba0 initially46c5e0, overridden/restored by547a80; free pointer6b4ba4 initiallyempty callback5ea630, also used throughout CleanUpIR. Both remain external; initial data ownership unproved. Labels716cc8/currentcontext7102c4/option70f240 remain external.",
+          "generated": "Two32-byte conversion tables exact through automatic reference/payload/fixup matching;48-byte statement dispatch attempted and unresolved, no forced binding."
+        },
+        "membership": {
+          "supported_members": 8,
+          "native_code_bytes": 1137,
+          "all_supported_entries_attempted": true,
+          "physical_original_membership_proven": false,
+          "native": {
+            "functions": [
+              {
+                "name": "fn_005e9f60",
+                "address": "0x5e9f60",
+                "size": 108,
+                "boundary": false,
+                "next_entry": "0x5e9fd0",
+                "gap_hex": "90909090",
+                "calls": [
+                  {
+                    "site": "0x5e9f6b",
+                    "target": "0x454260"
+                  },
+                  {
+                    "site": "0x5e9f88",
+                    "target": "0x4d9030"
+                  },
+                  {
+                    "site": "0x5e9f90",
+                    "target": "0x4d9080"
+                  },
+                  {
+                    "site": "0x5e9f98",
+                    "target": "0x4d90d0"
+                  },
+                  {
+                    "site": "0x5e9fb3",
+                    "target": "0x4d9050"
+                  },
+                  {
+                    "site": "0x5e9fbb",
+                    "target": "0x4d90a0"
+                  },
+                  {
+                    "site": "0x5e9fc3",
+                    "target": "0x4d90e0"
+                  }
+                ],
+                "returns": [
+                  [
+                    "0x5e9fcb",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005e9fd0",
+                "address": "0x5e9fd0",
+                "size": 5,
+                "boundary": false,
+                "next_entry": "0x5e9fe0",
+                "gap_hex": "9090909090909090909090",
+                "calls": [],
+                "returns": [
+                  [
+                    "0x5e9fd4",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005e9fe0",
+                "address": "0x5e9fe0",
+                "size": 103,
+                "boundary": false,
+                "next_entry": "0x5ea050",
+                "gap_hex": "909090909090909090",
+                "calls": [
+                  {
+                    "site": "0x5ea037",
+                    "target": "0x454c20"
+                  }
+                ],
+                "returns": [
+                  [
+                    "0x5ea000",
+                    ""
+                  ],
+                  [
+                    "0x5ea02c",
+                    ""
+                  ],
+                  [
+                    "0x5ea034",
+                    ""
+                  ],
+                  [
+                    "0x5ea046",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005ea050",
+                "address": "0x5ea050",
+                "size": 44,
+                "boundary": false,
+                "next_entry": "0x5ea080",
+                "gap_hex": "90909090",
+                "calls": [],
+                "returns": [
+                  [
+                    "0x5ea07b",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005ea080",
+                "address": "0x5ea080",
+                "size": 232,
+                "boundary": false,
+                "next_entry": "0x5ea170",
+                "gap_hex": "9090909090909090",
+                "calls": [
+                  {
+                    "site": "0x5ea0a4",
+                    "target": "0x45a250"
+                  },
+                  {
+                    "site": "0x5ea153",
+                    "target": "0x55bf70"
+                  }
+                ],
+                "returns": [
+                  [
+                    "0x5ea167",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005ea170",
+                "address": "0x5ea170",
+                "size": 220,
+                "boundary": false,
+                "next_entry": "0x5ea250",
+                "gap_hex": "90909090",
+                "calls": [
+                  {
+                    "site": "0x5ea1a9",
+                    "target": "0x455840"
+                  },
+                  {
+                    "site": "0x5ea1ff",
+                    "target": "0x45a250"
+                  }
+                ],
+                "returns": [
+                  [
+                    "0x5ea20c",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005ea250",
+                "address": "0x5ea250",
+                "size": 35,
+                "boundary": false,
+                "next_entry": "0x5ea280",
+                "gap_hex": "90909090909090909090909090",
+                "calls": [],
+                "returns": [
+                  [
+                    "0x5ea272",
+                    ""
+                  ]
+                ]
+              },
+              {
+                "name": "fn_005ea280",
+                "address": "0x5ea280",
+                "size": 390,
+                "boundary": false,
+                "next_entry": "0x5ea410",
+                "gap_hex": "90909090909090909090",
+                "calls": [
+                  {
+                    "site": "0x5ea2d3",
+                    "target": "0x4a6c00"
+                  },
+                  {
+                    "site": "0x5ea376",
+                    "target": "0x4c5330"
+                  },
+                  {
+                    "site": "0x5ea3da",
+                    "target": "0x45a250"
+                  },
+                  {
+                    "site": "0x5ea3fa",
+                    "target": "0x45a250"
+                  }
+                ],
+                "returns": [
+                  [
+                    "0x5ea32b",
+                    ""
+                  ]
+                ]
+              }
+            ],
+            "calls": [
+              {
+                "caller": "0x547a80",
+                "site": "0x547d42",
+                "target": "0x5ea080",
+                "kind": "call"
+              },
+              {
+                "caller": "0x547a80",
+                "site": "0x547e5c",
+                "target": "0x5ea050",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f6b",
+                "target": "0x454260",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f88",
+                "target": "0x4d9030",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f8d",
+                "target": "0x5e9fc8",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f90",
+                "target": "0x4d9080",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f95",
+                "target": "0x5e9fc8",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f98",
+                "target": "0x4d90d0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9f9d",
+                "target": "0x5e9fc8",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9fb3",
+                "target": "0x4d9050",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9fb8",
+                "target": "0x5e9fc8",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9fbb",
+                "target": "0x4d90a0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9fc0",
+                "target": "0x5e9fc8",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5e9f60",
+                "site": "0x5e9fc3",
+                "target": "0x4d90e0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5e9fe0",
+                "site": "0x5ea037",
+                "target": "0x454c20",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea080",
+                "site": "0x5ea0a4",
+                "target": "0x45a250",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea080",
+                "site": "0x5ea13a",
+                "target": "0x5ea153",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea080",
+                "site": "0x5ea144",
+                "target": "0x5ea153",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea080",
+                "site": "0x5ea153",
+                "target": "0x55bf70",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea170",
+                "site": "0x5ea1a9",
+                "target": "0x455840",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea170",
+                "site": "0x5ea1ff",
+                "target": "0x45a250",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea170",
+                "site": "0x5ea24a",
+                "target": "0x5ea206",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea2d3",
+                "target": "0x4a6c00",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea302",
+                "target": "0x5ea35c",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea355",
+                "target": "0x5ea322",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea376",
+                "target": "0x4c5330",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea383",
+                "target": "0x5ea309",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea3cb",
+                "target": "0x5ea363",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea3da",
+                "target": "0x45a250",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea3e1",
+                "target": "0x5ea3a2",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea3e8",
+                "target": "0x5ea309",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea3fa",
+                "target": "0x45a250",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea280",
+                "site": "0x5ea401",
+                "target": "0x5ea322",
+                "kind": "jmp"
+              },
+              {
+                "caller": "0x5ea4d0",
+                "site": "0x5ea4dd",
+                "target": "0x5e9f60",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5ea8bb",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eac3e",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eb1d8",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eb259",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eb42c",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eb69c",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ea7f0",
+                "site": "0x5eb744",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5eba10",
+                "site": "0x5ebb92",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebbe0",
+                "site": "0x5ebd62",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebe31",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebe6c",
+                "target": "0x5e9fe0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebe80",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebe97",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebebe",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebdb0",
+                "site": "0x5ebed6",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebf00",
+                "site": "0x5ebf71",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ebf00",
+                "site": "0x5ebfdc",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec010",
+                "site": "0x5ec052",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec010",
+                "site": "0x5ec0b1",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec010",
+                "site": "0x5ec0f1",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec120",
+                "site": "0x5ec13f",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec120",
+                "site": "0x5ec1c1",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec238",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec2a1",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec2dc",
+                "target": "0x5e9fe0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec2f8",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec346",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec376",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec3a0",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec220",
+                "site": "0x5ec3ba",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec3f0",
+                "site": "0x5ec3fe",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec3f0",
+                "site": "0x5ec4ae",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec530",
+                "site": "0x5ec550",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec530",
+                "site": "0x5ec5b9",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec530",
+                "site": "0x5ec623",
+                "target": "0x5e9fd0",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec910",
+                "site": "0x5eca54",
+                "target": "0x5ea280",
+                "kind": "call"
+              },
+              {
+                "caller": "0x5ec910",
+                "site": "0x5ecb04",
+                "target": "0x5ea250",
+                "kind": "call"
+              }
+            ],
+            "relocated_references": [
+              {
+                "site": "0x547cd7",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x547a80"
+              },
+              {
+                "site": "0x547ce0",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x547a80"
+              },
+              {
+                "site": "0x547e65",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x547a80"
+              },
+              {
+                "site": "0x5ea051",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea050"
+              },
+              {
+                "site": "0x5ea065",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ea050"
+              },
+              {
+                "site": "0x5ea073",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea050"
+              },
+              {
+                "site": "0x5ea089",
+                "target": "0x6eac64",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea093",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea0a0",
+                "target": "0x6b4ba8",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea103",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea119",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea121",
+                "target": "0x6eac64",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea128",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea133",
+                "target": "0x5ea170",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea13d",
+                "target": "0x5ea170",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea14e",
+                "target": "0x5ea170",
+                "section": ".text",
+                "containing_function": "0x5ea080"
+              },
+              {
+                "site": "0x5ea1c2",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea1d8",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea1e0",
+                "target": "0x6eac64",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea1e7",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea1fb",
+                "target": "0x6b4ba8",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea21e",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea237",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea23f",
+                "target": "0x6eac64",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea246",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea170"
+              },
+              {
+                "site": "0x5ea257",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea250"
+              },
+              {
+                "site": "0x5ea266",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ea250"
+              },
+              {
+                "site": "0x5ea312",
+                "target": "0x6eac64",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea31c",
+                "target": "0x6eac60",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea334",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea3a6",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea3d6",
+                "target": "0x6b4ba8",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea3f6",
+                "target": "0x6b4ba8",
+                "section": ".text",
+                "containing_function": "0x5ea280"
+              },
+              {
+                "site": "0x5ea786",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ea640"
+              },
+              {
+                "site": "0x5eb4a9",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea7f0"
+              },
+              {
+                "site": "0x5eb4dd",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ea7f0"
+              },
+              {
+                "site": "0x5eb634",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ea7f0"
+              },
+              {
+                "site": "0x5eb813",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ea7f0"
+              },
+              {
+                "site": "0x5ec24d",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec220"
+              },
+              {
+                "site": "0x5ec6e7",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec6b0"
+              },
+              {
+                "site": "0x5ec6f6",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec6b0"
+              },
+              {
+                "site": "0x5ec6fe",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec6b0"
+              },
+              {
+                "site": "0x5ec837",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec6b0"
+              },
+              {
+                "site": "0x5ec856",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec6b0"
+              },
+              {
+                "site": "0x5ec8c9",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec8a0"
+              },
+              {
+                "site": "0x5ec8d8",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec8a0"
+              },
+              {
+                "site": "0x5ec8e0",
+                "target": "0x6b4ba4",
+                "section": ".text",
+                "containing_function": "0x5ec8a0"
+              },
+              {
+                "site": "0x5ec9f4",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5eca86",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5ecb23",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5ecc04",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5eccc5",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5ecd7e",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5ece8a",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5eceda",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ec910"
+              },
+              {
+                "site": "0x5ed019",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ecfe0"
+              },
+              {
+                "site": "0x5ed0eb",
+                "target": "0x6b4ba0",
+                "section": ".text",
+                "containing_function": "0x5ed0e0"
+              },
+              {
+                "site": "0x657494",
+                "target": "0x5e9fb2",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x657498",
+                "target": "0x5e9fba",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x65749c",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574a0",
+                "target": "0x5e9fc2",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574a4",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574a8",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574ac",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574b0",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574b4",
+                "target": "0x5e9f87",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574b8",
+                "target": "0x5e9f8f",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574bc",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574c0",
+                "target": "0x5e9f97",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574c4",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574c8",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574cc",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574d0",
+                "target": "0x5e9fc9",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574d4",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574d8",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574dc",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574e0",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574e4",
+                "target": "0x5ea146",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574e8",
+                "target": "0x5ea15a",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574ec",
+                "target": "0x5ea15a",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574f0",
+                "target": "0x5ea15a",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574f4",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574f8",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x6574fc",
+                "target": "0x5ea13c",
+                "section": ".rdata",
+                "containing_function": null
+              },
+              {
+                "site": "0x657500",
+                "target": "0x5ea0cc",
+                "section": ".rdata",
+                "containing_function": null
+              }
+            ],
+            "original_filename": {
+              "address": "0x6b4ba8",
+              "payload": "5472616e736c61746f725574696c732e6300"
+            },
+            "allocator_pointer": {
+              "address": "0x6b4ba0",
+              "payload": "e0c54600"
+            },
+            "free_pointer": {
+              "address": "0x6b4ba4",
+              "payload": "30a65e00"
+            },
+            "csv_candidates": [],
+            "limits": "Membership from filename, code/data reference and native helper roles; physical original object ownership unproved. Prefix CRTTI and suffix CleanUpIR separate."
+          },
+          "prefix": "5e9e60 completes separately audited CRTTI hierarchy/typeinfo family; excluded. Three unasserted conversion/identity/equality helpers fit shared IR translation roles and contiguous native utility cluster, but original physical owner remains inferred.",
+          "suffix": "5ea410..5ea640 are new-label/statement/location constructors and CleanUpIR driver; later bodies assert CleanUpIR.c6b4bbc and use distinct scratch6eac68+. Excluded. Emptyfreecallback5ea630 is referenced by shared callback pointer, separately native-bounded1byte ret and independently exact source attempt; original physical owner unknown, not absorbed.",
+          "held_free_callback_attempt": {
+            "source": "build/TranslatorUtils/held-free-callback.c",
+            "compiler": "cw94",
+            "profile": "translatorutils-held-free-callback",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-held-free-callback\\build\\TranslatorUtils\\held-free-callback.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/TranslatorUtils/held-free-callback.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-held-free-callback\\build\\TranslatorUtils\\held-free-callback.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 1,
+            "functions": [
+              {
+                "name": "fn_005ea630",
+                "address": "0x5ea630",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\translatorutils-held-free-callback\\build\\TranslatorUtils\\held-free-callback.c\\compiled.obj",
+            "source_sha256": "6e7d3830061174ffb3e44e669cdd3b151306e8e4451a17c011360767e88e0016",
+            "source_stable": true,
+            "exact_count": 1,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          "symbols": "No corroborated supplied CSV or ordinary Mac member names found; all8 retain address names. No old source, active address or definition collision; no aliases changed.",
+          "entry_proof": "All8saved entries, complete native CFG and NOP gaps. Whole-image calls, relocated entry/filename/private-state references retained; no unexplored interior callback start.",
+          "limits": "Native filename proves three anchored members; complete unavailable original object contribution is not established."
+        },
+        "execution": {
+          "source": "build/TranslatorUtils/TranslatorUtils.c",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "object": "build/GC_3_0a5_2/tu-sweep/translatorutils-cw94-speed/build/TranslatorUtils/TranslatorUtils.c/compiled.obj",
+          "object_sha256": "5660e53c7c47f01418959cf2ed639bb5413a0bc6ea0d753803185e28b2b15bf6",
+          "total_cases": 2048,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 40
+            },
+            {
+              "name": "fn_005e9fd0",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 2
+            },
+            {
+              "name": "fn_005e9fe0",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 47
+            },
+            {
+              "name": "fn_005ea050",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 15
+            },
+            {
+              "name": "fn_005ea080",
+              "cases": 256,
+              "terminal_assertions": 16,
+              "pass": true,
+              "native_instructions_visited": 78
+            },
+            {
+              "name": "fn_005ea170",
+              "cases": 256,
+              "terminal_assertions": 43,
+              "pass": true,
+              "native_instructions_visited": 80
+            },
+            {
+              "name": "fn_005ea250",
+              "cases": 256,
+              "terminal_assertions": 0,
+              "pass": true,
+              "native_instructions_visited": 15
+            },
+            {
+              "name": "fn_005ea280",
+              "cases": 256,
+              "terminal_assertions": 40,
+              "pass": true,
+              "native_instructions_visited": 126
+            }
+          ],
+          "method": "Actual original and independently relocated whole candidate COFF instructions; actual native recursive tree walker55bf70, integer unsigned predicate454260/4e2300 and six integer conversion helpers. Bounded allocation/free, type/context equality and target-analysis service contracts. Compare all fixture/heap bytes including allocation padding, both private globals, ordered service events, return value/AL, ESP and callee-saved registers. Terminal assertions stop both runs.",
+          "limits": "Finite valid-layout domains, linked lists0..5 and statement chains0..5; not unrestricted compiler equivalence. Equality and target analysis modeled. No defined heap/global field masks; only undefined return upper bits and void results excluded."
+        },
+        "normal_project": {
+          "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+          "source_sha256": "c7d2d0c8cb2278cb802072f5080dccac5286dcfaf9441cc0fa3651fb236a1e82",
+          "candidate_project_sections_sha256": "08afb9cf3584bddc1d071c7aed12096f85debb6ee94a3d5b384a9da4a3fe2861",
+          "all_code_and_data_sections_equal": true,
+          "common_symbols_equal": true,
+          "checked_functions": 8,
+          "resolved_functions": 7,
+          "functions": [
+            {
+              "name": "fn_005e9f60",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005e9fd0",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005e9fe0",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005ea050",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005ea080",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": false
+            },
+            {
+              "name": "fn_005ea170",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005ea250",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            },
+            {
+              "name": "fn_005ea280",
+              "raw_function_bytes_and_relocations_equal": true,
+              "fully_resolved": true
+            }
+          ],
+          "owned_data_verified_bytes": 90,
+          "owned_data": [
+            {
+              "name": "_translatorFilename",
+              "section": ".data",
+              "size": 18,
+              "method": "named binding",
+              "address": "0x006b4ba8",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_4",
+              "section": ".rdata",
+              "size": 32,
+              "method": "resolved function reference (anonymous section)",
+              "address": "0x00657494",
+              "bytes_exact": true,
+              "target_section": ".rdata",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_5",
+              "section": ".rdata",
+              "size": 32,
+              "method": "resolved function reference (anonymous section)",
+              "address": "0x006574b4",
+              "bytes_exact": true,
+              "target_section": ".rdata",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_translatorLabels",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x006eac60",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_translatorLabelCount",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x006eac64",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "remaining_unresolved_data_records": 1
+        }
+      },
+      "encoding": "Strict CP932 passed; repository tools/check_sjis.py is absent.",
+      "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 8,
+        "attempted_members": 8,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All8supported native bodies reconstructed/reviewed,7final compiler profiles and9focused source forms;2048bounded original/candidate instruction comparisons pass, including actual recursive tree walker,unsigned predicate andinteger conversion helpers. Four strict matches90owned bytes. All normal code/data/common symbols/relocations equal frozen candidate. Full GC3 build,whole-TU objdiff-cli,image partition and strict CP932 passed. One48-byte switch andfour bodies remain nonmatching; physical original membership unproved. Shared no-op callback separately exact and held."
+      },
+      "integration_review": {
+        "aliases": "No active address/C-name collision or legacy change; no global aliases changed.",
+        "physical_membership": "Native filename anchors3members. Three preceding shared conversion/type helpers and two lifecycle helpers support a logical8-entry family, while complete original object contribution remains unproved.",
+        "data": "Own18-byte filename,64bytes exact conversion switches andtwo4-byte BSS definitions. Shared allocator/free-pointer data and all CleanUpIR scratch remain external. No anonymous switch identity forced.",
+        "normal_project_checks": {
+          "ninja_all_source_progress": true,
+          "strict_exact_total": 978,
+          "mapped_total": 2215,
+          "objdiff_cli": true,
+          "inventory_partition": true,
+          "ownership_conflicts": 0,
+          "encoding": "Strict CP932 passed; tools/check_sjis.py absent."
         }
       }
     }

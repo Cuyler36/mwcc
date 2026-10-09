@@ -5370,5 +5370,81 @@
   "fn_005ed0e0": {
     "name": "fn_005ed0e0",
     "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ea410": {
+    "name": "fn_005ea410",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea430": {
+    "name": "fn_005ea430",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea470": {
+    "name": "fn_005ea470",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea4a0": {
+    "name": "fn_005ea4a0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea4d0": {
+    "name": "fn_005ea4d0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea520": {
+    "name": "fn_005ea520",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea570": {
+    "name": "fn_005ea570",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea640": {
+    "name": "fn_005ea640",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ea7f0": {
+    "name": "fn_005ea7f0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005eb890": {
+    "name": "fn_005eb890",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005eba10": {
+    "name": "fn_005eba10",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ebbe0": {
+    "name": "fn_005ebbe0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ebdb0": {
+    "name": "fn_005ebdb0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ebf00": {
+    "name": "fn_005ebf00",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ec010": {
+    "name": "fn_005ec010",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ec120": {
+    "name": "fn_005ec120",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ec220": {
+    "name": "fn_005ec220",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ec3f0": {
+    "name": "fn_005ec3f0",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "fn_005ec530": {
+    "name": "fn_005ec530",
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
   }
 }

@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 262 source files build, 2,311 candidate functions are
-mapped, and 1,000 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 263 source files build, 2,330 candidate functions are
+mapped, and 1,004 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,14 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+CleanUpIR has all 19 supported members attempted, with four exact matches.
+The integer constructor uses the native eight-byte by-value argument. Eleven
+final Metrowerks profiles, 42 historical attempts and six MSVC compatibility
+profiles were tested; 1,200 bounded native comparisons pass. CW94 noinline/nocse
+reaches 61.98% weighted objdiff. Its filename and private state total 29 verified
+bytes; four generated tables totaling 540 bytes remain unclaimed, leaving two
+function projections unresolved. Original physical TU extent remains unproved.
 
 IRFlowgraph has all six supported members attempted, with four exact matches.
 Ten compiler profiles and 21 source forms were tested; 2,304 bounded native

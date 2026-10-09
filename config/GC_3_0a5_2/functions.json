@@ -25690,6 +25690,215 @@
     }
   },
   {
+    "name": "fn_005ea410",
+    "address": "0x5ea410",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea430",
+    "address": "0x5ea430",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea470",
+    "address": "0x5ea470",
+    "size": 45,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea4a0",
+    "address": "0x5ea4a0",
+    "size": 37,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea4d0",
+    "address": "0x5ea4d0",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea520",
+    "address": "0x5ea520",
+    "size": 67,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea570",
+    "address": "0x5ea570",
+    "size": 190,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea640",
+    "address": "0x5ea640",
+    "size": 425,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ea7f0",
+    "address": "0x5ea7f0",
+    "size": 4255,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005eb890",
+    "address": "0x5eb890",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005eba10",
+    "address": "0x5eba10",
+    "size": 451,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ebbe0",
+    "address": "0x5ebbe0",
+    "size": 451,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ebdb0",
+    "address": "0x5ebdb0",
+    "size": 328,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ebf00",
+    "address": "0x5ebf00",
+    "size": 257,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec010",
+    "address": "0x5ec010",
+    "size": 270,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec120",
+    "address": "0x5ec120",
+    "size": 246,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec220",
+    "address": "0x5ec220",
+    "size": 449,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec3f0",
+    "address": "0x5ec3f0",
+    "size": 318,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec530",
+    "address": "0x5ec530",
+    "size": 369,
+    "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
+    "identity_evidence": "Asserted native CleanUpIR.c filename,complete statement/expression extraction family,private-state lifecycle,caller/callee/entry andsaved CFG review;unsupported canonical names retain address identities.",
+    "boundary_evidence": {
+      "method": "Complete saved reachable CFG andwhole-image references;TranslatorUtils prefix,sharedno-op5ea630 andIRFlowgraph suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_005ec6b0",
     "address": "0x5ec6b0",
     "size": 496,

@@ -192,6 +192,10 @@ versions with private Ninja files and objdiff report projects, preserving the
 active build and objdiff view throughout. Imported helper groups whose original
 source is unresolved appear under `provisional`.
 
+Generated C++ initializer pointers retain a `.CRT` data view. An anonymous
+startup allocation is attributed only when its mapped initializer entries,
+full payload and loader fixups identify one original CRT allocation.
+
 Supported versions:
 
 - `GC_1_2_5`: GameCube 1.2.5

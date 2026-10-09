@@ -407,6 +407,90 @@ class BoundTableLiteralTests(unittest.TestCase):
         self.assertNotIn((0x2300, 0x2304), claims)
 
 
+class CRTInitializerTests(unittest.TestCase):
+    def fixture(self, invalid=None):
+        class CRTImage(Image):
+            def section_for_address(self, address):
+                if 0x2000 <= address < 0x3000:
+                    return SimpleNamespace(name='.data' if invalid == 'category' else '.CRT',
+                                           virtual_address=0x2000,
+                                           virtual_size=2 if invalid == 'bounds' else 0x1000,
+                                           file_offset=0x2000, file_size=0x1000,
+                                           characteristics=0xc0000040)
+                raise ValueError('outside CRT')
+        pe = CRTImage(b'')
+        symbols = {0: dict(name='_initializer', section=1, value=0, type=0x20, storage=2),
+                   1: dict(name='.text', section=1, value=0, type=0, storage=3),
+                   2: dict(name='.CRT$XCU', section=2, value=0, type=0, storage=3)}
+        sections = [dict(name='.text', data=b'\xc3\xc3', relocs=[], code=True, flags=0x60000020),
+                    dict(name='.CRT$XCU', data=bytes(4), relocs=[(0, 1, 6)],
+                         code=False, flags=0xc0300040)]
+        pe.data[0x1000:0x1002] = b'\xc3\xc3'
+        struct.pack_into('<I', pe.data, 0x2000, 0x1000)
+        rows = [dict(symbol='_initializer', address=0x1000, size=2)]
+        fixups = {0x2000}
+        if invalid == 'ambiguous':
+            struct.pack_into('<I', pe.data, 0x2010, 0x1000)
+            fixups.add(0x2010)
+        elif invalid == 'missing_fixup':
+            fixups.clear()
+        elif invalid == 'extra_fixup':
+            fixups.add(0x2001)
+        elif invalid == 'interior_entry':
+            sections[1]['data'] = struct.pack('<I', 1)
+            struct.pack_into('<I', pe.data, 0x2000, 0x1001)
+        elif invalid == 'wrong_pointer':
+            struct.pack_into('<I', pe.data, 0x2000, 0x1100)
+        elif invalid == 'relocation_kind':
+            sections[1]['relocs'] = [(0, 1, 7)]
+        elif invalid == 'unmapped_entry':
+            rows = []
+        elif invalid == 'ordinary_data':
+            sections[1]['name'] = '.data'
+        elif invalid == 'two_entries':
+            symbols[3] = dict(name='_second', section=1, value=1, type=0x20, storage=2)
+            rows = [dict(symbol='_initializer', address=0x1000, size=1),
+                    dict(symbol='_second', address=0x1100, size=1)]
+            sections[1]['data'] = struct.pack('<2I', 0, 1)
+            sections[1]['relocs'].append((4, 1, 6))
+            struct.pack_into('<I', pe.data, 0x2004, 0x1100)
+            fixups.add(0x2004)
+        claims, written = [], []
+        def config_read(path, *args, **kwargs):
+            return '[]' if path.name == 'functions.json' else '{}'
+        with patch.object(Path, 'read_text', config_read), \
+                patch.object(Path, 'write_text', lambda self, text: written.append(text)), \
+                patch.object(Path, 'mkdir'), patch('compare.version_config', return_value={}), \
+                patch('compare.base_relocations', return_value=fixups):
+            target, base, complete = source_data('test', 'source.cpp', rows, symbols, sections, pe, claims)
+        return complete, claims, __import__('json').loads(written[-1]), target, base
+
+    def test_unique_initializer_pointer_is_attributed_and_keeps_crt_section(self):
+        complete, claims, evidence, target, base = self.fixture()
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000, 0x2004)])
+        self.assertEqual(target[0]['name'], '.CRT')
+        self.assertEqual(base[0]['name'], '.CRT')
+        self.assertEqual(target[0]['data'], base[0]['data'])
+        self.assertEqual(evidence[0]['method'], 'unique relocated CRT initializer entries')
+
+    def test_all_initializer_entries_must_match(self):
+        complete, claims, _, target, base = self.fixture('two_entries')
+        self.assertTrue(complete)
+        self.assertEqual(claims, [(0x2000, 0x2008)])
+        self.assertEqual(target[0]['data'], base[0]['data'])
+
+    def test_ambiguous_or_incomplete_identity_stays_unassigned(self):
+        for invalid in ['ambiguous', 'missing_fixup', 'extra_fixup', 'interior_entry',
+                        'wrong_pointer', 'relocation_kind', 'unmapped_entry', 'ordinary_data',
+                        'category', 'bounds']:
+            with self.subTest(invalid=invalid):
+                complete, claims, _, target, _ = self.fixture(invalid)
+                self.assertFalse(complete)
+                self.assertFalse(claims)
+                self.assertFalse(target)
+
+
 class MixedTableLiteralTests(unittest.TestCase):
     def fixture(self, invalid=None):
         class MixedImage(Image):

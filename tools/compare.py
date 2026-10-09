@@ -354,6 +354,37 @@ def table_literal_references(symbols, sections, pe, addresses, references, fixup
     return inferred
 
 
+def crt_initializer_location(section, symbols, code_ranges, pe, fixups, body, unresolved):
+    """Locate a unique CRT pointer allocation through its mapped initializer entries."""
+    if (section['name'] != '.CRT$XCU' or not body or len(body) % 4 or unresolved
+            or len(section['relocs']) != len(body) // 4):
+        return None
+    offsets = set()
+    for offset, symbol_index, kind in section['relocs']:
+        if kind != 6 or offset % 4 or not 0 <= offset <= len(body) - 4 or offset in offsets:
+            return None
+        reference = symbols[symbol_index]
+        addend = struct.unpack_from('<I', section['data'], offset)[0]
+        entries = {address for sec, begin, end, address in code_ranges
+                   if reference['section'] == sec and reference['value'] + addend == begin}
+        if len(entries) != 1 or struct.unpack_from('<I', body, offset)[0] != next(iter(entries)):
+            return None
+        offsets.add(offset)
+    candidates = set()
+    for location in fixups:
+        try:
+            retail = pe.section_for_address(location)
+            if (retail.name != '.CRT' or (location - retail.virtual_address) % 4
+                    or location + len(body) > retail.virtual_address + retail.virtual_size
+                    or pe.read(location, len(body)) != body):
+                continue
+            if {f - location for f in fixups if location <= f < location + len(body)} == offsets:
+                candidates.add(location)
+        except ValueError:
+            continue
+    return next(iter(candidates)) if len(candidates) == 1 else None
+
+
 def source_data(version, source, rows, symbols, sections, pe, claims):
     """Expose compiled data; attribute retail data only through names or resolved references."""
     addresses = {k: int(v, 0) for k, v in json.loads(Path(f"config/{version}/bindings.json").read_text()).items()}
@@ -417,8 +448,10 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
         flags = section["flags"]
         if section["code"] or not flags & (0x40 | 0x80) or section["name"].startswith(('.debug', '.stab')):
             continue
-        category = ".bss" if flags & 0x80 else ".data" if flags & 0x80000000 else ".rdata"
-        normalized_flags = {".rdata": 0x40000040, ".data": 0xc0000040, ".bss": 0xc0000080}[category]
+        category = ('.CRT' if section['name'] == '.CRT$XCU' else
+                    ".bss" if flags & 0x80 else ".data" if flags & 0x80000000 else ".rdata")
+        normalized_flags = ({".rdata": 0x40000040, ".data": 0xc0000040, ".bss": 0xc0000080}.get(category)
+                            or (0xc0000040 if flags & 0x80000000 else 0x40000040))
         output = base.setdefault(category, dict(name=category, data=bytearray(), symbols=[], flags=normalized_flags))
         start = len(output["data"])
         body = bytearray(section["data"])
@@ -454,8 +487,15 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
             # section symbol. Both are anonymous COFF-local evidence; subtract
             # the label's offset to recover the allocated section's base.
             locations = {a - s['value'] for i, s in section_symbols for a in references[i]}
+            crt_location = None
+            if not locations:
+                crt_location = crt_initializer_location(section, symbols, code_ranges, pe,
+                                                        fixups, body, unresolved_relocations)
+                if crt_location is not None:
+                    locations.add(crt_location)
             definitions = [dict(name=f'__anonymous_section_{index}', value=0,
-                                symbol_index=None, anonymous_location=next(iter(locations)) if len(locations) == 1 else None)]
+                                symbol_index=None, anonymous_location=next(iter(locations)) if len(locations) == 1 else None,
+                                crt_identity_verified=crt_location is not None)]
         offsets = sorted({s["value"] for s in definitions} | {len(body)})
         if body and (not definitions or definitions[0]["value"] != 0):
             complete = False
@@ -469,7 +509,8 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
                 None if re.fullmatch(r'_?@\d+', name) else addresses.get(name))
             method = 'named binding'
             if anonymous:
-                method = 'resolved function reference (anonymous section)'
+                method = ('unique relocated CRT initializer entries' if symbol.get('crt_identity_verified')
+                          else 'resolved function reference (anonymous section)')
             elif location is None and len(references[symbol_index]) == 1:
                 location = next(iter(references[symbol_index]))
                 method = ('verified bound data table' if symbol_index in table_references

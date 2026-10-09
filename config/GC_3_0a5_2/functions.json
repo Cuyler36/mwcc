@@ -29439,6 +29439,94 @@
     }
   },
   {
+    "name": "fn_0063c1b0",
+    "address": "0x63c1b0",
+    "size": 422,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "serializes",
+    "address": "0x63c360",
+    "size": 20,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "advance_clock",
+    "address": "0x63c380",
+    "size": 1112,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "issue",
+    "address": "0x63c7e0",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "can_issue",
+    "address": "0x63c880",
+    "size": 264,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize",
+    "address": "0x63c990",
+    "size": 171,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "latency",
+    "address": "0x63ca40",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063ca80",
+    "address": "0x63ca80",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "identity_evidence": "Native 750 descriptor, scheduler selection, callers and complete simulator family. Supplied Mac callback/state names corroborated by role; filename inferred from architecture and baseline. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_0063cb00",
     "address": "0x63cb00",
     "size": 406,

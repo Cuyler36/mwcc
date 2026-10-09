@@ -6374,5 +6374,13 @@
   "CMid_Setup": {
     "name": "CMid_Setup",
     "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c"
+  },
+  "fn_0063c1b0": {
+    "name": "fn_0063c1b0",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c"
+  },
+  "fn_0063ca80": {
+    "name": "fn_0063ca80",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c"
   }
 }

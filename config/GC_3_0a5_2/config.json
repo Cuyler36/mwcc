@@ -20,7 +20,6 @@
     "src/backend/Intrinsics.c",
     "src/backend/LiveVariables.c",
     "src/backend/MachineSimulation7400.c",
-    "src/backend/MachineSimulation750.c",
     "src/backend/MachineSimulation821.c",
     "src/backend/ObjGen_PPC_EABI.c",
     "src/backend/Operands.c",
@@ -266,7 +265,8 @@
     "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
     "src/GC_3_0a5_2/backend/MachineSimulation603.c",
     "src/GC_3_0a5_2/frontend/CPrec.c",
-    "src/GC_3_0a5_2/backend/MachineSimulation604.c"
+    "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "src/GC_3_0a5_2/backend/MachineSimulation750.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4462,6 +4462,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation750.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5525,7 +5543,13 @@
     "src/GC_3_0a5_2/frontend/CMiddleLayer/fn_0047cf40",
     "src/GC_3_0a5_2/frontend/CMiddleLayer/fn_0047d080",
     "src/GC_3_0a5_2/frontend/CMiddleLayer/CMid_Cleanup",
-    "src/GC_3_0a5_2/frontend/CMiddleLayer/CMid_Setup"
+    "src/GC_3_0a5_2/frontend/CMiddleLayer/CMid_Setup",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/serializes",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/issue",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/can_issue",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/initialize",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/latency",
+    "src/GC_3_0a5_2/backend/MachineSimulation750/fn_0063ca80"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -11843,6 +11867,28 @@
       "_fn_004587e0@12": "0x4587e0",
       "_fn_00458a70@12": "0x458a70",
       "_fn_00458aa0@12": "0x458aa0"
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation750.c": {
+      "_fn_0063c1b0": "0x63c1b0",
+      "_serializes": "0x63c360",
+      "_advance_clock": "0x63c380",
+      "_issue": "0x63c7e0",
+      "_can_issue": "0x63c880",
+      "_initialize": "0x63c990",
+      "_latency": "0x63ca40",
+      "_fn_0063ca80": "0x63ca80",
+      "_nativeOpcodeTable": "0x6be97c",
+      "_nativeOpcodeOverrides": "0x6bf074",
+      "_machine750": "0x6be94c",
+      "_machine750Initialized": "0x701048",
+      "_machine750Opcodes": "0x701049",
+      "_machine750Display": "0x700ff8",
+      "_completionbuffers": "0x701bea",
+      "_iu2_completed_instruction": "0x701c2a",
+      "_iu1_completed_instruction": "0x701c2e",
+      "_pipeline": "0x701c32",
+      "_machineSharedCode": "0x5994e0",
+      "_fn_00599530": "0x599530"
     }
   },
   "original_source_units": {
@@ -11905,7 +11951,8 @@
     "CException.cpp": "src/GC_3_0a5_2/frontend/CException.cpp",
     "CPrec.c": "src/GC_3_0a5_2/frontend/CPrec.c",
     "MachineSimulation604.c": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
-    "CMiddleLayer.c": "src/GC_3_0a5_2/frontend/CMiddleLayer.c"
+    "CMiddleLayer.c": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "MachineSimulation750.c": "src/GC_3_0a5_2/backend/MachineSimulation750.c"
   },
   "held_native_functions": [
     {

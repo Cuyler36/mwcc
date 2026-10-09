@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 265 source files build, 2,555 candidate functions are
-mapped, and 1,061 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 265 source files build, 2,563 candidate functions are
+mapped, and 1,067 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -26,6 +26,15 @@ All 93 named data bytes agree, with a one-byte empty-string DATA/BSS difference.
 Nine generated switch-table owners remain unresolved. Native driver calling
 conventions, deferred queues and packed expression/inline records are reviewed;
 parser, filesystem and backend service models limit the execution evidence.
+
+MachineSimulation750 has all eight supported functions attempted, with six
+full-byte and relocation matches and 95.27% weighted objdiff similarity. All
+5,279 identified data bytes, categories and fixups match. Twenty-seven compiler
+profiles and 81 source attempts were reviewed; the normal object passes 55,945
+actual native comparisons and covers all 503 nonpadding instructions. The
+native six-slot completion ring, nine pipeline stages, opcode overrides and
+class-four dependency calls are preserved. The historical filename is inferred
+from processor architecture and symbols; original TU extent remains unproved.
 
 EnodeInfoHandler has all four supported native functions exact under CW94,
 including HandleENodeInfo. All 59 bytes of filename, switch-table and BSS

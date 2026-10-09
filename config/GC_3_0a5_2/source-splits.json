@@ -4598,5 +4598,21 @@
   "fn_00621cf0": {
     "name": "initialize_live_registers",
     "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00592f90": {
+    "name": "HandleENodeInfo",
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
+  },
+  "fn_00593050": {
+    "name": "fn_00593050",
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
+  },
+  "fn_00593070": {
+    "name": "fn_00593070",
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
+  },
+  "fn_00593120": {
+    "name": "fn_00593120",
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
   }
 }

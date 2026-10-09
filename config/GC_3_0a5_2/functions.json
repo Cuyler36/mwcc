@@ -21913,6 +21913,50 @@
     }
   },
   {
+    "name": "HandleENodeInfo",
+    "address": "0x592f90",
+    "size": 186,
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+    "identity_evidence": "Native EnodeInfoHandler.c assertions165/170; connected expression-info scope/location call graph and state lifecycle. HandleENodeInfo name corroborated by supplied CSV; unnamed siblings retain native addresses.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00593050",
+    "address": "0x593050",
+    "size": 31,
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+    "identity_evidence": "Native EnodeInfoHandler.c assertions165/170; connected expression-info scope/location call graph and state lifecycle. HandleENodeInfo name corroborated by supplied CSV; unnamed siblings retain native addresses.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00593070",
+    "address": "0x593070",
+    "size": 173,
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+    "identity_evidence": "Native EnodeInfoHandler.c assertions165/170; connected expression-info scope/location call graph and state lifecycle. HandleENodeInfo name corroborated by supplied CSV; unnamed siblings retain native addresses.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00593120",
+    "address": "0x593120",
+    "size": 347,
+    "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+    "identity_evidence": "Native EnodeInfoHandler.c assertions165/170; connected expression-info scope/location call graph and state lifecycle. HandleENodeInfo name corroborated by supplied CSV; unnamed siblings retain native addresses.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "eliminate_unreachable_statements",
     "address": "0x005934b0",
     "size": 112,

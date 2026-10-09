@@ -24234,29 +24234,64 @@
       "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
       "original_filename": "EnodeInfoHandler.c",
       "evidence": [
+        "Imported 1.2.5 source; GC3 membership remains provisional",
         "Windows assertion/file-line diagnostic"
       ],
       "windows_functions": [
         {
-          "name": "FUN_00592f90",
+          "name": "HandleENodeInfo",
           "address": "0x00592f90",
           "size": 186,
           "boundary_evidence": {
-            "method": "Reachable x86 control flow bounded by Ghidra entries",
+            "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
             "unresolved_indirect_flow": false
           },
           "evidence": "Windows assertion/file-line diagnostic",
           "call_addresses": [
             "0x00592fc1",
             "0x0059303e"
-          ]
+          ],
+          "compiled_source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
+        },
+        {
+          "name": "fn_00593050",
+          "address": "0x593050",
+          "size": 31,
+          "compiled_source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00593070",
+          "address": "0x593070",
+          "size": 173,
+          "compiled_source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+            "unresolved_indirect_flow": false
+          }
+        },
+        {
+          "name": "fn_00593120",
+          "address": "0x593120",
+          "size": 347,
+          "compiled_source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+          "evidence": "Manually verified mapping",
+          "boundary_evidence": {
+            "method": "Complete native CFG, all in-range Ghidra entries and NOP gaps; prefix PCode immediate loading and suffix COptimizer excluded",
+            "unresolved_indirect_flow": false
+          }
         }
       ],
       "mac_functions": [],
       "ownership_conflicts": [],
-      "compiled": false,
+      "compiled": true,
       "membership_complete": false,
-      "status": "unattempted"
+      "status": "attempted_equivalent"
     },
     {
       "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
@@ -261679,6 +261714,2871 @@
           "ownership_conflicts": 0,
           "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
         }
+      }
+    },
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c": {
+      "source": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
+      "source_candidate": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+      "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+      "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+      "object_sha256": "bc18023db8b686dc286dc4a8648cef13be9ff81b78608902636d4879b43c11fc",
+      "rows": [
+        {
+          "name": "HandleENodeInfo",
+          "address": "0x592f90",
+          "size": 186,
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c"
+        },
+        {
+          "name": "fn_00593050",
+          "address": "0x593050",
+          "size": 31,
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c"
+        },
+        {
+          "name": "fn_00593070",
+          "address": "0x593070",
+          "size": 173,
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c"
+        },
+        {
+          "name": "fn_00593120",
+          "address": "0x593120",
+          "size": 347,
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c"
+        }
+      ],
+      "bindings": {
+        "_HandleENodeInfo": "0x592f90",
+        "_fn_00593050": "0x593050",
+        "_fn_00593070": "0x593070",
+        "_fn_00593120": "0x593120",
+        "_galloc": "0x46c6a0",
+        "_memclrw": "0x46c400",
+        "_CError_Internal": "0x45a250",
+        "_enodeInfoScopes": "0x711b64",
+        "_enodeInfoVariables": "0x716cc0",
+        "_enodeInfoCurrentScope": "0x6e5ed0",
+        "_enodeInfoFilename": "0x6ad588"
+      },
+      "profiles": [
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "cw94",
+          "profile": "enodeinfo-cw94-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 4,
+          "unresolved_count": 0,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "cw94",
+          "profile": "enodeinfo-cw94-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/cw94/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: .sw$19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-cw94-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "pro8",
+          "profile": "enodeinfo-pro8-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: @19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "pro8",
+          "profile": "enodeinfo-pro8-space",
+          "flags": [
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/pro8/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "space",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "noreadonly",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: @19 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro8-space\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 0,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "pro7",
+          "profile": "enodeinfo-pro7-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro7-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/pro7/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro7-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: @17 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro7-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "pro6",
+          "profile": "enodeinfo-pro6-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro6-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/pro6/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro6-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: @17 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro6-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        },
+        {
+          "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+          "compiler": "pro53",
+          "profile": "enodeinfo-pro53-speed",
+          "flags": [
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse"
+          ],
+          "command": [
+            "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "tools/run_compiler.py",
+            "--out",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro53-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+            "--",
+            "build/compilers/pro53/mwcc.exe",
+            "-c",
+            "-O4",
+            "-opt",
+            "speed",
+            "-opt",
+            "intrinsics",
+            "-inline",
+            "auto",
+            "-sym",
+            "off",
+            "-Cpp_exceptions",
+            "off",
+            "-str",
+            "reuse",
+            "-DVERSION=3",
+            "-Iinclude",
+            "-i-",
+            "-Iinclude/libc",
+            "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "-o",
+            "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro53-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj"
+          ],
+          "compiled": true,
+          "mapped_functions": 4,
+          "functions": [
+            {
+              "name": "HandleENodeInfo",
+              "address": "0x592f90",
+              "exact": false,
+              "unresolved": "unbound literal: @17 (0 retail blocks, 0 strings)"
+            },
+            {
+              "name": "fn_00593050",
+              "address": "0x593050",
+              "exact": true,
+              "bytes_exact": true,
+              "fixups_exact": true
+            },
+            {
+              "name": "fn_00593070",
+              "address": "0x593070",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            },
+            {
+              "name": "fn_00593120",
+              "address": "0x593120",
+              "exact": false,
+              "bytes_exact": false,
+              "fixups_exact": false
+            }
+          ],
+          "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-pro53-speed\\build\\EnodeInfoHandler\\EnodeInfoHandler.c\\compiled.obj",
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "source_stable": true,
+          "exact_count": 1,
+          "unresolved_count": 1,
+          "status": "mapped_projection_attempted",
+          "objdiff_success": true,
+          "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+        }
+      ],
+      "native_code_bytes": 737,
+      "classification": "frontend",
+      "status": "attempted_equivalent",
+      "membership_reviewed": false,
+      "mapped_function_count": 4,
+      "strict_exact_count": 4,
+      "data_complete": true,
+      "review_evidence": {
+        "native": {
+          "functions": [
+            {
+              "address": "0x592f90",
+              "size": 186,
+              "unresolved": false,
+              "limit": "0x593050",
+              "gap_hex": "909090909090",
+              "instructions": [
+                {
+                  "address": "0x592f90",
+                  "bytes": "53",
+                  "op": "push",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x592f91",
+                  "bytes": "56",
+                  "op": "push",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x592f92",
+                  "bytes": "8b74240c",
+                  "op": "mov",
+                  "args": "esi, dword ptr [esp + 0xc]"
+                },
+                {
+                  "address": "0x592f96",
+                  "bytes": "803e42",
+                  "op": "cmp",
+                  "args": "byte ptr [esi], 0x42"
+                },
+                {
+                  "address": "0x592f99",
+                  "bytes": "8b5c2410",
+                  "op": "mov",
+                  "args": "ebx, dword ptr [esp + 0x10]"
+                },
+                {
+                  "address": "0x592f9d",
+                  "bytes": "0f8591000000",
+                  "op": "jne",
+                  "args": "0x593034"
+                },
+                {
+                  "address": "0x592fa3",
+                  "bytes": "0fb65614",
+                  "op": "movzx",
+                  "args": "edx, byte ptr [esi + 0x14]"
+                },
+                {
+                  "address": "0x592fa7",
+                  "bytes": "83fa06",
+                  "op": "cmp",
+                  "args": "edx, 6"
+                },
+                {
+                  "address": "0x592faa",
+                  "bytes": "0f8781000000",
+                  "op": "ja",
+                  "args": "0x593031"
+                },
+                {
+                  "address": "0x592fb0",
+                  "bytes": "ff2495c83e6500",
+                  "op": "jmp",
+                  "args": "dword ptr [edx*4 + 0x653ec8]"
+                },
+                {
+                  "address": "0x592fb7",
+                  "bytes": "68aa000000",
+                  "op": "push",
+                  "args": "0xaa"
+                },
+                {
+                  "address": "0x592fbc",
+                  "bytes": "6888d56a00",
+                  "op": "push",
+                  "args": "0x6ad588"
+                },
+                {
+                  "address": "0x592fc1",
+                  "bytes": "e88a72ecff",
+                  "op": "call",
+                  "args": "0x45a250"
+                },
+                {
+                  "address": "0x592fc6",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x592fc7",
+                  "bytes": "eb67",
+                  "op": "jmp",
+                  "args": "0x593030"
+                },
+                {
+                  "address": "0x592fc9",
+                  "bytes": "53",
+                  "op": "push",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x592fca",
+                  "bytes": "e851010000",
+                  "op": "call",
+                  "args": "0x593120"
+                },
+                {
+                  "address": "0x592fcf",
+                  "bytes": "eb5f",
+                  "op": "jmp",
+                  "args": "0x593030"
+                },
+                {
+                  "address": "0x592fd1",
+                  "bytes": "833dd05e6e0000",
+                  "op": "cmp",
+                  "args": "dword ptr [0x6e5ed0], 0"
+                },
+                {
+                  "address": "0x592fd8",
+                  "bytes": "7457",
+                  "op": "je",
+                  "args": "0x593031"
+                },
+                {
+                  "address": "0x592fda",
+                  "bytes": "6a0c",
+                  "op": "push",
+                  "args": "0xc"
+                },
+                {
+                  "address": "0x592fdc",
+                  "bytes": "e8bf96edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x592fe1",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x592fe2",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x592fe8",
+                  "bytes": "894114",
+                  "op": "mov",
+                  "args": "dword ptr [ecx + 0x14], eax"
+                },
+                {
+                  "address": "0x592feb",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x592ff1",
+                  "bytes": "8b4a14",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [edx + 0x14]"
+                },
+                {
+                  "address": "0x592ff4",
+                  "bytes": "c70100000000",
+                  "op": "mov",
+                  "args": "dword ptr [ecx], 0"
+                },
+                {
+                  "address": "0x592ffa",
+                  "bytes": "a1d05e6e00",
+                  "op": "mov",
+                  "args": "eax, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x592fff",
+                  "bytes": "8b5014",
+                  "op": "mov",
+                  "args": "edx, dword ptr [eax + 0x14]"
+                },
+                {
+                  "address": "0x593002",
+                  "bytes": "8b4b1a",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [ebx + 0x1a]"
+                },
+                {
+                  "address": "0x593005",
+                  "bytes": "894a04",
+                  "op": "mov",
+                  "args": "dword ptr [edx + 4], ecx"
+                },
+                {
+                  "address": "0x593008",
+                  "bytes": "a1d05e6e00",
+                  "op": "mov",
+                  "args": "eax, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x59300d",
+                  "bytes": "8b5014",
+                  "op": "mov",
+                  "args": "edx, dword ptr [eax + 0x14]"
+                },
+                {
+                  "address": "0x593010",
+                  "bytes": "8b4b1e",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [ebx + 0x1e]"
+                },
+                {
+                  "address": "0x593013",
+                  "bytes": "894a08",
+                  "op": "mov",
+                  "args": "dword ptr [edx + 8], ecx"
+                },
+                {
+                  "address": "0x593016",
+                  "bytes": "a1d05e6e00",
+                  "op": "mov",
+                  "args": "eax, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x59301b",
+                  "bytes": "8b5008",
+                  "op": "mov",
+                  "args": "edx, dword ptr [eax + 8]"
+                },
+                {
+                  "address": "0x59301e",
+                  "bytes": "8915d05e6e00",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], edx"
+                },
+                {
+                  "address": "0x593024",
+                  "bytes": "eb0b",
+                  "op": "jmp",
+                  "args": "0x593031"
+                },
+                {
+                  "address": "0x593026",
+                  "bytes": "ff7610",
+                  "op": "push",
+                  "args": "dword ptr [esi + 0x10]"
+                },
+                {
+                  "address": "0x593029",
+                  "bytes": "e842000000",
+                  "op": "call",
+                  "args": "0x593070"
+                },
+                {
+                  "address": "0x59302e",
+                  "bytes": "89c0",
+                  "op": "mov",
+                  "args": "eax, eax"
+                },
+                {
+                  "address": "0x593030",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593031",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x593032",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x593033",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x593034",
+                  "bytes": "68a5000000",
+                  "op": "push",
+                  "args": "0xa5"
+                },
+                {
+                  "address": "0x593039",
+                  "bytes": "6888d56a00",
+                  "op": "push",
+                  "args": "0x6ad588"
+                },
+                {
+                  "address": "0x59303e",
+                  "bytes": "e80d72ecff",
+                  "op": "call",
+                  "args": "0x45a250"
+                },
+                {
+                  "address": "0x593043",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593044",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593045",
+                  "bytes": "e959ffffff",
+                  "op": "jmp",
+                  "args": "0x592fa3"
+                }
+              ]
+            },
+            {
+              "address": "0x593050",
+              "size": 31,
+              "unresolved": false,
+              "limit": "0x593070",
+              "gap_hex": "90",
+              "instructions": [
+                {
+                  "address": "0x593050",
+                  "bytes": "c705641b710000000000",
+                  "op": "mov",
+                  "args": "dword ptr [0x711b64], 0"
+                },
+                {
+                  "address": "0x59305a",
+                  "bytes": "c705c06c710000000000",
+                  "op": "mov",
+                  "args": "dword ptr [0x716cc0], 0"
+                },
+                {
+                  "address": "0x593064",
+                  "bytes": "c705d05e6e0000000000",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], 0"
+                },
+                {
+                  "address": "0x59306e",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                }
+              ]
+            },
+            {
+              "address": "0x593070",
+              "size": 173,
+              "unresolved": false,
+              "limit": "0x593120",
+              "gap_hex": "909090",
+              "instructions": [
+                {
+                  "address": "0x593070",
+                  "bytes": "53",
+                  "op": "push",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x593071",
+                  "bytes": "56",
+                  "op": "push",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x593072",
+                  "bytes": "8b5c240c",
+                  "op": "mov",
+                  "args": "ebx, dword ptr [esp + 0xc]"
+                },
+                {
+                  "address": "0x593076",
+                  "bytes": "31d2",
+                  "op": "xor",
+                  "args": "edx, edx"
+                },
+                {
+                  "address": "0x593078",
+                  "bytes": "85db",
+                  "op": "test",
+                  "args": "ebx, ebx"
+                },
+                {
+                  "address": "0x59307a",
+                  "bytes": "0f8480000000",
+                  "op": "je",
+                  "args": "0x593100"
+                },
+                {
+                  "address": "0x593080",
+                  "bytes": "0fb60b",
+                  "op": "movzx",
+                  "args": "ecx, byte ptr [ebx]"
+                },
+                {
+                  "address": "0x593083",
+                  "bytes": "80f93b",
+                  "op": "cmp",
+                  "args": "cl, 0x3b"
+                },
+                {
+                  "address": "0x593086",
+                  "bytes": "7420",
+                  "op": "je",
+                  "args": "0x5930a8"
+                },
+                {
+                  "address": "0x593088",
+                  "bytes": "80f904",
+                  "op": "cmp",
+                  "args": "cl, 4"
+                },
+                {
+                  "address": "0x59308b",
+                  "bytes": "7576",
+                  "op": "jne",
+                  "args": "0x593103"
+                },
+                {
+                  "address": "0x59308d",
+                  "bytes": "8b5b10",
+                  "op": "mov",
+                  "args": "ebx, dword ptr [ebx + 0x10]"
+                },
+                {
+                  "address": "0x593090",
+                  "bytes": "803b3b",
+                  "op": "cmp",
+                  "args": "byte ptr [ebx], 0x3b"
+                },
+                {
+                  "address": "0x593093",
+                  "bytes": "7413",
+                  "op": "je",
+                  "args": "0x5930a8"
+                },
+                {
+                  "address": "0x593095",
+                  "bytes": "83c201",
+                  "op": "add",
+                  "args": "edx, 1"
+                },
+                {
+                  "address": "0x593098",
+                  "bytes": "83fa32",
+                  "op": "cmp",
+                  "args": "edx, 0x32"
+                },
+                {
+                  "address": "0x59309b",
+                  "bytes": "7e03",
+                  "op": "jle",
+                  "args": "0x5930a0"
+                },
+                {
+                  "address": "0x59309d",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x59309e",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x59309f",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x5930a0",
+                  "bytes": "8b5b10",
+                  "op": "mov",
+                  "args": "ebx, dword ptr [ebx + 0x10]"
+                },
+                {
+                  "address": "0x5930a3",
+                  "bytes": "803b3b",
+                  "op": "cmp",
+                  "args": "byte ptr [ebx], 0x3b"
+                },
+                {
+                  "address": "0x5930a6",
+                  "bytes": "75ed",
+                  "op": "jne",
+                  "args": "0x593095"
+                },
+                {
+                  "address": "0x5930a8",
+                  "bytes": "6a0c",
+                  "op": "push",
+                  "args": "0xc"
+                },
+                {
+                  "address": "0x5930aa",
+                  "bytes": "e8f195edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x5930af",
+                  "bytes": "89c6",
+                  "op": "mov",
+                  "args": "esi, eax"
+                },
+                {
+                  "address": "0x5930b1",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5930b2",
+                  "bytes": "6a0c",
+                  "op": "push",
+                  "args": "0xc"
+                },
+                {
+                  "address": "0x5930b4",
+                  "bytes": "56",
+                  "op": "push",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x5930b5",
+                  "bytes": "e84693edff",
+                  "op": "call",
+                  "args": "0x46c400"
+                },
+                {
+                  "address": "0x5930ba",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5930bb",
+                  "bytes": "833dd05e6e0000",
+                  "op": "cmp",
+                  "args": "dword ptr [0x6e5ed0], 0"
+                },
+                {
+                  "address": "0x5930c2",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5930c3",
+                  "bytes": "7441",
+                  "op": "je",
+                  "args": "0x593106"
+                },
+                {
+                  "address": "0x5930c5",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5930cb",
+                  "bytes": "895608",
+                  "op": "mov",
+                  "args": "dword ptr [esi + 8], edx"
+                },
+                {
+                  "address": "0x5930ce",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5930d4",
+                  "bytes": "8b410c",
+                  "op": "mov",
+                  "args": "eax, dword ptr [ecx + 0xc]"
+                },
+                {
+                  "address": "0x5930d7",
+                  "bytes": "8906",
+                  "op": "mov",
+                  "args": "dword ptr [esi], eax"
+                },
+                {
+                  "address": "0x5930d9",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5930df",
+                  "bytes": "89720c",
+                  "op": "mov",
+                  "args": "dword ptr [edx + 0xc], esi"
+                },
+                {
+                  "address": "0x5930e2",
+                  "bytes": "8b4b10",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [ebx + 0x10]"
+                },
+                {
+                  "address": "0x5930e5",
+                  "bytes": "8b410c",
+                  "op": "mov",
+                  "args": "eax, dword ptr [ecx + 0xc]"
+                },
+                {
+                  "address": "0x5930e8",
+                  "bytes": "894604",
+                  "op": "mov",
+                  "args": "dword ptr [esi + 4], eax"
+                },
+                {
+                  "address": "0x5930eb",
+                  "bytes": "8b7310",
+                  "op": "mov",
+                  "args": "esi, dword ptr [ebx + 0x10]"
+                },
+                {
+                  "address": "0x5930ee",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5930f4",
+                  "bytes": "89563c",
+                  "op": "mov",
+                  "args": "dword ptr [esi + 0x3c], edx"
+                },
+                {
+                  "address": "0x5930f7",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x5930f8",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x5930f9",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x5930fa",
+                  "bytes": "8d8000000000",
+                  "op": "lea",
+                  "args": "eax, [eax]"
+                },
+                {
+                  "address": "0x593100",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x593101",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x593102",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x593103",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x593104",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x593105",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x593106",
+                  "bytes": "c7460800000000",
+                  "op": "mov",
+                  "args": "dword ptr [esi + 8], 0"
+                },
+                {
+                  "address": "0x59310d",
+                  "bytes": "8b0dc06c7100",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x716cc0]"
+                },
+                {
+                  "address": "0x593113",
+                  "bytes": "890e",
+                  "op": "mov",
+                  "args": "dword ptr [esi], ecx"
+                },
+                {
+                  "address": "0x593115",
+                  "bytes": "8935c06c7100",
+                  "op": "mov",
+                  "args": "dword ptr [0x716cc0], esi"
+                },
+                {
+                  "address": "0x59311b",
+                  "bytes": "ebc5",
+                  "op": "jmp",
+                  "args": "0x5930e2"
+                }
+              ]
+            },
+            {
+              "address": "0x593120",
+              "size": 347,
+              "unresolved": false,
+              "limit": "0x593280",
+              "gap_hex": "9090909090",
+              "instructions": [
+                {
+                  "address": "0x593120",
+                  "bytes": "53",
+                  "op": "push",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x593121",
+                  "bytes": "56",
+                  "op": "push",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x593122",
+                  "bytes": "55",
+                  "op": "push",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x593123",
+                  "bytes": "833d641b710000",
+                  "op": "cmp",
+                  "args": "dword ptr [0x711b64], 0"
+                },
+                {
+                  "address": "0x59312a",
+                  "bytes": "8b5c2410",
+                  "op": "mov",
+                  "args": "ebx, dword ptr [esp + 0x10]"
+                },
+                {
+                  "address": "0x59312e",
+                  "bytes": "7440",
+                  "op": "je",
+                  "args": "0x593170"
+                },
+                {
+                  "address": "0x593130",
+                  "bytes": "833dd05e6e0000",
+                  "op": "cmp",
+                  "args": "dword ptr [0x6e5ed0], 0"
+                },
+                {
+                  "address": "0x593137",
+                  "bytes": "0f8496000000",
+                  "op": "je",
+                  "args": "0x5931d3"
+                },
+                {
+                  "address": "0x59313d",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x593143",
+                  "bytes": "8b4204",
+                  "op": "mov",
+                  "args": "eax, dword ptr [edx + 4]"
+                },
+                {
+                  "address": "0x593146",
+                  "bytes": "85c0",
+                  "op": "test",
+                  "args": "eax, eax"
+                },
+                {
+                  "address": "0x593148",
+                  "bytes": "0f84c3000000",
+                  "op": "je",
+                  "args": "0x593211"
+                },
+                {
+                  "address": "0x59314e",
+                  "bytes": "8b08",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [eax]"
+                },
+                {
+                  "address": "0x593150",
+                  "bytes": "85c9",
+                  "op": "test",
+                  "args": "ecx, ecx"
+                },
+                {
+                  "address": "0x593152",
+                  "bytes": "89c6",
+                  "op": "mov",
+                  "args": "esi, eax"
+                },
+                {
+                  "address": "0x593154",
+                  "bytes": "0f84f6000000",
+                  "op": "je",
+                  "args": "0x593250"
+                },
+                {
+                  "address": "0x59315a",
+                  "bytes": "8d8000000000",
+                  "op": "lea",
+                  "args": "eax, [eax]"
+                },
+                {
+                  "address": "0x593160",
+                  "bytes": "89ce",
+                  "op": "mov",
+                  "args": "esi, ecx"
+                },
+                {
+                  "address": "0x593162",
+                  "bytes": "8b09",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [ecx]"
+                },
+                {
+                  "address": "0x593164",
+                  "bytes": "85c9",
+                  "op": "test",
+                  "args": "ecx, ecx"
+                },
+                {
+                  "address": "0x593166",
+                  "bytes": "75f8",
+                  "op": "jne",
+                  "args": "0x593160"
+                },
+                {
+                  "address": "0x593168",
+                  "bytes": "e9e3000000",
+                  "op": "jmp",
+                  "args": "0x593250"
+                },
+                {
+                  "address": "0x59316d",
+                  "bytes": "8d4000",
+                  "op": "lea",
+                  "args": "eax, [eax]"
+                },
+                {
+                  "address": "0x593170",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x593172",
+                  "bytes": "e82995edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x593177",
+                  "bytes": "89c5",
+                  "op": "mov",
+                  "args": "ebp, eax"
+                },
+                {
+                  "address": "0x593179",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x59317a",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x59317c",
+                  "bytes": "55",
+                  "op": "push",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x59317d",
+                  "bytes": "e87e92edff",
+                  "op": "call",
+                  "args": "0x46c400"
+                },
+                {
+                  "address": "0x593182",
+                  "bytes": "89e8",
+                  "op": "mov",
+                  "args": "eax, ebp"
+                },
+                {
+                  "address": "0x593184",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593185",
+                  "bytes": "892dd05e6e00",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], ebp"
+                },
+                {
+                  "address": "0x59318b",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x59318c",
+                  "bytes": "a3641b7100",
+                  "op": "mov",
+                  "args": "dword ptr [0x711b64], eax"
+                },
+                {
+                  "address": "0x593191",
+                  "bytes": "6a0c",
+                  "op": "push",
+                  "args": "0xc"
+                },
+                {
+                  "address": "0x593193",
+                  "bytes": "e80895edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x593198",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593199",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x59319f",
+                  "bytes": "894110",
+                  "op": "mov",
+                  "args": "dword ptr [ecx + 0x10], eax"
+                },
+                {
+                  "address": "0x5931a2",
+                  "bytes": "8b35d05e6e00",
+                  "op": "mov",
+                  "args": "esi, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5931a8",
+                  "bytes": "8b5610",
+                  "op": "mov",
+                  "args": "edx, dword ptr [esi + 0x10]"
+                },
+                {
+                  "address": "0x5931ab",
+                  "bytes": "c70200000000",
+                  "op": "mov",
+                  "args": "dword ptr [edx], 0"
+                },
+                {
+                  "address": "0x5931b1",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5931b7",
+                  "bytes": "8b4110",
+                  "op": "mov",
+                  "args": "eax, dword ptr [ecx + 0x10]"
+                },
+                {
+                  "address": "0x5931ba",
+                  "bytes": "8b731a",
+                  "op": "mov",
+                  "args": "esi, dword ptr [ebx + 0x1a]"
+                },
+                {
+                  "address": "0x5931bd",
+                  "bytes": "897004",
+                  "op": "mov",
+                  "args": "dword ptr [eax + 4], esi"
+                },
+                {
+                  "address": "0x5931c0",
+                  "bytes": "8b15d05e6e00",
+                  "op": "mov",
+                  "args": "edx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x5931c6",
+                  "bytes": "8b431e",
+                  "op": "mov",
+                  "args": "eax, dword ptr [ebx + 0x1e]"
+                },
+                {
+                  "address": "0x5931c9",
+                  "bytes": "8b4a10",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [edx + 0x10]"
+                },
+                {
+                  "address": "0x5931cc",
+                  "bytes": "894108",
+                  "op": "mov",
+                  "args": "dword ptr [ecx + 8], eax"
+                },
+                {
+                  "address": "0x5931cf",
+                  "bytes": "5d",
+                  "op": "pop",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x5931d0",
+                  "bytes": "5e",
+                  "op": "pop",
+                  "args": "esi"
+                },
+                {
+                  "address": "0x5931d1",
+                  "bytes": "5b",
+                  "op": "pop",
+                  "args": "ebx"
+                },
+                {
+                  "address": "0x5931d2",
+                  "bytes": "c3",
+                  "op": "ret",
+                  "args": ""
+                },
+                {
+                  "address": "0x5931d3",
+                  "bytes": "8b35641b7100",
+                  "op": "mov",
+                  "args": "esi, dword ptr [0x711b64]"
+                },
+                {
+                  "address": "0x5931d9",
+                  "bytes": "89f2",
+                  "op": "mov",
+                  "args": "edx, esi"
+                },
+                {
+                  "address": "0x5931db",
+                  "bytes": "8b02",
+                  "op": "mov",
+                  "args": "eax, dword ptr [edx]"
+                },
+                {
+                  "address": "0x5931dd",
+                  "bytes": "85c0",
+                  "op": "test",
+                  "args": "eax, eax"
+                },
+                {
+                  "address": "0x5931df",
+                  "bytes": "7408",
+                  "op": "je",
+                  "args": "0x5931e9"
+                },
+                {
+                  "address": "0x5931e1",
+                  "bytes": "89c6",
+                  "op": "mov",
+                  "args": "esi, eax"
+                },
+                {
+                  "address": "0x5931e3",
+                  "bytes": "8b00",
+                  "op": "mov",
+                  "args": "eax, dword ptr [eax]"
+                },
+                {
+                  "address": "0x5931e5",
+                  "bytes": "85c0",
+                  "op": "test",
+                  "args": "eax, eax"
+                },
+                {
+                  "address": "0x5931e7",
+                  "bytes": "75f8",
+                  "op": "jne",
+                  "args": "0x5931e1"
+                },
+                {
+                  "address": "0x5931e9",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x5931eb",
+                  "bytes": "e8b094edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x5931f0",
+                  "bytes": "89c5",
+                  "op": "mov",
+                  "args": "ebp, eax"
+                },
+                {
+                  "address": "0x5931f2",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5931f3",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x5931f5",
+                  "bytes": "55",
+                  "op": "push",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x5931f6",
+                  "bytes": "e80592edff",
+                  "op": "call",
+                  "args": "0x46c400"
+                },
+                {
+                  "address": "0x5931fb",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5931fc",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x5931fd",
+                  "bytes": "892e",
+                  "op": "mov",
+                  "args": "dword ptr [esi], ebp"
+                },
+                {
+                  "address": "0x5931ff",
+                  "bytes": "8b0e",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [esi]"
+                },
+                {
+                  "address": "0x593201",
+                  "bytes": "8b4608",
+                  "op": "mov",
+                  "args": "eax, dword ptr [esi + 8]"
+                },
+                {
+                  "address": "0x593204",
+                  "bytes": "894108",
+                  "op": "mov",
+                  "args": "dword ptr [ecx + 8], eax"
+                },
+                {
+                  "address": "0x593207",
+                  "bytes": "8b16",
+                  "op": "mov",
+                  "args": "edx, dword ptr [esi]"
+                },
+                {
+                  "address": "0x593209",
+                  "bytes": "8915d05e6e00",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], edx"
+                },
+                {
+                  "address": "0x59320f",
+                  "bytes": "eb80",
+                  "op": "jmp",
+                  "args": "0x593191"
+                },
+                {
+                  "address": "0x593211",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x593213",
+                  "bytes": "e88894edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x593218",
+                  "bytes": "89c5",
+                  "op": "mov",
+                  "args": "ebp, eax"
+                },
+                {
+                  "address": "0x59321a",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x59321b",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x59321d",
+                  "bytes": "55",
+                  "op": "push",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x59321e",
+                  "bytes": "e8dd91edff",
+                  "op": "call",
+                  "args": "0x46c400"
+                },
+                {
+                  "address": "0x593223",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593224",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593225",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x59322b",
+                  "bytes": "896904",
+                  "op": "mov",
+                  "args": "dword ptr [ecx + 4], ebp"
+                },
+                {
+                  "address": "0x59322e",
+                  "bytes": "8b35d05e6e00",
+                  "op": "mov",
+                  "args": "esi, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x593234",
+                  "bytes": "8b4604",
+                  "op": "mov",
+                  "args": "eax, dword ptr [esi + 4]"
+                },
+                {
+                  "address": "0x593237",
+                  "bytes": "89f2",
+                  "op": "mov",
+                  "args": "edx, esi"
+                },
+                {
+                  "address": "0x593239",
+                  "bytes": "895008",
+                  "op": "mov",
+                  "args": "dword ptr [eax + 8], edx"
+                },
+                {
+                  "address": "0x59323c",
+                  "bytes": "8b0dd05e6e00",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [0x6e5ed0]"
+                },
+                {
+                  "address": "0x593242",
+                  "bytes": "8b7104",
+                  "op": "mov",
+                  "args": "esi, dword ptr [ecx + 4]"
+                },
+                {
+                  "address": "0x593245",
+                  "bytes": "8935d05e6e00",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], esi"
+                },
+                {
+                  "address": "0x59324b",
+                  "bytes": "e941ffffff",
+                  "op": "jmp",
+                  "args": "0x593191"
+                },
+                {
+                  "address": "0x593250",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x593252",
+                  "bytes": "e84994edff",
+                  "op": "call",
+                  "args": "0x46c6a0"
+                },
+                {
+                  "address": "0x593257",
+                  "bytes": "89c5",
+                  "op": "mov",
+                  "args": "ebp, eax"
+                },
+                {
+                  "address": "0x593259",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x59325a",
+                  "bytes": "6a18",
+                  "op": "push",
+                  "args": "0x18"
+                },
+                {
+                  "address": "0x59325c",
+                  "bytes": "55",
+                  "op": "push",
+                  "args": "ebp"
+                },
+                {
+                  "address": "0x59325d",
+                  "bytes": "e89e91edff",
+                  "op": "call",
+                  "args": "0x46c400"
+                },
+                {
+                  "address": "0x593262",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593263",
+                  "bytes": "59",
+                  "op": "pop",
+                  "args": "ecx"
+                },
+                {
+                  "address": "0x593264",
+                  "bytes": "892e",
+                  "op": "mov",
+                  "args": "dword ptr [esi], ebp"
+                },
+                {
+                  "address": "0x593266",
+                  "bytes": "8b06",
+                  "op": "mov",
+                  "args": "eax, dword ptr [esi]"
+                },
+                {
+                  "address": "0x593268",
+                  "bytes": "8b5608",
+                  "op": "mov",
+                  "args": "edx, dword ptr [esi + 8]"
+                },
+                {
+                  "address": "0x59326b",
+                  "bytes": "895008",
+                  "op": "mov",
+                  "args": "dword ptr [eax + 8], edx"
+                },
+                {
+                  "address": "0x59326e",
+                  "bytes": "8b0e",
+                  "op": "mov",
+                  "args": "ecx, dword ptr [esi]"
+                },
+                {
+                  "address": "0x593270",
+                  "bytes": "890dd05e6e00",
+                  "op": "mov",
+                  "args": "dword ptr [0x6e5ed0], ecx"
+                },
+                {
+                  "address": "0x593276",
+                  "bytes": "e916ffffff",
+                  "op": "jmp",
+                  "args": "0x593191"
+                }
+              ]
+            }
+          ],
+          "relocated_references": {
+            "0x593120": [],
+            "0x716cc0": [
+              {
+                "fixup": "0x59305c",
+                "function": "0x593050",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59310f",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593117",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d0029",
+                "function": "0x5d0020",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d0039",
+                "function": "0x5d0020",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d0042",
+                "function": "0x5d0020",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d004b",
+                "function": "0x5d0020",
+                "section": ".text"
+              }
+            ],
+            "0x711b64": [
+              {
+                "fixup": "0x593052",
+                "function": "0x593050",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593125",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59318d",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5931d5",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5cfdee",
+                "function": "0x5cf6d0",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d00a2",
+                "function": "0x5d0020",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5d00b5",
+                "function": "0x5d0020",
+                "section": ".text"
+              }
+            ],
+            "0x6ad588": [
+              {
+                "fixup": "0x592fbd",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59303a",
+                "function": "0x592f90",
+                "section": ".text"
+              }
+            ],
+            "0x593050": [],
+            "0x593070": [],
+            "0x592f90": [],
+            "0x6e5ed0": [
+              {
+                "fixup": "0x592fd3",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x592fe4",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x592fed",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x592ffb",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593009",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593017",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593020",
+                "function": "0x592f90",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593066",
+                "function": "0x593050",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5930bd",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5930c7",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5930d0",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5930db",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5930f0",
+                "function": "0x593070",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593132",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59313f",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593187",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59319b",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5931a4",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5931b3",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x5931c2",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59320b",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593227",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593230",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x59323e",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593247",
+                "function": "0x593120",
+                "section": ".text"
+              },
+              {
+                "fixup": "0x593272",
+                "function": "0x593120",
+                "section": ".text"
+              }
+            ]
+          },
+          "direct_calls": {
+            "0x592f90": [
+              {
+                "site": "0x468970",
+                "function": "0x468750",
+                "kind": "call"
+              }
+            ],
+            "0x593050": [
+              {
+                "site": "0x468951",
+                "function": "0x468750",
+                "kind": "call"
+              }
+            ],
+            "0x593070": [
+              {
+                "site": "0x593029",
+                "function": "0x592f90",
+                "kind": "call"
+              }
+            ],
+            "0x593120": [
+              {
+                "site": "0x592fca",
+                "function": "0x592f90",
+                "kind": "call"
+              }
+            ]
+          },
+          "filename_hex": "456e6f6465496e666f48616e646c65722e6300",
+          "scope": "Whole code-section disassembly direct calls and complete PE relocation table; saved Ghidra entry boundaries. Physical original object membership not proved."
+        },
+        "function_review": [
+          {
+            "name": "HandleENodeInfo",
+            "address": "0x592f90",
+            "size": 186,
+            "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "strict_exact": true,
+            "native_abi_semantic_review": "void(InfoExpr*,InfoStatement*); cdecl; kind66 assertion; unsigned info byte20 selects0..6 and out-of-range no-op. Modes3/4 begin/end scope,mode5 variable chain;0 asserts.",
+            "body_attempt_complete": true,
+            "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc"
+          },
+          {
+            "name": "fn_00593050",
+            "address": "0x593050",
+            "size": 31,
+            "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "strict_exact": true,
+            "native_abi_semantic_review": "void(void); clears scope root,variable list and current scope in native order.",
+            "body_attempt_complete": true,
+            "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc"
+          },
+          {
+            "name": "fn_00593070",
+            "address": "0x593070",
+            "size": 173,
+            "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "strict_exact": true,
+            "native_abi_semantic_review": "void(InfoExpr*); null/non4/non59 early returns; kind4 dereferences once then follows payload16 at most50 times searchingkind59. Twelve-byte variable links either current scope or global list; object identity12 and scope60.",
+            "body_attempt_complete": true,
+            "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc"
+          },
+          {
+            "name": "fn_00593120",
+            "address": "0x593120",
+            "size": 347,
+            "source": "build/EnodeInfoHandler/EnodeInfoHandler.c",
+            "strict_exact": true,
+            "native_abi_semantic_review": "void(InfoStatement*); four cases create first root,append root,first child,append child.24-byte scopes zeroed before publication; chained root/current assignment and sibling parent inheritance preserved;12-byte source location reads statement26/30.",
+            "body_attempt_complete": true,
+            "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc"
+          }
+        ],
+        "initial_scope_assignment_variants": [
+          {
+            "source": "build/EnodeInfoHandler/initial-chain.c",
+            "compiler": "cw94",
+            "profile": "enodeinfo-initial-chain",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-chain\\build\\EnodeInfoHandler\\initial-chain.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/EnodeInfoHandler/initial-chain.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-chain\\build\\EnodeInfoHandler\\initial-chain.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "HandleENodeInfo",
+                "address": "0x592f90",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593050",
+                "address": "0x593050",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593070",
+                "address": "0x593070",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593120",
+                "address": "0x593120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-chain\\build\\EnodeInfoHandler\\initial-chain.c\\compiled.obj",
+            "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+            "source_stable": true,
+            "exact_count": 4,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/EnodeInfoHandler/initial-reload.c",
+            "compiler": "cw94",
+            "profile": "enodeinfo-initial-reload",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-reload\\build\\EnodeInfoHandler\\initial-reload.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/EnodeInfoHandler/initial-reload.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-reload\\build\\EnodeInfoHandler\\initial-reload.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "HandleENodeInfo",
+                "address": "0x592f90",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593050",
+                "address": "0x593050",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593070",
+                "address": "0x593070",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593120",
+                "address": "0x593120",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-reload\\build\\EnodeInfoHandler\\initial-reload.c\\compiled.obj",
+            "source_sha256": "f782bee3e220b3a0c40464cffd09e0e13272a94f234c93b269d80846a9f4522c",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/EnodeInfoHandler/initial-local.c",
+            "compiler": "cw94",
+            "profile": "enodeinfo-initial-local",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-local\\build\\EnodeInfoHandler\\initial-local.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/EnodeInfoHandler/initial-local.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-local\\build\\EnodeInfoHandler\\initial-local.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "HandleENodeInfo",
+                "address": "0x592f90",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593050",
+                "address": "0x593050",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593070",
+                "address": "0x593070",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593120",
+                "address": "0x593120",
+                "exact": false,
+                "bytes_exact": false,
+                "fixups_exact": false
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-local\\build\\EnodeInfoHandler\\initial-local.c\\compiled.obj",
+            "source_sha256": "5f1e61cefe5365f6d6deac9c1b370aa7ad3b604125f8b54f2b3541788e9248c7",
+            "source_stable": true,
+            "exact_count": 3,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          },
+          {
+            "source": "build/EnodeInfoHandler/initial-voidchain.c",
+            "compiler": "cw94",
+            "profile": "enodeinfo-initial-voidchain",
+            "flags": [
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly"
+            ],
+            "command": [
+              "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+              "tools/run_compiler.py",
+              "--out",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-voidchain\\build\\EnodeInfoHandler\\initial-voidchain.c\\compiled.obj",
+              "--",
+              "build/compilers/cw94/mwcc.exe",
+              "-c",
+              "-O4",
+              "-opt",
+              "speed",
+              "-opt",
+              "intrinsics",
+              "-inline",
+              "auto",
+              "-sym",
+              "off",
+              "-Cpp_exceptions",
+              "off",
+              "-str",
+              "noreadonly",
+              "-DVERSION=3",
+              "-Iinclude",
+              "-i-",
+              "-Iinclude/libc",
+              "build/EnodeInfoHandler/initial-voidchain.c",
+              "-o",
+              "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-voidchain\\build\\EnodeInfoHandler\\initial-voidchain.c\\compiled.obj"
+            ],
+            "compiled": true,
+            "mapped_functions": 4,
+            "functions": [
+              {
+                "name": "HandleENodeInfo",
+                "address": "0x592f90",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593050",
+                "address": "0x593050",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593070",
+                "address": "0x593070",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              },
+              {
+                "name": "fn_00593120",
+                "address": "0x593120",
+                "exact": true,
+                "bytes_exact": true,
+                "fixups_exact": true
+              }
+            ],
+            "object": "build\\GC_3_0a5_2\\tu-sweep\\enodeinfo-initial-voidchain\\build\\EnodeInfoHandler\\initial-voidchain.c\\compiled.obj",
+            "source_sha256": "1d99dc567c97497e28f010a2f5f86a70e61f945e4ae45260cbd6ab52e643501c",
+            "source_stable": true,
+            "exact_count": 4,
+            "unresolved_count": 0,
+            "status": "mapped_projection_attempted",
+            "objdiff_success": true,
+            "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+          }
+        ],
+        "provenance": {
+          "csv": "Supplied v10-applied symbols corroborate HandleENodeInfo592f90; other3 retain generic native identities.",
+          "old_source": "No matching GC1.2.5 EnodeInfoHandler implementation or Mac SO/FUN source entry found. Private packed records follow native access widths.",
+          "boundary": "592f00 is separate PCode immediate loader;593280 begins independently named COpt_Optimizer. Only4saved entries in592f90..593280 and all gapsNOP. Filename refs and all direct code calls scanned across image.",
+          "data": "Own19-byte filename,28-byte generated switch and three4-byte BSS roots. Current-scope references are all local; root and variable lists are consumed by separate debug-output code5cf6d0/5d0020. Root lifecycle supports common definitions here; physical original ownership remains inferred."
+        },
+        "normal_project": {
+          "source_sha256": "ade0e8cea48de300e1ab9b8d62ba7d5a02aebd5d525b1da7448460ba3bb290cc",
+          "all_four_functions_exact": true,
+          "all_code_data_relocations_and_common_symbols_equal": true,
+          "compiled_sections_sha256": "ca004771deb6ccfd43569f6ae1fa99980e5841a96ade0ea1afa7294fe1382076",
+          "owned_data": [
+            {
+              "name": "_enodeInfoFilename",
+              "section": ".data",
+              "size": 19,
+              "method": "named binding",
+              "address": "0x006ad588",
+              "bytes_exact": true,
+              "target_section": ".data",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "__anonymous_section_4",
+              "section": ".rdata",
+              "size": 28,
+              "method": "resolved function reference (anonymous section)",
+              "address": "0x00653ec8",
+              "bytes_exact": true,
+              "target_section": ".rdata",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_enodeInfoCurrentScope",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x006e5ed0",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_enodeInfoScopes",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x00711b64",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            },
+            {
+              "name": "_enodeInfoVariables",
+              "section": ".bss",
+              "size": 4,
+              "coff_common": true,
+              "method": "source-scoped common binding",
+              "address": "0x00716cc0",
+              "bytes_exact": true,
+              "target_section": ".bss",
+              "fixups_exact": true,
+              "relocations_resolved": true
+            }
+          ],
+          "owned_data_exact_bytes": 59,
+          "remaining_unresolved_records": 0
+        }
+      },
+      "attempt_completion_review": {
+        "all_identified_members_attempted": true,
+        "identified_members": 4,
+        "attempted_members": 4,
+        "unexplored_windows_candidates": [],
+        "push_ready": true,
+        "basis": "All four supported native bodies and their59data/BSS bytes exactly match,including generated switch relocations. Seven full-source compiler profiles and four assignment variants tested. All normal compiler sections,common symbols and relocations equal frozen candidate; native ABI/state/reference and complete supported membership reviewed. Full build,whole-TU objdiff-cli,image partition and strict CP932 passed. Original physical membership remains unproved."
+      },
+      "normal_project_checks": {
+        "ninja_all_source_progress": true,
+        "strict_exact_total": 965,
+        "mapped_total": 2136,
+        "objdiff_cli": true,
+        "inventory_partition": true,
+        "ownership_conflicts": 0,
+        "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
       }
     }
   },

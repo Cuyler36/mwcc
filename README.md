@@ -10,14 +10,20 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 249 source files build, 2,132 candidate functions are
-mapped, and 961 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 250 source files build, 2,136 candidate functions are
+mapped, and 965 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+EnodeInfoHandler has all four supported native functions exact under CW94,
+including HandleENodeInfo. All 59 bytes of filename, switch-table and BSS
+contributions match with fixups. The scope and source-location records preserve
+native allocation order and packed layouts; neighboring PCode and optimizer
+families remain separate. Original physical membership is still unproven.
 
 CPrepScanner has all 140 supported native functions attempted, with 58 exact
 matches. Its eleven decoder tables reproduce 492 bytes and 123 fixups; buffers,
@@ -202,7 +208,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 33 original-only TU views to objdiff. The twenty
+map. It currently adds 32 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

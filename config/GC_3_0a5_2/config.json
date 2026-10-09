@@ -250,7 +250,8 @@
     "src/GC_3_0a5_2/backend/StructMoves.c",
     "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
     "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
-    "src/GC_3_0a5_2/backend/LiveRegisters.c"
+    "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3990,6 +3991,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4953,7 +4972,11 @@
     "src/GC_3_0a5_2/backend/PCodeInfo/is_valid_displ",
     "src/GC_3_0a5_2/backend/PCodeInfo/makecopyforload",
     "src/GC_3_0a5_2/backend/PCodeInfo/makecopyinstruction",
-    "src/GC_3_0a5_2/backend/PCodeInfo/nbytes_loaded_or_stored_by"
+    "src/GC_3_0a5_2/backend/PCodeInfo/nbytes_loaded_or_stored_by",
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler/HandleENodeInfo",
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler/fn_00593050",
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler/fn_00593070",
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler/fn_00593120"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8995,6 +9018,19 @@
       "_liveclasses": "0x716c3c",
       "_output_regs": "0x6fbf20",
       "_filename": "0x6baae0"
+    },
+    "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c": {
+      "_HandleENodeInfo": "0x592f90",
+      "_fn_00593050": "0x593050",
+      "_fn_00593070": "0x593070",
+      "_fn_00593120": "0x593120",
+      "_galloc": "0x46c6a0",
+      "_memclrw": "0x46c400",
+      "_CError_Internal": "0x45a250",
+      "_enodeInfoScopes": "0x711b64",
+      "_enodeInfoVariables": "0x716cc0",
+      "_enodeInfoCurrentScope": "0x6e5ed0",
+      "_enodeInfoFilename": "0x6ad588"
     }
   },
   "original_source_units": {
@@ -9030,6 +9066,7 @@
     "StructMoves.c": "src/GC_3_0a5_2/backend/StructMoves.c",
     "CodeMotionPPC.c": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
     "CPrepScanner.cpp": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
-    "LiveRegisters.c": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+    "LiveRegisters.c": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "EnodeInfoHandler.c": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c"
   }
 }

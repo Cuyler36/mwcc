@@ -202,15 +202,15 @@ fixups match. The two remaining bodies retain reviewed code differences;
 filename attribution and original physical TU extent remain provisional.
 
 MachineSimulation603 has all eight supported native members attempted, with
-six exact matches and 98.16% weighted code similarity. Nineteen final compiler
+six exact matches and 99.01% weighted code similarity. Nineteen final compiler
 profiles and the recorded source variants were tested; 34,496 native
 comparisons pass and cover every nonpadding instruction. All 5,252 identified
 data bytes, categories and fixups match. The two remaining bodies retain
 reviewed code differences; original physical TU extent remains provisional.
 
 MachineSimulation603e has all eight supported native members attempted, with
-six exact matches and 95.48% weighted code similarity. Nineteen compiler
-profiles and 35 source forms were tested; 35,681 native comparisons pass,
+six exact matches and 99.05% weighted code similarity. Nineteen compiler
+profiles and the recorded source forms were tested; 35,681 native comparisons pass,
 including dependency checks using the actual scheduler helper. All 5,052
 identified data bytes, categories and fixups match, including the switch
 table. Callback and state names use corroborated supplied symbols. The two

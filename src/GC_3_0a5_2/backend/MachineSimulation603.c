@@ -385,7 +385,7 @@ static void advance_clock(UInt32 clock)
  if(pipeline[3].instruction && pipeline[3].count==0){RemovePending(pipeline[3].instruction);pipeline[3].instruction=0;}
  if(pipeline[6].instruction && pipeline[6].count==0){RemovePending(pipeline[6].instruction);pipeline[6].instruction=0;}
  if(pipeline[7].instruction && pipeline[7].count==0){RemovePending(pipeline[7].instruction);pipeline[7].instruction=0;}
- if(pipeline[0].instruction && pipeline[0].count==0){RemovePending(pipeline[0].instruction);pipeline[0].instruction=0;}
+ if(pipeline[0].instruction && pipeline[0].count==0){Machine603Instruction *completed=pipeline[0].instruction;RemovePending(completed);pipeline[0].instruction=0;}
  instruction=pipeline[4].instruction;
  if(instruction && pipeline[4].count==0 && (instruction->opcode==168 || instruction->opcode==169)){
   RemovePending(pipeline[4].instruction);pipeline[4].instruction=0;
@@ -405,9 +405,10 @@ static void advance_clock(UInt32 clock)
   pipeline[4].instruction=0;
  }
  if(pipeline[2].instruction && pipeline[2].count==0 && pipeline[3].instruction==0){
-  instruction=pipeline[2].instruction;
-  cycles=machine603Opcodes[instruction->opcode].cycles[1];
-  pipeline[3].instruction=instruction;
+  SInt32 cycles;
+  Machine603Instruction *moving=pipeline[2].instruction;
+  cycles=machine603Opcodes[moving->opcode].cycles[1];
+  pipeline[3].instruction=moving;
   pipeline[3].count=cycles;
   pipeline[2].instruction=0;
  }

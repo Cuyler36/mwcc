@@ -328,6 +328,7 @@ static void advance_clock(UInt32 clock)
 {
  /* Scheduler supplies the current clock; this model advances by one tick. */
  SInt32 i;
+ SInt32 cycles;
  Machine603eInstruction *instruction;
  for(i=0;i<8;++i){
   if(pipeline[i].instruction && pipeline[i].count)--pipeline[i].count;
@@ -348,27 +349,31 @@ static void advance_clock(UInt32 clock)
  if(pipeline[3].instruction && pipeline[3].count==0){RemovePending(pipeline[3].instruction);pipeline[3].instruction=0;}
  if(pipeline[6].instruction && pipeline[6].count==0){RemovePending(pipeline[6].instruction);pipeline[6].instruction=0;}
  if(pipeline[7].instruction && pipeline[7].count==0){RemovePending(pipeline[7].instruction);pipeline[7].instruction=0;}
- if(pipeline[0].instruction && pipeline[0].count==0){RemovePending(pipeline[0].instruction);pipeline[0].instruction=0;}
+ if(pipeline[0].instruction && pipeline[0].count==0){Machine603eInstruction *completed=pipeline[0].instruction;RemovePending(completed);pipeline[0].instruction=0;}
  instruction=pipeline[4].instruction;
  if(instruction && pipeline[4].count==0 && (instruction->opcode==168 || instruction->opcode==169)){
-  RemovePending(instruction);pipeline[4].instruction=0;
+  RemovePending(pipeline[4].instruction);pipeline[4].instruction=0;
  }
  if(pipeline[5].instruction && pipeline[5].count==0 && pipeline[6].instruction==0){
   instruction=pipeline[5].instruction;
+  cycles=machine603eOpcodes[instruction->opcode].cycles[2];
   pipeline[6].instruction=instruction;
-  pipeline[6].count=machine603eOpcodes[instruction->opcode].cycles[2];
+  pipeline[6].count=cycles;
   pipeline[5].instruction=0;
  }
  if(pipeline[4].instruction && pipeline[4].count==0 && pipeline[5].instruction==0){
   instruction=pipeline[4].instruction;
+  cycles=machine603eOpcodes[instruction->opcode].cycles[1];
   pipeline[5].instruction=instruction;
-  pipeline[5].count=machine603eOpcodes[instruction->opcode].cycles[1];
+  pipeline[5].count=cycles;
   pipeline[4].instruction=0;
  }
  if(pipeline[2].instruction && pipeline[2].count==0 && pipeline[3].instruction==0){
-  instruction=pipeline[2].instruction;
-  pipeline[3].instruction=instruction;
-  pipeline[3].count=machine603eOpcodes[instruction->opcode].cycles[1];
+  SInt32 cycles;
+  Machine603eInstruction *moving=pipeline[2].instruction;
+  cycles=machine603eOpcodes[moving->opcode].cycles[1];
+  pipeline[3].instruction=moving;
+  pipeline[3].count=cycles;
   pipeline[2].instruction=0;
  }
 }

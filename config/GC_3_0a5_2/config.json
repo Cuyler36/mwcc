@@ -249,7 +249,8 @@
     "src/GC_3_0a5_2/optimizer/IroType.c",
     "src/GC_3_0a5_2/backend/StructMoves.c",
     "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
-    "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+    "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "src/GC_3_0a5_2/backend/LiveRegisters.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -3971,6 +3972,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/LiveRegisters.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4931,7 +4950,9 @@
     "src/GC_3_0a5_2/frontend/CPrepScanner/?fn_0047ec60@ScanBuffer@@QAEXE@Z",
     "src/GC_3_0a5_2/frontend/CPrepScanner/?fn_00481da0@ScanBuffer@@QAEXH@Z",
     "src/GC_3_0a5_2/frontend/CPrepScanner/??1ScanBuffer@@QAE@XZ",
-    "src/GC_3_0a5_2/frontend/CPrepScanner/$static_initializer$139"
+    "src/GC_3_0a5_2/frontend/CPrepScanner/$static_initializer$139",
+    "src/GC_3_0a5_2/backend/LiveRegisters/fn_00621360",
+    "src/GC_3_0a5_2/backend/LiveRegisters/initialize_live_registers"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -8942,6 +8963,37 @@
       "_scannerMethodCode00482920": "0x482920",
       "_scannerMethodCode0047fa30": "0x47fa30",
       "_scannerMethodCode00481eb0": "0x481eb0"
+    },
+    "src/GC_3_0a5_2/backend/LiveRegisters.c": {
+      "_fn_006210c0": "0x6210c0",
+      "_fn_00621260": "0x621260",
+      "_fn_00621360": "0x621360",
+      "_fn_00621400": "0x621400",
+      "_fn_00621440": "0x621440",
+      "_fn_00621600": "0x621600",
+      "_fn_00621770": "0x621770",
+      "_fn_00621990": "0x621990",
+      "_fn_00621b40": "0x621b40",
+      "_initialize_live_registers": "0x621cf0",
+      "_aalloc": "0x46c5e0",
+      "_memclrw": "0x46c400",
+      "_computedepthfirstordering": "0x5826f0",
+      "_CError_Internal": "0x45a250",
+      "_bitvectorinitialize": "0x63d3b0",
+      "_bitvectorcopy": "0x63d420",
+      "_bitvectorunion": "0x63d240",
+      "_bitvectorintersect": "0x63d280",
+      "_fn_005945f0": "0x5945f0",
+      "_pcbasicblocks": "0x7108c8",
+      "_epilogue": "0x710784",
+      "_depthfirstordering": "0x716c38",
+      "_pcblockcount": "0x7107e0",
+      "_used_registers": "0x716ea0",
+      "_first_virtual": "0x710274",
+      "_optimization_level": "0x70f230",
+      "_liveclasses": "0x716c3c",
+      "_output_regs": "0x6fbf20",
+      "_filename": "0x6baae0"
     }
   },
   "original_source_units": {
@@ -8976,6 +9028,7 @@
     "IroType.c": "src/GC_3_0a5_2/optimizer/IroType.c",
     "StructMoves.c": "src/GC_3_0a5_2/backend/StructMoves.c",
     "CodeMotionPPC.c": "src/GC_3_0a5_2/backend/CodeMotionPPC.c",
-    "CPrepScanner.cpp": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+    "CPrepScanner.cpp": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "LiveRegisters.c": "src/GC_3_0a5_2/backend/LiveRegisters.c"
   }
 }

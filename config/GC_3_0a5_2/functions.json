@@ -24704,6 +24704,116 @@
     }
   },
   {
+    "name": "fn_006210c0",
+    "address": "0x6210c0",
+    "size": 415,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621260",
+    "address": "0x621260",
+    "size": 246,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621360",
+    "address": "0x621360",
+    "size": 159,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621400",
+    "address": "0x621400",
+    "size": 62,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621440",
+    "address": "0x621440",
+    "size": 447,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621600",
+    "address": "0x621600",
+    "size": 367,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621770",
+    "address": "0x621770",
+    "size": 540,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621990",
+    "address": "0x621990",
+    "size": 418,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621b40",
+    "address": "0x621b40",
+    "size": 424,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize_live_registers",
+    "address": "0x621cf0",
+    "size": 10,
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c",
+    "identity_evidence": "Native LiveRegisters.c assertion, five-class live-set architecture, actual calls/state lifecycle and supplied symbols where independently verified; other names remain private address identities.",
+    "boundary_evidence": {
+      "method": "Native complete reachable CFG and both adjacent backend/IR clusters reviewed",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "COpt_CopyPropagation",
     "address": "0x00621d00",
     "size": 61,

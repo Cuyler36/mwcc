@@ -4558,5 +4558,45 @@
   "fn_00498f80": {
     "name": "$static_initializer$139",
     "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_006210c0": {
+    "name": "fn_006210c0",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621260": {
+    "name": "fn_00621260",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621360": {
+    "name": "fn_00621360",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621400": {
+    "name": "fn_00621400",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621440": {
+    "name": "fn_00621440",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621600": {
+    "name": "fn_00621600",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621770": {
+    "name": "fn_00621770",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621990": {
+    "name": "fn_00621990",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621b40": {
+    "name": "fn_00621b40",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
+  },
+  "fn_00621cf0": {
+    "name": "initialize_live_registers",
+    "source": "src/GC_3_0a5_2/backend/LiveRegisters.c"
   }
 }

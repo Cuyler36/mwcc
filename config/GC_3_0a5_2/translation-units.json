@@ -99974,7 +99974,7 @@
     },
     "src/GC_3_0a5_2/backend/PCodeInfo.c": {
       "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
-      "source_sha256": "cc41a5ba059d9b7b13e2ac08b1568ac14341c04084c045d319d60e7a35e5534f",
+      "source_sha256": "5575927a669c43d2693497108ee71b249199b00b69c081f5e225b188b0277b9b",
       "compiler": "CW94",
       "flags": [
         "-O4",
@@ -100152,12 +100152,13 @@
           "address": "0x58b6f0",
           "size": 376,
           "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
-          "exact": false,
-          "bytes_exact": false,
+          "exact": true,
+          "bytes_exact": true,
           "fixups_exact": true,
           "original_size": 376,
           "compiled_size": 376,
-          "ownership": "direct PCodeInfo.c assertion"
+          "ownership": "direct PCodeInfo.c assertion",
+          "native_abi": "cdecl Instruction*makecopyforload(Instruction*context,SInt32category,Operand*source,Operand*destination)"
         },
         {
           "name": "fn_0058af20",
@@ -100606,7 +100607,7 @@
       "unported_candidates": [],
       "membership_reviewed": false,
       "mapped_function_count": 21,
-      "strict_exact_count": 10,
+      "strict_exact_count": 11,
       "data_complete": false,
       "native_abi": {
         "operand_size": 14,
@@ -100665,7 +100666,1805 @@
           "unchanged": true
         }
       ],
-      "retained_validation_scope": "Affected legacy source rebuilt for allthree retained versions; every normalized COFF symbol, section byte and relocation unchanged. Previous full matrix remains applicable."
+      "retained_validation_scope": "Affected legacy source rebuilt for allthree retained versions; every normalized COFF symbol, section byte and relocation unchanged. Previous full matrix remains applicable.",
+      "abi_correction": {
+        "frozen": true,
+        "active_source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+        "active_sha256_before": "cc41a5ba059d9b7b13e2ac08b1568ac14341c04084c045d319d60e7a35e5534f",
+        "candidate_source": "build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c",
+        "candidate_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+        "affected_member": {
+          "name": "makecopyforload",
+          "address": "0x58b6f0",
+          "size": 376,
+          "strict_exact": true,
+          "native_abi": "cdecl Instruction*makecopyforload(Instruction*context,SInt32category,Operand*source,Operand*destination)"
+        },
+        "change": "Add unused leading PCodeInstruction*context parameter to native makecopyforload. Existing category1 call to makecopyinstruction is already behaviorally compatible and auto-inlines the native class/flag dispatch; no extra semantic rewrite is required.",
+        "profiles": "build\\PCodeInfo-makecopyforload-abi\\profiles.json",
+        "selected_flags": [
+          "-O4",
+          "-opt",
+          "speed",
+          "-opt",
+          "intrinsics",
+          "-inline",
+          "auto",
+          "-sym",
+          "off",
+          "-Cpp_exceptions",
+          "off",
+          "-str",
+          "noreadonly"
+        ],
+        "full_tu_strict_exact_count_before": 10,
+        "full_tu_strict_exact_count_after": 11,
+        "unaffected_members": "build\\PCodeInfo-makecopyforload-abi\\unaffected-members.json",
+        "execution_validation": "build\\PCodeInfo-makecopyforload-abi\\execution-validation.json",
+        "native_cases": 1000,
+        "terminal_assertion_cases": 476,
+        "native_callers": "build\\PCodeInfo-makecopyforload-abi\\native-callers.json",
+        "native_callsite_count": 9,
+        "current_import_audit": "build\\PCodeInfo-makecopyforload-abi\\current-import-audit.json",
+        "baseline_alias_policy": "Do not retain a three-argument alias at58b6f0. No current source/header caller or declaration exists besides this GC3-only definition; no retained-version guard change is needed.",
+        "binding_changes_required": false,
+        "data_changes_required": false,
+        "cp932_valid": true,
+        "active_source_unchanged": true,
+        "limits": "Bounded execution models makepcode and terminal CError, while strict resolved bytes/fixups also prove the376-byte helper matches native. Physical full PCodeInfo source membership is unchanged and outside this ABI correction.",
+        "active_sha256_after": "5575927a669c43d2693497108ee71b249199b00b69c081f5e225b188b0277b9b",
+        "formatting": "Active source retains its original line formatting; frozen candidate has extra blank lines only beyond this signature change. Normal code/data/relocation equality must confirm evidence applicability.",
+        "review_evidence": {
+          "profiles": [
+            {
+              "source": "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+              "compiler": "cw94",
+              "profile": "makecopyforload-abi-configured",
+              "flags": [
+                "-O4",
+                "-opt",
+                "speed",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "auto",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly"
+              ],
+              "command": [
+                "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+                "tools/run_compiler.py",
+                "--out",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-configured\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+                "--",
+                "build/compilers/cw94/mwcc.exe",
+                "-c",
+                "-O4",
+                "-opt",
+                "speed",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "auto",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly",
+                "-DVERSION=3",
+                "-Isrc/backend",
+                "-Iinclude",
+                "-i-",
+                "-Iinclude/libc",
+                "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+                "-o",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-configured\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj"
+              ],
+              "compiled": true,
+              "mapped_functions": 21,
+              "functions": [
+                {
+                  "name": "fn_0058acf0",
+                  "address": "0x58acf0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ad80",
+                  "address": "0x58ad80",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058add0",
+                  "address": "0x58add0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae30",
+                  "address": "0x58ae30",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae40",
+                  "address": "0x58ae40",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058aec0",
+                  "address": "0x58aec0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058af20",
+                  "address": "0x58af20",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$957 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "copy_opcode_for_type",
+                  "address": "0x58b0c0",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$1279 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "is_valid_displ",
+                  "address": "0x58b180",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "change_opcode",
+                  "address": "0x58b210",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "change_num_operands",
+                  "address": "0x58b310",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "nbytes_loaded_or_stored_by",
+                  "address": "0x58b4c0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "makecopyforload",
+                  "address": "0x58b6f0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058b870",
+                  "address": "0x58b870",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058b910",
+                  "address": "0x58b910",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$1034 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "fn_0058ba80",
+                  "address": "0x58ba80",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "makecopyinstruction",
+                  "address": "0x58bb30",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "vformatpcode",
+                  "address": "0x58bc10",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$907 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "pcode_const_from_format",
+                  "address": "0x58d8e0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "pcode_check_imm_bits",
+                  "address": "0x58d960",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "pcode_get_hi_lo",
+                  "address": "0x58da70",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                }
+              ],
+              "object": "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-configured\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+              "source_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+              "source_stable": true,
+              "exact_count": 11,
+              "unresolved_count": 4,
+              "status": "mapped_projection_attempted",
+              "objdiff_success": true,
+              "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+            },
+            {
+              "source": "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+              "compiler": "cw94",
+              "profile": "makecopyforload-abi-space",
+              "flags": [
+                "-O4",
+                "-opt",
+                "space",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "auto",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly"
+              ],
+              "command": [
+                "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+                "tools/run_compiler.py",
+                "--out",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-space\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+                "--",
+                "build/compilers/cw94/mwcc.exe",
+                "-c",
+                "-O4",
+                "-opt",
+                "space",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "auto",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly",
+                "-DVERSION=3",
+                "-Isrc/backend",
+                "-Iinclude",
+                "-i-",
+                "-Iinclude/libc",
+                "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+                "-o",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-space\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj"
+              ],
+              "compiled": true,
+              "mapped_functions": 21,
+              "functions": [
+                {
+                  "name": "fn_0058acf0",
+                  "address": "0x58acf0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "fn_0058ad80",
+                  "address": "0x58ad80",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058add0",
+                  "address": "0x58add0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae30",
+                  "address": "0x58ae30",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae40",
+                  "address": "0x58ae40",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "fn_0058aec0",
+                  "address": "0x58aec0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058af20",
+                  "address": "0x58af20",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "copy_opcode_for_type",
+                  "address": "0x58b0c0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "is_valid_displ",
+                  "address": "0x58b180",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "change_opcode",
+                  "address": "0x58b210",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "change_num_operands",
+                  "address": "0x58b310",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "nbytes_loaded_or_stored_by",
+                  "address": "0x58b4c0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "makecopyforload",
+                  "address": "0x58b6f0",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$1406 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "fn_0058b870",
+                  "address": "0x58b870",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058b910",
+                  "address": "0x58b910",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "fn_0058ba80",
+                  "address": "0x58ba80",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "makecopyinstruction",
+                  "address": "0x58bb30",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "vformatpcode",
+                  "address": "0x58bc10",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "pcode_const_from_format",
+                  "address": "0x58d8e0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "pcode_check_imm_bits",
+                  "address": "0x58d960",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "pcode_get_hi_lo",
+                  "address": "0x58da70",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                }
+              ],
+              "object": "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-space\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+              "source_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+              "source_stable": true,
+              "exact_count": 1,
+              "unresolved_count": 1,
+              "status": "mapped_projection_attempted",
+              "objdiff_success": true,
+              "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+            },
+            {
+              "source": "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+              "compiler": "cw94",
+              "profile": "makecopyforload-abi-inlineoff",
+              "flags": [
+                "-O4",
+                "-opt",
+                "speed",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "off",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly"
+              ],
+              "command": [
+                "C:\\Users\\olsen\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+                "tools/run_compiler.py",
+                "--out",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-inlineoff\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+                "--",
+                "build/compilers/cw94/mwcc.exe",
+                "-c",
+                "-O4",
+                "-opt",
+                "speed",
+                "-opt",
+                "intrinsics",
+                "-inline",
+                "off",
+                "-sym",
+                "off",
+                "-Cpp_exceptions",
+                "off",
+                "-str",
+                "noreadonly",
+                "-DVERSION=3",
+                "-Isrc/backend",
+                "-Iinclude",
+                "-i-",
+                "-Iinclude/libc",
+                "build/PCodeInfo-makecopyforload-abi/PCodeInfo-corrected.c",
+                "-o",
+                "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-inlineoff\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj"
+              ],
+              "compiled": true,
+              "mapped_functions": 21,
+              "functions": [
+                {
+                  "name": "fn_0058acf0",
+                  "address": "0x58acf0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ad80",
+                  "address": "0x58ad80",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058add0",
+                  "address": "0x58add0",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae30",
+                  "address": "0x58ae30",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058ae40",
+                  "address": "0x58ae40",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "fn_0058aec0",
+                  "address": "0x58aec0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058af20",
+                  "address": "0x58af20",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$665 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "copy_opcode_for_type",
+                  "address": "0x58b0c0",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$987 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "is_valid_displ",
+                  "address": "0x58b180",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "change_opcode",
+                  "address": "0x58b210",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "change_num_operands",
+                  "address": "0x58b310",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "nbytes_loaded_or_stored_by",
+                  "address": "0x58b4c0",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "makecopyforload",
+                  "address": "0x58b6f0",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$1219 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "fn_0058b870",
+                  "address": "0x58b870",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "fn_0058b910",
+                  "address": "0x58b910",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$742 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "fn_0058ba80",
+                  "address": "0x58ba80",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "makecopyinstruction",
+                  "address": "0x58bb30",
+                  "exact": true,
+                  "bytes_exact": true,
+                  "fixups_exact": true
+                },
+                {
+                  "name": "vformatpcode",
+                  "address": "0x58bc10",
+                  "exact": false,
+                  "unresolved": "unbound literal: .sw$611 (0 retail blocks, 0 strings)"
+                },
+                {
+                  "name": "pcode_const_from_format",
+                  "address": "0x58d8e0",
+                  "exact": false,
+                  "unresolved": "unbound local function: _pcode_name_character"
+                },
+                {
+                  "name": "pcode_check_imm_bits",
+                  "address": "0x58d960",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                },
+                {
+                  "name": "pcode_get_hi_lo",
+                  "address": "0x58da70",
+                  "exact": false,
+                  "bytes_exact": false,
+                  "fixups_exact": false
+                }
+              ],
+              "object": "build\\GC_3_0a5_2\\tu-sweep\\makecopyforload-abi-inlineoff\\build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c\\compiled.obj",
+              "source_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+              "source_stable": true,
+              "exact_count": 8,
+              "unresolved_count": 6,
+              "status": "mapped_projection_attempted",
+              "objdiff_success": true,
+              "objdiff_scope": "Mapped function projection only; excludes unported functions and data"
+            }
+          ],
+          "unaffected_members": {
+            "unchanged_function_count": 20,
+            "unchanged_functions": [
+              "fn_0058acf0",
+              "fn_0058ad80",
+              "fn_0058add0",
+              "fn_0058ae30",
+              "fn_0058ae40",
+              "fn_0058aec0",
+              "fn_0058af20",
+              "copy_opcode_for_type",
+              "is_valid_displ",
+              "change_opcode",
+              "change_num_operands",
+              "nbytes_loaded_or_stored_by",
+              "fn_0058b870",
+              "fn_0058b910",
+              "fn_0058ba80",
+              "makecopyinstruction",
+              "vformatpcode",
+              "pcode_const_from_format",
+              "pcode_check_imm_bits",
+              "pcode_get_hi_lo"
+            ],
+            "changed_functions": [
+              "makecopyforload"
+            ],
+            "affected_size": 376,
+            "affected_byte_changes": [
+              {
+                "offset": 3,
+                "before": 4,
+                "after": 8
+              },
+              {
+                "offset": 13,
+                "before": 8,
+                "after": 12
+              },
+              {
+                "offset": 17,
+                "before": 12,
+                "after": 16
+              }
+            ],
+            "baseline_profile": "build\\PCodeInfo-makecopyforload-abi\\baseline-profile.json",
+            "scope": "Full-source configured compilation: all twenty other mapped function bodies remain byte-identical. Exactly three stack-argument displacement bytes change in makecopyforload; corrected body and PE fixups are strict native matches."
+          },
+          "execution_validation": {
+            "source_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+            "cases": 1000,
+            "all_passed": true,
+            "terminal_assertion_cases": 476,
+            "native_instructions": 114,
+            "executed_native_instructions": 105,
+            "unexecuted_native_addresses": [
+              "0x58b81a",
+              "0x58b82f",
+              "0x58b830",
+              "0x58b831",
+              "0x58b833",
+              "0x58b85f",
+              "0x58b860",
+              "0x58b862",
+              "0x58b863"
+            ],
+            "scope": "Actual native and independently relocated compiled makecopyforload x86; model only makepcode varargs and terminal CError. Four ABI arguments including arbitrary opaque unused context, categories1..5 and invalid values, all destination classes/kinds, source0xc000 flag combinations and signed16 register extremes. Exact helper opcode/argument sequence, input bytes, result, stack balance and saved registers compared. Bounded helper evidence; not full-runtime PCode construction."
+          },
+          "native_callers": [
+            {
+              "caller": "0x5987a0",
+              "site": "0x598ace",
+              "context": [
+                {
+                  "address": "0x598a93",
+                  "bytes": "893424",
+                  "instruction": "mov dword ptr [esp], esi"
+                },
+                {
+                  "address": "0x598a96",
+                  "bytes": "8b7330",
+                  "instruction": "mov esi, dword ptr [ebx + 0x30]"
+                },
+                {
+                  "address": "0x598a99",
+                  "bytes": "89742404",
+                  "instruction": "mov dword ptr [esp + 4], esi"
+                },
+                {
+                  "address": "0x598a9d",
+                  "bytes": "8b7334",
+                  "instruction": "mov esi, dword ptr [ebx + 0x34]"
+                },
+                {
+                  "address": "0x598aa0",
+                  "bytes": "89742408",
+                  "instruction": "mov dword ptr [esp + 8], esi"
+                },
+                {
+                  "address": "0x598aa4",
+                  "bytes": "668b7338",
+                  "instruction": "mov si, word ptr [ebx + 0x38]"
+                },
+                {
+                  "address": "0x598aa8",
+                  "bytes": "668974240c",
+                  "instruction": "mov word ptr [esp + 0xc], si"
+                },
+                {
+                  "address": "0x598aad",
+                  "bytes": "e98ffdffff",
+                  "instruction": "jmp 0x598841"
+                },
+                {
+                  "address": "0x598ab2",
+                  "bytes": "31db",
+                  "instruction": "xor ebx, ebx"
+                },
+                {
+                  "address": "0x598ab4",
+                  "bytes": "e988fdffff",
+                  "instruction": "jmp 0x598841"
+                },
+                {
+                  "address": "0x598ab9",
+                  "bytes": "8d842000000000",
+                  "instruction": "lea eax, [eax]"
+                },
+                {
+                  "address": "0x598ac0",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x598ac1",
+                  "bytes": "8d542404",
+                  "instruction": "lea edx, [esp + 4]"
+                },
+                {
+                  "address": "0x598ac5",
+                  "bytes": "52",
+                  "instruction": "push edx"
+                },
+                {
+                  "address": "0x598ac6",
+                  "bytes": "ff742418",
+                  "instruction": "push dword ptr [esp + 0x18]"
+                },
+                {
+                  "address": "0x598aca",
+                  "bytes": "ff742434",
+                  "instruction": "push dword ptr [esp + 0x34]"
+                },
+                {
+                  "address": "0x598ace",
+                  "bytes": "e81d2cffff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x598ad3",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x598ad6",
+                  "bytes": "89c7",
+                  "instruction": "mov edi, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x59c170",
+              "site": "0x59c4ec",
+              "context": [
+                {
+                  "address": "0x59c4ca",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x59c4cb",
+                  "bytes": "ff742440",
+                  "instruction": "push dword ptr [esp + 0x40]"
+                },
+                {
+                  "address": "0x59c4cf",
+                  "bytes": "e83cf4feff",
+                  "instruction": "call 0x58b910"
+                },
+                {
+                  "address": "0x59c4d4",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x59c4d5",
+                  "bytes": "85db",
+                  "instruction": "test ebx, ebx"
+                },
+                {
+                  "address": "0x59c4d7",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x59c4d8",
+                  "bytes": "7536",
+                  "instruction": "jne 0x59c510"
+                },
+                {
+                  "address": "0x59c4da",
+                  "bytes": "85c0",
+                  "instruction": "test eax, eax"
+                },
+                {
+                  "address": "0x59c4dc",
+                  "bytes": "7432",
+                  "instruction": "je 0x59c510"
+                },
+                {
+                  "address": "0x59c4de",
+                  "bytes": "8d562c",
+                  "instruction": "lea edx, [esi + 0x2c]"
+                },
+                {
+                  "address": "0x59c4e1",
+                  "bytes": "52",
+                  "instruction": "push edx"
+                },
+                {
+                  "address": "0x59c4e2",
+                  "bytes": "8b7c2440",
+                  "instruction": "mov edi, dword ptr [esp + 0x40]"
+                },
+                {
+                  "address": "0x59c4e6",
+                  "bytes": "83c72c",
+                  "instruction": "add edi, 0x2c"
+                },
+                {
+                  "address": "0x59c4e9",
+                  "bytes": "57",
+                  "instruction": "push edi"
+                },
+                {
+                  "address": "0x59c4ea",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x59c4eb",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x59c4ec",
+                  "bytes": "e8fff1feff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x59c4f1",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x59c4f4",
+                  "bytes": "89c7",
+                  "instruction": "mov edi, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x59c170",
+              "site": "0x59c660",
+              "context": [
+                {
+                  "address": "0x59c63e",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x59c63f",
+                  "bytes": "ff742440",
+                  "instruction": "push dword ptr [esp + 0x40]"
+                },
+                {
+                  "address": "0x59c643",
+                  "bytes": "e8c8f2feff",
+                  "instruction": "call 0x58b910"
+                },
+                {
+                  "address": "0x59c648",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x59c649",
+                  "bytes": "85db",
+                  "instruction": "test ebx, ebx"
+                },
+                {
+                  "address": "0x59c64b",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x59c64c",
+                  "bytes": "7533",
+                  "instruction": "jne 0x59c681"
+                },
+                {
+                  "address": "0x59c64e",
+                  "bytes": "85c0",
+                  "instruction": "test eax, eax"
+                },
+                {
+                  "address": "0x59c650",
+                  "bytes": "742f",
+                  "instruction": "je 0x59c681"
+                },
+                {
+                  "address": "0x59c652",
+                  "bytes": "8d7e2c",
+                  "instruction": "lea edi, [esi + 0x2c]"
+                },
+                {
+                  "address": "0x59c655",
+                  "bytes": "57",
+                  "instruction": "push edi"
+                },
+                {
+                  "address": "0x59c656",
+                  "bytes": "8b4c2440",
+                  "instruction": "mov ecx, dword ptr [esp + 0x40]"
+                },
+                {
+                  "address": "0x59c65a",
+                  "bytes": "83c12c",
+                  "instruction": "add ecx, 0x2c"
+                },
+                {
+                  "address": "0x59c65d",
+                  "bytes": "51",
+                  "instruction": "push ecx"
+                },
+                {
+                  "address": "0x59c65e",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x59c65f",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x59c660",
+                  "bytes": "e88bf0feff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x59c665",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x59c668",
+                  "bytes": "89c7",
+                  "instruction": "mov edi, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62aad0",
+              "site": "0x62ab0d",
+              "context": [
+                {
+                  "address": "0x62aae4",
+                  "bytes": "8b6c2424",
+                  "instruction": "mov ebp, dword ptr [esp + 0x24]"
+                },
+                {
+                  "address": "0x62aae8",
+                  "bytes": "745f",
+                  "instruction": "je 0x62ab49"
+                },
+                {
+                  "address": "0x62aaea",
+                  "bytes": "0fb65701",
+                  "instruction": "movzx edx, byte ptr [edi + 1]"
+                },
+                {
+                  "address": "0x62aaee",
+                  "bytes": "89c0",
+                  "instruction": "mov eax, eax"
+                },
+                {
+                  "address": "0x62aaf0",
+                  "bytes": "3811",
+                  "instruction": "cmp byte ptr [ecx], dl"
+                },
+                {
+                  "address": "0x62aaf2",
+                  "bytes": "754e",
+                  "instruction": "jne 0x62ab42"
+                },
+                {
+                  "address": "0x62aaf4",
+                  "bytes": "8b5e1c",
+                  "instruction": "mov ebx, dword ptr [esi + 0x1c]"
+                },
+                {
+                  "address": "0x62aaf7",
+                  "bytes": "8b4106",
+                  "instruction": "mov eax, dword ptr [ecx + 6]"
+                },
+                {
+                  "address": "0x62aafa",
+                  "bytes": "39c3",
+                  "instruction": "cmp ebx, eax"
+                },
+                {
+                  "address": "0x62aafc",
+                  "bytes": "7544",
+                  "instruction": "jne 0x62ab42"
+                },
+                {
+                  "address": "0x62aafe",
+                  "bytes": "0fb74902",
+                  "instruction": "movzx ecx, word ptr [ecx + 2]"
+                },
+                {
+                  "address": "0x62ab02",
+                  "bytes": "66894d04",
+                  "instruction": "mov word ptr [ebp + 4], cx"
+                },
+                {
+                  "address": "0x62ab06",
+                  "bytes": "57",
+                  "instruction": "push edi"
+                },
+                {
+                  "address": "0x62ab07",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62ab08",
+                  "bytes": "ff742420",
+                  "instruction": "push dword ptr [esp + 0x20]"
+                },
+                {
+                  "address": "0x62ab0c",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x62ab0d",
+                  "bytes": "e8de0bf6ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62ab12",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62ab15",
+                  "bytes": "89c3",
+                  "instruction": "mov ebx, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62aad0",
+              "site": "0x62ab95",
+              "context": [
+                {
+                  "address": "0x62ab59",
+                  "bytes": "0fbe4f01",
+                  "instruction": "movsx ecx, byte ptr [edi + 1]"
+                },
+                {
+                  "address": "0x62ab5d",
+                  "bytes": "8b048da06e7100",
+                  "instruction": "mov eax, dword ptr [ecx*4 + 0x716ea0]"
+                },
+                {
+                  "address": "0x62ab64",
+                  "bytes": "83048da06e710001",
+                  "instruction": "add dword ptr [ecx*4 + 0x716ea0], 1"
+                },
+                {
+                  "address": "0x62ab6c",
+                  "bytes": "894302",
+                  "instruction": "mov dword ptr [ebx + 2], eax"
+                },
+                {
+                  "address": "0x62ab6f",
+                  "bytes": "0fb65701",
+                  "instruction": "movzx edx, byte ptr [edi + 1]"
+                },
+                {
+                  "address": "0x62ab73",
+                  "bytes": "8813",
+                  "instruction": "mov byte ptr [ebx], dl"
+                },
+                {
+                  "address": "0x62ab75",
+                  "bytes": "89730a",
+                  "instruction": "mov dword ptr [ebx + 0xa], esi"
+                },
+                {
+                  "address": "0x62ab78",
+                  "bytes": "a160bf6f00",
+                  "instruction": "mov eax, dword ptr [0x6fbf60]"
+                },
+                {
+                  "address": "0x62ab7d",
+                  "bytes": "89430e",
+                  "instruction": "mov dword ptr [ebx + 0xe], eax"
+                },
+                {
+                  "address": "0x62ab80",
+                  "bytes": "891d60bf6f00",
+                  "instruction": "mov dword ptr [0x6fbf60], ebx"
+                },
+                {
+                  "address": "0x62ab86",
+                  "bytes": "0fb75302",
+                  "instruction": "movzx edx, word ptr [ebx + 2]"
+                },
+                {
+                  "address": "0x62ab8a",
+                  "bytes": "66895504",
+                  "instruction": "mov word ptr [ebp + 4], dx"
+                },
+                {
+                  "address": "0x62ab8e",
+                  "bytes": "57",
+                  "instruction": "push edi"
+                },
+                {
+                  "address": "0x62ab8f",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62ab90",
+                  "bytes": "ff742420",
+                  "instruction": "push dword ptr [esp + 0x20]"
+                },
+                {
+                  "address": "0x62ab94",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x62ab95",
+                  "bytes": "e8560bf6ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62ab9a",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62ab9d",
+                  "bytes": "89c5",
+                  "instruction": "mov ebp, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62dcc0",
+              "site": "0x62deab",
+              "context": [
+                {
+                  "address": "0x62de6a",
+                  "bytes": "8a44244c",
+                  "instruction": "mov al, byte ptr [esp + 0x4c]"
+                },
+                {
+                  "address": "0x62de6e",
+                  "bytes": "38442434",
+                  "instruction": "cmp byte ptr [esp + 0x34], al"
+                },
+                {
+                  "address": "0x62de72",
+                  "bytes": "0f8518040000",
+                  "instruction": "jne 0x62e290"
+                },
+                {
+                  "address": "0x62de78",
+                  "bytes": "8a44244c",
+                  "instruction": "mov al, byte ptr [esp + 0x4c]"
+                },
+                {
+                  "address": "0x62de7c",
+                  "bytes": "88442401",
+                  "instruction": "mov byte ptr [esp + 1], al"
+                },
+                {
+                  "address": "0x62de80",
+                  "bytes": "668b442440",
+                  "instruction": "mov ax, word ptr [esp + 0x40]"
+                },
+                {
+                  "address": "0x62de85",
+                  "bytes": "8d552c",
+                  "instruction": "lea edx, [ebp + 0x2c]"
+                },
+                {
+                  "address": "0x62de88",
+                  "bytes": "6689442404",
+                  "instruction": "mov word ptr [esp + 4], ax"
+                },
+                {
+                  "address": "0x62de8d",
+                  "bytes": "c744245401000000",
+                  "instruction": "mov dword ptr [esp + 0x54], 1"
+                },
+                {
+                  "address": "0x62de95",
+                  "bytes": "c6042400",
+                  "instruction": "mov byte ptr [esp], 0"
+                },
+                {
+                  "address": "0x62de99",
+                  "bytes": "66c74424020100",
+                  "instruction": "mov word ptr [esp + 2], 1"
+                },
+                {
+                  "address": "0x62dea0",
+                  "bytes": "52",
+                  "instruction": "push edx"
+                },
+                {
+                  "address": "0x62dea1",
+                  "bytes": "8d742404",
+                  "instruction": "lea esi, [esp + 4]"
+                },
+                {
+                  "address": "0x62dea5",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x62dea6",
+                  "bytes": "ff742450",
+                  "instruction": "push dword ptr [esp + 0x50]"
+                },
+                {
+                  "address": "0x62deaa",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62deab",
+                  "bytes": "e840d8f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62deb0",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62deb3",
+                  "bytes": "89c3",
+                  "instruction": "mov ebx, eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62dcc0",
+              "site": "0x62e1de",
+              "context": [
+                {
+                  "address": "0x62e1a8",
+                  "bytes": "8b752c",
+                  "instruction": "mov esi, dword ptr [ebp + 0x2c]"
+                },
+                {
+                  "address": "0x62e1ab",
+                  "bytes": "89742410",
+                  "instruction": "mov dword ptr [esp + 0x10], esi"
+                },
+                {
+                  "address": "0x62e1af",
+                  "bytes": "8b7530",
+                  "instruction": "mov esi, dword ptr [ebp + 0x30]"
+                },
+                {
+                  "address": "0x62e1b2",
+                  "bytes": "89742414",
+                  "instruction": "mov dword ptr [esp + 0x14], esi"
+                },
+                {
+                  "address": "0x62e1b6",
+                  "bytes": "8b7534",
+                  "instruction": "mov esi, dword ptr [ebp + 0x34]"
+                },
+                {
+                  "address": "0x62e1b9",
+                  "bytes": "89742418",
+                  "instruction": "mov dword ptr [esp + 0x18], esi"
+                },
+                {
+                  "address": "0x62e1bd",
+                  "bytes": "668b7538",
+                  "instruction": "mov si, word ptr [ebp + 0x38]"
+                },
+                {
+                  "address": "0x62e1c1",
+                  "bytes": "668974241c",
+                  "instruction": "mov word ptr [esp + 0x1c], si"
+                },
+                {
+                  "address": "0x62e1c6",
+                  "bytes": "668b442454",
+                  "instruction": "mov ax, word ptr [esp + 0x54]"
+                },
+                {
+                  "address": "0x62e1cb",
+                  "bytes": "6689442414",
+                  "instruction": "mov word ptr [esp + 0x14], ax"
+                },
+                {
+                  "address": "0x62e1d0",
+                  "bytes": "8d4c2410",
+                  "instruction": "lea ecx, [esp + 0x10]"
+                },
+                {
+                  "address": "0x62e1d4",
+                  "bytes": "8d472c",
+                  "instruction": "lea eax, [edi + 0x2c]"
+                },
+                {
+                  "address": "0x62e1d7",
+                  "bytes": "51",
+                  "instruction": "push ecx"
+                },
+                {
+                  "address": "0x62e1d8",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x62e1d9",
+                  "bytes": "ff742450",
+                  "instruction": "push dword ptr [esp + 0x50]"
+                },
+                {
+                  "address": "0x62e1dd",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62e1de",
+                  "bytes": "e80dd5f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62e1e3",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62e1e6",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62dcc0",
+              "site": "0x62e208",
+              "context": [
+                {
+                  "address": "0x62e1de",
+                  "bytes": "e80dd5f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62e1e3",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62e1e6",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x62e1e7",
+                  "bytes": "57",
+                  "instruction": "push edi"
+                },
+                {
+                  "address": "0x62e1e8",
+                  "bytes": "e8a346f5ff",
+                  "instruction": "call 0x582890"
+                },
+                {
+                  "address": "0x62e1ed",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x62e1ee",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x62e1ef",
+                  "bytes": "837c244801",
+                  "instruction": "cmp dword ptr [esp + 0x48], 1"
+                },
+                {
+                  "address": "0x62e1f4",
+                  "bytes": "7471",
+                  "instruction": "je 0x62e267"
+                },
+                {
+                  "address": "0x62e1f6",
+                  "bytes": "8d542410",
+                  "instruction": "lea edx, [esp + 0x10]"
+                },
+                {
+                  "address": "0x62e1fa",
+                  "bytes": "52",
+                  "instruction": "push edx"
+                },
+                {
+                  "address": "0x62e1fb",
+                  "bytes": "8b742460",
+                  "instruction": "mov esi, dword ptr [esp + 0x60]"
+                },
+                {
+                  "address": "0x62e1ff",
+                  "bytes": "83c62c",
+                  "instruction": "add esi, 0x2c"
+                },
+                {
+                  "address": "0x62e202",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x62e203",
+                  "bytes": "ff742450",
+                  "instruction": "push dword ptr [esp + 0x50]"
+                },
+                {
+                  "address": "0x62e207",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62e208",
+                  "bytes": "e8e3d4f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62e20d",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62e210",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                }
+              ]
+            },
+            {
+              "caller": "0x62dcc0",
+              "site": "0x62e22a",
+              "context": [
+                {
+                  "address": "0x62e202",
+                  "bytes": "56",
+                  "instruction": "push esi"
+                },
+                {
+                  "address": "0x62e203",
+                  "bytes": "ff742450",
+                  "instruction": "push dword ptr [esp + 0x50]"
+                },
+                {
+                  "address": "0x62e207",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62e208",
+                  "bytes": "e8e3d4f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62e20d",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62e210",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x62e211",
+                  "bytes": "ff742460",
+                  "instruction": "push dword ptr [esp + 0x60]"
+                },
+                {
+                  "address": "0x62e215",
+                  "bytes": "e8b647f5ff",
+                  "instruction": "call 0x5829d0"
+                },
+                {
+                  "address": "0x62e21a",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x62e21b",
+                  "bytes": "59",
+                  "instruction": "pop ecx"
+                },
+                {
+                  "address": "0x62e21c",
+                  "bytes": "8d4d2c",
+                  "instruction": "lea ecx, [ebp + 0x2c]"
+                },
+                {
+                  "address": "0x62e21f",
+                  "bytes": "51",
+                  "instruction": "push ecx"
+                },
+                {
+                  "address": "0x62e220",
+                  "bytes": "8d442414",
+                  "instruction": "lea eax, [esp + 0x14]"
+                },
+                {
+                  "address": "0x62e224",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                },
+                {
+                  "address": "0x62e225",
+                  "bytes": "ff742450",
+                  "instruction": "push dword ptr [esp + 0x50]"
+                },
+                {
+                  "address": "0x62e229",
+                  "bytes": "55",
+                  "instruction": "push ebp"
+                },
+                {
+                  "address": "0x62e22a",
+                  "bytes": "e8c1d4f5ff",
+                  "instruction": "call 0x58b6f0"
+                },
+                {
+                  "address": "0x62e22f",
+                  "bytes": "83c410",
+                  "instruction": "add esp, 0x10"
+                },
+                {
+                  "address": "0x62e232",
+                  "bytes": "50",
+                  "instruction": "push eax"
+                }
+              ]
+            }
+          ],
+          "current_import_audit": {
+            "references": [
+              {
+                "path": "src\\GC_3_0a5_2\\backend\\PCodeInfo.c",
+                "line": 697,
+                "text": "PCodeInstruction *makecopyforload(int category, PCodeOperand *source, PCodeOperand *destination)"
+              }
+            ],
+            "compatible_guard_required": false,
+            "reason": "The only current src/include occurrence is the GC3-only PCodeInfo definition. No old-version declaration/caller needs preservation. Future native callers must pass context,category,source,destination; no three-argument alias at58b6f0 is ABI-compatible."
+          },
+          "source_review": {
+            "active_source": "src\\GC_3_0a5_2\\backend\\PCodeInfo.c",
+            "active_sha256": "cc41a5ba059d9b7b13e2ac08b1568ac14341c04084c045d319d60e7a35e5534f",
+            "candidate_source": "build\\PCodeInfo-makecopyforload-abi\\PCodeInfo-corrected.c",
+            "candidate_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+            "change": "Add unused leading PCodeInstruction*context parameter to native makecopyforload. Existing category1 call to makecopyinstruction is already behaviorally compatible and auto-inlines the native class/flag dispatch; no extra semantic rewrite is required.",
+            "native_abi": "cdecl Instruction*makecopyforload(Instruction*context,SInt32category,Operand*source,Operand*destination)",
+            "proof": "Native entry reads stack+8,+12,+16 and never stack+4. Two independently decoded forward-optimizer callers push four args and clean16 bytes. Native category1 uses signed destination class1..4 and source flags0xc000; categories2..5 retain existing behavior."
+          },
+          "native_callee_instructions": "0x58b6f0 8b542408 mov edx, dword ptr [esp + 8]\n0x58b6f4 83ea01 sub edx, 1\n0x58b6f7 83fa04 cmp edx, 4\n0x58b6fa 8b44240c mov eax, dword ptr [esp + 0xc]\n0x58b6fe 8b4c2410 mov ecx, dword ptr [esp + 0x10]\n0x58b702 0f8718010000 ja 0x58b820\n0x58b708 ff2495a03a6500 jmp dword ptr [edx*4 + 0x653aa0]\n0x58b70f 803900 cmp byte ptr [ecx], 0\n0x58b712 0f8538010000 jne 0x58b850\n0x58b718 0fbe5101 movsx edx, byte ptr [ecx + 1]\n0x58b71c 83ea01 sub edx, 1\n0x58b71f 83fa03 cmp edx, 3\n0x58b722 0f8728010000 ja 0x58b850\n0x58b728 ff2495903a6500 jmp dword ptr [edx*4 + 0x653a90]\n0x58b72f 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b733 50 push eax\n0x58b734 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b738 52 push edx\n0x58b739 688b000000 push 0x8b\n0x58b73e e81d78ffff call 0x582f60\n0x58b743 83c40c add esp, 0xc\n0x58b746 eb6e jmp 0x58b7b6\n0x58b748 0fb75002 movzx edx, word ptr [eax + 2]\n0x58b74c f7c200800000 test edx, 0x8000\n0x58b752 0f85dc000000 jne 0x58b834\n0x58b758 f7c200400000 test edx, 0x4000\n0x58b75e 0f85d0000000 jne 0x58b834\n0x58b764 f7c200c00000 test edx, 0xc000\n0x58b76a 0f85c4000000 jne 0x58b834\n0x58b770 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b774 50 push eax\n0x58b775 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b779 51 push ecx\n0x58b77a 689e000000 push 0x9e\n0x58b77f e8dc77ffff call 0x582f60\n0x58b784 83c40c add esp, 0xc\n0x58b787 eb2d jmp 0x58b7b6\n0x58b789 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b78d 52 push edx\n0x58b78e 0fbf4104 movsx eax, word ptr [ecx + 4]\n0x58b792 50 push eax\n0x58b793 6890010000 push 0x190\n0x58b798 e8c377ffff call 0x582f60\n0x58b79d 83c40c add esp, 0xc\n0x58b7a0 eb14 jmp 0x58b7b6\n0x58b7a2 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b7a6 52 push edx\n0x58b7a7 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b7ab 51 push ecx\n0x58b7ac 6a76 push 0x76\n0x58b7ae e8ad77ffff call 0x582f60\n0x58b7b3 83c40c add esp, 0xc\n0x58b7b6 c3 ret \n0x58b7b7 6a1f push 0x1f\n0x58b7b9 6a18 push 0x18\n0x58b7bb 6a00 push 0\n0x58b7bd 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b7c1 50 push eax\n0x58b7c2 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b7c6 52 push edx\n0x58b7c7 6a67 push 0x67\n0x58b7c9 e89277ffff call 0x582f60\n0x58b7ce 83c418 add esp, 0x18\n0x58b7d1 c3 ret \n0x58b7d2 6a1f push 0x1f\n0x58b7d4 6a10 push 0x10\n0x58b7d6 6a00 push 0\n0x58b7d8 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b7dc 50 push eax\n0x58b7dd 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b7e1 51 push ecx\n0x58b7e2 6a67 push 0x67\n0x58b7e4 e87777ffff call 0x582f60\n0x58b7e9 83c418 add esp, 0x18\n0x58b7ec c3 ret \n0x58b7ed 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b7f1 52 push edx\n0x58b7f2 0fbf4104 movsx eax, word ptr [ecx + 4]\n0x58b7f6 50 push eax\n0x58b7f7 6a65 push 0x65\n0x58b7f9 e86277ffff call 0x582f60\n0x58b7fe 83c40c add esp, 0xc\n0x58b801 c3 ret \n0x58b802 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b806 52 push edx\n0x58b807 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b80b 51 push ecx\n0x58b80c 68b5000000 push 0xb5\n0x58b811 e84a77ffff call 0x582f60\n0x58b816 83c40c add esp, 0xc\n0x58b819 c3 ret \n0x58b81a 8d8000000000 lea eax, [eax]\n0x58b820 68ba0a0000 push 0xaba\n0x58b825 6803d36a00 push 0x6ad303\n0x58b82a e821eaecff call 0x45a250\n0x58b82f 59 pop ecx\n0x58b830 59 pop ecx\n0x58b831 31c0 xor eax, eax\n0x58b833 c3 ret \n0x58b834 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b838 50 push eax\n0x58b839 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b83d 52 push edx\n0x58b83e 68a8010000 push 0x1a8\n0x58b843 e81877ffff call 0x582f60\n0x58b848 83c40c add esp, 0xc\n0x58b84b e966ffffff jmp 0x58b7b6\n0x58b850 6835090000 push 0x935\n0x58b855 6803d36a00 push 0x6ad303\n0x58b85a e8f1e9ecff call 0x45a250\n0x58b85f 59 pop ecx\n0x58b860 31c0 xor eax, eax\n0x58b862 59 pop ecx\n0x58b863 e94effffff jmp 0x58b7b6\n",
+          "corrected_callee_instructions": "0x58b6f0 8b542408 mov edx, dword ptr [esp + 8]\n0x58b6f4 83ea01 sub edx, 1\n0x58b6f7 83fa04 cmp edx, 4\n0x58b6fa 8b44240c mov eax, dword ptr [esp + 0xc]\n0x58b6fe 8b4c2410 mov ecx, dword ptr [esp + 0x10]\n0x58b702 0f8718010000 ja 0x58b820\n0x58b708 ff2495a03a6500 jmp dword ptr [edx*4 + 0x653aa0]\n0x58b70f 803900 cmp byte ptr [ecx], 0\n0x58b712 0f8538010000 jne 0x58b850\n0x58b718 0fbe5101 movsx edx, byte ptr [ecx + 1]\n0x58b71c 83ea01 sub edx, 1\n0x58b71f 83fa03 cmp edx, 3\n0x58b722 0f8728010000 ja 0x58b850\n0x58b728 ff2495903a6500 jmp dword ptr [edx*4 + 0x653a90]\n0x58b72f 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b733 50 push eax\n0x58b734 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b738 52 push edx\n0x58b739 688b000000 push 0x8b\n0x58b73e e81d78ffff call 0x582f60\n0x58b743 83c40c add esp, 0xc\n0x58b746 eb6e jmp 0x58b7b6\n0x58b748 0fb75002 movzx edx, word ptr [eax + 2]\n0x58b74c f7c200800000 test edx, 0x8000\n0x58b752 0f85dc000000 jne 0x58b834\n0x58b758 f7c200400000 test edx, 0x4000\n0x58b75e 0f85d0000000 jne 0x58b834\n0x58b764 f7c200c00000 test edx, 0xc000\n0x58b76a 0f85c4000000 jne 0x58b834\n0x58b770 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b774 50 push eax\n0x58b775 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b779 51 push ecx\n0x58b77a 689e000000 push 0x9e\n0x58b77f e8dc77ffff call 0x582f60\n0x58b784 83c40c add esp, 0xc\n0x58b787 eb2d jmp 0x58b7b6\n0x58b789 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b78d 52 push edx\n0x58b78e 0fbf4104 movsx eax, word ptr [ecx + 4]\n0x58b792 50 push eax\n0x58b793 6890010000 push 0x190\n0x58b798 e8c377ffff call 0x582f60\n0x58b79d 83c40c add esp, 0xc\n0x58b7a0 eb14 jmp 0x58b7b6\n0x58b7a2 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b7a6 52 push edx\n0x58b7a7 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b7ab 51 push ecx\n0x58b7ac 6a76 push 0x76\n0x58b7ae e8ad77ffff call 0x582f60\n0x58b7b3 83c40c add esp, 0xc\n0x58b7b6 c3 ret \n0x58b7b7 6a1f push 0x1f\n0x58b7b9 6a18 push 0x18\n0x58b7bb 6a00 push 0\n0x58b7bd 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b7c1 50 push eax\n0x58b7c2 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b7c6 52 push edx\n0x58b7c7 6a67 push 0x67\n0x58b7c9 e89277ffff call 0x582f60\n0x58b7ce 83c418 add esp, 0x18\n0x58b7d1 c3 ret \n0x58b7d2 6a1f push 0x1f\n0x58b7d4 6a10 push 0x10\n0x58b7d6 6a00 push 0\n0x58b7d8 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b7dc 50 push eax\n0x58b7dd 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b7e1 51 push ecx\n0x58b7e2 6a67 push 0x67\n0x58b7e4 e87777ffff call 0x582f60\n0x58b7e9 83c418 add esp, 0x18\n0x58b7ec c3 ret \n0x58b7ed 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b7f1 52 push edx\n0x58b7f2 0fbf4104 movsx eax, word ptr [ecx + 4]\n0x58b7f6 50 push eax\n0x58b7f7 6a65 push 0x65\n0x58b7f9 e86277ffff call 0x582f60\n0x58b7fe 83c40c add esp, 0xc\n0x58b801 c3 ret \n0x58b802 0fbf5004 movsx edx, word ptr [eax + 4]\n0x58b806 52 push edx\n0x58b807 0fbf4904 movsx ecx, word ptr [ecx + 4]\n0x58b80b 51 push ecx\n0x58b80c 68b5000000 push 0xb5\n0x58b811 e84a77ffff call 0x582f60\n0x58b816 83c40c add esp, 0xc\n0x58b819 c3 ret \n0x58b81a 8d8000000000 lea eax, [eax]\n0x58b820 68ba0a0000 push 0xaba\n0x58b825 6803d36a00 push 0x6ad303\n0x58b82a e821eaecff call 0x45a250\n0x58b82f 59 pop ecx\n0x58b830 59 pop ecx\n0x58b831 31c0 xor eax, eax\n0x58b833 c3 ret \n0x58b834 0fbf4004 movsx eax, word ptr [eax + 4]\n0x58b838 50 push eax\n0x58b839 0fbf5104 movsx edx, word ptr [ecx + 4]\n0x58b83d 52 push edx\n0x58b83e 68a8010000 push 0x1a8\n0x58b843 e81877ffff call 0x582f60\n0x58b848 83c40c add esp, 0xc\n0x58b84b e966ffffff jmp 0x58b7b6\n0x58b850 6835090000 push 0x935\n0x58b855 6803d36a00 push 0x6ad303\n0x58b85a e8f1e9ecff call 0x45a250\n0x58b85f 59 pop ecx\n0x58b860 31c0 xor eax, eax\n0x58b862 59 pop ecx\n0x58b863 e94effffff jmp 0x58b7b6\n",
+          "normal_project": {
+            "source": "src/GC_3_0a5_2/backend/PCodeInfo.c",
+            "source_sha256": "5575927a669c43d2693497108ee71b249199b00b69c081f5e225b188b0277b9b",
+            "frozen_candidate_sha256": "850e3b9d9cfb133bc56972aa3105bc2bca11e42ba9a1fd18a740912352933e5a",
+            "candidate_project_sections_sha256": "452235df6e5a1472906f229afa1a9ff361f219b1f0896359929108601b382404",
+            "all_code_and_data_sections_equal": true,
+            "common_symbols_equal": true,
+            "checked_functions": 21,
+            "functions": [
+              {
+                "name": "fn_0058acf0",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058ad80",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058add0",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058ae30",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058ae40",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058aec0",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058af20",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": false
+              },
+              {
+                "name": "copy_opcode_for_type",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": false
+              },
+              {
+                "name": "is_valid_displ",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "change_opcode",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "change_num_operands",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "nbytes_loaded_or_stored_by",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "makecopyforload",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058b870",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "fn_0058b910",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": false
+              },
+              {
+                "name": "fn_0058ba80",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "makecopyinstruction",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "vformatpcode",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": false
+              },
+              {
+                "name": "pcode_const_from_format",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "pcode_check_imm_bits",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              },
+              {
+                "name": "pcode_get_hi_lo",
+                "raw_function_bytes_and_relocations_equal": true,
+                "fully_resolved": true
+              }
+            ],
+            "strict_exact_count": 11,
+            "corrected_makecopyforload_exact": true
+          }
+        },
+        "normal_project_pending": false,
+        "normal_project_checks": {
+          "ninja_all_source_progress": true,
+          "strict_exact_total": 961,
+          "mapped_total": 2132,
+          "objdiff_cli": true,
+          "inventory_partition": true,
+          "ownership_conflicts": 0,
+          "all_four_versions_verify": true,
+          "encoding": "Strict CP932 encoding passed; tools/check_sjis.py is absent."
+        }
+      }
     },
     "src/GC_3_0a5_2/frontend/CError.c": {
       "status": "attempted_equivalent",

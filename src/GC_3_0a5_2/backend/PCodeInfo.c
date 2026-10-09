@@ -694,7 +694,7 @@ void change_opcode(PCodeInstruction *instruction, short opcode)
     instruction->opcode = opcode;
 }
 
-PCodeInstruction *makecopyforload(int category, PCodeOperand *source, PCodeOperand *destination)
+PCodeInstruction *makecopyforload(PCodeInstruction *context, int category, PCodeOperand *source, PCodeOperand *destination)
 {
     switch (category) {
     case 1: return makecopyinstruction(source, destination);

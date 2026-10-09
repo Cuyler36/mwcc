@@ -11,7 +11,7 @@ This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstructi
 to GC 3.0a5.2 while retaining the earlier versions.
 
 Current GC 3.0a5.2 status: 249 source files build, 2,132 candidate functions are
-mapped, and 960 functions pass full-byte and relocation checks. Targets.c,
+mapped, and 961 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -178,7 +178,10 @@ bounded native instruction comparisons. The filename and four-byte BSS cache
 match completely. Shared code-motion state and neighboring engines remain separate.
 
 PCodeInfo has all 21 identified native bodies reconstructed, including the
-41-terminal instruction formatter, with ten exact matches. Four switch-table
+41-terminal instruction formatter, with eleven exact matches. Native callers
+confirm that makecopyforload takes an unused context pointer before its three
+other arguments; the corrected helper matches all 376 bytes and fixups and
+passes 1,000 bounded execution checks. Four switch-table
 relocations and one byte of string-allocation padding remain nonmatching.
 
 ELF_Endian.c has all eight known Windows members ported and reviewed, including

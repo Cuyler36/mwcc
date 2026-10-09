@@ -703,7 +703,6 @@
   "_close_resource_file": "0x004148f0",
   "_codeMotionBits": "0x006fbf82",
   "_collect_override_return_class_types": "0x00541470",
-  "_combine_nonoverlapping_shifts": "0x005f1bd0",
   "_compare_setstring_value": "0x0043f014",
   "_compiler_plugin_cu": "0x00716ed2",
   "_compiling_plugin_type": "0x0066b150",
@@ -1088,7 +1087,6 @@
   "_invoke_if_requested": "0x004084e0",
   "_is_arglistsame": "0x00454700",
   "_is_enabled_or_global_nonzero": "0x00408600",
-  "_is_loop_unrollable": "0x005f1030",
   "_is_non_text_file": "0x0043f6de",
   "_is_pascal_object": "0x00452f40",
   "_is_same_type_or_signedint_compatible": "0x00569800",
@@ -1336,5 +1334,6 @@
   "_WriteObjectFile": "0x0043d590",
   "_WriteBrowseData": "0x0043d660",
   "_CodeMotion_AllocateBits": "0x63d420",
-  "_BitVectors_CopyAndCheckChanged": "0x63d3e0"
+  "_BitVectors_CopyAndCheckChanged": "0x63d3e0",
+  "_IRO_LoopUnroller": "0x5f1cf0"
 }

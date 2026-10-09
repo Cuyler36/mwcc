@@ -2309,6 +2309,7 @@ unsigned int IRO_FindLoops_Unroll(void)
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 void IRO_LoopUnroller(void)
 
 {
@@ -2317,6 +2318,7 @@ void IRO_LoopUnroller(void)
     IroVars_CheckTimedLongjmp();
     return;
 }
+#endif
 
 /* Analyses the loop whose test ends LOOP. */
 IROLoop *fn_0045faa0(IRONode *loop)

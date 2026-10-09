@@ -26120,28 +26120,244 @@
     }
   },
   {
-    "name": "is_loop_unrollable",
-    "address": "0x005f1030",
-    "size": 616,
-    "source": "src/optimizer/IroLoop.c",
-    "baseline_name": "is_loop_unrollable",
-    "baseline_address": "0x0045cbf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_005ed720",
+    "address": "0x5ed720",
+    "size": 226,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "combine_nonoverlapping_shifts",
-    "address": "0x005f1bd0",
-    "size": 274,
-    "source": "src/optimizer/IroLoop.c",
-    "baseline_name": "combine_nonoverlapping_shifts",
-    "baseline_address": "0x0045f6a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_005ed810",
+    "address": "0x5ed810",
+    "size": 287,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed930",
+    "address": "0x5ed930",
+    "size": 183,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed9f0",
+    "address": "0x5ed9f0",
+    "size": 203,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005edac0",
+    "address": "0x5edac0",
+    "size": 2832,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ee5d0",
+    "address": "0x5ee5d0",
+    "size": 265,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ee6e0",
+    "address": "0x5ee6e0",
+    "size": 303,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ee810",
+    "address": "0x5ee810",
+    "size": 1894,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005eef80",
+    "address": "0x5eef80",
+    "size": 460,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ef150",
+    "address": "0x5ef150",
+    "size": 1390,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ef6c0",
+    "address": "0x5ef6c0",
+    "size": 1361,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005efc20",
+    "address": "0x5efc20",
+    "size": 2407,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f0590",
+    "address": "0x5f0590",
+    "size": 1101,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f09e0",
+    "address": "0x5f09e0",
+    "size": 371,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f0b60",
+    "address": "0x5f0b60",
+    "size": 488,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f0d50",
+    "address": "0x5f0d50",
+    "size": 444,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f0f10",
+    "address": "0x5f0f10",
+    "size": 277,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IsLoopUnrollable",
+    "address": "0x5f1030",
+    "size": 616,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f12a0",
+    "address": "0x5f12a0",
+    "size": 1029,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f16b0",
+    "address": "0x5f16b0",
+    "size": 1306,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005f1bd0",
+    "address": "0x5f1bd0",
+    "size": 274,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_LoopUnroller",
+    "address": "0x5f1cf0",
+    "size": 151,
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "identity_evidence": "IroUnrollLoop.c filename diagnostics, native complete call/layout family and1.2.5algorithm review; raw spellings retained unless corroborated, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, instruction/relocated entry review and NOP seams; prefix before-dump wrapper and suffix propagation driver separate",
       "unresolved_indirect_flow": false
     }
   },

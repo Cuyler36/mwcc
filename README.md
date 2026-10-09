@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 264 source files build, 2,384 candidate functions are
-mapped, and 1,021 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 265 source files build, 2,404 candidate functions are
+mapped, and 1,022 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,15 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+IroUnrollLoop has all 22 supported native members attempted, with one exact
+match and no unresolved function imports. Nine compiler profiles and 24
+source-order forms were tested; 11,264 bounded native comparisons pass. All
+2,777 owned string bytes and fixups agree. Three native switch tables totaling
+156 bytes remain visible in objdiff as target-only data. Incompatible legacy
+helper aliases were removed; the retained IroLoop implementations preserve
+their earlier-version code, data and relocations. Original physical TU extent
+remains unproved.
 
 IroAggregateAssignment has all 19 supported native members attempted, with
 one exact match and no unresolved imports. Fourteen compiler profiles and

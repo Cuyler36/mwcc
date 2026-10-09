@@ -1,5 +1,6 @@
 """Regression checks for relocation resolution across imported source units."""
 import struct
+import hashlib
 import unittest
 from collections import defaultdict
 from tempfile import TemporaryDirectory
@@ -8,7 +9,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from compare import (resolve_function, source_data, write_translation_unit, read_object,
-                     function_section, table_literal_references)
+                     function_section, table_literal_references, target_only_data)
 
 
 class Image:
@@ -565,6 +566,81 @@ class MixedTableLiteralTests(unittest.TestCase):
                         'literal_payload', 'literal_reference_conflict']:
             with self.subTest(invalid=invalid):
                 self.assertFalse(self.fixture(invalid))
+
+
+class TargetOnlyDataTests(unittest.TestCase):
+    def fixture(self):
+        class DataImage(Image):
+            def section_for_address(self, address):
+                if 0x2000 <= address < 0x3000:
+                    return SimpleNamespace(name='.rdata', virtual_address=0x2000, virtual_size=0x1000,
+                                           file_offset=0x2000, file_size=0x1000, characteristics=0x40000040)
+                raise ValueError('outside data')
+        pe = DataImage(struct.pack('<II', 0x1000, 0x1100))
+        item = dict(name='native_switch_2000', address='0x2000', size=8,
+                    sha256=hashlib.sha256(pe.read(0x2000, 8)).hexdigest(),
+                    fixups=['0x2000', '0x2004'], identity_evidence='Verified native jump operands and labels')
+        config = dict(sources=['src/owner.c', 'src/other.c'], target_only_data={'src/owner.c': [item]})
+        return pe, config
+
+    def select(self, pe, config, source='src/owner.c', claims=None):
+        with patch('compare.version_config', return_value=config), patch('compare.base_relocations', return_value=[0x2000, 0x2004]):
+            return target_only_data('GC_3_0a5_2', source, pe, claims)
+
+    def test_native_table_is_visible_only_on_target_without_source_binding(self):
+        pe, config = self.fixture()
+        claims = []
+        target, evidence = self.select(pe, config, claims=claims)
+        self.assertEqual(target[0]['name'], '.rdata')
+        self.assertEqual(target[0]['data'], pe.read(0x2000, 8))
+        self.assertEqual(claims, [(0x2000, 0x2008)])
+        self.assertEqual(evidence[0]['implementation_status'], 'target_only')
+        self.assertFalse(evidence[0]['candidate_present'])
+        self.assertNotIn('bytes_exact', evidence[0])
+        self.assertNotIn('source_bindings', config)
+        with TemporaryDirectory() as tmp:
+            left, right = Path(tmp) / 'left.obj', Path(tmp) / 'right.obj'
+            write_translation_unit(left, [], target)
+            write_translation_unit(right, [], [])
+            sy, sections = read_object(left)
+            self.assertEqual([s['name'] for s in sections], ['.text', '.rdata'])
+            self.assertIn('native_switch_2000', {s['name'] for s in sy.values()})
+            self.assertEqual([s['name'] for s in read_object(right)[1]], ['.text'])
+
+    def test_another_tu_does_not_claim_native_table(self):
+        pe, config = self.fixture()
+        claims = []
+        self.assertEqual(self.select(pe, config, 'src/other.c', claims), ([], []))
+        self.assertEqual(claims, [])
+
+    def test_target_only_requires_reviewed_bytes_and_all_native_fixups(self):
+        for field, value in [('sha256', '0' * 64), ('fixups', ['0x2000']), ('identity_evidence', '')]:
+            pe, config = self.fixture()
+            config['target_only_data']['src/owner.c'][0][field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                self.select(pe, config)
+
+    def test_overlapping_native_owners_are_rejected(self):
+        pe, config = self.fixture()
+        config['target_only_data']['src/other.c'] = [dict(config['target_only_data']['src/owner.c'][0])]
+        with self.assertRaises(ValueError):
+            self.select(pe, config)
+
+    def test_already_claimed_compiled_data_cannot_be_added_again(self):
+        pe, config = self.fixture()
+        with self.assertRaises(ValueError):
+            self.select(pe, config, claims=[(0x2004, 0x2008)])
+
+    def test_invalid_size_extent_or_disabled_source_is_rejected(self):
+        for field, value in [('size', 0), ('size', 0x1004), ('address', '0x4000')]:
+            pe, config = self.fixture()
+            config['target_only_data']['src/owner.c'][0][field] = value
+            with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+                self.select(pe, config)
+        pe, config = self.fixture()
+        config['sources'].remove('src/owner.c')
+        with self.assertRaises(ValueError):
+            self.select(pe, config)
 
 
 if __name__ == '__main__':

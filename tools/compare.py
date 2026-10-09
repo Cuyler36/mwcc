@@ -247,6 +247,54 @@ def read_memory(pe, address, size):
     return pe.data[offset:offset + backed] + bytes(size - backed)
 
 
+def target_only_data(version, source, pe, claims):
+    """Expose reviewed native storage with no compiled contribution or binding."""
+    config = version_config(version)
+    selections = config.get('target_only_data', {})
+    seen, spans = set(), []
+    selected = []
+    for owner, records in selections.items():
+        if owner not in config['sources']:
+            raise ValueError(f'Target-only data source is not enabled: {owner}')
+        for item in records:
+            address, size, name = int(item['address'], 0), item['size'], item['name']
+            section = pe.section_for_address(address)
+            if (not isinstance(size, int) or size <= 0 or
+                    section.name not in ('.rdata', '.data', '.bss') or
+                    not section.virtual_address <= address < address + size <= section.virtual_address + section.virtual_size or
+                    not re.fullmatch(r'[A-Za-z_]\w*', name) or (owner, name) in seen or
+                    not item.get('identity_evidence') or
+                    any(address < end and start < address + size for start, end in spans)):
+                raise ValueError(f'Invalid target-only data: {owner}: {item}')
+            seen.add((owner, name))
+            spans.append((address, address + size))
+            payload = read_memory(pe, address, size)
+            fixups = [f for f in base_relocations(pe) if address <= f < address + size]
+            if (hashlib.sha256(payload).hexdigest() != item.get('sha256') or
+                    fixups != [int(f, 0) for f in item.get('fixups', [])]):
+                raise ValueError(f'Target-only data bytes/fixups disagree: {owner}: {name}')
+            if owner == source:
+                selected.append((item, section, payload, fixups))
+    output, evidence = {}, []
+    for item, section, payload, fixups in selected:
+        address, size, name = int(item['address'], 0), item['size'], item['name']
+        if claims is not None and any(address < end and start < address + size for start, end in claims):
+            raise ValueError(f'Target-only data overlaps an existing contribution: {source}: {name}')
+        flags = 0xc0000080 if section.characteristics & 0x80 else (
+            0xc0000040 if section.characteristics & 0x80000000 else 0x40000040)
+        dest = output.setdefault(section.name, dict(name=section.name, data=bytearray(), symbols=[], flags=flags))
+        dest['symbols'].append((name, len(dest['data']), size, False))
+        dest['data'].extend(payload)
+        if claims is not None:
+            claims.append((address, address + size))
+        evidence.append(dict(name=name, address=item['address'], size=size, section=section.name,
+            target_section=section.name, method='reviewed target-only native data',
+            implementation_status='target_only', candidate_present=False,
+            sha256=item['sha256'], fixups=[hex(f) for f in fixups],
+            identity_evidence=item['identity_evidence'], unresolved='no compiled data contribution'))
+    return list(output.values()), evidence
+
+
 def table_literal_references(symbols, sections, pe, addresses, references, fixups):
     """Recover local literals only from independently verified, anchored pointer tables."""
     inferred = defaultdict(set)
@@ -601,6 +649,15 @@ def source_data(version, source, rows, symbols, sections, pe, claims):
         dest['data'].extend(bytes(size))
         if claims is not None:
             claims.append((location, location + size))
+    extra_target, extra_evidence = target_only_data(version, source, pe, claims)
+    for section in extra_target:
+        dest = target.setdefault(section['name'], dict(name=section['name'], data=bytearray(), symbols=[], flags=section['flags']))
+        offset = len(dest['data'])
+        dest['symbols'].extend((name, offset + start, size, code) for name, start, size, code in section['symbols'])
+        dest['data'].extend(section['data'])
+    if extra_evidence:
+        evidence.extend(extra_evidence)
+        complete = False
     output_path = Path(f'build/{version}/unit-data/{source}.json')
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(evidence, indent=2) + '\n')

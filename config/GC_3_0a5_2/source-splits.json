@@ -5726,5 +5726,93 @@
   "fn_00612810": {
     "name": "fn_00612810",
     "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_005ed720": {
+    "name": "fn_005ed720",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ed810": {
+    "name": "fn_005ed810",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ed930": {
+    "name": "fn_005ed930",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ed9f0": {
+    "name": "fn_005ed9f0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005edac0": {
+    "name": "fn_005edac0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ee5d0": {
+    "name": "fn_005ee5d0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ee6e0": {
+    "name": "fn_005ee6e0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ee810": {
+    "name": "fn_005ee810",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005eef80": {
+    "name": "fn_005eef80",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ef150": {
+    "name": "fn_005ef150",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005ef6c0": {
+    "name": "fn_005ef6c0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005efc20": {
+    "name": "fn_005efc20",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f0590": {
+    "name": "fn_005f0590",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f09e0": {
+    "name": "fn_005f09e0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f0b60": {
+    "name": "fn_005f0b60",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f0d50": {
+    "name": "fn_005f0d50",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f0f10": {
+    "name": "fn_005f0f10",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "IsLoopUnrollable": {
+    "name": "IsLoopUnrollable",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f12a0": {
+    "name": "fn_005f12a0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f16b0": {
+    "name": "fn_005f16b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_005f1bd0": {
+    "name": "fn_005f1bd0",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "IRO_LoopUnroller": {
+    "name": "IRO_LoopUnroller",
+    "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
   }
 }

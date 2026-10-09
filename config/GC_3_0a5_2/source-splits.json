@@ -187,73 +187,9 @@
     "name": "WriteObjectFile",
     "source": "src/GC_3_0a5_2/driver/CLWriteObjectFile.c"
   },
-  "copy_relocation_list": {
-    "name": "copy_relocation_list",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
   "CInline_DispatchNextDeferredNode": {
     "name": "CInline_DispatchNextDeferredNode",
     "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c"
-  },
-  "setup_exception_specification": {
-    "name": "setup_exception_specification",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "generate_temporary_object_destruction": {
-    "name": "generate_temporary_object_destruction",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "fn_004e1050": {
-    "name": "fn_004e1050",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "rewrite_expr_temporaries": {
-    "name": "rewrite_expr_temporaries",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "rewrite_funccall_temporaries": {
-    "name": "rewrite_funccall_temporaries",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "lower_newexception": {
-    "name": "lower_newexception",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_004e1940": {
-    "name": "CException_004e1940",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ScanTryBlock": {
-    "name": "CExcept_ScanTryBlock",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "append_namespace_names": {
-    "name": "append_namespace_names",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ActionCleanup": {
-    "name": "CExcept_ActionCleanup",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_RegisterMemberArray": {
-    "name": "CExcept_RegisterMemberArray",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ActionNeedsDestruction": {
-    "name": "CExcept_ActionNeedsDestruction",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ActionCompare": {
-    "name": "CExcept_ActionCompare",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_004e35b0": {
-    "name": "CException_004e35b0",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_Setup": {
-    "name": "CExcept_Setup",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
   },
   "CFunc_ParseFuncDef": {
     "name": "CFunc_ParseFuncDef",
@@ -466,122 +402,6 @@
   "CFunc_SetupLocalVarInfo": {
     "name": "CFunc_SetupLocalVarInfo",
     "source": "src/GC_3_0a5_2/frontend/CFunc.cpp"
-  },
-  "CException_HashType": {
-    "name": "CException_HashType",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_AddPendingBuffer": {
-    "name": "CException_AddPendingBuffer",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_Terminate": {
-    "name": "CExcept_Terminate",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_ResetPrecompiledState": {
-    "name": "CException_ResetPrecompiledState",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ExceptionTansform": {
-    "name": "CExcept_ExceptionTansform",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "fn_004e0ab0": {
-    "name": "fn_004e0ab0",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "fn_004e0b20": {
-    "name": "fn_004e0b20",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "update_statement_dobjstacks": {
-    "name": "update_statement_dobjstacks",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "insert_temporary_object_destruction": {
-    "name": "insert_temporary_object_destruction",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_GetTempObject": {
-    "name": "CException_GetTempObject",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "create_catch_object_init": {
-    "name": "create_catch_object_init",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_004e1fb0": {
-    "name": "CException_004e1fb0",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ScanThrowExpression": {
-    "name": "CExcept_ScanThrowExpression",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "create_call_with_arg_and_default_args": {
-    "name": "create_call_with_arg_and_default_args",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_ScanExceptionSpecification": {
-    "name": "CExcept_ScanExceptionSpecification",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "create_type_stringconst": {
-    "name": "create_type_stringconst",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "emit_flagged_class_offsets": {
-    "name": "emit_flagged_class_offsets",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "add_class_and_bases": {
-    "name": "add_class_and_bases",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "mark_class_and_bases": {
-    "name": "mark_class_and_bases",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "fn_004e2940": {
-    "name": "fn_004e2940",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_RegisterMember": {
-    "name": "CExcept_RegisterMember",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_AddStdTypeRecord": {
-    "name": "CException_AddStdTypeRecord",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "fn_004e30c0": {
-    "name": "fn_004e30c0",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_PushEntry": {
-    "name": "CException_PushEntry",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "insert_exception_action": {
-    "name": "insert_exception_action",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_RegisterDeleteObject": {
-    "name": "CExcept_RegisterDeleteObject",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CException_RegisterMemberArray": {
-    "name": "CException_RegisterMemberArray",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_RegisterDestructorObject": {
-    "name": "CExcept_RegisterDestructorObject",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
-  },
-  "CExcept_CompareSpecifications": {
-    "name": "CExcept_CompareSpecifications",
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
   },
   "xmalloc": {
     "name": "xmalloc",
@@ -5830,5 +5650,233 @@
   "fn_0063b080": {
     "name": "fn_0063b080",
     "source": "src/GC_3_0a5_2/backend/MachineSimulation603.c"
+  },
+  "setup_exception_specification": {
+    "name": "CExcept_InsertSpecificationActions",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "generate_temporary_object_destruction": {
+    "name": "CExcept_CleanupExceptionActions",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004e1050": {
+    "name": "CExcept_TempTransExpr",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "rewrite_expr_temporaries": {
+    "name": "CExcept_TempTransExprCond",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "rewrite_funccall_temporaries": {
+    "name": "CExcept_TempTransFuncCall",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "lower_newexception": {
+    "name": "CExcept_TransNewException",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_004e1940": {
+    "name": "CExcept_TempTrans_ETEMP",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ScanTryBlock": {
+    "name": "CExcept_ScanTryBlock",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "append_namespace_names": {
+    "name": "CExcept_MangleNameSpaceName",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionCleanup": {
+    "name": "CExcept_ActionCleanup",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterMemberArray": {
+    "name": "CExcept_RegisterMemberArray",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionNeedsDestruction": {
+    "name": "CExcept_ActionNeedsDestruction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ActionCompare": {
+    "name": "CExcept_ActionCompare",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CException_004e35b0": {
+    "name": "CExcept_CheckStackRefs",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_0049c710": {
+    "name": "fn_0049c710",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_0049c7a0": {
+    "name": "fn_0049c7a0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_0049c920": {
+    "name": "fn_0049c920",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_0049c9e0": {
+    "name": "fn_0049c9e0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CanThrowCheckCB": {
+    "name": "CExcept_CanThrowCheckCB",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CanThrowException": {
+    "name": "CExcept_CanThrowException",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_SetupNoThrowFunction": {
+    "name": "CExcept_SetupNoThrowFunction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ExceptionTansform": {
+    "name": "CExcept_ExceptionTansform",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_InsertSpecificationActions": {
+    "name": "CExcept_InsertSpecificationActions",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TempTransform": {
+    "name": "CExcept_TempTransform",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_GenerateCatchTypeIDs": {
+    "name": "CExcept_GenerateCatchTypeIDs",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_DtorTransform": {
+    "name": "CExcept_DtorTransform",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CleanupExceptionActions": {
+    "name": "CExcept_CleanupExceptionActions",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TempTransExpr": {
+    "name": "CExcept_TempTransExpr",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TempTransExprCond": {
+    "name": "CExcept_TempTransExprCond",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TempTransFuncCall": {
+    "name": "CExcept_TempTransFuncCall",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TransInitTryCatch": {
+    "name": "CExcept_TransInitTryCatch",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TransNewException": {
+    "name": "CExcept_TransNewException",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_TempTrans_ETEMP": {
+    "name": "CExcept_TempTrans_ETEMP",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_0049eb00": {
+    "name": "fn_0049eb00",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_PatchDObjStack": {
+    "name": "CExcept_PatchDObjStack",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ParseThrowExpression": {
+    "name": "CExcept_ParseThrowExpression",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ThrowExpression": {
+    "name": "CExcept_ThrowExpression",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_SyncNoThrowUsage": {
+    "name": "CExcept_SyncNoThrowUsage",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_ScanExceptionSpecification": {
+    "name": "CExcept_ScanExceptionSpecification",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_GetTypeID": {
+    "name": "CExcept_GetTypeID",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_GetBaseClassList": {
+    "name": "CExcept_GetBaseClassList",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_MakeBaseClassListAmbig": {
+    "name": "CExcept_MakeBaseClassListAmbig",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_MangleClass": {
+    "name": "CExcept_MangleClass",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_MangleNameSpaceName": {
+    "name": "CExcept_MangleNameSpaceName",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterMember": {
+    "name": "CExcept_RegisterMember",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_PatchConstructorAction": {
+    "name": "CExcept_PatchConstructorAction",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterDeleteObject": {
+    "name": "CExcept_RegisterDeleteObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterVLA": {
+    "name": "CExcept_RegisterVLA",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterLocalArray": {
+    "name": "CExcept_RegisterLocalArray",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterLocalObject": {
+    "name": "CExcept_RegisterLocalObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_RegisterDestructorObject": {
+    "name": "CExcept_RegisterDestructorObject",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_IsSubList": {
+    "name": "CExcept_IsSubList",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_IsCompatibleSpecificationList": {
+    "name": "CExcept_IsCompatibleSpecificationList",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CompareSpecifications": {
+    "name": "CExcept_CompareSpecifications",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "fn_004a06d0": {
+    "name": "fn_004a06d0",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_CheckStackRefs": {
+    "name": "CExcept_CheckStackRefs",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "CExcept_Setup": {
+    "name": "CExcept_Setup",
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp"
   }
 }

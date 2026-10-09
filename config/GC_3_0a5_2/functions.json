@@ -7161,20 +7161,6 @@
     }
   },
   {
-    "name": "copy_relocation_list",
-    "address": "0x00455850",
-    "size": 508,
-    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "copy_relocation_list",
-    "baseline_address": "0x004e07a0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    },
-    "ownership_evidence": "Compiled with inherited exception reconstruction; actual GC3 source ownership unresolved."
-  },
-  {
     "name": "CParser_IsNullOrAtOrDollarPrefixedName",
     "address": "0x00455a50",
     "size": 33,
@@ -10650,197 +10636,530 @@
     }
   },
   {
-    "name": "setup_exception_specification",
-    "address": "0x0049cfc0",
+    "name": "fn_0049c710",
+    "address": "0x49c710",
+    "size": 139,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0049c7a0",
+    "address": "0x49c7a0",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0049c920",
+    "address": "0x49c920",
+    "size": 189,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0049c9e0",
+    "address": "0x49c9e0",
+    "size": 482,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_CanThrowCheckCB",
+    "address": "0x49cbd0",
+    "size": 401,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_CanThrowException",
+    "address": "0x49cd70",
+    "size": 260,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_SetupNoThrowFunction",
+    "address": "0x49ce80",
+    "size": 135,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_ExceptionTansform",
+    "address": "0x49cf10",
+    "size": 169,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_InsertSpecificationActions",
+    "address": "0x49cfc0",
     "size": 586,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "setup_exception_specification",
-    "baseline_address": "0x004e0b30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "generate_temporary_object_destruction",
-    "address": "0x0049d6c0",
+    "name": "CExcept_TempTransform",
+    "address": "0x49d210",
+    "size": 471,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_GenerateCatchTypeIDs",
+    "address": "0x49d3f0",
+    "size": 185,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_DtorTransform",
+    "address": "0x49d4b0",
+    "size": 527,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_CleanupExceptionActions",
+    "address": "0x49d6c0",
     "size": 244,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "generate_temporary_object_destruction",
-    "baseline_address": "0x004e0f60",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_004e1050",
-    "address": "0x0049d7c0",
+    "name": "CExcept_TempTransExpr",
+    "address": "0x49d7c0",
     "size": 350,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "fn_004e1050",
-    "baseline_address": "0x004e1050",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "rewrite_expr_temporaries",
-    "address": "0x0049d920",
+    "name": "CExcept_TempTransExprCond",
+    "address": "0x49d920",
     "size": 234,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "rewrite_expr_temporaries",
-    "baseline_address": "0x004e1150",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "rewrite_funccall_temporaries",
-    "address": "0x0049da10",
+    "name": "CExcept_TempTransFuncCall",
+    "address": "0x49da10",
     "size": 1238,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "rewrite_funccall_temporaries",
-    "baseline_address": "0x004e1250",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "lower_newexception",
-    "address": "0x0049e170",
+    "name": "CExcept_TransInitTryCatch",
+    "address": "0x49def0",
+    "size": 628,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_TransNewException",
+    "address": "0x49e170",
     "size": 871,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "lower_newexception",
-    "baseline_address": "0x004e1660",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CException_004e1940",
-    "address": "0x0049e4e0",
+    "name": "CExcept_TempTrans_ETEMP",
+    "address": "0x49e4e0",
     "size": 345,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CException_004e1940",
-    "baseline_address": "0x004e1940",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_ScanTryBlock",
-    "address": "0x0049e640",
+    "address": "0x49e640",
     "size": 1204,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_ScanTryBlock",
-    "baseline_address": "0x004e1ad0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_namespace_names",
-    "address": "0x0049f7e0",
+    "name": "fn_0049eb00",
+    "address": "0x49eb00",
+    "size": 274,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_PatchDObjStack",
+    "address": "0x49ec20",
+    "size": 479,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_ParseThrowExpression",
+    "address": "0x49ee00",
+    "size": 105,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_ThrowExpression",
+    "address": "0x49ee70",
+    "size": 429,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_SyncNoThrowUsage",
+    "address": "0x49f020",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_ScanExceptionSpecification",
+    "address": "0x49f030",
+    "size": 576,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_GetTypeID",
+    "address": "0x49f270",
+    "size": 474,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_GetBaseClassList",
+    "address": "0x49f450",
+    "size": 230,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_MakeBaseClassListAmbig",
+    "address": "0x49f540",
+    "size": 275,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_MangleClass",
+    "address": "0x49f660",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_MangleNameSpaceName",
+    "address": "0x49f7e0",
     "size": 540,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "append_namespace_names",
-    "baseline_address": "0x004e29f0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_ActionCleanup",
-    "address": "0x0049fa00",
+    "address": "0x49fa00",
     "size": 800,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_ActionCleanup",
-    "baseline_address": "0x004e2c40",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_RegisterMemberArray",
-    "address": "0x0049fd20",
+    "address": "0x49fd20",
     "size": 90,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_RegisterMemberArray",
-    "baseline_address": "0x004e2e70",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterMember",
+    "address": "0x49fd80",
+    "size": 164,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_PatchConstructorAction",
+    "address": "0x4a0000",
+    "size": 277,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterDeleteObject",
+    "address": "0x4a0120",
+    "size": 61,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterVLA",
+    "address": "0x4a0160",
+    "size": 78,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterLocalArray",
+    "address": "0x4a01b0",
+    "size": 90,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterLocalObject",
+    "address": "0x4a0210",
+    "size": 62,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_RegisterDestructorObject",
+    "address": "0x4a0250",
+    "size": 164,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_ActionNeedsDestruction",
-    "address": "0x004a0300",
+    "address": "0x4a0300",
     "size": 57,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_ActionNeedsDestruction",
-    "baseline_address": "0x004e3300",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_IsSubList",
+    "address": "0x4a0340",
+    "size": 199,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_ActionCompare",
-    "address": "0x004a0410",
+    "address": "0x4a0410",
     "size": 404,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_ActionCompare",
-    "baseline_address": "0x004e3340",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "CException_004e35b0",
-    "address": "0x004a06f0",
+    "name": "CExcept_IsCompatibleSpecificationList",
+    "address": "0x4a05b0",
+    "size": 122,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_CompareSpecifications",
+    "address": "0x4a0630",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004a06d0",
+    "address": "0x4a06d0",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/frontend/CException.cpp",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExcept_CheckStackRefs",
+    "address": "0x4a06f0",
     "size": 225,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CException_004e35b0",
-    "baseline_address": "0x004e35b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CExcept_Setup",
-    "address": "0x004a0ac0",
-    "size": 25,
+    "address": "0x4a07e0",
+    "size": 35,
     "source": "src/GC_3_0a5_2/frontend/CException.cpp",
-    "baseline_name": "CExcept_Setup",
-    "baseline_address": "0x004e36b0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "identity_evidence": "CException.cpp native filename assertions, supplied symbols, native algorithms/callers/ABI and complete48-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including switch tables, filename assertions, entry callers and separate CLibrary/IROLibrary seams",
       "unresolved_indirect_flow": false
     }
   },

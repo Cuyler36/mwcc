@@ -97,7 +97,7 @@
   "_CExcept_ActionNeedsDestruction": "0x004a0300",
   "_CExcept_RegisterMemberArray": "0x0049fd20",
   "_CExcept_ScanTryBlock": "0x0049e640",
-  "_CExcept_Setup": "0x004a0ac0",
+  "_CExcept_Setup": "0x004a07e0",
   "_CException_004e1940": "0x0049e4e0",
   "_CException_004e35b0": "0x004a06f0",
   "_CExpr2_00473720": "0x0055b2d0",

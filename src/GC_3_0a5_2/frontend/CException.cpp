@@ -1,2064 +1,3701 @@
-#define CERROR_FILE "CException.cpp"
-#include "compiler/common.h"
-#include "compiler/CException.h"
-#include "compiler/enode.h"
-#include "compiler/objects.h"
-#include "compiler/scopes.h"
-#include "compiler/types.h"
-#include "compiler/BE_symbol.h"
-#include "compiler/CABI.h"
-#include "compiler/CClass.h"
-#include "compiler/CDecl.h"
-#include "compiler/CError.h"
-#include "compiler/CExpr.h"
-#include "compiler/CExpr2.h"
-#include "compiler/CFunc.h"
-#include "compiler/CInit.h"
-#include "compiler/CInline.h"
-#include "compiler/CMachine.h"
-#include "compiler/CMangler.h"
-#include "compiler/CObjC.h"
-#include "compiler/CObjCModern.h"
-#include "compiler/CParser.h"
-#include "compiler/CPrec.h"
-#include "compiler/CPrep.h"
-#include "compiler/CPrepTokenizer.h"
-#include "compiler/CScope.h"
-#include "compiler/CTemplateFunc.h"
-#include "compiler/CTemplateNew.h"
-#include "compiler/CTemplateTools.h"
-#include "compiler/CodeGen.h"
-#include "compiler/CompilerTools.h"
-#include "compiler/DWARF.h"
-#include "compiler/ELF_Endian.h"
-#include "compiler/IROUseDef.h"
-#include "compiler/InlineAsmPPC.h"
-#include "compiler/IroBitVect.h"
-#include "compiler/IroCSE.h"
-#include "compiler/IroJump.h"
-#include "compiler/IroLoop.h"
-#include "compiler/IroVars.h"
-#include "compiler/ObjGen_PPC_EABI.h"
-#include "compiler/PCode.h"
-#include "compiler/PPCError.h"
-#include "compiler/Switch.h"
-#include "driver/Files.h"
-#include <string.h>
-#include <stdio.h>
-#include "compiler/ENode.h"
-
-#define CE_ASSERT(c, s)                                                                                                \
-    do {                                                                                                               \
-        if (c)                                                                                                         \
-            s;                                                                                                         \
-    } while (0)
-
-unsigned int CException_HashType(Type *type)
+/* Native GC3 CException.cpp: explicit packed32-bit address conversions. */
+typedef unsigned char byte;
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef byte undefined1;
+typedef ushort undefined2;
+typedef uint undefined4;
+typedef byte undefined;
+typedef byte bool;
+#pragma pack(push, 2)
+typedef struct NativeStatement
 {
-    union {
-        unsigned int value;
-        unsigned char bytes[4];
-    } address;
-
-    unsigned int hash = (unsigned int)type;
-    address.value = hash;
-    return (hash + address.bytes[0] + address.bytes[1] + address.bytes[2] + address.bytes[3]) & 0x3fffU;
-}
-
-void CException_AddPendingBuffer(Object *owner, const void *buffer, RelocationList *value, int entryValue)
+  uint words[8];
+  ushort tail;
+} NativeStatement;
+#pragma pack(pop)
+static byte cexcept_hasunknown;
+static byte cexcept_hasrethrow;
+static byte cexcept_hasthrow;
+static byte cexcept_canthrow;
+static byte cexcept_serialize;
+static byte cexcept_hastrycatch;
+static byte cexcept_expandtrycatch;
+static uint *cexcept_eaafter;
+static uint *cexcept_eabefore;
+static uint *cexcept_prevstmt;
+static uint *cexcept_dtortemps;
+static uint *cexcept_uniqueobjs;
+static char cexcept_filename[] = "CException.cpp";
+static char cexcept_magic_name[] = "__exception_magic";
+static char cexcept_offset_format[] = "%ld!";
+static char cexcept_local_format[] = "__%08lx__local__";
+static char cexcept_file_marker[] = "__file__";
+static char cexcept_namespace_separator[] = "::";
+extern byte DAT_006771c8[];
+extern byte DAT_006771d6[];
+extern byte DAT_00699c24[];
+extern byte DAT_00699c44[];
+extern byte DAT_00699c6c[];
+extern uint **DAT_0070bc20;
+extern uint DAT_0070bc24;
+extern byte DAT_0070f1a8;
+extern byte DAT_0070f1b3;
+extern byte DAT_0070f1df;
+extern byte DAT_0070f1e0;
+extern byte DAT_0070f214;
+extern byte DAT_0070f21e;
+extern uint DAT_00710340;
+extern uint *DAT_00710360;
+extern uint DAT_00710858;
+extern uint DAT_00710928;
+extern uint *DAT_00710b30;
+extern uint DAT_00711b00;
+extern uint DAT_00711b1c;
+extern uint DAT_00711b80;
+extern uint *DAT_00711bac;
+extern uint DAT_00711bb8;
+extern uint DAT_00711be0;
+extern uint DAT_00715c58;
+extern uint DAT_00716c98;
+extern uint DAT_00716c9c;
+extern uint DAT_00716cd8;
+extern uint DAT_00716d68;
+extern byte DAT_0071726c[];
+extern short DAT_00717466;
+extern byte DAT_00725d96[];
+extern byte DAT_00725e5d;
+extern byte DAT_00725ed8;
+void fn_0049c710(void);
+undefined1 fn_0049c7a0(void);
+undefined1 fn_0049c920(int param_1);
+undefined1 fn_0049c9e0(int param_1);
+void CExcept_CanThrowCheckCB(char *param_1);
+undefined1 CExcept_CanThrowException(int param_1, char param_2);
+undefined1 CExcept_SetupNoThrowFunction(uint param_1);
+void CExcept_ExceptionTansform(undefined4 param_1);
+void CExcept_InsertSpecificationActions(int *param_1, undefined4 *param_2);
+void CExcept_TempTransform(undefined4 *param_1);
+void CExcept_GenerateCatchTypeIDs(undefined4 *param_1);
+void CExcept_DtorTransform(undefined4 *param_1, char param_2, char param_3);
+int CExcept_CleanupExceptionActions(int param_1);
+undefined1 *CExcept_TempTransExpr(undefined1 *param_1);
+undefined1 *CExcept_TempTransExprCond(undefined1 *param_1);
+undefined1 *CExcept_TempTransFuncCall(undefined1 *param_1, char param_2);
+int CExcept_TransInitTryCatch(int param_1, char param_2);
+uint CExcept_TransNewException(char *param_1, char param_2);
+undefined1 *CExcept_TempTrans_ETEMP(undefined1 *param_1);
+void CExcept_ScanTryBlock(undefined4 param_1, char param_2);
+uint fn_0049eb00(int param_1, undefined4 param_2);
+void CExcept_PatchDObjStack(int *param_1, int *param_2, int *param_3, undefined4 *param_4);
+uint CExcept_ParseThrowExpression(void);
+uint CExcept_ThrowExpression(int param_1);
+void CExcept_SyncNoThrowUsage(uint type1, uint qualifiers1, uint type2, uint qualifiers2);
+void CExcept_ScanExceptionSpecification(int param_1);
+int CExcept_GetTypeID(char *param_1, undefined4 param_2, char param_3);
+undefined4 *CExcept_GetBaseClassList(undefined4 *param_1, undefined4 param_2, int param_3, int param_4, char param_5, char param_6);
+void CExcept_MakeBaseClassListAmbig(undefined4 *param_1, int param_2);
+void CExcept_MangleClass(int param_1);
+void CExcept_MangleNameSpaceName(undefined4 *param_1);
+uint CExcept_ActionCleanup(uint *action, uint statement);
+void CExcept_RegisterMemberArray(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6);
+void CExcept_RegisterMember(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, int param_5, char param_6);
+void CExcept_PatchConstructorAction(undefined4 *param_1, undefined4 *param_2);
+void CExcept_RegisterDeleteObject(undefined4 param_1, undefined4 param_2);
+void CExcept_RegisterVLA(int param_1, int param_2, undefined4 param_3);
+void CExcept_RegisterLocalArray(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void CExcept_RegisterLocalObject(undefined4 param_1, undefined1 param_2);
+undefined4 CExcept_RegisterDestructorObject(undefined4 param_1, int param_2, undefined4 param_3);
+undefined1 CExcept_ActionNeedsDestruction(int param_1);
+int CExcept_IsSubList(undefined4 *param_1, undefined4 *param_2);
+bool CExcept_ActionCompare(int param_1, int param_2);
+bool CExcept_IsCompatibleSpecificationList(undefined4 *param_1, undefined4 *param_2);
+void CExcept_CompareSpecifications(undefined4 *param_1, undefined4 *param_2);
+undefined4 fn_004a06d0(int param_1);
+void CExcept_CheckStackRefs(undefined4 *param_1);
+void CExcept_Setup(void);
+extern uint AppendGListByte();
+extern uint CABI_DestroyObject();
+extern uint CABI_GetDestructorObject();
+extern uint CABI_GetSizeTType();
+extern uint CClass_Destructor();
+extern uint CClass_FindVirtualBase();
+extern uint CClass_IsDestructor();
+extern uint CDecl_NewPointerType();
+extern uint CDecl_ParseDeclarator();
+extern uint CError_Internal();
+extern uint CError_Warning();
+extern uint CFunc_AppendStatement();
+extern uint CFunc_InsertAfterStatement();
+extern uint CFunc_ParseScopedStatement();
+extern uint CMachine_FunctionRequiresMemoryReturn();
+extern uint CMangler_MangleType();
+extern uint COptimizer_GetFunctionObject();
+extern uint CParser_GetDeclSpecs();
+extern uint CParser_NewLocalDataObject();
+extern uint CPrep_UpdateTokenLine();
+extern uint CTemplateTools_IsDependentType();
+extern uint CanAllocObject();
+extern uint CompilerTools_AllocatePool();
+extern uint GetHashNameNode();
+extern uint create_objectrefnode();
+extern uint create_temp_object();
+extern uint fn_00420190();
+extern uint fn_00447b70();
+extern uint fn_0044dfb0();
+extern uint fn_00452fe0();
+extern uint fn_00453430();
+extern uint fn_00455d00();
+extern uint fn_0045a1e0();
+extern uint fn_0045a490();
+extern uint fn_0045c480();
+extern uint fn_0046d530();
+extern uint fn_00479c20();
+extern uint fn_0047b230();
+extern uint fn_004ea740();
+extern uint fn_004eb140();
+extern uint fn_005153b0();
+extern uint fn_00520530();
+extern uint fn_00521c20();
+extern uint fn_00524320();
+extern uint fn_00524350();
+extern uint fn_005243b0();
+extern uint fn_0052ec00();
+extern uint fn_0052ec70();
+extern uint fn_0052ee40();
+extern uint fn_0052ef10();
+extern uint fn_0052f930();
+extern uint fn_0053d470();
+extern uint fn_00542350();
+extern uint fn_00543680();
+extern uint fn_00544fc0();
+extern uint fn_005480b0();
+extern uint fn_005547e0();
+extern uint fn_00559da0();
+extern uint fn_0055b7f0();
+extern uint fn_0055b9f0();
+extern uint fn_0055bc20();
+extern uint fn_00593320();
+extern uint fn_005a12c0();
+extern uint fn_005a1310();
+extern uint fn_005a1740();
+extern uint fn_005a1760();
+extern uint fn_005a1780();
+extern uint fn_005a6b30();
+extern uint fn_005a8e20();
+extern uint funccallexpr();
+extern uint galloc();
+extern uint intconstnode();
+extern uint iscpp_typeequal();
+extern uint makediadicnode();
+extern uint makemonadicnode();
+extern uint memclrw();
+extern uint memcpy();
+extern uint newlabel();
+extern uint nullnode();
+extern uint sprintf();
+void fn_0049c710(void)
 {
-    struct PendingBuffer *entry;
-
-    if (owner->sclass != TK_STATIC && (owner->qual & (Q_IMPLICIT_WEAK | Q_WEAK)) == 0)
-        CError_ReportError(ERR_ILLEGAL_USE_PRECOMPILED_HEADER);
-
-    entry = (struct PendingBuffer *)galloc(sizeof(struct PendingBuffer));
-    entry->owner = owner;
-    entry->entryValue = entryValue;
-    entry->next = pending_buffers;
-    pending_buffers = entry;
-
-    if (buffer != NULL) {
-        entry->buffer = galloc(owner->type->size);
-        memcpy(entry->buffer, buffer, owner->type->size);
-    } else {
-        entry->buffer = NULL;
-    }
-
-    entry->value = copy_relocation_list(value);
-}
-
-RelocationList *copy_relocation_list(RelocationList *p)
-{
-    RelocationList *n;
-    if (p == NULL)
-        return NULL;
-    n = galloc(sizeof(RelocationList));
-    *n = *p;
-    n->next = copy_relocation_list(n->next);
-    return n;
-}
-
-void CExcept_Terminate(void)
-{
-    if (precompiled_file != 0) {
-        CompilerTools_CloseFile(precompiled_file);
-        precompiled_file = 0;
-    }
-    if (precompiled_buffer.data != NULL) {
-        FreeGList(&precompiled_buffer);
-    }
-}
-
-void CException_ResetPrecompiledState(UInt8 c)
-{
-    precompiled_file = 0;
-    precompiled_buffer.data = NULL;
-    prec_header = NULL;
-    pending_buffers = NULL;
-    data_00581c26 = 0;
+  undefined4 *puVar1;
+  bool bVar2;
+  char cVar3;
+  int iVar4;
+  uint uVar5;
+  int iVar6;
+  if (DAT_0070f1df == '\0')
+  {
     return;
-}
-
-static inline Boolean CException_HasThrow(Statement *s)
-{
-    data_00581c30 = 0;
-    for (; s != NULL; s = s->next) {
-        switch (s->type) {
-            case ST_RETURN:
-                if (s->expr.expression == NULL)
-                    break;
-                /* fallthrough */
-            case ST_EXPRESSION:
-            case ST_SWITCH:
-            case ST_IFGOTO:
-            case ST_IFNGOTO:
-            case ST_BEGINCATCH:
-            case ST_ENDCATCH:
-            case ST_ENDCATCHDTOR:
-            case ST_GOTOEXPR:
-                CExpr_SearchExprTree(s->expr.expression, fn_004e0b20, 2, 0x36, 0x37);
-                if (data_00581c30 != 0)
-                    return 1;
-                break;
-            case ST_NOP:
-            case ST_LABEL:
-            case ST_GOTO:
-            case ST_ASM:
-                break;
-            default:
-                CError_FATAL(2414);
-        }
-    }
-    return 0;
-}
-
-void CExcept_ExceptionTansform(Statement *stmt)
-{
-    update_statement_dobjstacks(stmt);
-    if (data_00588238 != NULL && copts.fb3 != 0 && TYPE_FUNC(data_00588238->type)->exspecs != NULL) {
-        if (CException_HasThrow(stmt)) {
-            setup_exception_specification(stmt, TYPE_FUNC(data_00588238->type)->exspecs);
-        }
-    }
-}
-void fn_004e0b20(ENode *expr)
-{
-    data_00581c30 = 1U;
-    return;
-}
-
-/* Label metadata used by exception statements. */
-
-/* Expression data used to describe an exception handler. */
-
-void setup_exception_specification(struct Statement *statements, struct ExceptSpecList *handlers)
-{
-    CException *region;
-    Statement *statement;
-    Statement *label_statement;
-    CException *tail;
-    CLabel *end_label;
-    CLabel *start_label;
-    Object *object;
-    ExceptSpecList *handler;
-    SInt32 handler_count;
-    SInt32 handler_index;
-    CException *object_region;
-    Statement *end_statement;
-    Statement *assignment;
-    ENode *expression;
-    Statement *return_statement;
-
-    region = CompilerTools_AllocatePool(sizeof(*region));
-    memclrw(region, sizeof(*region));
-    region->kind = 0x0f;
-    for (statement = statements; statement != NULL; statement = statement->next) {
-        if (statement->dobjstack != NULL) {
-            tail = statement->dobjstack;
-            do {
-                if (tail->kind == 0x0f)
-                    break;
-                if (tail->next == NULL) {
-                    tail->next = region;
-                    break;
-                }
-                tail = tail->next;
-            } while (1);
-        } else {
-            statement->dobjstack = region;
-        }
-    }
-    for (statement = statements; statement->next != NULL; statement = statement->next)
-        ;
-    if (statement->type != ST_GOTO && statement->type != ST_RETURN) {
-        statement = CFunc_InsertAfterStatement(8, statement);
-        statement->expr.expression = NULL;
-        statement->dobjstack = NULL;
-        if (TYPE_FUNC(data_00588238->type)->functype != &stvoid && (copts.f9d != 0 || copts.cplusplus != 0)) {
-            CError_Warning(ERR_RETURN_VALUE_EXPECTED);
-        }
-    }
-    label_statement = CFunc_InsertAfterStatement(2, statement);
-    start_label = newlabel();
-    label_statement->target.label = start_label;
-    label_statement->target.label->target.stmt = label_statement;
-    label_statement->flags = 1;
-    label_statement->dobjstack = NULL;
-    object = create_temp_object(&exception_temp_object_type);
-    if (handlers->type == NULL)
-        handlers = NULL;
-    handler_count = 0;
-    handler = handlers;
-    if (handler != NULL) {
-        do {
-            handler = handler->next;
-            handler_count++;
-        } while (handler != NULL);
-    }
-    region->data.specification.count = handler_count;
-    region->data.specification.ids = galloc(handler_count * sizeof(*region->data.specification.ids));
-    handler_index = 0;
-    region->data.specification.label = label_statement->target.label;
-    region->data.specification.info = object;
-    for (handler = handlers; handler != NULL; handler = handler->next) {
-        expression = create_type_stringconst(handler->type, handler->qual, 0);
-        if (expression->type != ESTRINGCONST)
-            CError_FATAL(1009);
-        region->data.specification.ids[handler_index++] =
-            CInit_DeclareString(expression->data.string.data, expression->data.string.size, 0, 0);
-    }
-    assignment = CFunc_InsertAfterStatement(4, label_statement);
-    assignment->expr.expression = funccallexpr(DAT_00587654, create_objectrefnode(object), NULL, NULL, NULL);
-    object_region = CompilerTools_AllocatePool(sizeof(*object_region));
-    memclrw(object_region, sizeof(*object_region));
-    object_region->kind = 0x0e;
-    object_region->data.active_catch.info = object;
-    object_region->data.active_catch.call_dtor = 1;
-    assignment->dobjstack = object_region;
-    end_statement = CFunc_InsertAfterStatement(2, assignment);
-    end_label = newlabel();
-    end_statement->target.label = end_label;
-    end_statement->target.label->target.stmt = end_statement;
-    end_statement->dobjstack = NULL;
-    return_statement = CFunc_InsertAfterStatement(3, end_statement);
-    return_statement->target.label = end_label;
-}
-
-void update_statement_dobjstacks(Statement *node)
-{
-    Statement *p;
-    CException *info;
-    ENode *e;
-    ENodeList *args;
-
-    p = data_00581c36 = node;
-    while (p != NULL) {
-        currentDobjstack = current_dobjstack = p->dobjstack;
-        if ((p->flags & 2) != 0) {
-            currentDobjstack = currentDobjstack->next;
-        } else if (p->type == ST_EXPRESSION) {
-            e = p->expr.expression;
-            while (e->type == ECOMMA)
-                e = e->data.diadic.left;
-            if (e->type == EINDIRECT)
-                e = e->data.monadic;
-            if (e->type == EFUNCCALL) {
-                if (e->data.funccall.funcref->type == EOBJREF &&
-                    CClass_IsDestructor(e->data.funccall.funcref->data.objref) && (info = p->dobjstack) != NULL &&
-                    info->kind == 1 && (args = e->data.funccall.args) != NULL && args->node->type == EOBJREF &&
-                    args->node->data.objref == info->data.local.object) {
-                    currentDobjstack = currentDobjstack->next;
-                }
-            }
-        }
-        switch (p->type) {
-            case ST_EXPRESSION:
-                insert_temporary_object_destruction(p, 1, 0);
-                break;
-            case ST_SWITCH:
-            case ST_IFGOTO:
-            case ST_IFNGOTO:
-
-                insert_temporary_object_destruction(p, 0, 1);
-                break;
-            case ST_RETURN:
-                if (p->expr.expression != NULL)
-                    insert_temporary_object_destruction(
-                        p, 0, CMachine_FunctionRequiresMemoryReturn((TypeFunc *)data_00588238->type) != 1);
-                break;
-        }
-        p->dobjstack = currentDobjstack;
-        data_00581c36 = p;
-        p = p->next;
-    }
-}
-
-void insert_temporary_object_destruction(Statement *statement, char flag1, char flag2)
-{
-    Object *object;
-    ENode *expr;
-    Statement *result;
-    union {
-        Statement statement;
-        unsigned int words[7]; /* Raw statement storage, including unknown bytes. */
-    } saved;
-    temporary_object_list = NULL;
-    statement->expr.expression = fn_004e1050(statement->expr.expression);
-    if (temporary_object_list != NULL) {
-        if (flag1 == 0) {
-            if (flag2 != 0) {
-                expr = statement->expr.expression;
-                CE_ASSERT(statement->expr.expression->rtype->type == TYPECLASS &&
-                              CClass_Destructor((TypeClass *)expr->rtype) != 0,
-                          CError_FATAL(2194));
-                object = create_temp_object(expr->rtype);
-                statement->expr.expression = makediadicnode(create_objectnode(object), expr, 30);
-            }
-            saved.statement = *statement;
-            statement->type = ST_EXPRESSION;
-            statement = generate_temporary_object_destruction(statement);
-            result = CFunc_InsertAfterStatement(saved.words[1], statement);
-            result->target.label = saved.statement.target.label;
-            if (flag2 != 0)
-                result->expr.expression = create_objectnode(object);
-            else
-                result->expr.expression = nullnode();
-        } else {
-            generate_temporary_object_destruction(statement);
-        }
-    }
-}
-
-Statement *generate_temporary_object_destruction(Statement *arg)
-{
-    TemporaryObject *p = temporary_object_list;
-    Statement *stmt = arg;
-    CLabel *label;
-    while (p != NULL) {
-        if (current_dobjstack != NULL && (current_dobjstack->kind == 1 || current_dobjstack->kind == 2) &&
-            current_dobjstack->data.local.object == p->object)
-            current_dobjstack = current_dobjstack->next;
-        else
-            CError_FATAL(2151);
-        if (p->initializationFlag != NULL) {
-            stmt = CFunc_InsertAfterStatement(ST_IFNGOTO, stmt);
-            stmt->expr.expression = create_objectnode(p->initializationFlag);
-            stmt->dobjstack = current_dobjstack;
-            stmt->target.label = newlabel();
-            label = stmt->target.label;
-        }
-        stmt = CFunc_InsertAfterStatement(ST_EXPRESSION, stmt);
-        stmt->expr.expression = CABI_DestroyObject(p->classObject, create_objectrefnode(p->object), 1, 1, 0);
-        stmt->dobjstack = current_dobjstack;
-        if (p->initializationFlag != NULL) {
-            stmt = CFunc_InsertAfterStatement(ST_LABEL, stmt);
-            stmt->target.label = label;
-            label->target.stmt = stmt;
-        }
-        p = p->next;
-    }
-    return stmt;
-}
-static inline void reverse_one(ENodeList **arr, SInt32 i, ENodeList *found)
-{
-    if (arr[i] == found)
-        return;
+  }
+  iVar4 = (int) fn_0044dfb0();
+  do
+  {
+    fn_005a1740();
+    bVar2 = (bool) 0;
+    for (puVar1 = (undefined4 *) DAT_00711bac; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
     {
-        ENode *result = rewrite_expr_temporaries(arr[i]->node);
-        arr[i]->node = result;
-    }
-}
-/* Objects and initialization flags registered for temporary cleanup. */
-
-static inline Statement *NewTemporaryStatement(void)
-{
-    Statement *statement = CFunc_InsertAfterStatement(4, data_00581c36);
-    statement->sourceoffset = statement->next->sourceoffset;
-    statement->dobjstack = currentDobjstack;
-    return statement;
-}
-
-static inline Object *findTemporaryObject(SInt32 uniqueID, ENode *temporaryExpr)
-{
-    ECacheNode *cached;
-    for (cached = cached_objects; cached != NULL; cached = cached->next) {
-        if (cached->key == uniqueID)
-            return cached->obj;
-    }
-    cached = galloc(sizeof(ECacheNode));
-    cached->next = cached_objects;
-    cached_objects = cached;
-    cached->key = uniqueID;
-    cached->obj = create_temp_object(temporaryExpr->data.temp.type);
-    return cached->obj;
-}
-
-ENode *rewrite_funccall_temporaries(ENode *node, Boolean reverse)
-{
-    ENodeList **args;
-    ENodeList **reverseArgs;
-    ENodeList *temporaryArg = NULL;
-    ENodeList *argument;
-    Type *resultType;
-    ENode *result;
-    TemporaryObject *temporary;
-    SInt32 uniqueID;
-    SInt32 index;
-    SInt32 count;
-    CException *cleanupCopy;
-    CException *cleanup;
-    Statement *statement;
-    ENode *temporaryExpr;
-
-    temporaryArg = NULL;
-    if (node->data.funccall.args != NULL) {
-        if ((temporaryExpr = node->data.funccall.args->node)->type == EPRECOMP) {
-            if (temporaryExpr->data.temp.needs_dtor)
-                temporaryArg = node->data.funccall.args;
-        } else if (node->data.funccall.args->next != NULL) {
-            if ((temporaryExpr = node->data.funccall.args->next->node)->type == EPRECOMP &&
-                temporaryExpr->data.temp.needs_dtor)
-                temporaryArg = node->data.funccall.args->next;
-        }
-    }
-
-    if (temporaryArg != NULL) {
-        if (reverse) {
-            argument = node->data.funccall.args;
-            count = 0;
-            while (argument != NULL) {
-                count++;
-                argument = argument->next;
-            }
-            reverseArgs = CompilerTools_AllocatePool(count * sizeof(ENodeList *));
-            argument = node->data.funccall.args;
-            index = 0;
-            while (argument != NULL) {
-                reverseArgs[index++] = argument;
-                argument = argument->next;
-            }
-            while (index > 0) {
-                index--;
-                reverse_one(reverseArgs, index, temporaryArg);
-            }
-        } else {
-            for (argument = node->data.funccall.args; argument != NULL; argument = argument->next) {
-                if (argument != temporaryArg)
-                    argument->node = fn_004e1050(argument->node);
-            }
-        }
-        temporary = CompilerTools_AllocatePool(sizeof(TemporaryObject));
-        temporary->next = temporary_object_list;
-        temporary_object_list = temporary;
-
-        uniqueID = temporaryExpr->data.temp.uniqueid;
-        if (uniqueID != 0) {
-            temporary->object = findTemporaryObject(uniqueID, temporaryExpr);
-        } else {
-            temporary->object = create_temp_object(temporaryExpr->data.temp.type);
-        }
-        temporary->initializationFlag = NULL;
-        if (temporaryExpr->data.temp.type->type == TYPECLASS) {
-            temporary->classObject = CClass_Destructor((TypeClass *)temporaryExpr->data.temp.type);
-            CError_ASSERT(1825, temporary->classObject != NULL);
-        } else {
-            CError_FATAL(1825);
-        }
-        temporaryExpr->type = EOBJREF;
-        temporaryExpr->data.objref = temporary->object;
-
-        if (reverse) {
-            resultType = node->rtype;
-            temporary->initializationFlag = create_temp_object((Type *)&stchar);
-            node = makediadicnode(node,
-                                  makediadicnode(create_objectnode(temporary->initializationFlag),
-                                                 intconstnode((Type *)&stchar, 1), EASS),
-                                  ECOMMA);
-            result = makediadicnode(node, create_objectrefnode(temporary->object), ECOMMA);
-            result->rtype = resultType;
-            statement = NewTemporaryStatement();
-            statement->expr.expression = makediadicnode(create_objectnode(temporary->initializationFlag),
-                                                        intconstnode((Type *)&stchar, 0), EASS);
-            data_00581c36 = statement;
-            cleanup = CompilerTools_AllocatePool(sizeof(CException));
-            cleanup->next = currentDobjstack;
-            currentDobjstack = cleanup;
-            cleanup->kind = 2;
-            cleanup->data.local_cond.object = temporary->object;
-            cleanup->data.local_cond.dtor = CABI_GetDestructorObject(temporary->classObject, 1);
-            cleanup->data.local_cond.cond = temporary->initializationFlag;
-            cleanupCopy = CompilerTools_AllocatePool(sizeof(CException));
-            *cleanupCopy = *currentDobjstack;
-            cleanupCopy->next = current_dobjstack;
-            current_dobjstack = cleanupCopy;
-        } else {
-            statement = NewTemporaryStatement();
-            statement->expr.expression = node;
-            data_00581c36 = statement;
-            cleanup = CompilerTools_AllocatePool(sizeof(CException));
-            cleanup->next = currentDobjstack;
-            currentDobjstack = cleanup;
-            cleanup->kind = 1;
-            cleanup->data.local.object = temporary->object;
-            cleanup->data.local.dtor = CABI_GetDestructorObject(temporary->classObject, 1);
-            cleanupCopy = CompilerTools_AllocatePool(sizeof(CException));
-            *cleanupCopy = *currentDobjstack;
-            cleanupCopy->next = current_dobjstack;
-            current_dobjstack = cleanupCopy;
-            result = CompilerTools_AllocatePool(sizeof(ENode));
-            *result = *statement->expr.expression;
-            result->type = EOBJREF;
-            result->data.objref = temporaryArg->node->data.objref;
-        }
-        return result;
-    }
-
-    if (reverse) {
-        argument = node->data.funccall.args;
-        count = 0;
-        while (argument != NULL) {
-            count++;
-            argument = argument->next;
-        }
-        args = CompilerTools_AllocatePool(count * sizeof(ENodeList *));
-        argument = node->data.funccall.args;
-        index = 0;
-        while (argument != NULL) {
-            args[index++] = argument;
-            argument = argument->next;
-        }
-        while (index > 0) {
-            index--;
-            args[index]->node = rewrite_expr_temporaries(args[index]->node);
-        }
-        node->data.funccall.funcref = rewrite_expr_temporaries(node->data.funccall.funcref);
-    } else {
-        for (argument = node->data.funccall.args; argument != NULL; argument = argument->next)
-            argument->node = fn_004e1050(argument->node);
-        node->data.funccall.funcref = fn_004e1050(node->data.funccall.funcref);
-    }
-    return node;
-}
-
-static TemporaryObject *CException_NewTypeNode(void)
-{
-    TemporaryObject *t = CompilerTools_AllocatePool(sizeof(TemporaryObject));
-    t->next = temporary_object_list;
-    temporary_object_list = t;
-    return t;
-}
-
-static CException *CException_NewStmtNode(void)
-{
-    CException *s = CompilerTools_AllocatePool(sizeof(CException));
-    s->next = currentDobjstack;
-    currentDobjstack = s;
-    return s;
-}
-
-static CException *CException_CopyStmtNode(void)
-{
-    CException *s = CompilerTools_AllocatePool(sizeof(CException));
-    *s = *currentDobjstack;
-    s->next = current_dobjstack;
-    current_dobjstack = s;
-    return s;
-}
-
-static inline Object *CException_CachedObject(ENode *node)
-{
-    SInt32 key;
-    if ((key = node->data.temp.uniqueid)) {
-        ECacheNode *cache = cached_objects;
-        while (cache) {
-            if (cache->key == key)
-                return cache->obj;
-            cache = cache->next;
-        }
-        cache = (ECacheNode *)galloc(sizeof(ECacheNode));
-        cache->next = cached_objects;
-        cached_objects = cache;
-        cache->key = key;
-        cache->obj = create_temp_object(node->data.temp.type);
-        return cache->obj;
-    }
-    return create_temp_object(node->data.temp.type);
-}
-
-static Statement *InsertPrevStatement(int type)
-{
-    Statement *stmt = CFunc_InsertAfterStatement(type, data_00581c36);
-    stmt->sourceoffset = stmt->next->sourceoffset;
-    stmt->dobjstack = currentDobjstack;
-    return stmt;
-}
-
-void lower_newexception(ENode *node, Boolean useExpression)
-{
-    Statement *initialStatement;
-    Statement *statement;
-    Boolean isArgumentObject;
-    Object *cleanupFlag;
-    CLabel *label;
-    CException *cleanup;
-    ENode *expression;
-    ENode *result;
-
-    isArgumentObject = (node->type == ESETCONST);
-
-    if (useExpression) {
-        node->data.newexception.initexpr = rewrite_expr_temporaries(node->data.newexception.initexpr);
-        node->data.newexception.tryexpr = rewrite_expr_temporaries(node->data.newexception.tryexpr);
-        cleanupFlag = create_temp_object((Type *)&stchar);
-        initialStatement = InsertPrevStatement(ST_EXPRESSION);
-        initialStatement->expr.expression =
-            makediadicnode(create_objectnode(cleanupFlag), intconstnode((Type *)&stchar, 0), EASS);
-        data_00581c36 = initialStatement;
-        cleanup = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-        cleanup->next = currentDobjstack;
-        currentDobjstack = cleanup;
-        cleanup->kind = 0xc;
-        cleanup->data.delete_pointer_cond.pointer = node->data.newexception.pointertemp;
-        cleanup->data.delete_pointer_cond.deletefunc = node->data.newexception.deletefunc;
-        cleanup->data.delete_pointer_cond.cond = cleanupFlag;
-        if (isArgumentObject) {
-            expression = makediadicnode(create_objectnode(cleanupFlag), intconstnode((Type *)&stchar, 1), EASS);
-            expression = makediadicnode(node->data.newexception.initexpr, expression, ECOMMA);
-            expression = makediadicnode(expression, node->data.newexception.tryexpr, ECOMMA);
-            expression = makediadicnode(
-                expression, makediadicnode(create_objectnode(cleanupFlag), intconstnode((Type *)&stchar, 0), EASS),
-                ECOMMA);
-            result = makediadicnode(expression, create_objectnode(node->data.newexception.pointertemp), ECOMMA);
-        } else {
-            expression = makediadicnode(create_objectnode(cleanupFlag), intconstnode((Type *)&stchar, 1), EASS);
-            expression = makediadicnode(expression, node->data.newexception.tryexpr, ECOMMA);
-            expression = makediadicnode(
-                expression, makediadicnode(create_objectnode(cleanupFlag), intconstnode((Type *)&stchar, 0), EASS),
-                ECOMMA);
-            expression = makediadicnode(node->data.newexception.initexpr, expression, ELAND);
-            result = makediadicnode(expression, create_objectnode(node->data.newexception.pointertemp), ECOMMA);
-        }
-    } else {
-        node->data.newexception.initexpr = fn_004e1050(node->data.newexception.initexpr);
-        node->data.newexception.tryexpr = fn_004e1050(node->data.newexception.tryexpr);
-        if (isArgumentObject) {
-            statement = InsertPrevStatement(ST_EXPRESSION);
-            statement->expr.expression = node->data.newexception.initexpr;
-        } else {
-            statement = InsertPrevStatement(ST_IFNGOTO);
-            statement->expr.expression = node->data.newexception.initexpr;
-            label = newlabel();
-            statement->target.label = label;
-        }
-        statement = CFunc_InsertAfterStatement(ST_EXPRESSION, statement);
-        statement->expr.expression = node->data.newexception.tryexpr;
-        cleanup = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-        cleanup->next = currentDobjstack;
-        cleanup->kind = 0xa;
-        cleanup->data.delete_pointer.pointer = node->data.newexception.pointertemp;
-        cleanup->data.delete_pointer.deletefunc = node->data.newexception.deletefunc;
-        statement->dobjstack = cleanup;
-        if (!isArgumentObject) {
-            statement = CFunc_InsertAfterStatement(ST_LABEL, statement);
-            statement->target.label = label;
-            label->target.stmt = statement;
-            statement->dobjstack = currentDobjstack;
-        }
-        data_00581c36 = statement;
-        result = create_objectnode(node->data.newexception.pointertemp);
-    }
-    result->rtype = node->rtype;
-}
-
-ENode *CException_004e1940(ENode *node)
-{
-    Object *obj;
-    obj = CException_CachedObject(node);
-
-    if (node->data.temp.needs_dtor) {
-        TemporaryObject *type = CException_NewTypeNode();
-        CException *stmt;
-        type->object = obj;
-        type->initializationFlag = NULL;
-        CError_ASSERT(1643, node->data.objref->otype == OT_OBJECT &&
-                                (type->classObject = CClass_Destructor((TypeClass *)node->data.objref)) != 0);
-        stmt = CException_NewStmtNode();
-        stmt->kind = 1;
-        stmt->data.local.object = type->object;
-        stmt->data.local.dtor = CABI_GetDestructorObject(type->classObject, 1);
-        CException_CopyStmtNode();
-    }
-
-    node->type = EOBJREF;
-    node->data.objref = obj;
-    return node;
-}
-
-Object *CException_GetTempObject(ENode *obj)
-{
-    ECacheNode *p;
-    SInt32 key;
-
-    if ((key = obj->data.temp.uniqueid) != 0) {
-        p = cached_objects;
-        while (p != NULL) {
-            if (p->key == key)
-                return p->obj;
-            p = p->next;
-        }
-        p = (ECacheNode *)galloc(sizeof(ECacheNode));
-        p->next = cached_objects;
-        cached_objects = p;
-        p->key = key;
-        p->obj = create_temp_object(obj->data.temp.type);
-        return p->obj;
-    }
-    return create_temp_object(obj->data.temp.type);
-}
-static inline SInt32 object_statement(Object *o)
-{
-    Statement *n = CFunc_AppendStatement(0xc);
-    n->expr.expression = create_objectrefnode(o);
-    return (SInt32)n;
-}
-
-static inline void finish_label(CLabel *p)
-{
-    Statement *n = CFunc_AppendStatement(2);
-    n->target.label = p;
-    p->target.stmt = (Statement *)n; /* exception statement view */
-}
-
-/* Linked record describing an exception handler. */
-
-void CExcept_ScanTryBlock(void *context, char rethrow)
-{
-    Statement *tryBody;
-    ExceptionHandlerRecord *previous;
-    CLabel *handlerLabel;
-    Statement *handlerStart;
-    Object *exceptionObject;
-    CLabel *endLabel;
-    ExceptionHandlerRecord *handler;
-    Statement *entry;
-    struct SavedGlobalValues *cleanup;
-    Statement *lastStatement;
-    ENode *initializer;
-    DeclInfo declaration;
-
-    if (copts.fb3 == 0)
-        CError_ReportError(ERR_EXCEPTION_HANDLING_OPTION_DISABLED);
-
-    exceptionObject = create_temp_object(&exception_temp_object_type);
-    if (data_005884fa != 0) {
-        exceptionObject->name = GetHashNameNode("__exception_magic");
-        CScope_AddObject(currentNameSpace, exceptionObject->name, (ObjBase *)exceptionObject);
-    }
-
-    entry = CFunc_AppendStatement(2);
-    entry->flags = 1;
-    handlerLabel = newlabel();
-    entry->target.label = handlerLabel;
-    entry->target.label->target.stmt = entry;
-
-    tryBody = (Statement *)object_statement(exceptionObject);
-
-    if (tk != '{') {
-        CError_ReportError(ERR_LBRACE_EXPECTED);
-        return;
-    }
-    CFunc_ParseScopedStatement(context);
-    if (tk != TK_CATCH) {
-        CError_ReportError(ERR_CATCH_EXPECTED);
-        return;
-    }
-
-    handlerStart = CFunc_AppendStatement(3);
-    handlerStart->target.label = newlabel();
-    handlerLabel = handlerStart->target.label;
-
-    endLabel = newlabel();
-    previous = NULL;
-
-    for (;;) {
-        statement_sourceoffset = CPrep_UpdateTokenLine(&function_fileinfo);
-
-        lastStatement = CFunc_AppendStatement(2);
-        lastStatement->flags = 1;
-        lastStatement->target.label = newlabel();
-        cleanup = NULL;
-        lastStatement->target.label->target.stmt = lastStatement;
-
-        handler = (ExceptionHandlerRecord *)CompilerTools_AllocatePool(sizeof(*handler));
-        memclrw(handler, sizeof(*handler));
-        handler->previous = previous;
-        previous = handler;
-        handler->handlerEntry = lastStatement;
-        handler->exceptionObject = exceptionObject;
-
-        tk = CPrepTokenizer_GetNextToken();
-        if (tk != '(') {
-            CError_ReportError(ERR_LPAREN_EXPECTED);
-            break;
-        }
-        tk = CPrepTokenizer_GetNextToken();
-        if (tk == TK_ELLIPSIS) {
-            tk = CPrepTokenizer_GetNextToken();
-        } else {
-            memclrw(&declaration, sizeof(declaration));
-            CParser_GetDeclSpecs(&declaration, 0);
-            if (declaration.missingTypeSpecifier != 0)
-                CError_ReportError(ERR_DECLARATION_SYNTAX_ERROR);
-            if (declaration.storage != 0)
-                CError_ReportError(ERR_ILLEGAL_STORAGE_CLASS);
-            CError_ReportIllegalFlags(declaration.qual & 0xe1fffff4u);
-            CDecl_ParseDeclarator(&declaration);
-            if (declaration.dtype->type == TYPEFUNC)
-                declaration.dtype = CDecl_NewPointerType(declaration.dtype);
-            else if (declaration.dtype->type == TYPEARRAY)
-                declaration.dtype = CDecl_NewPointerType(TPTR_TARGET(declaration.dtype));
-            CanAllocObject(declaration.dtype);
-            if (declaration.dtype->type == TYPECLASS && (TYPE_CLASS(declaration.dtype)->flags & CLASS_ABSTRACT) != 0)
-                CError_IllegalUseAbstractClass(TYPE_CLASS(declaration.dtype));
-            handler->exceptionType = declaration.dtype;
-            handler->declarationData = declaration.qual;
-            if (declaration.name != NULL) {
-                cleanup = fn_0047cb60();
-                initializer = create_catch_object_init(&declaration, handler);
-                lastStatement = CFunc_AppendStatement(4);
-                lastStatement->expr.expression = initializer;
-            }
-        }
-
-        if (tk != ')') {
-            CError_ReportError(ERR_RPAREN_EXPECTED);
-            break;
-        }
-        tk = CPrepTokenizer_GetNextToken();
-        if (tk != '{') {
-            CError_ReportError(ERR_LBRACE_EXPECTED);
-            break;
-        }
-        CFunc_ParseScopedStatement(context);
-        if (rethrow != 0) {
-            lastStatement = CFunc_AppendStatement(4);
-            lastStatement->expr.expression = funccallexpr(throw_func, nullnode(), nullnode(), nullnode(), NULL);
-        }
-        handler->handlerEnd = lastStatement;
-        if (cleanup != NULL)
-            PPCError_RestoreGlobalValues(cleanup);
-        if (tk != TK_CATCH)
-            break;
+      if ((*((char *) (((int) puVar1) + 0x1e))) == '\0')
+      {
+        uVar5 = (uint) fn_0044dfb0();
+        if ((iVar4 + 0x3cU) < uVar5)
         {
-            Statement *branch = CFunc_AppendStatement(3);
-            branch->target.label = endLabel;
+          iVar4 = (int) fn_0044dfb0();
+          iVar6 = (int) fn_00420190(*DAT_00710360);
+          if (iVar6 != 0)
+          {
+            fn_0045a1e0();
+          }
         }
+        cVar3 = (char) fn_0049c9e0((int) puVar1);
+        if (cVar3 != '\0')
+        {
+          bVar2 = (bool) 1;
+        }
+      }
     }
 
+    cVar3 = (char) fn_0049c7a0();
+    if (cVar3 != '\0')
     {
-        Statement *end = CFunc_AppendStatement(2);
-        end->target.label = endLabel;
-        endLabel->target.stmt = end;
-        CException_004e1fb0(tryBody, handlerStart, end, handler);
+      bVar2 = (bool) 1;
     }
-    finish_label(handlerLabel);
+  }
+  while (bVar2);
+  return;
 }
 
-/* Record in front of the created exception object: a type and a name. */
-
-/* Two object slots handed in by the caller. */
-
-ENode *create_catch_object_init(DeclInfo *info, ExceptionHandlerRecord *args)
+undefined1 fn_0049c7a0(void)
 {
-    Object *obj;
-    ENode *node;
-    ENode *monad;
-    Object *cls;
-    Object *cls2;
-    ENode *objnode;
-    ENode *m;
-
-    if (CScope_FindName(currentNameSpace, info->name) != NULL)
-        CError_ReportError(ERR_IDENTIFIER_REDECLARED, info->name->name);
-
-    obj = CParser_NewLocalDataObject(info, 1);
-    CFunc_SetupLocalVarInfo(obj);
-    CScope_AddObject(currentNameSpace, info->name, (ObjBase *)obj);
-    args->catchObject = obj;
-
-    node = makediadicnode(create_objectrefnode(args->exceptionObject), intconstnode((Type *)&stunsignedlong, 12), EADD);
-    node->rtype = CDecl_NewPointerType(CDecl_NewPointerType(info->dtype));
-    monad = makemonadicnode(node, EINDIRECT);
-    monad->rtype = CDecl_NewPointerType(info->dtype);
-
-    if (info->dtype->type == TYPEPOINTER && (TYPE_POINTER(info->dtype)->qual & Q_REFERENCE) != 0) {
-        return makediadicnode(CExpr_New_EINDIRECT_Node(obj), monad, EASS);
-    }
-
-    if (info->dtype->type == TYPECLASS) {
-        cls = CClass_CopyConstructor(TYPE_CLASS(info->dtype));
-        if (cls != NULL) {
-            cls2 = CClass_Destructor(TYPE_CLASS(info->dtype));
-            if (cls2 == NULL)
-                objnode = create_objectrefnode(obj);
-            else
-                objnode = CExcept_RegisterDestructorObject(obj, 0, cls2, 0);
-            return create_call_with_arg_and_default_args(cls, TYPE_CLASS(info->dtype), objnode, monad);
+  undefined4 *puVar1;
+  char *pcVar2;
+  int *piVar3;
+  bool bVar4;
+  char cVar5;
+  int iVar6;
+  uint uVar7;
+  int iVar8;
+  undefined1 uVar9;
+  int *local_44[14];
+  iVar6 = (int) fn_0044dfb0();
+  do
+  {
+    fn_005a1760();
+    bVar4 = (bool) 0;
+    for (puVar1 = (undefined4 *) DAT_00711bac; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      if ((*((char *) (((int) puVar1) + 0x1e))) == '\0')
+      {
+        uVar7 = (uint) fn_0044dfb0();
+        if ((iVar6 + 0x3cU) < uVar7)
+        {
+          iVar6 = (int) fn_0044dfb0();
+          iVar8 = (int) fn_00420190(*DAT_00710360);
+          if (iVar8 != 0)
+          {
+            fn_0045a1e0();
+          }
         }
-    }
-
-    m = makemonadicnode(monad, EINDIRECT);
-    m->rtype = info->dtype;
-    return makediadicnode(create_objectnode(obj), m, EASS);
-}
-
-static Boolean CException_IsClassType(Type *ty)
-{
-    if (ty != NULL) {
-        if (ty->type == TYPECLASS) {
-            if (CClass_Destructor((TypeClass *)ty) != NULL)
-                return 1;
-            return 0;
+        cVar5 = (char) fn_0049c920((int) puVar1);
+        if (cVar5 != '\0')
+        {
+          bVar4 = (bool) 1;
         }
-        if (ty->type == TYPEPOINTER) {
-            if ((TYPE_POINTER(ty)->qual & Q_REFERENCE) != 0 && TPTR_TARGET(ty)->type == TYPECLASS)
-                return 1;
-            return 0;
+      }
+    }
+
+  }
+  while (bVar4);
+  uVar9 = (undefined1) 0;
+  for (puVar1 = (undefined4 *) DAT_00711bac; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    if (((((*((char *) (puVar1 + 7))) == '\x01') && ((cVar5 = (char) fn_005a1780(puVar1), cVar5 != '\0'))) && (puVar1[2] != 0)) && ((pcVar2 = (char *) (*((char **) (puVar1[2] + 0x10))), ((*pcVar2) == '\a') && (((*((uint *) (pcVar2 + 0x16))) & 0x400) == 0))))
+    {
+      if (((*((byte *) (((int) puVar1) + 0x1f))) & 7) == 0)
+      {
+        *((uint *) (pcVar2 + 0x16)) = (uint) ((*((uint *) (pcVar2 + 0x16))) | 0x400);
+        uVar9 = (undefined1) 1;
+        fn_005a1310(local_44, puVar1);
+        bVar4 = (bool) 0;
+        for (piVar3 = (int *) local_44[0]; ((uint) piVar3) != ((uint) ((int *) 0x0)); piVar3 = (int *) ((int *) (*piVar3)))
+        {
+          if ((*((int *) (((int) piVar3) + 0x12))) != 0)
+          {
+            *((undefined4 *) (((int) piVar3) + 0x12)) = (undefined4) 0;
+            bVar4 = (bool) 1;
+          }
+          switch ((char) piVar3[1])
+          {
+            case '\f':
+
+            case '\r':
+
+            case '\x0e':
+              *((undefined1 *) (piVar3 + 1)) = (undefined1) 1;
+              bVar4 = (bool) 1;
+
+          }
+
         }
-        return 0;
-    }
-    return 1;
-}
 
-void CException_004e1fb0(Statement *firstScope, Statement *insertionScope, Statement *lastScope,
-                         ExceptionHandlerRecord *entries)
-{
-    CException *originalList;
-    SInt32 entryValue;
-    Boolean hasClassType;
-    CException *firstEntry;
-    CException *replacementList;
-    CException *entry;
-    ENode *stringNode;
-    Statement *scope;
-    CException *current;
-
-    firstEntry = NULL;
-    hasClassType = 0;
-    entryValue = (SInt32)entries->exceptionObject;
-    originalList = firstScope->dobjstack;
-    replacementList = originalList;
-
-    if (entries != NULL) {
-        do {
-            entry = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-            memclrw(entry, sizeof(CException));
-            entry->next = replacementList;
-            replacementList = entry;
-            if (firstEntry == NULL)
-                firstEntry = entry;
-            entry->kind = 0xd;
-            entry->data.catch_block.object = (Object *)entries->catchObject;
-            entry->data.catch_block.label = entries->handlerEntry->target.label;
-            if (entries->exceptionType != NULL) {
-                stringNode = create_type_stringconst(entries->exceptionType, entries->declarationData, 0);
-                CError_ASSERT(1009, stringNode->type == ESTRINGCONST);
-                entry->data.catch_block.typeInfo =
-                    CInit_DeclareString(stringNode->data.string.data, stringNode->data.string.size, 0, 0);
-            }
-            entry->data.catch_block.info = (Object *)entryValue;
-            if (!hasClassType && CException_IsClassType(entries->exceptionType))
-                hasClassType = 1;
-            entry->data.catch_block.exceptionType = entries->exceptionType;
-            entry->data.catch_block.declarationData = entries->declarationData;
-            entries = entries->previous;
-        } while (entries != NULL);
-    }
-
-    scope = firstScope;
-    for (;;) {
-        if ((current = scope->dobjstack) != originalList) {
-            for (;;) {
-                if (current == NULL)
-                    CError_FATAL(1320);
-                if (current->next == replacementList)
-                    break;
-                if (current->next == originalList) {
-                    current->next = replacementList;
-                    break;
-                }
-                current = current->next;
-            }
-        } else {
-            scope->dobjstack = replacementList;
+        if (bVar4)
+        {
+          fn_00593320(puVar1[2], local_44[0]);
+          fn_005a12c0(puVar1, local_44);
         }
-        if (scope == lastScope)
-            break;
-        if (scope == insertionScope) {
-            CException *scopeEntry = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-            memclrw(scopeEntry, sizeof(CException));
-            scopeEntry->next = originalList;
-            scopeEntry->kind = 0xe;
-            scopeEntry->data.active_catch.info = (Object *)entryValue;
-            scopeEntry->data.active_catch.call_dtor = hasClassType;
-            replacementList = scopeEntry;
+        fn_00479c20();
+      }
+      else
+        if ((((*((int *) (pcVar2 + 10))) != 0) && ((*((int *) ((*((int *) (pcVar2 + 10))) + 4))) == 0)) && (((*((byte *) (((int) puVar1) + 0x1f))) & 6) == 0))
+      {
+        *((uint *) (pcVar2 + 0x16)) = (uint) ((*((uint *) (pcVar2 + 0x16))) | 0x400);
+        uVar9 = (undefined1) 1;
+      }
+    }
+  }
+
+  return (undefined1) uVar9;
+}
+
+undefined1 fn_0049c920(int param_1)
+{
+  undefined4 *puVar1;
+  int iVar2;
+  char *pcVar3;
+  char cVar4;
+  byte bVar5;
+  undefined1 local_9;
+  if ((*((char *) (param_1 + 0x1e))) != '\0')
+  {
+    return (undefined1) 0;
+  }
+  *((undefined1 *) (param_1 + 0x1e)) = (undefined1) 1;
+  local_9 = (undefined1) 0;
+  if ((*((char *) (param_1 + 0x1c))) == '\x01')
+  {
+    for (puVar1 = (undefined4 *) (*((undefined4 **) (param_1 + 0x10))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      if (((*((char *) (puVar1[1] + 0x1c))) == '\x01') && ((cVar4 = (char) fn_0049c920((int) puVar1[1]), cVar4 != '\0')))
+      {
+        local_9 = (undefined1) 1;
+      }
+    }
+
+    for (puVar1 = (undefined4 *) (*((undefined4 **) (param_1 + 0x10))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      iVar2 = (int) puVar1[1];
+      if (((((*((char *) (iVar2 + 0x1c))) == '\x01') && (puVar1[2] != 0)) && ((*((int *) (iVar2 + 8))) != 0)) && ((pcVar3 = (char *) (*((char **) ((*((int *) (iVar2 + 8))) + 0x10))), (((*pcVar3) == '\a') && (((*((uint *) (pcVar3 + 0x16))) & 0x400) == 0)) && ((bVar5 = (byte) ((*((byte *) (iVar2 + 0x1f))) & 7), (bVar5 != 0) && ((*((byte *) (param_1 + 0x1f))) != (bVar5 | (*((byte *) (param_1 + 0x1f))))))))))
+      {
+        *((byte *) (param_1 + 0x1f)) = (byte) ((*((byte *) (param_1 + 0x1f))) | bVar5);
+        local_9 = (undefined1) 1;
+      }
+    }
+
+  }
+  return (undefined1) local_9;
+}
+
+undefined1 fn_0049c9e0(int param_1)
+{
+  uint *puVar1;
+  undefined4 *puVar2;
+  char *pcVar3;
+  int iVar4;
+  bool bVar5;
+  char cVar6;
+  undefined1 uVar7;
+  undefined4 *local_44[14];
+  if ((*((char *) (param_1 + 0x1e))) != '\0')
+  {
+    return (undefined1) 0;
+  }
+  *((undefined1 *) (param_1 + 0x1e)) = (undefined1) 1;
+  uVar7 = (undefined1) 0;
+  if ((*((char *) (param_1 + 0x1c))) == '\x01')
+  {
+    uVar7 = (undefined1) 0;
+    for (puVar2 = (undefined4 *) (*((undefined4 **) (param_1 + 0x10))); ((uint) puVar2) != ((uint) ((undefined4 *) 0x0)); puVar2 = (undefined4 *) ((undefined4 *) (*puVar2)))
+    {
+      if (((*((char *) (puVar2[1] + 0x1c))) == '\x01') && ((cVar6 = (char) fn_0049c9e0((int) puVar2[1]), cVar6 != '\0')))
+      {
+        uVar7 = (undefined1) 1;
+      }
+    }
+
+    cVar6 = (char) fn_005a1780(param_1);
+    if (cVar6 == '\0')
+    {
+      iVar4 = (int) (*((int *) (param_1 + 8)));
+      if ((((iVar4 != 0) && ((*(*((char **) (iVar4 + 0x10)))) == '\a')) && (((*((uint *) ((*((char **) (iVar4 + 0x10))) + 0x16))) & 0x400) == 0)) && ((iVar4 != DAT_00716d68) && (iVar4 != DAT_00716cd8)))
+      {
+        *((byte *) (param_1 + 0x1f)) = (byte) ((*((byte *) (param_1 + 0x1f))) | 4);
+      }
+    }
+    else
+      if ((((*((int *) (param_1 + 8))) != 0) && ((pcVar3 = (char *) (*((char **) ((*((int *) (param_1 + 8))) + 0x10))), (*pcVar3) == '\a'))) && (((*((uint *) (pcVar3 + 0x16))) & 0x400) == 0))
+    {
+      fn_005a1310(local_44, param_1);
+      cexcept_canthrow = (byte) '\0';
+      cexcept_hasthrow = (byte) '\0';
+      cexcept_hasrethrow = (byte) '\0';
+      cexcept_hasunknown = (byte) '\0';
+      fn_0055bc20(local_44[0], CExcept_CanThrowCheckCB);
+      if (cexcept_hasthrow != '\0')
+      {
+        *((byte *) (param_1 + 0x1f)) = (byte) ((*((byte *) (param_1 + 0x1f))) | 1);
+      }
+      if (cexcept_hasrethrow != '\0')
+      {
+        *((byte *) (param_1 + 0x1f)) = (byte) ((*((byte *) (param_1 + 0x1f))) | 2);
+      }
+      if (cexcept_hasunknown != '\0')
+      {
+        *((byte *) (param_1 + 0x1f)) = (byte) ((*((byte *) (param_1 + 0x1f))) | 4);
+      }
+      if (cexcept_canthrow == '\0')
+      {
+        puVar1 = (uint *) ((uint *) ((*((int *) ((*((int *) (param_1 + 8))) + 0x10))) + 0x16));
+        *puVar1 = (uint) ((*puVar1) | 0x400);
+        bVar5 = (bool) 0;
+        for (puVar2 = (undefined4 *) local_44[0]; ((uint) puVar2) != ((uint) ((undefined4 *) 0x0)); puVar2 = (undefined4 *) ((undefined4 *) (*puVar2)))
+        {
+          if ((*((int *) (((int) puVar2) + 0x12))) != 0)
+          {
+            *((undefined4 *) (((int) puVar2) + 0x12)) = (undefined4) 0;
+            bVar5 = (bool) 1;
+          }
+          switch (*((undefined1 *) (puVar2 + 1)))
+          {
+            case 0xc:
+
+            case 0xd:
+
+            case 0xe:
+              *((undefined1 *) (puVar2 + 1)) = (undefined1) 1;
+              bVar5 = (bool) 1;
+
+          }
+
         }
-        scope = scope->next;
-    }
-    exception_cleanup_registered = 1;
-}
 
-/* 0x4463d0, one pushed argument */
-/* 0x492070, returns ax */
-/* 0x473f70, no arguments, EINTCONST node */
-
-ENode *CExcept_ScanThrowExpression(void)
-{
-    Object *cls;
-    ENode *e;
-    ENode *nd;
-    ENode *objref;
-    Object *obj;
-    ENode *node;
-
-    if (!copts.fb3)
-        CError_ReportError(ERR_EXCEPTION_HANDLING_OPTION_DISABLED);
-    tk = CPrepTokenizer_GetNextToken();
-    switch (tk) {
-        case ')':
-        case ',':
-        case ':':
-        case ';':
-            e = funccallexpr(throw_func, nullnode(), nullnode(), nullnode(), NULL);
-            break;
-        default:
-            node = CExpr_GeneratePointerAndRewriteConst(assignment_expression());
-            obj = create_temp_object(node->rtype);
-            if (node->rtype->type != TYPECLASS || (nd = CExpr_IsTempConstruction(node, node->rtype, &e)) == NULL) {
-                objref = create_objectrefnode(obj);
-                if (node->rtype->type == TYPECLASS && (cls = CClass_CopyConstructor(TYPE_CLASS(node->rtype))) != NULL) {
-                    nd = create_call_with_arg_and_default_args(cls, TYPE_CLASS(node->rtype), objref,
-                                                               getnodeaddress(node, 0));
-                } else {
-                    if (node->rtype->size == 0)
-                        CError_ReportError(ERR_ILLEGAL_TYPE);
-                    nd = makemonadicnode(objref, EINDIRECT);
-                    nd->rtype = node->rtype;
-                    nd = makediadicnode(nd, node, EASS);
-                    nd = makediadicnode(nd, create_objectrefnode(obj), ECOMMA);
-                    nd->rtype = (Type *)&void_ptr;
-                }
-            } else {
-                *e = *create_objectrefnode(obj);
-            }
-            e = create_type_stringconst(node->rtype, node->flags & 3, 1);
-            if (node->rtype->type == TYPECLASS && (cls = CClass_Destructor((TypeClass *)node->rtype)) != NULL) {
-                e = funccallexpr(throw_func, e, nd, create_objectrefnode(CABI_GetDestructorObject(cls, 1)), NULL);
-            } else {
-                e = funccallexpr(throw_func, e, nd, nullnode(), NULL);
-            }
-            break;
-    }
-    e->flags |= Q_VOLATILE;
-    return e;
-}
-
-ENode *create_call_with_arg_and_default_args(Object *func, TypeClass *cls, ENode *which, ENode *arg)
-{
-    ENodeList *list;
-    FuncArg *fa;
-    ENode *call;
-    ENodeList *p;
-
-    CError_ASSERT(1092, IS_TYPE_FUNC(func->type) && (fa = TYPE_FUNC(func->type)->args) != 0 && (fa = fa->next) != 0);
-
-    call = funccallexpr(func, which, NULL, NULL, NULL);
-    list = call->data.funccall.args;
-
-    if (cls->flags & CLASS_HAS_VBASES) {
-        CError_ASSERT(1102, (fa = fa->next) != 0);
-        list->next = (ENodeList *)CompilerTools_AllocatePool(8);
-        list = list->next;
-        list->next = NULL;
-        list->node = intconstnode((Type *)&stsignedshort, 1);
-    }
-
-    list->next = (ENodeList *)CompilerTools_AllocatePool(8);
-    p = list->next;
-    p->next = NULL;
-    p->node = arg;
-    while ((fa = fa->next) != NULL) {
-        CError_ASSERT(1118, fa->dexpr != 0);
-        p->next = (ENodeList *)CompilerTools_AllocatePool(8);
-        p = p->next;
-        p->next = NULL;
-        p->node = fn_00513040(fa->dexpr, 0);
-    }
-    return call;
-}
-
-void CExcept_ScanExceptionSpecification(TypeFunc *func)
-{
-    ExceptSpecList *list;
-    ExceptSpecList *existing;
-    ExceptSpecList *node;
-    TypePointer *unqualifiedType;
-    DeclInfo decl;
-
-    list = NULL;
-    if (CPrepTokenizer_GetNextToken() != '(') {
-        CError_ReportError(ERR_LPAREN_EXPECTED);
-        return;
-    }
-    tk = CPrepTokenizer_GetNextToken();
-    if (tk != ')') {
-        for (;;) {
-            memclrw(&decl, sizeof(decl));
-            CParser_GetDeclSpecs(&decl, 0);
-            if (decl.storage != 0)
-                CError_ReportError(ERR_ILLEGAL_STORAGE_CLASS);
-            CError_ReportIllegalFlags(decl.qual & ~(Q_CV | Q_PASCAL | Q_ALIGNED_MASK));
-            CDecl_ParseDeclarator(&decl);
-            if (decl.name != NULL)
-                CError_ReportError(ERR_ILLEGAL_TYPE);
-            if (decl.dtype->type == TYPEPOINTER) {
-                if (TYPE_POINTER(decl.dtype)->qual & Q_CV) {
-                    unqualifiedType = (TypePointer *)galloc(sizeof(TypePointer));
-                    *unqualifiedType = *TYPE_POINTER(decl.dtype);
-                    unqualifiedType->qual = 0;
-                    decl.dtype = (Type *)unqualifiedType;
-                }
-            } else {
-                decl.qual = 0;
-            }
-            for (existing = list; existing != NULL; existing = existing->next) {
-                if (iscpp_typeequal(existing->type, decl.dtype) != 0 && existing->qual == decl.qual)
-                    break;
-            }
-            if (existing == NULL) {
-                node = (ExceptSpecList *)galloc(sizeof(ExceptSpecList));
-                memclrw(node, sizeof(ExceptSpecList));
-                node->next = list;
-                node->type = decl.dtype;
-                node->qual = decl.qual;
-                list = node;
-            }
-            if (tk == ')')
-                break;
-            if (tk != ',') {
-                CError_ReportError(ERR_RPAREN_EXPECTED);
-                break;
-            }
-            tk = CPrepTokenizer_GetNextToken();
+        if (bVar5)
+        {
+          fn_00593320(*((undefined4 *) (param_1 + 8)), local_44[0]);
+          fn_005a12c0(param_1, local_44);
         }
+        uVar7 = (undefined1) 1;
+      }
+      fn_00479c20();
     }
-    if (list == NULL) {
-        list = (ExceptSpecList *)galloc(sizeof(ExceptSpecList));
-        memclrw(list, sizeof(ExceptSpecList));
-    }
-    func->exspecs = list;
-    tk = CPrepTokenizer_GetNextToken();
+  }
+  return (undefined1) uVar7;
 }
 
-ENode *create_type_stringconst(Type *type, UInt32 qualifiers, Boolean flag)
+void CExcept_CanThrowCheckCB(char *param_1)
 {
-    TypePointer unqualifiedPointer;
-    ENode *node;
-    UInt32 manglingQualifiers = qualifiers;
-
-    if (type->type == TYPEPOINTER && (TYPE_POINTER(type)->qual & Q_REFERENCE))
-        type = TYPE_POINTER(type)->target;
-
-    if (type->type == TYPECLASS || (type->type == TYPEPOINTER && TYPE_POINTER(type)->target->type == TYPECLASS)) {
-        data_00583548.size = 0;
-        if (type->type == TYPEPOINTER) {
-            AppendGListByte(&data_00583548, 0x2a);
-            type = TYPE_POINTER(type)->target;
-        } else {
-            AppendGListByte(&data_00583548, 0x21);
-        }
-        if (flag) {
-            TypeClass *classType = TYPE_CLASS(type);
-            emit_flagged_class_offsets(classType);
-        } else {
-            TypeClass *classType = TYPE_CLASS(type);
-            fn_004e2940(classType);
-            AppendGListByte(&data_00583548, 0x21);
-        }
-    } else {
-        if (type->type == TYPEPOINTER) {
-            if (TYPE_POINTER(type)->qual & Q_CV) {
-                unqualifiedPointer = *TYPE_POINTER(type);
-                unqualifiedPointer.qual = 0;
-                manglingQualifiers = 0;
-                type = (Type *)&unqualifiedPointer;
-            }
-        } else {
-            manglingQualifiers = 0;
-        }
-        fn_004c2ac0(type, manglingQualifiers);
-    }
-
-    AppendGListByte(&data_00583548, 0);
-
-    node = (ENode *)CompilerTools_AllocatePool(sizeof(ENode));
-    node->type = ESTRINGCONST;
-    node->cost = 0;
-    node->flags = 0;
-    node->rtype = (Type *)&void_ptr;
-    node->data.string.size = data_00583548.size;
-    node->data.string.data = (char *)galloc(data_00583548.size);
-    node->data.string.useExplicitSize = 0;
-    memcpy(node->data.string.data, *data_00583548.data, data_00583548.size);
-    return node;
-}
-
-ClassNode *add_class_and_bases(ClassNode *list, TypeClass *mostDerivedClass, TypeClass *cls, SInt32 offset,
-                               Boolean isVirtual, Boolean isPublic)
-{
-    ClassNode *node;
-    ClassList *base;
-
-    for (node = list; node != NULL; node = node->next) {
-        if (node->cls == cls) {
-            if (isVirtual != 0 && node->flagc != 0) {
-                if (isPublic != 0)
-                    node->flagd = 1;
-            } else {
-                mark_class_and_bases(list, cls);
-            }
-            return list;
-        }
-    }
-    node = (ClassNode *)CompilerTools_AllocatePool(sizeof(*node));
-    node->cls = cls;
-    node->offset = offset;
-    node->flagc = isVirtual;
-    node->flagd = isPublic;
-    node->flage = 0;
-    node->next = list;
-    list = node;
-    for (base = cls->bases; base != NULL; base = base->next) {
-        int baseIsPublic;
-
-        baseIsPublic = 0;
-        if (isPublic != 0 && base->access == ACCESSPUBLIC)
-            baseIsPublic = 1;
-        if (base->is_virtual != 0) {
-            list = add_class_and_bases(list, mostDerivedClass, base->base,
-                                       CClass_FindVBaseOffset(mostDerivedClass, base->base), 1, baseIsPublic);
-        } else {
-            list = add_class_and_bases(list, mostDerivedClass, base->base, offset + base->offset, 0, baseIsPublic);
-        }
-    }
-    return list;
-}
-
-/* One entry in the list of exception-specification classes: next pointer at
- * 0x00, the class it denotes at 0x04, and a byte flag at 0x0e.  Only the
- * fields touched by the original body are named. */
-
-/* * Mark every entry of `list` whose class is `cls` or one of its transitive
- * base classes. */
-void mark_class_and_bases(ClassNode *list, TypeClass *cls)
-{
-    ClassNode *node;
-    ClassList *base;
-
-    for (node = list; node != NULL; node = node->next) {
-        if (node->cls == cls)
-            node->flage = 1;
-    }
-    for (base = cls->bases; base != NULL; base = base->next)
-        mark_class_and_bases(list, base->base);
-}
-
-void append_namespace_names(NameSpace *p)
-{
-    for (; p; p = p->parent)
-        if (p->name) {
-            append_namespace_names(p->parent);
-            CompilerTools_AppendGListString(&data_00583548, p->name->name);
-            CompilerTools_AppendGListString(&data_00583548, "::");
-            return;
-        }
-}
-
-/* Exception cleanup record for an object or array destructor. */
-
-static inline ENode *CException_004e2c40_inline1(Object *p0, ENode *p1)
-{
-    ENode *v3;
-    v3 = CABI_DestroyObject(p0, p1, 1, 1, 0);
-    CE_ASSERT(v3->type != EFUNCCALL || v3->data.funccall.funcref->type != EOBJREF, CError_FATAL(609));
-    if (v3->data.funccall.funcref->data.objref->datatype == DVFUNC) {
-        v3->data.funccall.funcref->flags |= 128;
-    }
-    return v3;
-}
-
-static inline Statement *CException_004e2c40_inline2(Statement *p0, ENode *p1)
-{
-    Statement *t3;
-    t3 = CFunc_InsertAfterStatement(4, p0);
-    t3->expr.expression = p1;
-    return t3;
-}
-
-Statement *CExcept_ActionCleanup(CException *cleanup, Statement *statement)
-{
-    Object *context;
-    ENode *expression;
-    ENode *localDtorCall;
-    Object *arrayDtor;
-    ENode *memberDtorCall;
-    ENode *dtorExpression;
-    ENode *localObjectExpression;
-    Object *localDtor;
-    Object *deleteObject;
-    Statement *localStatement;
-    Statement *memberStatement;
-    SInt32 offset;
-    Object *deleteFunc;
-    Object *memberDtor;
-    SInt32 value1;
-    SInt32 value2;
-
-    switch (cleanup->kind) {
-        case 1:
-            localDtor = cleanup->data.local.dtor;
-            localObjectExpression = create_objectrefnode(cleanup->data.local.object);
-            localDtorCall = CException_004e2c40_inline1(localDtor, localObjectExpression);
-            localStatement = CException_004e2c40_inline2(statement, localDtorCall);
-            statement = localStatement;
-            localStatement->dobjstack = cleanup->next;
-            break;
-        case 3:
-            offset = cleanup->data.member.offset;
-            memberDtor = cleanup->data.member.dtor;
-            expression = create_objectrefnode(cleanup->data.member.objectptr);
-            if (offset != 0) {
-                expression = makediadicnode(expression, intconstnode((Type *)&stunsignedlong, offset), EADD);
-            }
-            memberDtorCall = CException_004e2c40_inline1(memberDtor, expression);
-            memberStatement = CException_004e2c40_inline2(statement, memberDtorCall);
-            statement = memberStatement;
-            memberStatement->dobjstack = cleanup->next;
-            break;
-        case 11:
-            deleteFunc = cleanup->data.local.dtor;
-            deleteObject = cleanup->data.local.object;
-            statement = CFunc_InsertAfterStatement(4, statement);
-            statement->expr.expression =
-                funccallexpr(deleteFunc, CExpr_New_EINDIRECT_Node(deleteObject), NULL, NULL, NULL);
-            statement->dobjstack = cleanup->next;
-            break;
-        case 5:
-            value2 = (SInt32)cleanup->data.member_array.count;
-            value1 = (SInt32)cleanup->data.member_array.offset;
-            arrayDtor = cleanup->data.member_array.dtor;
-            context = cleanup->data.member_array.objectptr;
-            statement = CFunc_InsertAfterStatement(4, statement);
-            if (arrayDtor != NULL) {
-                dtorExpression = create_objectrefnode(CABI_GetDestructorObject(arrayDtor, 1));
-            } else {
-                dtorExpression = nullnode();
-            }
-            statement->expr.expression = funccallexpr(data_0058717c, create_objectrefnode(context), dtorExpression,
-                                                      intconstnode((Type *)&stunsignedlong, value2),
-                                                      intconstnode((Type *)&stunsignedlong, value1));
-            statement->dobjstack = cleanup->next;
-            break;
-        case 14:
-            statement = CFunc_InsertAfterStatement(14, statement);
-            statement->expr.expression = create_objectrefnode(cleanup->data.active_catch.info);
-            statement->dobjstack = cleanup->next;
-            if (cleanup->data.active_catch.call_dtor == 0) {
-                statement->type = ST_ENDCATCH;
-            }
-            break;
-        default:
-            CError_FATAL(749);
-        case 2:
-        case 4:
-        case 6:
-        case 7:
-        case 8:
-        case 9:
-        case 10:
-        case 12:
-        case 13:
-        case 15:
-        case 16:
-        case 17:
-            break;
-    }
-    return statement;
-}
-
-void CExcept_RegisterMemberArray(Statement *stmt, Object *object, SInt32 offset, Object *dtor, SInt32 count,
-                                 SInt32 size)
-{
-    CException *entry;
-
-    entry = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-    memclrw((unsigned char *)entry, sizeof(CException));
-    entry->kind = 9;
-    entry->data.member_array.objectptr = object;
-    entry->data.member_array.dtor = CABI_GetDestructorObject(dtor, 1);
-    entry->data.member_array.offset = offset;
-    entry->data.member_array.count = count;
-    entry->data.member_array.size = size;
-    insert_exception_action(stmt, entry);
-    stmt->flags |= 2;
-}
-
-void CExcept_RegisterMember(Statement *statement, Object *objectptr, SInt32 offset, Object *destructor,
-                            Object *condition, Boolean complete)
-{
-    CException *node;
-
-    node = (CException *)CompilerTools_AllocatePool(sizeof(CException));
-    memclrw(node, sizeof(CException));
-    if (condition == NULL) {
-        if (complete) {
-            node->kind = 7;
-            node->data.member.dtor = CABI_GetDestructorObject(destructor, 1);
-        } else {
-            node->kind = 0x11;
-            node->data.member.dtor = CABI_GetDestructorObject(destructor, 0);
-        }
-        node->data.member.objectptr = objectptr;
-        node->data.member.offset = offset;
-    } else {
-        CError_ASSERT(554, &condition->type->type == &stsignedshort.type);
-        node->kind = 8;
-        node->data.member_cond.objectptr = objectptr;
-        node->data.member_cond.cond = condition;
-        node->data.member_cond.dtor = CABI_GetDestructorObject(destructor, 1);
-        node->data.member_cond.offset = offset;
-    }
-    insert_exception_action(statement, node);
-    statement->flags |= 2;
-}
-static Object *CException_StdType(const void *name)
-{
-    CScopeParseResult lookup;
-    NameSpaceObjectList *obj;
-    Object *type;
-    obj = CScope_FindObjectList(&lookup, GetHashNameNode(name));
-    if (obj == NULL || (type = (Object *)obj->object)->otype != 5 || type->datatype != DLOCAL) {
-        CError_FATAL(502);
-        type = NULL;
-    }
-    return type;
-}
-
-void CException_AddStdTypeRecord(void)
-{
-    CException *rec;
-
-    rec = CompilerTools_AllocatePool(sizeof(*rec));
-    memclrw(rec, sizeof(*rec));
-    rec->kind = 6;
-    rec->data.types.type[0] = CException_StdType("ptr");
-    rec->data.types.type[1] = CException_StdType("i");
-    rec->data.types.type[2] = CException_StdType(&dtor_type_name);
-    rec->data.types.type[3] = CException_StdType(&size_type_name);
-    rec->next = UINT_00587fc4;
-    UINT_00587fc4 = rec;
-}
-
-void fn_004e30c0(void)
-{
-    data_005884fa = 1;
+  uint *puVar1;
+  int iVar2;
+  int *piVar3;
+  bool bVar4;
+  if (((byte) ((*param_1) - 0x39U)) > 1)
+  {
     return;
-}
-
-void CException_PushEntry(void)
-{
-    CException *entry;
-
-    entry = CompilerTools_AllocatePool(30U);
-    memclrw(entry, 30U);
-    entry->kind = 16U;
-    entry->next = UINT_00587fc4;
-    UINT_00587fc4 = entry;
-}
-
-/* Expression-node prefix used by exception rewriting. */
-
-ENode *fn_004e1050(ENode *expression)
-{
-    switch (expression->type) {
-        case EPRECOMP:
-            return CException_004e1940(expression);
-        case ELABEL:
-        case ESETCONST:
-            lower_newexception(expression, 0);
-            return;
-        case EMFPOINTER:
-            expression->data.diadic.left = fn_004e1050(expression->data.diadic.left);
-            expression->data.diadic.right = rewrite_expr_temporaries(expression->data.diadic.right);
-            return expression;
-        case ECOND:
-            expression->data.diadic.left = fn_004e1050(expression->data.diadic.left);
-            expression->data.diadic.right = rewrite_expr_temporaries(expression->data.diadic.right);
-            expression->data.cond.expr2 = rewrite_expr_temporaries(expression->data.cond.expr2);
-            return expression;
-        case ELAND:
-        case ELOR:
-        case ECOMMA:
-            expression->data.diadic.left = fn_004e1050(expression->data.diadic.left);
-            expression->data.diadic.right = rewrite_expr_temporaries(expression->data.diadic.right);
-            return expression;
-        case EFUNCCALL:
-        case EFUNCCALLP:
-            return rewrite_funccall_temporaries(expression, 0);
-        case EMUL:
-        case EDIV:
-        case EMODULO:
-        case EADD:
-        case ESUB:
-        case ESHL:
-        case ESHR:
-        case ELESS:
-        case EGREATER:
-        case ELESSEQU:
-        case EGREATEREQU:
-        case EEQU:
-        case ENOTEQU:
-        case EAND:
-        case EXOR:
-        case EOR:
-        case EASS:
-        case EMULASS:
-        case EDIVASS:
-        case EMODASS:
-        case EADDASS:
-        case ESUBASS:
-        case ESHLASS:
-        case ESHRASS:
-        case EANDASS:
-        case EXORASS:
-        case EORASS:
-        case EROTL:
-        case EROTR:
-            expression->data.diadic.left = fn_004e1050(expression->data.diadic.left);
-            expression->data.diadic.right = fn_004e1050(expression->data.diadic.right);
-            return expression;
-        case EPOSTINC:
-        case EPOSTDEC:
-        case EPREINC:
-        case EPREDEC:
-        case EINDIRECT:
-        case EMONMIN:
-        case EBINNOT:
-        case ELOGNOT:
-        case ETYPCON:
-        case EBITFIELD:
-            expression->data.diadic.left = fn_004e1050(expression->data.diadic.left);
-            return expression;
-        case EINTCONST:
-        case EFLOATCONST:
-        case ESTRINGCONST:
-        case EOBJREF:
-        case EQUALNAME:
-        case ENULLCHECK:
-        case ELOCOBJ:
-        case ENEWEXCEPTION:
-        case ENEWEXCEPTIONARRAY:
-        case EMEMBER:
-        case EASSBLK:
-            return expression;
-        default:
-            CError_FATAL(2127);
-            return expression;
+  }
+  if ((*(*((char **) (param_1 + 0x10)))) != ';')
+  {
+    cexcept_hasunknown = (byte) 1;
+    cexcept_canthrow = (byte) 1;
+    return;
+  }
+  iVar2 = (int) (*((int *) ((*((char **) (param_1 + 0x10))) + 0x10)));
+  if (((*((char *) (iVar2 + 2))) == '\x04') && (((*((uint *) (param_1 + 8))) & 8) == 0))
+  {
+    cexcept_hasunknown = (byte) 1;
+    cexcept_canthrow = (byte) 1;
+    return;
+  }
+  if ((DAT_0070f1df != '\0') && ((*(*((char **) (iVar2 + 0x10)))) == '\a'))
+  {
+    if (((*((uint *) ((*((char **) (iVar2 + 0x10))) + 0x16))) & 0x400) != 0)
+    {
+      bVar4 = (bool) 0;
+      goto LAB_0049cce2;
     }
-}
-
-ENode *rewrite_expr_temporaries(ENode *expr)
-{
-    switch (expr->type) {
-        case EPRECOMP:
-            return CException_004e1940(expr);
-        case ELABEL:
-        case ESETCONST:
-            lower_newexception(expr, 1);
-            return;
-        case EMFPOINTER:
-            expr->data.diadic.left = rewrite_expr_temporaries(expr->data.diadic.left);
-            expr->data.diadic.right = rewrite_expr_temporaries(expr->data.diadic.right);
-            return expr;
-        case ECOND:
-            expr->data.cond.cond = rewrite_expr_temporaries(expr->data.cond.cond);
-            expr->data.cond.expr1 = rewrite_expr_temporaries(expr->data.cond.expr1);
-            expr->data.cond.expr2 = rewrite_expr_temporaries(expr->data.cond.expr2);
-            return expr;
-        case ELAND:
-        case ELOR:
-            expr->data.diadic.left = rewrite_expr_temporaries(expr->data.diadic.left);
-            expr->data.diadic.right = rewrite_expr_temporaries(expr->data.diadic.right);
-            return expr;
-        case EFUNCCALL:
-        case EFUNCCALLP:
-            return rewrite_funccall_temporaries(expr, 1);
-        case EMUL:
-        case EDIV:
-        case EMODULO:
-        case EADD:
-        case ESUB:
-        case ESHL:
-        case ESHR:
-        case ELESS:
-        case EGREATER:
-        case ELESSEQU:
-        case EGREATEREQU:
-        case EEQU:
-        case ENOTEQU:
-        case EAND:
-        case EXOR:
-        case EOR:
-        case EASS:
-        case EMULASS:
-        case EDIVASS:
-        case EMODASS:
-        case EADDASS:
-        case ESUBASS:
-        case ESHLASS:
-        case ESHRASS:
-        case EANDASS:
-        case EXORASS:
-        case EORASS:
-        case ECOMMA:
-            expr->data.diadic.left = rewrite_expr_temporaries(expr->data.diadic.left);
-            expr->data.diadic.right = rewrite_expr_temporaries(expr->data.diadic.right);
-            return expr;
-        case EPOSTINC:
-        case EPOSTDEC:
-        case EPREINC:
-        case EPREDEC:
-        case EINDIRECT:
-        case EMONMIN:
-        case EBINNOT:
-        case ELOGNOT:
-        case ETYPCON:
-        case EBITFIELD:
-            expr->data.monadic = rewrite_expr_temporaries(expr->data.monadic);
-            return expr;
-        case EINTCONST:
-        case EFLOATCONST:
-        case ESTRINGCONST:
-        case EOBJREF:
-        case ENULLCHECK:
-        case ELOCOBJ:
-        case EMEMBER:
-        case EASSBLK:
-            return expr;
-        default:
-            CError_FATAL(2016);
-            return expr;
+    if ((((*((uint *) (iVar2 + 0x14))) & 0x80000) == 0) && (DAT_0070f1e0 != '\0'))
+    {
+      if ((((iVar2 == DAT_00716d68) || (((iVar2 == DAT_00710340) || (iVar2 == DAT_00710928)) || (iVar2 == DAT_00711bb8))) || (((iVar2 == DAT_00715c58) || (iVar2 == DAT_00710858)) || (iVar2 == DAT_00711b80))) || (((iVar2 == DAT_00711b00) || (iVar2 == DAT_00711b1c)) || (iVar2 == DAT_00716c98)))
+      {
+        bVar4 = (bool) 0;
+      }
+      else
+      {
+        puVar1 = (uint *) ((uint *) ((*((int *) (iVar2 + 0x10))) + 0x16));
+        *puVar1 = (uint) ((*puVar1) | 0x400);
+        bVar4 = (bool) 1;
+      }
+      if (bVar4)
+      {
+        bVar4 = (bool) 0;
+        goto LAB_0049cce2;
+      }
     }
+  }
+  bVar4 = (bool) 1;
+  LAB_0049cce2:
+  if (bVar4)
+  {
+    cexcept_canthrow = (byte) 1;
+  }
+
+  if (iVar2 == DAT_00716d68)
+  {
+    piVar3 = (int *) (*((int **) (param_1 + 0x14)));
+    if ((((((uint) piVar3) == ((uint) ((int *) 0x0))) || ((*((char *) piVar3[1])) != '4')) || ((*piVar3) == 0)) || ((*(*((char **) ((*piVar3) + 4)))) != '4'))
+    {
+      cexcept_hasthrow = (byte) 1;
+    }
+    else
+    {
+      cexcept_hasrethrow = (byte) 1;
+    }
+  }
+  return;
 }
 
-void insert_exception_action(Statement *stmt, CException *action)
+undefined1 CExcept_CanThrowException(int param_1, char param_2)
 {
-    CException *act;
-    CException *scan;
+  uint *puVar1;
+  bool bVar2;
+  if (DAT_0070f1df == '\0')
+  {
+    return (undefined1) 1;
+  }
+  if ((*(*((char **) (param_1 + 0x10)))) != '\a')
+  {
+    return (undefined1) 1;
+  }
+  if (param_2 != '\0')
+  {
+    return (undefined1) 1;
+  }
+  if (((*((uint *) ((*((char **) (param_1 + 0x10))) + 0x16))) & 0x400) != 0)
+  {
+    return (undefined1) 0;
+  }
+  if ((((*((uint *) (param_1 + 0x14))) & 0x80000) == 0) && (DAT_0070f1e0 != '\0'))
+  {
+    if (((param_1 == DAT_00716d68) || ((((param_1 == DAT_00710340) || (param_1 == DAT_00710928)) || (param_1 == DAT_00711bb8)) || ((param_1 == DAT_00715c58) || (param_1 == DAT_00710858)))) || ((param_1 == DAT_00711b80) || (((param_1 == DAT_00711b00) || (param_1 == DAT_00711b1c)) || (param_1 == DAT_00716c98))))
+    {
+      bVar2 = (bool) 0;
+    }
+    else
+    {
+      puVar1 = (uint *) ((uint *) ((*((int *) (param_1 + 0x10))) + 0x16));
+      *puVar1 = (uint) ((*puVar1) | 0x400);
+      bVar2 = (bool) 1;
+    }
+    if (bVar2)
+    {
+      return (undefined1) 0;
+    }
+  }
+  return (undefined1) 1;
+}
 
-    for (act = (CException *)stmt->dobjstack; act; act = act->next) {
-        switch (act->kind) {
-            case 7:
-            case 8:
-            case 9:
-            case 15:
-            case 17:
-                break;
-            default:
-                continue;
+undefined1 CExcept_SetupNoThrowFunction(uint param_1)
+{
+  uint *puVar1;
+  if ((*(*((char **) (param_1 + 0x10)))) != '\a')
+  {
+    CError_Internal(cexcept_filename, 0xdfa);
+  }
+  if ((((((param_1 != DAT_00716d68) && (param_1 != DAT_00710340)) && (param_1 != DAT_00710928)) && ((param_1 != DAT_00711bb8) && (param_1 != DAT_00715c58))) && ((param_1 != DAT_00710858) && ((param_1 != DAT_00711b80) && (param_1 != DAT_00711b00)))) && ((param_1 != DAT_00711b1c) && (param_1 != DAT_00716c98)))
+  {
+    puVar1 = (uint *) ((uint *) ((*((int *) (param_1 + 0x10))) + 0x16));
+    *puVar1 = (uint) ((*puVar1) | 0x400);
+    return (undefined1) 1;
+  }
+  return (undefined1) 0;
+}
+
+void CExcept_ExceptionTansform(undefined4 param_1)
+{
+  uint *puVar1;
+  int iVar2;
+  cexcept_uniqueobjs = (uint *) 0;
+  CExcept_TempTransform((undefined4 *) param_1);
+  if (DAT_00716c9c != 0)
+  {
+    if ((*(*((char **) (DAT_00716c9c + 0x10)))) != '\a')
+    {
+      CError_Internal(cexcept_filename, 0xd68);
+    }
+    cexcept_canthrow = (byte) '\0';
+    cexcept_hasthrow = (byte) 0;
+    cexcept_hasrethrow = (byte) 0;
+    cexcept_hasunknown = (byte) 0;
+    fn_0055bc20(param_1, CExcept_CanThrowCheckCB);
+    if (cexcept_canthrow == '\0')
+    {
+      puVar1 = (uint *) ((uint *) ((*((int *) (DAT_00716c9c + 0x10))) + 0x16));
+      *puVar1 = (uint) ((*puVar1) | 0x400);
+    }
+    else
+    {
+      iVar2 = (int) (*((int *) ((*((int *) (DAT_00716c9c + 0x10))) + 10)));
+      if ((iVar2 != 0) && (DAT_0070f21e != '\0'))
+      {
+        CExcept_InsertSpecificationActions((int *) param_1, (undefined4 *) iVar2);
+      }
+    }
+  }
+  return;
+}
+
+void CExcept_InsertSpecificationActions(int *param_1, undefined4 *param_2)
+{
+  int *piVar1;
+  undefined4 *puVar2;
+  int *piVar3;
+  int iVar4;
+  int iVar5;
+  undefined4 uVar6;
+  undefined4 uVar7;
+  char *pcVar8;
+  int *piVar9;
+  int iVar10;
+  iVar4 = (int) CompilerTools_AllocatePool(0x1e);
+  memclrw(iVar4, 0x1e);
+  *((undefined1 *) (iVar4 + 0x1c)) = (undefined1) 0xf;
+  piVar1 = (int *) param_1;
+  do
+  {
+    if (((uint) piVar1) == ((uint) ((int *) 0x0)))
+    {
+      iVar5 = (int) (*param_1);
+      while (iVar5 != 0)
+      {
+        param_1 = (int *) ((int *) (*param_1));
+        iVar5 = (int) (*param_1);
+      }
+
+      if ((((char) param_1[1]) != '\x03') && (((char) param_1[1]) != '\b'))
+      {
+        param_1 = (int *) ((int *) CFunc_InsertAfterStatement(8, param_1));
+        *((undefined4 *) (((int) param_1) + 10)) = (undefined4) 0;
+        *((undefined4 *) (((int) param_1) + 0x12)) = (undefined4) 0;
+        if ((((uint) (*((undefined4 **) ((*((int *) (DAT_00716c9c + 0x10))) + 0xe)))) != ((uint) (&DAT_00725d96))) && ((DAT_0070f214 != '\0') || (DAT_0070f1a8 != '\0')))
+        {
+          CError_Warning(0x27c8);
         }
+      }
+      iVar5 = (int) CFunc_InsertAfterStatement(2, param_1);
+      uVar6 = (undefined4) newlabel();
+      *((undefined4 *) (iVar5 + 0xe)) = (undefined4) uVar6;
+      *((int *) ((*((int *) (iVar5 + 0xe))) + 4)) = (int) iVar5;
+      *((undefined1 *) (iVar5 + 6)) = (undefined1) 1;
+      *((undefined4 *) (iVar5 + 0x12)) = (undefined4) 0;
+      uVar6 = (undefined4) create_temp_object(&DAT_0071726c);
+      if (param_2[1] == 0)
+      {
+        param_2 = (undefined4 *) ((undefined4 *) 0x0);
+      }
+      iVar10 = (int) 0;
+      for (puVar2 = (undefined4 *) param_2; ((uint) puVar2) != ((uint) ((undefined4 *) 0x0)); puVar2 = (undefined4 *) ((undefined4 *) (*puVar2)))
+      {
+        iVar10 = (int) (iVar10 + 1);
+      }
+
+      *((int *) (iVar4 + 4)) = (int) iVar10;
+      uVar7 = (undefined4) galloc(iVar10 * 4);
+      *((undefined4 *) (iVar4 + 8)) = (undefined4) uVar7;
+      *((undefined4 *) (iVar4 + 0xc)) = (undefined4) (*((undefined4 *) (iVar5 + 0xe)));
+      *((undefined4 *) (iVar4 + 0x10)) = (undefined4) uVar6;
+      iVar10 = (int) 0;
+      for (; ((uint) param_2) != ((uint) ((undefined4 *) 0x0)); param_2 = (undefined4 *) ((undefined4 *) (*param_2)))
+      {
+        pcVar8 = (char *) ((char *) CExcept_GetTypeID((char *) param_2[1], (undefined4) param_2[2], (char) 0));
+        if ((*pcVar8) != '7')
+        {
+          CError_Internal(cexcept_filename, 0x548);
+        }
+        uVar7 = (undefined4) fn_0052f930(*((undefined4 *) (pcVar8 + 0x14)), *((undefined4 *) (pcVar8 + 0x10)), 0, 0);
+        *((undefined4 *) ((*((int *) (iVar4 + 8))) + (iVar10 * 4))) = (undefined4) uVar7;
+        iVar10 = (int) (iVar10 + 1);
+      }
+
+      iVar4 = (int) CFunc_InsertAfterStatement(4, iVar5);
+      uVar7 = (undefined4) fn_00521c20(uVar6, 1);
+      uVar7 = (undefined4) funccallexpr(DAT_00716cd8, uVar7, 0, 0, 0);
+      *((undefined4 *) (iVar4 + 10)) = (undefined4) uVar7;
+      iVar5 = (int) CompilerTools_AllocatePool(0x1e);
+      memclrw(iVar5, 0x1e);
+      *((undefined1 *) (iVar5 + 0x1c)) = (undefined1) 0xe;
+      *((undefined4 *) (iVar5 + 4)) = (undefined4) uVar6;
+      *((undefined1 *) (iVar5 + 8)) = (undefined1) 1;
+      *((int *) (iVar4 + 0x12)) = (int) iVar5;
+      iVar4 = (int) CFunc_InsertAfterStatement(2, iVar4);
+      uVar6 = (undefined4) newlabel();
+      *((undefined4 *) (iVar4 + 0xe)) = (undefined4) uVar6;
+      *((int *) ((*((int *) (iVar4 + 0xe))) + 4)) = (int) iVar4;
+      *((undefined4 *) (iVar4 + 0x12)) = (undefined4) 0;
+      iVar4 = (int) CFunc_InsertAfterStatement(3, iVar4);
+      *((undefined4 *) (iVar4 + 0xe)) = (undefined4) uVar6;
+      return;
+    }
+    piVar3 = (int *) (*((int **) (((int) piVar1) + 0x12)));
+    if (((uint) (*((int **) (((int) piVar1) + 0x12)))) == ((uint) ((int *) 0x0)))
+    {
+      *((int *) (((int) piVar1) + 0x12)) = (int) iVar4;
+    }
+    else
+    {
+      do
+      {
+        piVar9 = (int *) piVar3;
+        if (((char) piVar9[7]) == '\x0f')
+          goto LAB_0049d007;
+        piVar3 = (int *) ((int *) (*piVar9));
+      }
+      while (((uint) ((int *) (*piVar9))) != ((uint) ((int *) 0x0)));
+      *piVar9 = (int) iVar4;
+    }
+    LAB_0049d007:
+    piVar1 = (int *) ((int *) (*piVar1));
+
+  }
+  while (1);
+}
+
+void CExcept_TempTransform(undefined4 *param_1)
+{
+  int iVar1;
+  char cVar2;
+  short sVar3;
+  int *piVar4;
+  char *pcVar5;
+  bool bVar6;
+  undefined4 uVar7;
+  CExcept_GenerateCatchTypeIDs((undefined4 *) param_1);
+  cexcept_prevstmt = (uint *) param_1;
+  do
+  {
+    if (((uint) param_1) == ((uint) ((undefined4 *) 0x0)))
+    {
+      return;
+    }
+    cexcept_eaafter = (uint *) (*((int **) (((int) param_1) + 0x12)));
+    cexcept_eabefore = (uint *) cexcept_eaafter;
+    if (((*((byte *) (((int) param_1) + 6))) & 2) == 0)
+    {
+      if ((*((char *) (param_1 + 1))) == '\x04')
+      {
+        pcVar5 = (char *) (*((char **) (((int) param_1) + 10)));
+        cVar2 = (char) (*pcVar5);
+        while (cVar2 == ')')
+        {
+          pcVar5 = (char *) (*((char **) (pcVar5 + 0x10)));
+          cVar2 = (char) (*pcVar5);
+        }
+
+        if (cVar2 == '\x04')
+        {
+          pcVar5 = (char *) (*((char **) (pcVar5 + 0x10)));
+        }
+        if (((((*pcVar5) == '9') && ((iVar1 = (int) (*((int *) (((int) param_1) + 0x12))), iVar1 != 0))) && ((*((char *) (iVar1 + 0x1c))) == '\x01')) && ((piVar4 = (int *) (*((int **) (pcVar5 + 0x14))), ((uint) piVar4) != ((uint) ((int *) 0x0)))))
+        {
+          if ((((*(*((char **) (pcVar5 + 0x10)))) == ';') && ((cVar2 = (char) CClass_IsDestructor(*((undefined4 *) ((*((char **) (pcVar5 + 0x10))) + 0x10))), cVar2 != '\0'))) && (((*((char *) piVar4[1])) == ';') && ((*((int *) (((char *) piVar4[1]) + 0x10))) == (*((int *) (iVar1 + 4))))))
+          {
+            cexcept_eabefore = (uint *) ((int *) (*cexcept_eabefore));
+          }
+          else
+            if ((*((int *) ((*((int *) (pcVar5 + 0x18))) + 0xe))) == (*((int *) ((*((int *) (iVar1 + 4))) + 0x10))))
+          {
+            sVar3 = (short) fn_005547e0(*((int *) (pcVar5 + 0x18)));
+            if ((sVar3 == 1) && ((piVar4 = (int *) ((int *) (*piVar4)), ((uint) piVar4) == ((uint) ((int *) 0x0)))))
+            {
+              CError_Internal(cexcept_filename, 0xccb);
+            }
+            if (((*((char *) piVar4[1])) == ';') && ((*((int *) (((char *) piVar4[1]) + 0x10))) == (*((int *) (iVar1 + 4)))))
+            {
+              cexcept_eabefore = (uint *) ((int *) (*cexcept_eabefore));
+            }
+          }
+        }
+      }
+    }
+    else
+    {
+      if (((uint) cexcept_eaafter) == ((uint) ((int *) 0x0)))
+      {
+        CError_Internal(cexcept_filename, 0xcac);
+      }
+      cexcept_eabefore = (uint *) ((int *) (*cexcept_eabefore));
+      *((byte *) (((int) param_1) + 6)) = (byte) ((*((byte *) (((int) param_1) + 6))) & 0xfd);
+    }
+    switch (*((undefined1 *) (param_1 + 1)))
+    {
+      case 4:
+        bVar6 = (bool) 0;
+        uVar7 = (undefined4) 1;
+        goto LAB_0049d2b7;
+
+      case 5:
+
+      case 6:
+
+      case 7:
+        bVar6 = (bool) 1;
+        uVar7 = (undefined4) 0;
+        LAB_0049d2b7:
+      CExcept_DtorTransform((undefined4 *) param_1, (char) uVar7, (char) bVar6);
+
         break;
+
+      case 8:
+        if ((*((int *) (((int) param_1) + 10))) != 0)
+      {
+        cVar2 = (char) CMachine_FunctionRequiresMemoryReturn(*((undefined4 *) (DAT_00716c9c + 0x10)));
+        bVar6 = (bool) (cVar2 != '\x01');
+        uVar7 = (undefined4) 0;
+        goto LAB_0049d2b7;
+      }
+
     }
-    if (!act) {
-        for (; stmt; stmt = stmt->next) {
-            if ((scan = (CException *)stmt->dobjstack)) {
-                for (;;) {
-                    if (scan == action)
-                        break;
-                    if (!scan->next) {
-                        scan->next = action;
-                        break;
-                    }
-                    scan = scan->next;
-                }
-            } else {
-                stmt->dobjstack = (CException *)action; /* insert_exception_action: exception action chain */
-            }
+
+    *((int **) (((int) param_1) + 0x12)) = (int *) cexcept_eabefore;
+    cexcept_prevstmt = (uint *) param_1;
+    param_1 = (undefined4 *) ((undefined4 *) (*param_1));
+  }
+  while (1);
+}
+
+void CExcept_GenerateCatchTypeIDs(undefined4 *param_1)
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  int iVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  char *pcVar6;
+  undefined4 uVar7;
+  for (puVar5 = (undefined4 *) param_1; ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+  {
+    cexcept_prevstmt = (uint *) param_1;
+    for (puVar1 = (undefined4 *) (*((undefined4 **) (((int) puVar5) + 0x12))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      if ((((*((char *) (puVar1 + 7))) == '\r') && (puVar1[5] != 0)) && (puVar1[4] == 0))
+      {
+        pcVar6 = (char *) ((char *) CExcept_GetTypeID((char *) puVar1[5], (undefined4) puVar1[6], (char) 0));
+        if ((*pcVar6) != '7')
+        {
+          CError_Internal(cexcept_filename, 0x548);
         }
-    } else {
-        action->next = act;
-        for (; stmt; stmt = stmt->next) {
-            if ((scan = (CException *)stmt->dobjstack) != act) {
-                for (;;) {
-                    if (scan == action)
-                        break;
-                    if (scan->next == act) {
-                        scan->next = action;
-                        break;
-                    }
-                    if (!(scan = scan->next))
-                        CError_FATAL(455);
-                }
-            } else {
-                stmt->dobjstack = (CException *)action; /* insert_exception_action: exception action chain */
+        uVar7 = (undefined4) fn_0052f930(*((undefined4 *) (pcVar6 + 0x14)), *((undefined4 *) (pcVar6 + 0x10)), 0, 0);
+        puVar1[4] = (undefined4) uVar7;
+        iVar3 = (int) puVar1[3];
+        for (puVar2 = (undefined4 *) ((undefined4 *) (*puVar5)); ((uint) puVar2) != ((uint) ((undefined4 *) 0x0)); puVar2 = (undefined4 *) ((undefined4 *) (*puVar2)))
+        {
+          for (puVar4 = (undefined4 *) (*((undefined4 **) (((int) puVar5) + 0x12))); ((uint) puVar4) != ((uint) ((undefined4 *) 0x0)); puVar4 = (undefined4 *) ((undefined4 *) (*puVar4)))
+          {
+            if (((*((char *) (puVar4 + 7))) == '\r') && (puVar4[3] == iVar3))
+            {
+              puVar4[4] = (undefined4) uVar7;
             }
+          }
+
         }
+
+      }
     }
+
+    param_1 = (undefined4 *) cexcept_prevstmt;
+  }
+
+  cexcept_prevstmt = (uint *) param_1;
+  return;
 }
 
-/* Record whose byte at offset 28 selects exception handling. */
-
-void CExcept_RegisterDeleteObject(Statement *expr, Object *first, Object *second)
+void CExcept_DtorTransform(undefined4 *param_1, char param_2, char param_3)
 {
-    CException *record;
-    record = CompilerTools_AllocatePool(30U);
-    memclrw(record, 30U);
-    record->next = UINT_00587fc4;
-    UINT_00587fc4 = record;
-    record->kind = 11U;
-    record->data.pair.first = first;
-    record->data.pair.second = second;
-    exception_cleanup_registered = 1U;
-}
-
-/* 0x58851e, flag */
-
-/* Destructor entry in the exception cleanup list. */
-
-void CException_RegisterMemberArray(Statement *unused, Object *context, Object *destructor, SInt32 offset, SInt32 count)
-{
-    CException *entry;
-
-    entry = CompilerTools_AllocatePool(sizeof(*entry));
-    memclrw(entry, sizeof(*entry));
-    entry->next = UINT_00587fc4;
-    UINT_00587fc4 = entry;
-    destructor = CABI_GetDestructorObject(destructor, 1);
-    entry->kind = 5;
-    entry->data.member_array.objectptr = context;
-    entry->data.member_array.dtor = destructor;
-    entry->data.member_array.offset = offset;
-    entry->data.member_array.count = count;
-    exception_cleanup_registered = 1;
-}
-
-ENode *CExcept_RegisterDestructorObject(Object *obj, SInt32 value, Object *dtorobj, int flag)
-{
-    CException *rec;
-    Object *dtor;
-    ENode *result;
-
-    rec = CompilerTools_AllocatePool(sizeof(CException));
-    memclrw(rec, sizeof(CException));
-    rec->next = UINT_00587fc4;
-    UINT_00587fc4 = rec;
-    result = create_objectrefnode(obj);
-    dtorobj = CABI_GetDestructorObject(dtorobj, 1);
-    if (value == 0) {
-        rec->kind = 1;
-        rec->data.local.object = obj;
-        rec->data.local.dtor = dtorobj;
-    } else {
-        rec->kind = 3;
-        rec->data.local.object = obj;
-        rec->data.local.dtor = dtorobj;
-        rec->data.local.offset = value;
-        result = makediadicnode(result, intconstnode(TYPE(&stunsignedlong), value), EADD);
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  undefined4 uVar4;
+  int iVar5;
+  int iVar6;
+  undefined4 *puVar7;
+  undefined4 *puVar8;
+  NativeStatement saved_statement;
+  uint saved_object;
+  puVar2 = (undefined4 *) cexcept_prevstmt;
+  cexcept_dtortemps = (uint *) 0;
+  cexcept_serialize = (byte) '\0';
+  cexcept_expandtrycatch = (byte) 0;
+  cexcept_hastrycatch = (byte) '\0';
+  uVar4 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (((int) param_1) + 10))));
+  *((undefined4 *) (((int) param_1) + 10)) = (undefined4) uVar4;
+  puVar8 = (undefined4 *) param_1;
+  if (cexcept_hastrycatch == '\0')
+  {
+    LAB_0049d4fb:
+    if (((uint) cexcept_dtortemps) != ((uint) 0))
+    {
+      if (param_2 == '\0')
+      {
+        if (param_3 != '\0')
+        {
+          iVar6 = (int) (*((int *) (((int) param_1) + 10)));
+          if (((*(*((char **) (iVar6 + 4)))) == '\x06') && ((iVar5 = (int) CClass_Destructor(*((char **) (iVar6 + 4))), iVar5 != 0)))
+          {
+            CError_Internal(cexcept_filename, 0xc5c);
+          }
+          saved_object = (uint) create_temp_object(*((undefined4 *) (iVar6 + 4)));
+          uVar4 = (undefined4) create_objectrefnode(saved_object);
+          uVar4 = (undefined4) fn_0055b9f0(uVar4);
+          uVar4 = (undefined4) makediadicnode(uVar4, iVar6, 0x1e);
+          *((undefined4 *) (((int) param_1) + 10)) = (undefined4) uVar4;
+        }
+        saved_statement = *((NativeStatement *) param_1);
+        *((undefined1 *) (param_1 + 1)) = (undefined1) 4;
+        uVar4 = (undefined4) CExcept_CleanupExceptionActions((int) puVar8);
+        iVar6 = (int) CFunc_InsertAfterStatement(((byte *) (&saved_statement))[4], uVar4);
+        *((undefined4 *) (iVar6 + 0xe)) = (undefined4) (*((uint *) (((byte *) (&saved_statement)) + 14)));
+        if (param_3 == '\0')
+        {
+          uVar4 = (undefined4) nullnode();
+          *((undefined4 *) (iVar6 + 10)) = (undefined4) uVar4;
+        }
+        else
+        {
+          uVar4 = (undefined4) create_objectrefnode(saved_object);
+          uVar4 = (undefined4) fn_0055b9f0(uVar4);
+          *((undefined4 *) (iVar6 + 10)) = (undefined4) uVar4;
+        }
+      }
+      else
+      {
+        CExcept_CleanupExceptionActions((int) puVar8);
+      }
     }
-    exception_cleanup_registered = 1;
-    return result;
+
+    return;
+  }
+  cexcept_expandtrycatch = (byte) 1;
+  puVar7 = (undefined4 *) puVar2;
+  if (cexcept_serialize != '\0')
+  {
+    puVar1 = (undefined4 *) ((undefined4 *) (*param_1));
+    *((undefined4 *) (((int) param_1) + 0x12)) = (undefined4) cexcept_eabefore;
+    fn_005480b0(param_1);
+    cexcept_prevstmt = (uint *) param_1;
+    puVar3 = (undefined4 *) param_1;
+    do
+    {
+      puVar8 = (undefined4 *) puVar3;
+      if (((uint) puVar8) == ((uint) ((undefined4 *) 0x0)))
+      {
+        CError_Internal(cexcept_filename, 0xc35);
+      }
+      puVar3 = (undefined4 *) ((undefined4 *) (*puVar8));
+      puVar7 = (undefined4 *) cexcept_prevstmt;
+    }
+    while (((uint) ((undefined4 *) (*puVar8))) != ((uint) puVar1));
+  }
+  do
+  {
+    cexcept_prevstmt = (uint *) puVar7;
+    puVar7 = (undefined4 *) puVar2;
+    if (((uint) puVar7) == ((uint) ((undefined4 *) 0x0)))
+    {
+      CError_Internal(cexcept_filename, 0xc3d);
+    }
+    switch (*((undefined1 *) (puVar7 + 1)))
+    {
+      case 8:
+        if ((*((int *) (((int) puVar7) + 10))) == 0)
+      {
+        CError_Internal(cexcept_filename, 0xc41);
+      }
+
+      case 4:
+
+      case 5:
+
+      case 6:
+
+      case 7:
+        uVar4 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (((int) puVar7) + 10))));
+        *((undefined4 *) (((int) puVar7) + 10)) = (undefined4) uVar4;
+
+    }
+
+    if (((uint) puVar7) == ((uint) param_1))
+      goto LAB_0049d4fb;
+    puVar2 = (undefined4 *) ((undefined4 *) (*puVar7));
+  }
+  while (1);
 }
 
-unsigned char CExcept_ActionNeedsDestruction(CException *entry)
+int CExcept_CleanupExceptionActions(int param_1)
 {
-    unsigned char result;
-    switch (entry->kind) {
-        case 13:
-            result = 0;
-            return result;
-        case 1:
-        case 3:
-        case 5:
-        case 11:
-        case 14:
-            result = 1;
-            return result;
-        case 0:
-        case 7:
-        case 8:
-        case 9:
-        case 17:
-            break;
+  undefined4 *puVar1;
+  undefined4 uVar2;
+  int unaff_EBX;
+  for (puVar1 = (undefined4 *) cexcept_dtortemps; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    if (((((uint) cexcept_eaafter) == ((uint) ((undefined4 *) 0x0))) || (((byte) ((*((char *) (cexcept_eaafter + 7))) - 1U)) > 1)) || (cexcept_eaafter[1] != puVar1[1]))
+    {
+      CError_Internal(cexcept_filename, 0xbf6);
+    }
+    else
+    {
+      cexcept_eaafter = (uint *) ((undefined4 *) (*cexcept_eaafter));
+    }
+    if (puVar1[3] != 0)
+    {
+      param_1 = (int) CFunc_InsertAfterStatement(7, param_1);
+      uVar2 = (undefined4) create_objectrefnode(puVar1[3]);
+      uVar2 = (undefined4) fn_0055b9f0(uVar2);
+      *((undefined4 *) (param_1 + 10)) = (undefined4) uVar2;
+      *((undefined4 **) (param_1 + 0x12)) = (undefined4 *) cexcept_eaafter;
+      uVar2 = (undefined4) newlabel();
+      *((undefined4 *) (param_1 + 0xe)) = (undefined4) uVar2;
+      unaff_EBX = (int) (*((int *) (param_1 + 0xe)));
+    }
+    param_1 = (int) CFunc_InsertAfterStatement(4, param_1);
+    uVar2 = (undefined4) fn_00521c20(puVar1[1], 1);
+    uVar2 = (undefined4) CABI_DestroyObject(puVar1[2], uVar2, 1, 1, 0);
+    *((undefined4 *) (param_1 + 10)) = (undefined4) uVar2;
+    *((undefined4 **) (param_1 + 0x12)) = (undefined4 *) cexcept_eaafter;
+    if (puVar1[3] != 0)
+    {
+      param_1 = (int) CFunc_InsertAfterStatement(2, param_1);
+      *((int *) (param_1 + 0xe)) = (int) unaff_EBX;
+      *((int *) (unaff_EBX + 4)) = (int) param_1;
+    }
+  }
+
+  return (int) param_1;
+}
+
+undefined1 *CExcept_TempTransExpr(undefined1 *param_1)
+{
+  undefined4 *puVar1;
+  undefined1 *puVar2;
+  undefined4 uVar3;
+  switch (*param_1)
+  {
+    case 0:
+
+    case 1:
+
+    case 2:
+
+    case 3:
+
+    case 4:
+
+    case 5:
+
+    case 6:
+
+    case 7:
+
+    case 0x32:
+
+    case 0x33:
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+      return (undefined1 *) param_1;
+
+    default:
+      CError_Internal(cexcept_filename, 0xbda);
+      return (undefined1 *) param_1;
+
+    case 9:
+
+    case 0xb:
+
+    case 0xc:
+
+    case 0xf:
+
+    case 0x10:
+
+    case 0x11:
+
+    case 0x12:
+
+    case 0x13:
+
+    case 0x14:
+
+    case 0x15:
+
+    case 0x16:
+
+    case 0x17:
+
+    case 0x18:
+
+    case 0x19:
+
+    case 0x1a:
+
+    case 0x1b:
+
+    case 0x1e:
+
+    case 0x1f:
+
+    case 0x20:
+
+    case 0x21:
+
+    case 0x22:
+
+    case 0x23:
+
+    case 0x24:
+
+    case 0x25:
+
+    case 0x26:
+
+    case 0x27:
+
+    case 0x28:
+
+    case 0x2a:
+
+    case 0x2b:
+
+    case 0x2d:
+
+    case 0x2e:
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar3;
+      return (undefined1 *) param_1;
+
+    case 0x1c:
+
+    case 0x1d:
+
+    case 0x29:
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+      uVar3 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar3;
+      return (undefined1 *) param_1;
+
+    case 0x34:
+
+    case 0x35:
+
+    case 0x36:
+
+    case 0x37:
+
+    case 0x3b:
+
+    case 0x3d:
+
+    case 0x3e:
+
+    case 0x40:
+
+    case 0x41:
+
+    case 0x43:
+
+    case 0x51:
+
+    case 0x52:
+
+    case 0x53:
+
+    case 0x57:
+      return (undefined1 *) param_1;
+
+    case 0x38:
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+      uVar3 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar3;
+      uVar3 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x18))));
+      *((undefined4 *) (param_1 + 0x18)) = (undefined4) uVar3;
+      return (undefined1 *) param_1;
+
+    case 0x39:
+
+    case 0x3a:
+      puVar2 = (undefined1 *) ((undefined1 *) CExcept_TempTransFuncCall((undefined1 *) param_1, (char) 0));
+      return (undefined1 *) puVar2;
+
+    case 0x3c:
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+      uVar3 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar3;
+      return (undefined1 *) param_1;
+
+    case 0x3f:
+      for (puVar1 = (undefined4 *) (*((undefined4 **) (param_1 + 0x14))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) puVar1[2]);
+      puVar1[2] = (undefined4) uVar3;
+    }
+
+      for (puVar1 = (undefined4 *) (*((undefined4 **) (param_1 + 0x18))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+    {
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) puVar1[2]);
+      puVar1[2] = (undefined4) uVar3;
+    }
+
+      return (undefined1 *) param_1;
+
+    case 0x42:
+      if ((*((int *) (param_1 + 0x10))) != 0)
+    {
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((int *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar3;
+    }
+      return (undefined1 *) param_1;
+
+    case 0x44:
+      puVar2 = (undefined1 *) ((undefined1 *) CExcept_TempTrans_ETEMP((undefined1 *) param_1));
+      return (undefined1 *) puVar2;
+
+    case 0x48:
+
+    case 0x49:
+      puVar2 = (undefined1 *) ((undefined1 *) CExcept_TransNewException((char *) param_1, (char) 0));
+      return (undefined1 *) puVar2;
+
+    case 0x4a:
+      puVar2 = (undefined1 *) ((undefined1 *) CExcept_TransInitTryCatch((int) param_1, (char) 0));
+      return (undefined1 *) puVar2;
+
+    case 0x4b:
+      if ((*((int *) (param_1 + 0x24))) != 0)
+    {
+      uVar3 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((int *) (param_1 + 0x24))));
+      *((undefined4 *) (param_1 + 0x24)) = (undefined4) uVar3;
+    }
+      return (undefined1 *) param_1;
+
+  }
+
+}
+
+undefined1 *CExcept_TempTransExprCond(undefined1 *param_1)
+{
+  undefined1 *puVar1;
+  undefined4 uVar2;
+  switch (*param_1)
+  {
+    case 0:
+
+    case 1:
+
+    case 2:
+
+    case 3:
+
+    case 4:
+
+    case 5:
+
+    case 6:
+
+    case 7:
+
+    case 0x32:
+
+    case 0x33:
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+      return (undefined1 *) param_1;
+
+    default:
+      CError_Internal(cexcept_filename, 0xb3f);
+      return (undefined1 *) param_1;
+
+    case 9:
+
+    case 0xb:
+
+    case 0xc:
+
+    case 0xf:
+
+    case 0x10:
+
+    case 0x11:
+
+    case 0x12:
+
+    case 0x13:
+
+    case 0x14:
+
+    case 0x15:
+
+    case 0x16:
+
+    case 0x17:
+
+    case 0x18:
+
+    case 0x19:
+
+    case 0x1a:
+
+    case 0x1b:
+
+    case 0x1e:
+
+    case 0x1f:
+
+    case 0x20:
+
+    case 0x21:
+
+    case 0x22:
+
+    case 0x23:
+
+    case 0x24:
+
+    case 0x25:
+
+    case 0x26:
+
+    case 0x27:
+
+    case 0x28:
+
+    case 0x29:
+
+    case 0x2a:
+
+    case 0x2b:
+
+    case 0x2d:
+
+    case 0x2e:
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar2;
+      return (undefined1 *) param_1;
+
+    case 0x1c:
+
+    case 0x1d:
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar2;
+      return (undefined1 *) param_1;
+
+    case 0x34:
+
+    case 0x35:
+
+    case 0x36:
+
+    case 0x37:
+
+    case 0x3b:
+
+    case 0x3d:
+
+    case 0x3e:
+
+    case 0x51:
+
+    case 0x52:
+
+    case 0x53:
+
+    case 0x57:
+      return (undefined1 *) param_1;
+
+    case 0x38:
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar2;
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x18))));
+      *((undefined4 *) (param_1 + 0x18)) = (undefined4) uVar2;
+      return (undefined1 *) param_1;
+
+    case 0x39:
+
+    case 0x3a:
+      puVar1 = (undefined1 *) ((undefined1 *) CExcept_TempTransFuncCall((undefined1 *) param_1, (char) 1));
+      return (undefined1 *) puVar1;
+
+    case 0x3c:
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+      uVar2 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+      *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar2;
+      return (undefined1 *) param_1;
+
+    case 0x44:
+      puVar1 = (undefined1 *) ((undefined1 *) CExcept_TempTrans_ETEMP((undefined1 *) param_1));
+      return (undefined1 *) puVar1;
+
+    case 0x48:
+
+    case 0x49:
+      puVar1 = (undefined1 *) ((undefined1 *) CExcept_TransNewException((char *) param_1, (char) 1));
+      return (undefined1 *) puVar1;
+
+    case 0x4a:
+      puVar1 = (undefined1 *) ((undefined1 *) CExcept_TransInitTryCatch((int) param_1, (char) 1));
+      return (undefined1 *) puVar1;
+
+  }
+
+}
+
+undefined1 *CExcept_TempTransFuncCall(undefined1 *param_1, char param_2)
+{
+  int *piVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  int *piVar4;
+  undefined4 *puVar5;
+  undefined1 *puVar6;
+  int iVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  char *unaff_ESI;
+  int *local_14;
+  local_14 = (int *) ((int *) 0x0);
+  piVar4 = (int *) (*((int **) (param_1 + 0x14)));
+  if (((uint) piVar4) != ((uint) ((int *) 0x0)))
+  {
+    unaff_ESI = (char *) ((char *) piVar4[1]);
+    if ((*unaff_ESI) == 'D')
+    {
+      if (unaff_ESI[0x18] != '\0')
+      {
+        local_14 = (int *) piVar4;
+      }
+    }
+    else
+    {
+      piVar1 = (int *) ((int *) (*piVar4));
+      if (((((uint) piVar1) != ((uint) ((int *) 0x0))) && ((unaff_ESI = (char *) ((char *) piVar1[1]), (*unaff_ESI) == 'D'))) && (unaff_ESI[0x18] != '\0'))
+      {
+        local_14 = (int *) piVar1;
+      }
+    }
+  }
+  if (((uint) local_14) == ((uint) ((int *) 0x0)))
+  {
+    if (param_2 == '\0')
+    {
+      for (; ((uint) piVar4) != ((uint) ((int *) 0x0)); piVar4 = (int *) ((int *) (*piVar4)))
+      {
+        iVar2 = (int) CExcept_TempTransExpr((undefined1 *) piVar4[1]);
+        piVar4[1] = (int) iVar2;
+      }
+
+      uVar8 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar8;
+    }
+    else
+    {
+      iVar2 = (int) 0;
+      for (; ((uint) piVar4) != ((uint) ((int *) 0x0)); piVar4 = (int *) ((int *) (*piVar4)))
+      {
+        iVar2 = (int) (iVar2 + 1);
+      }
+
+      iVar7 = (int) CompilerTools_AllocatePool(iVar2 * 4);
+      iVar2 = (int) 0;
+      for (puVar5 = (undefined4 *) (*((undefined4 **) (param_1 + 0x14))); ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+      {
+        *((undefined4 **) (iVar7 + (iVar2 * 4))) = (undefined4 *) puVar5;
+        iVar2 = (int) (iVar2 + 1);
+      }
+
+      while (iVar2 > 0)
+      {
+        iVar2 = (int) (iVar2 - 1);
+        uVar8 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) ((*((int *) (iVar7 + (iVar2 * 4)))) + 4))));
+        *((undefined4 *) ((*((int *) (iVar7 + (iVar2 * 4)))) + 4)) = (undefined4) uVar8;
+      }
+
+      uVar8 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+      *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar8;
+    }
+    return (undefined1 *) param_1;
+  }
+  if (param_2 == '\0')
+  {
+    for (; ((uint) piVar4) != ((uint) ((int *) 0x0)); piVar4 = (int *) ((int *) (*piVar4)))
+    {
+      if (((uint) piVar4) != ((uint) local_14))
+      {
+        iVar2 = (int) CExcept_TempTransExpr((undefined1 *) piVar4[1]);
+        piVar4[1] = (int) iVar2;
+      }
+    }
+
+  }
+  else
+  {
+    iVar2 = (int) 0;
+    for (; ((uint) piVar4) != ((uint) ((int *) 0x0)); piVar4 = (int *) ((int *) (*piVar4)))
+    {
+      iVar2 = (int) (iVar2 + 1);
+    }
+
+    iVar7 = (int) CompilerTools_AllocatePool(iVar2 * 4);
+    iVar2 = (int) 0;
+    for (puVar5 = (undefined4 *) (*((undefined4 **) (param_1 + 0x14))); ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+    {
+      *((undefined4 **) (iVar7 + (iVar2 * 4))) = (undefined4 *) puVar5;
+      iVar2 = (int) (iVar2 + 1);
+    }
+
+    while (iVar2 > 0)
+    {
+      iVar2 = (int) (iVar2 - 1);
+      piVar4 = (int *) (*((int **) (iVar7 + (iVar2 * 4))));
+      if (((uint) piVar4) != ((uint) local_14))
+      {
+        uVar8 = (undefined4) CExcept_TempTransExprCond((undefined1 *) piVar4[1]);
+        *((undefined4 *) ((*((int *) (iVar7 + (iVar2 * 4)))) + 4)) = (undefined4) uVar8;
+      }
+    }
+
+  }
+  puVar3 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x10));
+  *puVar3 = (undefined4) cexcept_dtortemps;
+  iVar2 = (int) (*((int *) (unaff_ESI + 0x14)));
+  puVar5 = (undefined4 *) cexcept_uniqueobjs;
+  cexcept_dtortemps = (uint *) puVar3;
+  if (iVar2 == 0)
+  {
+    uVar8 = (undefined4) create_temp_object(*((undefined4 *) (unaff_ESI + 0x10)));
+  }
+  else
+  {
+    for (; ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+    {
+      if (puVar5[2] == iVar2)
+      {
+        unaff_ESI[0x18] = (char) '\0';
+        uVar8 = (undefined4) puVar5[1];
+        goto LAB_0049db0e;
+      }
+    }
+
+    puVar5 = (undefined4 *) ((undefined4 *) galloc(0xc));
+    *puVar5 = (undefined4) cexcept_uniqueobjs;
+    cexcept_uniqueobjs = (uint *) puVar5;
+    puVar5[2] = (undefined4) iVar2;
+    uVar8 = (undefined4) create_temp_object(*((undefined4 *) (unaff_ESI + 0x10)));
+    puVar5[1] = (undefined4) uVar8;
+  }
+  LAB_0049db0e:
+  puVar3[1] = (undefined4) uVar8;
+
+  puVar3[3] = (undefined4) 0;
+  if ((*(*((char **) (unaff_ESI + 0x10)))) == '\x06')
+  {
+    uVar8 = (undefined4) CClass_Destructor(*((char **) (unaff_ESI + 0x10)));
+    puVar3[2] = (undefined4) uVar8;
+    if (puVar3[2] != 0)
+      goto LAB_0049db35;
+  }
+  CError_Internal(cexcept_filename, 0xa76);
+  LAB_0049db35:
+  *unaff_ESI = (char) ';';
+
+  *((undefined4 *) (unaff_ESI + 0x10)) = (undefined4) puVar3[1];
+  if ((param_2 == '\0') && (cexcept_serialize == '\0'))
+  {
+    uVar8 = (undefined4) CExcept_TempTransExpr((undefined1 *) param_1);
+    piVar4 = (int *) ((int *) CFunc_InsertAfterStatement(4, cexcept_prevstmt));
+    iVar2 = (int) (*piVar4);
+    *((undefined4 *) (((int) piVar4) + 0x16)) = (undefined4) (*((undefined4 *) (iVar2 + 0x16)));
+    *((undefined4 *) (((int) piVar4) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar2 + 0x1a)));
+    *((undefined4 *) (((int) piVar4) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar2 + 0x1e)));
+    *((undefined4 **) (((int) piVar4) + 0x12)) = (undefined4 *) cexcept_eabefore;
+    *((undefined4 *) (((int) piVar4) + 10)) = (undefined4) uVar8;
+    cexcept_prevstmt = (uint *) piVar4;
+    puVar5 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    *puVar5 = (undefined4) cexcept_eabefore;
+    cexcept_eabefore = (uint *) puVar5;
+    *((undefined1 *) (puVar5 + 7)) = (undefined1) 1;
+    puVar5[1] = (undefined4) puVar3[1];
+    uVar8 = (undefined4) CABI_GetDestructorObject(puVar3[2], 1);
+    puVar5[2] = (undefined4) uVar8;
+    puVar3 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    puVar5 = (undefined4 *) cexcept_eabefore;
+    *puVar3 = (undefined4) (*cexcept_eabefore);
+    puVar3[1] = (undefined4) puVar5[1];
+    puVar3[2] = (undefined4) puVar5[2];
+    puVar3[3] = (undefined4) puVar5[3];
+    puVar3[4] = (undefined4) puVar5[4];
+    puVar3[5] = (undefined4) puVar5[5];
+    puVar3[6] = (undefined4) puVar5[6];
+    *((undefined2 *) (puVar3 + 7)) = (undefined2) (*((undefined2 *) (puVar5 + 7)));
+    *puVar3 = (undefined4) cexcept_eaafter;
+    cexcept_eaafter = (uint *) puVar3;
+    puVar6 = (undefined1 *) ((undefined1 *) fn_00524350(*((undefined4 *) (((int) piVar4) + 10))));
+    *puVar6 = (undefined1) 0x3b;
+    *((undefined4 *) (puVar6 + 0x10)) = (undefined4) (*((undefined4 *) (local_14[1] + 0x10)));
+  }
+  else
+  {
+    uVar8 = (undefined4) (*((undefined4 *) (param_1 + 4)));
+    uVar9 = (undefined4) create_temp_object(&DAT_00699c24);
+    puVar3[3] = (undefined4) uVar9;
+    uVar9 = (undefined4) create_objectrefnode(puVar3[3]);
+    uVar9 = (undefined4) fn_0055b9f0(uVar9);
+    uVar10 = (undefined4) intconstnode(&DAT_00699c24, 1);
+    uVar9 = (undefined4) makediadicnode(uVar9, uVar10, 0x1e);
+    uVar9 = (undefined4) makediadicnode(param_1, uVar9, 0x29);
+    uVar10 = (undefined4) fn_00521c20(puVar3[1], 1);
+    puVar6 = (undefined1 *) ((undefined1 *) makediadicnode(uVar9, uVar10, 0x29));
+    *((undefined4 *) (puVar6 + 4)) = (undefined4) uVar8;
+    piVar4 = (int *) ((int *) CFunc_InsertAfterStatement(4, cexcept_prevstmt));
+    iVar2 = (int) (*piVar4);
+    *((undefined4 *) (((int) piVar4) + 0x16)) = (undefined4) (*((undefined4 *) (iVar2 + 0x16)));
+    *((undefined4 *) (((int) piVar4) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar2 + 0x1a)));
+    *((undefined4 *) (((int) piVar4) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar2 + 0x1e)));
+    *((undefined4 **) (((int) piVar4) + 0x12)) = (undefined4 *) cexcept_eabefore;
+    uVar8 = (undefined4) create_objectrefnode(puVar3[3]);
+    uVar8 = (undefined4) fn_0055b9f0(uVar8);
+    uVar9 = (undefined4) intconstnode(&DAT_00699c24, 0);
+    uVar8 = (undefined4) makediadicnode(uVar8, uVar9, 0x1e);
+    *((undefined4 *) (((int) piVar4) + 10)) = (undefined4) uVar8;
+    cexcept_prevstmt = (uint *) piVar4;
+    puVar5 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    *puVar5 = (undefined4) cexcept_eabefore;
+    cexcept_eabefore = (uint *) puVar5;
+    *((undefined1 *) (puVar5 + 7)) = (undefined1) 2;
+    puVar5[1] = (undefined4) puVar3[1];
+    uVar8 = (undefined4) CABI_GetDestructorObject(puVar3[2], 1);
+    puVar5[3] = (undefined4) uVar8;
+    puVar5[2] = (undefined4) puVar3[3];
+    puVar3 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    puVar5 = (undefined4 *) cexcept_eabefore;
+    *puVar3 = (undefined4) (*cexcept_eabefore);
+    puVar3[1] = (undefined4) puVar5[1];
+    puVar3[2] = (undefined4) puVar5[2];
+    puVar3[3] = (undefined4) puVar5[3];
+    puVar3[4] = (undefined4) puVar5[4];
+    puVar3[5] = (undefined4) puVar5[5];
+    puVar3[6] = (undefined4) puVar5[6];
+    *((undefined2 *) (puVar3 + 7)) = (undefined2) (*((undefined2 *) (puVar5 + 7)));
+    *puVar3 = (undefined4) cexcept_eaafter;
+    cexcept_eaafter = (uint *) puVar3;
+  }
+  return (undefined1 *) puVar6;
+}
+
+int CExcept_TransInitTryCatch(int param_1, char param_2)
+{
+  undefined4 uVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  int *piVar5;
+  undefined4 *puVar6;
+  int iVar7;
+  undefined4 uVar8;
+  cexcept_hastrycatch = (byte) 1;
+  if (param_2 != '\0')
+  {
+    if (cexcept_expandtrycatch != '\0')
+    {
+      CError_Internal(cexcept_filename, 0x9c0);
+    }
+    cexcept_serialize = (byte) 1;
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+    *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar1;
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+    *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar1;
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x18))));
+    *((undefined4 *) (param_1 + 0x18)) = (undefined4) uVar1;
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x1c))));
+    *((undefined4 *) (param_1 + 0x1c)) = (undefined4) uVar1;
+    return (int) param_1;
+  }
+  uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+  *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar1;
+  uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+  *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar1;
+  uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x18))));
+  *((undefined4 *) (param_1 + 0x18)) = (undefined4) uVar1;
+  uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x1c))));
+  *((undefined4 *) (param_1 + 0x1c)) = (undefined4) uVar1;
+  if (cexcept_expandtrycatch == '\0')
+  {
+    return (int) param_1;
+  }
+  iVar2 = (int) newlabel();
+  iVar3 = (int) newlabel();
+  iVar4 = (int) newlabel();
+  uVar1 = (undefined4) create_temp_object(&DAT_0071726c);
+  piVar5 = (int *) ((int *) CFunc_InsertAfterStatement(7, cexcept_prevstmt));
+  iVar7 = (int) (*piVar5);
+  *((undefined4 *) (((int) piVar5) + 0x16)) = (undefined4) (*((undefined4 *) (iVar7 + 0x16)));
+  *((undefined4 *) (((int) piVar5) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar7 + 0x1a)));
+  *((undefined4 *) (((int) piVar5) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar7 + 0x1e)));
+  *((undefined4 *) (((int) piVar5) + 0x12)) = (undefined4) cexcept_eabefore;
+  *((undefined4 *) (((int) piVar5) + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+  *((int *) (((int) piVar5) + 0xe)) = (int) iVar4;
+  puVar6 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar6, 0x1e);
+  *((undefined1 *) (puVar6 + 7)) = (undefined1) 0xd;
+  puVar6[3] = (undefined4) iVar3;
+  puVar6[2] = (undefined4) uVar1;
+  *puVar6 = (undefined4) (*((undefined4 *) (((int) piVar5) + 0x12)));
+  iVar7 = (int) CFunc_InsertAfterStatement(2, piVar5);
+  *((undefined1 *) (iVar7 + 6)) = (undefined1) 1;
+  *((int *) (iVar7 + 0xe)) = (int) iVar2;
+  *((int *) (iVar2 + 4)) = (int) iVar7;
+  *((undefined4 **) (iVar7 + 0x12)) = (undefined4 *) puVar6;
+  iVar7 = (int) CFunc_InsertAfterStatement(0xc, iVar7);
+  uVar8 = (undefined4) fn_00521c20(uVar1, 1);
+  *((undefined4 *) (iVar7 + 10)) = (undefined4) uVar8;
+  iVar7 = (int) CFunc_InsertAfterStatement(4, iVar7);
+  *((undefined4 *) (iVar7 + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x14)));
+  iVar7 = (int) CFunc_InsertAfterStatement(3, iVar7);
+  *((int *) (iVar7 + 0xe)) = (int) iVar4;
+  if (((uint) (*((undefined4 **) (iVar7 + 0x12)))) != ((uint) puVar6))
+  {
+    CError_Internal(cexcept_filename, 0x9f3);
+  }
+  *((undefined4 *) (iVar7 + 0x12)) = (undefined4) (*puVar6);
+  puVar6 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar6, 0x1e);
+  *((undefined1 *) (puVar6 + 7)) = (undefined1) 0xe;
+  puVar6[1] = (undefined4) uVar1;
+  *puVar6 = (undefined4) (*((undefined4 *) (iVar7 + 0x12)));
+  iVar7 = (int) CFunc_InsertAfterStatement(2, iVar7);
+  *((undefined1 *) (iVar7 + 6)) = (undefined1) 1;
+  *((int *) (iVar7 + 0xe)) = (int) iVar3;
+  *((int *) (iVar3 + 4)) = (int) iVar7;
+  *((undefined4 **) (iVar7 + 0x12)) = (undefined4 *) puVar6;
+  iVar7 = (int) CFunc_InsertAfterStatement(4, iVar7);
+  *((undefined4 *) (iVar7 + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x18)));
+  iVar7 = (int) CFunc_InsertAfterStatement(4, iVar7);
+  uVar1 = (undefined4) funccallexpr(DAT_00716d68, nullnode(), nullnode(), nullnode(), 0);
+  *((undefined4 *) (iVar7 + 10)) = (undefined4) uVar1;
+  iVar7 = (int) CFunc_InsertAfterStatement(2, iVar7);
+  *((int *) (iVar7 + 0xe)) = (int) iVar4;
+  *((int *) (iVar4 + 4)) = (int) iVar7;
+  if (((uint) (*((undefined4 **) (iVar7 + 0x12)))) != ((uint) puVar6))
+  {
+    CError_Internal(cexcept_filename, 0xa2b);
+  }
+  *((undefined4 *) (iVar7 + 0x12)) = (undefined4) (*puVar6);
+  cexcept_prevstmt = (uint *) iVar7;
+  return (int) (*((int *) (param_1 + 0x1c)));
+}
+
+uint CExcept_TransNewException(char *param_1, char param_2)
+{
+  undefined4 uVar1;
+  int *piVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 *puVar5;
+  int iVar6;
+  int unaff_EDI;
+  bool bVar7;
+  bVar7 = (bool) ((*param_1) != 'I');
+  if ((*(*((char **) (param_1 + 0x18)))) != ';')
+  {
+    CError_Internal(cexcept_filename, 0x95d);
+  }
+  if (param_2 == '\0')
+  {
+    uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+    *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar1;
+    uVar1 = (undefined4) CExcept_TempTransExpr((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+    *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar1;
+    if (bVar7)
+    {
+      piVar2 = (int *) ((int *) CFunc_InsertAfterStatement(7, cexcept_prevstmt));
+      iVar6 = (int) (*piVar2);
+      *((undefined4 *) (((int) piVar2) + 0x16)) = (undefined4) (*((undefined4 *) (iVar6 + 0x16)));
+      *((undefined4 *) (((int) piVar2) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1a)));
+      *((undefined4 *) (((int) piVar2) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1e)));
+      *((undefined4 **) (((int) piVar2) + 0x12)) = (undefined4 *) cexcept_eabefore;
+      *((undefined4 *) (((int) piVar2) + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+      unaff_EDI = (int) newlabel();
+      *((int *) (((int) piVar2) + 0xe)) = (int) unaff_EDI;
+    }
+    else
+    {
+      piVar2 = (int *) ((int *) CFunc_InsertAfterStatement(4, cexcept_prevstmt));
+      iVar6 = (int) (*piVar2);
+      *((undefined4 *) (((int) piVar2) + 0x16)) = (undefined4) (*((undefined4 *) (iVar6 + 0x16)));
+      *((undefined4 *) (((int) piVar2) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1a)));
+      *((undefined4 *) (((int) piVar2) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1e)));
+      *((undefined4 **) (((int) piVar2) + 0x12)) = (undefined4 *) cexcept_eabefore;
+      *((undefined4 *) (((int) piVar2) + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+    }
+    piVar2 = (int *) ((int *) CFunc_InsertAfterStatement(4, piVar2));
+    *((undefined4 *) (((int) piVar2) + 10)) = (undefined4) (*((undefined4 *) (param_1 + 0x14)));
+    puVar5 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    *puVar5 = (undefined4) cexcept_eabefore;
+    *((undefined1 *) (puVar5 + 7)) = (undefined1) 10;
+    puVar5[1] = (undefined4) (*((undefined4 *) ((*((int *) (param_1 + 0x18))) + 0x10)));
+    puVar5[2] = (undefined4) (*((undefined4 *) (param_1 + 0x1c)));
+    *((undefined4 **) (((int) piVar2) + 0x12)) = (undefined4 *) puVar5;
+    if (bVar7)
+    {
+      piVar2 = (int *) ((int *) CFunc_InsertAfterStatement(2, piVar2));
+      *((int *) (((int) piVar2) + 0xe)) = (int) unaff_EDI;
+      *((int **) (unaff_EDI + 4)) = (int *) piVar2;
+      *((undefined4 **) (((int) piVar2) + 0x12)) = (undefined4 *) cexcept_eabefore;
+    }
+    cexcept_prevstmt = (uint *) piVar2;
+    uVar1 = (undefined4) create_objectrefnode(*((undefined4 *) ((*((int *) (param_1 + 0x18))) + 0x10)));
+    iVar6 = (int) fn_0055b9f0(uVar1);
+  }
+  else
+  {
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x10))));
+    *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar1;
+    uVar1 = (undefined4) CExcept_TempTransExprCond((undefined1 *) (*((undefined4 *) (param_1 + 0x14))));
+    *((undefined4 *) (param_1 + 0x14)) = (undefined4) uVar1;
+    uVar1 = (undefined4) create_temp_object(&DAT_00699c24);
+    piVar2 = (int *) ((int *) CFunc_InsertAfterStatement(4, cexcept_prevstmt));
+    iVar6 = (int) (*piVar2);
+    *((undefined4 *) (((int) piVar2) + 0x16)) = (undefined4) (*((undefined4 *) (iVar6 + 0x16)));
+    *((undefined4 *) (((int) piVar2) + 0x1a)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1a)));
+    *((undefined4 *) (((int) piVar2) + 0x1e)) = (undefined4) (*((undefined4 *) (iVar6 + 0x1e)));
+    *((undefined4 **) (((int) piVar2) + 0x12)) = (undefined4 *) cexcept_eabefore;
+    uVar3 = (undefined4) create_objectrefnode(uVar1);
+    uVar3 = (undefined4) fn_0055b9f0(uVar3);
+    uVar4 = (undefined4) intconstnode(&DAT_00699c24, 0);
+    uVar3 = (undefined4) makediadicnode(uVar3, uVar4, 0x1e);
+    *((undefined4 *) (((int) piVar2) + 10)) = (undefined4) uVar3;
+    cexcept_prevstmt = (uint *) piVar2;
+    puVar5 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+    *puVar5 = (undefined4) cexcept_eabefore;
+    cexcept_eabefore = (uint *) puVar5;
+    *((undefined1 *) (puVar5 + 7)) = (undefined1) 0xc;
+    puVar5[1] = (undefined4) (*((undefined4 *) ((*((int *) (param_1 + 0x18))) + 0x10)));
+    puVar5[2] = (undefined4) (*((undefined4 *) (param_1 + 0x1c)));
+    puVar5[3] = (undefined4) uVar1;
+    if (bVar7)
+    {
+      uVar3 = (undefined4) create_objectrefnode(uVar1);
+      uVar3 = (undefined4) fn_0055b9f0(uVar3);
+      uVar4 = (undefined4) intconstnode(&DAT_00699c24, 1);
+      uVar3 = (undefined4) makediadicnode(uVar3, uVar4, 0x1e);
+      uVar3 = (undefined4) makediadicnode(uVar3, *((undefined4 *) (param_1 + 0x14)), 0x29);
+      uVar1 = (undefined4) create_objectrefnode(uVar1);
+      uVar1 = (undefined4) fn_0055b9f0(uVar1);
+      uVar4 = (undefined4) intconstnode(&DAT_00699c24, 0);
+      uVar1 = (undefined4) makediadicnode(uVar1, uVar4, 0x1e);
+      uVar1 = (undefined4) makediadicnode(uVar3, uVar1, 0x29);
+      uVar1 = (undefined4) makediadicnode(*((undefined4 *) (param_1 + 0x10)), uVar1, 0x1c);
+      uVar3 = (undefined4) create_objectrefnode(*((undefined4 *) ((*((int *) (param_1 + 0x18))) + 0x10)));
+      uVar3 = (undefined4) fn_0055b9f0(uVar3);
+      iVar6 = (int) makediadicnode(uVar1, uVar3, 0x29);
+    }
+    else
+    {
+      uVar3 = (undefined4) create_objectrefnode(uVar1);
+      uVar3 = (undefined4) fn_0055b9f0(uVar3);
+      uVar4 = (undefined4) intconstnode(&DAT_00699c24, 1);
+      uVar3 = (undefined4) makediadicnode(uVar3, uVar4, 0x1e);
+      uVar3 = (undefined4) makediadicnode(*((undefined4 *) (param_1 + 0x10)), uVar3, 0x29);
+      uVar3 = (undefined4) makediadicnode(uVar3, *((undefined4 *) (param_1 + 0x14)), 0x29);
+      uVar1 = (undefined4) create_objectrefnode(uVar1);
+      uVar1 = (undefined4) fn_0055b9f0(uVar1);
+      uVar4 = (undefined4) intconstnode(&DAT_00699c24, 0);
+      uVar1 = (undefined4) makediadicnode(uVar1, uVar4, 0x1e);
+      uVar1 = (undefined4) makediadicnode(uVar3, uVar1, 0x29);
+      uVar3 = (undefined4) create_objectrefnode(*((undefined4 *) ((*((int *) (param_1 + 0x18))) + 0x10)));
+      uVar3 = (undefined4) fn_0055b9f0(uVar3);
+      iVar6 = (int) makediadicnode(uVar1, uVar3, 0x29);
+    }
+  }
+  *((undefined4 *) (iVar6 + 4)) = (undefined4) (*((undefined4 *) (param_1 + 4)));
+  return (uint) ((uint) iVar6);
+}
+
+undefined1 *CExcept_TempTrans_ETEMP(undefined1 *param_1)
+{
+  int iVar1;
+  undefined4 uVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 uVar5;
+  iVar1 = (int) (*((int *) (param_1 + 0x14)));
+  puVar3 = (undefined4 *) cexcept_uniqueobjs;
+  if (iVar1 == 0)
+  {
+    uVar2 = (undefined4) create_temp_object(*((undefined4 *) (param_1 + 0x10)));
+  }
+  else
+  {
+    for (; ((uint) puVar3) != ((uint) ((undefined4 *) 0x0)); puVar3 = (undefined4 *) ((undefined4 *) (*puVar3)))
+    {
+      if (puVar3[2] == iVar1)
+      {
+        param_1[0x18] = (undefined1) 0;
+        uVar2 = (undefined4) puVar3[1];
+        goto LAB_0049e540;
+      }
+    }
+
+    puVar3 = (undefined4 *) ((undefined4 *) galloc(0xc));
+    *puVar3 = (undefined4) cexcept_uniqueobjs;
+    cexcept_uniqueobjs = (uint *) puVar3;
+    puVar3[2] = (undefined4) iVar1;
+    uVar2 = (undefined4) create_temp_object(*((undefined4 *) (param_1 + 0x10)));
+    puVar3[1] = (undefined4) uVar2;
+    uVar2 = (undefined4) puVar3[1];
+  }
+  LAB_0049e540:
+  if (param_1[0x18] == '\0')
+    goto LAB_0049e546;
+
+  puVar3 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x10));
+  *puVar3 = (undefined4) cexcept_dtortemps;
+  cexcept_dtortemps = (uint *) puVar3;
+  puVar3[1] = (undefined4) uVar2;
+  puVar3[3] = (undefined4) 0;
+  if ((*(*((char **) (param_1 + 0x10)))) == '\x06')
+  {
+    uVar5 = (undefined4) CClass_Destructor(*((char **) (param_1 + 0x10)));
+    puVar3[2] = (undefined4) uVar5;
+    if (puVar3[2] == 0)
+      goto LAB_0049e58e;
+  }
+  else
+  {
+    LAB_0049e58e:
+    CError_Internal(cexcept_filename, 0x93f);
+
+  }
+  puVar4 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  *puVar4 = (undefined4) cexcept_eabefore;
+  cexcept_eabefore = (uint *) puVar4;
+  *((undefined1 *) (puVar4 + 7)) = (undefined1) 1;
+  puVar4[1] = (undefined4) puVar3[1];
+  uVar5 = (undefined4) CABI_GetDestructorObject(puVar3[2], 1);
+  puVar4[2] = (undefined4) uVar5;
+  puVar4 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  puVar3 = (undefined4 *) cexcept_eabefore;
+  *puVar4 = (undefined4) (*cexcept_eabefore);
+  puVar4[1] = (undefined4) puVar3[1];
+  puVar4[2] = (undefined4) puVar3[2];
+  puVar4[3] = (undefined4) puVar3[3];
+  puVar4[4] = (undefined4) puVar3[4];
+  puVar4[5] = (undefined4) puVar3[5];
+  puVar4[6] = (undefined4) puVar3[6];
+  *((undefined2 *) (puVar4 + 7)) = (undefined2) (*((undefined2 *) (puVar3 + 7)));
+  *puVar4 = (undefined4) cexcept_eaafter;
+  cexcept_eaafter = (uint *) puVar4;
+  LAB_0049e546:
+  *param_1 = (undefined1) 0x3b;
+
+  *((undefined4 *) (param_1 + 0x10)) = (undefined4) uVar2;
+  return (undefined1 *) param_1;
+}
+
+void CExcept_ScanTryBlock(undefined4 param_1, char param_2)
+{
+  byte decl[0x98];
+  int iVar1;
+  char cVar2;
+  int iVar3;
+  int iVar4;
+  undefined4 uVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int iVar9;
+  int *piVar10;
+  int iVar11;
+  int local_bc;
+  if (DAT_0070f21e == '\0')
+  {
+    fn_0045c480(0x280c);
+  }
+  iVar3 = (int) create_temp_object(&DAT_0071726c);
+  if (DAT_00725ed8 != '\0')
+  {
+    uVar5 = (undefined4) GetHashNameNode(cexcept_magic_name);
+    *((undefined4 *) (iVar3 + 0xc)) = (undefined4) uVar5;
+    fn_004ea740(DAT_00711be0, *((undefined4 *) (iVar3 + 0xc)), iVar3);
+  }
+  iVar4 = (int) CFunc_AppendStatement(2);
+  *((undefined1 *) (iVar4 + 6)) = (undefined1) 1;
+  uVar5 = (undefined4) newlabel();
+  *((undefined4 *) (iVar4 + 0xe)) = (undefined4) uVar5;
+  *((int *) ((*((int *) (iVar4 + 0xe))) + 4)) = (int) iVar4;
+  iVar4 = (int) CFunc_AppendStatement(0xc);
+  uVar5 = (undefined4) fn_00521c20(iVar3, 1);
+  *((undefined4 *) (iVar4 + 10)) = (undefined4) uVar5;
+  if (DAT_00717466 != 0x7b)
+  {
+    fn_0045c480(0x2797);
+    return;
+  }
+  CFunc_ParseScopedStatement(param_1);
+  if (DAT_00717466 != 0x152)
+  {
+    fn_0045c480(0x2802);
+    return;
+  }
+  iVar6 = (int) CFunc_AppendStatement(3);
+  uVar5 = (undefined4) newlabel();
+  *((undefined4 *) (iVar6 + 0xe)) = (undefined4) uVar5;
+  iVar1 = (int) (*((int *) (iVar6 + 0xe)));
+  iVar7 = (int) newlabel();
+  local_bc = (int) 0;
+  do
+  {
+    fn_0052ef10();
+    iVar8 = (int) CFunc_AppendStatement(2);
+    *((undefined1 *) (iVar8 + 6)) = (undefined1) 1;
+    iVar9 = (int) newlabel();
+    *((int *) (iVar8 + 0xe)) = (int) iVar9;
+    *((int *) (iVar9 + 4)) = (int) iVar8;
+    iVar9 = (int) 0;
+    piVar10 = (int *) ((int *) CompilerTools_AllocatePool(0x1c));
+    memclrw(piVar10, 0x1c);
+    *piVar10 = (int) local_bc;
+    piVar10[3] = (int) iVar8;
+    piVar10[2] = (int) iVar3;
+    DAT_00717466 = (short) fn_00447b70();
+    if (DAT_00717466 != 0x28)
+    {
+      fn_0045c480(0x2782);
+      LAB_0049e975:
+      iVar3 = (int) CFunc_AppendStatement(2);
+
+      *((int *) (iVar3 + 0xe)) = (int) iVar7;
+      *((int *) (iVar7 + 4)) = (int) iVar3;
+      CExcept_PatchDObjStack((int *) iVar4, (int *) iVar6, (int *) iVar3, (undefined4 *) piVar10);
+      iVar3 = (int) CFunc_AppendStatement(2);
+      *((int *) (iVar3 + 0xe)) = (int) iVar1;
+      *((int *) (iVar1 + 4)) = (int) iVar3;
+      return;
+    }
+    DAT_00717466 = (short) fn_00447b70();
+    if (DAT_00717466 == 0x17f)
+    {
+      DAT_00717466 = (short) fn_00447b70();
+    }
+    else
+    {
+      memclrw(decl, 0x98);
+      CParser_GetDeclSpecs(decl, 0);
+      if ((*((char *) (decl + 0x5e))) != '\0')
+      {
+        fn_0045c480(0x2789);
+      }
+      if ((*((short *) (decl + 0x4e))) != 0)
+      {
+        fn_0045c480(0x27c1);
+      }
+      if ((*((short *) (decl + 0x80))) != 0)
+      {
+        fn_0045c480(0x28f5);
+      }
+      if ((*((char *) (decl + 0x76))) != '\0')
+      {
+        fn_0045c480(0x28f5);
+      }
+      if ((*((char *) (decl + 0x77))) != '\0')
+      {
+        fn_0045c480(0x28f5);
+      }
+      CDecl_ParseDeclarator(decl);
+      if ((*(*((char **) decl))) == '\a')
+      {
+        *((char **) decl) = (char *) ((char *) CDecl_NewPointerType(*((char **) decl)));
+      }
+      else
+        if ((*(*((char **) decl))) == '\r')
+      {
+        *((char **) decl) = (char *) ((char *) CDecl_NewPointerType(*((undefined4 *) ((*((char **) decl)) + 6))));
+      }
+      fn_00544fc0(*((char **) decl), *((uint *) (decl + 4)));
+      CanAllocObject(*((char **) decl));
+      if (((*(*((char **) decl))) == '\x06') && (((*((uint *) ((*((char **) decl)) + 0x22))) & 8) != 0))
+      {
+        fn_0045a490(*((char **) decl));
+      }
+      piVar10[5] = (int) ((int) (*((char **) decl)));
+      piVar10[6] = (int) (*((uint *) (decl + 4)));
+      if ((*((uint *) (decl + 0x18))) != 0)
+      {
+        iVar9 = (int) fn_0052ee40();
+        iVar8 = (int) fn_004eb140(DAT_00711be0, *((uint *) (decl + 0x18)));
+        if (iVar8 != 0)
+        {
+          fn_0045c480(0x278a, (*((uint *) (decl + 0x18))) + 10);
+        }
+        iVar8 = (int) CParser_NewLocalDataObject(decl, 1);
+        fn_0052ec00(iVar8);
+        fn_004ea740(DAT_00711be0, *((uint *) (decl + 0x18)), iVar8);
+        piVar10[1] = (int) iVar8;
+        cVar2 = (char) CTemplateTools_IsDependentType(*((undefined4 *) (iVar8 + 0x10)));
+        if (cVar2 == '\0')
+        {
+          iVar11 = (int) fn_0049eb00((int) iVar8, (undefined4) piVar10[2]);
+        }
+        else
+        {
+          iVar11 = (int) fn_00524320(0x16);
+          *((int *) (iVar11 + 0x10)) = (int) iVar8;
+          *((int *) (iVar11 + 0x14)) = (int) piVar10[2];
+        }
+        iVar8 = (int) CFunc_AppendStatement(4);
+        *((int *) (iVar8 + 10)) = (int) iVar11;
+      }
+    }
+    if (DAT_00717466 != 0x29)
+    {
+      fn_0045c480(0x2783);
+      goto LAB_0049e975;
+    }
+    DAT_00717466 = (short) fn_00447b70();
+    if (DAT_00717466 != 0x7b)
+    {
+      fn_0045c480(0x2797);
+      goto LAB_0049e975;
+    }
+    CFunc_ParseScopedStatement(param_1);
+    if (param_2 != '\0')
+    {
+      iVar8 = (int) CFunc_AppendStatement(4);
+      uVar5 = (undefined4) funccallexpr(DAT_00716d68, nullnode(), nullnode(), nullnode(), 0);
+      *((undefined4 *) (iVar8 + 10)) = (undefined4) uVar5;
+    }
+    piVar10[4] = (int) iVar8;
+    if (iVar9 != 0)
+    {
+      fn_0052ec70(iVar9);
+    }
+    if (DAT_00717466 != 0x152)
+      goto LAB_0049e975;
+    iVar8 = (int) CFunc_AppendStatement(3);
+    *((int *) (iVar8 + 0xe)) = (int) iVar7;
+    local_bc = (int) ((int) piVar10);
+  }
+  while (1);
+}
+
+uint fn_0049eb00(int param_1, undefined4 param_2)
+{
+  char *pcVar1;
+  char cVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  int iVar5;
+  int iVar6;
+  uVar3 = (undefined4) fn_00521c20(param_2, 1);
+  uVar4 = (undefined4) intconstnode(&DAT_00699c6c, 0xc);
+  iVar5 = (int) makediadicnode(uVar3, uVar4, 0xf);
+  uVar3 = (undefined4) CDecl_NewPointerType(*((undefined4 *) (param_1 + 0x10)));
+  uVar3 = (undefined4) CDecl_NewPointerType(uVar3);
+  *((undefined4 *) (iVar5 + 4)) = (undefined4) uVar3;
+  iVar5 = (int) makemonadicnode(iVar5, 4);
+  uVar3 = (undefined4) CDecl_NewPointerType(*((undefined4 *) (param_1 + 0x10)));
+  *((undefined4 *) (iVar5 + 4)) = (undefined4) uVar3;
+  pcVar1 = (char *) (*((char **) (param_1 + 0x10)));
+  if (((*pcVar1) == '\f') && (((*((uint *) (pcVar1 + 10))) & 0x20) != 0))
+  {
+    uVar3 = (undefined4) create_objectrefnode(param_1);
+    return (uint) makediadicnode(uVar3, iVar5, 0x1e);
+  }
+  if ((*pcVar1) == '\x06')
+  {
+    cVar2 = (char) fn_00542350(pcVar1);
+    if (cVar2 == '\0')
+    {
+      iVar6 = (int) CClass_Destructor(*((undefined4 *) (param_1 + 0x10)));
+      if (iVar6 == 0)
+      {
+        uVar3 = (undefined4) fn_00521c20(param_1, 1);
+      }
+      else
+      {
+        uVar3 = (undefined4) CExcept_RegisterDestructorObject((undefined4) param_1, (int) 0, (undefined4) iVar6);
+      }
+      iVar5 = (int) makemonadicnode(iVar5, 4);
+      *((undefined4 *) (iVar5 + 4)) = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+      return (uint) fn_005a6b30(*((undefined4 *) (param_1 + 0x10)), uVar3, iVar5);
+    }
+  }
+  iVar5 = (int) makemonadicnode(iVar5, 4);
+  *((undefined4 *) (iVar5 + 4)) = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+  uVar3 = (undefined4) create_objectrefnode(param_1);
+  uVar3 = (undefined4) fn_0055b9f0(uVar3);
+  return (uint) makediadicnode(uVar3, iVar5, 0x1e);
+}
+
+void CExcept_PatchDObjStack(int *param_1, int *param_2, int *param_3, undefined4 *param_4)
+{
+  int iVar1;
+  int *piVar2;
+  char *pcVar3;
+  char cVar4;
+  int *piVar5;
+  int iVar6;
+  int *piVar7;
+  int *piVar8;
+  char local_19;
+  int *local_18;
+  iVar1 = (int) param_4[2];
+  local_19 = (char) '\0';
+  piVar2 = (int *) (*((int **) (((int) param_1) + 0x12)));
+  local_18 = (int *) ((int *) 0x0);
+  piVar7 = (int *) piVar2;
+  for (; ((uint) param_4) != ((uint) ((undefined4 *) 0x0)); param_4 = (undefined4 *) ((undefined4 *) (*param_4)))
+  {
+    piVar5 = (int *) ((int *) CompilerTools_AllocatePool(0x1e));
+    memclrw(piVar5, 0x1e);
+    *piVar5 = (int) ((int) piVar7);
+    if (((uint) local_18) == ((uint) ((int *) 0x0)))
+    {
+      local_18 = (int *) piVar5;
+    }
+    *((undefined1 *) (piVar5 + 7)) = (undefined1) 0xd;
+    piVar5[1] = (int) param_4[1];
+    piVar5[3] = (int) (*((int *) (param_4[3] + 0xe)));
+    piVar5[2] = (int) iVar1;
+    if (local_19 == '\0')
+    {
+      pcVar3 = (char *) ((char *) param_4[5]);
+      if (((uint) pcVar3) == ((uint) ((char *) 0x0)))
+      {
+        cVar4 = (char) '\x01';
+      }
+      else
+        if ((*pcVar3) == '\x06')
+      {
+        iVar6 = (int) CClass_Destructor(pcVar3);
+        cVar4 = (char) (iVar6 != 0);
+      }
+      else
+        if ((((*pcVar3) == '\f') && (((*((uint *) (pcVar3 + 10))) & 0x20) != 0)) && ((*(*((char **) (pcVar3 + 6)))) == '\x06'))
+      {
+        cVar4 = (char) '\x01';
+      }
+      else
+      {
+        cVar4 = (char) CTemplateTools_IsDependentType(pcVar3);
+      }
+      if (cVar4 != '\0')
+      {
+        local_19 = (char) '\x01';
+      }
+    }
+    piVar5[5] = (int) param_4[5];
+    piVar5[6] = (int) param_4[6];
+    piVar7 = (int *) piVar5;
+  }
+
+  do
+  {
+    piVar5 = (int *) (*((int **) (((int) param_1) + 0x12)));
+    if (((uint) (*((int **) (((int) param_1) + 0x12)))) == ((uint) piVar2))
+    {
+      *((int **) (((int) param_1) + 0x12)) = (int *) piVar7;
+    }
+    else
+    {
+      do
+      {
+        piVar8 = (int *) piVar5;
+        if (((uint) piVar8) == ((uint) ((int *) 0x0)))
+        {
+          CError_Internal(cexcept_filename, 0x6b6);
+        }
+        piVar5 = (int *) ((int *) (*piVar8));
+        if (((uint) piVar5) == ((uint) piVar7))
+          goto LAB_0049ed20;
+      }
+      while (((uint) piVar5) != ((uint) piVar2));
+      *piVar8 = (int) ((int) piVar7);
+    }
+    LAB_0049ed20:
+    if (((uint) param_1) == ((uint) param_3))
+    {
+      DAT_00725e5d = (byte) 1;
+      return;
+    }
+
+    if (((uint) param_1) == ((uint) param_2))
+    {
+      piVar7 = (int *) ((int *) CompilerTools_AllocatePool(0x1e));
+      memclrw(piVar7, 0x1e);
+      *piVar7 = (int) ((int) piVar2);
+      *((undefined1 *) (piVar7 + 7)) = (undefined1) 0xe;
+      piVar7[1] = (int) iVar1;
+      *((char *) (piVar7 + 2)) = (char) local_19;
+    }
+    param_1 = (int *) ((int *) (*param_1));
+    if (((uint) param_1) == ((uint) ((int *) 0x0)))
+    {
+      CError_Internal(cexcept_filename, 0x6cc);
+    }
+  }
+  while (1);
+}
+
+uint CExcept_ParseThrowExpression(void)
+{
+  undefined4 uVar1;
+  int iVar2;
+  if (DAT_0070f21e == '\0')
+  {
+    fn_0045c480(0x280c);
+  }
+  DAT_00717466 = (short) fn_00447b70();
+  switch (DAT_00717466)
+  {
+    case 0x29:
+
+    case 0x2c:
+
+    case 0x3a:
+
+    case 0x3b:
+      iVar2 = (int) funccallexpr(DAT_00716d68, nullnode(), nullnode(), nullnode(), 0);
+      *((uint *) (iVar2 + 8)) = (uint) ((*((uint *) (iVar2 + 8))) | 2);
+      return (uint) iVar2;
+
+    default:
+      uVar1 = (undefined4) fn_005153b0();
+      return (uint) CExcept_ThrowExpression((int) uVar1);
+
+  }
+
+}
+
+uint CExcept_ThrowExpression(int param_1)
+{
+  char cVar1;
+  int iVar2;
+  char *pcVar3;
+  undefined4 uVar4;
+  int iVar5;
+  undefined4 uVar6;
+  if (param_1 != 0)
+  {
+    cVar1 = (char) fn_0053d470(param_1);
+    if (cVar1 != '\0')
+    {
+      iVar2 = (int) fn_00524320(0x15);
+      *((int *) (iVar2 + 0x10)) = (int) param_1;
+      *((uint *) (iVar2 + 8)) = (uint) ((*((uint *) (iVar2 + 8))) | 2);
+      return (uint) iVar2;
+    }
+  }
+  pcVar3 = (char *) ((char *) fn_0055b7f0(param_1));
+  if (((*pcVar3) == 'K') && (pcVar3[0x29] != '\0'))
+  {
+    pcVar3 = (char *) ((char *) fn_00543680(pcVar3, 0, 0, 1, 0));
+  }
+  uVar6 = (undefined4) create_temp_object(*((undefined4 *) (pcVar3 + 4)));
+  if ((*(*((char **) (pcVar3 + 4)))) == '\x06')
+  {
+    uVar4 = (undefined4) fn_00521c20(uVar6, 1);
+    cVar1 = (char) fn_005a8e20(pcVar3, *((undefined4 *) (pcVar3 + 4)), uVar4, 0);
+    if (cVar1 == '\0')
+      goto LAB_0049ef00;
+    iVar2 = (int) fn_00559da0(pcVar3, 0);
+  }
+  else
+  {
+    LAB_0049ef00:
+    uVar4 = (undefined4) fn_00521c20(uVar6, 1);
+
+    if ((*(*((char **) (pcVar3 + 4)))) == '\x06')
+    {
+      cVar1 = (char) fn_00542350(*((char **) (pcVar3 + 4)));
+      if (cVar1 == '\0')
+      {
+        iVar2 = (int) fn_005a6b30(*((undefined4 *) (pcVar3 + 4)), uVar4, pcVar3);
+        goto LAB_0049ef69;
+      }
+    }
+    if ((*((int *) ((*((int *) (pcVar3 + 4))) + 2))) == 0)
+    {
+      fn_0045c480(0x27a2);
+    }
+    iVar2 = (int) makemonadicnode(uVar4, 4);
+    *((undefined4 *) (iVar2 + 4)) = (undefined4) (*((undefined4 *) (pcVar3 + 4)));
+    uVar4 = (undefined4) makediadicnode(iVar2, pcVar3, 0x1e);
+    uVar6 = (undefined4) fn_00521c20(uVar6, 1);
+    iVar2 = (int) makediadicnode(uVar4, uVar6, 0x29);
+    *((undefined1 **) (iVar2 + 4)) = (undefined1 *) (&DAT_006771c8);
+  }
+  LAB_0049ef69:
+  uVar6 = (undefined4) CExcept_GetTypeID((char *) (*((undefined4 *) (pcVar3 + 4))), (undefined4) ((*((uint *) (pcVar3 + 8))) & 0x1f200003), (char) 1);
+
+  if ((*(*((char **) (pcVar3 + 4)))) == '\x06')
+  {
+    iVar5 = (int) CClass_Destructor(*((char **) (pcVar3 + 4)));
+    if (iVar5 != 0)
+    {
+      uVar4 = (undefined4) CABI_GetDestructorObject(iVar5, 1);
+      uVar4 = (undefined4) fn_00521c20(uVar4, 1);
+      iVar2 = (int) funccallexpr(DAT_00716d68, uVar6, iVar2, uVar4, 0);
+      goto LAB_0049efbc;
+    }
+  }
+  uVar4 = (undefined4) nullnode();
+  iVar2 = (int) funccallexpr(DAT_00716d68, uVar6, iVar2, uVar4, 0);
+  LAB_0049efbc:
+  *((uint *) (iVar2 + 8)) = (uint) ((*((uint *) (iVar2 + 8))) | 2);
+
+  return (uint) ((uint) iVar2);
+}
+
+void CExcept_SyncNoThrowUsage(uint type1, uint qualifiers1, uint type2, uint qualifiers2)
+{
+  return;
+}
+
+void CExcept_ScanExceptionSpecification(int param_1)
+{
+  byte decl[0x98];
+  undefined4 *puVar1;
+  short sVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  puVar3 = (undefined4 *) ((undefined4 *) 0x0);
+  sVar2 = (short) fn_00447b70();
+  if (sVar2 != 0x28)
+  {
+    fn_0045c480(0x2782);
+    return;
+  }
+  if ((DAT_0070f1b3 != '\0') && ((sVar2 = (short) CPrep_UpdateTokenLine(), sVar2 == 0x17f)))
+  {
+    fn_00447b70();
+    DAT_00717466 = (short) fn_00447b70();
+    if (DAT_00717466 == 0x29)
+    {
+      DAT_00717466 = (short) fn_00447b70();
+    }
+    else
+    {
+      fn_0045c480(0x2783);
+    }
+    *((undefined4 *) (param_1 + 10)) = (undefined4) 0;
+    return;
+  }
+  DAT_00717466 = (short) fn_00447b70();
+  if (DAT_00717466 != 0x29)
+  {
+    puVar4 = (undefined4 *) puVar3;
+    while (1)
+    {
+      memclrw(decl, 0x98);
+      CParser_GetDeclSpecs(decl, 0);
+      if ((*((short *) (decl + 0x4e))) != 0)
+      {
+        fn_0045c480(0x27c1);
+      }
+      if ((*((short *) (decl + 0x80))) != 0)
+      {
+        fn_0045c480(0x28f5);
+      }
+      if ((*((char *) (decl + 0x76))) != '\0')
+      {
+        fn_0045c480(0x28f5);
+      }
+      if ((*((char *) (decl + 0x77))) != '\0')
+      {
+        fn_0045c480(0x28f5);
+      }
+      CDecl_ParseDeclarator(decl);
+      if ((*((uint *) (decl + 0x18))) != 0)
+      {
+        fn_0045c480(0x27a2);
+      }
+      fn_00544fc0(*((int *) decl), ((int *) (decl + 4))[0]);
+      *((int *) decl) = (int) fn_00453430(*((int *) decl), (int *) (decl + 4));
+      for (puVar1 = (undefined4 *) puVar4; (((uint) puVar1) != ((uint) ((undefined4 *) 0x0))) && ((sVar2 = (short) iscpp_typeequal(puVar1[1], *((int *) decl)), (sVar2 == 0) || (puVar1[2] != ((int *) (decl + 4))[0]))); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+      {
+      }
+
+      puVar3 = (undefined4 *) puVar4;
+      if (((uint) puVar1) == ((uint) ((undefined4 *) 0x0)))
+      {
+        puVar3 = (undefined4 *) ((undefined4 *) galloc(0xc));
+        memclrw(puVar3, 0xc);
+        *puVar3 = (undefined4) puVar4;
+        puVar3[1] = (undefined4) (*((int *) decl));
+        puVar3[2] = (undefined4) ((int *) (decl + 4))[0];
+      }
+      if (DAT_00717466 == 0x29)
+        goto LAB_0049f0d8;
+      if (DAT_00717466 != 0x2c)
+        break;
+      DAT_00717466 = (short) fn_00447b70();
+      puVar4 = (undefined4 *) puVar3;
+    }
+
+    fn_0045c480(0x2783);
+  }
+  LAB_0049f0d8:
+  if (((uint) puVar3) == ((uint) ((undefined4 *) 0x0)))
+  {
+    puVar3 = (undefined4 *) ((undefined4 *) galloc(0xc));
+    memclrw(puVar3, 0xc);
+  }
+
+  *((undefined4 **) (param_1 + 10)) = (undefined4 *) puVar3;
+  DAT_00717466 = (short) fn_00447b70();
+  return;
+}
+
+int CExcept_GetTypeID(char *param_1, undefined4 param_2, char param_3)
+{
+  char cVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined4 *puVar4;
+  undefined1 local_28[16];
+  byte local_type[14];
+  if (((*param_1) == '\f') && (((*((uint *) (param_1 + 10))) & 0x20) != 0))
+  {
+    param_1 = (char *) (*((char **) (param_1 + 6)));
+  }
+  cVar1 = (char) (*param_1);
+  if ((cVar1 == '\x06') || ((cVar1 == '\f') && ((*(*((char **) (param_1 + 6)))) == '\x06')))
+  {
+    if (DAT_00716c9c != 0)
+    {
+      COptimizer_GetFunctionObject(DAT_00716c9c);
+    }
+    DAT_0070bc24 = (uint) 0;
+    if ((*param_1) == '\f')
+    {
+      AppendGListByte(&DAT_0070bc20, 0x2a);
+      param_1 = (char *) (*((char **) (param_1 + 6)));
+    }
+    else
+    {
+      AppendGListByte(&DAT_0070bc20, 0x21);
+    }
+    if (param_3 == '\0')
+    {
+      CExcept_MangleClass((int) param_1);
+      AppendGListByte(&DAT_0070bc20, 0x21);
+    }
+    else
+    {
+      for (puVar4 = (undefined4 *) ((undefined4 *) CExcept_GetBaseClassList((undefined4 *) 0, (undefined4) param_1, (int) param_1, (int) 0, (char) 0, (char) 1)); ((uint) puVar4) != ((uint) ((undefined4 *) 0x0)); puVar4 = (undefined4 *) ((undefined4 *) (*puVar4)))
+      {
+        if (((*((char *) (((int) puVar4) + 0xd))) != '\0') && ((*((char *) (((int) puVar4) + 0xe))) == '\0'))
+        {
+          CExcept_MangleClass((int) puVar4[1]);
+          AppendGListByte(&DAT_0070bc20, 0x21);
+          if (puVar4[2] == 0)
+          {
+            AppendGListByte(&DAT_0070bc20, 0x21);
+          }
+          else
+          {
+            sprintf(local_28, cexcept_offset_format, puVar4[2]);
+            fn_0046d530(&DAT_0070bc20, local_28);
+          }
+        }
+      }
+
+    }
+  }
+  else
+  {
+    if (cVar1 == '\f')
+    {
+      if (((*((uint *) (param_1 + 10))) & 3) != 0)
+      {
+        *((uint *) (local_type + 0)) = (uint) (*((uint *) param_1));
+        *((uint *) (local_type + 4)) = (uint) (*((uint *) (param_1 + 4)));
+        *((ushort *) (local_type + 8)) = (ushort) (*((ushort *) (param_1 + 8)));
+        *((ushort *) (local_type + 10)) = (ushort) 0;
+        *((ushort *) (local_type + 12)) = (ushort) 0;
+        param_1 = (char *) ((char *) local_type);
+      }
+    }
+    else
+    {
+      param_2 = (undefined4) 0;
+    }
+    CMangler_MangleType(param_1, param_2, 0);
+  }
+  AppendGListByte(&DAT_0070bc20, 0);
+  iVar2 = (int) fn_005243b0(0x37);
+  *((undefined4 *) (iVar2 + 4)) = (undefined4) ((uint) DAT_006771d6);
+  *((undefined4 *) (iVar2 + 0x10)) = (undefined4) DAT_0070bc24;
+  uVar3 = (undefined4) galloc(DAT_0070bc24);
+  *((undefined4 *) (iVar2 + 0x14)) = (undefined4) uVar3;
+  memcpy(*((undefined4 *) (iVar2 + 0x14)), *DAT_0070bc20, DAT_0070bc24);
+  return (int) iVar2;
+}
+
+undefined4 *CExcept_GetBaseClassList(undefined4 *param_1, undefined4 param_2, int param_3, int param_4, char param_5, char param_6)
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  uint uVar3;
+  int iVar4;
+  bool bVar5;
+  undefined4 uVar6;
+  puVar1 = (undefined4 *) param_1;
+  while (1)
+  {
+    if (((uint) puVar1) == ((uint) ((undefined4 *) 0x0)))
+    {
+      puVar2 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x10));
+      puVar2[1] = (undefined4) param_3;
+      puVar2[2] = (undefined4) param_4;
+      *((char *) (puVar2 + 3)) = (char) param_5;
+      *((char *) (((int) puVar2) + 0xd)) = (char) param_6;
+      *((undefined1 *) (((int) puVar2) + 0xe)) = (undefined1) 0;
+      *puVar2 = (undefined4) param_1;
+      for (puVar1 = (undefined4 *) (*((undefined4 **) (param_3 + 0xe))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+      {
+        bVar5 = (bool) 0;
+        if (param_6 != '\0')
+        {
+          bVar5 = (bool) ((*((char *) (puVar1 + 4))) == '\0');
+        }
+        if ((*((char *) (((int) puVar1) + 0x11))) == '\0')
+        {
+          uVar3 = (uint) ((uint) bVar5);
+          uVar6 = (undefined4) 0;
+          iVar4 = (int) (param_4 + puVar1[2]);
+        }
+        else
+        {
+          uVar3 = (uint) ((uint) bVar5);
+          uVar6 = (undefined4) 1;
+          iVar4 = (int) CClass_FindVirtualBase(param_2, puVar1[1]);
+          iVar4 = (int) (*((int *) (iVar4 + 8)));
+        }
+        puVar2 = (undefined4 *) ((undefined4 *) CExcept_GetBaseClassList((undefined4 *) puVar2, (undefined4) param_2, (int) puVar1[1], (int) iVar4, (char) uVar6, (char) uVar3));
+      }
+
+      return (undefined4 *) puVar2;
+    }
+    if (puVar1[1] == param_3)
+      break;
+    puVar1 = (undefined4 *) ((undefined4 *) (*puVar1));
+  }
+
+  if ((param_5 == '\0') || ((*((char *) (puVar1 + 3))) == '\0'))
+  {
+    CExcept_MakeBaseClassListAmbig((undefined4 *) param_1, (int) param_3);
+  }
+  else
+    if (param_6 != '\0')
+  {
+    *((undefined1 *) (((int) puVar1) + 0xd)) = (undefined1) 1;
+  }
+  return (undefined4 *) param_1;
+}
+
+void CExcept_MakeBaseClassListAmbig(undefined4 *param_1, int param_2)
+{
+  undefined4 *puVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  for (puVar1 = (undefined4 *) param_1; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    if (puVar1[1] == param_2)
+    {
+      *((undefined1 *) (((int) puVar1) + 0xe)) = (undefined1) 1;
+    }
+  }
+
+  for (puVar1 = (undefined4 *) (*((undefined4 **) (param_2 + 0xe))); ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    if ((*((char *) (((int) puVar1) + 0x11))) == '\0')
+    {
+      iVar2 = (int) puVar1[1];
+      for (puVar3 = (undefined4 *) param_1; ((uint) puVar3) != ((uint) ((undefined4 *) 0x0)); puVar3 = (undefined4 *) ((undefined4 *) (*puVar3)))
+      {
+        if (puVar3[1] == iVar2)
+        {
+          *((undefined1 *) (((int) puVar3) + 0xe)) = (undefined1) 1;
+        }
+      }
+
+      for (puVar3 = (undefined4 *) (*((undefined4 **) (iVar2 + 0xe))); ((uint) puVar3) != ((uint) ((undefined4 *) 0x0)); puVar3 = (undefined4 *) ((undefined4 *) (*puVar3)))
+      {
+        if ((*((char *) (((int) puVar3) + 0x11))) == '\0')
+        {
+          iVar2 = (int) puVar3[1];
+          for (puVar4 = (undefined4 *) param_1; ((uint) puVar4) != ((uint) ((undefined4 *) 0x0)); puVar4 = (undefined4 *) ((undefined4 *) (*puVar4)))
+          {
+            if (puVar4[1] == iVar2)
+            {
+              *((undefined1 *) (((int) puVar4) + 0xe)) = (undefined1) 1;
+            }
+          }
+
+          for (puVar4 = (undefined4 *) (*((undefined4 **) (iVar2 + 0xe))); ((uint) puVar4) != ((uint) ((undefined4 *) 0x0)); puVar4 = (undefined4 *) ((undefined4 *) (*puVar4)))
+          {
+            if ((*((char *) (((int) puVar4) + 0x11))) == '\0')
+            {
+              iVar2 = (int) puVar4[1];
+              for (puVar5 = (undefined4 *) param_1; ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+              {
+                if (puVar5[1] == iVar2)
+                {
+                  *((undefined1 *) (((int) puVar5) + 0xe)) = (undefined1) 1;
+                }
+              }
+
+              for (puVar5 = (undefined4 *) (*((undefined4 **) (iVar2 + 0xe))); ((uint) puVar5) != ((uint) ((undefined4 *) 0x0)); puVar5 = (undefined4 *) ((undefined4 *) (*puVar5)))
+              {
+                if ((*((char *) (((int) puVar5) + 0x11))) == '\0')
+                {
+                  CExcept_MakeBaseClassListAmbig((undefined4 *) param_1, (int) puVar5[1]);
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+  return;
+}
+
+void CExcept_MangleClass(int param_1)
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  char cVar3;
+  int iVar4;
+  char *pcVar5;
+  undefined1 local_44[64];
+  puVar1 = (undefined4 *) (*((undefined4 **) (param_1 + 6)));
+  while (1)
+  {
+    if (((uint) puVar1) == ((uint) ((undefined4 *) 0x0)))
+    {
+      puVar1 = (undefined4 *) ((undefined4 *) (*(*((undefined4 **) (param_1 + 6)))));
+      puVar2 = (undefined4 *) puVar1;
+      while (1)
+      {
+        if (((uint) puVar2) == ((uint) ((undefined4 *) 0x0)))
+        {
+          CExcept_MangleNameSpaceName((undefined4 *) puVar1);
+          fn_0046d530(&DAT_0070bc20, (*((int *) (param_1 + 10))) + 10);
+          return;
+        }
+        if ((((*((char *) (((int) puVar2) + 0x1d))) == '\0') && ((*((char *) (((int) puVar2) + 0x1f))) == '\0')) && (puVar2[1] == 0))
+          break;
+        puVar2 = (undefined4 *) ((undefined4 *) (*puVar2));
+      }
+
+      if (DAT_00716c9c == 0)
+      {
+        CError_Internal(cexcept_filename, 0x459);
+      }
+      fn_0046d530(&DAT_0070bc20, (*((int *) (param_1 + 10))) + 10);
+      sprintf(local_44, cexcept_local_format, param_1);
+      fn_0046d530(&DAT_0070bc20, local_44);
+      iVar4 = (int) COptimizer_GetFunctionObject(DAT_00716c9c);
+      fn_0046d530(&DAT_0070bc20, iVar4 + 10);
+      cVar3 = (char) fn_00452fe0(DAT_00716c9c);
+      if (cVar3 != '\0')
+      {
+        fn_0046d530(&DAT_0070bc20, cexcept_file_marker);
+        pcVar5 = (char *) ((char *) fn_00455d00());
+        cVar3 = (char) (*pcVar5);
+        while (cVar3 != '\0')
+        {
+          if ((((cVar3 < 'a') || (cVar3 > 'z')) && ((cVar3 < 'A') || (cVar3 > 'Z'))) && ((cVar3 < '0') || (cVar3 > '9')))
+          {
+            cVar3 = (char) '_';
+          }
+          AppendGListByte(&DAT_0070bc20, (int) cVar3);
+          pcVar5 = (char *) (pcVar5 + 1);
+          cVar3 = (char) (*pcVar5);
+        }
+
+      }
+      return;
+    }
+    if ((puVar1[3] != 0) && (((*((uint *) (puVar1[3] + 0x22))) & 0x800) != 0))
+      break;
+    puVar1 = (undefined4 *) ((undefined4 *) (*puVar1));
+  }
+
+  CMangler_MangleType(param_1, 0, 1);
+  return;
+}
+
+void CExcept_MangleNameSpaceName(undefined4 *param_1)
+{
+  for (; param_1; param_1 = (undefined4 *) ((undefined4 *) (*param_1)))
+    if (param_1[1])
+  {
+    CExcept_MangleNameSpaceName((undefined4 *) ((undefined4 *) (*param_1)));
+    fn_0046d530(&DAT_0070bc20, param_1[1] + 10);
+    fn_0046d530(&DAT_0070bc20, cexcept_namespace_separator);
+    return;
+  }
+
+}
+
+uint CExcept_ActionCleanup(uint *action, uint statement)
+{
+  uint expression;
+  uint destructor;
+  uint address;
+  uint count;
+  uint size;
+  uint condition;
+  switch (((byte *) action)[28])
+  {
+    case 1:
+
+    case 3:
+      destructor = (uint) action[2];
+      address = (uint) fn_00521c20(action[1], 1);
+      if ((((byte *) action)[28] == 3) && action[3])
+      address = (uint) makediadicnode(address, intconstnode(DAT_00699c6c, action[3]), 15);
+      expression = (uint) CABI_DestroyObject(destructor, address, 1, 1, 0);
+      if (((*((byte *) expression)) != 57) || ((*(*((byte **) (expression + 16)))) != 59))
+      CError_Internal(cexcept_filename, 808);
+      address = (uint) (*((uint *) (expression + 16)));
+      if ((*((byte *) ((*((uint *) (address + 16))) + 2))) == 4)
+      *((uint *) (address + 8)) |= 8;
+      statement = (uint) CFunc_InsertAfterStatement(4, statement);
+      *((uint *) (statement + 10)) = (uint) expression;
+      *((uint *) (statement + 18)) = (uint) action[0];
+      break;
+
+    case 5:
+      destructor = (uint) action[2];
+      address = (uint) action[1];
+      count = (uint) action[3];
+      size = (uint) action[4];
+      statement = (uint) CFunc_InsertAfterStatement(4, statement);
+      if (destructor)
+    {
+      destructor = (uint) fn_00521c20(CABI_GetDestructorObject(destructor, 1), 1);
+      address = (uint) fn_00521c20(address, 1);
+      count = (uint) intconstnode(CABI_GetSizeTType(), count);
+      size = (uint) intconstnode(CABI_GetSizeTType(), size);
+      expression = (uint) funccallexpr(DAT_00711b80, address, destructor, size, count);
+    }
+    else
+      expression = (uint) nullnode();
+      *((uint *) (statement + 10)) = (uint) expression;
+      *((uint *) (statement + 18)) = (uint) action[0];
+      break;
+
+    case 11:
+      address = (uint) action[1];
+      destructor = (uint) action[2];
+      statement = (uint) CFunc_InsertAfterStatement(4, statement);
+      *((uint *) (statement + 10)) = (uint) funccallexpr(destructor, create_objectrefnode(address), 0, 0, 0);
+      *((uint *) (statement + 18)) = (uint) action[0];
+      break;
+
+    case 14:
+      statement = (uint) CFunc_InsertAfterStatement(14, statement);
+      *((uint *) (statement + 10)) = (uint) fn_00521c20(action[1], 1);
+      *((uint *) (statement + 18)) = (uint) action[0];
+      if (!((byte *) action)[8])
+      *((byte *) (statement + 4)) = (byte) 13;
+      break;
+
+    case 21:
+      address = (uint) action[1];
+      condition = (uint) action[2];
+      destructor = (uint) action[3];
+      size = (uint) action[4];
+      statement = (uint) CFunc_InsertAfterStatement(4, statement);
+      if (destructor)
+    {
+      destructor = (uint) fn_00521c20(CABI_GetDestructorObject(destructor, 1), 1);
+      count = (uint) intconstnode(CABI_GetSizeTType(), size);
+      count = (uint) fn_00520530(create_objectrefnode(condition), count, 1);
+      size = (uint) intconstnode(CABI_GetSizeTType(), size);
+      address = (uint) create_objectrefnode(address);
+      expression = (uint) funccallexpr(DAT_00711b80, address, destructor, size, count);
+    }
+    else
+      expression = (uint) nullnode();
+      *((uint *) (statement + 10)) = (uint) expression;
+      *((uint *) (statement + 18)) = (uint) action[0];
+      break;
+
+    case 22:
+      if (((byte *) action)[8])
+    {
+      expression = (uint) fn_00524320(25);
+      *((uint *) (expression + 16)) = (uint) action[1];
+      statement = (uint) CFunc_InsertAfterStatement(4, statement);
+      *((uint *) (statement + 10)) = (uint) expression;
+      *((uint *) (statement + 18)) = (uint) action[0];
+    }
+      break;
+
+    case 2:
+
+    case 4:
+
+    case 6:
+
+    case 7:
+
+    case 8:
+
+    case 9:
+
+    case 10:
+
+    case 12:
+
+    case 13:
+
+    case 15:
+
+    case 16:
+
+    case 17:
+
+    case 18:
+
+    case 19:
+
+    case 20:
+      break;
+
+    default:
+      CError_Internal(cexcept_filename, 1063);
+
+  }
+
+  return (uint) statement;
+}
+
+void CExcept_RegisterMemberArray(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6)
+{
+  int iVar1;
+  undefined4 uVar2;
+  iVar1 = (int) CompilerTools_AllocatePool(0x1e);
+  memclrw(iVar1, 0x1e);
+  *((undefined1 *) (iVar1 + 0x1c)) = (undefined1) 9;
+  *((undefined4 *) (iVar1 + 4)) = (undefined4) param_2;
+  uVar2 = (undefined4) CABI_GetDestructorObject(param_4, 1);
+  *((undefined4 *) (iVar1 + 8)) = (undefined4) uVar2;
+  *((undefined4 *) (iVar1 + 0xc)) = (undefined4) param_3;
+  *((undefined4 *) (iVar1 + 0x10)) = (undefined4) param_5;
+  *((undefined4 *) (iVar1 + 0x14)) = (undefined4) param_6;
+  CExcept_PatchConstructorAction((undefined4 *) param_1, (undefined4 *) iVar1);
+  *((byte *) (param_1 + 6)) |= 2;
+  return;
+}
+
+void CExcept_RegisterMember(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, int param_5, char param_6)
+{
+  int iVar1;
+  undefined4 uVar2;
+  iVar1 = (int) CompilerTools_AllocatePool(0x1e);
+  memclrw(iVar1, 0x1e);
+  if (param_5 == 0)
+  {
+    if (param_6 == '\0')
+    {
+      *((undefined1 *) (iVar1 + 0x1c)) = (undefined1) 0x11;
+    }
+    else
+    {
+      *((undefined1 *) (iVar1 + 0x1c)) = (undefined1) 7;
+    }
+    uVar2 = (undefined4) CABI_GetDestructorObject(param_4, param_6 != '\0');
+    *((undefined4 *) (iVar1 + 8)) = (undefined4) uVar2;
+    *((undefined4 *) (iVar1 + 4)) = (undefined4) param_2;
+    *((undefined4 *) (iVar1 + 0xc)) = (undefined4) param_3;
+  }
+  else
+  {
+    if (((uint) (*((undefined **) (param_5 + 0x10)))) != ((uint) (&DAT_00699c44)))
+    {
+      CError_Internal(cexcept_filename, 0x2ce);
+    }
+    *((undefined1 *) (iVar1 + 0x1c)) = (undefined1) 8;
+    *((undefined4 *) (iVar1 + 4)) = (undefined4) param_2;
+    *((int *) (iVar1 + 8)) = (int) param_5;
+    uVar2 = (undefined4) CABI_GetDestructorObject(param_4, 1);
+    *((undefined4 *) (iVar1 + 0xc)) = (undefined4) uVar2;
+    *((undefined4 *) (iVar1 + 0x10)) = (undefined4) param_3;
+  }
+  CExcept_PatchConstructorAction((undefined4 *) param_1, (undefined4 *) iVar1);
+  *((byte *) (param_1 + 6)) |= 2;
+  return;
+}
+
+void CExcept_PatchConstructorAction(undefined4 *param_1, undefined4 *param_2)
+{
+  char cVar1;
+  int *piVar2;
+  undefined4 *puVar3;
+  int *piVar4;
+  undefined4 *puVar5;
+  piVar4 = (int *) (*((int **) (((int) param_1) + 0x12)));
+  do
+  {
+    if (((uint) piVar4) == ((uint) ((int *) 0x0)))
+      goto switchD_004a001f_caseD_7;
+    switch ((char) piVar4[7])
+    {
+      case '\a':
+
+      case '\b':
+
+      case '\t':
+
+      case '\x0f':
+
+      case '\x11':
+
+      case '\x13':
+
+      case '\x14':
+        goto switchD_004a001f_caseD_7;
+
+      default:
+        piVar4 = (int *) ((int *) (*piVar4));
+        break;
+
+      case '\r':
+        piVar2 = (int *) piVar4;
+        while (piVar2 = (int *) ((int *) (*piVar2)), ((uint) piVar2) != ((uint) ((int *) 0x0)))
+      {
+        if ((*((char *) (piVar2 + 7))) != '\r')
+        {
+          CError_Internal(cexcept_filename, 0x224);
+        }
+      }
+
+        switchD_004a001f_caseD_7:
+      if (((uint) piVar4) == ((uint) ((int *) 0x0)))
+      {
+        for (; ((uint) param_1) != ((uint) ((undefined4 *) 0x0)); param_1 = (undefined4 *) ((undefined4 *) (*param_1)))
+        {
+          puVar3 = (undefined4 *) (*((undefined4 **) (((int) param_1) + 0x12)));
+          if (((uint) (*((undefined4 **) (((int) param_1) + 0x12)))) == ((uint) ((undefined4 *) 0x0)))
+          {
+            *((undefined4 **) (((int) param_1) + 0x12)) = (undefined4 *) param_2;
+          }
+          else
+          {
+            do
+            {
+              puVar5 = (undefined4 *) puVar3;
+              if (((uint) puVar5) == ((uint) param_2))
+                goto LAB_004a00e0;
+              puVar3 = (undefined4 *) ((undefined4 *) (*puVar5));
+            }
+            while (((uint) ((undefined4 *) (*puVar5))) != ((uint) ((undefined4 *) 0x0)));
+            *puVar5 = (undefined4) param_2;
+          }
+          LAB_004a00e0:
+          ;
+
+        }
+
+      }
+      else
+      {
+        *param_2 = (undefined4) piVar4;
+        for (; ((uint) param_1) != ((uint) ((undefined4 *) 0x0)); param_1 = (undefined4 *) ((undefined4 *) (*param_1)))
+        {
+          puVar3 = (undefined4 *) (*((undefined4 **) (((int) param_1) + 0x12)));
+          cVar1 = (char) CExcept_ActionCompare((int) puVar3, (int) piVar4);
+          if (cVar1 == '\0')
+          {
+            while (((uint) puVar3) != ((uint) param_2))
+            {
+              cVar1 = (char) CExcept_ActionCompare((int) (*puVar3), (int) piVar4);
+              if (cVar1 != '\0')
+              {
+                *puVar3 = (undefined4) param_2;
+                break;
+              }
+              puVar3 = (undefined4 *) ((undefined4 *) (*puVar3));
+              if (((uint) puVar3) == ((uint) ((undefined4 *) 0x0)))
+              {
+                while ((((char) piVar4[7]) != '\r') || ((*piVar4) != 0))
+                {
+                  piVar4 = (int *) ((int *) (*piVar4));
+                  if (((uint) piVar4) == ((uint) ((int *) 0x0)))
+                  {
+                    CError_Internal(cexcept_filename, 0x25b);
+                  }
+                }
+
+                return;
+              }
+            }
+
+          }
+          else
+          {
+            *((undefined4 **) (((int) param_1) + 0x12)) = (undefined4 *) param_2;
+          }
+        }
+
+      }
+
+        return;
+
+    }
+
+  }
+  while (1);
+}
+
+void CExcept_RegisterDeleteObject(undefined4 param_1, undefined4 param_2)
+{
+  undefined4 *puVar1;
+  puVar1 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar1, 0x1e);
+  *puVar1 = (undefined4) DAT_00710b30;
+  DAT_00710b30 = (uint *) puVar1;
+  *((undefined1 *) (puVar1 + 7)) = (undefined1) 0xb;
+  puVar1[1] = (undefined4) param_1;
+  puVar1[2] = (undefined4) param_2;
+  DAT_00725e5d = (byte) 1;
+  return;
+}
+
+void CExcept_RegisterVLA(int param_1, int param_2, undefined4 param_3)
+{
+  undefined4 *puVar1;
+  puVar1 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar1, 0x1e);
+  *((undefined1 *) (puVar1 + 7)) = (undefined1) 0x15;
+  puVar1[1] = (undefined4) (*((undefined4 *) (param_1 + 0xc)));
+  puVar1[2] = (undefined4) (*((undefined4 *) (param_1 + 0x10)));
+  puVar1[3] = (undefined4) param_3;
+  puVar1[4] = (undefined4) (*((undefined4 *) (param_2 + 2)));
+  *puVar1 = (undefined4) DAT_00710b30;
+  DAT_00710b30 = (uint *) puVar1;
+  return;
+}
+
+void CExcept_RegisterLocalArray(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4)
+{
+  undefined4 *puVar1;
+  undefined4 uVar2;
+  puVar1 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar1, 0x1e);
+  *puVar1 = (undefined4) DAT_00710b30;
+  DAT_00710b30 = (uint *) puVar1;
+  uVar2 = (undefined4) CABI_GetDestructorObject(param_2, 1);
+  *((undefined1 *) (puVar1 + 7)) = (undefined1) 5;
+  puVar1[1] = (undefined4) param_1;
+  puVar1[2] = (undefined4) uVar2;
+  puVar1[3] = (undefined4) param_3;
+  puVar1[4] = (undefined4) param_4;
+  DAT_00725e5d = (byte) 1;
+  return;
+}
+
+void CExcept_RegisterLocalObject(undefined4 param_1, undefined1 param_2)
+{
+  undefined4 *puVar1;
+  puVar1 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar1, 0x1e);
+  *puVar1 = (undefined4) DAT_00710b30;
+  DAT_00710b30 = (uint *) puVar1;
+  *((undefined1 *) (puVar1 + 7)) = (undefined1) 0x16;
+  puVar1[1] = (undefined4) param_1;
+  *((undefined1 *) (puVar1 + 2)) = (undefined1) param_2;
+  DAT_00725e5d = (byte) 1;
+  return;
+}
+
+undefined4 CExcept_RegisterDestructorObject(undefined4 param_1, int param_2, undefined4 param_3)
+{
+  undefined4 *puVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  puVar1 = (undefined4 *) ((undefined4 *) CompilerTools_AllocatePool(0x1e));
+  memclrw(puVar1, 0x1e);
+  *puVar1 = (undefined4) DAT_00710b30;
+  DAT_00710b30 = (uint *) puVar1;
+  uVar2 = (undefined4) fn_00521c20(param_1, 1);
+  uVar4 = (undefined4) uVar2;
+  uVar3 = (undefined4) CABI_GetDestructorObject(param_3, 1);
+  if (param_2 == 0)
+  {
+    *((undefined1 *) (puVar1 + 7)) = (undefined1) 1;
+    puVar1[1] = (undefined4) param_1;
+    puVar1[2] = (undefined4) uVar3;
+  }
+  else
+  {
+    *((undefined1 *) (puVar1 + 7)) = (undefined1) 3;
+    puVar1[1] = (undefined4) param_1;
+    puVar1[2] = (undefined4) uVar3;
+    puVar1[3] = (undefined4) param_2;
+    uVar2 = (undefined4) intconstnode(&DAT_00699c6c, param_2);
+    uVar2 = (undefined4) makediadicnode(uVar4, uVar2, 0xf);
+  }
+  DAT_00725e5d = (byte) 1;
+  return (undefined4) uVar2;
+}
+
+undefined1 CExcept_ActionNeedsDestruction(int param_1)
+{
+  if (param_1 != 0)
+  {
+    switch (*((undefined1 *) (param_1 + 0x1c)))
+    {
+      case 0:
+
+      case 4:
+
+      case 7:
+
+      case 8:
+
+      case 9:
+
+      case 0x10:
+
+      case 0x11:
+
+      case 0x12:
+
+      case 0x13:
+
+      case 0x14:
+        goto switchD_004a0311_caseD_0;
+
+      case 1:
+
+      case 3:
+
+      case 5:
+
+      case 0xb:
+
+      case 0xe:
+
+      case 0x15:
+        return (undefined1) 1;
+
+      default:
+        CError_Internal(cexcept_filename, 0x182);
+        switchD_004a0311_caseD_0:
+      return (undefined1) 0;
+
+
+      case 0xd:
+        return (undefined1) 0;
+
+      case 0x16:
+        return (undefined1) (*((undefined1 *) (param_1 + 8)));
+
+    }
+
+  }
+  return (undefined1) 0;
+}
+
+int CExcept_IsSubList(undefined4 *param_1, undefined4 *param_2)
+{
+  undefined4 *puVar1;
+  bool bVar2;
+  char cVar3;
+  int iVar4;
+  int iVar5;
+  if (((uint) param_1) == ((uint) param_2))
+  {
+    return (int) 0;
+  }
+  iVar5 = (int) 0;
+  for (puVar1 = (undefined4 *) param_1; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    iVar5 = (int) (iVar5 + 1);
+  }
+
+  iVar4 = (int) 0;
+  for (puVar1 = (undefined4 *) param_2; ((uint) puVar1) != ((uint) ((undefined4 *) 0x0)); puVar1 = (undefined4 *) ((undefined4 *) (*puVar1)))
+  {
+    iVar4 = (int) (iVar4 + 1);
+  }
+
+  iVar4 = (int) (iVar4 - iVar5);
+  if (iVar4 > (-1))
+  {
+    iVar5 = (int) 0;
+    if (iVar4 > 0)
+    {
+      if (iVar4 > 8)
+      {
+        bVar2 = (bool) 0;
+        if ((iVar4 > (-1)) && (iVar4 != 0x7fffffff))
+        {
+          bVar2 = (bool) 1;
+        }
+        if (bVar2)
+        {
+          do
+          {
+            iVar5 = (int) (iVar5 + 8);
+            param_2 = (undefined4 *) (*((undefined4 **) (*(*((undefined4 **) (*(*((undefined4 **) (*(*((undefined4 **) (*param_2))))))))))));
+          }
+          while (iVar5 < (iVar4 - 8U));
+        }
+      }
+      for (; iVar5 < iVar4; iVar5 = (int) (iVar5 + 1))
+      {
+        param_2 = (undefined4 *) ((undefined4 *) (*param_2));
+      }
+
+    }
+    if (((uint) param_1) != ((uint) param_2))
+    {
+      do
+      {
+        if (((((uint) param_1) == ((uint) ((undefined4 *) 0x0))) || (((uint) param_2) == ((uint) ((undefined4 *) 0x0)))) || ((cVar3 = (char) CExcept_ActionCompare((int) param_1, (int) param_2), cVar3 == '\0')))
+        {
+          return (int) (-1);
+        }
+        param_1 = (undefined4 *) ((undefined4 *) (*param_1));
+        param_2 = (undefined4 *) ((undefined4 *) (*param_2));
+      }
+      while (((uint) param_1) != ((uint) param_2));
+    }
+    return (int) iVar4;
+  }
+  return (int) (-1);
+}
+
+bool CExcept_ActionCompare(int param_1, int param_2)
+{
+  bool bVar1;
+  if (param_1 == param_2)
+  {
+    return (bool) 1;
+  }
+  if ((param_1 != 0) && (param_2 != 0))
+  {
+    if ((*((char *) (param_1 + 0x1c))) == (*((char *) (param_2 + 0x1c))))
+    {
+      switch (*((char *) (param_1 + 0x1c)))
+      {
+        case '\x01':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x02':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x03':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 0xc))) == (*((int *) (param_2 + 0xc))));
+        }
+          return (bool) bVar1;
+
+        case '\x04':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x05':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x06':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\a':
+
+        case '\x11':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 0xc))) == (*((int *) (param_2 + 0xc))));
+        }
+          return (bool) bVar1;
+
+        case '\b':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 0x10))) == (*((int *) (param_2 + 0x10))));
+        }
+          return (bool) bVar1;
+
+        case '\t':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 0xc))) == (*((int *) (param_2 + 0xc))));
+        }
+          return (bool) bVar1;
+
+        case '\n':
+
+        case '\v':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 8))) == (*((int *) (param_2 + 8))));
+        }
+          return (bool) bVar1;
+
+        case '\f':
+          return (bool) ((*((int *) (param_1 + 0xc))) == (*((int *) (param_2 + 0xc))));
+
+        case '\r':
+          return (bool) ((*((int *) (param_1 + 0xc))) == (*((int *) (param_2 + 0xc))));
+
+        case '\x0e':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x0f':
+          return (bool) ((*((int *) (param_1 + 8))) == (*((int *) (param_2 + 8))));
+
+        case '\x10':
+          return (bool) 1;
+
+        case '\x12':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
+        case '\x13':
+
+        case '\x14':
+          bVar1 = (bool) 0;
+          if ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))))
+        {
+          bVar1 = (bool) ((*((int *) (param_1 + 0x10))) == (*((int *) (param_2 + 0x10))));
+        }
+          return (bool) bVar1;
+
+        case '\x15':
+          return (bool) ((*((int *) (param_1 + 4))) == (*((int *) (param_2 + 4))));
+
         default:
-            CError_FATAL(302);
-            break;
+          CError_Internal(cexcept_filename, 0x14b);
+
+      }
+
     }
-    result = 0;
-    return result;
+    return (bool) 0;
+  }
+  return (bool) 0;
 }
 
-unsigned char fn_004e0ab0(Statement *node)
+bool CExcept_IsCompatibleSpecificationList(undefined4 *param_1, undefined4 *param_2)
 {
-    data_00581c30 = 0;
-    while (node != NULL) {
-        switch (node->type) {
-            case ST_NOP:
-            case ST_LABEL:
-            case ST_GOTO:
-            case ST_ASM:
-                break;
-            case ST_RETURN:
-                if (node->expr.expression == NULL) {
-                    break;
-                }
-            case ST_EXPRESSION:
-            case ST_SWITCH:
-            case ST_IFGOTO:
-            case ST_IFNGOTO:
-            case ST_BEGINCATCH:
-            case ST_ENDCATCH:
-            case ST_ENDCATCHDTOR:
-            case ST_GOTOEXPR:
-                CExpr_SearchExprTree(node->expr.expression, fn_004e0b20, 2U, 54U, 55U);
-                if (data_00581c30 != 0) {
-                    return 1;
-                }
-                break;
-            default:
-                CError_FATAL(2414);
-                break;
+  undefined4 *puVar1;
+  if (((uint) param_1) == ((uint) ((undefined4 *) 0x0)))
+  {
+    return (bool) 1;
+  }
+  if (((uint) param_2) == ((uint) ((undefined4 *) 0x0)))
+  {
+    return (bool) 0;
+  }
+  if (param_1[1] == 0)
+  {
+    return (bool) (param_2[1] == 0);
+  }
+  if (param_2[1] != 0)
+  {
+    do
+    {
+      puVar1 = (undefined4 *) param_1;
+      if (((uint) param_2) == ((uint) ((undefined4 *) 0x0)))
+      {
+        return (bool) 1;
+      }
+      while (1)
+      {
+        if (((uint) puVar1) == ((uint) ((undefined4 *) 0x0)))
+        {
+          return (bool) 0;
         }
-        node = node->next;
+        if ((param_2[1] == puVar1[1]) && (param_2[2] == puVar1[2]))
+          break;
+        puVar1 = (undefined4 *) ((undefined4 *) (*puVar1));
+      }
+
+      param_2 = (undefined4 *) ((undefined4 *) (*param_2));
     }
-    return 0;
+    while (1);
+  }
+  return (bool) 1;
 }
 
-/* Temporary list produced by exception traversal. */
-
-void emit_flagged_class_offsets(TypeClass *type)
+void CExcept_CompareSpecifications(undefined4 *param_1, undefined4 *param_2)
 {
-    char buf[16];
-    ClassNode *node = add_class_and_bases(NULL, type, type, 0U, 0U, 1U);
-    while (node != NULL) {
-        if (node->flagd != 0 && node->flage == 0) {
-            fn_004e2940(node->cls);
-            AppendGListByte(&data_00583548, 33);
-            if ((UInt32)node->offset != 0U) {
-                sprintf(buf, "%ld!", node->offset);
-                CompilerTools_AppendGListString(&data_00583548, buf);
-            } else {
-                AppendGListByte(&data_00583548, 33);
-            }
-        }
-        node = node->next;
-    }
-}
+  short sVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  puVar2 = (undefined4 *) param_2;
+  for (puVar3 = (undefined4 *) param_1; ((uint) puVar3) != ((uint) ((undefined4 *) 0x0)); puVar3 = (undefined4 *) ((undefined4 *) (*puVar3)))
+  {
+    if (((uint) puVar2) == ((uint) ((undefined4 *) 0x0)))
+      goto LAB_004a0668;
+    puVar2 = (undefined4 *) ((undefined4 *) (*puVar2));
+  }
 
-/* Records consumed by the exception-name writer. */
-
-void fn_004e2940(TypeClass *exceptionData)
-{
-    NameSpace *entry;
-    char name[64];
-
-    append_namespace_names(exceptionData->nspace->parent);
-    CompilerTools_AppendGListString(&data_00583548, exceptionData->classname->name);
-    entry = exceptionData->nspace->parent;
-    while (entry != NULL) {
-        if (entry->is_global == 0 && entry->is_templ == 0 && entry->name == NULL) {
-            if (data_00588238 == NULL) {
-                CError_FATAL(790);
-            }
-            sprintf(name, "*%lx*%lx*", &data_00588238, (int)&entry);
-            CompilerTools_AppendGListString(&data_00583548, name);
-            break;
-        }
-        entry = entry->parent;
-    }
-}
-
-Boolean CExcept_ActionCompare(CException *left, CException *right)
-{
-    if (left->kind == right->kind) {
-        switch (left->kind) {
-            case 1:
-                return left->data.local.object == right->data.local.object;
-            case 2:
-                return left->data.local_cond.object == right->data.local_cond.object;
-            case 3:
-                return left->data.local.object == right->data.local.object &&
-                       left->data.local.offset == right->data.local.offset;
-            case 4:
-                return left->data.local.object == right->data.local.object;
-            case 5:
-                return left->data.member_array.objectptr == right->data.member_array.objectptr;
-            case 6:
-                return left->data.types.type[0] == right->data.types.type[0];
-            case 7:
-            case 17:
-                return left->data.member.objectptr == right->data.member.objectptr &&
-                       left->data.member.offset == right->data.member.offset;
-            case 8:
-                return left->data.member_cond.objectptr == right->data.member_cond.objectptr &&
-                       left->data.member_cond.offset == right->data.member_cond.offset;
-            case 9:
-                return left->data.member_array.objectptr == right->data.member_array.objectptr &&
-                       left->data.member_array.offset == right->data.member_array.offset;
-            case 10:
-            case 11:
-                return left->data.pair.first == right->data.pair.first &&
-                       left->data.pair.second == right->data.pair.second;
-            case 12:
-                return left->data.delete_pointer_cond.cond == right->data.delete_pointer_cond.cond;
-            case 13:
-                return left->data.catch_block.label == right->data.catch_block.label;
-            case 14:
-                return left->data.active_catch.info == right->data.active_catch.info;
-            case 16:
-                return 1;
-            case 15:
-                return left->data.specification.ids == right->data.specification.ids;
-            default:
-                CError_FATAL(253);
-        }
-    }
-    return 0;
-}
-
-void CExcept_CompareSpecifications(ExceptSpecList *firstSpecs, ExceptSpecList *secondSpecs)
-{
-    ExceptSpecList *firstCursor;
-    ExceptSpecList *secondCursor;
-    ExceptSpecList *spec;
-    ExceptSpecList *match;
-
-    for (firstCursor = firstSpecs, secondCursor = secondSpecs;;) {
-        if (firstCursor == NULL) {
-            if (secondCursor == NULL) {
-                break;
-            }
-            CError_ReportError(ERR_EXCEPTION_SPECIFICATION_LIST_MISMATCH);
-            return;
-        }
-        if (secondCursor == NULL) {
-            CError_ReportError(ERR_EXCEPTION_SPECIFICATION_LIST_MISMATCH);
-            return;
-        }
-        firstCursor = firstCursor->next;
-        secondCursor = secondCursor->next;
-    }
-    if (firstSpecs->type == NULL) {
-        if (secondSpecs->type != NULL) {
-            CError_ReportError(ERR_EXCEPTION_SPECIFICATION_LIST_MISMATCH);
-        }
+  if (((uint) puVar2) == ((uint) ((undefined4 *) 0x0)))
+  {
+    if (param_1[1] == 0)
+    {
+      if (param_2[1] == 0)
+      {
         return;
+      }
     }
-    if (secondSpecs->type == NULL) {
-        CError_ReportError(ERR_EXCEPTION_SPECIFICATION_LIST_MISMATCH);
-        return;
-    }
-    for (spec = firstSpecs; spec != NULL; spec = spec->next) {
-        for (match = secondSpecs; match != NULL; match = match->next) {
-            if (iscpp_typeequal(spec->type, match->type) != 0 && spec->qual == match->qual) {
-                break;
-            }
-        }
-        if (match == NULL) {
-            CError_ReportError(ERR_EXCEPTION_SPECIFICATION_LIST_MISMATCH);
+    else
+    {
+      puVar3 = (undefined4 *) param_1;
+      if (param_2[1] != 0)
+      {
+        while (1)
+        {
+          puVar2 = (undefined4 *) param_2;
+          if (((uint) puVar3) == ((uint) ((undefined4 *) 0x0)))
+          {
             return;
+          }
+          for (; (((uint) puVar2) != ((uint) ((undefined4 *) 0x0))) && ((sVar1 = (short) iscpp_typeequal(puVar3[1], puVar2[1]), (sVar1 == 0) || (puVar3[2] != puVar2[2]))); puVar2 = (undefined4 *) ((undefined4 *) (*puVar2)))
+          {
+          }
+
+          if (((uint) puVar2) == ((uint) ((undefined4 *) 0x0)))
+            break;
+          puVar3 = (undefined4 *) ((undefined4 *) (*puVar3));
         }
+
+      }
     }
+  }
+  LAB_004a0668:
+  fn_0045c480(0x2819, param_1, param_2);
+
+  return;
 }
 
-/* 0x5641d0, "CException.c" */
-
-void CException_004e35b0(CException *node)
+undefined4 fn_004a06d0(int param_1)
 {
-    while (node != NULL) {
-        switch (node->kind) {
-            case 1:
-                CInline_0050f240(node->data.local.dtor);
-                break;
-            case 2:
-                CInline_0050f240(node->data.types.type[2]);
-                break;
-            case 3:
-                CInline_0050f240(node->data.local.dtor);
-                break;
-            case 4:
-                CInline_0050f240(node->data.local_pointer.dtor);
-                break;
-            case 5:
-                CInline_0050f240(node->data.member_array.dtor);
-                break;
-            case 6:
-                CInline_0050f240(node->data.types.type[2]);
-                break;
-            case 7:
-            case 17:
-                CInline_0050f240(node->data.member.dtor);
-                break;
-            case 8:
-                CInline_0050f240(node->data.types.type[2]);
-                break;
-            case 9:
-                CInline_0050f240(node->data.member_array.dtor);
-                break;
-            case 10:
-            case 11:
-                CInline_0050f240(node->data.pair.second);
-                break;
-            case 12:
-                CInline_0050f240(node->data.delete_pointer.deletefunc);
-                break;
-            case 13:
-            case 14:
-            case 15:
-            case 16:
-                break;
-            default:
-                CError_FATAL(131);
-                break;
-        }
-        node = node->next;
+  undefined4 uVar1;
+  uVar1 = (undefined4) 0;
+  if (((*((int *) (param_1 + 10))) != 0) && ((*((int *) ((*((int *) (param_1 + 10))) + 4))) == 0))
+  {
+    uVar1 = (undefined4) 1;
+  }
+  return (undefined4) uVar1;
+}
+
+void CExcept_CheckStackRefs(undefined4 *param_1)
+{
+  for (; ((uint) param_1) != ((uint) ((undefined4 *) 0x0)); param_1 = (undefined4 *) ((undefined4 *) (*param_1)))
+  {
+    switch (*((undefined1 *) (param_1 + 7)))
+    {
+      case 1:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 2:
+        fn_0047b230(param_1[3]);
+        break;
+
+      case 3:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 4:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 5:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 6:
+        fn_0047b230(param_1[3]);
+        break;
+
+      case 7:
+
+      case 0x11:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 8:
+        fn_0047b230(param_1[3]);
+        break;
+
+      case 9:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 10:
+
+      case 0xb:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 0xc:
+        fn_0047b230(param_1[2]);
+        break;
+
+      case 0xd:
+
+      case 0xe:
+
+      case 0xf:
+
+      case 0x10:
+
+      case 0x12:
+        break;
+
+      case 0x13:
+
+      case 0x14:
+        fn_0047b230(param_1[2]);
+        fn_0047b230(param_1[3]);
+        break;
+
+      case 0x15:
+        fn_0047b230(param_1[3]);
+        break;
+
+      default:
+        CError_Internal(cexcept_filename, 0x97);
+
     }
+
+  }
+
+  return;
 }
 
 void CExcept_Setup(void)
 {
-    UINT_00587fc4 = NULL;
-    exception_cleanup_registered = 0U;
-    data_005884fa = 0U;
-    return;
+  DAT_00710b30 = (uint *) 0;
+  cexcept_uniqueobjs = (uint *) 0;
+  DAT_00725e5d = (byte) 0;
+  DAT_00725ed8 = (byte) 0;
+  return;
 }

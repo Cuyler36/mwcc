@@ -10,14 +10,26 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 268 source files build, 2,638 candidate functions are
-mapped, and 1,080 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 269 source files build, 2,682 candidate functions are
+mapped, and 1,085 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+EPPC_DWARF2 has all 44 supported functions attempted, with five full-byte and
+relocation matches. Sixteen final compiler profiles and source-form experiments
+were compared; CW94 without loop optimization is closest at 41.93% weighted code
+similarity. The selected source passes 12,544 bounded native comparisons, with
+1,472 additional checks on the normal object. All 72 named data/BSS records,
+totaling 5,403 bytes, match in bytes, categories and fixups. Fifteen native switch
+tables totaling 1,020 bytes retain unverified compiled projections. Native packed
+records, signed LEB128 encoding, debug-entry links and source records preserve
+GC3's DWARF2 behavior; the 1.2.5 DWARF1 layouts cannot be reused directly.
+External service models, finite fixtures and inferred scratch-buffer capacities
+limit the evidence. Original physical TU extent remains unproved.
 
 PeepholePatterns has all 52 supported members attempted: registration, 48
 callbacks and three connected helpers. Three callbacks match in full bytes and

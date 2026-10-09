@@ -6654,5 +6654,181 @@
   "fn_00638690": {
     "name": "fn_00638690",
     "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_005ce5e0": {
+    "name": "fn_005ce5e0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005cefc0": {
+    "name": "fn_005cefc0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005cf400": {
+    "name": "fn_005cf400",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005cf6d0": {
+    "name": "fn_005cf6d0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d0020": {
+    "name": "fn_005d0020",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d00e0": {
+    "name": "fn_005d00e0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d0320": {
+    "name": "fn_005d0320",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d03a0": {
+    "name": "fn_005d03a0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d05a0": {
+    "name": "fn_005d05a0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d0820": {
+    "name": "fn_005d0820",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d0b20": {
+    "name": "fn_005d0b20",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d0ce0": {
+    "name": "fn_005d0ce0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d10f0": {
+    "name": "fn_005d10f0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d1190": {
+    "name": "fn_005d1190",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d1400": {
+    "name": "fn_005d1400",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d2440": {
+    "name": "fn_005d2440",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d2c80": {
+    "name": "fn_005d2c80",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d2ce0": {
+    "name": "fn_005d2ce0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d5930": {
+    "name": "fn_005d5930",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d5b00": {
+    "name": "fn_005d5b00",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d5f30": {
+    "name": "fn_005d5f30",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6010": {
+    "name": "fn_005d6010",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d63f0": {
+    "name": "fn_005d63f0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6b40": {
+    "name": "fn_005d6b40",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6c80": {
+    "name": "fn_005d6c80",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6dd0": {
+    "name": "fn_005d6dd0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6e70": {
+    "name": "fn_005d6e70",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d6ff0": {
+    "name": "fn_005d6ff0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7200": {
+    "name": "fn_005d7200",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7400": {
+    "name": "fn_005d7400",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7640": {
+    "name": "fn_005d7640",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7870": {
+    "name": "fn_005d7870",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7a10": {
+    "name": "fn_005d7a10",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7de0": {
+    "name": "fn_005d7de0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d7f70": {
+    "name": "fn_005d7f70",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d80f0": {
+    "name": "fn_005d80f0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d8180": {
+    "name": "fn_005d8180",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d82b0": {
+    "name": "fn_005d82b0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d8330": {
+    "name": "fn_005d8330",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d84f0": {
+    "name": "fn_005d84f0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d85a0": {
+    "name": "fn_005d85a0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d85c0": {
+    "name": "fn_005d85c0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d8640": {
+    "name": "fn_005d8640",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
+  },
+  "fn_005d86b0": {
+    "name": "fn_005d86b0",
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c"
   }
 }

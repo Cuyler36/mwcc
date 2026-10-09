@@ -26118,6 +26118,490 @@
     }
   },
   {
+    "name": "fn_005ce5e0",
+    "address": "0x5ce5e0",
+    "size": 2525,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cefc0",
+    "address": "0x5cefc0",
+    "size": 1081,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cf400",
+    "address": "0x5cf400",
+    "size": 708,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005cf6d0",
+    "address": "0x5cf6d0",
+    "size": 2377,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d0020",
+    "address": "0x5d0020",
+    "size": 177,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d00e0",
+    "address": "0x5d00e0",
+    "size": 566,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d0320",
+    "address": "0x5d0320",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d03a0",
+    "address": "0x5d03a0",
+    "size": 509,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d05a0",
+    "address": "0x5d05a0",
+    "size": 625,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d0820",
+    "address": "0x5d0820",
+    "size": 759,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d0b20",
+    "address": "0x5d0b20",
+    "size": 442,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d0ce0",
+    "address": "0x5d0ce0",
+    "size": 1038,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d10f0",
+    "address": "0x5d10f0",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d1190",
+    "address": "0x5d1190",
+    "size": 618,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d1400",
+    "address": "0x5d1400",
+    "size": 4149,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d2440",
+    "address": "0x5d2440",
+    "size": 2106,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d2c80",
+    "address": "0x5d2c80",
+    "size": 88,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d2ce0",
+    "address": "0x5d2ce0",
+    "size": 11334,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d5930",
+    "address": "0x5d5930",
+    "size": 462,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d5b00",
+    "address": "0x5d5b00",
+    "size": 1071,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d5f30",
+    "address": "0x5d5f30",
+    "size": 224,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6010",
+    "address": "0x5d6010",
+    "size": 985,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d63f0",
+    "address": "0x5d63f0",
+    "size": 1865,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6b40",
+    "address": "0x5d6b40",
+    "size": 310,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6c80",
+    "address": "0x5d6c80",
+    "size": 333,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6dd0",
+    "address": "0x5d6dd0",
+    "size": 157,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6e70",
+    "address": "0x5d6e70",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d6ff0",
+    "address": "0x5d6ff0",
+    "size": 518,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7200",
+    "address": "0x5d7200",
+    "size": 503,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7400",
+    "address": "0x5d7400",
+    "size": 569,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7640",
+    "address": "0x5d7640",
+    "size": 550,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7870",
+    "address": "0x5d7870",
+    "size": 406,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7a10",
+    "address": "0x5d7a10",
+    "size": 974,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7de0",
+    "address": "0x5d7de0",
+    "size": 390,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d7f70",
+    "address": "0x5d7f70",
+    "size": 375,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d80f0",
+    "address": "0x5d80f0",
+    "size": 129,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d8180",
+    "address": "0x5d8180",
+    "size": 290,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d82b0",
+    "address": "0x5d82b0",
+    "size": 122,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d8330",
+    "address": "0x5d8330",
+    "size": 441,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d84f0",
+    "address": "0x5d84f0",
+    "size": 168,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d85a0",
+    "address": "0x5d85a0",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d85c0",
+    "address": "0x5d85c0",
+    "size": 126,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d8640",
+    "address": "0x5d8640",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005d86b0",
+    "address": "0x5d86b0",
+    "size": 131,
+    "source": "src/GC_3_0a5_2/backend/EPPC_DWARF2.c",
+    "identity_evidence": "Native EPPC_DWARF2.c assertions, private-state/call closure, recovered enum callback and corroborated DWARF2 initialization/declaration CSV role leads; raw labels retained. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Disjoint recovered native entries and reachable bodies; indexed jump bounds and all native table labels checked independently",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CTemplateClass_InstantiateClass",
     "address": "0x005d87a0",
     "size": 1721,

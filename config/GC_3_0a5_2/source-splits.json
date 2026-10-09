@@ -5814,5 +5814,13 @@
   "IRO_LoopUnroller": {
     "name": "IRO_LoopUnroller",
     "source": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+  },
+  "fn_0063b100": {
+    "name": "fn_0063b100",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c"
+  },
+  "fn_0063b890": {
+    "name": "fn_0063b890",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c"
   }
 }

@@ -20,7 +20,6 @@
     "src/backend/Intrinsics.c",
     "src/backend/LiveVariables.c",
     "src/backend/MachineSimulation603.c",
-    "src/backend/MachineSimulation603e.c",
     "src/backend/MachineSimulation604.c",
     "src/backend/MachineSimulation7400.c",
     "src/backend/MachineSimulation750.c",
@@ -266,7 +265,8 @@
     "src/GC_3_0a5_2/backend/MachineSimulation601.c",
     "src/GC_3_0a5_2/frontend/CMangler.c",
     "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
-    "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+    "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4393,6 +4393,24 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation603e.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5417,7 +5435,13 @@
     "src/GC_3_0a5_2/frontend/CMangler/CMangler_VTableName",
     "src/GC_3_0a5_2/frontend/CMangler/CMangler_Setup",
     "src/GC_3_0a5_2/optimizer/IroAggregateAssignment/fn_00612810",
-    "src/GC_3_0a5_2/optimizer/IroUnrollLoop/IRO_LoopUnroller"
+    "src/GC_3_0a5_2/optimizer/IroUnrollLoop/IRO_LoopUnroller",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/serializes",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/issue",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/can_issue",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/initialize",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/latency",
+    "src/GC_3_0a5_2/backend/MachineSimulation603e/fn_0063b890"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -11004,6 +11028,25 @@
       "_fn_0045faa0": "0x5c3330",
       "_NativeZero": "0x704908",
       "_NativeOne": "0x699b76"
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation603e.c": {
+      "_nativeOpcodeTable": "0x6bdb2c",
+      "_machine603eInitialized": "0x6ff700",
+      "_machine603eOpcodes": "0x6ff701",
+      "_machine603eDisplay": "0x6ff6b0",
+      "_machine603e": "0x6bdafc",
+      "_machineSharedCode": "0x5994e0",
+      "_fn_00599530": "0x599530",
+      "_fn_0063b100": "0x63b100",
+      "_serializes": "0x63b270",
+      "_advance_clock": "0x63b290",
+      "_issue": "0x63b660",
+      "_can_issue": "0x63b700",
+      "_initialize": "0x63b7a0",
+      "_latency": "0x63b850",
+      "_fn_0063b890": "0x63b890",
+      "_completionbuffers": "0x7002a2",
+      "_pipeline": "0x7002da"
     }
   },
   "original_source_units": {
@@ -11060,7 +11103,8 @@
     "MachineSimulation601.c": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
     "CMangler.c": "src/GC_3_0a5_2/frontend/CMangler.c",
     "IroAggregateAssignment.c": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
-    "IroUnrollLoop.c": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c"
+    "IroUnrollLoop.c": "src/GC_3_0a5_2/optimizer/IroUnrollLoop.c",
+    "MachineSimulation603e.c": "src/GC_3_0a5_2/backend/MachineSimulation603e.c"
   },
   "held_native_functions": [
     {

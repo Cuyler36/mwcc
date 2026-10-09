@@ -27863,6 +27863,94 @@
     }
   },
   {
+    "name": "fn_0063b100",
+    "address": "0x63b100",
+    "size": 363,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "serializes",
+    "address": "0x63b270",
+    "size": 20,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "advance_clock",
+    "address": "0x63b290",
+    "size": 968,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "issue",
+    "address": "0x63b660",
+    "size": 155,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "can_issue",
+    "address": "0x63b700",
+    "size": 151,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize",
+    "address": "0x63b7a0",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "latency",
+    "address": "0x63b850",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063b890",
+    "address": "0x63b890",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation603e.c",
+    "identity_evidence": "Verified machine603e CPU option5/48-byte descriptor and complete native simulator family; six local Mac names corroborated by callback roles. Filename inferred from architecture and baseline, with no native filename diagnostic; physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, independently verified descriptor/direct references and all NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_0063cb00",
     "address": "0x63cb00",
     "size": 406,

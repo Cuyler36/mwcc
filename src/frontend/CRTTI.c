@@ -1,3 +1,4 @@
+#include "version.h"
 #define CERROR_FILE "unknown.c"
 #include "compiler/common.h"
 #include "compiler/CRTTI.h"
@@ -501,6 +502,7 @@ void check_constness_casted_away(Type *sourceType, int sourceQualifiers, Type *t
     }
 }
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CRTTI_ParseTypeid(void)
 {
     Type *classType;
@@ -578,6 +580,8 @@ ENode *CRTTI_ParseTypeid(void)
         return result;
     }
 }
+
+#endif
 
 RData *CRTTI_BuildRTTIOffsetTable(TypeClass *classType, unsigned char *tableName, RData *tableHead)
 {

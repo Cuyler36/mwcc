@@ -4982,5 +4982,81 @@
   "optimize_rlwinm_and_addi": {
     "name": "adjustforward",
     "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_005e8490": {
+    "name": "fn_005e8490",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e84d0": {
+    "name": "fn_005e84d0",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8620": {
+    "name": "fn_005e8620",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8660": {
+    "name": "fn_005e8660",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8910": {
+    "name": "fn_005e8910",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8950": {
+    "name": "fn_005e8950",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8c30": {
+    "name": "fn_005e8c30",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8f30": {
+    "name": "fn_005e8f30",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e8f80": {
+    "name": "fn_005e8f80",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e92b0": {
+    "name": "fn_005e92b0",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e93c0": {
+    "name": "fn_005e93c0",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9500": {
+    "name": "CRTTI_ParseTypeid",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e95a0": {
+    "name": "fn_005e95a0",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9790": {
+    "name": "CRTTI_GetTypeInfoObject",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9940": {
+    "name": "fn_005e9940",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9a10": {
+    "name": "fn_005e9a10",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9db0": {
+    "name": "fn_005e9db0",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "fn_005e9e60": {
+    "name": "fn_005e9e60",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
+  },
+  "CRTTI_ParseTypeid": {
+    "name": "CRTTI_ParseTypeid",
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c"
   }
 }

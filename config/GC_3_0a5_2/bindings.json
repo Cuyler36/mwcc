@@ -295,7 +295,7 @@
   "_CPrep_SaveAndSetOption": "0x00447160",
   "_CPrep_SaveFunctionBodyTokens": "0x00448700",
   "_CPrep_UpdateTokenLine": "0x00447a30",
-  "_CRTTI_ParseTypeid": "0x005e95a0",
+  "_CRTTI_ParseTypeid": "0x5e9500",
   "_CTemplTool_EqualArgs": "0x0053c850",
   "_CTemplTool_EqualParams": "0x0053dcc0",
   "_CTemplTool_GetSelfRefTemplate": "0x004ef2b0",

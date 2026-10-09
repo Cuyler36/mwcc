@@ -25228,15 +25228,200 @@
     }
   },
   {
-    "name": "CRTTI_ParseTypeid",
-    "address": "0x005e95a0",
-    "size": 488,
-    "source": "src/frontend/CRTTI.c",
-    "baseline_name": "CRTTI_ParseTypeid",
-    "baseline_address": "0x005334c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_005e8490",
+    "address": "0x5e8490",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e84d0",
+    "address": "0x5e84d0",
+    "size": 336,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8620",
+    "address": "0x5e8620",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8660",
+    "address": "0x5e8660",
+    "size": 683,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8910",
+    "address": "0x5e8910",
+    "size": 60,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8950",
+    "address": "0x5e8950",
+    "size": 731,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8c30",
+    "address": "0x5e8c30",
+    "size": 762,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8f30",
+    "address": "0x5e8f30",
+    "size": 78,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e8f80",
+    "address": "0x5e8f80",
+    "size": 808,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e92b0",
+    "address": "0x5e92b0",
+    "size": 257,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e93c0",
+    "address": "0x5e93c0",
+    "size": 314,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CRTTI_ParseTypeid",
+    "address": "0x5e9500",
+    "size": 157,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e95a0",
+    "address": "0x5e95a0",
+    "size": 488,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CRTTI_GetTypeInfoObject",
+    "address": "0x5e9790",
+    "size": 426,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9940",
+    "address": "0x5e9940",
+    "size": 205,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9a10",
+    "address": "0x5e9a10",
+    "size": 925,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9db0",
+    "address": "0x5e9db0",
+    "size": 171,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e9e60",
+    "address": "0x5e9e60",
+    "size": 244,
+    "source": "src/GC_3_0a5_2/frontend/CRTTI.c",
+    "identity_evidence": "Native CRTTI.c assertions, call-connected parser/cast/typeinfo/base-list family, Mac symbol roles and explicit whole-family caller/ABI review. Applied v10 VTT label rejected for the typeinfo payload builder.",
+    "boundary_evidence": {
+      "method": "Native CFG, forty direct family calls, all saved entries and neighboring FunctionCalls/TranslatorUtils seams audited; no extra entry or interior target",
       "unresolved_indirect_flow": false
     }
   },

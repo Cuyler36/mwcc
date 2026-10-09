@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 255 source files build, 2,218 candidate functions are
-mapped, and 979 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 256 source files build, 2,235 candidate functions are
+mapped, and 985 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,14 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+CRTTI has all 18 supported cast, typeid and typeinfo members attempted, with
+six exact matches. Ten compiler profiles and four source forms were tested;
+all 4,608 bounded native comparisons pass. The filename and namespace/type
+names total 22 verified bytes; eight generated allocations remain unclaimed.
+The zero-argument typeid parser mapping is corrected to 0x5e9500, while its
+three-argument semantic helper keeps a separate address name. All retained
+CRTTI objects remain unchanged, and all four version checks pass.
 
 AddPropagation has all four descriptor-supported members attempted, with one
 exact match. Fourteen compiler profiles and 15 source forms were tested; all

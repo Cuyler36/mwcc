@@ -6438,5 +6438,17 @@
   "fn_004ec860": {
     "name": "fn_004ec860",
     "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_00638800": {
+    "name": "fn_00638800",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
+  },
+  "fn_00638a00": {
+    "name": "fn_00638a00",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
+  },
+  "fn_00639410": {
+    "name": "fn_00639410",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
   }
 }

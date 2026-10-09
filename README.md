@@ -10,14 +10,23 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 266 source files build, 2,577 candidate functions are
-mapped, and 1,072 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 267 source files build, 2,587 candidate functions are
+mapped, and 1,077 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+MachineSimulationAltiVec has all ten supported functions attempted, with five
+full-byte and relocation matches and 76.49% weighted code similarity. All 8,129
+data bytes, categories and fixups match, including both generated switch tables.
+The normal object passes 20,624 native comparisons covering all 703 nonpadding
+instructions. Native opcode metadata, the sixteen-entry completion ring,
+26 pipeline stages, dispatch limits and store/load readiness rules are preserved.
+The filename comes from native assertions; callback names stay source scoped.
+Diagnostic-service models and finite fixtures limit the execution evidence.
 
 DumpUtils has all 14 supported native functions reconstructed, with five
 full-byte and relocation matches. Its normal object passes 12,880 bounded

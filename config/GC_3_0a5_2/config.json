@@ -267,7 +267,8 @@
     "src/GC_3_0a5_2/frontend/CPrec.c",
     "src/GC_3_0a5_2/backend/MachineSimulation604.c",
     "src/GC_3_0a5_2/backend/MachineSimulation750.c",
-    "src/GC_3_0a5_2/frontend/DumpUtils.c"
+    "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4501,6 +4502,24 @@
         "-opt",
         "noloop"
       ]
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O3",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5575,7 +5594,12 @@
     "src/GC_3_0a5_2/frontend/DumpUtils/fn_004eb740",
     "src/GC_3_0a5_2/frontend/DumpUtils/fn_004ebe40",
     "src/GC_3_0a5_2/frontend/DumpUtils/Dump_FreeHandle",
-    "src/GC_3_0a5_2/frontend/DumpUtils/Dump_NewHandle"
+    "src/GC_3_0a5_2/frontend/DumpUtils/Dump_NewHandle",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec/fn_00638a00",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec/serializes",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec/initialize",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec/latency",
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec/complete_instruction"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -11971,6 +11995,39 @@
       "_dump_memfile_assertion": "0x69a408",
       "_dump_env_primary": "0x69a420",
       "_dump_env_secondary": "0x69a428"
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c": {
+      "_fn_00638800": "0x638800",
+      "_fn_00638a00": "0x638a00",
+      "_serializes": "0x638a20",
+      "_advance_clock": "0x638a40",
+      "_issue": "0x638dc0",
+      "_can_issue": "0x638fb0",
+      "_initialize": "0x639160",
+      "_latency": "0x639330",
+      "_complete_instruction": "0x639390",
+      "_fn_00639410": "0x639410",
+      "_nativeOpcodeTable": "0x6bacb4",
+      "_machineInitialized": "0x6fbfe0",
+      "_instruction_timing": "0x6fbfe1",
+      "_machineDisplay": "0x6fbf90",
+      "_finalstages": "0x6bac9c",
+      "_pipeline_units": "0x6baca7",
+      "_completionbuffers": "0x6fcd72",
+      "_pipeline_altivec": "0x6fce22",
+      "_scalar_store_busy": "0x6fcef2",
+      "_load_completed": "0x6fcef6",
+      "_machineFilename": "0x6bbc5e",
+      "_machineAltiVec": "0x6bac6c",
+      "_fetch_pending": "0x6fce02",
+      "_dispatch_available": "0x6fce06",
+      "_load_available": "0x6fce0a",
+      "_scalar_available": "0x6fce0e",
+      "_vector_available": "0x6fce12",
+      "_loads_issued": "0x6fce16",
+      "_scalars_issued": "0x6fce1a",
+      "_vectors_issued": "0x6fce1e",
+      "_CError_Internal": "0x45a250"
     }
   },
   "original_source_units": {
@@ -12035,7 +12092,8 @@
     "MachineSimulation604.c": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
     "CMiddleLayer.c": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
     "MachineSimulation750.c": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
-    "DumpUtils.c": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+    "DumpUtils.c": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "MachineSimulationAltiVec.c": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
   },
   "held_native_functions": [
     {

@@ -29329,6 +29329,116 @@
     }
   },
   {
+    "name": "fn_00638800",
+    "address": "0x638800",
+    "size": 507,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638a00",
+    "address": "0x638a00",
+    "size": 30,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "serializes",
+    "address": "0x638a20",
+    "size": 25,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "advance_clock",
+    "address": "0x638a40",
+    "size": 892,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "issue",
+    "address": "0x638dc0",
+    "size": 483,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "can_issue",
+    "address": "0x638fb0",
+    "size": 429,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize",
+    "address": "0x639160",
+    "size": 460,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "latency",
+    "address": "0x639330",
+    "size": 91,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "complete_instruction",
+    "address": "0x639390",
+    "size": 120,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00639410",
+    "address": "0x639410",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c",
+    "identity_evidence": "MachineSimulationAltiVec.c native filename assertions, full48-byte descriptor and internal helpers; generic static names corroborated by supplied Mac symbols/roles. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct/absolute reference review, independently recovered six callbacks and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_0063a940",
     "address": "0x63a940",
     "size": 363,

@@ -5162,5 +5162,33 @@
   "fn_0060bb40": {
     "name": "RewriteUse",
     "source": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+  },
+  "fn_00621d00": {
+    "name": "propagatecopyinstructions",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_00621d40": {
+    "name": "fn_00621d40",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_00621d80": {
+    "name": "fn_00621d80",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_00621e70": {
+    "name": "propagateandremovecopy",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_00621f30": {
+    "name": "copypropagatestouse",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_00622040": {
+    "name": "is_copy",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "COpt_CopyPropagation": {
+    "name": "propagatecopyinstructions",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
   }
 }

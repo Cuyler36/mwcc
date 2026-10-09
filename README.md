@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 257 source files build, 2,261 candidate functions are
-mapped, and 986 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 258 source files build, 2,266 candidate functions are
+mapped, and 989 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,14 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+CopyPropagation has all six descriptor-supported members attempted, with
+three exact matches. Fourteen compiler profiles and 46 source forms were
+tested; 6,000 bounded native comparisons and 300 ordered callback sequences
+pass. Both callback descriptors, strings and private state total 101 verified
+data/BSS bytes, with 12 exact descriptor relocations. The filename remains
+an architectural inference. Its native entry takes context and mode; the old
+one-argument address alias is removed.
 
 IroExprRegeneration has all 26 supported reconstruction members attempted;
 its 409-byte driver matches exactly. Ten final-source compiler/optimizer

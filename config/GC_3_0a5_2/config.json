@@ -258,7 +258,8 @@
     "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
     "src/GC_3_0a5_2/backend/AddPropagation.c",
     "src/GC_3_0a5_2/frontend/CRTTI.c",
-    "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+    "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "src/GC_3_0a5_2/backend/CopyPropagation.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4145,6 +4146,24 @@
         "-opt",
         "level=3"
       ]
+    },
+    "src/GC_3_0a5_2/backend/CopyPropagation.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5133,7 +5152,10 @@
     "src/GC_3_0a5_2/frontend/CRTTI/fn_005e8f30",
     "src/GC_3_0a5_2/frontend/CRTTI/CRTTI_ParseTypeid",
     "src/GC_3_0a5_2/frontend/CRTTI/fn_005e9db0",
-    "src/GC_3_0a5_2/optimizer/IroExprRegeneration/IRO_RegenerateExpressions"
+    "src/GC_3_0a5_2/optimizer/IroExprRegeneration/IRO_RegenerateExpressions",
+    "src/GC_3_0a5_2/backend/CopyPropagation/propagatecopyinstructions",
+    "src/GC_3_0a5_2/backend/CopyPropagation/fn_00621d40",
+    "src/GC_3_0a5_2/backend/CopyPropagation/propagateandremovecopy"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -9856,6 +9878,31 @@
       "_fn_0060b8e0": "0x60b8e0",
       "_fn_0060ba20": "0x60ba20",
       "_RewriteUse": "0x60bb40"
+    },
+    "src/GC_3_0a5_2/backend/CopyPropagation.c": {
+      "_propagatecopyinstructions": "0x621d00",
+      "_fn_00621d40": "0x621d40",
+      "_fn_00621d80": "0x621d80",
+      "_propagateandremovecopy": "0x621e70",
+      "_copypropagatestouse": "0x621f30",
+      "_is_copy": "0x622040",
+      "_fn_00642be0": "0x642be0",
+      "_fn_00626f40": "0x626f40",
+      "_deletepcode": "0x582a50",
+      "_copy_entries": "0x715c1c",
+      "_copy_use_entries": "0x7102b8",
+      "_copy_block_bits": "0x710720",
+      "_copy_client_changed": "0x7100e8",
+      "_first_virtual": "0x710274",
+      "_propagatedcopies": "0x7107ec",
+      "_copy_valid": "0x6fbf28",
+      "_copy_index": "0x6fbf2c",
+      "_copy_mode": "0x6fbf30",
+      "_copy_name": "0x6baaf0",
+      "_copy_plural": "0x6baaf8",
+      "_copy_format": "0x6bab00",
+      "_copy_prop": "0x6bab08",
+      "_copy_selective_prop": "0x6bab2a"
     }
   },
   "original_source_units": {
@@ -9900,6 +9947,7 @@
     "TranslatorUtils.c": "src/GC_3_0a5_2/frontend/TranslatorUtils.c",
     "AddPropagation.c": "src/GC_3_0a5_2/backend/AddPropagation.c",
     "CRTTI.c": "src/GC_3_0a5_2/frontend/CRTTI.c",
-    "IroExprRegeneration.c": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c"
+    "IroExprRegeneration.c": "src/GC_3_0a5_2/optimizer/IroExprRegeneration.c",
+    "CopyPropagation.c": "src/GC_3_0a5_2/backend/CopyPropagation.c"
   }
 }

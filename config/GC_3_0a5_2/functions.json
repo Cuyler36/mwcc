@@ -26190,15 +26190,68 @@
     }
   },
   {
-    "name": "COpt_CopyPropagation",
-    "address": "0x00621d00",
+    "name": "propagatecopyinstructions",
+    "address": "0x621d00",
     "size": 61,
-    "source": "src/optimizer/ValueNumbering.c",
-    "baseline_name": "COpt_CopyPropagation",
-    "baseline_address": "0x005200e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621d40",
+    "address": "0x621d40",
+    "size": 63,
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00621d80",
+    "address": "0x621d80",
+    "size": 234,
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "propagateandremovecopy",
+    "address": "0x621e70",
+    "size": 189,
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "copypropagatestouse",
+    "address": "0x621f30",
+    "size": 258,
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_copy",
+    "address": "0x622040",
+    "size": 39,
+    "source": "src/GC_3_0a5_2/backend/CopyPropagation.c",
+    "identity_evidence": "Two exact native34-byte COPY client descriptors, callback/state lifecycle,18whole-image driver callers and corroborating Mac roles. CopyPropagation.c filename remains an architectural inference without native assertion proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and descriptor/caller audit;two omitted callback entries independently proven,defined and saved;LiveRegisters prefix,AddPropagation suffix and six-argument availability helper held separate",
       "unresolved_indirect_flow": false
     }
   },

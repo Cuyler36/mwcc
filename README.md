@@ -10,14 +10,23 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 265 source files build, 2,563 candidate functions are
-mapped, and 1,067 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 266 source files build, 2,577 candidate functions are
+mapped, and 1,072 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+DumpUtils has all 14 supported native functions reconstructed, with five
+full-byte and relocation matches. Its normal object passes 12,880 bounded
+native comparisons, including 17 allocation, handle, file and driver failure
+groups. All 58 named data bytes, categories and fixups match. Sixteen final
+compiler profiles were compared; CW94 is closest, with 51.95% code similarity.
+The native varargs, display record, memory-node layout and buffer quirks are
+preserved. External service models and uncovered paths limit the execution
+evidence; original physical TU extent remains unproved.
 
 CMiddleLayer has all 46 supported functions attempted, with twelve full-byte
 and relocation matches. Fourteen compiler profiles and six source forms were

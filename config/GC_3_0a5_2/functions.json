@@ -16664,6 +16664,160 @@
     }
   },
   {
+    "name": "Dump_Printf",
+    "address": "0x4eb710",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004eb740",
+    "address": "0x4eb740",
+    "size": 142,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004eb7d0",
+    "address": "0x4eb7d0",
+    "size": 263,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004eb8e0",
+    "address": "0x4eb8e0",
+    "size": 925,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Dump_CloseToWindow",
+    "address": "0x4ebc80",
+    "size": 439,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ebe40",
+    "address": "0x4ebe40",
+    "size": 233,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Dump_CloseToFile",
+    "address": "0x4ebf30",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ebfc0",
+    "address": "0x4ebfc0",
+    "size": 852,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ec320",
+    "address": "0x4ec320",
+    "size": 377,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Dump_Open",
+    "address": "0x4ec4a0",
+    "size": 471,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Dump_FreeHandle",
+    "address": "0x4ec680",
+    "size": 50,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "Dump_NewHandle",
+    "address": "0x4ec6c0",
+    "size": 64,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ec700",
+    "address": "0x4ec700",
+    "size": 350,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004ec860",
+    "address": "0x4ec860",
+    "size": 126,
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c",
+    "identity_evidence": "DumpUtils.c native filename assertion, supplied six canonical API labels corroborated by native behavior/ABI and callers; full14-member connected family. Physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete reachable native CFG bounded by independently listed Ghidra entries",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CTemplateNew_ParseTemplateDeclaration",
     "address": "0x004eca50",
     "size": 916,

@@ -6382,5 +6382,61 @@
   "fn_0063ca80": {
     "name": "fn_0063ca80",
     "source": "src/GC_3_0a5_2/backend/MachineSimulation750.c"
+  },
+  "Dump_Printf": {
+    "name": "Dump_Printf",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004eb740": {
+    "name": "fn_004eb740",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004eb7d0": {
+    "name": "fn_004eb7d0",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004eb8e0": {
+    "name": "fn_004eb8e0",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "Dump_CloseToWindow": {
+    "name": "Dump_CloseToWindow",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004ebe40": {
+    "name": "fn_004ebe40",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "Dump_CloseToFile": {
+    "name": "Dump_CloseToFile",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004ebfc0": {
+    "name": "fn_004ebfc0",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004ec320": {
+    "name": "fn_004ec320",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "Dump_Open": {
+    "name": "Dump_Open",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "Dump_FreeHandle": {
+    "name": "Dump_FreeHandle",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "Dump_NewHandle": {
+    "name": "Dump_NewHandle",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004ec700": {
+    "name": "fn_004ec700",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
+  },
+  "fn_004ec860": {
+    "name": "fn_004ec860",
+    "source": "src/GC_3_0a5_2/frontend/DumpUtils.c"
   }
 }

@@ -266,7 +266,8 @@
     "src/GC_3_0a5_2/backend/MachineSimulation603.c",
     "src/GC_3_0a5_2/frontend/CPrec.c",
     "src/GC_3_0a5_2/backend/MachineSimulation604.c",
-    "src/GC_3_0a5_2/backend/MachineSimulation750.c"
+    "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "src/GC_3_0a5_2/frontend/DumpUtils.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4480,6 +4481,26 @@
         "-str",
         "noreadonly"
       ]
+    },
+    "src/GC_3_0a5_2/frontend/DumpUtils.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly",
+        "-opt",
+        "noloop"
+      ]
     }
   },
   "matching_functions": [
@@ -5549,7 +5570,12 @@
     "src/GC_3_0a5_2/backend/MachineSimulation750/can_issue",
     "src/GC_3_0a5_2/backend/MachineSimulation750/initialize",
     "src/GC_3_0a5_2/backend/MachineSimulation750/latency",
-    "src/GC_3_0a5_2/backend/MachineSimulation750/fn_0063ca80"
+    "src/GC_3_0a5_2/backend/MachineSimulation750/fn_0063ca80",
+    "src/GC_3_0a5_2/frontend/DumpUtils/Dump_Printf",
+    "src/GC_3_0a5_2/frontend/DumpUtils/fn_004eb740",
+    "src/GC_3_0a5_2/frontend/DumpUtils/fn_004ebe40",
+    "src/GC_3_0a5_2/frontend/DumpUtils/Dump_FreeHandle",
+    "src/GC_3_0a5_2/frontend/DumpUtils/Dump_NewHandle"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -11889,6 +11915,62 @@
       "_pipeline": "0x701c32",
       "_machineSharedCode": "0x5994e0",
       "_fn_00599530": "0x599530"
+    },
+    "src/GC_3_0a5_2/frontend/DumpUtils.c": {
+      "_Dump_Printf": "0x4eb710",
+      "_fn_004eb740": "0x4eb740",
+      "_fn_004eb7d0": "0x4eb7d0",
+      "_fn_004eb8e0": "0x4eb8e0",
+      "_Dump_CloseToWindow": "0x4ebc80",
+      "_fn_004ebe40": "0x4ebe40",
+      "_Dump_CloseToFile": "0x4ebf30",
+      "_fn_004ebfc0": "0x4ebfc0",
+      "_fn_004ec320": "0x4ec320",
+      "_Dump_Open": "0x4ec4a0",
+      "_Dump_FreeHandle": "0x4ec680",
+      "_Dump_NewHandle": "0x4ec6c0",
+      "_fn_004ec700": "0x4ec700",
+      "_fn_004ec860": "0x4ec860",
+      "_fn_00404050": "0x404050",
+      "_fn_00404070": "0x404070",
+      "_fn_00404850": "0x404850",
+      "_fn_004057a0": "0x4057a0",
+      "_fn_004057b0": "0x4057b0",
+      "_fn_00405820": "0x405820",
+      "_fn_00407f50": "0x407f50",
+      "_fn_0040f1f0": "0x40f1f0",
+      "_fn_00420490@8": "0x420490",
+      "_fn_004204e0@16": "0x4204e0",
+      "_fn_00420540@12": "0x420540",
+      "_fn_004205f0@8": "0x4205f0",
+      "_fn_00420680@12": "0x420680",
+      "_fn_004208e0@8": "0x4208e0",
+      "_CLIO_ReportAssertionFailure": "0x42ddb0",
+      "_fn_0044ceb0": "0x44ceb0",
+      "_fn_0044cec0": "0x44cec0",
+      "_fn_0044ced0": "0x44ced0",
+      "_fn_0044cf40": "0x44cf40",
+      "_fn_0044cfe0": "0x44cfe0",
+      "_fn_0044d0a0": "0x44d0a0",
+      "_fn_0044d170": "0x44d170",
+      "_fn_0044d1b0": "0x44d1b0",
+      "_fn_0044d3f0": "0x44d3f0",
+      "_fn_0044d730": "0x44d730",
+      "_fn_0044d740": "0x44d740",
+      "_fn_0044d7d0": "0x44d7d0",
+      "_fn_0044d7f0": "0x44d7f0",
+      "_fn_0044d810": "0x44d810",
+      "_fn_0044d850": "0x44d850",
+      "_fn_0044d890": "0x44d890",
+      "_fn_0044d8e0": "0x44d8e0",
+      "_fn_0044d9f0": "0x44d9f0",
+      "_fn_0044dea0": "0x44dea0",
+      "_fn_0044e080": "0x44e080",
+      "_dump_out_of_memory": "0x69a3ec",
+      "_dump_filename": "0x69a3fc",
+      "_dump_memfile_assertion": "0x69a408",
+      "_dump_env_primary": "0x69a420",
+      "_dump_env_secondary": "0x69a428"
     }
   },
   "original_source_units": {
@@ -11952,7 +12034,8 @@
     "CPrec.c": "src/GC_3_0a5_2/frontend/CPrec.c",
     "MachineSimulation604.c": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
     "CMiddleLayer.c": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
-    "MachineSimulation750.c": "src/GC_3_0a5_2/backend/MachineSimulation750.c"
+    "MachineSimulation750.c": "src/GC_3_0a5_2/backend/MachineSimulation750.c",
+    "DumpUtils.c": "src/GC_3_0a5_2/frontend/DumpUtils.c"
   },
   "held_native_functions": [
     {

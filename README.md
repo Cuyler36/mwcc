@@ -145,12 +145,13 @@ object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
 
 MachineSimulation601 has all eight supported native functions attempted, with
-five exact matches and all 5,238 identified data bytes matching. Twenty-three
+five exact matches and all 5,254 identified data bytes matching. Twenty-three
 final compiler profiles, 12 source forms and 12 additional source/profile
 attempts were compared; 9,216 bounded native execution comparisons pass,
 including complete initialization/issue/advance/clear sequences. Seven missing
 Ghidra descriptor callbacks were recovered from verified pointers and entry
-instructions. The initializer, pipeline advance and display formatter remain
+instructions. The complete 48-byte descriptor includes its verified header
+and display pointer. The initializer, pipeline advance and display formatter remain
 code generation nonmatches. Shared callbacks remain imports; original physical
 TU extent remains unproved.
 

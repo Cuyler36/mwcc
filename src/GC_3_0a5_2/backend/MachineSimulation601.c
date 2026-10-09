@@ -311,15 +311,27 @@ void clear_instruction_and_globals(void);
 int get_latency(Machine601Instruction *instruction);
 void fn_0063cf50(UInt8 highlighted);
 
-void *machine601[8] = {
-    (void *)get_latency,
-    (void *)clear_instruction_and_globals,
-    (void *)is_execution_unit_available,
-    (void *)set_execution_unit_instruction,
-    (void *)advance_instruction_pipeline,
-    (void *)is_execution_unit_seven,
-    machineSharedCode,
-    (void *)fn_0063cb00
+typedef struct Machine601Descriptor {
+    UInt32 header[3];
+    void *callbacks[8];
+    char *display;
+} Machine601Descriptor;
+
+typedef char Machine601DescriptorSize[sizeof(Machine601Descriptor) == 48 ? 1 : -1];
+typedef char Machine601DescriptorInitializeOffset[offsetof(Machine601Descriptor, callbacks[7]) == 40 ? 1 : -1];
+Machine601Descriptor machine601 = {
+    {2, 0, 0},
+    {
+        (void *)get_latency,
+        (void *)clear_instruction_and_globals,
+        (void *)is_execution_unit_available,
+        (void *)set_execution_unit_instruction,
+        (void *)advance_instruction_pipeline,
+        (void *)is_execution_unit_seven,
+        machineSharedCode,
+        (void *)fn_0063cb00
+    },
+    machine601Display
 };
 
 void fn_0063cb00(void)

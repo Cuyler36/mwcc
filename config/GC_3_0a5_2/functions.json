@@ -25878,6 +25878,215 @@
     }
   },
   {
+    "name": "fn_0060bc00",
+    "address": "0x60bc00",
+    "size": 219,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060bce0",
+    "address": "0x60bce0",
+    "size": 150,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060bd80",
+    "address": "0x60bd80",
+    "size": 260,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060be90",
+    "address": "0x60be90",
+    "size": 756,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060c190",
+    "address": "0x60c190",
+    "size": 2072,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060c9b0",
+    "address": "0x60c9b0",
+    "size": 626,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060cc30",
+    "address": "0x60cc30",
+    "size": 522,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060ce40",
+    "address": "0x60ce40",
+    "size": 442,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060d000",
+    "address": "0x60d000",
+    "size": 848,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060d350",
+    "address": "0x60d350",
+    "size": 97,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060d3c0",
+    "address": "0x60d3c0",
+    "size": 618,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060d630",
+    "address": "0x60d630",
+    "size": 620,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060d8a0",
+    "address": "0x60d8a0",
+    "size": 451,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060da70",
+    "address": "0x60da70",
+    "size": 330,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060dbc0",
+    "address": "0x60dbc0",
+    "size": 374,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060dd40",
+    "address": "0x60dd40",
+    "size": 534,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060df60",
+    "address": "0x60df60",
+    "size": 445,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060e120",
+    "address": "0x60e120",
+    "size": 682,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060e3d0",
+    "address": "0x60e3d0",
+    "size": 335,
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c",
+    "identity_evidence": "Call/data-connected native block-ordering and heuristic family with independent outer optimizer caller. Original filename and original physical TU extent unproved;IroBlockReordering.c is explicitly provisional. Raw address names preserve uncertain member identity.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and whole-image call/entry/shared-state review;97-byte omitted callback independently defined and saved;expression regeneration prefix,hoisting and aggregate-assignment suffixes held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "IRO_ConstantFolding",
     "address": "0x00613b90",
     "size": 3774,

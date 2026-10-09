@@ -5190,5 +5190,81 @@
   "COpt_CopyPropagation": {
     "name": "propagatecopyinstructions",
     "source": "src/GC_3_0a5_2/backend/CopyPropagation.c"
+  },
+  "fn_0060bc00": {
+    "name": "fn_0060bc00",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060bce0": {
+    "name": "fn_0060bce0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060bd80": {
+    "name": "fn_0060bd80",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060be90": {
+    "name": "fn_0060be90",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060c190": {
+    "name": "fn_0060c190",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060c9b0": {
+    "name": "fn_0060c9b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060cc30": {
+    "name": "fn_0060cc30",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060ce40": {
+    "name": "fn_0060ce40",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060d000": {
+    "name": "fn_0060d000",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060d350": {
+    "name": "fn_0060d350",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060d3c0": {
+    "name": "fn_0060d3c0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060d630": {
+    "name": "fn_0060d630",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060d8a0": {
+    "name": "fn_0060d8a0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060da70": {
+    "name": "fn_0060da70",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060dbc0": {
+    "name": "fn_0060dbc0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060dd40": {
+    "name": "fn_0060dd40",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060df60": {
+    "name": "fn_0060df60",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060e120": {
+    "name": "fn_0060e120",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_0060e3d0": {
+    "name": "fn_0060e3d0",
+    "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
   }
 }

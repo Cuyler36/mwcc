@@ -4954,5 +4954,33 @@
   "fn_005ea280": {
     "name": "fn_005ea280",
     "source": "src/GC_3_0a5_2/frontend/TranslatorUtils.c"
+  },
+  "fn_00622070": {
+    "name": "propagateaddinstructions",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c"
+  },
+  "fn_006220b0": {
+    "name": "propagateandremoveadd",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c"
+  },
+  "fn_00622550": {
+    "name": "addpropagatestouse",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c"
+  },
+  "fn_00622930": {
+    "name": "is_add",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c"
+  },
+  "COpt_AddPropagation": {
+    "name": "propagateaddinstructions",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c"
+  },
+  "Peephole_VisitBlocksWithMultipleInstructions": {
+    "name": "peepholeoptimizeforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "optimize_rlwinm_and_addi": {
+    "name": "adjustforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
   }
 }

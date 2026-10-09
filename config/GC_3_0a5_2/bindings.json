@@ -256,7 +256,6 @@
   "_CMangler_Setup": "0x00558d30",
   "_CMangler_ThunkName": "0x005580b0",
   "_CMangler_VTableName": "0x00558280",
-  "_COpt_AddPropagation": "0x00622070",
   "_COpt_ArrayToRegister": "0x0062ead0",
   "_COpt_CopyPropagation": "0x00621d00",
   "_COpt_SetLoopCodeMotionMode": "0x00627080",

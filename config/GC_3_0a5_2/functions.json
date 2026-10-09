@@ -25732,15 +25732,46 @@
     }
   },
   {
-    "name": "COpt_AddPropagation",
-    "address": "0x00622070",
+    "name": "propagateaddinstructions",
+    "address": "0x622070",
     "size": 52,
-    "source": "src/optimizer/AddPropagation.c",
-    "baseline_name": "COpt_AddPropagation",
-    "baseline_address": "0x00520bf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c",
+    "identity_evidence": "Native AddPropagation.c assertions, exact34-byte ADD client descriptor callback slots and full generic-engine/caller ABI review; Mac ordinary names corroborate wrapper,callbacks,predicate and data roles.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG, all saved entries and NOP gaps; whole-image descriptor/call/filename/state reference review; copy and constant propagation neighbors separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "propagateandremoveadd",
+    "address": "0x6220b0",
+    "size": 1174,
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c",
+    "identity_evidence": "Native AddPropagation.c assertions, exact34-byte ADD client descriptor callback slots and full generic-engine/caller ABI review; Mac ordinary names corroborate wrapper,callbacks,predicate and data roles.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all saved entries and NOP gaps; whole-image descriptor/call/filename/state reference review; copy and constant propagation neighbors separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "addpropagatestouse",
+    "address": "0x622550",
+    "size": 986,
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c",
+    "identity_evidence": "Native AddPropagation.c assertions, exact34-byte ADD client descriptor callback slots and full generic-engine/caller ABI review; Mac ordinary names corroborate wrapper,callbacks,predicate and data roles.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all saved entries and NOP gaps; whole-image descriptor/call/filename/state reference review; copy and constant propagation neighbors separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_add",
+    "address": "0x622930",
+    "size": 225,
+    "source": "src/GC_3_0a5_2/backend/AddPropagation.c",
+    "identity_evidence": "Native AddPropagation.c assertions, exact34-byte ADD client descriptor callback slots and full generic-engine/caller ABI review; Mac ordinary names corroborate wrapper,callbacks,predicate and data roles.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all saved entries and NOP gaps; whole-image descriptor/call/filename/state reference review; copy and constant propagation neighbors separate",
       "unresolved_indirect_flow": false
     }
   },

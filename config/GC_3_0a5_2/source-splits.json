@@ -5470,5 +5470,33 @@
   "computedefininginstructions": {
     "name": "computedefininginstructions",
     "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "IRO_Dumping": {
+    "name": "IRO_Dumping",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "IRO_FlushDump": {
+    "name": "IRO_FlushDump",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "IRO_Dump": {
+    "name": "IRO_Dump",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "IRO_SetupDump": {
+    "name": "IRO_SetupDump",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "fn_005ed5d0": {
+    "name": "fn_005ed5d0",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "IRO_DumpAfterPhase": {
+    "name": "IRO_DumpAfterPhase",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
+  },
+  "IRO_DumpBeforePhase": {
+    "name": "IRO_DumpBeforePhase",
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c"
   }
 }

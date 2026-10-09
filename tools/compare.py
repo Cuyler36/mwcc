@@ -58,8 +58,8 @@ def inventory(version):
     """The executable as rows: each function config/VERSION/functions.json maps, and the ranges between them."""
     config, pe = original(version)
     functions = json.loads(Path(f"config/{version}/functions.json").read_text())
-    # Explicit Windows diagnostic ownership adds original-only functions to
-    # their source TU, without inventing implementations or compiled objects.
+    # Windows diagnostics and reviewed native ownership add original-only
+    # functions to their source TU without inventing compiled contributions.
     known = {int(f['address'], 0) for f in functions}
     plan = config.get('translation_units')
     if plan:

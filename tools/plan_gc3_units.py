@@ -100,6 +100,27 @@ def generate(args):
         unit['windows_functions'].append(dict(name=row['name'], address=row['address'], size=row['size'],
             compiled_source=row['source'], evidence=row.get('mapping_evidence', 'Manually verified mapping'),
             boundary_evidence=row.get('boundary_evidence')))
+    # Reviewed native entries may have a source family but no compatible source
+    # implementation. Keep those visible in the TU's target without promoting
+    # them to mapped functions or inventing a compiled contribution.
+    known = set(mapped) | set(owners)
+    for item in config.get('held_native_functions', []):
+        address = int(item['address'], 0)
+        source = item['source']
+        section = pe.section_for_address(address)
+        if (address in known or source not in units or item['size'] <= 0 or
+                not section.characteristics & 0x20000000 or
+                address + item['size'] > section.virtual_address + section.virtual_size or
+                not item.get('identity_evidence') or not item.get('boundary_evidence')):
+            raise ValueError(f'Invalid held native function: {item}')
+        unit = units[source]
+        unit['windows_functions'].append(dict(
+            name=item['name'], address=item['address'], size=item['size'],
+            evidence=item['identity_evidence'], boundary_evidence=item['boundary_evidence'],
+            implementation_status='target_only'))
+        if 'Reviewed target-only native entries' not in unit['evidence']:
+            unit['evidence'].append('Reviewed target-only native entries')
+        known.add(address)
     # Mac membership is an expected-name checklist, never a Windows address map.
     mac_only = []
     for item in symbols['units']:

@@ -24118,19 +24118,6 @@
     }
   },
   {
-    "name": "dump_flowgraph",
-    "address": "0x005bd780",
-    "size": 343,
-    "source": "src/optimizer/IroDump.c",
-    "baseline_name": "dump_flowgraph",
-    "baseline_address": "0x0044d670",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
-    "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
-      "unresolved_indirect_flow": false
-    }
-  },
-  {
     "name": "IRO_RemoveUnreachable",
     "address": "0x005bd990",
     "size": 409,
@@ -26005,6 +25992,83 @@
     "identity_evidence": "Native cobraError.c filename assertions at lines61/169;complete four-wrapper diagnostic family and 15-string pointer table. Supplied maps do not establish canonical Windows names;address identities retained.",
     "boundary_evidence": {
       "method": "Complete reachable x86 CFG with 16 external direct calls to four saved starts;781 emitted bytes and native PE fixup sets exact",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_Dumping",
+    "address": "0x5ed490",
+    "size": 23,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_FlushDump",
+    "address": "0x5ed4b0",
+    "size": 13,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_Dump",
+    "address": "0x5ed4c0",
+    "size": 61,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_SetupDump",
+    "address": "0x5ed500",
+    "size": 195,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed5d0",
+    "address": "0x5ed5d0",
+    "size": 11,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_DumpAfterPhase",
+    "address": "0x5ed5e0",
+    "size": 158,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "IRO_DumpBeforePhase",
+    "address": "0x5ed680",
+    "size": 158,
+    "source": "src/GC_3_0a5_2/optimizer/IroDump.c",
+    "identity_evidence": "Supplied SetupDump name and explicit Mac dump-control roles, seven-member state lifecycle and whole-image call/reference/entry review; original physical source extent remains unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and whole-image entries/callers audit; cobraError prefix, IroUnrollLoop suffix and imported graph dumpers separate",
       "unresolved_indirect_flow": false
     }
   },

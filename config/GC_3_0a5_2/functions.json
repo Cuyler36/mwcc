@@ -10858,6 +10858,182 @@
     }
   },
   {
+    "name": "fn_004bac40",
+    "address": "0x4bac40",
+    "size": 330,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CIRStream_ImportCallGraph",
+    "address": "0x4bad90",
+    "size": 591,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bafe0",
+    "address": "0x4bafe0",
+    "size": 54,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bb020",
+    "address": "0x4bb020",
+    "size": 677,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bb2d0",
+    "address": "0x4bb2d0",
+    "size": 443,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bb490",
+    "address": "0x4bb490",
+    "size": 1242,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bb970",
+    "address": "0x4bb970",
+    "size": 433,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bbb30",
+    "address": "0x4bbb30",
+    "size": 349,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bbc90",
+    "address": "0x4bbc90",
+    "size": 255,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bbd90",
+    "address": "0x4bbd90",
+    "size": 284,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bbeb0",
+    "address": "0x4bbeb0",
+    "size": 571,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bc0f0",
+    "address": "0x4bc0f0",
+    "size": 423,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bc2a0",
+    "address": "0x4bc2a0",
+    "size": 612,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bc510",
+    "address": "0x4bc510",
+    "size": 621,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bc780",
+    "address": "0x4bc780",
+    "size": 1581,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004bcdb0",
+    "address": "0x4bcdb0",
+    "size": 252,
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c",
+    "identity_evidence": "Native CIRStreamCallGraph.c filename references,complete import/export/probe/object/body/source-file family,whole-image caller review and supplied canonical import symbol;remaining names retain verified address identities.",
+    "boundary_evidence": {
+      "method": "Complete native CFG,34direct incoming calls,34filename references and saved-entry/interior-target audit;register/location prefix and assembler suffix held separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "FuncLevelAsmPPC_GenerateFunction",
     "address": "0x004bd0b0",
     "size": 1811,

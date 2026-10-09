@@ -5266,5 +5266,69 @@
   "fn_0060e3d0": {
     "name": "fn_0060e3d0",
     "source": "src/GC_3_0a5_2/optimizer/IroBlockReordering.c"
+  },
+  "fn_004bac40": {
+    "name": "fn_004bac40",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bad90": {
+    "name": "CIRStream_ImportCallGraph",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bafe0": {
+    "name": "fn_004bafe0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bb020": {
+    "name": "fn_004bb020",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bb2d0": {
+    "name": "fn_004bb2d0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bb490": {
+    "name": "fn_004bb490",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bb970": {
+    "name": "fn_004bb970",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bbb30": {
+    "name": "fn_004bbb30",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bbc90": {
+    "name": "fn_004bbc90",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bbd90": {
+    "name": "fn_004bbd90",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bbeb0": {
+    "name": "fn_004bbeb0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bc0f0": {
+    "name": "fn_004bc0f0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bc2a0": {
+    "name": "fn_004bc2a0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bc510": {
+    "name": "fn_004bc510",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bc780": {
+    "name": "fn_004bc780",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
+  },
+  "fn_004bcdb0": {
+    "name": "fn_004bcdb0",
+    "source": "src/GC_3_0a5_2/frontend/CIRStreamCallGraph.c"
   }
 }

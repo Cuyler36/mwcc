@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 259 source files build, 2,285 candidate functions are
-mapped, and 989 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 260 source files build, 2,301 candidate functions are
+mapped, and 992 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,14 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+CIRStreamCallGraph has all 16 supported members attempted, with three exact
+matches. Ten compiler profiles and 13 source forms were tested; 6,144 bounded
+native comparisons pass, including safe returning assertions and all 28
+builtin IDs. Its serialized 52-byte records describe source files. Two strings
+and four BSS objects total 49 verified bytes; nine generated tables totaling
+168 bytes remain unclaimed, leaving seven function projections unresolved.
+Original physical TU extent remains unproved.
 
 The block-reordering family has all 19 supported members attempted under
 the provisional filename IroBlockReordering.c. Ten Metrowerks and six MSVC

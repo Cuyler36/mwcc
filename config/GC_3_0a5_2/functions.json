@@ -24377,15 +24377,398 @@
     }
   },
   {
-    "name": "oldassignmentpromotion",
-    "address": "0x005e1e00",
-    "size": 263,
-    "source": "src/frontend/CExpr.c",
-    "baseline_name": "oldassignmentpromotion",
-    "baseline_address": "0x004fa000",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "fn_005df2f0",
+    "address": "0x5df2f0",
+    "size": 3252,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005dffb0",
+    "address": "0x5dffb0",
+    "size": 776,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e02c0",
+    "address": "0x5e02c0",
+    "size": 940,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e0670",
+    "address": "0x5e0670",
+    "size": 152,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e0710",
+    "address": "0x5e0710",
+    "size": 2027,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e0f00",
+    "address": "0x5e0f00",
+    "size": 539,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e1120",
+    "address": "0x5e1120",
+    "size": 212,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e1200",
+    "address": "0x5e1200",
+    "size": 720,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e14d0",
+    "address": "0x5e14d0",
+    "size": 192,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e1590",
+    "address": "0x5e1590",
+    "size": 351,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e16f0",
+    "address": "0x5e16f0",
+    "size": 199,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e17c0",
+    "address": "0x5e17c0",
+    "size": 178,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e1880",
+    "address": "0x5e1880",
+    "size": 554,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e1ab0",
+    "address": "0x5e1ab0",
+    "size": 848,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_AssignmentPromotion",
+    "address": "0x5e1e00",
+    "size": 263,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CExpr_Convert",
+    "address": "0x5e1f10",
+    "size": 2825,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e2a20",
+    "address": "0x5e2a20",
+    "size": 707,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e2cf0",
+    "address": "0x5e2cf0",
+    "size": 1200,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e31a0",
+    "address": "0x5e31a0",
+    "size": 1112,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e3600",
+    "address": "0x5e3600",
+    "size": 613,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e3870",
+    "address": "0x5e3870",
+    "size": 731,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e3b50",
+    "address": "0x5e3b50",
+    "size": 218,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e3c30",
+    "address": "0x5e3c30",
+    "size": 130,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e3cc0",
+    "address": "0x5e3cc0",
+    "size": 1933,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e4450",
+    "address": "0x5e4450",
+    "size": 647,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e46e0",
+    "address": "0x5e46e0",
+    "size": 1172,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e4b80",
+    "address": "0x5e4b80",
+    "size": 199,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e4c50",
+    "address": "0x5e4c50",
+    "size": 3423,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e59b0",
+    "address": "0x5e59b0",
+    "size": 602,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e5c10",
+    "address": "0x5e5c10",
+    "size": 275,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e5d30",
+    "address": "0x5e5d30",
+    "size": 446,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e5ef0",
+    "address": "0x5e5ef0",
+    "size": 1274,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e63f0",
+    "address": "0x5e63f0",
+    "size": 142,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e6480",
+    "address": "0x5e6480",
+    "size": 294,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e65b0",
+    "address": "0x5e65b0",
+    "size": 270,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005e66c0",
+    "address": "0x5e66c0",
+    "size": 180,
+    "source": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
+    "identity_evidence": "Native CExprConvMatch.c filename assertions, complete conversion/operator candidate call graph, supplied symbol identities where corroborated, related1.2.5 algorithms and native ABI/semantic review.",
+    "boundary_evidence": {
+      "method": "Native CFG and whole-image filename/call/entry/seam audit; template prefix and function-call suffix excluded",
       "unresolved_indirect_flow": false
     }
   },

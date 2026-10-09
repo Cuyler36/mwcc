@@ -4576,6 +4576,7 @@ ENode *CExpr_DoExplicitConversion(Type *classType, unsigned long qualifiers, ENo
 
 enum { TYPECLASS_004f9ed0 = 5 };
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *CExpr_AssignmentPromotion(ENode *expression, Type *type, unsigned short qualifiers, int mode)
 {
     ENode *converted;
@@ -4609,7 +4610,9 @@ ENode *CExpr_AssignmentPromotion(ENode *expression, Type *type, unsigned short q
     }
     return oldassignmentpromotion(expression, type, qualifiers, mode);
 }
+#endif
 
+#if VERSION != VERSION_GC_3_0A5_2
 ENode *oldassignmentpromotion(ENode *e, Type *t, SInt16 sz, SInt32 flag)
 {
     Boolean isRef = 0;
@@ -4654,6 +4657,7 @@ ENode *oldassignmentpromotion(ENode *e, Type *t, SInt16 sz, SInt32 flag)
     }
     return converted_expr;
 }
+#endif
 static Boolean CExpr_QualMismatch(SInt32 from, SInt32 to)
 {
     Boolean result =

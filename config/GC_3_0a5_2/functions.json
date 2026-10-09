@@ -8597,327 +8597,827 @@
     "identity_evidence": "Native Windows body and ordinary Mac symbol roles reviewed. Utility source association remains provisional: no explicit CompilerTools.c source record."
   },
   {
-    "name": "write_precompiled_file",
-    "address": "0x0046f600",
+    "name": "PrecompilerExpand",
+    "address": "0x46db70",
+    "size": 1235,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PrecompilerCheckCompressed",
+    "address": "0x46e050",
+    "size": 265,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046e160",
+    "address": "0x46e160",
+    "size": 193,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PrecompilerRead",
+    "address": "0x46e230",
+    "size": 2273,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "PrecompilerCheck",
+    "address": "0x46eb20",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046eb90",
+    "address": "0x46eb90",
+    "size": 473,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046ed70",
+    "address": "0x46ed70",
+    "size": 211,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046ee50",
+    "address": "0x46ee50",
+    "size": 222,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046ef30",
+    "address": "0x46ef30",
+    "size": 350,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046f090",
+    "address": "0x46f090",
+    "size": 564,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046f2d0",
+    "address": "0x46f2d0",
+    "size": 815,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0046f600",
+    "address": "0x46f600",
     "size": 1843,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_precompiled_file",
-    "baseline_address": "0x004d79b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_precompiled_data",
-    "address": "0x00470020",
+    "name": "fn_0046fd40",
+    "address": "0x46fd40",
+    "size": 646,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CPrec_FileIncludedCallback",
+    "address": "0x46ffd0",
+    "size": 79,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00470020",
+    "address": "0x470020",
     "size": 3874,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_precompiled_data",
-    "baseline_address": "0x004d7df0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_serialized_bucket_offsets",
-    "address": "0x00470f50",
+    "name": "fn_00470f50",
+    "address": "0x470f50",
     "size": 311,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_serialized_bucket_offsets",
-    "baseline_address": "0x004d8c50",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_serialized_buckets",
-    "address": "0x00471180",
+    "name": "fn_00471090",
+    "address": "0x471090",
+    "size": 236,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00471180",
+    "address": "0x471180",
     "size": 224,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_serialized_buckets",
-    "baseline_address": "0x004d8e30",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_namespace_usings_and_hash",
-    "address": "0x00471580",
+    "name": "fn_00471260",
+    "address": "0x471260",
+    "size": 279,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00471380",
+    "address": "0x471380",
+    "size": 512,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00471580",
+    "address": "0x471580",
     "size": 408,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_namespace_usings_and_hash",
-    "baseline_address": "0x004d9600",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "get_namespace_patch",
-    "address": "0x00471720",
+    "name": "fn_00471720",
+    "address": "0x471720",
     "size": 821,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "get_namespace_patch",
-    "baseline_address": "0x004d9770",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_namespace_name",
-    "address": "0x00471a60",
+    "name": "fn_00471a60",
+    "address": "0x471a60",
     "size": 838,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_namespace_name",
-    "baseline_address": "0x004d9a90",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_object",
-    "address": "0x004721e0",
+    "name": "fn_00471db0",
+    "address": "0x471db0",
+    "size": 567,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00471ff0",
+    "address": "0x471ff0",
+    "size": 396,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00472180",
+    "address": "0x472180",
+    "size": 91,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004721e0",
+    "address": "0x4721e0",
     "size": 1737,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_object",
-    "baseline_address": "0x004da170",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_enum_const",
-    "address": "0x00472f10",
+    "name": "fn_004728b0",
+    "address": "0x4728b0",
+    "size": 714,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00472b80",
+    "address": "0x472b80",
+    "size": 294,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00472cb0",
+    "address": "0x472cb0",
+    "size": 294,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00472de0",
+    "address": "0x472de0",
+    "size": 294,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00472f10",
+    "address": "0x472f10",
     "size": 650,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_enum_const",
-    "baseline_address": "0x004dab90",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_cprec_rec",
-    "address": "0x004731a0",
+    "name": "fn_004731a0",
+    "address": "0x4731a0",
     "size": 341,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_cprec_rec",
-    "baseline_address": "0x004dadf0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_prec_recs",
-    "address": "0x00473300",
+    "name": "fn_00473300",
+    "address": "0x473300",
     "size": 516,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_prec_recs",
-    "baseline_address": "0x004daf90",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_cpsi_list",
-    "address": "0x00474e70",
+    "name": "fn_00473510",
+    "address": "0x473510",
+    "size": 3861,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474430",
+    "address": "0x474430",
+    "size": 385,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004745c0",
+    "address": "0x4745c0",
+    "size": 449,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474790",
+    "address": "0x474790",
+    "size": 450,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474960",
+    "address": "0x474960",
+    "size": 524,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474b70",
+    "address": "0x474b70",
+    "size": 588,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474dc0",
+    "address": "0x474dc0",
+    "size": 165,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00474e70",
+    "address": "0x474e70",
     "size": 444,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_cpsi_list",
-    "baseline_address": "0x004db910",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_type",
-    "address": "0x00475030",
+    "name": "fn_00475030",
+    "address": "0x475030",
     "size": 850,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_type",
-    "baseline_address": "0x004dbc00",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_template_class_declarations",
-    "address": "0x00476020",
+    "name": "fn_00475390",
+    "address": "0x475390",
+    "size": 565,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004755d0",
+    "address": "0x4755d0",
+    "size": 898,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00475960",
+    "address": "0x475960",
+    "size": 818,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00475ca0",
+    "address": "0x475ca0",
+    "size": 890,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00476020",
+    "address": "0x476020",
     "size": 540,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_template_class_declarations",
-    "baseline_address": "0x004dc810",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_prec_input_record",
-    "address": "0x00476240",
+    "name": "fn_00476240",
+    "address": "0x476240",
     "size": 314,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_prec_input_record",
-    "baseline_address": "0x004dca30",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_saved_prep_tokens",
-    "address": "0x00476950",
+    "name": "fn_00476380",
+    "address": "0x476380",
+    "size": 268,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00476490",
+    "address": "0x476490",
+    "size": 474,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00476670",
+    "address": "0x476670",
+    "size": 735,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00476950",
+    "address": "0x476950",
     "size": 705,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "append_saved_prep_tokens",
-    "baseline_address": "0x004dcd40",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_pre_nodes",
-    "address": "0x00476c20",
+    "name": "fn_00476c20",
+    "address": "0x476c20",
     "size": 423,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_pre_nodes",
-    "baseline_address": "0x004dcf70",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "serialize_ct_state_elems",
-    "address": "0x00476dd0",
+    "name": "fn_00476dd0",
+    "address": "0x476dd0",
     "size": 332,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "serialize_ct_state_elems",
-    "baseline_address": "0x004dd090",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_templdep",
-    "address": "0x00477490",
+    "name": "fn_00476f20",
+    "address": "0x476f20",
+    "size": 132,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00476fb0",
+    "address": "0x476fb0",
+    "size": 524,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004771c0",
+    "address": "0x4771c0",
+    "size": 231,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004772b0",
+    "address": "0x4772b0",
+    "size": 472,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00477490",
+    "address": "0x477490",
     "size": 600,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_templdep",
-    "baseline_address": "0x004de740",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "copy_type_func",
-    "address": "0x004776f0",
+    "name": "fn_004776f0",
+    "address": "0x4776f0",
     "size": 587,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "copy_type_func",
-    "baseline_address": "0x004de9e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "write_func_args",
-    "address": "0x00477940",
+    "name": "fn_00477940",
+    "address": "0x477940",
     "size": 615,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "write_func_args",
-    "baseline_address": "0x004deb20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "append_type_enum",
-    "address": "0x00477d80",
+    "name": "fn_00477bb0",
+    "address": "0x477bb0",
+    "size": 464,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00477d80",
+    "address": "0x477d80",
     "size": 293,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "append_type_enum",
-    "baseline_address": "0x004df0c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "patch_hash_name_reference",
-    "address": "0x00478bb0",
+    "name": "fn_00477eb0",
+    "address": "0x477eb0",
+    "size": 449,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00478080",
+    "address": "0x478080",
+    "size": 289,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004781b0",
+    "address": "0x4781b0",
+    "size": 968,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00478580",
+    "address": "0x478580",
+    "size": 615,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004787f0",
+    "address": "0x4787f0",
+    "size": 947,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00478bb0",
+    "address": "0x478bb0",
     "size": 24,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "patch_hash_name_reference",
-    "baseline_address": "0x004e0080",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "patch_object_reference",
-    "address": "0x00478bd0",
+    "name": "fn_00478bd0",
+    "address": "0x478bd0",
     "size": 230,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "patch_object_reference",
-    "baseline_address": "0x004e00a0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "add_serialized_bucket_entry",
-    "address": "0x00478cc0",
+    "name": "fn_00478cc0",
+    "address": "0x478cc0",
     "size": 201,
-    "source": "src/frontend/CPrec.c",
-    "baseline_name": "add_serialized_bucket_entry",
-    "baseline_address": "0x004e0180",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00478d90",
+    "address": "0x478d90",
+    "size": 1940,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CleanupPrecompiler",
+    "address": "0x479530",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "SetupPrecompiler",
+    "address": "0x479570",
+    "size": 61,
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c",
+    "identity_evidence": "CPrec.c filename assertions, supplied CSV roles/native ABI and complete75-member caller/data/control-flow review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Complete native CFG and indexed table payloads; all seams/callers reviewed including three recovered callbacks, separate CompilerTools and CMiddleLayer neighbors",
       "unresolved_indirect_flow": false
     }
   },

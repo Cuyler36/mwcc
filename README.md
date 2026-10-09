@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 265 source files build, 2,452 candidate functions are
-mapped, and 1,041 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 265 source files build, 2,502 candidate functions are
+mapped, and 1,043 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -173,6 +173,16 @@ one-byte storage-category mismatch, and six switch-owning functions remain
 unresolved. The native type wrapper takes three arguments; its incompatible
 legacy alias was removed. Shared GList state stays external; original physical
 TU extent remains unproved.
+
+CPrec.c has all 75 supported native functions attempted, with four exact
+matches. Nine compiler profiles and four source forms were tested; 3,237
+native comparisons pass, including the normal project object. Its recovered
+reader and predicates use the caller-proven argument counts. All 274 identified
+initial data bytes match; the one-byte empty string has a section-category
+difference, and 17 native switch tables totaling 892 bytes remain target-only.
+Only two independently compatible old aliases are retained. All four version
+checks pass, with retained CPrec objects, source and configurations unchanged.
+Original physical TU extent and unrestricted equivalence remain unproved.
 
 CException.cpp has all 48 supported native functions attempted, with ten
 exact matches. Fourteen compiler profiles and nine source forms were tested;

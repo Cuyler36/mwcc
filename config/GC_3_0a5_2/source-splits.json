@@ -5878,5 +5878,313 @@
   "CExcept_Setup": {
     "name": "CExcept_Setup",
     "source": "src/GC_3_0a5_2/frontend/CException.cpp"
+  },
+  "PrecompilerExpand": {
+    "name": "PrecompilerExpand",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "PrecompilerCheckCompressed": {
+    "name": "PrecompilerCheckCompressed",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046e160": {
+    "name": "fn_0046e160",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "PrecompilerRead": {
+    "name": "PrecompilerRead",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "PrecompilerCheck": {
+    "name": "PrecompilerCheck",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046eb90": {
+    "name": "fn_0046eb90",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046ed70": {
+    "name": "fn_0046ed70",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046ee50": {
+    "name": "fn_0046ee50",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046ef30": {
+    "name": "fn_0046ef30",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046f090": {
+    "name": "fn_0046f090",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046f2d0": {
+    "name": "fn_0046f2d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046f600": {
+    "name": "fn_0046f600",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0046fd40": {
+    "name": "fn_0046fd40",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "CPrec_FileIncludedCallback": {
+    "name": "CPrec_FileIncludedCallback",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00470020": {
+    "name": "fn_00470020",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00470f50": {
+    "name": "fn_00470f50",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471090": {
+    "name": "fn_00471090",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471180": {
+    "name": "fn_00471180",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471260": {
+    "name": "fn_00471260",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471380": {
+    "name": "fn_00471380",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471580": {
+    "name": "fn_00471580",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471720": {
+    "name": "fn_00471720",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471a60": {
+    "name": "fn_00471a60",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471db0": {
+    "name": "fn_00471db0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00471ff0": {
+    "name": "fn_00471ff0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00472180": {
+    "name": "fn_00472180",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004721e0": {
+    "name": "fn_004721e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004728b0": {
+    "name": "fn_004728b0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00472b80": {
+    "name": "fn_00472b80",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00472cb0": {
+    "name": "fn_00472cb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00472de0": {
+    "name": "fn_00472de0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00472f10": {
+    "name": "fn_00472f10",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004731a0": {
+    "name": "fn_004731a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00473300": {
+    "name": "fn_00473300",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00473510": {
+    "name": "fn_00473510",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474430": {
+    "name": "fn_00474430",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004745c0": {
+    "name": "fn_004745c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474790": {
+    "name": "fn_00474790",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474960": {
+    "name": "fn_00474960",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474b70": {
+    "name": "fn_00474b70",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474dc0": {
+    "name": "fn_00474dc0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00474e70": {
+    "name": "fn_00474e70",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00475030": {
+    "name": "fn_00475030",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00475390": {
+    "name": "fn_00475390",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004755d0": {
+    "name": "fn_004755d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00475960": {
+    "name": "fn_00475960",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00475ca0": {
+    "name": "fn_00475ca0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476020": {
+    "name": "fn_00476020",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476240": {
+    "name": "fn_00476240",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476380": {
+    "name": "fn_00476380",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476490": {
+    "name": "fn_00476490",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476670": {
+    "name": "fn_00476670",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476950": {
+    "name": "fn_00476950",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476c20": {
+    "name": "fn_00476c20",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476dd0": {
+    "name": "fn_00476dd0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476f20": {
+    "name": "fn_00476f20",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00476fb0": {
+    "name": "fn_00476fb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004771c0": {
+    "name": "fn_004771c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004772b0": {
+    "name": "fn_004772b0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00477490": {
+    "name": "fn_00477490",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004776f0": {
+    "name": "fn_004776f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00477940": {
+    "name": "fn_00477940",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00477bb0": {
+    "name": "fn_00477bb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00477d80": {
+    "name": "fn_00477d80",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00477eb0": {
+    "name": "fn_00477eb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478080": {
+    "name": "fn_00478080",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004781b0": {
+    "name": "fn_004781b0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478580": {
+    "name": "fn_00478580",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_004787f0": {
+    "name": "fn_004787f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478bb0": {
+    "name": "fn_00478bb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478bd0": {
+    "name": "fn_00478bd0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478cc0": {
+    "name": "fn_00478cc0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_00478d90": {
+    "name": "fn_00478d90",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "CleanupPrecompiler": {
+    "name": "CleanupPrecompiler",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "SetupPrecompiler": {
+    "name": "SetupPrecompiler",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "write_serialized_buckets": {
+    "name": "fn_00471180",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "patch_hash_name_reference": {
+    "name": "fn_00478bb0",
+    "source": "src/GC_3_0a5_2/frontend/CPrec.c"
   }
 }

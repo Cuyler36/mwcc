@@ -10,14 +10,22 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 265 source files build, 2,510 candidate functions are
-mapped, and 1,049 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 265 source files build, 2,555 candidate functions are
+mapped, and 1,061 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+CMiddleLayer has all 46 supported functions attempted, with twelve full-byte
+and relocation matches. Fourteen compiler profiles and six source forms were
+compared; the normal build passes 14,960 bounded native execution comparisons.
+All 93 named data bytes agree, with a one-byte empty-string DATA/BSS difference.
+Nine generated switch-table owners remain unresolved. Native driver calling
+conventions, deferred queues and packed expression/inline records are reviewed;
+parser, filesystem and backend service models limit the execution evidence.
 
 EnodeInfoHandler has all four supported native functions exact under CW94,
 including HandleENodeInfo. All 59 bytes of filename, switch-table and BSS

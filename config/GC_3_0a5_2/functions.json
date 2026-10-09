@@ -9422,15 +9422,508 @@
     }
   },
   {
+    "name": "fn_004795b0",
+    "address": "0x4795b0",
+    "size": 660,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479850",
+    "address": "0x479850",
+    "size": 388,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004799e0",
+    "address": "0x4799e0",
+    "size": 564,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479c20",
+    "address": "0x479c20",
+    "size": 134,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_RegisterDummyCtorFunction",
+    "address": "0x479cb0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479ce0",
+    "address": "0x479ce0",
+    "size": 43,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479d10",
+    "address": "0x479d10",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479d30",
+    "address": "0x479d30",
+    "size": 555,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00479f60",
+    "address": "0x479f60",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_CompileEnded",
+    "address": "0x479f70",
+    "size": 75,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_GenerateMultiCallGraph",
+    "address": "0x479fc0",
+    "size": 1627,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_InitCodeMerge",
+    "address": "0x47a620",
+    "size": 183,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_GenerateCallGraphHelper",
+    "address": "0x47a6e0",
+    "size": 455,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047a8b0",
+    "address": "0x47a8b0",
+    "size": 427,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047aa60",
+    "address": "0x47aa60",
+    "size": 138,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047aaf0",
+    "address": "0x47aaf0",
+    "size": 460,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047acc0",
+    "address": "0x47acc0",
+    "size": 859,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b020",
+    "address": "0x47b020",
+    "size": 153,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CInline_DispatchNextDeferredNode",
-    "address": "0x0047b0c0",
+    "address": "0x47b0c0",
     "size": 362,
     "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
-    "baseline_name": "CInline_DispatchNextDeferredNode",
-    "baseline_address": "0x0050eaa0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_ObjectAddrRef",
+    "address": "0x47b230",
+    "size": 883,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b5b0",
+    "address": "0x47b5b0",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b5c0",
+    "address": "0x47b5c0",
+    "size": 61,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b600",
+    "address": "0x47b600",
+    "size": 202,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b6d0",
+    "address": "0x47b6d0",
+    "size": 572,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047b910",
+    "address": "0x47b910",
+    "size": 555,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047bb40",
+    "address": "0x47bb40",
+    "size": 66,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047bb90",
+    "address": "0x47bb90",
+    "size": 170,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_DefineThunkObject",
+    "address": "0x47bc40",
+    "size": 267,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_DefineFunction",
+    "address": "0x47bd50",
+    "size": 1257,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c240",
+    "address": "0x47c240",
+    "size": 219,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c320",
+    "address": "0x47c320",
+    "size": 257,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c430",
+    "address": "0x47c430",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c4e0",
+    "address": "0x47c4e0",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c510",
+    "address": "0x47c510",
+    "size": 367,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c680",
+    "address": "0x47c680",
+    "size": 333,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c7d0",
+    "address": "0x47c7d0",
+    "size": 164,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047c880",
+    "address": "0x47c880",
+    "size": 1283,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047cd90",
+    "address": "0x47cd90",
+    "size": 75,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047cde0",
+    "address": "0x47cde0",
+    "size": 52,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047ce20",
+    "address": "0x47ce20",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047ce70",
+    "address": "0x47ce70",
+    "size": 198,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047cf40",
+    "address": "0x47cf40",
+    "size": 313,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047d080",
+    "address": "0x47d080",
+    "size": 164,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_SetupIPA",
+    "address": "0x47d130",
+    "size": 41,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_Cleanup",
+    "address": "0x47d160",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMid_Setup",
+    "address": "0x47d170",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/frontend/CMiddleLayer.c",
+    "identity_evidence": "CMiddleLayer.c native filename assertions, CSV roles, native callers/ABI/state and complete46-member family review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Reviewed complete native CFG including indexed tables, two recovered callbacks, filename/entry references and separate CPrec/scanner seams",
       "unresolved_indirect_flow": false
     }
   },

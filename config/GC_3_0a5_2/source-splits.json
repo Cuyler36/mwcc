@@ -5530,5 +5530,37 @@
   "fn_00606ba0": {
     "name": "fn_00606ba0",
     "source": "src/GC_3_0a5_2/optimizer/IroJump.c"
+  },
+  "fn_0063cb00": {
+    "name": "fn_0063cb00",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "is_execution_unit_seven": {
+    "name": "is_execution_unit_seven",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "advance_instruction_pipeline": {
+    "name": "advance_instruction_pipeline",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "set_execution_unit_instruction": {
+    "name": "set_execution_unit_instruction",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "is_execution_unit_available": {
+    "name": "is_execution_unit_available",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "clear_instruction_and_globals": {
+    "name": "clear_instruction_and_globals",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "get_latency": {
+    "name": "get_latency",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "fn_0063cf50": {
+    "name": "fn_0063cf50",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
   }
 }

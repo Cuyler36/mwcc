@@ -27378,6 +27378,94 @@
     }
   },
   {
+    "name": "fn_0063cb00",
+    "address": "0x63cb00",
+    "size": 406,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_execution_unit_seven",
+    "address": "0x63cca0",
+    "size": 28,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "advance_instruction_pipeline",
+    "address": "0x63ccc0",
+    "size": 354,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "set_execution_unit_instruction",
+    "address": "0x63ce30",
+    "size": 78,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "is_execution_unit_available",
+    "address": "0x63ce80",
+    "size": 54,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "clear_instruction_and_globals",
+    "address": "0x63cec0",
+    "size": 69,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "get_latency",
+    "address": "0x63cf10",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063cf50",
+    "address": "0x63cf50",
+    "size": 136,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c",
+    "identity_evidence": "MachineSimulation601.c initializer assertion645, exact eight-slot machine descriptor and whole-image native call/state reference review; six baseline algorithm names with native signatures, initializer/display raw names.",
+    "boundary_evidence": {
+      "method": "Independently proven descriptor entries plus saved complete native CFG, callers, physical NOP seams and separate neighboring families",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "bitvectorintersectionisempty",
     "address": "0x63d1f0",
     "size": 66,

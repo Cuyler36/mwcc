@@ -19,7 +19,6 @@
     "src/backend/InterferenceGraph.c",
     "src/backend/Intrinsics.c",
     "src/backend/LiveVariables.c",
-    "src/backend/MachineSimulation601.c",
     "src/backend/MachineSimulation603.c",
     "src/backend/MachineSimulation603e.c",
     "src/backend/MachineSimulation604.c",
@@ -264,7 +263,8 @@
     "src/GC_3_0a5_2/frontend/CleanUpIR.c",
     "src/GC_3_0a5_2/backend/ConstantPropagation.c",
     "src/GC_3_0a5_2/optimizer/IroDump.c",
-    "src/GC_3_0a5_2/optimizer/IroJump.c"
+    "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "src/GC_3_0a5_2/backend/MachineSimulation601.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4319,6 +4319,24 @@
         "-opt",
         "nocse"
       ]
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation601.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -5331,7 +5349,12 @@
     "src/GC_3_0a5_2/optimizer/IroDump/IRO_Dump",
     "src/GC_3_0a5_2/optimizer/IroDump/fn_005ed5d0",
     "src/GC_3_0a5_2/optimizer/IroDump/IRO_DumpAfterPhase",
-    "src/GC_3_0a5_2/optimizer/IroDump/IRO_DumpBeforePhase"
+    "src/GC_3_0a5_2/optimizer/IroDump/IRO_DumpBeforePhase",
+    "src/GC_3_0a5_2/backend/MachineSimulation601/is_execution_unit_seven",
+    "src/GC_3_0a5_2/backend/MachineSimulation601/set_execution_unit_instruction",
+    "src/GC_3_0a5_2/backend/MachineSimulation601/is_execution_unit_available",
+    "src/GC_3_0a5_2/backend/MachineSimulation601/clear_instruction_and_globals",
+    "src/GC_3_0a5_2/backend/MachineSimulation601/get_latency"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -10466,6 +10489,25 @@
       "_FUN_005ae7b0": "0x5ae7b0",
       "_FUN_005acf30": "0x5acf30",
       "_CError_Internal": "0x45a250"
+    },
+    "src/GC_3_0a5_2/backend/MachineSimulation601.c": {
+      "_fn_0063cb00": "0x63cb00",
+      "_is_execution_unit_seven": "0x63cca0",
+      "_advance_instruction_pipeline": "0x63ccc0",
+      "_set_execution_unit_instruction": "0x63ce30",
+      "_is_execution_unit_available": "0x63ce80",
+      "_clear_instruction_and_globals": "0x63cec0",
+      "_get_latency": "0x63cf10",
+      "_fn_0063cf50": "0x63cf50",
+      "_nativeOpcodeTable": "0x6bf1d4",
+      "_machine601Filename": "0x6bfa14",
+      "_machine601Initialized": "0x701cd0",
+      "_machine601Opcodes": "0x701cd1",
+      "_machine601Pipeline": "0x702872",
+      "_machine601Display": "0x701c80",
+      "_machine601": "0x6bf1b0",
+      "_machineSharedCode": "0x5994e0",
+      "_CError_Internal": "0x45a250"
     }
   },
   "original_source_units": {
@@ -10518,7 +10560,8 @@
     "CleanUpIR.c": "src/GC_3_0a5_2/frontend/CleanUpIR.c",
     "ConstantPropagation.c": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
     "IroDump.c": "src/GC_3_0a5_2/optimizer/IroDump.c",
-    "IroJump.c": "src/GC_3_0a5_2/optimizer/IroJump.c"
+    "IroJump.c": "src/GC_3_0a5_2/optimizer/IroJump.c",
+    "MachineSimulation601.c": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
   },
   "held_native_functions": [
     {

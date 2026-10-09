@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 263 source files build, 2,349 candidate functions are
-mapped, and 1,010 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 263 source files build, 2,357 candidate functions are
+mapped, and 1,015 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,16 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+MachineSimulation601 has all eight supported native functions attempted, with
+five exact matches and all 5,238 identified data bytes matching. Twenty-three
+final compiler profiles, 12 source forms and 12 additional source/profile
+attempts were compared; 9,216 bounded native execution comparisons pass,
+including complete initialization/issue/advance/clear sequences. Seven missing
+Ghidra descriptor callbacks were recovered from verified pointers and entry
+instructions. The initializer, pipeline advance and display formatter remain
+code generation nonmatches. Shared callbacks remain imports; original physical
+TU extent remains unproved.
 
 IroJump has all eight supported members attempted. Twenty final compiler
 profiles and 22 historical attempts were compared; CW94 with CSE disabled

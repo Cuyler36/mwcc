@@ -3998,5 +3998,565 @@
   "fn_00643c00": {
     "name": "fn_00643c00",
     "source": "src/GC_3_0a5_2/backend/CodeMotionPPC.c"
+  },
+  "fn_0047df80": {
+    "name": "scanner_suppress_messages",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f340": {
+    "name": "scanner_unreadtoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fb90": {
+    "name": "scanner_setstate",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fbc0": {
+    "name": "scanner_getstate",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fbf0": {
+    "name": "scanner_get_text",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fdf0": {
+    "name": "scanner_set_default_global_encoding",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480680": {
+    "name": "scanner_setcommentchar",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f620": {
+    "name": "scanner_skipendofline",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f3d0": {
+    "name": "scanner_readtoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047d1d0": {
+    "name": "scanner_validate",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480640": {
+    "name": "scanner_fixup_names",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fc00": {
+    "name": "scanner_term",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480710": {
+    "name": "scanner_cleanup",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047eef0": {
+    "name": "scanner_getlinetable",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f550": {
+    "name": "scanner_tokenhasfixedtext",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480730": {
+    "name": "scanner_setup",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004803c0": {
+    "name": "add_punc_token",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f370": {
+    "name": "scanner_peektoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f3e0": {
+    "name": "fn_0047f3e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f460": {
+    "name": "fn_0047f460",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f4e0": {
+    "name": "scanner_get_token_text",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480650": {
+    "name": "scanner_parse_include",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f1e0": {
+    "name": "scanner_goto_line",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f240": {
+    "name": "fn_0047f240",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f080": {
+    "name": "scanner_iterator_decode_character",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047eed0": {
+    "name": "scanner_resync",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004806a0": {
+    "name": "scanner_reconfig",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004808a0": {
+    "name": "scanner_unload",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fd40": {
+    "name": "scanner_init_decoding",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fc30": {
+    "name": "scanner_init",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047db10": {
+    "name": "fn_0047db10",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ebf0": {
+    "name": "fn_0047ebf0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f800": {
+    "name": "fn_0047f800",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f810": {
+    "name": "fn_0047f810",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f820": {
+    "name": "fn_0047f820",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f830": {
+    "name": "fn_0047f830",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f840": {
+    "name": "fn_0047f840",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f850": {
+    "name": "fn_0047f850",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f860": {
+    "name": "fn_0047f860",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481e10": {
+    "name": "fn_00481e10",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481e20": {
+    "name": "fn_00481e20",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482160": {
+    "name": "fn_00482160",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825a0": {
+    "name": "fn_004825a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004826c0": {
+    "name": "fn_004826c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004827c0": {
+    "name": "fn_004827c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482870": {
+    "name": "fn_00482870",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482b00": {
+    "name": "fn_00482b00",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f0a0": {
+    "name": "scanner_iterator_destroy",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f100": {
+    "name": "scanner_iterator_create_from_pptoken",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047e110": {
+    "name": "scanner_setupref",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fe10": {
+    "name": "scanner_init_decoder",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825b0": {
+    "name": "fn_004825b0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825c0": {
+    "name": "fn_004825c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825d0": {
+    "name": "fn_004825d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825e0": {
+    "name": "fn_004825e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004826d0": {
+    "name": "fn_004826d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004826e0": {
+    "name": "fn_004826e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004826f0": {
+    "name": "fn_004826f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482700": {
+    "name": "fn_00482700",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004827d0": {
+    "name": "fn_004827d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004827e0": {
+    "name": "fn_004827e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004827f0": {
+    "name": "fn_004827f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482800": {
+    "name": "fn_00482800",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482880": {
+    "name": "fn_00482880",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482890": {
+    "name": "fn_00482890",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004828a0": {
+    "name": "fn_004828a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004828b0": {
+    "name": "fn_004828b0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484af0": {
+    "name": "fn_00484af0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484ac0": {
+    "name": "fn_00484ac0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484a90": {
+    "name": "fn_00484a90",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484a70": {
+    "name": "fn_00484a70",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484a20": {
+    "name": "fn_00484a20",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047eca0": {
+    "name": "fn_0047eca0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004825f0": {
+    "name": "fn_004825f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482710": {
+    "name": "fn_00482710",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482810": {
+    "name": "fn_00482810",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004828c0": {
+    "name": "fn_004828c0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004827a0": {
+    "name": "fn_004827a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482850": {
+    "name": "fn_00482850",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004816a0": {
+    "name": "fn_004816a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004812f0": {
+    "name": "fn_004812f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004821a0": {
+    "name": "fn_004821a0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481b10": {
+    "name": "fn_00481b10",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481ba0": {
+    "name": "possibly_unicode",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481000": {
+    "name": "scanner_guess_encoding",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00483670": {
+    "name": "fn_00483670",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00483a30": {
+    "name": "fn_00483a30",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00483df0": {
+    "name": "fn_00483df0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004841f0": {
+    "name": "fn_004841f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004845f0": {
+    "name": "fn_004845f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004834f0": {
+    "name": "fn_004834f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00483370": {
+    "name": "fn_00483370",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004831f0": {
+    "name": "fn_004831f0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00483070": {
+    "name": "fn_00483070",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482ef0": {
+    "name": "fn_00482ef0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047dfa0": {
+    "name": "scanner_error",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047e070": {
+    "name": "scanner_warning",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482540": {
+    "name": "fn_00482540",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482660": {
+    "name": "fn_00482660",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00499060": {
+    "name": "fn_00499060",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482090": {
+    "name": "fn_00482090",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f870": {
+    "name": "fn_0047f870",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047f630": {
+    "name": "scanner_set_charset",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00480af0": {
+    "name": "setup_unichar_flags",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004808f0": {
+    "name": "scanner_load",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481fa0": {
+    "name": "fn_00481fa0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482b10": {
+    "name": "fn_00482b10",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482ce0": {
+    "name": "fn_00482ce0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481900": {
+    "name": "fn_00481900",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004819d0": {
+    "name": "fn_004819d0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481710": {
+    "name": "fn_00481710",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047d1e0": {
+    "name": "fn_0047d1e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047d630": {
+    "name": "fn_0047d630",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047db20": {
+    "name": "fn_0047db20",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047e530": {
+    "name": "scanner_convert_up_literal",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ecc0": {
+    "name": "scanner_converttoascii",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00484b20": {
+    "name": "fn_00484b20",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00486ed0": {
+    "name": "fn_00486ed0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00489270": {
+    "name": "fn_00489270",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0048b990": {
+    "name": "fn_0048b990",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0048dcc0": {
+    "name": "fn_0048dcc0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00490990": {
+    "name": "fn_00490990",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_004923e0": {
+    "name": "fn_004923e0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00494070": {
+    "name": "fn_00494070",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00495aa0": {
+    "name": "fn_00495aa0",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00497560": {
+    "name": "fn_00497560",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fb60": {
+    "name": "?fn_0047fb60@ScanDecoder@@QAEPAV1@XZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fb70": {
+    "name": "?fn_0047fb70@ScanDecoder@@QAEPAV1@XZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fb80": {
+    "name": "?fn_0047fb80@ScanDecoder@@QAEPAV1@XZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fa10": {
+    "name": "?fn_0047fa10@ScanWindowsDecoder@@QAEXXZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047fa30": {
+    "name": "?fn_0047fa30@ScanWindowsDecoder@@QAEXXZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482a50": {
+    "name": "?fn_00482a50@ScanWindowsDecoder@@QAEFPAD0PAPAD@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00482920": {
+    "name": "?fn_00482920@ScanWindowsDecoder@@QAEGG@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481eb0": {
+    "name": "?fn_00481eb0@ScanDecoder@@QAEKPAD0PAPAD@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ec00": {
+    "name": "?fn_0047ec00@ScanBuffer@@QAEXPBDH@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ec60": {
+    "name": "?fn_0047ec60@ScanBuffer@@QAEXE@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ec80": {
+    "name": "?fn_0047ec80@ScanBuffer@@QAEXH@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00481da0": {
+    "name": "?fn_00481da0@ScanBuffer@@QAEXH@Z",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_0047ebd0": {
+    "name": "??1ScanBuffer@@QAE@XZ",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
+  },
+  "fn_00498f80": {
+    "name": "$static_initializer$139",
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp"
   }
 }

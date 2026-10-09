@@ -8949,6 +8949,1546 @@
     }
   },
   {
+    "name": "scanner_validate",
+    "address": "0x47d1d0",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047d1e0",
+    "address": "0x47d1e0",
+    "size": 1091,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047d630",
+    "address": "0x47d630",
+    "size": 1236,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047db10",
+    "address": "0x47db10",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047db20",
+    "address": "0x47db20",
+    "size": 1116,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_suppress_messages",
+    "address": "0x47df80",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_error",
+    "address": "0x47dfa0",
+    "size": 193,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_warning",
+    "address": "0x47e070",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_setupref",
+    "address": "0x47e110",
+    "size": 1049,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_convert_up_literal",
+    "address": "0x47e530",
+    "size": 1689,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "??1ScanBuffer@@QAE@XZ",
+    "address": "0x47ebd0",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047ebf0",
+    "address": "0x47ebf0",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047ec00@ScanBuffer@@QAEXPBDH@Z",
+    "address": "0x47ec00",
+    "size": 87,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047ec60@ScanBuffer@@QAEXE@Z",
+    "address": "0x47ec60",
+    "size": 20,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047ec80@ScanBuffer@@QAEXH@Z",
+    "address": "0x47ec80",
+    "size": 31,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047eca0",
+    "address": "0x47eca0",
+    "size": 31,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_converttoascii",
+    "address": "0x47ecc0",
+    "size": 519,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_resync",
+    "address": "0x47eed0",
+    "size": 19,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_getlinetable",
+    "address": "0x47eef0",
+    "size": 387,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_iterator_decode_character",
+    "address": "0x47f080",
+    "size": 28,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_iterator_destroy",
+    "address": "0x47f0a0",
+    "size": 84,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_iterator_create_from_pptoken",
+    "address": "0x47f100",
+    "size": 209,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_goto_line",
+    "address": "0x47f1e0",
+    "size": 84,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f240",
+    "address": "0x47f240",
+    "size": 245,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_unreadtoken",
+    "address": "0x47f340",
+    "size": 41,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_peektoken",
+    "address": "0x47f370",
+    "size": 85,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_readtoken",
+    "address": "0x47f3d0",
+    "size": 12,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f3e0",
+    "address": "0x47f3e0",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f460",
+    "address": "0x47f460",
+    "size": 119,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_get_token_text",
+    "address": "0x47f4e0",
+    "size": 102,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_tokenhasfixedtext",
+    "address": "0x47f550",
+    "size": 198,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_skipendofline",
+    "address": "0x47f620",
+    "size": 7,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_set_charset",
+    "address": "0x47f630",
+    "size": 454,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f800",
+    "address": "0x47f800",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f810",
+    "address": "0x47f810",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f820",
+    "address": "0x47f820",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f830",
+    "address": "0x47f830",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f840",
+    "address": "0x47f840",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f850",
+    "address": "0x47f850",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f860",
+    "address": "0x47f860",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0047f870",
+    "address": "0x47f870",
+    "size": 409,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047fa10@ScanWindowsDecoder@@QAEXXZ",
+    "address": "0x47fa10",
+    "size": 28,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047fa30@ScanWindowsDecoder@@QAEXXZ",
+    "address": "0x47fa30",
+    "size": 289,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047fb60@ScanDecoder@@QAEPAV1@XZ",
+    "address": "0x47fb60",
+    "size": 9,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047fb70@ScanDecoder@@QAEPAV1@XZ",
+    "address": "0x47fb70",
+    "size": 9,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_0047fb80@ScanDecoder@@QAEPAV1@XZ",
+    "address": "0x47fb80",
+    "size": 9,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_setstate",
+    "address": "0x47fb90",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_getstate",
+    "address": "0x47fbc0",
+    "size": 36,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_get_text",
+    "address": "0x47fbf0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_term",
+    "address": "0x47fc00",
+    "size": 42,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_init",
+    "address": "0x47fc30",
+    "size": 270,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_init_decoding",
+    "address": "0x47fd40",
+    "size": 165,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_set_default_global_encoding",
+    "address": "0x47fdf0",
+    "size": 21,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_init_decoder",
+    "address": "0x47fe10",
+    "size": 1442,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "add_punc_token",
+    "address": "0x4803c0",
+    "size": 634,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_fixup_names",
+    "address": "0x480640",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_parse_include",
+    "address": "0x480650",
+    "size": 38,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_setcommentchar",
+    "address": "0x480680",
+    "size": 17,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_reconfig",
+    "address": "0x4806a0",
+    "size": 112,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_cleanup",
+    "address": "0x480710",
+    "size": 26,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_setup",
+    "address": "0x480730",
+    "size": 360,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_unload",
+    "address": "0x4808a0",
+    "size": 71,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_load",
+    "address": "0x4808f0",
+    "size": 508,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "setup_unichar_flags",
+    "address": "0x480af0",
+    "size": 1292,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "scanner_guess_encoding",
+    "address": "0x481000",
+    "size": 746,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004812f0",
+    "address": "0x4812f0",
+    "size": 936,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004816a0",
+    "address": "0x4816a0",
+    "size": 112,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481710",
+    "address": "0x481710",
+    "size": 488,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481900",
+    "address": "0x481900",
+    "size": 201,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004819d0",
+    "address": "0x4819d0",
+    "size": 316,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481b10",
+    "address": "0x481b10",
+    "size": 134,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "possibly_unicode",
+    "address": "0x481ba0",
+    "size": 507,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_00481da0@ScanBuffer@@QAEXH@Z",
+    "address": "0x481da0",
+    "size": 100,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481e10",
+    "address": "0x481e10",
+    "size": 3,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481e20",
+    "address": "0x481e20",
+    "size": 131,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_00481eb0@ScanDecoder@@QAEKPAD0PAPAD@Z",
+    "address": "0x481eb0",
+    "size": 240,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00481fa0",
+    "address": "0x481fa0",
+    "size": 231,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482090",
+    "address": "0x482090",
+    "size": 193,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482160",
+    "address": "0x482160",
+    "size": 51,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004821a0",
+    "address": "0x4821a0",
+    "size": 924,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482540",
+    "address": "0x482540",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825a0",
+    "address": "0x4825a0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825b0",
+    "address": "0x4825b0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825c0",
+    "address": "0x4825c0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825d0",
+    "address": "0x4825d0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825e0",
+    "address": "0x4825e0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004825f0",
+    "address": "0x4825f0",
+    "size": 105,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482660",
+    "address": "0x482660",
+    "size": 86,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004826c0",
+    "address": "0x4826c0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004826d0",
+    "address": "0x4826d0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004826e0",
+    "address": "0x4826e0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004826f0",
+    "address": "0x4826f0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482700",
+    "address": "0x482700",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482710",
+    "address": "0x482710",
+    "size": 130,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004827a0",
+    "address": "0x4827a0",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004827c0",
+    "address": "0x4827c0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004827d0",
+    "address": "0x4827d0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004827e0",
+    "address": "0x4827e0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004827f0",
+    "address": "0x4827f0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482800",
+    "address": "0x482800",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482810",
+    "address": "0x482810",
+    "size": 55,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482850",
+    "address": "0x482850",
+    "size": 18,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482870",
+    "address": "0x482870",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482880",
+    "address": "0x482880",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482890",
+    "address": "0x482890",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004828a0",
+    "address": "0x4828a0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004828b0",
+    "address": "0x4828b0",
+    "size": 6,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004828c0",
+    "address": "0x4828c0",
+    "size": 95,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_00482920@ScanWindowsDecoder@@QAEGG@Z",
+    "address": "0x482920",
+    "size": 290,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "?fn_00482a50@ScanWindowsDecoder@@QAEFPAD0PAPAD@Z",
+    "address": "0x482a50",
+    "size": 165,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482b00",
+    "address": "0x482b00",
+    "size": 1,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482b10",
+    "address": "0x482b10",
+    "size": 454,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482ce0",
+    "address": "0x482ce0",
+    "size": 527,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00482ef0",
+    "address": "0x482ef0",
+    "size": 373,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00483070",
+    "address": "0x483070",
+    "size": 373,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004831f0",
+    "address": "0x4831f0",
+    "size": 373,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00483370",
+    "address": "0x483370",
+    "size": 373,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004834f0",
+    "address": "0x4834f0",
+    "size": 373,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00483670",
+    "address": "0x483670",
+    "size": 955,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00483a30",
+    "address": "0x483a30",
+    "size": 955,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00483df0",
+    "address": "0x483df0",
+    "size": 1024,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004841f0",
+    "address": "0x4841f0",
+    "size": 1024,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004845f0",
+    "address": "0x4845f0",
+    "size": 1068,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484a20",
+    "address": "0x484a20",
+    "size": 70,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484a70",
+    "address": "0x484a70",
+    "size": 29,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484a90",
+    "address": "0x484a90",
+    "size": 46,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484ac0",
+    "address": "0x484ac0",
+    "size": 33,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484af0",
+    "address": "0x484af0",
+    "size": 33,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00484b20",
+    "address": "0x484b20",
+    "size": 9127,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00486ed0",
+    "address": "0x486ed0",
+    "size": 9116,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00489270",
+    "address": "0x489270",
+    "size": 10013,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0048b990",
+    "address": "0x48b990",
+    "size": 9004,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0048dcc0",
+    "address": "0x48dcc0",
+    "size": 11471,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00490990",
+    "address": "0x490990",
+    "size": 6729,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_004923e0",
+    "address": "0x4923e0",
+    "size": 7306,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00494070",
+    "address": "0x494070",
+    "size": 6697,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00495aa0",
+    "address": "0x495aa0",
+    "size": 6841,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00497560",
+    "address": "0x497560",
+    "size": 6681,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "$static_initializer$139",
+    "address": "0x498f80",
+    "size": 223,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00499060",
+    "address": "0x499060",
+    "size": 347,
+    "source": "src/GC_3_0a5_2/frontend/CPrepScanner.cpp",
+    "identity_evidence": "Native CPrepScanner.cpp filename diagnostics, decoder tables, callbacks and lifetime call graph; supplied symbol identities used where independently supported. Private address names retained otherwise.",
+    "boundary_evidence": {
+      "method": "Native CFG and decoder/callback entries reviewed against both adjacent clusters",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "CompilerTools_DispatchMessageBufferByMode",
     "address": "0x004993e0",
     "size": 50,

@@ -10,14 +10,26 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 267 source files build, 2,587 candidate functions are
-mapped, and 1,077 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 268 source files build, 2,638 candidate functions are
+mapped, and 1,080 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
 and the setjmp runtime unit are
 complete reconstructed translation units. The remaining
 compiler is a port in progress; mappings alone do not establish a match.
+
+PeepholePatterns has all 52 supported members attempted: registration, 48
+callbacks and three connected helpers. Three callbacks match in full bytes and
+relocations. The 1.2.5 move-elimination and known-bit analysis structures are
+ported with GC 3.0's operand layout, flag and opcode differences. Four temporary
+operand records use their native packed layout; redundant-store checks preserve
+the observed incoming ESI/EDI values and signed overlap comparisons. Native-built
+instruction fixtures, actual shared helpers and targeted register tests provide
+bounded execution evidence. Sixteen compiler profiles were compared; CW94 O3 is
+closest, at 57.46% weighted code similarity. The 19-byte filename matches; five
+generated switch tables totaling 524 native bytes remain unbound. Physical TU
+extent and unrestricted compiler equivalence remain unproved.
 
 MachineSimulationAltiVec has all ten supported functions attempted, with five
 full-byte and relocation matches and 76.49% weighted code similarity. All 8,129

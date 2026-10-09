@@ -6450,5 +6450,209 @@
   "fn_00639410": {
     "name": "fn_00639410",
     "source": "src/GC_3_0a5_2/backend/MachineSimulationAltiVec.c"
+  },
+  "fn_00632ea0": {
+    "name": "fn_00632ea0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00633240": {
+    "name": "fn_00633240",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00633380": {
+    "name": "fn_00633380",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00633600": {
+    "name": "fn_00633600",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006339b0": {
+    "name": "fn_006339b0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00633e40": {
+    "name": "fn_00633e40",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634050": {
+    "name": "fn_00634050",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006341a0": {
+    "name": "fn_006341a0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634260": {
+    "name": "fn_00634260",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634340": {
+    "name": "fn_00634340",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634430": {
+    "name": "fn_00634430",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634500": {
+    "name": "fn_00634500",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006347c0": {
+    "name": "fn_006347c0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00634ae0": {
+    "name": "fn_00634ae0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006350e0": {
+    "name": "fn_006350e0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635700": {
+    "name": "fn_00635700",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006357b0": {
+    "name": "fn_006357b0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635860": {
+    "name": "fn_00635860",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635920": {
+    "name": "fn_00635920",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635a20": {
+    "name": "fn_00635a20",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635ae0": {
+    "name": "fn_00635ae0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635c20": {
+    "name": "fn_00635c20",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635ce0": {
+    "name": "fn_00635ce0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00635e30": {
+    "name": "fn_00635e30",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636050": {
+    "name": "fn_00636050",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636220": {
+    "name": "fn_00636220",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636310": {
+    "name": "fn_00636310",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636700": {
+    "name": "fn_00636700",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006368c0": {
+    "name": "fn_006368c0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636cc0": {
+    "name": "fn_00636cc0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00636db0": {
+    "name": "fn_00636db0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006370d0": {
+    "name": "fn_006370d0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637170": {
+    "name": "fn_00637170",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006374b0": {
+    "name": "fn_006374b0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006375b0": {
+    "name": "fn_006375b0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637740": {
+    "name": "fn_00637740",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637800": {
+    "name": "fn_00637800",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006378c0": {
+    "name": "fn_006378c0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637a10": {
+    "name": "fn_00637a10",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637b60": {
+    "name": "fn_00637b60",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00637e10": {
+    "name": "fn_00637e10",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006380d0": {
+    "name": "fn_006380d0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006382b0": {
+    "name": "fn_006382b0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00638400": {
+    "name": "fn_00638400",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00638460": {
+    "name": "fn_00638460",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006384c0": {
+    "name": "fn_006384c0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00638520": {
+    "name": "fn_00638520",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00638560": {
+    "name": "fn_00638560",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006385a0": {
+    "name": "fn_006385a0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_006385e0": {
+    "name": "fn_006385e0",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
+  },
+  "fn_00638690": {
+    "name": "fn_00638690",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c"
   }
 }

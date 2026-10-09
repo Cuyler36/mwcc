@@ -29317,14 +29317,573 @@
   },
   {
     "name": "register_peephole_rules",
-    "address": "0x006325d0",
+    "address": "0x6325d0",
     "size": 2254,
-    "source": "src/backend/Peephole.c",
-    "baseline_name": "register_peephole_rules",
-    "baseline_address": "0x004c6320",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00632ea0",
+    "address": "0x632ea0",
+    "size": 919,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00633240",
+    "address": "0x633240",
+    "size": 316,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00633380",
+    "address": "0x633380",
+    "size": 633,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00633600",
+    "address": "0x633600",
+    "size": 941,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006339b0",
+    "address": "0x6339b0",
+    "size": 1168,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00633e40",
+    "address": "0x633e40",
+    "size": 524,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634050",
+    "address": "0x634050",
+    "size": 329,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006341a0",
+    "address": "0x6341a0",
+    "size": 184,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634260",
+    "address": "0x634260",
+    "size": 214,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634340",
+    "address": "0x634340",
+    "size": 230,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634430",
+    "address": "0x634430",
+    "size": 200,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634500",
+    "address": "0x634500",
+    "size": 698,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006347c0",
+    "address": "0x6347c0",
+    "size": 797,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00634ae0",
+    "address": "0x634ae0",
+    "size": 1530,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006350e0",
+    "address": "0x6350e0",
+    "size": 1566,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635700",
+    "address": "0x635700",
+    "size": 172,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006357b0",
+    "address": "0x6357b0",
+    "size": 172,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635860",
+    "address": "0x635860",
+    "size": 182,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635920",
+    "address": "0x635920",
+    "size": 246,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635a20",
+    "address": "0x635a20",
+    "size": 182,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635ae0",
+    "address": "0x635ae0",
+    "size": 310,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635c20",
+    "address": "0x635c20",
+    "size": 182,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635ce0",
+    "address": "0x635ce0",
+    "size": 325,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00635e30",
+    "address": "0x635e30",
+    "size": 542,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636050",
+    "address": "0x636050",
+    "size": 462,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636220",
+    "address": "0x636220",
+    "size": 236,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636310",
+    "address": "0x636310",
+    "size": 999,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636700",
+    "address": "0x636700",
+    "size": 444,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006368c0",
+    "address": "0x6368c0",
+    "size": 1016,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636cc0",
+    "address": "0x636cc0",
+    "size": 237,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00636db0",
+    "address": "0x636db0",
+    "size": 794,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006370d0",
+    "address": "0x6370d0",
+    "size": 156,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637170",
+    "address": "0x637170",
+    "size": 823,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006374b0",
+    "address": "0x6374b0",
+    "size": 252,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006375b0",
+    "address": "0x6375b0",
+    "size": 389,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637740",
+    "address": "0x637740",
+    "size": 188,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637800",
+    "address": "0x637800",
+    "size": 188,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006378c0",
+    "address": "0x6378c0",
+    "size": 327,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637a10",
+    "address": "0x637a10",
+    "size": 327,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637b60",
+    "address": "0x637b60",
+    "size": 681,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00637e10",
+    "address": "0x637e10",
+    "size": 697,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006380d0",
+    "address": "0x6380d0",
+    "size": 475,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006382b0",
+    "address": "0x6382b0",
+    "size": 336,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638400",
+    "address": "0x638400",
+    "size": 89,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638460",
+    "address": "0x638460",
+    "size": 89,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006384c0",
+    "address": "0x6384c0",
+    "size": 90,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638520",
+    "address": "0x638520",
+    "size": 58,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638560",
+    "address": "0x638560",
+    "size": 58,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006385a0",
+    "address": "0x6385a0",
+    "size": 58,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006385e0",
+    "address": "0x6385e0",
+    "size": 162,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00638690",
+    "address": "0x638690",
+    "size": 353,
+    "source": "src/GC_3_0a5_2/backend/PeepholePatterns.c",
+    "identity_evidence": "Native PeepholePatterns.c assertions, registration of 48 distinct callback pointers and three connected helpers. Raw labels retained except confirmed registration. Original physical TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Native recovered callback entries, complete disjoint bodies, reachable code and NOP seams; five indexed table extents independently checked",
       "unresolved_indirect_flow": false
     }
   },

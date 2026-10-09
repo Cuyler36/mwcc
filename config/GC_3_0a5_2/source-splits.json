@@ -6186,5 +6186,13 @@
   "patch_hash_name_reference": {
     "name": "fn_00478bb0",
     "source": "src/GC_3_0a5_2/frontend/CPrec.c"
+  },
+  "fn_0063b910": {
+    "name": "fn_0063b910",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c"
+  },
+  "fn_0063c130": {
+    "name": "fn_0063c130",
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c"
   }
 }

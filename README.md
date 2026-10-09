@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 265 source files build, 2,502 candidate functions are
-mapped, and 1,043 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 265 source files build, 2,510 candidate functions are
+mapped, and 1,049 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -192,6 +192,14 @@ switch-table layout resolutions remain nonmatching. The startup binding uses
 the symbol- and caller-proven CExcept_Setup entry; incompatible legacy argument
 counts stay scoped to the new source. Original physical TU extent remains
 provisional, and bounded helper fixtures do not prove every application path.
+
+MachineSimulation604 has all eight supported native members attempted, with
+six exact matches and 99.14% weighted code similarity. Nineteen final compiler
+profiles and the recorded source variants were tested; 55,699 native
+comparisons pass, including the actual shared dependency helper, and cover all
+nonpadding instructions. All 5,085 identified data bytes, categories and
+fixups match. The two remaining bodies retain reviewed code differences;
+filename attribution and original physical TU extent remain provisional.
 
 MachineSimulation603 has all eight supported native members attempted, with
 six exact matches and 98.16% weighted code similarity. Nineteen final compiler

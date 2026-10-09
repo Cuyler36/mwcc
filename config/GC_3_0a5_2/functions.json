@@ -28858,6 +28858,94 @@
     }
   },
   {
+    "name": "fn_0063b910",
+    "address": "0x63b910",
+    "size": 363,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "serializes",
+    "address": "0x63ba80",
+    "size": 20,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "advance_clock",
+    "address": "0x63baa0",
+    "size": 1032,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "issue",
+    "address": "0x63beb0",
+    "size": 141,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "can_issue",
+    "address": "0x63bf40",
+    "size": 205,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "initialize",
+    "address": "0x63c010",
+    "size": 211,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "latency",
+    "address": "0x63c0f0",
+    "size": 59,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0063c130",
+    "address": "0x63c130",
+    "size": 116,
+    "source": "src/GC_3_0a5_2/backend/MachineSimulation604.c",
+    "identity_evidence": "Native604 descriptor/callers and complete simulator family, with supplied Mac callback/state names corroborated by role. Filename inferred from architecture/baseline; no native filename diagnostic or physical TU extent proof.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, descriptor/direct reference audit and NOP seams",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_0063cb00",
     "address": "0x63cb00",
     "size": 406,

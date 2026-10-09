@@ -5446,5 +5446,29 @@
   "fn_005ec530": {
     "name": "fn_005ec530",
     "source": "src/GC_3_0a5_2/frontend/CleanUpIR.c"
+  },
+  "propagateconstants": {
+    "name": "propagateconstants",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "propagateconstantstoblock": {
+    "name": "propagateconstantstoblock",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "issignedloadoperand": {
+    "name": "issignedloadoperand",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "isunsignedloadoperand": {
+    "name": "isunsignedloadoperand",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "isstackoperand": {
+    "name": "isstackoperand",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
+  },
+  "computedefininginstructions": {
+    "name": "computedefininginstructions",
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c"
   }
 }

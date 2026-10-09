@@ -27004,6 +27004,72 @@
     }
   },
   {
+    "name": "propagateconstants",
+    "address": "0x622a20",
+    "size": 163,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "propagateconstantstoblock",
+    "address": "0x622ad0",
+    "size": 9050,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "issignedloadoperand",
+    "address": "0x624e30",
+    "size": 826,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "isunsignedloadoperand",
+    "address": "0x625170",
+    "size": 602,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "isstackoperand",
+    "address": "0x6253d0",
+    "size": 122,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "computedefininginstructions",
+    "address": "0x625450",
+    "size": 176,
+    "source": "src/GC_3_0a5_2/backend/ConstantPropagation.c",
+    "identity_evidence": "Native ConstantPropagation.c assertions plus supplied ordinary names,complete cache/state lifecycle andwhole-image member/entry/caller/neighbor review.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG andwhole-image filename/call/entry audit;AddPropagation prefix,loop-tree suffix andgeneric reaching engines separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "LoopDetection_CreatePreheader",
     "address": "0x00625fe0",
     "size": 1332,

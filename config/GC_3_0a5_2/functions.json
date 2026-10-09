@@ -26781,6 +26781,215 @@
     }
   },
   {
+    "name": "fn_0060efc0",
+    "address": "0x60efc0",
+    "size": 665,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060f260",
+    "address": "0x60f260",
+    "size": 1713,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060f920",
+    "address": "0x60f920",
+    "size": 191,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060f9e0",
+    "address": "0x60f9e0",
+    "size": 266,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060faf0",
+    "address": "0x60faf0",
+    "size": 363,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060fc60",
+    "address": "0x60fc60",
+    "size": 191,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060fd20",
+    "address": "0x60fd20",
+    "size": 502,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0060ff20",
+    "address": "0x60ff20",
+    "size": 414,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006100c0",
+    "address": "0x6100c0",
+    "size": 125,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00610140",
+    "address": "0x610140",
+    "size": 1447,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006106f0",
+    "address": "0x6106f0",
+    "size": 1089,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00610b40",
+    "address": "0x610b40",
+    "size": 961,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00610f10",
+    "address": "0x610f10",
+    "size": 3758,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00611dc0",
+    "address": "0x611dc0",
+    "size": 743,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006120b0",
+    "address": "0x6120b0",
+    "size": 268,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006121c0",
+    "address": "0x6121c0",
+    "size": 250,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_006122c0",
+    "address": "0x6122c0",
+    "size": 682,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00612570",
+    "address": "0x612570",
+    "size": 663,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00612810",
+    "address": "0x612810",
+    "size": 136,
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c",
+    "identity_evidence": "IroAggregateAssignment.c filename assertion1691, closed native call/state family and complete member/caller/layout review; private canonical names lack corroboration, physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG and NOP seams, whole-image direct/relocated references, exclusive private state; preceding hoisting/decomposition and following type iterators/IroEval remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "IRO_ConstantFolding",
     "address": "0x00613b90",
     "size": 3774,

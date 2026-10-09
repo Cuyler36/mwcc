@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 263 source files build, 2,365 candidate functions are
-mapped, and 1,020 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 264 source files build, 2,384 candidate functions are
+mapped, and 1,021 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,16 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+IroAggregateAssignment has all 19 supported native members attempted, with
+one exact match and no unresolved imports. Fourteen compiler profiles and
+25 source forms were tested; 19,439 selected and 3,990 supplemental bounded
+native comparisons pass. The signed comparator preserves native x87 rounding
+stores and unordered NaN ties, with saved counterexamples to rejected forms.
+All 142 named initialization bytes and fixups agree; the eight-byte zero
+threshold retains a data/BSS category difference. Seven neighboring helpers
+remain separate because their source owner is unproved. Original physical
+TU extent remains unproved.
 
 CMangler has all 22 supported native members attempted, with seven exact
 matches and 82.64% weighted code similarity under CW94. Twenty final compiler

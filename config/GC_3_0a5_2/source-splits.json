@@ -5650,5 +5650,81 @@
   "CMangler_Setup": {
     "name": "CMangler_Setup",
     "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "fn_0060efc0": {
+    "name": "fn_0060efc0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060f260": {
+    "name": "fn_0060f260",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060f920": {
+    "name": "fn_0060f920",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060f9e0": {
+    "name": "fn_0060f9e0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060faf0": {
+    "name": "fn_0060faf0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060fc60": {
+    "name": "fn_0060fc60",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060fd20": {
+    "name": "fn_0060fd20",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_0060ff20": {
+    "name": "fn_0060ff20",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_006100c0": {
+    "name": "fn_006100c0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00610140": {
+    "name": "fn_00610140",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_006106f0": {
+    "name": "fn_006106f0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00610b40": {
+    "name": "fn_00610b40",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00610f10": {
+    "name": "fn_00610f10",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00611dc0": {
+    "name": "fn_00611dc0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_006120b0": {
+    "name": "fn_006120b0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_006121c0": {
+    "name": "fn_006121c0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_006122c0": {
+    "name": "fn_006122c0",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00612570": {
+    "name": "fn_00612570",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
+  },
+  "fn_00612810": {
+    "name": "fn_00612810",
+    "source": "src/GC_3_0a5_2/optimizer/IroAggregateAssignment.c"
   }
 }

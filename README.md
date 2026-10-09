@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 263 source files build, 2,357 candidate functions are
-mapped, and 1,015 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 263 source files build, 2,365 candidate functions are
+mapped, and 1,020 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,17 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+CMangler has all 22 supported native members attempted, with seven exact
+matches and 82.64% weighted code similarity under CW94. Twenty final compiler
+profiles, 40 earlier source variants and five additional VTableName forms were
+tested; 3,106 bounded native comparisons pass. Restoring the baseline body with
+the verified native pointer type preserved the earlier exact VTableName match.
+All 1,019 owned literal bytes and fixups agree; the empty literal retains a
+one-byte storage-category mismatch, and six switch-owning functions remain
+unresolved. The native type wrapper takes three arguments; its incompatible
+legacy alias was removed. Shared GList state stays external; original physical
+TU extent remains unproved.
 
 MachineSimulation601 has all eight supported native functions attempted, with
 five exact matches and all 5,254 identified data bytes matching. Twenty-three

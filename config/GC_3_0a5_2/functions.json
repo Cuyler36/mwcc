@@ -18561,184 +18561,244 @@
     }
   },
   {
-    "name": "COptimizer_GetFunctionObject",
-    "address": "0x00556b70",
-    "size": 125,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "COptimizer_GetFunctionObject",
-    "baseline_address": "0x004c2560",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "name": "CMangler_SetupLocalStringName",
+    "address": "0x5567f0",
+    "size": 283,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMangler_SetupGuardVarName",
+    "address": "0x556910",
+    "size": 279,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMangler_SetupLocalVarName",
+    "address": "0x556a30",
+    "size": 315,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "COptimizer_GetFunctionObject",
+    "address": "0x556b70",
+    "size": 125,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "get_object_link_name",
-    "address": "0x00556bf0",
+    "address": "0x556bf0",
     "size": 217,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "get_object_link_name",
-    "baseline_address": "0x004c25e0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_GetCovariantFunctionName",
-    "address": "0x00556cd0",
+    "address": "0x556cd0",
     "size": 255,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_GetCovariantFunctionName",
-    "baseline_address": "0x004c26c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_GetLinkName",
-    "address": "0x00556dd0",
+    "address": "0x556dd0",
     "size": 239,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_GetLinkName",
-    "baseline_address": "0x004c27b0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMangler_ConversionFuncName",
+    "address": "0x556ec0",
+    "size": 129,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "mangle_function_name",
-    "address": "0x00556f50",
+    "address": "0x556f50",
     "size": 345,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "mangle_function_name",
-    "baseline_address": "0x004c2900",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "mangle_args",
-    "address": "0x005570b0",
+    "address": "0x5570b0",
     "size": 178,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "mangle_args",
-    "baseline_address": "0x004c2a20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "fn_004c2ac0",
-    "address": "0x00557170",
+    "name": "CMangler_MangleType",
+    "address": "0x557170",
     "size": 35,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "fn_004c2ac0",
-    "baseline_address": "0x004c2ac0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "mangle_type",
-    "address": "0x005571a0",
+    "address": "0x5571a0",
     "size": 2396,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "mangle_type",
-    "baseline_address": "0x004c2ae0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "mangle_qualified_name",
-    "address": "0x00557b00",
+    "address": "0x557b00",
     "size": 192,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "mangle_qualified_name",
-    "baseline_address": "0x004c3230",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMangler_TemplateInstanceName",
+    "address": "0x557bc0",
+    "size": 107,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00557c30",
+    "address": "0x557c30",
+    "size": 792,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_00557f50",
+    "address": "0x557f50",
+    "size": 337,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_ThunkName",
-    "address": "0x005580b0",
+    "address": "0x5580b0",
     "size": 350,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_ThunkName",
-    "baseline_address": "0x004c35c0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "CMangler_RTTIObjectName",
+    "address": "0x558210",
+    "size": 101,
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
+    "boundary_evidence": {
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_VTableName",
-    "address": "0x00558280",
+    "address": "0x558280",
     "size": 134,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_VTableName",
-    "baseline_address": "0x004c3770",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_OperatorName",
-    "address": "0x00558310",
+    "address": "0x558310",
     "size": 1091,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_OperatorName",
-    "baseline_address": "0x004c37f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_GetOperator",
-    "address": "0x00558760",
+    "address": "0x558760",
     "size": 1477,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_GetOperator",
-    "baseline_address": "0x004c3c20",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },
   {
     "name": "CMangler_Setup",
-    "address": "0x00558d30",
+    "address": "0x558d30",
     "size": 49,
-    "source": "src/frontend/CMangler.c",
-    "baseline_name": "CMangler_Setup",
-    "baseline_address": "0x004c43f0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c",
+    "identity_evidence": "CMangler.c filename assertions, baseline/supplied role corroboration and complete native caller/layout/member review; physical original TU extent unproved.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Saved complete native CFG, verified switch payloads, whole-image entry-reference/caller review and NOP seams; prior object-list/alignment and suffix heapsort/CIRTransform remain separate",
       "unresolved_indirect_flow": false
     }
   },

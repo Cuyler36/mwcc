@@ -5562,5 +5562,93 @@
   "fn_0063cf50": {
     "name": "fn_0063cf50",
     "source": "src/GC_3_0a5_2/backend/MachineSimulation601.c"
+  },
+  "CMangler_SetupLocalStringName": {
+    "name": "CMangler_SetupLocalStringName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_SetupGuardVarName": {
+    "name": "CMangler_SetupGuardVarName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_SetupLocalVarName": {
+    "name": "CMangler_SetupLocalVarName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "COptimizer_GetFunctionObject": {
+    "name": "COptimizer_GetFunctionObject",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "get_object_link_name": {
+    "name": "get_object_link_name",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_GetCovariantFunctionName": {
+    "name": "CMangler_GetCovariantFunctionName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_GetLinkName": {
+    "name": "CMangler_GetLinkName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_ConversionFuncName": {
+    "name": "CMangler_ConversionFuncName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "mangle_function_name": {
+    "name": "mangle_function_name",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "mangle_args": {
+    "name": "mangle_args",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_MangleType": {
+    "name": "CMangler_MangleType",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "mangle_type": {
+    "name": "mangle_type",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "mangle_qualified_name": {
+    "name": "mangle_qualified_name",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_TemplateInstanceName": {
+    "name": "CMangler_TemplateInstanceName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "fn_00557c30": {
+    "name": "fn_00557c30",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "fn_00557f50": {
+    "name": "fn_00557f50",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_ThunkName": {
+    "name": "CMangler_ThunkName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_RTTIObjectName": {
+    "name": "CMangler_RTTIObjectName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_VTableName": {
+    "name": "CMangler_VTableName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_OperatorName": {
+    "name": "CMangler_OperatorName",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_GetOperator": {
+    "name": "CMangler_GetOperator",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
+  },
+  "CMangler_Setup": {
+    "name": "CMangler_Setup",
+    "source": "src/GC_3_0a5_2/frontend/CMangler.c"
   }
 }

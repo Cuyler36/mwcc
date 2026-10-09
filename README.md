@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 252 source files build, 2,184 candidate functions are
-mapped, and 967 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 253 source files build, 2,192 candidate functions are
+mapped, and 969 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -65,6 +65,13 @@ matches. Each body passed 500 bounded instruction comparisons using modeled
 helpers. Its seven BSS definitions total 248 exact bytes; target-specific arrays
 remain external until their source ownership is established. Five additional Mac
 helper names remain unlocated, so original object membership remains unproven.
+
+PeepholeForward has all 11 supported native members attempted, with three
+exact matches. Fourteen compiler profiles and twelve source forms were tested;
+6,600 bounded instruction comparisons pass using native PCode construction and
+editing helpers. Its filename and two switch tables total 42 verified bytes;
+a 476-byte mask-analysis table remains unresolved. Two incompatible old
+one-argument aliases were removed; the compatible mask helper alias remains.
 
 LiveRegisters has all ten supported backend members attempted, with two exact
 matches. Fourteen compiler profiles and source forms were tested; each body
@@ -222,7 +229,7 @@ pass byte and relocation checks. The initial compiler-profile sweep covered
 
 The source inventory in `config/GC_3_0a5_2/translation-units.json` combines
 Windows assertion callers with explicit source membership from the Mac symbol
-map. It currently adds 30 original-only TU views to objdiff. The twenty
+map. It currently adds 29 original-only TU views to objdiff. The twenty
 assertion-proven ownership conflicts have physical source splits. These views contain real
 original functions without placeholder implementations. Unassigned functions
 and data remain visible in image-section buckets. See the porting notes for

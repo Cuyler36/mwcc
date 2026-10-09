@@ -22646,41 +22646,123 @@
     }
   },
   {
-    "name": "Peephole_VisitBlocksWithMultipleInstructions",
-    "address": "0x0059a030",
+    "name": "peepholeoptimizeforward",
+    "address": "0x59a030",
     "size": 46,
-    "source": "src/backend/Peephole.c",
-    "baseline_name": "Peephole_VisitBlocksWithMultipleInstructions",
-    "baseline_address": "0x004c62f0",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "optimize_rlwinm_and_addi",
-    "address": "0x0059a060",
+    "name": "adjustforward",
+    "address": "0x59a060",
     "size": 6607,
-    "source": "src/backend/Peephole.c",
-    "baseline_name": "optimize_rlwinm_and_addi",
-    "baseline_address": "0x004c6d80",
-    "mapping_evidence": "Existing Ghidra label; baseline identity requires semantic review",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
       "unresolved_indirect_flow": false
     }
   },
   {
-    "name": "make_contiguous_mask",
-    "address": "0x0059c980",
-    "size": 100,
-    "source": "src/backend/Peephole.c",
-    "baseline_name": "make_contiguous_mask",
-    "baseline_address": "0x004c76c0",
-    "mapping_evidence": "Unique relocation-masked compiled body at a Ghidra entry",
+    "name": "fn_0059ba30",
+    "address": "0x59ba30",
+    "size": 376,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
     "boundary_evidence": {
-      "method": "Reachable x86 control flow bounded by Ghidra entries",
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059bbb0",
+    "address": "0x59bbb0",
+    "size": 552,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059bde0",
+    "address": "0x59bde0",
+    "size": 426,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "adjustorimmediateforward",
+    "address": "0x59bf90",
+    "size": 466,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "adjuststoreloadforward",
+    "address": "0x59c170",
+    "size": 1549,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "canuseinsert",
+    "address": "0x59c780",
+    "size": 507,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fillmaskholes",
+    "address": "0x59c980",
+    "size": 100,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "computepossiblemask",
+    "address": "0x59c9f0",
+    "size": 919,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_0059cd90",
+    "address": "0x59cd90",
+    "size": 135,
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c",
+    "identity_evidence": "Native PeepholeForward.c assertions, complete forward driver/helper call graph, corroborated ordinary symbols and1.2.5 architecture with native ABI/layout review. Private CR scan retains address identity; physical ownership inferred.",
+    "boundary_evidence": {
+      "method": "Complete native CFG, all in-range entries and padding, whole-image calls and relocated filename/entry/state references; CSE prefix and StructMoves suffix separate",
       "unresolved_indirect_flow": false
     }
   },

@@ -4814,5 +4814,53 @@
   "fn_005cb6e0": {
     "name": "fn_005cb6e0",
     "source": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+  },
+  "fn_0059a030": {
+    "name": "peepholeoptimizeforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059a060": {
+    "name": "adjustforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059ba30": {
+    "name": "fn_0059ba30",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059bbb0": {
+    "name": "fn_0059bbb0",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059bde0": {
+    "name": "fn_0059bde0",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059bf90": {
+    "name": "adjustorimmediateforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059c170": {
+    "name": "adjuststoreloadforward",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059c780": {
+    "name": "canuseinsert",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059c980": {
+    "name": "fillmaskholes",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059c9f0": {
+    "name": "computepossiblemask",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "fn_0059cd90": {
+    "name": "fn_0059cd90",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
+  },
+  "make_contiguous_mask": {
+    "name": "fillmaskholes",
+    "source": "src/GC_3_0a5_2/backend/PeepholeForward.c"
   }
 }

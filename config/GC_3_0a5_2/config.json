@@ -253,7 +253,8 @@
     "src/GC_3_0a5_2/backend/LiveRegisters.c",
     "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
     "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
-    "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+    "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "src/GC_3_0a5_2/backend/PeepholeForward.c"
   ],
   "matching": [
     "src/GC_3_0a5_2/driver/ParserErrors.c",
@@ -4049,6 +4050,24 @@
         "-opt",
         "nocse"
       ]
+    },
+    "src/GC_3_0a5_2/backend/PeepholeForward.c": {
+      "compiler": "cw94",
+      "flags": [
+        "-O4",
+        "-opt",
+        "speed",
+        "-opt",
+        "intrinsics",
+        "-inline",
+        "auto",
+        "-sym",
+        "off",
+        "-Cpp_exceptions",
+        "off",
+        "-str",
+        "noreadonly"
+      ]
     }
   },
   "matching_functions": [
@@ -4167,7 +4186,6 @@
     "src/frontend/CMangler/CMangler_Setup",
     "src/backend/InlineAsm/InlineAsm_CreateLabel",
     "src/backend/Intrinsics/is_same_type_or_signedint_compatible",
-    "src/backend/Peephole/make_contiguous_mask",
     "src/optimizer/IroVars/IroVars_CheckTimedLongjmp",
     "src/optimizer/IroBitVect/IroBitVect_SetAllBits",
     "src/optimizer/IroBitVect/IroBitVect_ClearBitVector",
@@ -5018,7 +5036,10 @@
     "src/GC_3_0a5_2/frontend/EnodeInfoHandler/fn_00593070",
     "src/GC_3_0a5_2/frontend/EnodeInfoHandler/fn_00593120",
     "src/GC_3_0a5_2/frontend/CExprConvMatch/fn_005e0670",
-    "src/GC_3_0a5_2/frontend/CExprConvMatch/fn_005e3b50"
+    "src/GC_3_0a5_2/frontend/CExprConvMatch/fn_005e3b50",
+    "src/GC_3_0a5_2/backend/PeepholeForward/peepholeoptimizeforward",
+    "src/GC_3_0a5_2/backend/PeepholeForward/fillmaskholes",
+    "src/GC_3_0a5_2/backend/PeepholeForward/fn_0059cd90"
   ],
   "complete_sources": [
     "src/GC_3_0a5_2/driver/Targets.c",
@@ -9309,6 +9330,39 @@
       "_fn_005c9760": "0x5c9760",
       "_fn_00544710": "0x544710",
       "_fn_005441e0": "0x5441e0"
+    },
+    "src/GC_3_0a5_2/backend/PeepholeForward.c": {
+      "_peepholeoptimizeforward": "0x59a030",
+      "_adjustforward": "0x59a060",
+      "_fn_0059ba30": "0x59ba30",
+      "_fn_0059bbb0": "0x59bbb0",
+      "_fn_0059bde0": "0x59bde0",
+      "_adjustorimmediateforward": "0x59bf90",
+      "_adjuststoreloadforward": "0x59c170",
+      "_canuseinsert": "0x59c780",
+      "_fillmaskholes": "0x59c980",
+      "_computepossiblemask": "0x59c9f0",
+      "_fn_0059cd90": "0x59cd90",
+      "_CError_Internal": "0x45a250",
+      "_makepcode": "0x582f60",
+      "_copypcode": "0x582db0",
+      "_insertpcodebefore": "0x5829d0",
+      "_insertpcodeafter": "0x582890",
+      "_deletepcode": "0x582a50",
+      "_appendpcode": "0x582aa0",
+      "_change_opcode": "0x58b210",
+      "_change_num_operands": "0x58b310",
+      "_pcsetrecordbit": "0x5960e0",
+      "_is_valid_displ": "0x58b180",
+      "_nbytes_loaded_or_stored_by": "0x58b4c0",
+      "_fn_0058b910": "0x58b910",
+      "_makecopyforload": "0x58b6f0",
+      "_InstrSelection_GetMaskRange": "0x4f5f40",
+      "_fn_00596bd0": "0x596bd0",
+      "_pcbasicblocks": "0x7108c8",
+      "_first_virtual": "0x710274",
+      "_forward_floating_option": "0x70f06b",
+      "_filename": "0x6ad5ec"
     }
   },
   "original_source_units": {
@@ -9347,6 +9401,7 @@
     "LiveRegisters.c": "src/GC_3_0a5_2/backend/LiveRegisters.c",
     "EnodeInfoHandler.c": "src/GC_3_0a5_2/frontend/EnodeInfoHandler.c",
     "CExprConvMatch.c": "src/GC_3_0a5_2/frontend/CExprConvMatch.c",
-    "CIRStreamType.c": "src/GC_3_0a5_2/frontend/CIRStreamType.c"
+    "CIRStreamType.c": "src/GC_3_0a5_2/frontend/CIRStreamType.c",
+    "PeepholeForward.c": "src/GC_3_0a5_2/backend/PeepholeForward.c"
   }
 }

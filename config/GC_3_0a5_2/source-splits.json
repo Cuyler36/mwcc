@@ -5346,5 +5346,29 @@
   "fn_005ed3d0": {
     "name": "fn_005ed3d0",
     "source": "src/GC_3_0a5_2/backend/cobraError.c"
+  },
+  "fn_005ec6b0": {
+    "name": "fn_005ec6b0",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ec8a0": {
+    "name": "fn_005ec8a0",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ec910": {
+    "name": "fn_005ec910",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ecf00": {
+    "name": "fn_005ecf00",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ecfe0": {
+    "name": "fn_005ecfe0",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
+  },
+  "fn_005ed0e0": {
+    "name": "fn_005ed0e0",
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c"
   }
 }

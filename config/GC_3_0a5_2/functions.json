@@ -25690,6 +25690,72 @@
     }
   },
   {
+    "name": "fn_005ec6b0",
+    "address": "0x5ec6b0",
+    "size": 496,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec8a0",
+    "address": "0x5ec8a0",
+    "size": 108,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ec910",
+    "address": "0x5ec910",
+    "size": 1517,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ecf00",
+    "address": "0x5ecf00",
+    "size": 214,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ecfe0",
+    "address": "0x5ecfe0",
+    "size": 246,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
+    "name": "fn_005ed0e0",
+    "address": "0x5ed0e0",
+    "size": 128,
+    "source": "src/GC_3_0a5_2/frontend/IRFlowgraph.c",
+    "identity_evidence": "Native IRFlowgraph.c filename assertions,complete six-member build/release/rebuild/action/switch/block family and whole-image entries/callers review;CSV retains raw native address names.",
+    "boundary_evidence": {
+      "method": "Complete saved native CFG,tenfilename references andsix direct calls into family;CleanUpIR prefix/cobraError suffix separate",
+      "unresolved_indirect_flow": false
+    }
+  },
+  {
     "name": "fn_005ed160",
     "address": "0x5ed160",
     "size": 255,

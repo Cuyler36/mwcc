@@ -10,8 +10,8 @@ A matching decompilation of `mwcceppc.exe`, the Windows/x86 CodeWarrior compiler
 This fork ports the [rayanht/mwcc](https://github.com/rayanht/mwcc) reconstruction
 to GC 3.0a5.2 while retaining the earlier versions.
 
-Current GC 3.0a5.2 status: 261 source files build, 2,305 candidate functions are
-mapped, and 996 functions pass full-byte and relocation checks. Targets.c,
+Current GC 3.0a5.2 status: 262 source files build, 2,311 candidate functions are
+mapped, and 1,000 functions pass full-byte and relocation checks. Targets.c,
 ResourceStrings.c, ParserErrors.c, CLWriteObjectFile.c, CLLicenses.c,
 CLErrors.c, CLFiles.c, CLOverlays.c, CLSegs.c, CLLoadAndCache.c, CLPrefs.c,
 CLAccessPaths.c, StringExtras.c, CLProj.c,
@@ -143,6 +143,13 @@ bounded native instruction comparisons. Its 43 inferred BSS definitions total
 19,403 verified bytes. Remaining switch tables, literal allocations, and original
 object membership are documented limits. The incompatible zero-argument
 1.2.5 directive mapping is removed; its legacy implementation remains provisional.
+
+IRFlowgraph has all six supported members attempted, with four exact matches.
+Ten compiler profiles and 21 source forms were tested; 2,304 bounded native
+comparisons pass using the original label-list and exception helpers. Its
+filename, four BSS words and automatically resolved driver switch total
+86 verified bytes. The second 56-byte switch remains unclaimed, leaving one
+function projection unresolved. Original physical TU extent remains unproved.
 
 cobraError.c has all four supported diagnostic wrappers matched exactly:
 781 code bytes, the 15-entry format table and strings, and its generated
